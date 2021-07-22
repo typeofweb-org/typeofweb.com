@@ -1,0 +1,26 @@
+.image {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1px;
+  top: 100%;
+  transform-origin: 0;
+  height: 9px;
+  width: 100%;
+}
+
+.image use {
+  stroke-dashoffset: 1;
+  stroke-dasharray: 1;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.link {
+  position: relative;
+}
+
+.link:hover .image use {
+  stroke-dashoffset: 0;
+}

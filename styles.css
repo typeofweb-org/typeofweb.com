@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html,
+#__next {
+  @apply w-full max-w-full min-h-full bg-gray-200;
+}
+
+p {
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+.article-content p {
+  @apply indent-sm text-justify font-serif font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
+}
+
+.article-content a {
+  @apply text-blue-500 whitespace-nowrap font-bold tracking-tight;
+}
+
+a,
+button {
+  @apply transition-shadow;
+}
+
+:focus {
+  outline: 0;
+  @apply border-blue-200 ring ring-blue-100 ring-opacity-50 ring-offset-2;
+}
+
+a:focus {
+  @apply underline ring-offset-0;
+}

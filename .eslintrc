@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "plugins": ["@typeofweb"],
+  "extends": ["next", "plugin:@typeofweb/recommended"],
+  "overrides": [
+    {
+      "files": ["pages/**/*.tsx"],
+      "rules": {
+        "import/no-default-export": 0
+      }
+    }
+  ]
+}
