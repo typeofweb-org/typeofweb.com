@@ -1,13 +1,17 @@
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { SingleArticle } from '../components/organisms/SingleArticle';
 import { TwoColumns } from '../components/templates/TwoColumns';
+import { useRunningHeader } from '../hooks/runningHeader';
 
 export default function PostPage() {
   const firstPostHasCover = true;
 
+  const { setRunningHeader } = useRunningHeader();
+
   return (
-    <TwoColumns firstPostHasCover={firstPostHasCover} withSidebar={false}>
+    <TwoColumns firstPostHasCover={firstPostHasCover} withSidebar={true} pageKind="post">
       <SingleArticle
+        ref={setRunningHeader}
         title="Względne postrzeganie czasu: model matematyczny"
         mainCategory="Opinie"
         href="/post"

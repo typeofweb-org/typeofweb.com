@@ -8,25 +8,120 @@ html,
   @apply w-full max-w-full min-h-full bg-gray-200;
 }
 
-p {
-  hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 }
 
-.article-content p {
-  @apply indent-sm text-justify font-serif font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
-}
+@layer utilities {
+  .prose {
+    max-width: 75ch;
+  }
 
-.article-content a {
-  @apply text-blue-500 whitespace-nowrap font-bold tracking-tight;
+  .prose [class~='lead'] {
+    @apply text-justify text-gray-800 font-serif text-base font-black tracking-wider lg:text-lg;
+    text-indent: 0;
+  }
+
+  .prose p {
+    text-indent: 2rem;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    @apply my-0 text-justify font-serif font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
+  }
+
+  .prose a {
+    @apply text-blue-500 no-underline font-bold tracking-tight;
+  }
+
+  .prose blockquote {
+    quotes: auto;
+    @apply relative text-transparent bg-no-repeat bg-clip-text;
+    @apply -ml-8 -mr-8 pl-8 pr-8 py-4 border-b border-l-0 border-r-0 border-t border-b-blue-500 border-t-pink-500 sm:-ml-6 sm:-mr-32 sm:pr-32 md:-mr-32 lg:-mr-12 lg:pr-20;
+  }
+
+  .prose blockquote,
+  .prose blockquote::before {
+    @apply bg-gradient-to-t from-blue-500 to-pink-500;
+  }
+
+  .prose-xl blockquote {
+    @apply pl-8;
+  }
+
+  .prose blockquote::before {
+    content: '';
+    @apply absolute left-0 top-0 block w-2 h-full;
+  }
+
+  .prose blockquote br {
+    content: '';
+    @apply my-[1ex] block;
+  }
+
+  .prose blockquote p,
+  .prose :is(ol, ul) p {
+    @apply text-left;
+    text-indent: 0;
+    hyphens: none;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+  }
+
+  .prose-xl p {
+    @apply my-0;
+    text-indent: 3rem;
+  }
+
+  .prose-xl ol,
+  .prose ol {
+    @apply mt-3;
+  }
+
+  .prose ol > li {
+    @apply pt-[0.5ex] before:text-stroke before:top-0 my-0 before:font-sans font-serif before:text-4xl before:proportional-nums before:font-semibold before:leading-none leading-normal;
+  }
+
+  .prose :is(ol, ul) p {
+    @apply contents;
+  }
+
+  .prose strong {
+    /* margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 225, 0, 0.1),
+      rgba(255, 225, 0, 0.7) 4%,
+      rgba(255, 225, 0, 0.3)
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; */
+
+    background: linear-gradient(
+        104deg,
+        rgba(130, 255, 173, 0) 0.9%,
+        rgba(130, 255, 173, 1.25) 2.4%,
+        rgba(130, 255, 173, 0.5) 5.8%,
+        rgba(130, 255, 173, 0.1) 93%,
+        rgba(130, 255, 173, 0.7) 96%,
+        rgba(130, 255, 1732, 0) 98%
+      ),
+      linear-gradient(183deg, rgba(130, 255, 173, 0) 0%, rgba(130, 255, 173, 0.3) 7.9%, rgba(130, 255, 173, 0) 15%);
+    padding: 0.1em 0.4em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin: 0;
+    border-radius: 7.5px;
+    text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7), 21px -18.1px 7.3px rgba(255, 255, 255, 1),
+      -18.1px -27.3px 30px rgba(255, 255, 255, 1);
+  }
 }
 
 a,
@@ -41,4 +136,33 @@ button {
 
 a:focus {
   @apply underline ring-offset-0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+progress {
+  position: relative;
+  animation: appear 1s;
+}
+
+progress::-webkit-progress-bar {
+  @apply bg-gray-200;
+}
+progress::-moz-progress-bar {
+  @apply bg-gray-200;
+}
+
+progress::-webkit-progress-value {
+  @apply bg-gradient-to-r from-blue-500 to-pink-500 via-green-300 transition-all;
+  background-size: 100vw;
 }

@@ -1,15 +1,18 @@
 import Link from 'next/link';
 
+import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
 import { TopNav } from '../molecules/TopNav';
 
 export const SiteHeader = ({ firstPostHasCover }: { readonly firstPostHasCover: boolean }) => {
+  const { text, progress } = useRunningHeader();
+
   return (
     <header
-      className={`px-8 bg-gray-100 drop-shadow flex flex-row gap-8 items-stretch justify-center lg:justify-start lg:mb-4
+      className={`bg-gray-100 drop-shadow flex flex-row items-stretch justify-center lg:mb-4 lg:sticky lg:top-0 lg:z-50
           ${firstPostHasCover ? 'sr-only lg:not-sr-only' : ''}`}
     >
-      <div className="lg:pr-[20rem] flex flex-1 flex-row pl-8 max-w-5xl lg:mx-auto lg:pl-0">
+      <div className="flex flex-1 flex-row pl-8 max-w-3xl">
         <Link href="/">
           <a>
             <h1 className="py-2">
@@ -20,6 +23,10 @@ export const SiteHeader = ({ firstPostHasCover }: { readonly firstPostHasCover: 
         </Link>
         <TopNav />
       </div>
+      <div className="hidden lg:flex lg:items-center lg:mx-4 lg:px-8 lg:w-80">
+        <span className="text-gray-500 font-serif text-xs lg:whitespace-nowrap">{text}</span>
+      </div>
+      <progress className="absolute z-50 top-full w-full h-1 text-pink-500 appearance-none" value={progress} />
     </header>
   );
 };

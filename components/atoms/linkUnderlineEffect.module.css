@@ -5,22 +5,32 @@
   fill: none;
   stroke: currentColor;
   stroke-width: 1px;
-  top: 100%;
+  top: calc(100% - 0.125em);
   transform-origin: 0;
   height: 9px;
   width: 100%;
 }
 
-.image use {
+.image use,
+.image path {
   stroke-dashoffset: 1;
   stroke-dasharray: 1;
-  transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image use,
+  .image path {
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+  }
 }
 
 .link {
   position: relative;
+  display: inline-block;
+  text-indent: 0;
 }
 
-.link:hover .image use {
+.link:hover .image use,
+.link:hover .image path {
   stroke-dashoffset: 0;
 }

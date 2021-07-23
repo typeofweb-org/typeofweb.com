@@ -63,9 +63,6 @@ module.exports = {
         900: '#222222',
       },
     },
-    textIndent: (theme) => ({
-      sm: '2rem',
-    }),
   },
 
   variants: {
@@ -91,7 +88,7 @@ module.exports = {
 
       // counters
       // Copyright (c) 2020 Konstantin Komelin
-      const counterName = Math.random().toString(32).slice(3);
+      const counterName = 'c' + Math.random().toString(32).slice(3);
 
       addUtilities({
         '.counter-reset': {
