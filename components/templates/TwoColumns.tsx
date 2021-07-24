@@ -27,7 +27,7 @@ export const TwoColumns = ({
       </div>
       <button
         aria-hidden
-        className="main-menu-button no-touch-highlight fixed z-40 right-6 flex items-center justify-center w-12 h-12 text-gray-800 bg-white rounded-md shadow-lg select-none lg:hidden"
+        className="main-menu-button no-touch-highlight fixed z-40 bottom-8 right-6 flex items-center justify-center w-12 h-12 text-gray-800 bg-white rounded-md shadow-lg select-none transition-transform lg:hidden"
         onClick={() => setUIState((state) => ({ ...state, isMenuOpen: !state.isMenuOpen }))}
       >
         <span className="sr-only">Otwórz nawigację</span>
