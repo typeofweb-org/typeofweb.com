@@ -5,13 +5,30 @@ const PATH_HEIGHT = 9;
 const PROGRESS = '--fancy-animation-progress';
 const COLOR = '--fancy-animation-color';
 
+/**
+ * @typedef {[cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number]} Bezier
+ */
+
+/**
+ * @type {Bezier[]}
+ */
+const underlineBeziers = [
+  [0.426, 1.973, 0.426, 1.973, 0.426, 1.973],
+  [4.144, 1.567, 17.77, -0.514, 21.443, 1.48],
+  [24.296, 3.026, 24.844, 4.627, 27.5, 7],
+  [30.575, 9.748, 34.142, 2.859, 37.566, 2.312],
+  [45.083, 1.112, 50.803, 7.737, 55.156, 5.057],
+  [58.5, 3, 60.464, -1.786, 66, 2],
+  [67.996, 3.365, 69.174, 5.737, 71.286, 6.41],
+  [76.709, 8.137, 96.626, -1.571, 100.426, 5.116],
+];
+
 class FancyLinkUnderlinePainter {
   static get inputProperties() {
     return [PROGRESS, COLOR];
   }
 
   /**
-   *
    * @param {CanvasRenderingContext2D} ctx
    * @param {{width: number; height: number}} geom
    * @param {ReadonlyMap<string, any>} properties
@@ -19,74 +36,23 @@ class FancyLinkUnderlinePainter {
   paint(ctx, geom, properties) {
     const progress = properties.get(PROGRESS);
     const color = properties.get(COLOR);
+    const xScaling = geom.width / PATH_WIDTH;
+    const yScaling = 1;
+
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = 1.5;
 
-    const _xScaling = geom.width / PATH_WIDTH;
-    const _yScaling = 1;
-
+    ctx.scale(xScaling, yScaling);
     ctx.translate(0, geom.height - PATH_HEIGHT);
 
-    ctx.lineTo(0.426 * _xScaling, 1.973 * _yScaling);
-    ctx.bezierCurveTo(
-      4.144 * _xScaling,
-      1.567 * _yScaling,
-      17.77 * _xScaling,
-      -0.514 * _yScaling,
-      21.443 * _xScaling,
-      1.48 * _yScaling,
-    );
-    ctx.bezierCurveTo(
-      24.296 * _xScaling,
-      3.026 * _yScaling,
-      24.844 * _xScaling,
-      4.627 * _yScaling,
-      27.5 * _xScaling,
-      7 * _yScaling,
-    );
-    ctx.bezierCurveTo(
-      30.575 * _xScaling,
-      9.748 * _yScaling,
-      34.142 * _xScaling,
-      2.859 * _yScaling,
-      37.566 * _xScaling,
-      2.312 * _yScaling,
-    );
-    ctx.bezierCurveTo(
-      45.083 * _xScaling,
-      1.112 * _yScaling,
-      50.803 * _xScaling,
-      7.737 * _yScaling,
-      55.156 * _xScaling,
-      5.057 * _yScaling,
-    );
-    ctx.bezierCurveTo(
-      58.5 * _xScaling,
-      3 * _yScaling,
-      60.464 * _xScaling,
-      -1.786 * _yScaling,
-      66 * _xScaling,
-      2 * _yScaling,
-    );
-    ctx.bezierCurveTo(
-      67.996 * _xScaling,
-      3.365 * _yScaling,
-      69.174 * _xScaling,
-      5.737 * _yScaling,
-      71.286 * _xScaling,
-      6.41 * _yScaling,
-    );
-    ctx.bezierCurveTo(
-      76.709 * _xScaling,
-      8.137 * _yScaling,
-      96.626 * _xScaling,
-      -1.571 * _yScaling,
-      100.426 * _xScaling,
-      5.116 * _yScaling,
-    );
+    for (const args of underlineBeziers) {
+      ctx.bezierCurveTo(...args);
+    }
     ctx.stroke();
 
+    ctx.resetTransform();
+    console.log('render');
     ctx.clearRect(progress * geom.width, 0, (1 - progress) * geom.width, geom.height);
   }
 }

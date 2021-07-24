@@ -19,8 +19,8 @@ html,
 }
 
 .main-menu-button {
-  transform: translate3d(0, calc(0 - constant(safe-area-inset-bottom)), 0);
-  transform: translate3d(0, calc(0 - env(safe-area-inset-bottom)), 0);
+  transform: translate3d(0, calc(0px - constant(safe-area-inset-bottom)), 0);
+  transform: translate3d(0, calc(0px - env(safe-area-inset-bottom)), 0);
 }
 
 @layer utilities {
