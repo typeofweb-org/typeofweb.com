@@ -1,4 +1,7 @@
+import Head from 'next/head';
+
 import { RunningHeaderProvider } from '../hooks/runningHeader';
+import { UIStateProvider } from '../hooks/useUiState';
 
 import type { AppType } from 'next/dist/next-server/lib/utils';
 
@@ -6,9 +9,16 @@ import '../styles.css';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <RunningHeaderProvider>
-      <Component {...pageProps} />
-    </RunningHeaderProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover" />
+      </Head>
+      <RunningHeaderProvider>
+        <UIStateProvider>
+          <Component {...pageProps} />
+        </UIStateProvider>
+      </RunningHeaderProvider>
+    </>
   );
 };
 

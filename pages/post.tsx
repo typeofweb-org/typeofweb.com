@@ -9,7 +9,7 @@ export default function PostPage() {
   const { setRunningHeader } = useRunningHeader();
 
   return (
-    <TwoColumns firstPostHasCover={firstPostHasCover} withSidebar={true} pageKind="post">
+    <TwoColumns withSidebar={true} pageKind="post">
       <SingleArticle
         ref={setRunningHeader}
         title="Względne postrzeganie czasu: model matematyczny"

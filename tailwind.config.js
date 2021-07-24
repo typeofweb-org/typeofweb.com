@@ -63,6 +63,24 @@ module.exports = {
         900: '#222222',
       },
     },
+    extend: {
+      keyframes: {
+        appear: {
+          '0%': {
+            opacity: 0,
+          },
+          '50%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        appear: 'appear 2s',
+      },
+    },
   },
 
   variants: {
@@ -84,6 +102,15 @@ module.exports = {
           'font-size': '0.625rem',
           'line-height': '0.8125rem',
         },
+        '.no-touch-highlight': {
+          '-webkit-tap-highlight-color': 'transparent',
+          '-webkit-touch-callout': 'none',
+          '-webkit-user-select': 'none',
+          '-khtml-user-select': 'none',
+          '-moz-user-select': 'none',
+          '-ms-user-select': 'none',
+          'user-select': 'none',
+        },
       });
 
       // counters
@@ -102,24 +129,10 @@ module.exports = {
         },
       });
 
-      addUtilities(
-        {
-          '.counter-result': {
-            content: `counter(${counterName})`,
-          },
+      addUtilities({
+        '.counter-result': {
+          content: `counter(${counterName})`,
         },
-        config('variants.counter', ['after', 'before']),
-      );
-
-      addVariant('before', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`before${separator}${className}`)}::before`;
-        });
-      });
-      addVariant('after', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`after${separator}${className}`)}::after`;
-        });
       });
     }),
   ],

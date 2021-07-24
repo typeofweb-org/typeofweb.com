@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply overflow-x-hidden;
+}
+
 body,
 html,
 #__next {
@@ -12,6 +16,12 @@ html,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+}
+
+.main-menu-button {
+  bottom: 2rem;
+  bottom: calc(2rem + constant(safe-area-inset-bottom));
+  bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
 @layer utilities {
@@ -138,21 +148,9 @@ a:focus {
   @apply underline ring-offset-0;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 progress {
   position: relative;
-  animation: appear 1s;
+  @apply animate-appear;
 }
 
 progress::-webkit-progress-bar {
@@ -163,6 +161,6 @@ progress::-moz-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  @apply bg-gradient-to-r from-blue-500 to-pink-500 via-green-300 transition-all;
+  @apply bg-gradient-to-r from-blue-500 to-pink-500 transition-all ease-out;
   background-size: 100vw;
 }
