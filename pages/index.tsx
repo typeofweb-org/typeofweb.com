@@ -6,7 +6,7 @@ export default function IndexPage() {
   const firstPostHasCover = false;
 
   return (
-    <TwoColumns firstPostHasCover={firstPostHasCover} withSidebar={true} pageKind="index">
+    <TwoColumns withSidebar={true} pageKind="index">
       <ArticleSneakPeek
         title="Względne postrzeganie czasu: model matematyczny"
         mainCategory="Opinie"
