@@ -11,7 +11,18 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pl-PL">
-        <Head />
+        <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+const floaded=()=>document.documentElement.className+=' fonts-loaded';
+if(sessionStorage.fonts)floaded();
+else Promise.all([document.fonts.load("400 1em Merriweather"),document.fonts.load("700 1em Merriweather"),document.fonts.load("italic 400 1em Merriweather"),document.fonts.load("italic 700 1em Merriweather"),])
+.then(() => {sessionStorage.fonts=true;floaded();})
+            `.trim(),
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

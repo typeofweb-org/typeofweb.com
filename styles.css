@@ -29,7 +29,7 @@ html,
   }
 
   .prose [class~='lead'] {
-    @apply text-justify text-gray-800 font-serif text-base font-black tracking-wider lg:text-lg;
+    @apply text-justify text-gray-800 font-serif text-base font-bold tracking-wider lg:text-lg;
     text-indent: 0;
   }
 
@@ -49,7 +49,7 @@ html,
   .prose blockquote {
     quotes: auto;
     @apply relative text-transparent bg-no-repeat bg-clip-text;
-    @apply -ml-8 -mr-8 pl-8 pr-8 py-4 border-b border-l-0 border-r-0 border-t border-b-blue-500 border-t-pink-500 sm:-ml-6 sm:-mr-32 sm:pr-32 md:-mr-32 lg:-mr-12 lg:pr-20;
+    @apply -ml-7 -mr-7 pl-8 pr-8 py-4 border-b border-l-0 border-r-0 border-t border-b-blue-500 border-t-pink-500 sm:-ml-6 sm:-mr-32 sm:pr-32 md:-mr-32 lg:-mr-12 lg:pr-20;
   }
 
   .prose blockquote,

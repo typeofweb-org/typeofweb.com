@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'typeofweb-fallback-sans';
+  src: local('Arial'), local('Helvetica');
+  advance-override: 146%;
+  ascent-override: 93.5%;
+  descent-override: 26.5%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'typeofweb-fallback-serif';
+  src: local('Times New Roman'), local('Times');
+  advance-override: calc(291.4% / 2);
+  ascent-override: calc(196.8% / 2);
+  descent-override: calc(54.6% / 2);
+  line-gap-override: 0%;
+}
+
+html:not(.fonts-loaded) :is(.font-sans, .prose ol > li::before) {
+  font-family: 'typeofweb-fallback-sans' !important;
+  letter-spacing: 0.1px !important;
+  word-spacing: 0.05px !important;
+}
+
+html:not(.fonts-loaded) :is(.font-serif, .prose [class~='lead'], .prose p, .prose ol > li) {
+  font-family: 'typeofweb-fallback-serif' !important;
+  letter-spacing: 2px !important;
+  word-spacing: -3px !important;
+}
+
+@font-face {
+  font-family: 'typeofweb-fallback-mono';
+  src: local('Courier New'), local('Courier');
+  advance-override: xx;
+  ascent-override: xx;
+  descent-override: xx;
+  line-gap-override: xx;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), local('Merriweather Regular'), local('Merriweather-Regular'),
+    url('/fonts/merriweather-12ptregular-typeofweb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), local('Merriweather Italic'), local('Merriweather-Italic'),
+    url('/fonts/merriweather-12ptitalic-typeofweb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), local('Merriweather Bold'), local('Merriweather-Bold'),
+    url('/fonts/merriweather-12ptbold-typeofweb.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), local('Merriweather Bold Italic'), local('Merriweather-Bold-Italic'),
+    url('/fonts/merriweather-12ptbolditalic-typeofweb.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}

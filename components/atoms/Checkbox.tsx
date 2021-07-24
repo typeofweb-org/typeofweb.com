@@ -12,7 +12,7 @@ export const Checkbox = ({
           props.className ?? ''
         }`}
       />
-      <span className={label === 'tiny' ? 'font-serif text-tiny font-light' : ''}>{children}</span>
+      <span className={label === 'tiny' ? 'font-serif text-gray-700 text-tiny font-normal' : ''}>{children}</span>
     </label>
   );
 };

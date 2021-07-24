@@ -26,8 +26,10 @@ export const TwoColumns = ({
         {withSidebar && <Sidebar pageKind={pageKind} />}
       </div>
       <button
-        aria-hidden
-        className="main-menu-button no-touch-highlight fixed z-40 bottom-8 right-6 flex items-center justify-center w-12 h-12 text-gray-800 bg-white border border-solid border-gray-200 rounded-md shadow-lg select-none transition-transform lg:hidden"
+        id="main-menu-button"
+        aria-expanded={uiState.isMenuOpen}
+        aria-controls="main-menu"
+        className="main-menu-button no-touch-highlight fixed z-40 bottom-8 right-6 flex items-center justify-center w-12 h-12 text-gray-800 bg-white border border-solid border-gray-200 rounded-md shadow-lg select-none lg:hidden"
         onClick={() => setUIState((state) => ({ ...state, isMenuOpen: !state.isMenuOpen }))}
       >
         <span className="sr-only">Otwórz nawigację</span>

@@ -23,11 +23,11 @@ export const NewsletterForm = () => {
         <div className="flex">
           <Checkbox label="tiny" required>
             Rozumiem i akceptuję{' '}
-            <a href="#" className="text-blue-500 hover:underline font-medium">
+            <a href="#" className="text-blue-500 hover:underline font-normal">
               Regulamin Newslettera
             </a>{' '}
             oraz{' '}
-            <a href="#" className="text-blue-500 hover:underline font-medium">
+            <a href="#" className="text-blue-500 hover:underline font-normal">
               Politykę Prywatności
             </a>
             . Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const ArticleCoverImage = ({ coverUrl, wide }: { readonly coverUrl: string; readonly wide: boolean }) => {
   return (
-    <div className={`text-[length:0] overflow-hidden ${wide ? `md:-mx-4 mb-8` : `rounded-t-xl`}`}>
+    <div className={`text-[length:0] overflow-hidden ${wide ? `lg:-mx-4 mb-8` : `rounded-t-xl`}`}>
       <Image
         width={800}
         height={450}

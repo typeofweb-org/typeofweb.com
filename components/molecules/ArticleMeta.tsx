@@ -28,7 +28,7 @@ export const ArticleMeta = ({
             />
           ))}
         </div>
-        <div className="font-sans text-sm font-medium leading-tight sm:text-base">
+        <div className="font-sans text-sm font-semibold leading-tight sm:text-base">
           {authors.map((author, idx) => (
             <Fragment key={author.displayName}>
               <LinkUnderlineEffect>

@@ -9,8 +9,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Fira Sans', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Fira Sans', 'typeofweb-fallback-sans', 'Arial', 'Helvetica', 'sans-serif'],
+      serif: ['Merriweather', 'typeofweb-fallback-serif', 'Times New Roman', 'Times', 'serif'],
+      mono: ['Fira Mono', 'typeofweb-fallback-mono', 'Courier New', 'Courier', 'monospace'],
     },
     colors: {
       white: '#FFFFFF',

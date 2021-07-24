@@ -6,6 +6,7 @@ import { UIStateProvider } from '../hooks/useUiState';
 import type { AppType } from 'next/dist/next-server/lib/utils';
 
 import '../styles.css';
+import '../fonts.css';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
