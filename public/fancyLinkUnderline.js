@@ -41,7 +41,7 @@ class FancyLinkUnderlinePainter {
 
     ctx.beginPath();
     ctx.strokeStyle = color;
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 1;
 
     ctx.scale(xScaling, yScaling);
     ctx.translate(0, geom.height - PATH_HEIGHT);
@@ -52,7 +52,6 @@ class FancyLinkUnderlinePainter {
     ctx.stroke();
 
     ctx.resetTransform();
-    console.log('render');
     ctx.clearRect(progress * geom.width, 0, (1 - progress) * geom.width, geom.height);
   }
 }

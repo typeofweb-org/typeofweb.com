@@ -17,14 +17,14 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
         Skocz do treści
       </a>
       <header
-        className={`bg-gray-100 flex flex-row h-12 overflow-hidden items-stretch justify-center lg:mb-4 ${
+        className={`bg-gray-100 ios:transcluent-white dark:ios:transcluent-black flex flex-row h-12 overflow-hidden items-stretch justify-center lg:mb-4 ${
           uiState.isMenuOpen ? 'lg:drop-shadow lg:sticky' : 'drop-shadow sticky'
         } top-0 z-40`}
       >
         <div className="flex flex-1 flex-row pl-8 max-w-3xl">
           <Link href="/">
             <a>
-              <h1 className="py-2">
+              <h1 className="-ml-2 p-2 ios:bg-gray-100">
                 <span className="sr-only">Type of Web</span>
                 <TypeOfWebLogo className="w-40 max-w-full" />
               </h1>

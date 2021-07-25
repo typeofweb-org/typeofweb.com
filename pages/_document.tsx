@@ -15,10 +15,10 @@ export default class MyDocument extends Document {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-const floaded=()=>document.documentElement.className+=' fonts-loaded';
-if(sessionStorage.fonts)floaded();
-else Promise.all([document.fonts.load("400 1em Merriweather"),document.fonts.load("700 1em Merriweather"),document.fonts.load("italic 400 1em Merriweather"),document.fonts.load("italic 700 1em Merriweather"),])
-.then(() => {sessionStorage.fonts=true;floaded();})
+              const floaded=()=>document.documentElement.className+=' fonts-loaded';
+              if(sessionStorage.fonts)floaded();
+              else Promise.all(["400 1em Merriweather","700 1em Merriweather","italic 400 1em Merriweather","italic 700 1em Merriweather","400 1em Fira Sans","600 1em Fira Sans","400 1em Fira Mono"].map(n=>document.fonts.load(n))).then(() => {sessionStorage.fonts=true;floaded();})
+              setTimeout(()=>document.documentElement.className+=' animations-ready',1000);
             `.trim(),
             }}
           />

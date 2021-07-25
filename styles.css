@@ -89,10 +89,11 @@ html,
   .prose-xl ol,
   .prose ol {
     @apply mt-3;
+    @apply counter-reset;
   }
 
   .prose ol > li {
-    @apply pt-[0.5ex] before:text-stroke before:top-0 my-0 before:font-sans font-serif before:text-4xl before:proportional-nums before:font-semibold before:leading-none leading-normal;
+    @apply counter-increment before:counter-result pt-[0.5ex] before:text-stroke before:top-0 my-0 before:font-sans font-serif before:text-4xl before:proportional-nums before:font-semibold before:leading-none leading-normal;
   }
 
   .prose :is(ol, ul) p {

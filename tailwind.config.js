@@ -6,7 +6,7 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   mode: 'jit',
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     fontFamily: {
       sans: ['Fira Sans', 'typeofweb-fallback-sans', 'Arial', 'Helvetica', 'sans-serif'],
@@ -92,49 +92,70 @@ module.exports = {
     require('tailwindcss-text-indent')(),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    plugin(function ({ config, addUtilities, addVariant, e, theme }) {
-      // text-stroke
-      addUtilities({
-        '.text-stroke': {
-          '-webkit-text-stroke': `1px ${theme('colors.gray.500')}`,
-          '-webkit-text-fill-color': `${theme('colors.gray.100')}`,
-        },
-        '.text-tiny': {
-          'font-size': '0.625rem',
-          'line-height': '0.8125rem',
-        },
-        '.no-touch-highlight': {
-          '-webkit-tap-highlight-color': 'transparent',
-          '-webkit-touch-callout': 'none',
-          '-webkit-user-select': 'none',
-          '-khtml-user-select': 'none',
-          '-moz-user-select': 'none',
-          '-ms-user-select': 'none',
-          'user-select': 'none',
-        },
-      });
+    plugin(function ({ config, addUtilities, addVariant, e, postcss, theme }) {
+      {
+        addUtilities({
+          '.text-stroke': {
+            '-webkit-text-stroke': `1px ${theme('colors.gray.500')}`,
+            '-webkit-text-fill-color': `${theme('colors.gray.100')}`,
+          },
+          '.text-tiny': {
+            'font-size': '0.625rem',
+            'line-height': '0.8125rem',
+          },
+          '.no-touch-highlight': {
+            '-webkit-tap-highlight-color': 'transparent',
+            '-webkit-touch-callout': 'none',
+            '-webkit-user-select': 'none',
+            '-khtml-user-select': 'none',
+            '-moz-user-select': 'none',
+            '-ms-user-select': 'none',
+            'user-select': 'none',
+          },
+          '.transcluent-white': {
+            'backdrop-filter': 'blur(5px)',
+            'background-color': 'rgba(255, 255, 255, 0.5)',
+          },
+          '.transcluent-black': {
+            'backdrop-filter': 'blur(5px)',
+            'background-color': 'rgba(0, 0, 0, 0.5)',
+          },
+        });
+      }
 
-      // counters
-      // Copyright (c) 2020 Konstantin Komelin
-      const counterName = 'c' + Math.random().toString(32).slice(3);
+      {
+        // ios variant
+        addVariant('ios', ({ container, separator }) => {
+          const supportsRule = postcss.atRule({ name: 'supports', params: '(-webkit-touch-callout: none)' });
+          supportsRule.append(container.nodes);
+          container.append(supportsRule);
+          supportsRule.walkRules((rule) => {
+            rule.selector = `.${e(`ios${separator}${rule.selector.slice(1)}`)}`;
+          });
+        });
+      }
 
-      addUtilities({
-        '.counter-reset': {
-          'counter-reset': counterName,
-        },
-        '.counter-increment': {
-          'counter-increment': `${counterName} 1`,
-        },
-        '.counter-decrement': {
-          'counter-increment': `${counterName} -1`,
-        },
-      });
-
-      addUtilities({
-        '.counter-result': {
-          content: `counter(${counterName})`,
-        },
-      });
+      {
+        // counters
+        // Copyright (c) 2020 Konstantin Komelin
+        const counterName = 'c' + Math.random().toString(32).slice(3);
+        addUtilities({
+          '.counter-reset': {
+            'counter-reset': counterName,
+          },
+          '.counter-increment': {
+            'counter-increment': `${counterName} 1`,
+          },
+          '.counter-decrement': {
+            'counter-increment': `${counterName} -1`,
+          },
+        });
+        addUtilities({
+          '.counter-result': {
+            content: `counter(${counterName})`,
+          },
+        });
+      }
     }),
   ],
 };
