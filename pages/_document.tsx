@@ -14,12 +14,7 @@ export default class MyDocument extends Document {
         <Head>
           <script
             dangerouslySetInnerHTML={{
-              __html: `
-              const floaded=()=>document.documentElement.className+=' fonts-loaded';
-              if(sessionStorage.fonts)floaded();
-              else Promise.all(["400 1em Merriweather","700 1em Merriweather","italic 400 1em Merriweather","italic 700 1em Merriweather","400 1em Fira Sans","600 1em Fira Sans","400 1em Fira Mono"].map(n=>document.fonts.load(n))).then(() => {sessionStorage.fonts=true;floaded();})
-              setTimeout(()=>document.documentElement.className+=' animations-ready',1000);
-            `.trim(),
+              __html: `const e=()=>o.className+=" fonts-loaded",o=document.documentElement,a="00 1em Merriweather",n="00 1em Fira Sans";sessionStorage.fonts?e():Promise.all(["4"+a,"7"+a,"italic 4"+a,"italic 7"+a,"4"+n,"6"+n,"400 1em Fira Mono"].map(e=>document.fonts.load(e))).then(()=>{sessionStorage.fonts=!0,e()}),setTimeout(()=>o.className+=" animations-ready",1e3)`,
             }}
           />
         </Head>

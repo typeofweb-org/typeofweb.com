@@ -22,6 +22,8 @@ export const ArticleMeta = ({
             <img
               key={author.displayName}
               src={author.avatarUrl}
+              width="32"
+              height="32"
               alt={`Zdjęcie ${author.displayName}`}
               style={{ zIndex: authors.length - idx }}
               className="block -mr-4 last:mr-0 w-8 h-8 border-2 border-gray-100 rounded-full lg:w-10 lg:h-10"

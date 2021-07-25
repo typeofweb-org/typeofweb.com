@@ -4,8 +4,8 @@ export const ArticleCoverImage = ({ coverUrl, wide }: { readonly coverUrl: strin
   return (
     <div className={`text-[length:0] overflow-hidden ${wide ? `lg:-mx-4 mb-8` : `rounded-t-xl`}`}>
       <Image
-        width={800}
-        height={450}
+        width={768}
+        height={404}
         className="duration-[10s] motion-safe:hover:scale-110 transition-transform ease-in hover:ease-out"
         src={coverUrl}
         alt=""
