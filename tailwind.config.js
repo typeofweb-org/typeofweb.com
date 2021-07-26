@@ -114,11 +114,11 @@ module.exports = {
           },
           '.transcluent-white': {
             'backdrop-filter': 'blur(5px)',
-            'background-color': 'rgba(255, 255, 255, 0.5)',
+            'background-color': 'rgba(255, 255, 255, 0.75)',
           },
           '.transcluent-black': {
             'backdrop-filter': 'blur(5px)',
-            'background-color': 'rgba(0, 0, 0, 0.5)',
+            'background-color': 'rgba(0, 0, 0, 0.75)',
           },
         });
       }

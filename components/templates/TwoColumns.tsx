@@ -20,7 +20,7 @@ export const TwoColumns = ({
     <>
       <SiteHeader pageKind={pageKind} />
       <div className="flex flex-row items-start justify-center">
-        <main id="main-content" className="flex-1 max-w-3xl">
+        <main id="main-content" className="flex-1 pb-20 w-full max-w-3xl">
           {children}
         </main>
         {withSidebar && <Sidebar pageKind={pageKind} />}
