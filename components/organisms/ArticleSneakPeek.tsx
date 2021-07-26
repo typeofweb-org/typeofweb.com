@@ -1,38 +1,44 @@
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
-import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
 import type { Author } from '../molecules/ArticleMeta';
 
 interface ArticleSneakPeekProps {
-  readonly coverUrl?: string;
+  readonly cover: { readonly url: string; readonly width: number; readonly height: number } | null;
   readonly id: number;
+  readonly index: number;
   readonly title: string;
   readonly authors: readonly Author[];
-  readonly mainCategory: string;
+  readonly mainCategory: { readonly slug: string; readonly name: string } | null;
   readonly href: string;
+  readonly excerpt: string;
 }
 
-export const ArticleSneakPeek = ({ coverUrl, id, title, authors, mainCategory, href }: ArticleSneakPeekProps) => {
+export const ArticleSneakPeek = ({
+  cover,
+  id,
+  index,
+  title,
+  authors,
+  mainCategory,
+  href,
+  excerpt,
+}: ArticleSneakPeekProps) => {
   return (
-    <Card as="article" roundAllCorners={!coverUrl} moreSpace={!coverUrl}>
+    <Card as="article" roundAllCorners={!cover} moreSpace={!cover}>
       <header className="bg-gray-200">
-        {coverUrl && <ArticleCoverImage coverUrl={coverUrl} wide={false} />}
-        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${coverUrl ? 'pt-6' : ''}`}>
-          <ArticleTitle title={title} id={id} href={href} />
+        {cover && <ArticleCoverImage cover={cover} wide={false} />}
+        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
+          <ArticleTitle title={title} id={id} index={index} href={href} />
           <ArticleMeta authors={authors} mainCategory={mainCategory} />
         </div>
       </header>
       <div className="prose lg:prose-xl pb-2 px-7 sm:px-8 lg:px-12">
+        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
         <p>
-          Wielu osobom wydaje się, że im stajemy się starsi, tym czas szybciej płynie. Mamy tysiące wspomnień ze
-          wczesnej młodości, a później trudno nam odróżnić rok od roku. Ale czy aby na pewno tylko nam się wydaje? Czy
-          to zjawisko jest jakoś opisane i uzasadnione?{' '}
-          <LinkUnderlineEffect>
-            <a href={href}>Czytaj dalej…</a>
-          </LinkUnderlineEffect>
+          <a href={href}>Czytaj dalej…</a>
         </p>
       </div>
     </Card>

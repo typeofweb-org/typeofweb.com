@@ -3,10 +3,12 @@ import { SectionTitle } from './SectionTitle';
 export const ArticleTitle = ({
   title,
   id,
+  index,
   href,
 }: {
   readonly title: string;
   readonly id: number;
+  readonly index: number;
   readonly href: string;
 }) => {
   return (
@@ -14,11 +16,11 @@ export const ArticleTitle = ({
       <SectionTitle size="large">
         {title}
         <span
-          aria-label={`Artykuł numer ${id}`}
-          title={`Artykuł numer ${id}`}
+          aria-label={`Artykuł numer ${index}`}
+          title={`Artykuł numer ${index}`}
           className="text-stroke absolute -left-7 top-1 text-gray-500 font-sans text-xl font-semibold"
         >
-          {id}
+          {index}
         </span>
       </SectionTitle>
     </a>

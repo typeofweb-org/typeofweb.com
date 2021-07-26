@@ -1,60 +1,52 @@
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
 import { TwoColumns } from '../components/templates/TwoColumns';
+import { postToProps } from '../utils/postToProps';
+import { readAllPosts } from '../utils/wordpress';
 
-export default function IndexPage() {
-  const firstPostHasCover = false;
+import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 
+const PAGE_SIZE = 10;
+
+export const getStaticProps = async ({}: GetStaticPropsContext) => {
+  const markdownPosts = (await readAllPosts()).slice(0, PAGE_SIZE);
+  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
+
+  const posts = markdownPosts.map((post) => postToProps(post, authorsJson)).map((p) => ({ ...p, content: '' }));
+
+  return { props: { posts } };
+};
+
+const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <TwoColumns withSidebar={true} pageKind="index">
-      <ArticleSneakPeek
-        title="Względne postrzeganie czasu: model matematyczny"
-        mainCategory="Opinie"
-        href="/post"
-        authors={[
-          {
-            avatarUrl: 'https://secure.gravatar.com/avatar/67ddb8f651e11cbc28c53c0fe4f7542e?s=160&d=identicon&r=g',
-            displayName: 'Michał Miszczyszyn',
-          },
-        ]}
-        coverUrl={
-          firstPostHasCover
-            ? 'https://typeofweb.com/wp-content/uploads/2021/07/relatywny_wzgledny_subiektywny_czas_postrzeganie.png'
-            : undefined
+      {posts.map((post, i) => {
+        const sneakPeek = (
+          <ArticleSneakPeek
+            key={post.frontmatter.id}
+            title={post.frontmatter.title}
+            mainCategory={post.frontmatter.mainCategory}
+            href={post.frontmatter.permalink}
+            authors={post.frontmatter.authors}
+            cover={post.frontmatter.cover}
+            id={post.frontmatter.id}
+            index={post.frontmatter.index}
+            excerpt={post.excerpt}
+          />
+        );
+
+        if (i === 0) {
+          return (
+            <>
+              {sneakPeek}
+              <NewsletterForm />
+            </>
+          );
         }
-        id={341}
-      />
-      <NewsletterForm />
-      <ArticleSneakPeek
-        title="Względne postrzeganie czasu: model matematyczny"
-        mainCategory="Opinie"
-        href="/post"
-        authors={[
-          {
-            avatarUrl:
-              'https://typeofweb.com/wp-content/uploads/2020/06/92280665_10223145319368360_5560124641172783104_o1-150x150.jpg',
-            displayName: 'Paulina Piątek',
-          },
-          {
-            avatarUrl: 'https://secure.gravatar.com/avatar/67ddb8f651e11cbc28c53c0fe4f7542e?s=160&d=identicon&r=g',
-            displayName: 'Michał Miszczyszyn',
-          },
-        ]}
-        coverUrl="https://typeofweb.com/wp-content/uploads/2021/07/relatywny_wzgledny_subiektywny_czas_postrzeganie.png"
-        id={340}
-      />
-      <ArticleSneakPeek
-        title="Względne postrzeganie czasu: model matematyczny"
-        mainCategory="Opinie"
-        href="/post"
-        authors={[
-          {
-            avatarUrl: 'https://secure.gravatar.com/avatar/67ddb8f651e11cbc28c53c0fe4f7542e?s=160&d=identicon&r=g',
-            displayName: 'Michał Miszczyszyn',
-          },
-        ]}
-        id={339}
-      />
+        return sneakPeek;
+      })}
     </TwoColumns>
   );
-}
+};
+
+export default IndexPage;

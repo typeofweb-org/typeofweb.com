@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Fragment } from 'react';
 
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
@@ -5,6 +6,7 @@ import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 export interface Author {
   readonly avatarUrl: string;
   readonly displayName: string;
+  readonly slug: string;
 }
 
 export const ArticleMeta = ({
@@ -12,7 +14,7 @@ export const ArticleMeta = ({
   mainCategory,
 }: {
   readonly authors: readonly Author[];
-  readonly mainCategory: string;
+  readonly mainCategory: { readonly slug: string; readonly name: string } | null;
 }) => {
   return (
     <div className="mt-2">
@@ -20,7 +22,7 @@ export const ArticleMeta = ({
         <div className="flex flex-shrink-0 mr-2">
           {authors.map((author, idx) => (
             <img
-              key={author.displayName}
+              key={author.slug}
               src={author.avatarUrl}
               width="32"
               height="32"
@@ -32,7 +34,7 @@ export const ArticleMeta = ({
         </div>
         <div className="font-sans text-sm font-semibold leading-tight sm:text-base">
           {authors.map((author, idx) => (
-            <Fragment key={author.displayName}>
+            <Fragment key={author.slug}>
               <LinkUnderlineEffect>
                 <a className="text-blue-500" href="#">
                   {author.displayName}
@@ -47,11 +49,15 @@ export const ArticleMeta = ({
               )}
             </Fragment>
           ))}
-          <span className="before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap">
-            <LinkUnderlineEffect>
-              <a href="#">{mainCategory}</a>
-            </LinkUnderlineEffect>
-          </span>
+          {mainCategory && (
+            <span className="before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap">
+              <LinkUnderlineEffect>
+                <Link href={`/${mainCategory.slug}`}>
+                  <a>{mainCategory.name}</a>
+                </Link>
+              </LinkUnderlineEffect>
+            </span>
+          )}
         </div>
       </div>
     </div>
