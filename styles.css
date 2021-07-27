@@ -40,6 +40,10 @@ html,
   transform: translate3d(0, calc(0px - env(safe-area-inset-bottom)), 0);
 }
 
+[id] {
+  scroll-margin: 4rem 0 0 0;
+}
+
 @layer utilities {
   .prose {
     max-width: 75ch;
