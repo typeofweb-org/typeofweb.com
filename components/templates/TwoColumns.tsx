@@ -28,7 +28,7 @@ export const TwoColumns = ({
         id="main-menu-button"
         aria-expanded={uiState.isMenuOpen}
         aria-controls="main-menu"
-        className="main-menu-button no-touch-highlight fixed z-30 bottom-8 right-6 flex items-center justify-center w-12 h-12 text-gray-800 bg-white border border-solid border-gray-200 rounded-md shadow-lg select-none lg:hidden"
+        className="main-menu-button no-touch-highlight fixed z-50 bottom-8 right-6 flex items-center justify-center w-12 h-12 text-gray-800 bg-white border border-solid border-gray-200 rounded-md shadow-lg select-none lg:hidden"
         onClick={() => setUIState((state) => ({ ...state, isMenuOpen: !state.isMenuOpen }))}
       >
         <span className="sr-only">Otwórz nawigację</span>
