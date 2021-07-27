@@ -19,8 +19,8 @@ categories:
 seo:
   focusKeywords:
     - AngularJS
-
 ---
+
 <p>Jednym z aspektów sprawiających trudność w AngularJS, który wciąż i wciąż powraca w moich rozmowach z różnymi programistami jest prawidłowa implementacja komunikacji pomiędzy modułami. Dokumentacja i poradniki najczęściej opisują tylko najbardziej podstawowe przykłady porozumiewania się np. pomiędzy komponentem-rodzicem a komponentem-dzieckiem, co w zasadzie nie sprawia problemu. Co jednak w przypadku, gdy komunikacja musi zachodzić w obu kierunkach albo pomiędzy komponentami, które w strukturze aplikacji są od siebie odległe?</p>
 
 <p>Aby problem był mniej abstrakcyjny, postaram się nakreślić bardziej konkretny przykład. Weźmy koncept aplikacji:</p>

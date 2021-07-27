@@ -21,8 +21,8 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
-
 ---
+
 <p>Przed Wami trzecia część kursu Angular 2. W tym wpisie omawiam różne sposoby komunikacji pomiędzy komponentami na prostych przykładach.</p>
 
 <p class=important><strong>Angular 2 nie jest jeszcze gotowy na produkcję</strong>. W momencie powstawania tego wpisu najnowszą wersją tego frameworka była <em>Release Candidate 4</em>. Jest to wersja prawie gotowa do wydania, jednak minie jeszcze trochę czasu zanim całość się ustabilizuje, a pomiędzy wersjami RC-1, RC-2 i RC-3 pojawiły się dość poważne zmiany (routing, formularze).</p>

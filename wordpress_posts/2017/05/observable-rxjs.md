@@ -18,9 +18,10 @@ categories:
   - slug: javascript
     name: JavaScript
 seo: {}
-
 ---
+
 To nie będzie wpis na temat teorii reaktywnego programowania funkcyjnego. Nie jest to też wyciąg z dokumentacji rxjs. Ten wpis jest krótkim praktycznym wprowadzeniem do Obserwabli na przykładzie. Zaczynajmy!
+
 <p class="important">W tym wpisie używam <code>rxjs 5</code> i określenie <code>Observable</code> odnosi się właśnie do tej biblioteki. <a href="http://reactivex.io/rxjs/">Dokumentacja rxjs 5</a>.</p>
 
 <h1 id="teoria">Teoria</h1>
@@ -29,6 +30,7 @@ Wszystko co chcę Wam powiedzieć na temat teorii zawiera się w jednym zdaniu:
 BTW: Jest to własne tłumaczenie fragmentu artykułu <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">"The introduction to Reactive Programming you've been missing"</a>
 
 Ale co to w ogóle oznacza? <strong>Jeśli tylko w Twojej aplikacji cokolwiek dzieje się asynchronicznie, to Observable prawdopodobnie może Ci w to ułatwić.</strong> To pewnie brzmi jak reklama dziesiątek innych bibliotek i rozwiązań. W czym więc Observable wygrywa?
+
 <ul>
  	<li>Observable to tak naprawdę <strong>wzorzec obserwatora</strong> z bajerami. Jednocześnie jest to już <em>de facto</em> standard, składnia jest popularna i powszechnie znana</li>
  	<li>Observable pozwala w ten sam sposób obsługiwać różne rodzaje asynchronicznych zdarzeń, zarówno pojedyncze (jak żądanie http) jak i wielokrotne (jak ruchy kursorem)</li>
@@ -44,11 +46,12 @@ Chciałbym, aby po kliknięciu w przycisk pojawiała się losowa liczba. W czyst
 const button = document.querySelector('button');
 
 button  
-    .addEventListener('click', () =&gt; {
-        output.textContent = Math.random().toString();
-    });
+ .addEventListener('click', () =&gt; {
+output.textContent = Math.random().toString();
+});
 </code></pre>
 Mamy tutaj asynchroniczne zdarzenia, więc powinniśmy móc zamienić ten kod na observable. Tworzymy pierwszą observablę w życiu:
+
 <pre><code class="language-javascript">const output = document.querySelector('output');  
 const button = document.querySelector('button');
 
@@ -62,6 +65,7 @@ Rx.Observable
 <img src="/content/images/2017/05/--51.png" alt="WOW" />
 
 Wow, nasze pierwsze obserwable :) Szkoda tylko, że na razie nie widać absolutnie żadnych zalet w stosunku do czystego JS. A skoro nie widać różnicy… i tak dalej. Dodajmy więc kolejne wymagania do naszego projektu: tylko co trzecie kliknięcie ma zmieniać wyświetlaną liczbę.
+
 <pre><code class="language-javascript">Rx.Observable  
     .fromEvent(button, 'click')
     .bufferCount(3) // !
@@ -73,6 +77,7 @@ Wow, nasze pierwsze obserwable :) Szkoda tylko, że na razie nie widać absolut
 Jakby to wyglądało w czystym JS? Na pewno byłoby nieco dłuższe. <strong>Tutaj pojawia się cała moc Observabli: operatory</strong>. Jest ich mnóstwo i nie sposób wszystkie zapamiętać, jednak dają one przeogromne, właściwie nieskończone możliwości! W tym przypadku dzięki <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-bufferCount"><code>bufferCount</code></a> zbieramy (buforujemy) 3 zdarzenia i dopiero wtedy je emitujemy w postaci tablicy.
 
 Ale w zasadzie to wymaganie 3 kliknięć łatwo też napisać w czystym JS. Zmieńmy je nieco: Niech to będą 3 kliknięcia, ale tylko w krótkim czasie 400ms. Czyli coś w stylu potrójnego kliknięcia:
+
 <pre><code class="language-javascript">const click$ = Rx.Observable.fromEvent(button, 'click');
 
 click$  
@@ -90,6 +95,7 @@ Muszę przy okazji wspomnieć, że sposobów na tworzenie observabli jest bardzo
 Jeśli masz ulubioną bibliotekę do obsługi żądań http, jak choćby <code>fetch</code>, możesz ją łatwo zaadaptować na Observable. Jednak możesz też skorzystać z metody <code>Rx.Observable.ajax</code> i na potrzeby tego wpisu ja tak właśnie zrobię.
 
 Okej, prosty przykład, pobieramy listę postów z API i ją wyświetlamy. Renderowanie nie jest tematem tego posta, więc tutaj je pominę, a samo pobieranie jest tak proste jak:
+
 <pre><code class="language-javascript">const postsApiUrl = `https://jsonplaceholder.typicode.com/posts`;
 
 Rx.Observable  
@@ -99,7 +105,9 @@ Rx.Observable
       err =&gt; console.error(err)
     );
 </code></pre>
+
 <em>Voilà</em>! To jest aż tak proste! Dodałem tutaj też <strong>drugi argument do funkcji <code>subscribe</code>, który służy do obsługi błędów</strong>. Okej, co teraz możemy z tym zrobić? Niech po każdym kliknięciu przycisku zostaną pobrane posty losowego użytkownika:
+
 <pre><code class="language-javascript">Rx.Observable  
   .fromEvent(button, "click")
   .flatMap(getPosts)
@@ -115,7 +123,9 @@ function getPosts() {
   );
 }
 </code></pre>
+
 Użyłem tutaj funkcji <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-mergeMap"><code>flatMap</code></a> (zwanej też <code>mergeMap</code>), która dla każdego zdarzenia (kliknięcia) wywoła funkcję <code>getPosts</code> i poczeka na jej rezultat.
+
 <p class="important">We <a href="https://typeofweb.com/2017/05/12/map-i-reduce-w-js/">wpisie dotyczącym tablic i map/reduce</a> opisałem też funkcję <code>flatMap</code>. Tam zamieniała <code>Array&lt;Array&lt;T&gt;&gt;</code> na <code>Array&lt;U&gt;</code>, a w tym przypadku zamienia ona <code>Observable&lt;Observable&lt;T&gt;&gt;</code> na <code>Observable&lt;U&gt;</code>. Czy teraz widoczny jest sens poprzedniego wpisu?</p>
 Zobaczmy to na żywo:
 <p class="codepen" data-height="265" data-theme-id="0" data-slug-hash="YVeeKg" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Observables 4">Zobacz Pen <a href="https://codepen.io/mmiszy/pen/YVeeKg/">Observables 4</a> by Michał Miszczyszyn (<a href="http://codepen.io/mmiszy">@mmiszy</a>) na <a href="http://codepen.io">CodePen</a>.</p>
@@ -133,22 +143,26 @@ Skoro umiemy już tak dużo to może teraz rozbudujemy nieco naszą aplikację. 
   .map(e =&gt; e.target.value);
 
 const resource$ = Rx.Observable  
-  .fromEvent(select, "change")
-  .map(e =&gt; e.target.value);
+ .fromEvent(select, "change")
+.map(e =&gt; e.target.value);
 </code></pre>
 Od razu też mapujemy każde zdarzenie na wartość inputa/selecta. Następnie łączymy obie obserwable w taki sposób, aby po zmianie dowolnej z nich, zostały pobrane wartości obu. Używamy do tego <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-combineLatest"><code>combineLatest</code></a>:
+
 <pre><code class="language-javascript">Rx.Observable  
   .combineLatest(id$, resource$)
   .switchMap(getPosts)
   .subscribe(render);
 </code></pre>
+
 Co istotne, funkcja <code>combineLatest</code> nie wyemituje niczego dopóki obie observable (<code>id$</code> i <code>resource$</code>) nie wyemitują przynajmniej jednej wartości. Innymi słowy, nic się nie stanie dopóki nie wybierzemy wartości w obu polach.
+
 <p class="codepen" data-height="265" data-theme-id="0" data-slug-hash="ZKxzvr" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Observables 6">Zobacz Pen <a href="http://codepen.io/mmiszy/pen/ZKxzvr/">Observables 6</a> by Michał Miszczyszyn (<a href="http://codepen.io/mmiszy">@mmiszy</a>) na <a href="http://codepen.io">CodePen</a>.</p>
 
 <h1 id="podsumowanie">Podsumowanie</h1>
 W zasadzie o obserwablach nie powiedziałem jeszcze za dużo. Chciałem szybko przejść do przykładu i pokazać coś praktycznego. Czy mi się to udało?
 
 Jako bonus zmieniam ostatni kod i nieco inaczej obsługuję pole input. Pytanie czy i dlaczego jest to lepsze?
+
 <pre><code class="language-javascript">const id$ = Rx.Observable  
   .fromEvent(input, "input")
   .map(e =&gt; e.target.value)

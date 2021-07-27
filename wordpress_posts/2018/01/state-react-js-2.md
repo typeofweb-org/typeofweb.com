@@ -23,13 +23,14 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Pod koniec poprzedniego wpisu zadałem podchwytliwe ćwiczenie dotyczące <code>state</code> w React.js. Jeśli jeszcze go nie wykonałaś/eś to teraz jest ten moment, aby wrócić i spróbować ;) W tym wpisie rozwijam temat <code>state</code>, opisuję dokładniej jak działa <code>setState</code> i jakie argumenty przyjmuje.
 
 <!--more-->
 
 Zacznijmy może od wykonania ćwiczenia z poprzedniego wpisu. Zadanie brzmiało tak:
+
 <blockquote>Dodaj dwa nowe liczniki. Pierwszy, który będzie zliczał wszystkie kliknięcia w przyciski (tzn. kliknięcie w <code>+</code> i <code>-</code> daje 0 na obecnym liczniku oraz 2 na nowym liczniku), oraz drugi, który będzie zliczał podwójne kliknięcia (tzw. <em>double click</em>) <strong>na elemencie z wynikiem</strong>.</blockquote>
 Wydaje się proste, ale implementacja odkrywa przez Tobą pewien ważny szczegół dotyczący działania funkcji <code>setState</code>. W jaki sposób chcielibyśmy tutaj aktualizować stan? Musimy przechowywać jeden licznik z sumą, drugi zliczający łączne kliknięcia oraz trzeci, który będzie przechowywał podwójne kliknięcia. <strong>To co jest tutaj istotne to fakt, że w momencie pojedynczego kliknięcia aktualizujesz tylko dwa liczniki, a trzeci pozostaje bez zmian.</strong> Jak to najprościej zaimplementować?
 <h2>Jak działa <code>setState</code>?</h2>
@@ -43,13 +44,16 @@ Wydaje się proste, ale implementacja odkrywa przez Tobą pewien ważny szczegó
 Działa, po prostu do <code>doubleClickCount</code> zawsze przypisana zostaje niezmieniona wartość <code>this.state.doubleClickCount</code>. <strong>Ale czy to konieczne?</strong> Co by było, gdyby stan komponentu składał się nie z 3, a z 15 pól? Nie dyskutujmy teraz czy to dobre rozwiązanie, tylko zastanów się jak by musiała wyglądać każda aktualizacja stanu… właśnie.
 
 Na szczęście <code>setState</code> jest mądrzejsze i automatycznie <strong>łączy obecny stan z tym podanym mu jako argument — i nadpisuje tylko podane własności. To co się nie zmienia pomijasz:</strong>
+
 <pre class="language-javascript"><code>increment() {
     this.setState({ // doubleClickCount pozostanie niezmienne
       sumCount: this.state.counter + 1
       totalCount: this.state.totalCount + 1
     })
   }</code></pre>
+
 A tutaj w pełni działające rozwiązanie:
+
 <p class="codepen" data-height="265" data-theme-id="0" data-slug-hash="eevevJ" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Stan komponentów React.js">See the Pen <a href="https://codepen.io/mmiszy/pen/eevevJ/">Stan komponentów React.js</a> by Michał Miszczyszyn (<a href="https://codepen.io/mmiszy">@mmiszy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 Jeśli to nie jest dla Ciebie jasne, nie ma w tym nic złego :) Możesz zadać nam pytanie w komentarzu! [typeofweb-courses-slogan category="React"]

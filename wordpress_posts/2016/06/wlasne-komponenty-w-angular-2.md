@@ -18,8 +18,8 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
-
 ---
+
 <p><a href="https://typeofweb.com/2016/06/03/wstep-do-angular-2/">W poprzedniej części kursu Angular 2</a> omówiłem założenia frameworka, tworzenie nowego projektu, podstawy bindingów oraz wreszcie kod pierwszego komponentu. Pominąłem jednak kilka kwestii takich jak <strong>bindingi na własnych komponentach</strong>, pełna składnia bindingu dwukierunkowego, czy możliwość odwoływania się do referencji do obiektów na poziomie szablonów (brzmi skomplikowanie, ale nie jest!). Chciałbym teraz do tych kwestii wrócić. W tym celu odtworzę projekt, który poprzednio <a href="https://typeofweb.com/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/">zaimplementowałem w AngularJS 1.5</a> gdy opisywałem koncept komponentów. Będzie to prosta lista kontaktów z gravatarami.</p>
 
 <h1 id="koncepcyjnie">Koncepcyjnie</h1>

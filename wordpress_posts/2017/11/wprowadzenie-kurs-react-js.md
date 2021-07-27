@@ -29,8 +29,8 @@ seo:
   focusKeywordSynonyms:
     - react-js, react
     - kurs React, kurs Reacta, kurs Reakta
-
 ---
+
 Oto kurs React.js od podstaw. Moje gratulacje za podjęcie tego tematu! To pierwszy krok w kierunku realizacji Twoich ambicji i poznania tego niezwykle przydatnego narzędzia. Ten <strong>kurs React.js</strong> sprawi, że będziesz umiał(a) tworzyć <strong>rozbudowane i profesjonalne aplikacje internetowe</strong> oraz przybliży Cię do celu jakim zapewne jest znalezienie pracy w tej technologii. Na pewno warto!
 
 <!--more-->
@@ -47,6 +47,7 @@ Jeśli zaglądałaś/eś tutaj wcześniej to pewnie drapiesz się teraz po głow
 Jeśli kurs Ci nie wystarczy, albo chcesz poznać Reacta jeszcze szybciej, to [typeofweb-courses-slogan category="React"]
 
 Moje własne doświadczenia tylko dowodzą od dawna powtarzanej prawdy — trzeba cały czas zachować otwarty umysł. <strong>Nawet jeśli nigdy nie próbowałeś React, to może właśnie ten moment</strong>? Na pewno warto zapoznać się przynajmniej z podstawowymi konceptami, nie tylko dlatego, że <strong>React.js jest najbardziej popularnym rozwiązaniem na front-endzie</strong>, ale także dlatego, że są to zasady i wzorce uniwersalne.
+
 <h2>Co dalej?</h2>
 Jednocześnie ta seria wpisów jest początkiem czegoś zupełnie nowego! Nowa formuła. Od teraz, w małych odstępach czasu, będę publikował <strong>kolejne części serii, w której poznasz React</strong>. Wpisy będą <strong>krótkie, lekkie i przystępne</strong>, i będą się pojawiały częściej niż zwykle. W kolejnych wpisach m.in. stworzysz pierwszy kompletny komponent, poznasz JSX, nauczysz się składać komponenty niczym klocki i zapoznasz się z cyklem życia komponentów. Postaram się też wyjaśnić jak wygląda podejście React do przepływu danych, gdzie używać stanu komponentów, jak można przechowywać stan całej aplikacji i wiele innych rzeczy… Konkretnie, bez owijania w bawełnę :) <strong>Mam nadzieję, że ta forma Ci się spodoba.</strong>
 

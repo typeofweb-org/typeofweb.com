@@ -15,8 +15,8 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
-
 ---
+
 <p>Zakończył się trzeci Weekly JavaScript Challenge. Grupa zyskuje co raz większą popularność, zapisały się do niej już 494 osoby. <strong>Dziękuję</strong> wszystkim, którzy rozwiązują zadania i komentują pod rozwiązaniami innych osób!</p>
 
 <p class=important>Weekly JavaScript Challenge to <a href=https://www.facebook.com/groups/1131907053499522>grupa na Facebooku</a>. Celem jej istnienia jest wspólna nauka JavaScriptu poprzez rozwiązywanie prostych zadań i wzajemną ocenę kodu.</p>

@@ -23,9 +23,10 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W komentarzach na blogu i na Facebooku pojawiło się całe mnóstwo różnych pytań do mnie. Super! Staram się odpowiadać na nie na biężąco. Ale teraz postanowiłem też zebrać je w jednym miejscu wraz z odpowiedziami — i stworzyć swego rodzaju kompendium wiedzy ;) **Jeśli masz jakieś pytania to pisz!** Odpowiem na nie w jednym z kolejnych wpisów.
+
 <!--more-->
 
 ## Wasze pytania i odpowiedzi
@@ -38,12 +39,12 @@ Babel to uniwersalny transpiler. Z dodatkiem odpowiednich wtyczek, presetów, pa
 
 Aktualnie [`create-react-app` domyślnie wspiera w Babelu następujące elementy ES](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#supported-language-features-and-polyfills):
 
-* Exponentiation Operator (ES2016)
-* Async/await (ES2017)
-* Object Rest/Spread Properties (stage 3 proposal)
-* Dynamic import() (stage 3 proposal)
-* Class Fields and Static Properties (part of stage 3 proposal)
-* JSX & Flow
+- Exponentiation Operator (ES2016)
+- Async/await (ES2017)
+- Object Rest/Spread Properties (stage 3 proposal)
+- Dynamic import() (stage 3 proposal)
+- Class Fields and Static Properties (part of stage 3 proposal)
+- JSX & Flow
 
 ### Używasz destrukturyzacji, a w wielu innych tutorialach tego nie ma… Są jakieś wady/zalety destrukturyzacji propsów?
 
@@ -103,7 +104,7 @@ class MyComponent extends React.Component {
 
 Głównie ze względów historycznych, ale też częściowo praktycznych :)
 
-Po pierwsze, początkowo React starał się odwzorowywać **własności** HTML (*properties*, a nie *attributes*). A własność nazywa się właśnie `el.className`.
+Po pierwsze, początkowo React starał się odwzorowywać **własności** HTML (_properties_, a nie _attributes_). A własność nazywa się właśnie `el.className`.
 
 Po drugie, destrukturyzacja własności o nazwie `class` jest znacznie trudniejsza, bo to słowo zarezerwowane:
 
@@ -119,4 +120,5 @@ Zresztą `className` to nie jedyny przypadek gdy nazwa w JSX odbiega od HTML. **
 ```
 
 ## Masz pytanie?
+
 To by było na tyle w pierwszej części pytań i odpowiedzi. [typeofweb-courses-slogan category="React"] Jeśli masz jakieś dodatkowe pytania — nawet te najprostsze — **śmiało zadawaj je w komentarzach pod wpisami** :) Będę je zbierał i publikował wraz z odpowiedziami.

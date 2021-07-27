@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Jak pewnie zauważyłaś/eś — wywołanie metody klasy w React.js z poziomu funkcji <code>render</code> kończy się źle, o ile nie użyjesz <code>bind</code>. Wspominałem też o tym w kursie i sam używałem po prostu <code>bind</code> w czasie renderowania. Ale czy to dobre rozwiązanie? Co z wydajnością i czytelnością takiego kodu?
 
 <!--more-->
@@ -41,6 +41,7 @@ x(); // undefined</code></pre>
 Czemu tak się dzieje? Po przypisaniu do nowej zmiennej, funkcja <code>method</code> „nie pamięta” już, że była kiedyś częścią obiektu i wewnątrz niej jej <code>this</code> się zmienia — nie wskazuje już na obiekt. Więcej o tym możesz doczytać tutaj:
 
 https://typeofweb.com/2017/11/14/this-js-kontekst-wywolania-funkcji/
+
 <h2>Jak to się ma do React.js</h2>
 Ale w React.js zawsze używasz <code>{this.myFunction}</code> więc mogłoby by się wydawać, że kontekst powinien być zachowany, no nie? Pomyśl o tym (i przeczytaj linkowany wyżej artykuł). Nie wywołujesz tej funkcji w tym miejscu, tylko przekazujesz <code>this.myFunction</code> do atrybutu… to tak jakbyś zrobił(a) <code>const prop = this.myFunction</code> a następnie wywołał(a) <code>prop(…)</code> — oryginalny kontekst jest gubiony.
 <h2>Co z tym zrobić?</h2>
@@ -60,27 +61,30 @@ Jednym z rozwiązań jest wykonywanie <strong>bind w konstruktorze klasy</stron
     super();
 
     this.filterUsers = this.filterUsers.bind(this); // tutaj bind!
-  }
 
-  filterUsers(e) {
-    ……
-  }
+}
 
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;input onInput={this.filterUsers} /&gt;
-      &lt;/div&gt;
-    );
-  }
+filterUsers(e) {
+……
+}
+
+render() {
+return (
+&lt;div&gt;
+&lt;input onInput={this.filterUsers} /&gt;
+&lt;/div&gt;
+);
+}
 };</code></pre>
 W ten sposób nie musisz już używać <code>bind</code> w renderze, a Twoja funkcja pozostaje niezmienna od powstania komponentu aż do jego zniszczenia. To rozwiązuje problem. <strong>Ale jest brzydkie</strong>. I trzeba o tym pamiętać.
+
 <h2>Arrow function</h2>
 Znasz funkcje strzałkowe, prawda? Unikalną cechą tych funkcji jest to, że posiadają leksykalne <code>this</code>, a więc są (tak jakby) automatycznie zbindowane. To upraszcza sprawę. Możesz ich użyć w <code>render</code> i to zadziała:
 
 <code>&lt;input onInput={(e) =&gt; this.filterUsers(e)} /&gt;</code>
 
 Ale mamy tutaj znowu problemy z początku artykułu: Przy każdym renderze tworzona jest nowa funkcja. Tego nie chcesz. Dodatkowo trzeba pamiętać, aby przekazać wszystkie argumenty z jednej funkcji do drugiej… a to jest co najmniej niewygodne.
+
 <h2>Arrow function x 2</h2>
 No i w końcu dochodzę do <strong>mojego ulubionego rozwiązania</strong>. Wymaga to użycia funkcji strzałkowej (yay 😁) i własności w klasie, która niestety jest nadal tylko szkicem i nie trafiła jeszcze oficjalnie do ECMAScript (nay 😥).
 
@@ -89,6 +93,7 @@ No i w końcu dochodzę do <strong>mojego ulubionego rozwiązania</strong>. Wyma
 Jednakże, same <strong>„class fields” są zaimplementowane w Babel i powszechnie używane</strong>. Tak powszechnie, że są też <strong>domyślnie wykorzystywane przez <code>create-react-app</code></strong>! To chyba rozwiązuje problemy, no nie? Nie musisz się tym martwić: Bierz i korzystaj!
 
 Pomysł jest prosty: <strong>Zdefiniuj własność w klasie, ale zamiast zwykłej funkcji użyj funkcji strzałkowej!</strong> O tak:
+
 <pre class="language-jsx"><code>class App extends React.Component {
   filterUsers = (e) =&gt; {
     ……
@@ -102,13 +107,16 @@ Pomysł jest prosty: <strong>Zdefiniuj własność w klasie, ale zamiast zwykłe
     );
   }
 };</code></pre>
+
 I już :) To moje ulubione rozwiązanie bo jest proste i nie wymaga dodatkowego kodu. No i działa razem w <code>create-react-app</code> od razu.
+
 <p class="important">Można tak skonfigurować <code>ESLint</code>, aby wyłapywał kiedy używasz zwykłej funkcji zamiast arrow function w klasie — tam gdzie jest to potrzebne.</p>
 
 <h2>Podsumowanie</h2>
 Mam nadzieję, że już rozumiesz naturę problemu. Na pewno potrafisz też już go rozwiązać i znasz wady/zalety poszczególnych sposobów. Ostatni wydaje się wygodny, prawda? ;) [typeofweb-courses-slogan category="React"]
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 <h2>Ćwiczenie</h2>

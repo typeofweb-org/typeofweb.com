@@ -24,8 +24,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Przy okazji omawiania komponentów będących klasami w React.js, wspomniałem też o możliwości korzystania z metod cyklu życia (<em>lifecycle methods</em>). Chciałbym do tego tematu teraz powrócić. Pokażę jakie metody cyklu życia definiuje React.js, do czego one służą i kiedy mogą się przydać.
 
 <!--more-->
@@ -34,6 +34,7 @@ Przy okazji omawiania komponentów będących klasami w React.js, wspomniałem t
 Bardzo dokładnie omawiamy cykl życia komponentów na szkoleniach. [typeofweb-courses-slogan category="React"]
 
 Każdy komponent ma pewien określony cykl życia. Na odpowiednich etapach wywoływane są też jego metody cyklu życia. Możemy je podzielić ogólnie na dwie grupy:
+
 <ul>
  	<li>z nazwami zaczynającymi się od <code>will</code> — wywoływane zanim się coś wydarzy</li>
  	<li>z nazwami zaczynającymi się od <code>did</code> — wywoływane po tym jak coś się zdarzyło</li>

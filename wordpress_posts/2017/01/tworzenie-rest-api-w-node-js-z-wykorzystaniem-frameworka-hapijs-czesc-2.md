@@ -19,17 +19,19 @@ series:
   slug: hapijs
   name: HapiJS
 seo: {}
-
 ---
+
 Kontynuuję serię wpisów na temat tworzenia backendu w node.js z wykorzystaniem HapiJS. Dzisiaj o obsługiwaniu parametrów i zapytań oraz o walidacji. Zapraszam!
 
 Jeśli cokolwiek okaże się niejasne to zachęcam do zadawania pytań w komentarzach.
+
 <h1 id="budowaurla">Budowa URL-a</h1>
 Nie byłbym sobą, gdybym nie spróbował najpierw wyjaśnić kilku pojęć, którymi będę się dzisiaj posługiwał. Weźmy taki przykładowy adres internetowy:
 
 <code>http://example.com/subpage?query=123&amp;arg=val#home</code>
 
 Musimy umówić co do nazewnictwa poszczególnych fragmentów takiego adresu, aby łatwiej zrozumieć dalszą część artykułu :) Gotowi?
+
 <table>
 <tbody>
 <tr>
@@ -87,6 +89,7 @@ W HapiJS parametry definiujemy zamykając je wewnątrz klamerek <code>{}</code>:
 To już mamy. Aby dobrać się do wartości przekazanej jako parametr musimy zajrzeć do obiektu, którego jeszcze nie dotykaliśmy – <code>request</code>. Zawiera on taki obiekt jak <code>request.params</code>, a w nim wszystkie parametry danego URL-a.
 
 Powyższy przykład zaimplementowalibyśmy w ten sposób:
+
 <pre><code class="language-javascript">server.route({  
     method: 'GET',
     path: '/users/{name}',
@@ -95,7 +98,9 @@ Powyższy przykład zaimplementowalibyśmy w ten sposób:
     }
 });
 </code></pre>
+
 Po otwarciu adresu <a href="http://localhost:3000/users/Michal">http://localhost:3000/users/Michal</a> naszym oczom powinno ukazać się wpisane imię, tutaj: “Michal”.
+
 <p class="important">Wyświetlenie wartości <code>request.params.name</code> w ten sposób otwiera podatność na atak XSS. W kolejnych przykładach będę korzystał z funkcji <code>encodeURIComponent</code>, aby ten problem wyeliminować.</p>
 
 <h3 id="parametryopcjonalne">Parametry opcjonalne</h3>
@@ -118,16 +123,19 @@ Możemy również zawrzeć w parametrze tylko część segmentu ścieżki, np.:
 <code>path: '/photos/{name}.jpg'</code>
 
 Spowoduje, że wykonaniu <code>GET /photos/michal.jpg</code> pod zmienną <code>request.params.name</code> będzie tylko wartość “michal”.
+
 <h3 id="parametrywielosegmentowe">Parametry wielosegmentowe</h3>
 <code>path: '/users/{name*2}'</code>
 
 Zadziała np. dla żądania <code>GET /users/jan/kowalski</code>. Zawartością zmiennej <code>request.params.user</code> będzie “jan/kowalski”.
+
 <h3 id="parametry_catchall_">Parametry <em>catch-all</em></h3>
 Czasami zachodzi również potrzeba przechwycenia po prostu całej ścieżki, którą wpisze użytkownik, niezależnie jak długa by ona nie była. W HapiJS możemy to zrobić z łatwością:
 
-<code>path: '/users/{name*}'</code>
+<code>path: '/users/{name\*}'</code>
 
 Zadziała zarówno dla <code>GET /users/jan</code>, <code>GET /users/jan/kowalski</code> jak i <code>GET /users/jan/kowalski/123/abc/def</code>.
+
 <h1 id="obsuga_querystring_whapijs">Obsługa <em>query string</em> w HapiJS</h1>
 HapiJS obsługuje i automatycznie zamienia na obiekt również <em>query string</em>. Mamy do niego dostęp poprzez <code>request.query</code>. Spróbujmy:
 <pre><code class="language-javascript">server.route({  
@@ -149,6 +157,7 @@ Joi jest biblioteką służącą do walidacji struktury obiektów zgodnie z poda
 <code>npm install joi --save</code>
 
 I dodajemy na samej górzej naszego pliku:
+
 <pre><code class="language-javascript">const Joi = require('joi');  
 </code></pre>
 <h2 id="walidacjawhapijs">Walidacja w HapiJS</h2>
@@ -164,17 +173,18 @@ Teraz możemy przystąpić do konfigurowania walidacji w Hapi. Weźmy jeden z po
     }
   },
 
-  // dodajemy:
-  config: {
-    validate: {
-      params: {
-        name: Joi.number()
-      }
-    }
-  }
+// dodajemy:
+config: {
+validate: {
+params: {
+name: Joi.number()
+}
+}
+}
 });
 </code></pre>
 Teraz zapytanie <code>GET /users/michal</code> zakończy się błędem, natomiast <code>GET /users/11</code> spowoduje wyświetlenie odpowiedzi. <strong>Jakiekolwiek zapytanie, które nie przejdzie walidacji automatycznie zostanie odrzucone z kodem błędu 400.</strong>
+
 <h2 id="zoonawalidajcawjoi">Złożona walidajca w Joi</h2>
 W podobny sposób możemy dokonać również bardziej skomplikowanej walidacji. Wróćmy do endpointa <code>/search</code>. Chcemy, aby użytkownik zawsze musiał podać w <em>query string</em> pole <code>text</code> będące stringiem. Natomiast pola <code>page</code> i <code>lang</code> powinny być opcjonalne. <code>page</code> niech zawiera tylko liczby, a <code>lang</code> wyłącznie wybrane kody krajów: <code>pl</code>, <code>gb</code> lub <code>de</code>.
 <table>
@@ -231,6 +241,7 @@ I tak, przykładowo, zapytanie <code>GET /search?text=abc&amp;lang=us</code> zwr
 <code>child "lang" fails because ["lang" must be one of [pl, gb, de]]</code>
 
 Jest to bardzo zrozumiała wiadomość, którą w zasadzie moglibyśmy wyświetlić użytkownikom (po jakimś sformatowaniu). Dodam jeszcze, że Joi posiada także <strong>możliwość definiowania własnych wiadomości o błędach</strong>.
+
 <h2 id="wartocidomylne">Wartości domyślne</h2>
 W powyższym przykładzie bardzo przydałaby się możliwość podania wartości domyślnych, skoro <code>page</code> i <code>lang</code> są opcjonalne. <code>Joi</code> również posiada taką opcję:
 <pre><code class="language-javascript">page: Joi.number().default(1)  
@@ -240,6 +251,7 @@ lang: Joi.only(['pl', 'gb', 'de']).default('pl')
 Biblioteka Joi daje name <strong>ogromne możliwości wpływania na kształt odbieranych i wysyłanych obiektów</strong>, a jej integracja z frameworkiem HapiJS jest doskonała.
 
 Nie ma tutaj jednak miejsca na to, abym opisał wszystkie opcje konfiguracji Joi. Żądnych wiedzy odsyłam do <a href="https://github.com/hapijs/joi/blob/master/API.md">dokumentacji Joi</a>. Długiej, bo i opcji jest ogrom!
+
 <h1 id="przykadowyprojekt">Przykładowy projekt</h1>
 Posiedliśmy już wiedzę wystarczającą do wykonania prostej aplikacji w node.js z wykorzystaniem HapiJS. Chcielibyśmy, aby użytkownik miał możliwość dodawania nowych osób do swojej książki kontaktów. Każda osoba będzie składała się z imienia i nazwiska. Oczywiście, dodamy również opcję podejrzenia wszystkich kontaktów. Potrzebujemy do tego tylko kilku endpointów:
 <table>
@@ -306,6 +318,7 @@ Otwieramy adres <a href="http://localhost:3000/contacts">http://localhost:3000/c
 <img src="/content/images/2017/01/Screenshot-2017-01-27-22.10.04.png" alt="" />
 
 W konsoli przeglądarki wykonujemy proste żądanie <code>POST</code> aby dodać nowy kontakt:
+
 <pre><code class="language-javascript">fetch('/contacts', {  
     method: 'POST',
     body: JSON.stringify({  
@@ -313,6 +326,7 @@ W konsoli przeglądarki wykonujemy proste żądanie <code>POST</code> aby dodać
     })
 });
 </code></pre>
+
 Teraz po odświeżeniu strony zobaczymy dodane kontakty!
 
 <img src="/content/images/2017/01/Screenshot-2017-01-27-22.11.19.png" alt="" />

@@ -20,8 +20,8 @@ series:
   slug: typescript
   name: TypeScript
 seo: {}
-
 ---
+
 <p>Kontynuuję serię wpisów na temat TypeScript. Pisząc poprzedni post złapałem się na tym, że dobijałem już do blisko 1800 słów. Uznałem, że to zdecydowanie za dużo jak na jeden wpis i stąd tak szybko kolejna część ;) W tym odcinku mówię o <strong>zaawansowanych typach, aliasach i literałach. Dodatkowo poruszam również temat inferencji typów</strong>. Zapraszam do czytania :)</p>
 
 <p class=important>Zakładam, że czytelnicy są zaznajomieni z JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>. Jeśli jednak coś jest niejasne to chętnie odpowiem na pytania w komentarzach.</p>

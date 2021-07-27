@@ -21,8 +21,8 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
-
 ---
+
 <p>Wiele razy wspominałem o wstrzykiwaniu zależności, nigdy jednak nie wytłumaczyłem tego konceptu do końca. Na czym polega wzorzec <em>Dependency Injection</em> i jakie problemy rozwiązuje? W tym artykule chciałbym odpowiedzieć na te pytania oraz omówić teorię stojącą za wstrzykiwaniem zależności.</p>
 
 <h1 id="problempowizanychzalenoci">Problem powiązanych zależności</h1>

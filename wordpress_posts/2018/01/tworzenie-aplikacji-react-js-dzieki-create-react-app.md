@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Do tej pory pokazałem kilka przykładów z React.js, a wszystkie wrzuciłem na codepen. Jak się pewnie domyślasz, <strong>tworzenie rozbudowanych aplikacji wygląda nieco inaczej</strong>. Dzielisz je na wiele plików, chcesz odpalać testy jednostkowe, a ostatecznie chciałabyś kod zminifikować.  <code>create-react-app</code> to paczka pozwalająca na łatwe stworzenie projektu opartego o React.js. Tworzy dla Ciebie strukturę katalogów i plików, zawiera wszystkie potrzebne na początek narzędzia i pozwala na odpalanie, testowanie i budowanie aplikacji. <strong>Czego chcieć więcej?</strong>
 
 <!--more-->
@@ -34,12 +34,15 @@ Do tej pory pokazałem kilka przykładów z React.js, a wszystkie wrzuciłem na 
 Tego wszystkiego i znacznie więcej nauczymy Cię na szkoleniu: [typeofweb-courses-slogan category="React"]
 
 Pracę z <code>create-react-app</code> zaczynamy od wrzucenia na głęboką wodę. Hop, robimy od razu projekt w React:
+
 <pre class="language-bash"><code>npx create-react-app react-test-create-react-app</code></pre>
 <pre class="language-bash"><code>Creating a new React app in /Users/michal/htdocs/react-test-create-react-app.
 
 Installing packages. This might take a couple of minutes.
 Installing react, react-dom, and react-scripts...</code></pre>
+
 Jak widzisz — instalują się paczki, których nazwy brzmią znajomo — <code>react</code> i <code>react-dom</code>. Dalej jest trochę więcej logów… i wreszcie <strong>instalacja zakończona, projekt stworzony</strong>! Gotowe. To już.
+
 <h2>Narzędzia</h2>
 Po zakończeniu instalacji, Twoim oczom ukazuje się instrukcja z komendami, z których możesz korzystać. Wejdź do folderu <code>react-test-create-react-app</code> i wtedy możesz korzystać z takich poleceń:
 <ul>
@@ -57,6 +60,7 @@ Wpisz więc <code>npm start</code>. Uruchamia się serwer i automatycznie otwier
 Jeśli to widzisz — wszystko poszło zgodnie z planem :)
 
 Spójrz na widoczny komunikat — możesz już zacząć edytować plik <code>src/App.js</code>, a gdy go zapiszesz, <strong>przeglądarka automatycznie się odświeży i zmiany będą od razu widoczne</strong>. Bardzo wygodne :) Zajrzyj do środka tego pliku, jest tam gotowy jeden komponent <code>App</code>.
+
 <h2>Błędy</h2>
 Spróbuj edytować <code>App.js</code> i zrób jakiś błąd. Nie wiem, jakikolwiek, np. zamiast <code>&lt;div</code> napisz <code>&lt;&lt;div</code> i zapisz plik. Spójrz do przeglądarki:
 
@@ -67,16 +71,19 @@ A teraz spójrz do konsoli:
 <a href="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.46.07-PM.png"><img class="aligncenter size-large wp-image-955" src="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.46.07-PM-1024x445.png" alt="create-react-app error" width="1024" height="445" /></a>
 
 <code>create-react-app</code> automatycznie informuje Cię o wszystkich błędach składniowych — zarówno w przeglądarce, jak i w konsoli. <strong>Błędy są bardzo czytelnie oznaczone i konkretnie widać co jest do poprawy.</strong>
+
 <h2>Testy</h2>
 Uruchom <code>npm test</code>. Zobaczysz taki rezultat:
 
 <a href="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.39.13-PM.png"><img class="aligncenter size-full wp-image-944" src="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.39.13-PM.png" alt="create-react-app test" width="830" height="340" /></a>
 
 W folderze z aplikacją jest plik <code>App.test.js</code>. Zawiera jeden test. Ten test sprawdza czy komponent renderuje się prawidłowo — i jak widzisz, działa :) <strong>W jednym z kolejnych wpisów przyjrzę się bliżej testowaniu komponentów Reactowych</strong> z użyciem <code>enzyme</code>, którego na razie tutaj brakuje.
+
 <h2>Build</h2>
 A teraz spróbuj <code>npm run build</code>. Po chwili zobaczysz komunikat informujący, że wszystko przebiegło pomyślnie oraz rozmiary i nazwy wygenerowanych plików. Nazwy zawierają pewien trochę losowy ciąg (hasz), np. w moim przypadku jest to <code>main.35d639b7.js</code> i <code>main.c17080f1.css</code>. Jeśli zmienisz coś w tych plikach, <strong>nazwy również się zmienią</strong> — dzięki czemu nie masz problemów z cachem przeglądarek (tzw. <em>cache busting</em>).
 
 W folderze <code>build</code> znajdziesz gotowy projekt, który możesz wrzucić na serwer i przetestować (albo po prostu odpalić lokalnie).
+
 <h2>Co dalej?</h2>
 W zasadzie to już wszystko co jest Ci potrzebne do pracy! Oczywiście <code>create-react-app</code> ma mnóstwo innych opcji, ale tutaj nie będę wszystkich opisywał :) Jeśli będą Ci potrzebne — wspomnę o nich w kolejnych wpisach!
 <h2>FAQ</h2>
@@ -100,4 +107,4 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
 <h2>Ćwiczenie</h2>
 <strong>Ćwiczenie:</strong> Stwórz nowy projekt z użyciem <code>create-react-app</code>. Spróbuj zaimplementować filtrowanie, które pokazywałem w poprzednim odcinku kursu.
 
-<strong>Ćwiczenie*:</strong> Zrób build i wrzuć projekt na GitHub Pages. Pochwal się w komentarzu :)
+<strong>Ćwiczenie\*:</strong> Zrób build i wrzuć projekt na GitHub Pages. Pochwal się w komentarzu :)

@@ -16,8 +16,8 @@ categories:
   - slug: front-end
     name: Front-end
 seo: {}
-
 ---
+
 <p>Wielokrotnie na licznych forach, grupach dyskusyjnych i spotkaniach pada pytanie odnośnie Single Page Applications i SEO. React, Angular, AngularJS, Vue — jak się mają do SEO? Jak to zrobić? Jak sprawić, by wyszukiwarki indeksowały <em>strony www</em> oparte o frameworki JavaScript? Jak poprawić podgląd udostępnianych linków do <em>Single Page Application</em> na Facebooku? Jak uzyskać lepsze rezultaty? Co prawda poniższy wpis skupia się na Angularze, jednak zawarte w nim porady <strong>można z powodzeniem zastosować do aplikacji działających w oparciu o dowolny framework JS</strong> np. React, Vue, Backbone, Ember, czy Knockout.</p>
 
 <h2 id="stronawangularze">Strona w Angularze</h2>

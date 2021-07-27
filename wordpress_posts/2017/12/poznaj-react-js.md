@@ -25,8 +25,8 @@ series:
 seo:
   focusKeywords:
     - React
-
 ---
+
 <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> jest biblioteką do budowania interfejsów w JavaScript, stworzoną przez Facebooka. React zdobył ogromną popularność wśród programistów i jest jedną z tych bibliotek, w których pisze się całkiem przyjemnie. Koncept Reacta opiera się o znane od dawna wzorce, które zostały tutaj odświeżone i zunifikowane: Jednokierunkowy przepływ danych i budowanie aplikacji w oparciu o <strong>komponenty</strong>.
 
 <!--more-->
@@ -36,10 +36,12 @@ seo:
 React nie jest kompletnym frameworkiem — jest raczej <strong>biblioteką.</strong> Choć w Internecie nadal trwa święty spór na ten temat, to my po prostu umówmy się, że tak jest, okej? Przykładowo, żeby stworzyć routing lub aby wykonać zapytanie AJAX, musisz skorzystać z zewnętrznej paczki. Nie jest to jednak żadną przeszkodą w tworzeniu rozbudowanych aplikacji! Istnieje szereg dobrych praktyk, a ogromne community Reacta na całym świecie na pewno pomoże wybrać Ci prawidłowe rozwiązania. Na przykład: React nie sugeruje żadnego rozwiązania dla przechowywania stanu aplikacji – ale jest kilka popularnych i sprawdzonych bibliotek, które świetnie współgrają z Reactem — np. flux czy redux, o których możesz przeczytać w jednym z moich wcześniejszych artykułów (na pewno jeszcze wrócę do tego tematu):
 
 https://typeofweb.com/2016/06/10/flux-i-redux/
+
 <h2>Przykładowy komponent</h2>
 Wracając do komponentów: <strong>Tworzenie aplikacji w React.js polega tak naprawdę na budowaniu i komponowaniu kolejnych komponentów</strong>. Trochę tak, jakbyśmy składali klocki (tylko, że te klocki najpierw sami tworzymy ;) ).
 
 Przykładowa aplikacja w Reakcie może wyglądać tak:
+
 <pre><code class="language-javascript">ReactDOM.render(
   &lt;h1&gt;Hello, world!&lt;/h1&gt;,
   document.getElementById('root')
@@ -58,6 +60,7 @@ Na czym polega jego przewaga, w stosunku do innych bibliotek i frameworków? My�
 To tylko lekkie wprowadzenie i jednocześnie początek zupełnie nowej formuły. W kolejnym artykule stworzysz swój pierwszy komponent! <strong>Oswoisz się z podstawami React.js i JSX bez konieczności konfigurowania czegokolwiek.</strong> Konkretnie, bez owijania w bawełnę :) [typeofweb-courses-slogan category="React"]
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>zapisz się na newsletter i śledź mnie na Facebooku.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 <h2>Ćwiczenie</h2>

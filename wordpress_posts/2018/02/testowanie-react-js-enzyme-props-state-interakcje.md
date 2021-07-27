@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Pokazałem już jak pisać proste testy do aplikacji React.js z użyciem Enzyme. Sprawdzanie czy coś się renderuje, czy zawiera tekst, czy dobrze pokazuje elementy… W tym wpisie idę o krok dalej. Pokazuję jak w Enzyme testować interakcje z komponentami, odczytywać i zmieniać propsy a także state.
 
 <!--more-->
@@ -45,6 +45,7 @@ A więc przetestujmy teraz czy, w naszej ulubionej liście kontaktów, komponent
 Po kolei: Płytkie renderowanie komponentu <code>App</code>. Następnie znajdź komponent UsersList, pobierz jego prop o nazwie <code>users</code> i porównaj z podaną tablicą.
 
 Następnie można by się pokusić o przetestowanie czy komponent <code>UsersList</code> poprawnie reaguje na zmianę propsów. A więc pierwszy render, a następnie zmiana propsów i test (jest to trochę test na siłę, ale to w tym momencie nieistotne):
+
 <pre class="language-jsx"><code>describe('change props', () =&gt; {
     const users = ['Jan', 'Maria'];
     const usersList = shallow(&lt;UsersList users={['Ktoś tam', 'Nieważne']} /&gt;);
@@ -56,7 +57,9 @@ Następnie można by się pokusić o przetestowanie czy komponent <code>UsersLis
         });
     });
 });</code></pre>
+
 W analogiczny sposób można pobierać i ustawiać state, a następnie sprawdzać czy komponent się poprawnie renderuje.
+
 <h2>Interakcje</h2>
 Jedyny brakujący element układanki to testowanie interakcji z komponentami. W tym przykładzie chcesz sprawdzić czy wpisywanie czegoś w pole tekstowe powoduje rzeczywiście filtrowanie tablicy z imionami.
 <p class="important">W bardziej realnym przykładzie zamockowałbym najpierw źródło danych, aby mieć 100% kontrolę nad przebiegiem testu. Tutaj ten krok pomijam i na razie zakładam, że lista imion jest mi po prostu znana i niezmienna.</p>
@@ -70,18 +73,20 @@ W tym przypadku chcę przetestować wpisanie literki "M". Muszę więc zasymulow
   const app = shallow(&lt;App /&gt;);
   expect(app.find('UsersList').prop('users')).toEqual(['Michal', 'Kasia', 'Jacek', 'Marta', 'Tomek', 'Ania']);
 
-  app.find('input').simulate('input', {currentTarget: {value: 'M'}})
-  expect(app.find('UsersList').prop('users')).toEqual(['Michal', 'Marta', 'Tomek']);
+app.find('input').simulate('input', {currentTarget: {value: 'M'}})
+expect(app.find('UsersList').prop('users')).toEqual(['Michal', 'Marta', 'Tomek']);
 });</code></pre>
 Po kolei: Renderuje się aplikacja. Następnie upewniam się, że lista kontaktów jest taka, jak mi się wydaje, że jest (to krok w sumie zbędny). Następnie symuluję zdarzenie <code>input</code> i ponownie sprawdzam listę kontaktów — teraz jest już inna.
 
 Podobnie można testować inne zdarzenia, np. <code>click</code> czy nawet <code>focus</code>.
+
 <h2>Podsumowanie</h2>
 Tym sposobem masz już pełen zestaw narzędzi potrzebny do testowania nawet najbardziej rozbudowanych komponentów. Enzyme jest świetną biblioteką i warto zapoznać się z jego pełną dokumentacją! Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-3">https://github.com/mmiszy/typeofweb-kurs-react/tree/part-3</a>
 
 Jeśli chcesz poznać Enzyme i inne metody testowania React dogłębnie, to [typeofweb-courses-slogan category="React"]
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 <h2>Ćwiczenie</h2>

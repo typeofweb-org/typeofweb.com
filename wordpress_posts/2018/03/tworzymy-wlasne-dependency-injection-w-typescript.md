@@ -20,8 +20,8 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
-
 ---
+
 Najlepiej uczy się na konkretnych przykładach. Dzisiaj napiszesz własną bibliotekę do Dependency Injection w TypeScripcie! Przydadzą nam się dekoratory, metadane, refleksja i kilka sztuczek. Do dzieła :)
 
 <!--more-->
@@ -37,6 +37,7 @@ Zasada działania dependency injection nie jest trudna i opisałem ją niegdyś 
 https://typeofweb.com/2016/07/07/wzorce-projektowe-dependency-injection/
 
 Zanim jednak zacznę cokolwiek programować, warto byłoby mieć jakiś plan ;) Oto moje potrzeby i wymagania:
+
 <ul>
  	<li>możliwość rejestrowania zależności</li>
  	<li>możliwość instancjonowania klas razem z automatycznie wstrzykniętymi zależnościami</li>
@@ -50,6 +51,7 @@ const foobar = Injector.resolve(Foobar);
 foobar.foo; // jest tutaj wstrzyknięty!
 foobar.bar; // też jest tutaj!</code></pre>
 Nie brzmi strasznie, prawda? Aby zrealizować te dwa podpunkty muszę jednak skorzystać z techniki zwanej <strong>refleksją</strong>.
+
 <h2>Refleksja</h2>
 Pragnę, aby w moim Dependency Injection  zależności były wstrzykiwane automatycznie na podstawie typu argumentów przekazanych do konstruktora. Z pomocą przychodzi właśnie refleksja oraz paczka <code>reflect-metadata</code>:
 <pre><code class="language-bash">npm install reflect-metadata --save</code></pre>
@@ -77,6 +79,7 @@ przyda się też nieco bardziej rozbudowany typ dla dekoratora klasy:
 Czyli jest to typ generyczny, który jako argument typu T przyjmuje coś co rozszerza funkcję (czyli funkcję lub klasę). <code>ClassDecorator&lt;T&gt;</code> opisuje funkcję, która jako argument przyjmuje <code>Constructor&lt;T&gt;</code> i zwraca <code>T</code>.
 
 Ostatecznie mój dekorator <code>Injectable</code> przyjmuje taką postać:
+
 <pre><code class="language-typescript">export const Injectable = (): ClassDecorator&lt;any&gt; =&gt; {
   return target =&gt; {};
 };</code></pre>
@@ -107,25 +110,25 @@ Testy prostego DI:
 
 @Injectable()
 class NoDeps {
-  doSth() {
-    console.log(`I'm NoDeps!`);
-  }
+doSth() {
+console.log(`I'm NoDeps!`);
+}
 }
 
 @Injectable()
 class OneDep {
-  constructor(public noDeps: NoDeps) {}
-  doSth() {
-    console.log(`I'm OneDep!`);
-  }
+constructor(public noDeps: NoDeps) {}
+doSth() {
+console.log(`I'm OneDep!`);
+}
 }
 
 @Injectable()
 class MoarDeps {
-  constructor(public noDeps: NoDeps, public oneDep: OneDep) {}
-  doSth() {
-    console.log(`I'm MoarDeps!`);
-  }
+constructor(public noDeps: NoDeps, public oneDep: OneDep) {}
+doSth() {
+console.log(`I'm MoarDeps!`);
+}
 }
 
 const moarDeps = Injector.resolve(MoarDeps);
@@ -135,6 +138,7 @@ moarDeps.noDeps.doSth();
 moarDeps.oneDep.doSth();
 moarDeps.oneDep.noDeps.doSth();</code></pre>
 Oraz efekt działania:
+
 <pre><code>I'm MoarDeps!
 I'm NoDeps!
 I'm OneDep!
@@ -145,6 +149,7 @@ Jak widzisz, wszystki zależności zostały automatycznie wstrzyknięte na podst
 Cały kod znajdziesz tutaj: [github.com/mmiszy/typeofweb-dependency-injection-typescript](https://github.com/mmiszy/typeofweb-dependency-injection-typescript)
 
 Nie obsługuję jednak kilku rzeczy:
+
 <ul>
  	<li>circular dependencies (gdy Foo zależy od Bar, a Bar od Foo)</li>
  	<li>innych typów niż własne klasy</li>
@@ -154,4 +159,5 @@ Nie obsługuję jednak kilku rzeczy:
 W kolejnym wpisie postaram się dopisać coś z tej listy ;)
 
 ## Podobało się?
+
 Napisz w komentarzu! Jeśli uważasz, że to kompletnie bzdury — to również napisz :) Albo może [typeofweb-courses-slogan category="TypeScript"]

@@ -25,18 +25,20 @@ series:
 seo:
   focusKeywords:
     - Vue.js
-
 ---
+
 Witaj w kursie **Vue.js od podstaw**. Bardzo się cieszę, że chcesz się nauczyć tego wspaniałego **frameworka JavaScript**. Niezależnie od tego, czy chcesz szukać pracy, w której będziesz wykorzystywać Vue.js, napisać w nim hobbystyczny projekt, czy po prostu poszerzyć swoje horyzonty jako programist(k)a JavaScript ten kurs jest dla Ciebie.
 
 <!--more-->
 
 ## Vue.js
+
 **Vue.js**, to obecnie trzeci (po React.js i Angular) pod względem popularności framework JavaScript. Wiele jednak wskazuje na to, że jeszcze w tym roku się to zmieni. Jako ogromnego fana Vue.js zupełnie mnie to nie dziwi. Mam nadzieję, że po zapoznaniu się z **kursem Vue**, którego pierwszy odcinek właśnie czytasz, również podzielisz moją pasję do tego frameworka. Jeśli czytanie kilku…dziesięciu artykułów nie jest dla Ciebie, to może wolisz szkolenie? [typeofweb-courses-slogan category="Vue.js"]
 
 [caption id="attachment_1336" align="aligncenter" width="1024"]<a href="https://typeofweb.com/wp-content/uploads/2018/04/Google-trends-Vue.png"><img src="https://typeofweb.com/wp-content/uploads/2018/04/Google-trends-Vue-1024x342.png" alt="Google Trends Vue.js" width="1024" height="342" class="size-large wp-image-1336" /></a> Vue.js w Google Trends[/caption]
 
 ## Dlaczego Vue?
+
 Za co lubię Vue? Przede wszystkim za to, że po prostu działa. **Nie potrzebujesz używać jakiegokolwiek build systemu** (ale możesz), aby zacząć pracę z Vue. Wystarczy dodanie tagu `<script>` do strony i możesz tworzyć reaktywną aplikację JavaScript.
 
 Uwielbiam Vue również za to, że **rośnie razem z Twoimi potrzebami**. Możesz pisać swój kod w najzwyklejszym JavaScripcie, ale również używać tzw. **single file components** (o których opowiem w dalszych częściach kursów). Vue udostępnia też dedykowane rozwiązanie do **obsługi routingu**, dzięki któremu stworzysz pełnoprawną **SPA**. Większe aplikacje mogą natomiast użyć **Vuex**, czyli implementacji architektury flux dedykowanej dla Vue. Oprócz tego, Vue wspiera **server-side rendering, animacje, asynchroniczne komponenty i wiele innych**.
@@ -46,6 +48,7 @@ Dzięki takiemu podejściu krzywa uczenia się jest mało stroma i rozpoczęcie 
 **Reaktywność** — we Vue.js nie musisz myśleć o niemutowalnych obiektach, ani o wydajności bo rzeczy po prostu działają.
 
 ## Atuty Vue.js
+
 Vue posiada moim zdaniem najlepsze cechy Angulara i Reacta — z jednej strony możesz korzystać z **wygodnych dyrektyw** i **„magicznego” aktualizowania widoku**, a z drugiej masz **wydajność** i **JSX** jeśli tego potrzebujesz.
 
 Wszystko to sprawia, że niezależnie od tego, czy chcesz przepisać kod obsługi formularza napisany w jQuery na coś bardziej zrozumiałego i zorganizowanego, czy stworzyć kolejnego Facebooka.... Vue jest prawdopodobnie najlepszym wyborem!

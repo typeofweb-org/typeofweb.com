@@ -26,8 +26,8 @@ series:
 seo:
   focusKeywords:
     - v-bind
-
 ---
+
 W poprzednim wpisie pokazałem Ci jak wyświetlić **dynamiczne dane w Vue.js** za pomocą wąsów, czyli podwójnych nawiasów klamrowych (`{{ nazwaZmiennej }}`). Dziś dowiesz się jak przekazać je do atrybutów elementu HTML za pomocą dyrektywy `v-bind`.
 
 <!--more-->
@@ -42,19 +42,21 @@ Niektóre dyrektywy przyjmują po dwukropku parametr. Tak właśnie jest w tym p
 new Vue({
   data() {
     return {
-      text: "Type of Web",
-      destination: "https://typeofweb.com/"
+      text: 'Type of Web',
+      destination: 'https://typeofweb.com/',
     };
-  }
-}).$mount("#app");
+  },
+}).$mount('#app');
 ```
+
 ```html
 <div id="app">
   <a v-bind:href="destination">{{ text }}</a>
-  <br>
+  <br />
   <input v-model="destination" />
 </div>
 ```
+
 <p data-height="265" data-theme-id="0" data-slug-hash="JLBgpv" data-default-tab="html,result" data-user="wojtiku" data-embed-version="2" data-pen-title="JLBgpv" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/JLBgpv/">JLBgpv</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 `v-bind` będziemy później używać również do dynamicznego przekazywania danych do zagnieżdżonych komponentów Vue. Opowiem Ci o tym więcej w jednej z kolejnych lekcji.
@@ -68,30 +70,33 @@ Vue.js w wielu miejscach robi odstępstwa od reguły aby ułatwić użytkownikom
   <a :href="destination">{{ text }}</a>
 </div>
 ```
+
 Powyższy kod jest równoważny temu, czego użyliśmy wcześniej - wystarczy, że nazwę atrybutu poprzedzisz znakiem dwukropka, a zostanie on dynamicznie zbindowany. Zapis taki jest bardzo zwięzły i czytelny, przez co to głównie ta wersja jest wykorzystywana na codzień.
 
 ## Bindowanie wielu atrybutów jednocześnie
 
 Czasami będziesz chciał(a) zbindować kilka atrybutów naraz. Możesz w tym celu przekazać dyrektiwie `v-bind` obiekt. Jego klucze zostaną użyte jako nazwy atrybutów, a wartości zostaną odpowiednio zbindowane.
- 
+
 ```js
 new Vue({
   data() {
     return {
-      text: "Type of Web",
-      linkAttrs:  {
-        href: "https://typeofweb.com/",
-        title: "Blog o programowaniu"
-      }
+      text: 'Type of Web',
+      linkAttrs: {
+        href: 'https://typeofweb.com/',
+        title: 'Blog o programowaniu',
+      },
     };
-  }
-}).$mount("#app");
+  },
+}).$mount('#app');
 ```
+
 ```html
 <div id="app">
   <a v-bind="linkAttrs">{{ text }}</a>
 </div>
 ```
+
 Powyższy kod dynamicznie ustawi na linku zarówno atrybut `href`, jak i `title`. Jeśli wydaje Ci się to nieco zagmatwane, to nie obawiaj się pytać w komentarzach pod wpisem albo na szkoleniu! [typeofweb-courses-slogan category="Vue.js"]
 
 ## Ćwiczenie

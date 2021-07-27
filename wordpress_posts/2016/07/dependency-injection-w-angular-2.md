@@ -20,8 +20,8 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
-
 ---
+
 <p>Angular 2 aktywnie korzysta ze wzorca projektowego Dependency Injection. Ten wpis poświęciłem wyłącznie implementacji DI w tym frameworku. Jest ona bardzo rozbudowana i niezwykle ciekawa, a jej dokładne poznanie pozwoli na lepsze zrozumienie wstrzykiwania zależności w Angularze oraz sprawi, że będziemy tworzyć aplikacje bardziej świadomie i łatwiej.</p>
 
 <p class=important>Samemu <a href=https://typeofweb.com/2016/07/07/wzorce-projektowe-dependency-injection/>tematowi Dependency Injection przeznaczyłem osobny wpis</a>. Piszę tam o wzorcu projektowym, niezależnie od implementacji.</p>

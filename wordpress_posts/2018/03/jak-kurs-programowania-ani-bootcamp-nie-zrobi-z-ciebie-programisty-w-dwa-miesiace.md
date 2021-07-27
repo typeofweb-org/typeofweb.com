@@ -29,8 +29,8 @@ seo:
     - >-
       kursu programowania, kursów programowania, kursie programowania, kursom
       programowania
-
 ---
+
 Jestem <strong>absolwentką</strong> dwóch <strong>kursów programowania</strong>: Front-end z biblioteką React oraz podstaw Javy.
 
 Po kilku latach spędzonych za granicą i odłożeniu odpowiedniej ilości pieniędzy, postanowiłam świadomie dokonać w swoim życiu przewrotu. Ze specjalistki ds. marketingu internetowego chciałam <strong>przebranżowić się w programistkę</strong>.
@@ -38,18 +38,21 @@ Po kilku latach spędzonych za granicą i odłożeniu odpowiedniej ilości pieni
 <!--more-->
 
 Uczestnictwo w pierwszym kursie programowania planowałam przez kilka miesięcy i opłaciłam z własnych środków. Decyzja o skorzystaniu z drugiego kursu programowania zapadła spontanicznie. Głównie ze względu na to, że koszty pokrywał Urząd Pracy. Czułam też, że nie jestem jeszcze wystarczająco przygotowana do podjęcia zatrudnienia. Jak się później okazało, <strong>nawet po drugim kursie i trzymiesięcznym stażu</strong> moja wiedza programistyczna wciąż była bardzo podstawowa. A przecież miałam <strong>zostać programistką w dwa miesiące</strong> :)
+
 <h2>Moda na kurs programowania</h2>
 <img class="alignnone wp-image-1170 size-full" src="https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-288530-1.jpeg" alt="Kursy programistyczne" title="Programowanie jest teraz w modzie" width="1920" height="1440" />
 
 Programowanie stało się w ostatnich latach bardzo popularne. Szkoły programistyczne oferujące <strong>kilkumiesięczne kursy</strong>, <strong>darmowe warsztaty</strong> na uczelniach i w firmach z branży IT, <strong>zajęcia z kodowania dla najmłodszych</strong> — pomysłów i możliwości na rozpoczęcie nauki programowania jest mnóstwo. Nawet urzędy pracy obok kursów dla spawaczy szukają chętnych na <strong>w pełni finansowane szkolenia kodowania</strong>. A chętnych jest sporo. Wiem, bo sama brałam udział w rekrutacji do kursu refundowanego przez UP.
 
 <strong>Programista, tester oprogramowania</strong> czy <strong>administrator</strong> sieci to zawody, które od kilku lat plasują się na pierwszych miejscach rankingów najbardziej<strong> pożądanych zawodów</strong>. Wspomniane profesje dają w większości przypadków <strong>pewną pracę</strong> i <strong>dobre zarobki</strong>. Oprócz tego ciekawe zajęcie, możliwość pracy zdalnej i łatwość w znalezieniu zatrudnienia — zarówno w Polsce jak i za granicą. Dlatego nikogo nie powinien dziwić fakt, że coraz więcej osób myśli o zmianie zawodu. I nie ma w tym nic złego, pod warunkiem, że decyzja o przebranżowieniu się zostanie <strong>dokładnie przemyślana</strong>, a przede wszystkim <strong>dobrze zaplanowana</strong>.
+
 <h2>Zmiana zawodu</h2>
 <img class="alignright wp-image-1169" src="https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-355952.jpeg" alt="Zajęcia z kodowania" title="Przebranżowienie nie jest proste" width="1899" height="1320" />
 
 Na zmianę zawodu decydują się osoby z <strong>różnych środowisk</strong> i <strong>najróżniejszych profesji</strong>. Na moich kursach spotkałam filolożkę, inżyniera budowlanego, sprzedawcę nieruchomości, księgową, pracownika Europarlamentu, biotechnolożkę, marketingowca, kierownika projektów, grafika komputerowego. Po kilku miesiącach wszyscy otrzymaliśmy <strong>dyplomy ukończenia szkolenia</strong>. Pomimo różnicy w profilach zawodowych, każdy z nas wykazywał się <strong>zdolnością</strong> <strong>analitycznego myślenia</strong>, <strong>znajomością języka angielskiego</strong> i <strong>gotowością do ciężkiej i wytężonej pracy</strong>.
 
 Niezależnie od tego jaki jest powód zmiany zawodu, gdy decyzja zostanie ostatecznie podjęta, zawsze trzeba działać tak samo. Musimy zdawać sobie sprawę z tego, że przebranżowienie się to<strong> proces wymagający bardzo wielu poświęceń, czasu i wytrwałości</strong>. Jestem pewna, że świadoma decyzja i chęci są w stanie znacznie zwiększyć szansę na powodzenie naszego przedsięwzięcia.
+
 <h2>Szkoły programowania i ich obietnice</h2>
 Uważam, że <strong>kurs</strong> <strong>programistyczny to jedna z lepszych decyzji zawodowych </strong>w moim życiu. Jednak gdybym przed pierwszymi zajęciami wiedziała to, co wiem dziś, na pewno byłoby mi dużo łatwiej przejść przez tę <strong>trudną i często wyboistą drogę </strong>prowadzącą do zmiany zawodu<strong>. </strong>
 
@@ -88,6 +91,7 @@ Mam wielu znajomych, którzy po kilku miesiącach szukania pracy i otrzymaniu ko
 <h3>To jednak nie to</h3>
 
 Oczywiście może się zdarzyć, że pomimo świetnego przygotowania i ogromnych chęci okaże się, że <strong>programowanie nie jest dla Ciebie</strong>. Pisanie kodu nie sprawia Ci radości, a nauka nowych technologii nie przychodzi z taką łatwością. <img class="size-medium wp-image-1165 alignleft" src="https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-235975-300x199.jpeg" alt="Kurs programowania nie jest dla wszystkich" title="Kurs programowania nie jest dla wszystkich" width="300" height="199" />Czy to oznacza, że cały wysiłek poszedł na marne? Absolutnie nie! Są zawody, w których znajomość podstaw programowania może być <strong>dużym atutem</strong>. Takie umiejętności mogą wyróżnić nas na tle kandydatów bez programistycznego przygotowania. Mam na myśli takie zawody jak: kierownik projektu informatycznego, kierownik produktu, specjalista user experience, itp. W przypadku przebranżowienia zapewne będziemy musieli zaczynać od młodszego specjalisty czy nawet asystenta. Jednak jeżeli mamy taką możliwość — <strong>czasami warto</strong>.
+
 <h2>Zestawienie kursów programowania*</h2>
 Na koniec przygotowałam zestawienie najbardziej popularnych<strong> szkół programowania</strong> w Polsce. Przedstawiłam w nim <strong>rodzaje kursów</strong> programistycznych, ich <strong>ceny</strong>, <strong>długość</strong> <strong>trwania</strong> (w godzinach) oraz <strong>tryby prowadzenia zajęć</strong> i <strong>miejscowości</strong>, w których odbywają się szkolenia. Najbardziej aktualne informacje zawsze znajdziesz bezpośrednio u źródła (każda nazwa szkoły jest podlinkowana i kieruje bezpośrednio do strony głównej danej uczelni).
 <div style="overflow: auto;margin-left: -10%;margin-right: -10%;">

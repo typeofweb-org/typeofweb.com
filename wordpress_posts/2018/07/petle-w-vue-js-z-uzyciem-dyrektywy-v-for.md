@@ -24,8 +24,8 @@ series:
 seo:
   focusKeywords:
     - pętla v-for
-
 ---
+
 Pisząc aplikacje w Vue.js bardzo często bedziesz chciał(a) wyświetlić **listę elementów w pętli** na podstawie tablicy. Właśnie w tym celu "język szablonów" wbudowany w Vue.js udostępnia dyrektywę `v-for`. W najprostszej postaci odpowiada ona pętli `for` znanej z JavaScriptu.
 
 <!--more-->
@@ -38,16 +38,15 @@ Dyrektywa `v-for` używa specjalnej składni `aktualnyElementy in tablicaZDanymi
 new Vue({
   data() {
     return {
-      fruits: ["Apple", "Pear", "Plum", "Banana"]
+      fruits: ['Apple', 'Pear', 'Plum', 'Banana'],
     };
-  }
-}).$mount("#app");
+  },
+}).$mount('#app');
 ```
+
 ```html
 <ul>
-  <li v-for="fruit in fruits">
-    {{ fruit }}
-  </li>
+  <li v-for="fruit in fruits">{{ fruit }}</li>
 </ul>
 ```
 
@@ -61,19 +60,19 @@ Wewnąątrz pętli `v-for` możesz też korzystać z **indeksu elementu**, któr
 new Vue({
   data() {
     return {
-      prefix: "I <3",
-      fruits: ["Apple", "Pear", "Plum", "Banana"]
+      prefix: 'I <3',
+      fruits: ['Apple', 'Pear', 'Plum', 'Banana'],
     };
-  }
-}).$mount("#app");
+  },
+}).$mount('#app');
 ```
+
 ```html
 <div id="app">
-    <div v-for="(fruit, index) in fruits">
-      {{ index }} - {{ prefix }} {{ fruit }}
-    </div>
+  <div v-for="(fruit, index) in fruits">{{ index }} - {{ prefix }} {{ fruit }}</div>
 </div>
 ```
+
 <p data-height="265" data-theme-id="0" data-slug-hash="BxWajL" data-default-tab="result" data-user="wojtiku" data-embed-version="2" data-pen-title="v-for z indeksem" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/BxWajL/">v-for z indeksem</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 Zwróć też uwagę na fakt, że wewnątrz pętli `v-for`, oprócz nowych zmiennych, masz normalny **dostęp do wszystkich pól danych** znajdujących się na instancji Vue. W powyższym przykładzie w każdej iteracji odnoszę się do pola `prefix`. [typeofweb-courses-slogan category="Vue.js"]
@@ -87,22 +86,22 @@ new Vue({
   data() {
     return {
       fruits: {
-        "Apple": 4,
-        "Pear": 3,
-        "Plum": 5,
-        "Banana": 2
-      }
+        Apple: 4,
+        Pear: 3,
+        Plum: 5,
+        Banana: 2,
+      },
     };
-  }
-}).$mount("#app");
+  },
+}).$mount('#app');
 ```
+
 ```html
 <div id="app">
-    <div v-for="(quantity, fruit, index) in fruits">
-      {{ index }}. {{ quantity }}x {{ fruit }}
-    </div>
+  <div v-for="(quantity, fruit, index) in fruits">{{ index }}. {{ quantity }}x {{ fruit }}</div>
 </div>
 ```
+
 <p data-height="265" data-theme-id="0" data-slug-hash="vjxOeb" data-default-tab="result" data-user="wojtiku" data-embed-version="2" data-pen-title="v-for na obiekcie" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/vjxOeb/">v-for na obiekcie</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 ## Ćwiczenie

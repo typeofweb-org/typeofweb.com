@@ -23,13 +23,14 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Bardzo często powracającym wątkiem jest pytanie o to, w jaki sposób zaimplementować komunikację z API w React.js. Moja odpowiedź może Cię nieco zaskoczyć: **React nie ma nic do tego**. Możesz to robić absolutnie dowolnie.
 
 <!--more-->
 
 ## Plan
+
 Rozpatrzę teraz popularny przypadek: W momencie załadowania aplikacji, potrzebuję pobrać jakieś dane z API. Gdy już będą gotowe — chcę je wyświetlić. Brzmi dobrze? Rozbuduję więc swój poprzedni przykład: Znaną i lubianą listę kontaktów ;)
 
 Wracam do kodu stąd:
@@ -39,6 +40,7 @@ https://typeofweb.com/2017/12/17/podzial-komponenty-react-js/
 Gotowa implementacja z tej części kursu dostępna jest tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)
 
 ## Przygotowanie
+
 Nieco zmieniam tamten przykład. Przede wszystkim to komponent `App` będzie „dostarczycielem” danych do `ContactsList`. Przekaże tablicę jako `props`:
 
 ```jsx
@@ -51,7 +53,7 @@ export const App = () => {
       </main>
     </div>
   );
-}
+};
 ```
 
 Tę tablicę za moment wypełnię danymi z API. Przykładowy obiekt z API wygląda tak:
@@ -91,10 +93,10 @@ Tę tablicę za moment wypełnię danymi z API. Przykładowy obiekt z API wyglą
 
 Ja chciałbym z tego wyciągnąć:
 
-* pełne imię i nazwisko
-* numer telefonu
-* link do avatara
-* coś unikalnego co posłuży za atrybut `key` (wymagany przy tablicach elementów)
+- pełne imię i nazwisko
+- numer telefonu
+- link do avatara
+- coś unikalnego co posłuży za atrybut `key` (wymagany przy tablicach elementów)
 
 Wymaga to tylko wyjęcia i połączenia niektórych pól:
 
@@ -110,7 +112,7 @@ Ostatecznie cały komponent:
 
 ```jsx
 export class ContactsList extends React.Component {
-  contactToContactItem = contact => {
+  contactToContactItem = (contact) => {
     const avatarUrl = contact.picture.thumbnail;
     const { title, first, last } = contact.name;
     const name = `${title} ${first} ${last}`.trim();
@@ -119,11 +121,7 @@ export class ContactsList extends React.Component {
   };
 
   render() {
-    return (
-      <ul className="ui relaxed divided list selection">
-        {this.props.contacts.map(this.contactToContactItem)}
-      </ul>
-    );
+    return <ul className="ui relaxed divided list selection">{this.props.contacts.map(this.contactToContactItem)}</ul>;
   }
 }
 ```
@@ -134,7 +132,7 @@ Nic nadzwyczajnego, to wszystko już na pewno widziałaś/eś w poprzednich odci
 export const ContactItem = ({ avatarUrl, name, phone }) => {
   return (
     <li className="item">
-      <img src={avatarUrl} className="ui mini rounded image" alt="" />
+      <img src={avatarUrl} className="ui mini image rounded" alt="" />
       <div className="content">
         <h4 className="header">{name}</h4>
         <div className="description">{phone}</div>
@@ -155,13 +153,13 @@ Jak wspomniałem wcześniej, dobrym miejscem na wykonanie pytania do API jest fu
 ```jsx
 export class App extends React.Component {
   state = {
-    contacts: []
+    contacts: [],
   };
 
   componentDidMount() {
-    fetch("https://randomuser.me/api/?format=json&results=10")
-      .then(res => res.json())
-      .then(json => this.setState({ contacts: json.results }));
+    fetch('https://randomuser.me/api/?format=json&results=10')
+      .then((res) => res.json())
+      .then((json) => this.setState({ contacts: json.results }));
   }
 
   render() {
@@ -184,7 +182,9 @@ Działa!
 No tak, działa, ale jednak efekt nie jest idealny. Początkowo renderuje się zupełnie pusta lista, a dopiero po chwili pojawiają się dane. Zmienię to. Chcę, aby na początku wyświetlał się napis `Ładowanie…`:
 
 ```jsx
-{contacts ? <ContactsList contacts={contacts} /> : 'Ładowanie…'}
+{
+  contacts ? <ContactsList contacts={contacts} /> : 'Ładowanie…';
+}
 ```
 
 Korzystam z faktu, że wyrażenia wewnątrz `{` i `}` w JSX są wykonywane niemal jak zwykły JavaScript — i mogę tutaj użyć operatora trójoperandowego. W prawdziwej aplikacji zamiast napisu `Ładowanie…` prawdopodobnie chciałbym dodać jakiś spinner, który zamknąłbym np. w `LoadingComponent` :)
@@ -192,11 +192,14 @@ Korzystam z faktu, że wyrażenia wewnątrz `{` i `}` w JSX są wykonywane niema
 Możemy Cię nauczyć tego wszystkiego szybciej: [typeofweb-courses-slogan category="React"]
 
 ## Podsumowanie
+
 Poznałaś/eś właśnie podstawowy sposób pobierania i wyświetlania danych z REST API w React.js. To nie było takie trudne, prawda? Cały kod: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 
-## Ćwiczenie 
+## Ćwiczenie
+
 **Ćwiczenie:** Dodaj do aplikacji guzik „odśwież”, który spowoduje ponowne pobranie i wyrenderowanie listy kontaktów (dane z randomuser.me są losowe, więc za każdym razem będą inne).

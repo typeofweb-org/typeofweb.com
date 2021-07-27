@@ -21,8 +21,8 @@ categories:
   - slug: back-end
     name: Back-end
 seo: {}
-
 ---
+
 Numerem 1 podatności aplikacji internetowych wg. OWASP jest szerokopojęte „Injection”. Zazwyczaj kiedy o tym mówimy gdzieś z tyłu głowy mamy wyłącznie JavaScript i tylko XSS. A to przecież błąd 😲 W tym wpisie pokażę Ci <strong>jak można wykorzystać ciekawe elementy języka CSS do kradzieży wrażliwych danych</strong> z aplikacji ofiary.
 
 <!--more-->
@@ -50,17 +50,19 @@ Ale czy wiesz do czego służy ostatnia właściwość <code>unicode-range</code
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-/* latin-ext */
+/_ latin-ext _/
 @font-face {
-  …
-  src: url(roboto2.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+…
+src: url(roboto2.woff2) format('woff2');
+unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }</code></pre>
 Jeśli kiedykolwiek używałaś/eś Google Fonts to (prawdopodobnie nawet o tym nie wiedząc) używałaś/eś <code>unicode-range</code>. Google dodaje to domyślnie do swoich fontów :)
+
 <h3>Po co mi <code>unicode-range</code>?</h3>
 Otóż w rezultacie przeglądarka rozpocznie pobieranie drugiego pliku (z „ogonkami”) tylko jeśli na stronie rzeczywiście zostały te ogonki użyte. Po co? Dla <strong>poprawy wydajności</strong>, zmniejszenia transferu i liczby zapytań. Ogólnie: Optymalizacja.
 
 Realny przykład: Mamy stronę korporacji, która ma podstrony po arabsku, angielsku i polsku. Na podstronie arabskiej pobierze się tylko plik z arabskimi znaczkami, na angielskiej tylko łacińskie znaki, a na polskiej pobiorą się łacińskie oraz „ogonki”. Brzmi dobrze, prawda?
+
 <h3>Podatność</h3>
 A co się stanie jeśli zdefiniujemy po jednym <code>font-face</code> z osobnym URL fonta dla każdego znaku w alfabecie? Będzie to wyglądało jakoś tak:
 <pre class="language-css"><code>@font-face{
@@ -84,6 +86,7 @@ I tak dalej, dla każdej litery alfabetu. <strong>Następnie używamy tego fonta
 [caption id="attachment_857" align="aligncenter" width="1024"]<a href="https://typeofweb.com/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM.png"><img class="size-large wp-image-857" src="https://typeofweb.com/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM-1024x690.png" alt="Dzięki unicode-range poznałeś wszystkie znaki w tokenie. W tym przypadku deadbeef01." width="1024" height="690" /></a> Dzięki unicode-range poznałaś/eś wszystkie znaki w tokenie. W tym przypadku deadbeef01.[/caption]
 
 Rezultat? Poznałaś/eś właśnie wszystkie znaki użyte w konkretnym miejscu w aplikacji ofiary. Co mogłaś/eś wykraść? Przykładowo <strong>wszystkie znaki tokena</strong> — z GitHuba, Travisa lub, przykład na czasie, jakiejś giełdy BitCoinowej. <strong>Oczywiście nie znamy konkretnej kombinacji, ale bardzo mocno zawężyłaś/eś sobie zakres poszukiwań i łatwiej będzie Ci teraz przeprowadzić kolejny atak</strong> (bruteforce, albo może socjotechnika?)
+
 <h3>Jak zapobiegać?</h3>
 No, jeśli masz buga, która pozwala na wstrzykiwanie CSS to <em>po prostu</em> go napraw. A co jeśli Twoja aplikacja musi polegać na tym, że użytkownicy dodają do niej kod CSS (zdarza się!)? Cóż, masz kłopot! Problem ten został opisany i zgłoszony twórcom Google Chrome, którzy jednak uznali, że <strong>nie jest to bug, a raczej niefortunny efekt uboczny:</strong>
 <blockquote>This does seem like an unfortunate side effect.
@@ -119,6 +122,7 @@ Znowu: Dla każdej litery alfabetu generujesz odpowiedni CSS. Jeśli token, któ
 Czy to oznacza jednak, że użytkownik będzie musiał sam, dobrowolnie, wiele razy odświeżać stronę i pozwoli się w ten sposób okraść? Wcale nie jest to konieczne, <strong>jeśli tylko aplikację można osadzić wewnątrz <code>&lt;iframe&gt;</code> — wtedy atak można w pełni zautomatyzować</strong>. Na filmiku poniżej możesz zobaczyć kradzież kolejnych znaków z prostego tokena <code>cielecina1</code>:
 
 https://youtu.be/dX8J0LBMlCY
+
 <h3>Jak zapobiegać?</h3>
 No, jeśli masz buga, która pozwala na wstrzykiwanie CSS to po prostu go napraw… i tak dalej ;) Z bezpieczeństwa aplikacji możemy Cię też podszkolić: [typeofweb-courses-slogan category="security"] Mocno utrudnisz też sprawę jeśli <strong>nie zezwolisz aby Twoja aplikacja była osadzana wewnątrz <code>&lt;iframe&gt;</code></strong>. W dzisiejszych czasach można to zrobić dość łatwo, wystarczy tylko dodać jeden nagłówek do odpowiedzi z serwera: <code>X-Frame-Options: DENY</code>
 <h2>Atak z wykorzystaniem ligatur</h2>
@@ -127,6 +131,7 @@ Wiesz co to jest ligatura? To czcionka (lub glif) w której zamiast dwóch sąsi
 <a href="https://typeofweb.com/wp-content/uploads/2017/12/Ligatures.png"><img class="aligncenter size-full wp-image-862" src="https://typeofweb.com/wp-content/uploads/2017/12/Ligatures.png" alt="Popularne ligatury" width="555" height="514" /></a>
 
 Dzięki nim tekst ma być bardziej czytelny i piękny :) <strong>Ja też używam na tym blogu specjalnych ligatur do formatowania kodu.</strong> Przykładowo: <code>=&gt;</code> zamiast <code>=</code> i <code>&gt;</code> albo <code>!==</code> zamiast <code>!</code> <code>=</code> <code>=</code>. Wykorzystuję do tego fonta <a href="https://github.com/tonsky/FiraCode">FiraCode</a>.
+
 <h3>Podatność</h3>
 Jak widzisz, w webdevelopmencie również istnieje możliwość używania ligatur. Co to <em>de facto</em> oznacza w kontekście hackowania? Oznacza to, że <strong>możesz wpływać na dowolne kombinacje znaków na stronie…</strong> a więc możesz zastosować trick podobny do tego z atrybutami, zgadywać kolejne symbole w tokenie, znak po znaku… Jest to nieco bardziej skomplikowane niż poprzednie przykłady, ale wykonalne! Co musisz zrobić?
 <ul>
@@ -147,20 +152,25 @@ Ale co z tego, że pojawia się scrollbar, skąd będziesz o tym wiedział(a)? O
 Teraz wystarczy tylko to kilka razy powtórzyć :)
 
 Jeszcze dokładniejszy opis przeprowadzenia tego ataku (wraz z kodem!) znajdziecie na stronie <a href="https://sekurak.pl/wykradanie-danych-w-swietnym-stylu-czyli-jak-wykorzystac-css-y-do-atakow-na-webaplikacje/#attachment_22102">sekurak.pl</a>. Na samym końcu wpisu jest też filmik prezentujący końcowy efekt.
+
 <h2>Stosowanie ataków CSS do kodu JS</h2>
 Często zdarza się, że w aplikacjach internetowych część kodu generowana jest po stronie serwera — czasem również kodu JS. Pracowałem nawet przy projekcie, gdzie po stronie serwera generowany był token dla użytkownika, a następnie był on renderowany do HTML w postaci prostego tagu <code>&lt;script&gt;</code>. <strong>Czy na taki kod JS również można zastosować powyższe ataki? Ależ tak!</strong>
 
 Wystarczy, że dodasz do swojego CSS-a taki fragment kodu i wszystkie powyższe ataki staną się możliwe:
+
 <pre class="language-css"><code>script {
   display: block;
 }</code></pre>
+
 Nie wierzysz?
 
 https://youtu.be/rlWYb_b3qi0
+
 <h2>Podsumowanie</h2>
 Cały kod oraz moje slajdy znajdziecie w repozytorium: <a href="https://github.com/mmiszy/unleashconf-css-hacking-2017">https://github.com/mmiszy/unleashconf-css-hacking-2017</a>
 
 Z tego wpisu warto zapamiętać kilka rzeczy:
+
 <ul>
  	<li><strong>wstrzykiwałem wyłącznie CSS</strong>. Nie musiałem szukać podatności XSS, SQLi, czy jakiejkolwiek innej, aby dobrać się do danych ofiary — wystarczył tylko CSS.</li>
  	<li><strong>rzadko myślimy o zabezpieczaniu CSS-a</strong>. Praktycznie nigdy nie traktujemy go jako możliwego wektoru ataku — a jak się okazuje, to błąd!</li>

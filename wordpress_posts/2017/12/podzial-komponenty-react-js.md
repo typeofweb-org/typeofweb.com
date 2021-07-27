@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W tej części skupisz się na teorii i praktyce dzielenia zaprojektowanych aplikacji na poszczególne komponenty. Zaczniesz też tworzyć prostą appkę — menedżer kontaktów. W planach wyświetlanie, dodawanie i edycja kontaktów. Ale najpierw — musimy przecież zaprojektować HTML i CSS dla tej aplikacji.
 
 <!--more-->
@@ -38,6 +38,7 @@ Przyjrzyj się temu co będziesz budował(a). Będzie to lista kontaktów, ale n
 [typeofweb-courses-slogan category="React"]
 
 Zacznij od napisania kodu HTML i CSS. W przykładzie wykorzystuję framework CSS semantic-ui, ale na dobrą sprawę z łatwością napiszesz wszystko w gołym CSS. Możesz też użyć bootstrapa — do woli. Oto kod HTML:
+
 <pre class="language-html"><code>&lt;header class="ui fixed menu"&gt;
   &lt;nav class="ui container"&gt;
     &lt;a href="#" class="header item"&gt;
@@ -74,7 +75,9 @@ Zacznij od napisania kodu HTML i CSS. W przykładzie wykorzystuję framework CSS
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/main&gt;</code></pre>
+
 Jest tutaj nagłówek z logo i przyciskiem dodawania kontaktów oraz lista z trzema kontaktami. Wygląda dokładnie jak na screenshocie powyżej. Ale chcesz mieć to w React, prawda? Do dzieła!
+
 <p class="important">Na razie nie skupiam się na <strong>sposobach używania kodu CSS do Reacta</strong> i po prostu dodałem <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"&gt;</code> do mojego kodu.,</p>
 
 <h2>Podział na komponenty w React.js</h2>
@@ -85,6 +88,7 @@ Myśląc o aplikacji postaraj się ją jakoś logicznie podzielić. Na jak najmn
 <a href="https://typeofweb.com/wp-content/uploads/2017/11/Screen-Shot-2017-11-03-at-7.13.13-PM-e1509732879504.png"><img class="aligncenter size-large wp-image-739" src="https://typeofweb.com/wp-content/uploads/2017/11/Screen-Shot-2017-11-03-at-7.13.13-PM-e1509732879504-1024x476.png" alt="Schemat komponentów w React.js" width="1024" height="476" /></a>
 
 Wszystko zaplanowane? Czas na kod!
+
 <h2>Komponenty w React.js</h2>
 Zacznij od stworzenia jednego komponentu w React i sprawienia, aby się wyświetlał. Potem przejdź do podziału. Pierwsze co musimy zrobić to zamienić wszystkie <code>class</code> na <code>className</code> w HTML. Potem już z górki:
 <pre class="language-html"><code>function App() {
@@ -151,11 +155,13 @@ Poniżej efekt końcowy wraz z kodem:
 W kolejnych wpisach dodasz interakcję (np. kliknięcia) do komponentów. Dodatkowo poznasz stan (<code>state</code>), który potem przyda się nam przy rozbudowie aplikacji. Bez niego praktycznie niemożliwe byłoby tworzenie jakichkolwiek aplikacji, które oprócz wyświetlania treści miałyby robić cos jeszcze :)
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 <h2>Ćwiczenie</h2>
 <strong>Ćwiczenie:</strong> Stwórz komponent do wyświetlania avatarów i przenieś do niego kod za to odpowiedzialny. Niech ten komponent przyjmuje jako props tylko login. Wrzuć swój kod w komentarzu!
 
-<strong>Ćwiczenie*:</strong> Zmodyfikuj stworzony komponent z avatarem tak, aby obecne obrazki były wyświetlane gdy login nie jest mailem. Natomiast gdy jest mailem to skorzystaj z Gravatara. Zauważ, że całkowita zmiana działania tego komponentu nie wymaga wprowadzania żadnych zmian w pozostałym kodzie aplikacji!
+<strong>Ćwiczenie\*:</strong> Zmodyfikuj stworzony komponent z avatarem tak, aby obecne obrazki były wyświetlane gdy login nie jest mailem. Natomiast gdy jest mailem to skorzystaj z Gravatara. Zauważ, że całkowita zmiana działania tego komponentu nie wymaga wprowadzania żadnych zmian w pozostałym kodzie aplikacji!
+
 <div class="grammarly-disable-indicator"></div>
 <div class="grammarly-disable-indicator"></div>

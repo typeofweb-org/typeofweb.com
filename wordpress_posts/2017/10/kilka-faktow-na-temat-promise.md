@@ -22,19 +22,21 @@ categories:
 seo:
   focusKeywords:
     - Promise
-
 ---
+
 Każdy programista wcześniej czy później ściera się z problemem asynchroniczności. Jest to temat bardzo złożony, nawet w języku jednowątkowym jakim jest JavaScript. Promise jest abstrakcją, która stara się asynchroniczność ukryć oraz sprawić, aby korzystanie z niej było dla nas przyjemniejsze i bardziej przewidywalne.
 
 <!--more-->
 
 Podstawy działania Promise nie są trudne, jednak wiele osób ma problemy ze zrozumieniem ich na samym początku i z załapaniem podstawowych idei. <strong>W tym wpisie przedstawiam kilka faktów i ciekawostek, które wpłynęły na sposób w jaki postrzegam Promise</strong>. Mam nadzieję, że pomogą one Tobie lepiej zrozumieć mechanizmy jego działania :)
+
 <p class="important">Ten wpis mówi konkretnie o Promise A+. Zajrzyj do <a href="https://promisesaplus.com/" target="_blank" rel="noopener noreferrer">specyfikacji</a>!</p>
 
 <h2>1. Promise to obietnica</h2>
 Promise to po polsku „obietnica”. To słowo naprawdę doskonale oddaje ideę działania tej abstrakcji! Wyobraź sobie, że ktoś obiecuje Ci, że dostaniesz prezent. Nie wiesz kiedy to nastąpi. Nie wiesz nawet czy na pewno to nastąpi. Ale niezależnie od tego – ostatecznie kiedyś dowiesz się czy obietnica została dotrzymana, czy też nie. <strong>Tak dokładnie działa Promise.</strong>
 
 Promise może być w jednym z 3 stanów:
+
 <ol>
  	<li><strong>Oczekujący (pending)</strong>: Jeszcze nie wiesz czy dostaniesz prezent, czy nie.</li>
  	<li><strong>Rozwiązany (resolved)</strong>: Dostałaś/eś prezent.</li>
@@ -49,6 +51,7 @@ promisedPresent
 Funkcja przekazana do <code>then</code> wykona się tylko jeśli obietnica zostanie spełniona, a ta przekazana do <code>catch</code> jeśli nie. Co istotne, <strong>nie wiesz dokładnie kiedy to się wydarzy</strong>. Może za sekundę, może za rok :)
 
 Wejdźmy głębiej w funkcję <code>getPresent</code> – tworzymy obietnicę w ten sposób:
+
 <pre><code class="language-javascript">function getPresent() {
   return new Promise((resolve, reject) =&gt; {
     setTimeout(() =&gt; {
@@ -56,7 +59,9 @@ Wejdźmy głębiej w funkcję <code>getPresent</code> – tworzymy obietnicę w 
     }, 5000); // 5 sekund
   });
 }</code></pre>
+
 Tutaj po upływie 5 sekund otrzymujesz prezent. <em>Najs</em>. Ale to już na pewno wiesz, prawda? Przejdźmy więc do ciekawostek ;)
+
 <h2>2. Promise'y można łączyć</h2>
 Składnia jest łatwa i przyjemna, więc teraz wyobraźmy sobie, że chcemy wykonać kilka zadań asynchronicznych jedno po drugim. Moglibyśmy się pokusić o napisanie takiego kodu:
 <pre><code class="language-javascript">getPresent()
@@ -85,9 +90,10 @@ To często jest zaskoczeniem dla osób, które nigdy nie używały Promise. W mo
 });
 
 setTimeout(() =&gt; {
-  myPromise.then(val =&gt; console.log(val));
+myPromise.then(val =&gt; console.log(val));
 }, 6000);</code></pre>
 Widzimy tutaj, że callback jest podpinany po 6 sekundach, a Promise rozwiązuje się po 5 sekundach. Czyli callback zostaje podpięty dopiero sekundę później. I mimo to działa :) Koncepcja jest prosta: Promise najpierw jest oczekujący, a później rozwiązany. <strong>Wszystkie podpięte callbacki zostaną wywołane z rozwiązaną wartością jak tylko będzie to możliwe – niezależnie czy były podłączone wcześniej, czy później.</strong>
+
 <h2>4. <code>then</code> to jednocześnie <code>map</code> i <code>flatMap</code></h2>
 Tutaj kończy się łagodne wprowadzenie. W innym moim wpisie mogliście przeczytać takie zdanie:
 <blockquote>Czym na przykład jest funkcja <code>Promise.resolve</code>? To przecież <code>flatMap</code> gdy wywołamy ją na innym obiekcie <code>Promise</code> oraz <code>map</code> gdy na wartości niebędącej <code>Promise</code>.</blockquote>
@@ -112,9 +118,9 @@ To wydaje się oczywiste, prawda? Zwracamy 2, więc w kolejnym <code>then</code>
 });
 
 Promise
-  .resolve(1)
-  .then(() =&gt; promiseWithThree) // zamiast 1 zwracamy promise, który po 5 sekundach rozwiąże się z 3
-  .then(val =&gt; console.log(val)) // po rozwiązaniu `promiseWithThree` wyświetla 3</code></pre>
+.resolve(1)
+.then(() =&gt; promiseWithThree) // zamiast 1 zwracamy promise, który po 5 sekundach rozwiąże się z 3
+.then(val =&gt; console.log(val)) // po rozwiązaniu `promiseWithThree` wyświetla 3</code></pre>
 Tutaj zwracamy <code>promiseWithThree</code>, a wtedy <strong>zewnętrzny <code>Promise</code> czeka na niego i dopiero wtedy wykonuje callbacki przekazane do kolejnych <code>then</code></strong>. Tak jak mówiłem, jest to bardzo intuicyjne, prawda? Jednak nie jest to wcale <em>oczywiste</em>! Wewnątrz drugiego <code>then</code>, <code>val</code> nie jest Promisem tylko wartością z którą rozwiązał się tamten <code>Promise</code>.
 
 Dlatego właśnie często mówi się, że <code>resolve</code> czy <code>then</code> to jednocześnie <code>map</code> i <code>flatMap</code> w nomenklaturze Haskellowej. Aby trochę lepiej poznać te pojęcia polecam mój inny wpis:
@@ -122,10 +128,12 @@ Dlatego właśnie często mówi się, że <code>resolve</code> czy <code>then</
 https://typeofweb.com/2017/05/12/map-i-reduce-w-js/
 
 &nbsp;
+
 <h2>5. Promise jest asynchronicznym odpowiednikiem synchronicznych wywołań</h2>
 Gdyby jedyną fajną rzeczą w Promisach była… agregacja callbacków – nie byłoby w ogóle tego wpisu :) Obietnice tak naprawdę to znacznie bardziej skomplikowany i rozbudowany koncept. <strong>Obietnica jest bezpośrednim asynchronicznym odpowiednikiem dla zwykłych wywołań synchronicznych.</strong> Co robią zwykłe synchroniczne funkcje? <strong>Zwracają wartość lub rzucają wyjątek. </strong>Dokładnie to samo robią Promise'y.
 
 Niestety w asynchronicznym świecie nie można po prostu zwrócić wartości albo złapać błędu – stąd cała abstrakcja. Jednak pozostałe koncepty i zachowania są niemal identyczne! Jeśli zagnieździmy kilka synchronicznych funkcji, a któraś z nich rzuci wyjątek – to ten wyjątek przerwie pozostałe wywołania i powędruje do góry aż zostanie złapany. <strong>Dokładnie to samo robią Promise'y</strong>. <strong>W momencie w którym zdasz sobie z tego sprawę – jesteś już bardzo blisko dogłębnego zrozumienia obietnic.</strong> Wyjątek rzucony w którejś z zagnieżdżonych obietnic spowoduje przerwanie wywołań kolejnych <code>then</code> i powędruje do najbliższego <code>catch</code>, który ten błąd obsłuży. Widzisz tutaj podobieństwo? Spójrz na przykład:
+
 <pre><code class="language-javascript">Promise
   .resolve(1)
   .then(val =&gt; {
@@ -170,13 +178,15 @@ To będzie krótki akapit. Wspomniałem chwilę wcześniej, że Promise potraktu
 };
 
 Promise
-  .resolve(thenable)
-  .then(val =&gt; console.log(val)); // 1</code></pre>
+.resolve(thenable)
+.then(val =&gt; console.log(val)); // 1</code></pre>
 Thenable to po prostu zwykły obiekt, który ma funkcję <code>then</code>. Jakie są tego konsekwencje? Przede wszystkim: <strong>Bardzo łatwo zamienić dowolny obietnico-podobny obiekt na prawdziwy Promise/A+! Przykładowo, Promise z jQuery zamieniamy na prawdziwy Promise wywołując na nim po prostu <code>Promise.resolve(…)</code>.</strong> Bum!
+
 <h2>8. Obsługa błędów</h2>
 <code>catch</code> umożliwia nam złapanie wszystkich odrzuceń i wyjątków – to świetnie! Pozwala to na przykład na globalne przechwytywanie nieobsłużonych błędów w jednym centralnym miejscu. Przykładowo, robi tak framework HapiJS: Oczekuje, że funkcja <code>handler</code> zwróci <code>Promise</code> – jeśli jest on rozwiązany, to Hapi automatycznie wysyła odpowiedź z odpowiednim kodem 20x, a jeśli odrzucony to Hapi przechwytuje ten błąd i zamienia na odpowiedź z kodem błędu 500, lub innym podanym. To bardzo wygodne! <strong>Ale co to dokładnie oznacza, że błąd jest nieobsłużony?</strong>
 
 Napisałem akapit wcześniej, że wewnątrz <code>catch</code> również może zostać zwrócona wartość. Jeśli zwrócisz inny odrzucony Promise albo rzucisz wyjątek, to <code>catch</code> zwróci kolejny odrzucony <code>Promise</code>. Ale jeśli zwrócisz dowolną inną wartość, to <code>catch</code> zwróci <code>Promise</code>, który <strong>nie jest odrzucony</strong>. <strong>Oznacza to, że błąd został przez Ciebie obsłużony.</strong> Spójrz na przykłady:
+
 <pre><code class="language-javascript">Promise
   .reject(new Error())
   .catch(err =&gt; {
@@ -184,7 +194,9 @@ Napisałem akapit wcześniej, że wewnątrz <code>catch</code> również może 
     return 'jest ok' // obsluguję blad
   })
   .then(val =&gt; console.log(val)) // 'jest ok'</code></pre>
+
 Tutaj błąd jest obsłużony, więc następnie wywoła się <code>then</code>.
+
 <pre><code class="language-javascript">Promise
   .reject(new Error())
   .catch(err =&gt; {
@@ -193,7 +205,9 @@ Tutaj błąd jest obsłużony, więc następnie wywoła się <code>then</code>.
   })
   .then(val =&gt; console.log(val)) // nie wywoła się
   .catch(err =&gt; console.log('tutaj jestem!')) // wywoła się, bo błąd nie był obsłuzony poprzednio</code></pre>
+
 Natomiast tutaj błąd nie jest obsłużony, więc <code>then</code> nie wywoła się. Zostanie wywołany natomiast kolejny najbliższy <code>catch</code>.
+
 <p class="important">Bardzo ważne jest, aby zawsze zwracać coś wewnątrz <code>then</code> i <code>catch</code>. Najlepiej niech wejdzie Ci to w nawyk. Jeśli nie zwrócisz nic wewnątrz <code>catch</code> to <strong>automatycznie zwrócone zostaje <code>undefined</code>, a to oznacza, że błąd został obsłużony</strong>:</p>
 
 <pre><code class="language-javascript">Promise
@@ -202,7 +216,9 @@ Natomiast tutaj błąd nie jest obsłużony, więc <code>then</code> nie wywoł
     console.log(err); // ups! przypadkiem nic nie zwróciłem, błąd obsłuzony
   })
   .then(val =&gt; console.log(val)) // wywoła się!</code></pre>
+
 Ostatni <code>then</code> wywoła się, gdyż wewnątrz <code>catch</code> przypadkiem niczego nie zwróciłem – czyli został zwrócony <code>undefined</code> i błąd został „obsłużony”.
+
 <h2>Podsumowanie</h2>
 Przedstawiłem kilka podstawowych informacji, nieco ciekawostek i kilka całkiem zaawansowanych rzeczy związanych z Promise. Niektóre mnie zaskoczyły gdy się o nich kiedyś dowiedziałem. A czy Ciebie coś zaskoczyło? Napisz w komentarzu!
 

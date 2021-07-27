@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Do tej pory używaliśmy prostych funkcji i z nich tworzyliśmy komponenty React. Mimo, że przeważająca część komponentów, które tworzę są właśnie takimi prostymi funkcjami, to jednak nie wszystkie. Funkcje są bardzo przydatne, jednak poniekąd ograniczone. Jak więc inaczej można tworzyć komponenty w React.js? <strong>Używając klas</strong>!
 
 <!--more-->
@@ -64,6 +64,7 @@ Widzisz jakieś znaczące różnice?
 Na razie nie widać żadnej przewagi klasy nad funkcją. I rzeczywiście — <strong>przy takich komponentach (prezentacyjnych) lepiej jest napisać funkcję niż klasę.</strong> Gdzie klasy wygrywają i co możemy z nimi zrobić?
 
 Klasy nie istnieją bez powodu :) Oto kilka możliwości. Wszystkie omówimy w kolejnych częściach tego kursu:
+
 <ul>
  	<li>możliwość definiowania stanu komponentu (<code>state</code>), który sprawi, że Twoja aplikacja zacznie „żyć”</li>
  	<li>dostęp do metod cyklu życia komponentu (<em>lifecycle methods</em>), dzięki którym będziemy mogli reagować na różne wydarzenia</li>
@@ -78,16 +79,16 @@ Przykładowo, jeśli korzystasz z jakiegoś modułu do formularzy w React, pewni
     )
   }
 
-  validateInput(value) {
-    return value &amp;&amp; value.length === 10;
-  }
+validateInput(value) {
+return value &amp;&amp; value.length === 10;
+}
 }</code></pre>
-
 
 <h2>Co dalej?</h2>
 Interakcje z komponentami. Poznasz też <code>state</code> oraz metody cyklu życia. Czytanie ponad 40 artykułów może być przytłaczające, więc może [typeofweb-courses-slogan category="React"]
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 

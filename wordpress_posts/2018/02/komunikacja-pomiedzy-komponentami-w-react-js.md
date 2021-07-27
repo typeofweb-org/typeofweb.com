@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Przyszedł ten moment, gdy Twoja aplikacja zaczyna się rozrastać i zmagasz się z różnymi problemami z architekturą. Zacznijmy od prostego problemu: Komunikacja pomiędzy komponentami. Ale nie tylko tymi, które są bezpośrednio obok siebie, ale też tymi dowolnie oddalonymi w aplikacji…
 
 <!--more-->
@@ -40,12 +40,14 @@ React informuje nas, że propsy się zmieniły poprzez funkcję <code>componentW
 https://typeofweb.com/2018/01/18/metody-cyklu-zycia-komponentu-react-js/
 
 W zasadzie to cała filozofia.
+
 <h2>Dziecko ➜ Rodzic: Propsy (callback)</h2>
 A teraz inna sytuacja. Coś się wydarzyło w komponencie-dziecku i musisz poinformować o tym rodzica. Przykładowo: Na naszej liście kontaktów, użytkownik zaznaczył kontakt, a rodzic musi wiedzieć, który kontakt został zaznaczony. Jak to zrobić?
 
 React nie ma two-way data bindingu (jak AngularJS, Angular czy Vue). W tym przypadku to dobrze — bo komunikacja za pośrednictwem tego sposobu często prowadzi do bałaganu. Reactowy sposób jest inny: <strong>Rodzic może przekazać do dziecka funkcję. Następnie dziecko wywoła tę funkcję, gdy zechce poinformować rodzica o zmianach. </strong>To jest tak proste jak brzmi. Na przykładzie z listą kontaktów:
 
 Dodaję nowe pole do <code>state</code> w <code>App</code>: <code>selectedUser</code> — będę tutaj przechowywał użytkownika, który został zaznaczony. Następnie wyświetlam go wewnątrz funkcji <code>render</code>. Pozostały kod pozostawiam bez zmian:
+
 ```jsx
 class App extends React.Component {
   constructor() {
@@ -53,7 +55,7 @@ class App extends React.Component {
 
     this.state = {
       filteredUsers: allUsers,
-      selectedUser: null // tutaj
+      selectedUser: null, // tutaj
     };
   }
 
@@ -67,7 +69,9 @@ class App extends React.Component {
   }
 }
 ```
+
 Teraz czas na przekazanie funkcji do dziecka. Tworzę więc nową funkcję w tym komponencie i przekazuję ją niżej:
+
 <pre class="language-jsx"><code>onUserSelected = (selectedUser) =&gt; {
   this.setState({
     selectedUser
@@ -82,7 +86,9 @@ render() {
     &lt;/div&gt;
   );
 }</code></pre>
+
 Teraz modyfikuję <code>UsersList</code> i wywołuję w nim <code>userSelected</code> gdy użytkownik kliknie na kontakt:
+
 <pre class="language-jsx"><code>&lt;li onClick={userSelected.bind(null, user)} key={user}&gt;{user}&lt;/li&gt;</code></pre>
 <h2>Dowolny komponent ➜ Inny Komponent</h2>
 Tutaj magia Reacta się kończy ;) No, prawie, ale na temat <code>context</code> opowiem innym razem. Załóżmy na razie, że nie istnieje ;) Jak więc skomunikować ze sobą dwa komponenty, które leżą sobie gdziekolwiek w aplikacji? <strong>Na dowolny znany Ci sposób.</strong> To nie żart. Oto kilka wskazówek:
@@ -98,10 +104,12 @@ Są też pewne ciekawe, rozbudowane i popularne rozwiązania: Architektura <stro
 https://typeofweb.com/2016/06/10/flux-i-redux/
 
 Natomiast w kontekście Reacta — wrócę do tego, obiecuję ;) To temat pierwszy albo drugi wpis po tym! [typeofweb-courses-slogan category="React"]
+
 <h2>Podsumowanie</h2>
 Teraz już wiesz jak komponenty rozmawiają ze sobą. <strong>Wiedza na temat architektury aplikacji i wzorców projektowych przydaje się zawsze, niezależnie od frameworka, z którego korzystasz.</strong> Także tutaj. Ponownie — cały kod <strong>wraz z testami</strong> jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-3">https://github.com/mmiszy/typeofweb-kurs-react/tree/part-4</a>
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 <h2>Ćwiczenie</h2>

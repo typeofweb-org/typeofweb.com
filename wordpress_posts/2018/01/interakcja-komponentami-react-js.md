@@ -24,8 +24,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Tworzenie aplikacji nie miałoby sensu, gdyby użytkownik nie mógł wchodzić z nią w interakcje :) Dzisiaj nauczysz się obsługiwać zdarzenia wywoływane przez użytkowników: Kliknięcia, najechania kursorem, zmiany tekstu w polu tekstowym… oczywiście w React.js.
 
 <!--more-->
@@ -40,12 +40,15 @@ Taki kod powoduje, że za każdym razem gdy użytkownik kliknie w element o klas
 Zdarzenia w React obsługuje się całkowicie deklaratywnie. Nie musisz pisać tego brzydkiego imperatywnego kodu jaki widzisz powyżej. Nie musisz się też martwić tym, aby w odpowiedniej chwili odpiąć zdarzenia gdy komponent jest niszczony — react robi to za Ciebie.
 
 No ale jak? Poprzez proste i łatwe do zapamiętania atrybuty wprost na elementach! Powyższy przykład w React wyglądałby tak:
+
 <pre class="lang-javascript"><code>function MyComponent() {
   return (
     &lt;button onClick={() =&gt; alert('Kliknięto!')}&gt;Kliknij!&lt;/button&gt;
   );
 }</code></pre>
+
 Jak widzisz, dodaję na elemencie prosty atrybut <code>onClick</code>, który reaguje na kliknięcia. Zobacz sam(a):
+
 <p class="codepen" data-height="265" data-theme-id="0" data-slug-hash="ZaOdgq" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Props czyli atrybuty w React.js">See the Pen <a href="https://codepen.io/mmiszy/pen/ZaOdgq/">Props czyli atrybuty w React.js</a> by Michał Miszczyszyn (<a href="https://codepen.io/mmiszy">@mmiszy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 <h2 data-height="265" data-theme-id="0" data-slug-hash="ZaOdgq" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Props czyli atrybuty w React.js">Inne zdarzenia React</h2>
@@ -85,6 +88,7 @@ Tutaj przydatna okazuje się często możliwość definiowania metod w klasie:
 Standardowo w JS do <em>event-listenerów</em> przekazywany jest obiekt (zwyczajowo nazywany <code>event</code> lub w skrócie <code>e</code>). Zawiera on informacje o zdarzeniu. Pozwala także przerwać propagację (<code>stopPropagation</code>) lub zapobiec wykonaniu domyślnych akcji (<code>preventDefault</code>). Jak to wygląda w React.js? <strong>Podobnie, ale nie dokładnie tak samo.</strong>
 
 Każda funkcja przekazana jako atrybut do nasłuchiwania na zdarzenia, zostanie wywołana z obiektem typu <code>SyntheticEvent</code>. Cóż to za twór? Jest to Reactowa implementacja, która przede wszystkim <strong>jest identyczna niezależnie od przeglądarki — a to ogromna zaleta!</strong> Obiekt ten również posiada metody takie jak <code>preventDefault</code> czy <code>stopPropagation</code>, a także wiele różnych pól, np:
+
 <ul>
  	<li>currentTarget</li>
  	<li>target</li>
@@ -97,9 +101,9 @@ Oraz wiele innych, w zależności od rodzaju konkretnego zdarzenia. Dodatkowo ka
 Czy to nie jest mega proste? Jeśli czegoś nie rozumiesz to koniecznie [typeofweb-courses-slogan category="React"]
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
-
 
 <h2>Ćwiczenie</h2>
 <b>Ćwiczenie:</b> Napisz aplikację, która nasłuchuje na wiele różnych zdarzeń i loguje je do konsoli. Podziel się kodem w komentarzu!

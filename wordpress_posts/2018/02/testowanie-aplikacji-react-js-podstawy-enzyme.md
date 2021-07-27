@@ -25,13 +25,14 @@ series:
 seo:
   focusKeywords:
     - enzyme
-
 ---
+
 Testowanie aplikacji to rzecz ważna. Do tej pory jednak nie wspomniałem ani słowem o testowaniu React.js. Czas najwyższy to zrobić! I <strong>od razu wrzucam Cię na głęboką wodę — użyjesz React.js i Enzyme</strong> — przemiłej biblioteki do testowania komponentów.
 
 <!--more-->
 
 O zaletach samego testowania nie muszę chyba pisać. <strong>Utrzymanie kodu, łatwiejsze dodawanie nowych funkcji, testy służące jako dokumentacja</strong>… bajka ;) Dlatego teraz po prostu weźmiesz poprzedni przykład (filtrowanie listy) i napiszesz do niego testy jednostkowe. Zacznij od zainstalowania enzyme.
+
 <p class="important"><code>create-react-app</code> domyślnie korzysta z biblioteki <code>jest</code> do testów. Tak też będę robił w tym wpisie. Ale pamiętaj, że <code>enzyme</code> działa również z innymi popularnymi bibliotekami np. <code>mocha</code> czy <code>chai</code>.</p>
 
 <h2>Enzyme</h2>
@@ -49,6 +50,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });</code></pre>
 W tym samym pliku możesz też dodać np. <strong>globalne mocki</strong> — jeśli Ci będą potrzebne. Albo biblioteki, z których chcesz korzystać w testach.
+
 <h2>Pierwszy test w Enzyme</h2>
 Najprostszy test z użyciem Enzyme będzie po prostu renderował komponent. Jeśli wszystko zadziała poprawnie — test zostanie zaliczony. Jeśli wystąpi wyjątek — test zakończy się niepowodzeniem. Zacznij od zaimportowania <code>React</code>, i <code>App</code>. Do tego potrzebna będzie Ci funkcja <code>shallow</code> z <code>enzyme</code>. Dlaczego akurat <code>shallow</code>? Kilka słów o tym za moment, a na razie test:
 <pre class="language-javascript"><code>import React from 'react';
@@ -56,11 +58,12 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 it('renders without crashing', () =&gt; {
-  shallow(&lt;App /&gt;);
+shallow(&lt;App /&gt;);
 });</code></pre>
 W kodzie powyżej tworzony jest jeden test, który tylko renderuje komponent <code>App</code>. Proste, prawda? :)
 
 Odpal teraz polecenie <code>npm test</code>. <strong>Twoje testy będą teraz automatycznie uruchamiane przy każdej zmianie w kodzie.</strong>
+
 <h2><code>shallow</code>, <code>mount</code>, <code>render</code>…</h2>
 W poprzednim teście skorzystałem z funkcji <code>shallow</code>. Ale są też inne: <code>mount</code> oraz <code>render</code>.
 <ul>
@@ -77,10 +80,11 @@ Dodaj dwa nowe testy. Sprawdź czy <code>App</code> zawiera <code>input</code>�
 });
 
 it('includes UsersList', () =&gt; {
-  const app = shallow(&lt;App /&gt;);
-  expect(app.containsMatchingElement(&lt;UsersList /&gt;)).toEqual(true)
+const app = shallow(&lt;App /&gt;);
+expect(app.containsMatchingElement(&lt;UsersList /&gt;)).toEqual(true)
 });</code></pre>
 Wszystko przechodzi. <strong>Ale skąd tak naprawdę masz pewność, że Twój kod działa?</strong> Może to błąd w testach i one przechodzą zawsze? ;) Spróbuj usunąć z komponentu <code>App</code> element <code>input</code>. Oto rezultat:
+
 <pre><code> FAIL  src/App.test.js
   ● includes input
 
@@ -90,7 +94,9 @@ Wszystko przechodzi. <strong>Ale skąd tak naprawdę masz pewność, że Twój k
       true
     Received:
       false</code></pre>
+
 Rzeczywiście, test pokazał, że w komponencie nie ma inputa! Czyli testy są poprawne ;)
+
 <h2>Testy przekazywanych propsów</h2>
 Teraz przetestuj komponent <code>UsersList</code>, którego wyświetlanie zależy od przekazanych propsów:
 <ol>
@@ -105,33 +111,36 @@ Nic prostszego ;)
 });
 
 it(`doesn't show message when there are users`, () =&gt; {
-    const usersList = shallow(&lt;UsersList users={['Michal']} /&gt;);
-    expect(usersList.text()).not.toContain('No results!')
+const usersList = shallow(&lt;UsersList users={['Michal']} /&gt;);
+expect(usersList.text()).not.toContain('No results!')
 });
 
 it(`shows a list of users`, () =&gt; {
-    const users = ['Michal', 'Ania'];
-    const usersList = shallow(&lt;UsersList users={users} /&gt;);
-    expect(usersList.find('li').length).toEqual(users.length);
+const users = ['Michal', 'Ania'];
+const usersList = shallow(&lt;UsersList users={users} /&gt;);
+expect(usersList.find('li').length).toEqual(users.length);
 });
 
 describe('list of users', () =&gt; {
-    const users = ['Michal', 'Ania'];
-    const usersList = shallow(&lt;UsersList users={users} /&gt;);
-    
+const users = ['Michal', 'Ania'];
+const usersList = shallow(&lt;UsersList users={users} /&gt;);
+
     users.forEach(user =&gt; {
         it(`includes name ${user} on the list`, () =&gt; {
             expect(usersList.containsMatchingElement(&lt;li&gt;{user}&lt;/li&gt;)).toEqual(true)
         });
     });
+
 });</code></pre>
 Wszystkie napisane wyżej testy powinny bez problemu przechodzić :)
 
 <a href="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-17-at-6.20.50-PM.png"><img class="aligncenter size-full wp-image-975" src="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-17-at-6.20.50-PM.png" alt="Testy React.js w Enzyme" width="834" height="430" /></a>
+
 <h2>Podsumowanie</h2>
 W tej części zrobiłem tylko lekkie wprowadzenie do podstaw <code>enzyme</code>. Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-2">https://github.com/mmiszy/typeofweb-kurs-react/tree/part-2</a> [typeofweb-courses-slogan category="React"] <strong>W kolejnym wpisie omówię jak testować zmiany propsów i stanu, a także jak przetestować interakcje z komponentami!</strong>
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 <h2>Ćwiczenie</h2>

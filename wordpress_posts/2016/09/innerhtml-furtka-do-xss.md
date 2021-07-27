@@ -21,8 +21,8 @@ seo:
   focusKeywords:
     - innerHTML
     - XSS
-
 ---
+
 <p>Bardzo często popełnianym błędem, na który zwracam uwagę praktycznie w każdym kolejnym Weekly JavaScript Challenge, jest niewłaściwe wykorzystywanie innerHTML. Bardzo łatwo może to doprowadzić do wystąpienia podatności typu <strong>XSS</strong>! Ten wpis chciałem poświęcić tej właściwości oraz zagrożeniom, które płyną z jej nieprawidłowego wykorzystania. Będę analizował konkretny przykład kodu z nadesłanego rozwiązania i pokażę jak przeprowadzić prosty atak na ten kod. Zapraszam!</p>
 
 <!--more-->

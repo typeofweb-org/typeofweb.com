@@ -20,8 +20,8 @@ series:
   slug: typescript
   name: TypeScript
 seo: {}
-
 ---
+
 <p>„TypeScript – typowany nadzbiór JavaScriptu, kompilowany do czystego JavaScriptu” – głosi napis na stronie głównej <a href="https://www.typescriptlang.org/">typescriptlang.org</a>. Używam go praktycznie codziennie, w różnych projektach, z różnymi technologiami. Od pewnego czasu, w dużej mierze za sprawą Angulara 2, ale nie tylko, TS zaczął zyskiwać sporą popularność i uznanie w społeczności webdeveloperów.</p>
 
 <p class=important>W tym artykule zakładam, że czytelnicy są zaznajomieni JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>.</p>

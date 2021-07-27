@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W jednym z komentarzy ktoś zasugerował mi, abym pokazywał jak najwięcej praktycznych przykładów. Inna osoba pytała konkretnie o przykład filtrowania listy na podstawie tekstu wpisywanego w input. Stwierdziłem, że warto skorzystać z tych sugestii. Oto powstaje seria wpisów, które będą się przeplatały z kursem Reacta jako takim. Tutaj będę pokazywał <strong>konkretne przykłady i implementacje</strong>, bez tłumaczenia teorii. Pierwszym przykładem będzie właśnie taka lista — na razie wersja prosta, ze statycznymi danymi i synchronicznym wyszukiwaniem. Do dzieła!
 
 <!--more-->
@@ -65,10 +65,11 @@ Dodaję jeden warunek i renderuję co innego. A więc ostatecznie ten komponent 
     );
   }
 
-  return (
-    &lt;p&gt;No results!&lt;/p&gt;
-  );
+return (
+&lt;p&gt;No results!&lt;/p&gt;
+);
 };</code></pre>
+
 <h3>Komponent <code>App</code></h3>
 Logikę filtrowania oraz obsługę zdarzeń zamknę w komponencie <code>App</code>. Mógłbym się pokusić o dalszy podział na mniejsze komponenty, ale przy tak prostym przykładzie nie widzę w tym sensu. Przefiltrowanych użytkowników przechowuję w <code>state</code> i przekazuję do <code>UsersList</code>. Do inputa podpinam obsługę jednego zdarzenia <code>onInput</code>:
 <pre class="language-jsx"><code>class App extends React.Component {
@@ -78,18 +79,20 @@ Logikę filtrowania oraz obsługę zdarzeń zamknę w komponencie <code>App</cod
     this.state = {
       filteredUsers: allUsers
     };
-  }
 
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;input onInput={this.filterUsers.bind(this)} /&gt;
-        &lt;UsersList users={this.state.filteredUsers} /&gt;
-      &lt;/div&gt;
-    );
-  }
+}
+
+render() {
+return (
+&lt;div&gt;
+&lt;input onInput={this.filterUsers.bind(this)} /&gt;
+&lt;UsersList users={this.state.filteredUsers} /&gt;
+&lt;/div&gt;
+);
+}
 };</code></pre>
 Stała <code>allUsers</code> pochodzi „z zewnątrz” — w sumie nieistotne skąd, bo nie mam tutaj żadnego API, store'a ani nic takiego. Po prostu zdefiniuj ją sobie gdziekolwiek. Przynajmniej w tym przykładzie :)
+
 <h3>Implementacja filtrowania</h3>
 Samo filtrowanie sprowadza się do:
 <ol>
@@ -118,6 +121,7 @@ Ostatecznie stworzona aplikacja wygląda tak:
 Jak wrażenia? Jeśli masz jakiekolwiek pytania albo coś jest niejasne — <strong>pisz w komentarzu</strong>! To dla mnie cenna informacja zwrotna.
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
+
 <div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
 <div style="text-align: center;">[typeofweb-facebook-page]</div>
 

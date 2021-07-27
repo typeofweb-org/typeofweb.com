@@ -20,15 +20,17 @@ series:
   slug: hapijs
   name: HapiJS
 seo: {}
-
 ---
+
 Dalej na temat tworzenia backendu w node.js z wykorzystaniem HapiJS. Ten wpis jest o automatycznym generowaniu dokumentacji do endpointów. Zapraszam!
+
 <p class="important">Jeśli cokolwiek okaże się dla Ciebie niejasne to zadaj mi pytanie w komentarzach.</p>
 
 <h1 id="joi">Joi</h1>
 W poprzednim wpisie pokazałem jak korzystać z podstawowych możliwości biblioteki Joi. Dla przypomnienia: Jest to biblioteka pozwalającą na walidację żądań zgodnie z podaną strukturą.
 
 <strong>Nie mówiłem jednak o tym, że takie obiekty Joi mogą posłużyć do automatycznego generowania dokumentacji API.</strong> Brzmi ciekawie? Jest to niezwykle przydatna możliwość i korzystałem z niej wiele razy w różnych projektach.
+
 <h1 id="przypomnienie">Przypomnienie</h1>
 Wróćmy do kodu z poprzedniej części kursu. Mieliśmy tam zdefiniowane kilka endpointów:
 <ul>
@@ -67,6 +69,7 @@ Dodatkowymi potrzebnymi nam zależnościami są <code>inert</code> i <code>visio
 <code>npm install inert vision --save</code>
 
 Następnie zainstalowane wtyczki musimy dodać do Hapi. Pisanie własnych pluginów jest tematem bardzo rozbudowanym, aby jednak skorzystać z gotowych wtyczek wystarczy, że użyjemy funkcji <code>server.register</code>. Do niej przekazujemy tablicę pluginów:
+
 <pre><code class="language-javascript">const Inert = require('inert');  
 const Vision = require('vision');  
 const HapiSwagger = require('hapi-swagger');
@@ -89,7 +92,9 @@ server.register([
   });
 });
 </code></pre>
+
 Zauważ, że <code>HapiSwagger</code> rejestrujemy nieco inaczej niż <code>Inert</code> i <code>Vision</code>. Dzieje się tak dlatego, że do Swaggera potrzebujemy przekazać dodatkową konfigurację. Definiujemy więc wcześniej stałą <code>options</code>:
+
 <pre><code class="language-javascript">const pkg = require('./package.json');  
 const options = {  
   info: {
@@ -98,6 +103,7 @@ const options = {
   }
 };
 </code></pre>
+
 Zwróć też uwagę, że wywołanie <code>server.start</code> przeniosłem do środka callbacka funkcji <code>server.register</code>. <strong>Jest to wymagane, aby serwer wiedział o wszystkich wtyczkach w momencie uruchomienia.</strong>
 
 To wystarczy, aby nasza dokumentacja była automatycznie generowana. Uruchom serwer i otwórz adres <a href="http://localhost:3000/documentation">http://localhost:3000/documentation</a> Twoim oczom powinien się ukazać widok podobny do tego:
@@ -105,6 +111,7 @@ To wystarczy, aby nasza dokumentacja była automatycznie generowana. Uruchom ser
 <img src="/content/images/2017/04/Screenshot-2017-04-14-12.35.54.png" alt="" />
 
 <strong>Jednak nie ma tutaj jeszcze żadnego endpointa!</strong> Dlaczego? Aplikacje napisane w HapiJS mogą być mieszanką choćby statycznych stron i REST API. Dokumentować chcemy tylko REST API, dlatego musimy dodatkowo powiedzieć Hapi, które końcówki są naszym API, a które nie. <strong>Musimy otagować</strong> odpowiednie route'y poprzez dodanie do nich właściwości <code>tags: ['api']</code>:
+
 <pre><code class="language-javascript">server.route({  
   method: 'POST',
   path: '/contacts',
@@ -115,6 +122,7 @@ To wystarczy, aby nasza dokumentacja była automatycznie generowana. Uruchom ser
   …
 });
 </code></pre>
+
 Gdy to zrobisz, wreszcie dokumentacja będzie generowana prawidłowo dla wybranych endpointów:
 
 <img src="/content/images/2017/04/Screenshot-2017-04-14-12.40.35.png" alt="" />
@@ -127,6 +135,7 @@ Z prawej strony w polu <em>Data Type</em> widzimy informacje, które podaliśmy 
 Zauważcie, że pole, w którym jasno zdefiniowaliśmy tylko 3 poprawne wartości (pl, gb, de) nie jest inputem, lecz selectem: <code>hapi-swagger</code> dobrze sobie z tym poradził :)
 
 Jednak brakuje mi tu kilku rzeczy. Bez wątpienia przydałby się opis każdego endpointa, prawda? Dodatkowo, pomocna byłaby informacjach o danych zwracanych czy też możliwych kodach błędów. Czy takie informacje również możemy podać w Hapi? Owszem!
+
 <h2 id="opisinotatki">Opis i notatki</h2>
 Opis oraz dodatkowe notatki możesz podać w jako pola <code>description</code> i <code>notes</code> w konfiguracji route'a. Notatki mogą zawierać dowolne przydatne informacje, np. krótkie podsumowanie zwracanych danych albo podpowiedź odnośnie czegoś, co może zaskoczyć przy pracy z tym endpointem.
 <pre><code class="language-javascript">server.route({  
@@ -212,13 +221,13 @@ Dopisanie tego fragmentu kodu jest banalnie proste. W tablicy kontaktów szukamy
 <pre><code class="language-javascript">handler(request, reply) {  
   const contact = request.payload.contact;
 
-  const userExists = contacts.find(c =&gt; c.name === contact.name &amp;&amp; c.surname === contact.surname);
-  if (userExists) {
-    return reply('This user exists!').code(409);
-  }
+const userExists = contacts.find(c =&gt; c.name === contact.name &amp;&amp; c.surname === contact.surname);
+if (userExists) {
+return reply('This user exists!').code(409);
+}
 
-  contacts.push(contact);
-  reply({contact}).code(201);
+contacts.push(contact);
+reply({contact}).code(201);
 }
 </code></pre>
 Teraz nowo dodaną funkcję możemy sprawdzić w Swagger UI:
@@ -230,6 +239,7 @@ Dzisiaj <strong>nauczyliśmy się dodawać dokumentację do REST API</strong>.
 Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/hapijs-tutorial/tree/czesc-3">https://github.com/mmiszy/hapijs-tutorial/tree/czesc-3</a>
 
 <strong>Joi i hapi-swagger posiadają niezliczone różne opcje i nie sposób tutaj wszystkich wymienić</strong>. Dlatego zachęcam do poczytania oficjalnych dokumentacji:
+
 <ul>
  	<li><a href="https://github.com/hapijs/joi/blob/master/API.md">Dokumentacja Joi</a></li>
  	<li><a href="https://github.com/glennjones/hapi-swagger/blob/master/optionsreference.md">Dokumentacja hapi-swagger</a></li>

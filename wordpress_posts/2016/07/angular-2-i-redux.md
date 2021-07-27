@@ -20,8 +20,8 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
-
 ---
+
 <p>Otóż okazuje się, że Redux świetnie współgra z aplikacjami w Angular 2 i biblioteka ta jest bardzo często wykorzystywana razem z tym frameworkiem. Poprzednio opisywałem sposoby na komunikację pomiędzy komponentami sugerowane przez twórców Angulara, wszystkie miały jednak pewną wadę: <strong>Dobrze działały tylko w przypadku prostych scenariuszy</strong>. Użycie Reduksa znacznie upraszcza zarządzanie stanem <strong>nawet najbardziej złożonych aplikacji</strong> oraz umożliwia łatwą komunikację pomiędzy komponentami. Na czym dokładnie polega filozofia Reduksa opisywałem we wpisie <a href="https://typeofweb.com/2016/06/10/flux-i-redux/">Flux i Redux</a>, więc osoby nieznające tego konceptu zapraszam do tamtego wpisu. W tym artykule chciałbym skupić się na bardzo konkretnym przykładzie użycia biblioteki Redux razem z Angular 2.</p>
 
 <p class=important>Sposobów połączenia Reduksa z Angularem 2 jest wiele, między innymi biblioteka <code>ng2-redux</code>, czy bardziej skomplikowany koncept łączący FRP i Reduksa: <code>ngrx/store</code>. Tutaj prezentuję najprostszą metodę, dzięki czemu wiedza ta jest najbardziej uniwersalna.</p>

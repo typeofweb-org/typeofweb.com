@@ -23,8 +23,8 @@ series:
   slug: vue-js
   name: Vue.js
 seo: {}
-
 ---
+
 Vue.js jest reaktywnym frameworkiem JavaScript. Znaczy to, że dowolna zmiana danych używanych do wyświetlania strony sprawia, że widok automatycznie jest aktualizowany tak, aby odzwierciedlić tę zmianę.
 
 <!--more-->
@@ -36,6 +36,7 @@ Vue.js jest reaktywnym frameworkiem JavaScript. Znaczy to, że dowolna zmiana da
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 ```
+
 W dalszych częściach kursu omówimy bardziej skomplikowane techniki dołączania Vue.js do Twojej strony, ale pamiętaj, że powyższy sposób w zupełności wystarczy i jest poprawny. Nie potrzebujesz niczego więcej by zacząć pracę!
 
 ## Pierwszy komponent
@@ -47,6 +48,7 @@ Wyświetlanie danych we Vue odbywa się dzięki tzw. **wąsom** znanym z wielu j
   <h1>{{ appTitle }}</h1>
 </div>
 ```
+
 Aby Vue mogło zmienić zwykłe dane w reaktywne, musisz zwrócić je z metody `data()`. Dzięki temu framework będzie w stanie **śledzić ich zmiany i odpowiednio aktualizować elementy DOM**.
 
 Teraz musisz już tylko zainicjalizować nową instancję Vue i podłączyć ją do elementu DOM za pomocą metody `$mount`:
@@ -55,14 +57,15 @@ Teraz musisz już tylko zainicjalizować nową instancję Vue i podłączyć j�
 new Vue({
   data() {
     return {
-      appTitle: "Pierwsza aplikacja Vue!"
+      appTitle: 'Pierwsza aplikacja Vue!',
     };
-  }
-}).$mount("#app");
+  },
+}).$mount('#app');
 ```
 
 ## Reaktywność `v-model`
-Właśnie napisałaś/eś swoją pierwszą aplikację używając Vue.js. Szkoda tylko, że jest taka nudna — nie robi nic poza wyświetlaniem tekstu. 
+
+Właśnie napisałaś/eś swoją pierwszą aplikację używając Vue.js. Szkoda tylko, że jest taka nudna — nie robi nic poza wyświetlaniem tekstu.
 
 Zróbmy coś ciekawszego! :) W tym celu wykorzystamy dyrektywę `v-model`. Odpowiada ona za **powiązanie wartości inputa z polem danych**. W tym wypadku ustawia ona `value` inputa na wartość pola `appTitle` i podpina się pod zdarzenie `input` w celu aktualizacji pola `appTitle` kiedy użytkownik coś w nie wpisze:
 
