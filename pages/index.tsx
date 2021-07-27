@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
 import { TwoColumns } from '../components/templates/TwoColumns';
@@ -37,10 +39,10 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
 
         if (i === 0) {
           return (
-            <>
+            <Fragment key={post.frontmatter.id}>
               {sneakPeek}
               <NewsletterForm />
-            </>
+            </Fragment>
           );
         }
         return sneakPeek;

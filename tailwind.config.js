@@ -11,7 +11,18 @@ module.exports = {
     fontFamily: {
       sans: ['Fira Sans', 'typeofweb-fallback-sans', 'Arial', 'Helvetica', 'sans-serif'],
       serif: ['Merriweather', 'typeofweb-fallback-serif', 'Times New Roman', 'Times', 'serif'],
-      mono: ['Fira Mono', 'typeofweb-fallback-mono', 'Courier New', 'Courier', 'monospace'],
+      mono: [
+        'Fira Mono',
+        'typeofweb-fallback-mono',
+        'Courier New',
+        'Courier',
+        'Consolas',
+        'Menlo',
+        'Liberation Mono',
+        'ui-monospace',
+        'SFMono-Regular',
+        'monospace',
+      ],
     },
     colors: {
       white: '#FFFFFF',
@@ -84,12 +95,7 @@ module.exports = {
     },
   },
 
-  variants: {
-    // all the following default to ['responsive']
-    textIndent: ['responsive'],
-  },
   plugins: [
-    require('tailwindcss-text-indent')(),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     plugin(function ({ config, addUtilities, addVariant, e, postcss, theme }) {
@@ -98,6 +104,9 @@ module.exports = {
           '.text-stroke': {
             '-webkit-text-stroke': `1px ${theme('colors.gray.500')}`,
             '-webkit-text-fill-color': `${theme('colors.gray.100')}`,
+          },
+          '.indent-0': {
+            'text-indent': '0',
           },
           '.text-tiny': {
             'font-size': '0.625rem',

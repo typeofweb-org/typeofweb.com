@@ -21,9 +21,10 @@ categories:
 seo:
   focusKeywords:
     - Symlink
-
 ---
+
 Bardzo często ścieram się z sytuacjami gdzie ktoś kopiuje kod z Internetu do aplikacji bez zweryfikowania co ten kod do końca robi… Zresztą: Kto nie wykorzystał gotowca ze StackOverflow bez czytania opisu i komentarzy niech pierwszy rzuci kamień ;) Czasem jednak pozornie niewinne fragmenty kodu mogą doprowadzić do katastrofy. Weźmy prosty przykład: Upload plików. Wszystko działa, wszędzie prawidłowa sanityzacja i obsługa błędów… ale czy na pewno? <strong>Przeoczenie jednego małego szczegółu sprawia, że aplikacja staje się celem dla hackerów.</strong> Oto prawdziwa historia o symlinkach, zipach i uploadzie plików.
+
 <h2>Projekt</h2>
 Pewien czas temu pracowałem nad projektem dla sporej firmy, której danych nie chcę w tym momencie ujawniać. Na potrzeby tego wpisu możesz sobie wyobrazić aplikację, która pozwała użytkownikom wrzucać i wyświetlać różnego rodzaju aktualności – w tym dane statystyczne i liczbowe. W tym celu <strong>zaimplementowaliśmy możliwość wrzucania na serwer plików</strong>. Pliki te z założenia (wymagania od klienta) miały być archiwami ZIP, w środku których znajdowały się wyłącznie pliki tekstowe. Nazwa pliku była identyfikatorem, a treść najczęściej miała format CSV, czyli były to różne liczby lub tekst oddzielone od siebie przecinkami. Po wgraniu takiego archiwum, <strong>system miał je automatycznie rozpakować, a następnie od razu wyświetlić użytkownikowi ich treść.</strong>
 <h2>Potencjalne dziury</h2>
@@ -38,32 +39,34 @@ Jednak te fragmenty były dobrze zabezpieczone, poprawna sanityzacja oraz zawsze
 Jest to uproszczona wersja tego fragmentu aplikacji napisana w PHP ( :( ). Pominąłem kilka nieistotnych operacji:
 <pre class="line-numbers"><code class="language-php">&lt;?php
 
-$uploaded_sheet_archive = $_FILES['sheet_file']['tmp_name'];
+$uploaded_sheet_archive = $\_FILES['sheet_file']['tmp_name'];
 
 if ($uploaded_sheet_archive) {
-	$sheets_dir = sys_get_temp_dir() . '/' . uniqid('archive', true);
+$sheets_dir = sys_get_temp_dir() . '/' . uniqid('archive', true);
 
-	system('unzip -qq ' . escapeshellarg($uploaded_sheet_archive) . ' -d ' . $sheets_dir);
+    system('unzip -qq ' . escapeshellarg($uploaded_sheet_archive) . ' -d ' . $sheets_dir);
 
-	$uploaded_sheets = array_values(array_diff(scandir($sheets_dir), array('.', '..')));
+    $uploaded_sheets = array_values(array_diff(scandir($sheets_dir), array('.', '..')));
 
-	foreach($uploaded_sheets as $key =&gt; $file) {
-		echo '&lt;section&gt;';
-		echo '&lt;h2&gt;File ' . ($key+1) . '&lt;/h2&gt;';
-		echo '&lt;pre&gt;' . htmlentities(file_get_contents($sheets_dir . '/' . $file)) . '&lt;/pre&gt;';
-		echo '&lt;/section&gt;';
-	}
+    foreach($uploaded_sheets as $key =&gt; $file) {
+    	echo '&lt;section&gt;';
+    	echo '&lt;h2&gt;File ' . ($key+1) . '&lt;/h2&gt;';
+    	echo '&lt;pre&gt;' . htmlentities(file_get_contents($sheets_dir . '/' . $file)) . '&lt;/pre&gt;';
+    	echo '&lt;/section&gt;';
+    }
 
-	system('rm -rf ' . escapeshellarg($sheets_dir));
+    system('rm -rf ' . escapeshellarg($sheets_dir));
+
 }
 
 ?&gt;
 
 &lt;form method="post" enctype="multipart/form-data" action="upload.php"&gt;
-	&lt;input type="file" name="sheet_file"&gt;
-	&lt;input type="submit" value="Send" accept=".zip"&gt;
+&lt;input type="file" name="sheet_file"&gt;
+&lt;input type="submit" value="Send" accept=".zip"&gt;
 &lt;/form&gt;
 </code></pre>
+
 <p class="important">Zamiast <code>system</code> można równie dobrze użyć <code>exec</code>, a zamiast <code>unzip</code> — <code>tar</code>. Zależnie od tego co oferuje akurat serwer, warto spróbować zamiennie kilku opcji.</p>
 Omówię z grubsza co się tu dzieje:
 <ul>
@@ -78,6 +81,7 @@ Omówię z grubsza co się tu dzieje:
 Należy zwrócić uwagę, że argumenty są raczej poprawnie sanityzowane (<code>escapeshellarg</code>, <code>htmlentities</code>). Tak wygląda skrypt po uruchomieniu:
 
 <a href="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.15.23.png"><img class="aligncenter size-large wp-image-571" src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.15.23-1024x545.png" alt="Skrypt upload.php" width="1024" height="545" /></a>
+
 <h2>Błąd</h2>
 Na czym polega błąd? Częściowo na bezmyślnym skopiowaniu kodu ze StackOverflow („Jak rozpakować ZIP w PHP?”), częściowo na użyciu funkcji system, <strong>ale głównie na braku weryfikacji czy archiwum nie zawiera symlinków</strong>.
 <h3>Symlink</h3>
@@ -91,7 +95,6 @@ Na początek poprawne archiwum zawierające dwa pliki tekstowe. W drugim pliku u
 
 Teraz preparuję złośliwe archiwum z symlinkiem do <code>/etc/passwd</code>:
 
-<script type="text/javascript" src="https://asciinema.org/a/yCUFrZULLD8qK7iRS5Fg7sIlg.js" id="asciicast-yCUFrZULLD8qK7iRS5Fg7sIlg" async></script>
 <ul>
  	<li><code>ln -s /etc/passwd ./moj-link</code></li>
  	<li><code>zip --symlinks -r -X archiwum.zip inny-plik.txt plik1.txt moj-link</code></li>
@@ -101,6 +104,7 @@ Następnie taki plik wrzucam na stronie. Oto efekt:
 <a href="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.27.55.png"><img class="aligncenter size-large wp-image-674" src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.27.55-1024x851.png" alt="Atak ujawnia zawartość pliku /etc/passwd " width="1024" height="851" /></a>
 
 Widoczna jest treść plik <code>/etc/passwd</code>, a w nim – nawet konto roota oraz wiele innych ciekawych rzeczy…
+
 <h3>Inne zastosowania?</h3>
 Właściwie <strong>możliwe jest teraz odczytanie dowolnego pliku z dysku</strong>. Oczywiście, poprawna konfiguracja użytkowników i uprawnień powinna to uniemożliwić. Czy wtedy atak jest bezużyteczny? Ależ nie! Nadal możemy przecież, metodą prób i błędów, albo bazując na jakichś innych przesłankach, odczytać dowolne pliki źródłowe aplikacji – w tym potencjalnie np. <strong>hasła do bazy danych</strong>.
 

@@ -1,7 +1,5 @@
 import { cloneElement, Children } from 'react';
 
-import Styles from './linkUnderlineEffect.module.css';
-
 import type { ReactElement } from 'react';
 
 // @ts-ignore
@@ -15,10 +13,10 @@ export const LinkUnderlineEffect = ({ children }: { readonly children: ReactElem
   const link = Children.only(children);
 
   return (
-    <span className={Styles.fancyLink}>
+    <span className="fancy-inner-link">
       {cloneElement(link, {
         ...link.props,
-        className: `${link.props.className ?? ''} ${Styles.link}`,
+        className: `${link.props.className ?? ''} fancy-link`,
         children: (
           <>
             {link.props.children}

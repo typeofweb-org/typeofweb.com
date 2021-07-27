@@ -5,6 +5,7 @@ import { useRunningHeader } from '../hooks/runningHeader';
 import { postToProps } from '../utils/postToProps';
 import { getAllPermalinks, getPostByPermalink } from '../utils/wordpress';
 
+import type { InferGetStaticPropsType } from '../types';
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -19,14 +20,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-
-type PromiseValue<T> = T extends PromiseLike<infer R> ? R : T;
-
-type InferGetStaticPropsType<T extends (...args: any) => any> = PromiseValue<ReturnType<T>> extends {
-  readonly props?: infer P;
-}
-  ? P
-  : never;
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   if (!params || typeof params.permalink !== 'string') {

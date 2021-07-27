@@ -34,7 +34,7 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
         </div>
         <div className="hidden lg:flex lg:items-center lg:mx-4 lg:px-8 lg:w-80" aria-hidden>
           {pageKind === 'post' && (
-            <span className="animate-appear text-gray-600 font-serif text-xs lg:whitespace-nowrap lg:text-sm">
+            <span className="text-gray-600 font-serif text-xs animate-appear lg:whitespace-nowrap lg:text-sm">
               {text}
             </span>
           )}
@@ -42,7 +42,7 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
         {pageKind === 'post' && (
           <progress
             aria-hidden
-            className="absolute z-30 bottom-0 w-full h-1 text-pink-500 appearance-none"
+            className="absolute z-40 bottom-0 w-full h-1 text-pink-500 appearance-none"
             value={progress.toFixed(2)}
           />
         )}

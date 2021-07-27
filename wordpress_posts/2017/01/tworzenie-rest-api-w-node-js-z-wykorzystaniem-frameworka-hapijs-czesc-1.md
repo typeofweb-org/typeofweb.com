@@ -19,9 +19,10 @@ series:
   slug: hapijs
   name: HapiJS
 seo: {}
-
 ---
+
 Tym wpisem chciałbym rozpocząć serię dotyczącą tworzenia REST API w node.js. Zaczniemy od prostych przykładów i konfiguracji, a skończymy na stworzeniu działającego REST-owego endpointa.
+
 <p class="important">Wymagane jest podstawowa znajomość node.js i npm.</p>
 
 <h1 id="hapijs">HapiJS</h1>
@@ -30,6 +31,7 @@ Od dłuższego czasu zajmuję się tworzeniem back-endu w node.js. Bardzo przypa
 HapiJS w szczególności cechuje prostota. Bardzo łatwo postawić w nim całkowicie funkcjonalne REST API. Nie musimy przebijać się przez gąszcz dokumentacji – wystarczy przejrzeć przykład lub dwa i już możemy zacząć pisać samodzielnie. Bez wątpienia to ogromna zaleta.
 
 HapiJS jest proste, ale nie prostackie. Pierwsze kroki postawić łatwo, ale nie oznacza to, że na tym możliwości tego frameworka się kończą. Jest świetnym narzędziem o ogromnym potencjale! Hapi daje nam takie możliwości jak:
+
 <ul>
  	<li>tworzenie REST API</li>
  	<li>renderowanie szablonów</li>
@@ -45,16 +47,16 @@ A także wiele, wiele innych! Zachęcam do zgłębienia <a href="https://hapijs.
 Całkiem nieźle jak na pozornie prostą bibliotekę, prawda? Do tego muszę wspomnieć, że <strong>HapiJS nie narzuca właściwie żadnych konwencji</strong>. Oczywiście, pewne rzeczy są sugerowane, jednak nie jesteśmy do niczego zmuszani. Kod możemy ułożyć jak nam się podoba, architektura może być totalnie dowolna, podobnie nazewnictwo plików i struktura folderów.
 
 Dzięki temu <strong>HapiJS świetnie sprawdzi się do budowania zarówno monolitycznych aplikacji renderujących HTML, jak i do tworzenia microservice’ów</strong>.
-<h1 id="przygotowaniedopracy">Przygotowanie do pracy</h1>
-Tworzenie każdej aplikacji w node.js warto rozpocząć od polecenia <code>npm init</code>. Program zada nam kilka kontrolnych pytań, a następnie wygenerowany zostanie plik <code>package.json</code>. Większość pytań możemy po prostu pominąć:
 
-<script src="https://asciinema.org/a/astwvqgfb4zq6gc4qinurit39.js" id="asciicast-astwvqgfb4zq6gc4qinurit39" async></script>
+<h1 id="przygotowaniedopracy">Przygotowanie do pracy</h1>
+Tworzenie każdej aplikacji w node.js warto rozpocząć od polecenia <code>npm init</code>. Program zada nam kilka kontrolnych pytań, a następnie wygenerowany zostanie plik <code>package.json</code>. Większość pytań możemy po prostu pominąć.
 
 Następnie możemy zainstalować już HapiJS przy pomocy:
 
 <code>npm install hapi --save</code>
 
 To polecenie nie tylko pobierze framework do folderu <code>node_modules</code>, ale również zapisze zależność w pliku <code>package.json</code> (warto tam zajrzeć). Stwórzmy jeszcze pusty plik <code>index.js</code> i jesteśmy gotowi do dalszej pracy!
+
 <h1 id="pierwszespotkaniezhapijs">Pierwsze spotkanie z HapiJS</h1>
 HapiJS jest frameworkiem, w którym postawiono na konfigurację i <a href="https://pl.wikipedia.org/wiki/Programowanie_deklaratywne">deklaratywną składnię</a>. W teorii oznacza to, że opisujemy <em>co</em>, a nie <em>jak</em>. W praktyce praca z Hapi sprowadza się do tworzenia prostych JavaScriptowych obiektów, które w prosty sposób opisują np. endpointy, ciastka czy uwierzytelnianie.
 <h2 id="serwer">Serwer</h2>
@@ -66,16 +68,17 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 
 server.connection({  
-    host: 'localhost',
-    port: 3000
+ host: 'localhost',
+port: 3000
 });
 
 server.start((err) =&gt; {  
-    if (err) {
-        throw err;
-    }
+ if (err) {
+throw err;
+}
 
     console.log(`Server running at ${server.info.uri}`);
+
 });
 </code></pre>
 W powyższym przykładzie zaczynamy od stworzenia serwera w Hapi. Następnie musimy zadeklarować tzw. połączenie (<em>connection</em>), aby framework wiedział w jaki sposób ma być widoczny ze świata zewnętrznego.
@@ -84,9 +87,8 @@ Do <code>server.connection(…)</code> możemy przekazać kilka różnych parame
 
 Następnie wywołujemy funkcję <code>server.start(…)</code>, która powoduje uruchomienie serwera w Hapi. Funkcja ta przyjmuje callback jako argument – w nim warto sprawdzić czy nie było żadnego błędu (<code>if (err) …</code>). W końcu, wyświetlamy w konsoli informację o tym pod jakim adresem dostępny jest nasz serwer.
 
-Aplikację możemy uruchomić wpisując w terminalu <code>node index.js</code>. Warto zauważyć, że naszym oczom ukazuje się adres składający się z wcześniej podanego hosta oraz numeru portu:
+Aplikację możemy uruchomić wpisując w terminalu <code>node index.js</code>. Warto zauważyć, że naszym oczom ukazuje się adres składający się z wcześniej podanego hosta oraz numeru portu.
 
-<script type="text/javascript" src="https://asciinema.org/a/4xjzf8srjbbd8xh8fyupaq0vq.js" id="asciicast-4xjzf8srjbbd8xh8fyupaq0vq" async></script>
 <h2 id="endpointy">Endpointy</h2>
 Jeśli teraz spróbujemy otworzyć adres widoczny na ekranie, czyli <a href="http://localhost:3000">http://localhost:3000</a> to zobaczymy błąd wygenerowany przez Hapi:
 
@@ -95,6 +97,7 @@ Jeśli teraz spróbujemy otworzyć adres widoczny na ekranie, czyli <a href="htt
 <strong>Oznacza to, że serwer działa</strong>, jednak Hapi nie wie jeszcze co ma zrobić, gdy otwarta zostanie ścieżka <code>/</code>. Musimy zadeklarować endpoint! Wspomnę tylko, że w polskiej literaturze nazywa się to końcówka, ale nikt tak nie mówi. Naprawdę!
 
 Endpoint definiujemy poprzez funkcję <code>server.route</code>. Wymagane są trzy parametry: <code>path</code> czyli ścieżka, <code>method</code> czyli metoda HTTP oraz <code>handler</code>, który w tym przypadku będzie funkcją. Poniższy kod dodajemy przed <code>server.start(…)</code>:
+
 <pre><code class="language-javascript">server.route({  
     method: 'GET',
     path: '/',
@@ -103,6 +106,7 @@ Endpoint definiujemy poprzez funkcję <code>server.route</code>. Wymagane są tr
     }
 });
 </code></pre>
+
 Funkcja <code>handler</code> zostanie wywołana przez Hapi gdy użytkownik odwiedzi podaną ścieżkę. Do handlera przekazywane są dwa argumenty – pierwszy z nich jest obiektem z informacjami o żądaniu, natomiast drugi to specjalna funkcja, dzięki której możemy coś łatwo i szybko zwrócić.
 
 <img src="/content/images/2017/01/Screenshot-2017-01-24-20.34.19.png" alt="Hello, world w przeglądarce" />

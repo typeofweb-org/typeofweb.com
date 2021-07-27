@@ -21,13 +21,14 @@ categories:
   - slug: opinie
     name: Opinie
 seo: {}
-
 ---
+
 Wciąż pytacie jakie blogi polecam śledzić. A ja nigdy nie pamiętam! No, ale teraz jest już cała lista! Moja **lista polecanych linków dla front-end developerów**! To drugi wpis z serii.
 
 <!--more-->
 
 ## Blogi
+
 Na drugi ogień idą blogi, po grupach na Facebooku. Dla przypomnienia:
 
 https://typeofweb.com/2018/03/29/grupy-facebook-front-end-developer/
@@ -35,7 +36,9 @@ https://typeofweb.com/2018/03/29/grupy-facebook-front-end-developer/
 Warto przeczytać oba wpisy i znaleźć tam coś dla siebie. **A skąd na to wszystko czas?** Naprawdę nie wiem ;)
 
 ## Blogi i RSS dla front-endów:
+
 ### Po angielsku
+
 <ol>
   <li><strong><a href="https://reactjs.org/blog/">Oficjalny blog React</a></strong> — Chyba nic więcej dodawać nie trzeba, jeśli robisz cokolwiek z React.js to na pewno musisz śledzić ten blog</li>
   <li><strong><a href="https://blog.angular.io">Oficjalny blog Angulara</a></strong> — Jak wyżej. Tutaj pojawiają się wszystkie oficjalne informacje o Angularze</li>
@@ -56,6 +59,7 @@ Warto przeczytać oba wpisy i znaleźć tam coś dla siebie. **A skąd na to wsz
 </ol>
 
 ### Po polsku
+
 <ol start="17">
   <li><strong><a href="https://geek.justjoin.it">Just Geek IT</a></strong> — Portal z wiadomościami i wywiadami związanymi z programowaniem. Znajdziesz tam między innymi wywiad ze mną na temat <a href="https://fefaq.pl/">Fefaq.pl</a> ;)</li>
   <li><strong><a href="http://www.angular.love">Angular Love</a></strong> — Blog Tomka Nastałego w 100% poświęcony Angularowi. Kompendium wiedzy, polecam!</li>
@@ -68,18 +72,9 @@ Warto przeczytać oba wpisy i znaleźć tam coś dla siebie. **A skąd na to wsz
 </ol>
 
 ## Podsumowanie
+
 Zajrzyj na powyższe blogi i wybierz coś dla siebie :) Ja dodałem je sobie do czytnika RSS i co kilka dni przeglądam najnowsze artykuły, aby być na bieżąco ze wszystkimi **blogami dla front-end developerów**.
 
 [typeofweb-courses-slogan]
 
 Brakuje czegoś? Brakuje Twojego bloga? Albo Twojego ulubionego bloga? **Napisz w komentarzu**!
-
-
-<style>
-ol li {
-  margin: 15px 0;
-}
-ol li strong a {
-  text-decoration: underline !important;
-}
-</style>

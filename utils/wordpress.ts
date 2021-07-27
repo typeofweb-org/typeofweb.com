@@ -4,6 +4,10 @@ import Url from 'url';
 
 import GrayMatter from 'gray-matter';
 
+import { toHtmlString } from './markdown';
+
+import type { PromiseValue } from '../types';
+
 const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', 'wordpress_posts');
 
 async function readFilesInDir(dir: string): Promise<readonly string[]> {
@@ -54,11 +58,16 @@ export async function getPostByPermalink(permalink: string) {
   const posts = await readAllPosts();
   return posts.find((fm) => fm.data.permalink === permalink);
 }
-type PromiseValue<T> = T extends Promise<infer R> ? R : T;
 export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>>;
 
 export function getExcerptAndContent(post: string) {
-  const [excerpt, ...parts] = post.split(/<!--\s*more\s*-->|$##\s*|\n\n|\r\n\r\n/);
+  const match = /<!--\s*more\s*-->|$##\s*|\n\n|\r\n\r\n|\<h\d/.exec(post);
+
+  if (!match) {
+    throw new Error('???');
+  }
+
+  const [excerpt, content] = [post.slice(0, match.index), post.slice(match.index)];
 
   /**
    * @todo:
@@ -68,8 +77,10 @@ export function getExcerptAndContent(post: string) {
    * - add syntax highlighting
    */
 
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- it's there
-  return { excerpt: excerpt!, content: parts.join('\n\n') };
+  return {
+    excerpt: toHtmlString(excerpt, { excerpt: true }),
+    content: toHtmlString(content, { excerpt: false }).toString('utf-8'),
+  };
 }
 
 interface PostFrontmatter {

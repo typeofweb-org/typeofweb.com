@@ -7,6 +7,7 @@ import type { AppType } from 'next/dist/next-server/lib/utils';
 
 import '../styles.css';
 import '../fonts.css';
+import '../prism.css';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (

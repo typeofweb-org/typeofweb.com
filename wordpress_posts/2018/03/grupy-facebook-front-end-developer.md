@@ -21,13 +21,14 @@ categories:
   - slug: opinie
     name: Opinie
 seo: {}
-
 ---
+
 Często pytacie mnie jakie strony, blogi, newslettery, RSS-y i Twittery śledzę. Zazwyczaj nie potrafiłem na to pytanie szybko odpowiedzieć, bo nie miałem nigdzie pod ręką zebranej listy. Dotychczas. Ale oto jest. Powstaje. Moja **lista polecanych linków dla front-end developerów**! To pierwszy wpis z serii.
 
 <!--more-->
 
 ## Grupy na Facebooku dla front-end developerów
+
 Zacznijmy od grup na Facebooku. Tam przeniosła się większość ciekawych dyskusji. Tutaj na bieżąco wrzucane są newsy. Na Facebooku po prostu trzeba być, choćby właśnie po to, żeby pozostawać na fali i aktualizować swoją wiedzę :)
 Kolejność przypadkowa!
 
@@ -49,7 +50,9 @@ Kolejność przypadkowa!
 </ol>
 
 ## Praca dla front-end developerów na Facebooku
+
 Śledzę też kilka grup związanych _stricte_ z pracą. Oferty pracy z bardzo konkretnymi wymaganiami. Zawsze podane widełki. Ogłoszenia dobrane do poziomu doświadczenia. Warto zajrzeć:
+
 <ol start=15>
   <li><strong><a href="https://www.facebook.com/groups/1485218891734165/">Front-end: pierwsza praca w HTML5, CSS3 i JavaScript</a></strong> — Jak sama nazwa wskazuje, grupa dla osób szukających <strong>pierwszej pracy jako front-end developer</strong>. Tutaj pojawiają się ogłoszenia firm, które poszukują juniorów.</li>
   <li><strong><a href="https://www.facebook.com/groups/jsjobs/">JS News: Jobs</a></strong> — Spora baza różnych ogłoszeń. Zawsze z widełkami.</li>
@@ -60,15 +63,7 @@ Kolejność przypadkowa!
 </ol>
 
 ## Podsumowanie
-Mam nadzieję, że zebrane tutaj linki Ci się przydadzą. Ja codziennie spędzam trochę czasu na Facebooku, żeby być na bieżąco ze wszystkimi **materiałami dla front-end developerów**.	
+
+Mam nadzieję, że zebrane tutaj linki Ci się przydadzą. Ja codziennie spędzam trochę czasu na Facebooku, żeby być na bieżąco ze wszystkimi **materiałami dla front-end developerów**.
 
 **Zapomniałem o czymś?** Koniecznie daj mi znać w komentarzu!
-
-<style>
-ol li {
-  margin: 15px 0;
-}
-ol li strong a {
-  text-decoration: underline !important;
-}
-</style>

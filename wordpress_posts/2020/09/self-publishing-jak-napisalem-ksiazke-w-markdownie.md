@@ -26,9 +26,7 @@ series:
 seo:
   focusKeywords:
     - self-publishing
-
 ---
-# Self-publishing: Jak napisałem książkę w markdownie?
 
 Wciąż dopytujecie się o proces _self-publishing_ [mojej książki „TypeScript na poważnie”](https://typescriptnapowaznie.pl/) od strony technicznej. W czym ją pisałem? Jak tworzyłem e-booki? Dlaczego zdecydowałem się na markdown? Jakich narzędzi używałem? Śpieszę odpowiedzieć – to wszystko w tym wpisie :)
 
@@ -119,6 +117,7 @@ Wciąż dopytujecie się o proces _self-publishing_ [mojej książki „TypeScr
 <!-- /wp:html -->
 
 ## Dlaczego Markdown do self-publishing?
+
 Zdecydowałem się napisać „TypeScript na poważnie” w markdownie. Jest to prosty język, w którym używa się symboli do formatowania tekstu. Wygląda to tak, jak widać na poniższym screenshocie; zresztą w markdownie piszę też teraz niniejszy artykuł :)
 
 [caption id="attachment_2598" align="aligncenter" width="1024"]<a href="https://typeofweb.com/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.10.35.png"><img src="https://typeofweb.com/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.10.35-1024x528.png" alt="" width="1024" height="528" class="size-large wp-image-2598" /></a> Fragment tego artykułu w Markdownie.[/caption]
@@ -134,9 +133,11 @@ Przede wszystkim Markdown jest niesamowicie prosty. Tekst wygląda bardzo czytel
 Drugi powód jest nieco bardziej techniczny: Markdown wspaniale się sprawdza, jako format pośredni pomiędzy zwykłym tekstem a wieloma formatami docelowymi. Na podstawie markdowna z łatwością wygenerowałem pliki PDF, EPUB, MOBI, DOCX i HTML!
 
 ## Edytor do self-publishing
+
 Moim ukochanym edytorem jest **iA Writer**, w którym piszę też wszystkie blogposty. To właśnie w nim powstała cała książka! Jest to bardzo prosty edytor tekstu z podstawowym wyświetlaniem formatowania markdowna – minimalizm.
 
 ## Pandoc
+
 Sercem całej operacji jest **Pandoc**, czyli „uniwersalny konwerter dokumentów”, jak głosi jego strona internetowa. Użyłem tego niesamowitego narzędzia, aby na podstawie rozdziałów książki napisanych w markdownie wygenerować pliki w różnych formatach, o czym wspominałem kilka akapitów wyżej.
 
 Nie obyło się też bez otwarcia kilku [_issues_](https://github.com/jgm/pandoc/issues?q=author%3Ammiszy+) i nawet jednego [_pull requesta_](https://github.com/jgm/skylighting/pull/94) do Pandoc, a dodam, że jest napisany w Haskellu, więc było to nie lada zadanie!
@@ -144,6 +145,7 @@ Nie obyło się też bez otwarcia kilku [_issues_](https://github.com/jgm/pandoc
 Ogromną zaletą Pandoc jest mnogość opcji konfiguracyjnych, wtyczek do markdowna, **własnych filtrów** oraz świetne wsparcie dla projektów takich jak moja książka w self-publishing. Przykładowo, dopisałem własny filtr dodający **nową składnię do Markdowna** w celu oznaczania fragmentów tekstu, które miały nie mieć indentacji albo powinny przylegać do prawej strony.
 
 ## Docker i GitHub
+
 Do budowania książki użyłem też **Dockera**. Po co? Znowu dwa powody: nie chciałem zaśmiecać sobie komputera i planowałem **e-booki generować automatycznie na serwerze CI**. Ah, no tak, bo o tym nie wspomniałem: całą książkę trzymam oczywiście **na GitHubie!**
 
 [caption id="attachment_2604" align="aligncenter" width="1024"]<a href="https://typeofweb.com/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.19.33.png"><img src="https://typeofweb.com/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.19.33-1024x500.png" alt="" width="1024" height="500" class="size-large wp-image-2604" /></a> Widok repozytorium na GitHubie.[/caption]
@@ -152,7 +154,8 @@ Ostatecznie więc proces wyglądał tak: Po napisaniu fragmentu tekstu robiłem 
 
 **Self-publishing** w każdym tego słowa znaczeniu!
 
-## Dostosowywanie 
+## Dostosowywanie
+
 Większość opcji pomiędzy formatami była taka sama, ale oczywiście Pandoc umożliwia zmodyfikowanie osobno PDF i osobno EPUB, co też uczyniłem.
 
 Wspominałem, że nie udało mi się uciec od LaTeXu, bo ostatecznie **zmuszony byłem dopisać kilkadziesiąt linii kodu w LaTeX** doprowadzających mojego PDF-a do takiego efektu, jakiego pożądałem. Pandoc do generowania plików PDF zamienia Markdown na Latex i dopiero później na PDF – i uwierz mi, mimo, że brzmi to niepotrzebnie skomplikowanie, to fantastyczna opcja, która umożliwiła mi praktycznie dowolne zmienianie wynikowego pliku!
@@ -162,6 +165,7 @@ Wspominałem, że nie udało mi się uciec od LaTeXu, bo ostatecznie **zmuszony 
 Dodatkowo, Pandoc umożliwia zapisywanie różnych metadanych do różnych formatów plików. Dzięki temu mogłem z łatwością podać inne numery ISBN dla EPUB i PDF. ISBN dla formatu MOBI (Kindle) dodałem narzędziem `ebook-convert`.
 
 ## Skrypty
+
 Nie byłbym Programistą®, gdybym nie poświęcił kilku godzin na napisanie skryptów, które automatyzowały coś, co zrobiłbym ręcznie w godzinę 😜
 
 Mówiąc poważnie, zależało mi na kilku rzeczach:
@@ -171,6 +175,7 @@ Mówiąc poważnie, zależało mi na kilku rzeczach:
 3. Aby spis treści poprawnie działał na urządzeniach Apple.
 
 ### Formatowanie kodu
+
 Wszystkie te problemy rozwiązałem poprzez stworzenie skryptu napisanego w (no nie zgadniecie) TypeScripcie. Do rozwiązania dwóch pierwszych problemów **użyłem narzędzia Prettier**. Skrypt wyszukiwał w tekście książki fragmentów kodu, następnie formatował je Prettierem i zapisywał. Miałem dość restrykcyjne ustawienia, szczególnie pod względem długości wersów:
 
 ```json
@@ -191,11 +196,13 @@ Wszystkie te problemy rozwiązałem poprzez stworzenie skryptu napisanego w (no 
 To załatwiło większość problemów, ale nie wszystkie – niektóre linijki nadal były dłuższe niż wyznaczony limit znaków, ale takie sytuacje **mój skrypt również wykrywał** i informował o tym, abym ręcznie poprawił. Dodatkowo, niektóre z fragmentów kodu sformatowałem ostatecznie samodzielnie, aby były bardziej czytelne.
 
 ### Spis treści
+
 Ku mojemu wielkiemu zaskoczeniu, okazało się, że narzędzia Apple mają problem z polskimi znakami w linkach do rozdziałów. Ponieważ Pandoc generował odnośniki automatycznie i zawierał w nich po prostu pełne tytuły rozdziałów, dla urządzeń Apple stanowiło to problem nie do pokonania!
 
 Napisałem więc kolejny skrypt, który polskie znaki w odnośnikach zamieniał na odpowiedniki w alfabecie łacińskim („ą” na „a”, „ź” na „z” i tak dalej). Uff.
 
 ## Efekt finalny self-publishing
+
 Jakie są efekty tego mojego _self-publishing_? Każdy, kto kupił e-booka widzi :)
 
 [gallery columns="2" link="file" size="large" ids="2600,2601"]

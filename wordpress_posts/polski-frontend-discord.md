@@ -16,28 +16,24 @@ thumbnail:
   height: 500
 categories: []
 seo: {}
-
 ---
-Serwer **Polski front-end i back-end: JavaScript, React, Vue, Angular, node.js, TypeScript…** na Discordzie powstał w celu zbudowania społeczności związanej wspólnymi zainteresowaniami tematami około-JavaScriptowymi. **Zachęcamy do dołączenia wszystkie osoby**, które są zainteresowane tworzeniem stron i aplikacji internetowych — niezależnie od tego czym się zajmują i bez względu na technologie czy poziom doświadczenia.
 
-<style>
-.entry-content li {
-margin: 10px 0;
-}
-</style>
+Serwer **Polski front-end i back-end: JavaScript, React, Vue, Angular, node.js, TypeScript…** na Discordzie powstał w celu zbudowania społeczności związanej wspólnymi zainteresowaniami tematami około-JavaScriptowymi. **Zachęcamy do dołączenia wszystkie osoby**, które są zainteresowane tworzeniem stron i aplikacji internetowych — niezależnie od tego czym się zajmują i bez względu na technologie czy poziom doświadczenia.
 
 Połączmy początkujących z ekspertami, grafików z programistami, a UX-ów ze scrum masterami! Po prostu **chcemy sobie pomagać i swobodnie dyskutować**. Dołącz klikając w ten przycisk:
 
 <a href="https://discord.gg/va2NhBv" style="display: block; margin: 0 auto; width: 250px; height: 80px;"><img src="https://typeofweb.com/wp-content/uploads/2018/05/discord-join-button-300x96.png" alt="Dołącz do Discorda Type of Web!" title="Dołącz do Discorda Type of Web!" width="300" height="96" style="border-radius: 10px;" /></a>
 
 ## Kilka podpowiedzi
-* **Przeczytaj poniższy Kodeks Postępowania w całości**, aby dawać i brać z tej społeczności jak najwięcej!
-* Po dołączeniu koniecznie przywitaj się i **napisz coś o sobie na kanale `#poznajmy-się`**.
-* Na Discordzie można formatować tekst przy pomocy _Markdown_. Do stylowania tekstu używa się gwiazdek (*) oraz tzw. backticków (`). Wszelkie informacje i przykłady znajdziesz tutaj: [Markdown Text 101](https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-)
-* **Staraj się do pytań o kod zawsze dołączać kod**. Spróbuj też, o ile to możliwe, nie wrzucać kodu w postaci zdjęć tylko jako tekst — przyda się do tego formatowanie kodu w Markdown, a także serwisy takie jak Codepen, JSBin, JSFiddle i inne podobne. **W ten sposób ułatwiasz innym pomoc Tobie**.
-* Zapraszamy każdego do współtworzenia naszej społeczności — wpadnij na kanał `#sugestie` i podziel się pomysłami!
+
+- **Przeczytaj poniższy Kodeks Postępowania w całości**, aby dawać i brać z tej społeczności jak najwięcej!
+- Po dołączeniu koniecznie przywitaj się i **napisz coś o sobie na kanale `#poznajmy-się`**.
+- Na Discordzie można formatować tekst przy pomocy _Markdown_. Do stylowania tekstu używa się gwiazdek (\*) oraz tzw. backticków (`). Wszelkie informacje i przykłady znajdziesz tutaj: [Markdown Text 101](https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-)
+- **Staraj się do pytań o kod zawsze dołączać kod**. Spróbuj też, o ile to możliwe, nie wrzucać kodu w postaci zdjęć tylko jako tekst — przyda się do tego formatowanie kodu w Markdown, a także serwisy takie jak Codepen, JSBin, JSFiddle i inne podobne. **W ten sposób ułatwiasz innym pomoc Tobie**.
+- Zapraszamy każdego do współtworzenia naszej społeczności — wpadnij na kanał `#sugestie` i podziel się pomysłami!
 
 ## Kodeks Postępowania
+
 Podstawowym celem istnienia serwera jest **otwartość na jak największą liczbę osób**. Z tego powodu zobowiązujemy się do zapewnienia życzliwej, bezpiecznej i przyjaznej atmosfery wszystkim, bez względu na płeć, orientację seksualną, sprawność, pochodzenie etniczne, status społeczno-ekonomiczny i religię (lub jej brak).
 
 Ten Kodeks Postępowania nakreśla zarówno nasze oczekiwania wobec wszystkich, którzy uczestniczą w naszej społeczności, jak i konsekwencje niedopuszczalnych zachowań.
@@ -46,11 +42,11 @@ Ten Kodeks Postępowania nakreśla zarówno nasze oczekiwania wobec wszystkich, 
 
 ### Zachowania oczekiwane
 
-* Uczestnicz w sposób autentyczny i aktywny. Robiąc to przyczyniasz się do zdrowia i żywotności tej społeczności.
-* Zachowuj rozwagę i szacunek w swoich słowach.
-* Spróbuj współpracy przed konfliktem.
-* Powstrzymuj się przed poniżającymi, dyskryminującymi lub niepokojącymi zachowaniami i słowami.
-* Zwracaj uwagę na swoje otoczenie i innych uczestników. **Ostrzeż społeczność jeśli zauważysz nieprzyjemną sytuację**, kogoś potrzebującego pomocy lub naruszenie tego Kodeksu Postępowania, **nawet jeśli wydają się nieistotne**.
+- Uczestnicz w sposób autentyczny i aktywny. Robiąc to przyczyniasz się do zdrowia i żywotności tej społeczności.
+- Zachowuj rozwagę i szacunek w swoich słowach.
+- Spróbuj współpracy przed konfliktem.
+- Powstrzymuj się przed poniżającymi, dyskryminującymi lub niepokojącymi zachowaniami i słowami.
+- Zwracaj uwagę na swoje otoczenie i innych uczestników. **Ostrzeż społeczność jeśli zauważysz nieprzyjemną sytuację**, kogoś potrzebującego pomocy lub naruszenie tego Kodeksu Postępowania, **nawet jeśli wydają się nieistotne**.
 
 ### Zachowania niedopuszczalne
 
@@ -64,7 +60,6 @@ Niedopuszczalne zachowanie ze strony dowolnego uczestnika społeczności — w t
 
 Jeśli uczestnik społeczności zachowuje się niedopuszczalnie, administratorzy mogą podjąć dowolne działania, które uznają za właściwe, **zaczynając od mediacji**, a kończąc na tymczasowym lub stałym **wyrzuceniem ze społeczności** bez ostrzeżenia.
 
-
 ### Jeśli doświadczasz lub widzisz niedopuszczalne zachowanie
 
 Jeśli doświadczasz lub widzisz niedopuszczalne zachowanie — lub masz inne uwagi — **jak najszybciej powiadom o tym administratora**. Listę administratorów znajdziesz na samej górze listy użytkowników w Discordzie. Administratorzy są także dostępni by **wspomóc uczestników w rozwiązywaniu konfliktów**, a także w kontaktach z lokalnymi organami egzekwowania prawa i by wspierać poczucie bezpieczeństwa osób doświadczających niedopuszczalnych zachowań.
@@ -76,7 +71,6 @@ Jeśli uważasz, że informacja o naruszeniu przez ciebie tego Kodeksu Postępow
 ### Zakres
 
 Oczekujemy, że wszyscy uczestnicy społeczności (administratorzy i pozostali goście) będą przestrzegać tego Kodeksu Postępowania postępowania we wszelkich miejscach spotkań społeczności — online i w świecie rzeczywistym — jak i w komunikacji prywatnej dotyczącej spraw społeczności.
-
 
 ### Licencja i uznanie autorstwa
 

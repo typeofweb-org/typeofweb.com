@@ -1,6 +1,7 @@
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
+import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
 import type { Author } from '../molecules/ArticleMeta';
@@ -35,10 +36,12 @@ export const ArticleSneakPeek = ({
           <ArticleMeta authors={authors} mainCategory={mainCategory} />
         </div>
       </header>
-      <div className="prose lg:prose-xl pb-2 px-7 sm:px-8 lg:px-12">
-        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-        <p>
-          <a href={href}>Czytaj dalej…</a>
+      <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
+        <p className="!indent-0">
+          {excerpt}{' '}
+          <LinkUnderlineEffect>
+            <a href={href}>Czytaj dalej…</a>
+          </LinkUnderlineEffect>
         </p>
       </div>
     </Card>
