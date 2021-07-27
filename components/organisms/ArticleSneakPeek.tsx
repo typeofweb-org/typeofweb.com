@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
-import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
 import type { Author } from '../molecules/ArticleMeta';
