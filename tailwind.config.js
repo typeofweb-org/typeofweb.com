@@ -122,12 +122,12 @@ module.exports = {
             'user-select': 'none',
           },
           '.transcluent-white': {
-            'backdrop-filter': 'blur(5px)',
-            'background-color': 'rgba(255, 255, 255, 0.95)',
+            'backdrop-filter': 'blur(10px)',
+            'background-color': 'rgba(255, 255, 255, 0.92)',
           },
           '.transcluent-black': {
-            'backdrop-filter': 'blur(5px)',
-            'background-color': 'rgba(0, 0, 0, 0.95)',
+            'backdrop-filter': 'blur(10px)',
+            'background-color': 'rgba(0, 0, 0, 0.92)',
           },
         });
       }
