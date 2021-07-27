@@ -23,6 +23,10 @@ const underlineBeziers = [
   [76.709, 8.137, 96.626, -1.571, 100.426, 5.116],
 ];
 
+const h = new Date().getHours();
+const OPTIMAL_WIDTH = 200 + (90 * h) / 24;
+const SCALE = OPTIMAL_WIDTH / PATH_WIDTH;
+
 class FancyLinkUnderlinePainter {
   static get inputProperties() {
     return [PROGRESS, COLOR];
@@ -36,7 +40,12 @@ class FancyLinkUnderlinePainter {
   paint(ctx, geom, properties) {
     const progress = properties.get(PROGRESS);
     const color = properties.get(COLOR);
-    const xScaling = geom.width / PATH_WIDTH;
+
+    const finalIndex = underlineBeziers.findIndex(([, , , , x]) => SCALE * x > geom.width);
+    const beziers = finalIndex === -1 ? underlineBeziers : underlineBeziers.slice(0, finalIndex + 1);
+    const maxPathWidth = Math.ceil(beziers[beziers.length - 1][4]);
+
+    const xScaling = geom.width / maxPathWidth;
     const yScaling = 1;
 
     ctx.beginPath();
@@ -46,7 +55,7 @@ class FancyLinkUnderlinePainter {
     ctx.scale(xScaling, yScaling);
     ctx.translate(0, geom.height - PATH_HEIGHT);
 
-    for (const args of underlineBeziers) {
+    for (const args of beziers) {
       ctx.bezierCurveTo(...args);
     }
     ctx.stroke();
