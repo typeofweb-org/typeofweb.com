@@ -16,7 +16,7 @@ export const MainNav = () => {
       role="navigation"
       className={`${
         uiState.isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-      } left-0 top-0 z-40 transform-gpu lg:transform-none lg:flex lg:bg-transparent lg:static lg:w-auto lg:h-auto fixed w-full h-screen transition-transform bg-gray-100 flex lg:flex-1 lg:items-stretch`}
+      } left-0 top-0 z-20 lg:transform-none lg:flex lg:bg-transparent lg:static lg:w-auto lg:h-auto fixed w-full h-screen transition-transform bg-gray-100 flex lg:flex-1 lg:items-stretch`}
     >
       <ul className="flex flex-1 flex-col gap-8 items-center justify-center -mt-16 text-3xl lg:flex-row lg:gap-0 lg:items-stretch lg:justify-around lg:mt-0 lg:text-base">
         {navItems.map((item) => {

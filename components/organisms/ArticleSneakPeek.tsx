@@ -41,11 +41,11 @@ export const ArticleSneakPeek = ({
       <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
         <p className="!indent-0">
           {excerpt}{' '}
-          <LinkUnderlineEffect>
+          <span className="inner-link">
             <Link href={href}>
               <a>Czytaj dalej…</a>
             </Link>
-          </LinkUnderlineEffect>
+          </span>
         </p>
       </div>
     </Card>

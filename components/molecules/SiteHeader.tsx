@@ -19,7 +19,7 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
       <header
         className={`bg-gray-100 pb-1 ios:transcluent-white dark:ios:transcluent-black flex flex-row h-12 overflow-hidden items-stretch justify-center lg:mb-4 ${
           uiState.isMenuOpen ? 'lg:drop-shadow lg:sticky' : 'drop-shadow sticky'
-        } top-0 z-40`}
+        } top-0 z-10`}
       >
         <div className="flex flex-1 flex-row pl-8 max-w-3xl">
           <Link href="/">
@@ -42,7 +42,7 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
         {pageKind === 'post' && (
           <progress
             aria-hidden
-            className="absolute z-40 bottom-0 w-full h-1 text-pink-500 appearance-none"
+            className="absolute z-10 bottom-0 w-full h-1 text-pink-500 appearance-none"
             value={progress.toFixed(2)}
           />
         )}
