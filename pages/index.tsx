@@ -3,20 +3,23 @@ import { Fragment } from 'react';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
 import { TwoColumns } from '../components/templates/TwoColumns';
-import { postToProps } from '../utils/postToProps';
-import { readAllPosts } from '../utils/wordpress';
+import { getMarkdownPostsForPage, postToProps } from '../utils/postToProps';
 
-import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
-
-const PAGE_SIZE = 10;
+import type { InferGetStaticPropsType } from '../types';
+import type { GetStaticPropsContext } from 'next';
 
 export const getStaticProps = async ({}: GetStaticPropsContext) => {
-  const markdownPosts = (await readAllPosts()).slice(0, PAGE_SIZE);
+  const { markdownPosts, page } = await getMarkdownPostsForPage();
+
+  if (markdownPosts.length === 0) {
+    return { notFound: true };
+  }
+
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
 
   const posts = markdownPosts.map((post) => postToProps(post, authorsJson)).map((p) => ({ ...p, content: '' }));
 
-  return { props: { posts } };
+  return { props: { posts, page } };
 };
 
 const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -28,7 +31,7 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
             key={post.frontmatter.id}
             title={post.frontmatter.title}
             mainCategory={post.frontmatter.mainCategory}
-            href={post.frontmatter.permalink}
+            href={'/' + post.frontmatter.permalink}
             authors={post.frontmatter.authors}
             cover={post.frontmatter.cover}
             id={post.frontmatter.id}

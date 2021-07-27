@@ -1,4 +1,4 @@
-import { getExcerptAndContent } from './wordpress';
+import { getExcerptAndContent, readAllPosts } from './wordpress';
 
 import type { PostByPermalink } from './wordpress';
 
@@ -31,3 +31,14 @@ export const postToProps = (post: Exclude<PostByPermalink, undefined>, authorsJs
     },
   };
 };
+
+export const PAGE_SIZE = 10;
+export async function getMarkdownPostsForPage(page?: number) {
+  const allPosts = await readAllPosts();
+  const maxPages = Math.ceil(allPosts.length / PAGE_SIZE);
+
+  const p = page ?? maxPages;
+
+  const markdownPosts = p === 1 ? allPosts.slice(-p * PAGE_SIZE) : allPosts.slice(-p * PAGE_SIZE, -(p - 1) * PAGE_SIZE);
+  return { markdownPosts, page: p };
+}

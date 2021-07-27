@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
@@ -40,7 +42,9 @@ export const ArticleSneakPeek = ({
         <p className="!indent-0">
           {excerpt}{' '}
           <LinkUnderlineEffect>
-            <a href={href}>Czytaj dalej…</a>
+            <Link href={href}>
+              <a>Czytaj dalej…</a>
+            </Link>
           </LinkUnderlineEffect>
         </p>
       </div>

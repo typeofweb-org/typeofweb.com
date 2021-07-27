@@ -17,7 +17,7 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
         Skocz do treści
       </a>
       <header
-        className={`bg-gray-100 ios:transcluent-white dark:ios:transcluent-black flex flex-row h-12 overflow-hidden items-stretch justify-center lg:mb-4 ${
+        className={`bg-gray-100 pb-1 ios:transcluent-white dark:ios:transcluent-black flex flex-row h-12 overflow-hidden items-stretch justify-center lg:mb-4 ${
           uiState.isMenuOpen ? 'lg:drop-shadow lg:sticky' : 'drop-shadow sticky'
         } top-0 z-40`}
       >

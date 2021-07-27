@@ -52,7 +52,7 @@ const PermalinkPage = ({ excerpt, content, frontmatter }: InferGetStaticPropsTyp
         title={frontmatter.title}
         authors={frontmatter.authors}
         mainCategory={frontmatter.mainCategory}
-        href={frontmatter.permalink}
+        href={'/' + frontmatter.permalink}
         cover={frontmatter.cover}
       />
       <NewsletterForm />

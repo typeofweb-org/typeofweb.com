@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { SectionTitle } from './SectionTitle';
 
 export const ArticleTitle = ({
@@ -11,17 +13,19 @@ export const ArticleTitle = ({
   readonly href: string;
 }) => {
   return (
-    <a href={href} className="block">
-      <SectionTitle size="large">
-        {title}
-        <span
-          aria-label={`Artykuł numer ${index}`}
-          title={`Artykuł numer ${index}`}
-          className="text-stroke absolute -left-7 top-1 text-gray-500 font-sans text-xl font-semibold"
-        >
-          {index}
-        </span>
-      </SectionTitle>
-    </a>
+    <Link href={href}>
+      <a className="block">
+        <SectionTitle size="large">
+          {title}
+          <span
+            aria-label={`Artykuł numer ${index}`}
+            title={`Artykuł numer ${index}`}
+            className="text-stroke absolute -left-7 top-1 text-gray-500 font-sans text-xl font-semibold"
+          >
+            {index}
+          </span>
+        </SectionTitle>
+      </a>
+    </Link>
   );
 };

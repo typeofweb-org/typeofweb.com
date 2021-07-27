@@ -9,6 +9,13 @@ import '../styles.css';
 import '../fonts.css';
 import '../prism.css';
 
+// @ts-ignore
+if (typeof CSS !== 'undefined' && typeof CSS.paintWorklet !== 'undefined') {
+  // @ts-ignore
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call -- ok
+  CSS.paintWorklet.addModule(`/fancyLinkUnderline.js`);
+}
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
