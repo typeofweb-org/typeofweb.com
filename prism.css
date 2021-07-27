@@ -7,8 +7,8 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  */
 
 pre[data-lang]::before {
-  content: attr(data-lang);
-  @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md;
+  /* content: attr(data-lang);
+  @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md; */
 }
 
 code[class*='language-'],
@@ -67,7 +67,9 @@ pre[class*='language-'] {
 pre[class*='language-'] {
   /* background: #f5f2f0; */
   /* background: #fafbfc; */
-  @apply bg-gray-100 shadow-inner drop-shadow-md;
+  @apply bg-gray-100 shadow;
+  --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* Inline code */

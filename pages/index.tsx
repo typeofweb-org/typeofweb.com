@@ -17,7 +17,10 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
 
-  const posts = markdownPosts.map((post) => postToProps(post, authorsJson)).map((p) => ({ ...p, content: '' }));
+  const posts = (await Promise.all(markdownPosts.map((post) => postToProps(post, authorsJson)))).map((p) => ({
+    ...p,
+    content: '',
+  }));
 
   return { props: { posts, page } };
 };
@@ -33,7 +36,7 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
             mainCategory={post.frontmatter.mainCategory}
             href={'/' + post.frontmatter.permalink}
             authors={post.frontmatter.authors}
-            cover={post.frontmatter.cover}
+            cover={post.frontmatter.cover ?? null}
             id={post.frontmatter.id}
             index={post.frontmatter.index}
             excerpt={post.excerpt}

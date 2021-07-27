@@ -1,13 +1,19 @@
+import { getPlaiceholder } from 'plaiceholder';
+
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
 import type { PostByPermalink } from './wordpress';
 
 type AuthorJson = typeof import('../authors.json')[number];
 
-export const postToProps = (post: Exclude<PostByPermalink, undefined>, authorsJson: readonly AuthorJson[]) => {
+export const postToProps = async (post: Exclude<PostByPermalink, undefined>, authorsJson: readonly AuthorJson[]) => {
   const { excerpt, content } = getExcerptAndContent(post.content);
 
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
+
+  const { base64: blurDataURL = null, img = null } = post.data.thumbnail
+    ? await getPlaiceholder(post.data.thumbnail.url)
+    : {};
 
   return {
     excerpt,
@@ -27,7 +33,7 @@ export const postToProps = (post: Exclude<PostByPermalink, undefined>, authorsJs
         }),
       mainCategory: post.data.category?.[0] ?? null,
       permalink: post.data.permalink,
-      cover: post.data.thumbnail ?? null,
+      cover: img && blurDataURL ? { img, blurDataURL } : null,
     },
   };
 };

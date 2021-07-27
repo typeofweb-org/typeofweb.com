@@ -18,7 +18,7 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
       </a>
       <header
         className={`bg-gray-100 pb-1 ios:transcluent-white dark:ios:transcluent-black flex flex-row h-12 overflow-hidden items-stretch justify-center lg:mb-4 ${
-          uiState.isMenuOpen ? 'lg:drop-shadow lg:sticky' : 'drop-shadow sticky'
+          uiState.isMenuOpen ? 'lg:shadow lg:sticky' : 'shadow sticky'
         } top-0 z-10`}
       >
         <div className="flex flex-1 flex-row pl-8 max-w-3xl">

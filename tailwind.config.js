@@ -123,11 +123,11 @@ module.exports = {
           },
           '.transcluent-white': {
             'backdrop-filter': 'blur(10px)',
-            'background-color': 'rgba(255, 255, 255, 0.92)',
+            'background-color': 'rgba(255, 255, 255, 0.9)',
           },
           '.transcluent-black': {
             'backdrop-filter': 'blur(10px)',
-            'background-color': 'rgba(0, 0, 0, 0.92)',
+            'background-color': 'rgba(0, 0, 0, 0.9)',
           },
         });
       }

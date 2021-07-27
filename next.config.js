@@ -7,17 +7,21 @@ const withTM = require('next-transpile-modules')([
   'trough',
 ]);
 
-const config = withTM({
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: /\.(js|ts)x?$/,
-      use: ['@svgr/webpack'],
-    });
+const { withPlaiceholder } = require('@plaiceholder/next');
 
-    return config;
-  },
-});
+const config = withPlaiceholder(
+  withTM({
+    webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/,
+        issuer: /\.(js|ts)x?$/,
+        use: ['@svgr/webpack'],
+      });
+
+      return config;
+    },
+  }),
+);
 
 config.images = {
   domains: ['typeofweb.com'],

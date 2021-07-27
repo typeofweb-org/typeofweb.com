@@ -5,10 +5,11 @@ import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
+import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
 import type { Author } from '../molecules/ArticleMeta';
 
 interface ArticleSneakPeekProps {
-  readonly cover: { readonly url: string; readonly width: number; readonly height: number } | null;
+  readonly cover: CoverPlaiceholder | null;
   readonly id: number;
   readonly index: number;
   readonly title: string;

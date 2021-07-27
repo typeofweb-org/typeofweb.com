@@ -35,7 +35,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   }
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
-  return { props: postToProps(post, authorsJson) };
+  return { props: await postToProps(post, authorsJson) };
 };
 
 const PermalinkPage = ({ excerpt, content, frontmatter }: InferGetStaticPropsType<typeof getStaticProps>) => {
