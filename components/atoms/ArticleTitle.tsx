@@ -2,7 +2,6 @@ import { SectionTitle } from './SectionTitle';
 
 export const ArticleTitle = ({
   title,
-  id,
   index,
   href,
 }: {

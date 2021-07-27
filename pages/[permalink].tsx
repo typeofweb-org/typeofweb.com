@@ -1,6 +1,9 @@
+import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { SingleArticle } from '../components/organisms/SingleArticle';
+import { TwoColumns } from '../components/templates/TwoColumns';
+import { useRunningHeader } from '../hooks/runningHeader';
 import { postToProps } from '../utils/postToProps';
-import { getAllPermalinks, getPostByPermalink, getExcerptAndContent } from '../utils/wordpress';
+import { getAllPermalinks, getPostByPermalink } from '../utils/wordpress';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
@@ -43,18 +46,24 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 };
 
 const PermalinkPage = ({ excerpt, content, frontmatter }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { setRunningHeader } = useRunningHeader();
+
   return (
-    <SingleArticle
-      excerpt={excerpt}
-      content={content}
-      id={frontmatter.id}
-      index={frontmatter.index}
-      title={frontmatter.title}
-      authors={frontmatter.authors}
-      mainCategory={frontmatter.mainCategory}
-      href={frontmatter.permalink}
-      cover={frontmatter.cover}
-    />
+    <TwoColumns withSidebar={true} pageKind="post">
+      <SingleArticle
+        ref={setRunningHeader}
+        excerpt={excerpt}
+        content={content}
+        id={frontmatter.id}
+        index={frontmatter.index}
+        title={frontmatter.title}
+        authors={frontmatter.authors}
+        mainCategory={frontmatter.mainCategory}
+        href={frontmatter.permalink}
+        cover={frontmatter.cover}
+      />
+      <NewsletterForm />
+    </TwoColumns>
   );
 };
 export default PermalinkPage;
