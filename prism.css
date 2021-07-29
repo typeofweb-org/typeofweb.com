@@ -5,10 +5,12 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-
-pre[data-lang]::before {
-  /* content: attr(data-lang);
-  @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md; */
+pre[data-lang] {
+  position: relative;
+}
+pre[data-lang]:not(pre[data-lang=''])::after {
+  content: attr(data-lang);
+  @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md;
 }
 
 code[class*='language-'],
@@ -49,24 +51,22 @@ code[class*='language-'] ::selection {
   background: #b3d4fc;
 }
 
-@media print {
-  code[class*='language-'],
-  pre[class*='language-'] {
-    text-shadow: none;
-  }
-}
-
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
+  padding: 0;
   margin: 2em 0;
-  overflow: auto;
+  overflow: hidden;
+}
+
+pre[class*='language-'] > code[class*='language-'] {
+  overflow-x: auto;
+  max-width: 100%;
+  display: block;
+  padding: 1.2em;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  /* background: #f5f2f0; */
-  /* background: #fafbfc; */
   @apply bg-gray-100 shadow;
   --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -84,10 +84,12 @@ pre[class*='language-'] {
 .token.doctype,
 .token.cdata {
   color: slategray;
+  color: theme('colors.gray.500');
 }
 
 .token.punctuation {
   color: #999;
+  color: theme('colors.gray.600');
 }
 
 .token.namespace {
@@ -102,6 +104,7 @@ pre[class*='language-'] {
 .token.symbol,
 .token.deleted {
   color: #905;
+  color: theme('colors.pink.600');
 }
 
 .token.selector,
@@ -111,6 +114,7 @@ pre[class*='language-'] {
 .token.builtin,
 .token.inserted {
   color: #690;
+  color: theme('colors.green.700');
 }
 
 .token.operator,
@@ -119,17 +123,20 @@ pre[class*='language-'] {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
+  /* color: theme('colors.pink.900'); */
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #07a;
+  color: theme('colors.pink.500');
 }
 
 .token.function,
 .token.class-name {
   color: #dd4a68;
+  color: theme('colors.blue.400');
 }
 
 .token.regex,

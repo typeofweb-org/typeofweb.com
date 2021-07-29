@@ -14,9 +14,5 @@ const widgetsPerPage = {
 };
 
 export const Sidebar = ({ pageKind }: { readonly pageKind: PageKind }) => {
-  return (
-    <aside className="lg:top-[4vh] lg:mt-[4vh] hidden lg:sticky lg:block lg:mx-4 lg:w-80">
-      {widgetsPerPage[pageKind]}
-    </aside>
-  );
+  return <aside className="hidden lg:sticky lg:top-16 lg:block lg:mx-4 lg:w-80">{widgetsPerPage[pageKind]}</aside>;
 };

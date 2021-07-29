@@ -14,9 +14,10 @@ export default class MyDocument extends Document {
         <Head>
           <script
             dangerouslySetInnerHTML={{
-              __html: `const e=()=>o.className+=" fonts-loaded",o=document.documentElement,a="00 1em Merriweather",n="00 1em Fira Sans";sessionStorage.fonts?e():Promise.all(["4"+a,"7"+a,"italic 4"+a,"italic 7"+a,"4"+n,"6"+n,"400 1em Fira Mono"].map(e=>document.fonts.load(e))).then(()=>{sessionStorage.fonts=!0,e()}),setTimeout(()=>o.className+=" animations-ready",1e3)`,
+              __html: `const e=()=>o.className+=" fonts-loaded",o=document.documentElement,a="00 1em Merriweather",n="00 1em Fira Sans";sessionStorage.fonts?e():Promise.all(["4"+a,"7"+a,"italic 4"+a,"italic 7"+a,"4"+n,"6"+n,"400 1em Fira Mono"].map(e=>document.fonts.load(e))).then(()=>{sessionStorage.fonts=!0,e()})`,
             }}
           />
+          <meta name="format-detection" content="telephone=no" />
         </Head>
         <body>
           <Main />

@@ -24,14 +24,13 @@ seo:
     - Problem XY
   focusKeywordSynonyms:
     - pytać, pytamy, pyta
----
 
+---
 Na pewno każda i każdy z Was napotkał kiedyś w swoim życiu Problem XY, być może nawet o tym nie wiedząc. Część z was pewnie go „popełnia”. **Problem XY występuje wtedy, gdy pytamy o rozwiązanie problemu, zamiast o sam problem**. Dlaczego to źle? Jak zadawać pytania?
 
-<!--more-->
+{/* more */}
 
 ## Problem XY: Scenka
-
 Od lat pomagam wielu ludziom na różnych forach, czatach i innych kanałach i niemal codziennie napotykam Problem XY. Jak to zazwyczaj wygląda?
 
 Q: Jak mogę użyć Y do zrobienia X?
@@ -41,7 +40,6 @@ A2: A dlaczego chcesz użyć Y? Łatwiej byłoby osiągnąć X w ten i ten spos
 Q: Dzięki! Działa.
 
 ## Problem XY: Mechanizm
-
 - Użytkownik chce rozwiązać problem X.
 - Użytkownik nie wie, jak rozwiązać X, ale myśli, że uda mu się to, jeśli tylko rozwiąże Y.
 - Użytkownik nie wie, jak rozwiązać Y.
@@ -50,9 +48,7 @@ Q: Dzięki! Działa.
 - Po wielu rozmowach i zmarnowanym czasie, w końcu staje się jasne, że Użytkownikowi chodzi o rozwiązanie problemu X, a Y okazuje się nie mieć żadnego związku, albo być całkowicie nieodpowiednie.
 
 ## Problem XY: Przykłady
-
 ### Przykład pierwszy
-
 Użytkownik chce pobrać [rozszerzenie pliku na podstawie jego nazwy][2]. Niestety, zamiast zapytać wprost, zaczyna od rozwiązania innego problemu, którego wcale nie ma:
 
 Q: W jaki sposób mogę pobrać 3 ostatnie znaki z nazwy pliku?
@@ -63,7 +59,6 @@ Q: Tak.
 A2: `filename.split('.').pop()`
 
 ### Przykład drugi
-
 Użytkownik parsuje CSV na JSON używając konkretnej biblioteki. Jednak wynikowy format danych mu nie odpowiada — jest to tablica wierszy, zamiast tablicy obiektów. Niestety, zamiast zapytać o parsowanie CSV i o tę konkretną bibliotekę, Użytkownik myśli, że lepiej będzie zamienić tablicę tablic na tablicę obiektów i pyta tylko o to. Znów, tak naprawdę zadaje pytanie o problem, którego wcale nie ma:
 
 Q: Mam kilka tablic i chcę zamienić każdą z nich na obiekt, którego klucze pochodzą z pierwszej tablicy. np. `[['a', 'b'], [1,2], [3,4]]` na `[{a: 1, b: 2}, {a: 3, b: 4}]`
@@ -76,7 +71,6 @@ Q: PapaParser
 A4: Ona ma opcję `headers: true`, dzięki której zamiast tablicy tablic otrzymasz dokładnie takie obiekty, jak chciałeś. Nie musisz niczego robić ręcznie.
 
 ## Skąd się to bierze?
-
 Jest kilka źródeł występowania Problemu XY. Pierwszy to zaangażowanie pytającego. **Pytający poświęcił tak dużo czasu, na rozwiązanie problemu Y, że nie chce robić kroku wstecz** i spojrzeć na problem X z szerszej perspektywy. Bardzo często będzie bronił się słowami **„Mam już cały system, brakuje mi tylko tego jednego malutkiego fragmentu”**, jednak, jak widać choćby z przykładu wyżej z csv, bardzo często ten „cały system” został zbudowany zupełnie bez powodu.
 
 Inną przyczyną bywa [**chęć zrobienia rzeczy dobrze**][4]. Tak, nie żartuję. Często mamy wyidealizowane wyobrażenia na temat rozwiązania problemu i przeszkadza nam to w dostrzeżeniu prostszych alternatyw.
@@ -86,7 +80,6 @@ Ponadto, czasem osoby zadające pytania mają **wyrzuty sumienia**. Nie chcą py
 Oczywiście, Problem XY nie dotyczy wyłącznie świata IT. Dotyczy każdego, zawodowo i prywatnie, a najbardziej dotkliwy jest prawdopodobnie dla lekarzy i terapeutów. Jak wiele osób przychodzi do lekarza z gotową diagnozą i pyta tylko o nią, zamiast opisać prawdziwy problem? Przykłady dobrze zadanych pytań znajdziesz choćby w dziale [pytania i odpowiedzi React](https://typeofweb.com/2018/03/26/odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react/).
 
 ## Problem narcyzmu i empatii odpowiadających
-
 [Niektórzy argumentują][3], że wszystko to, co opisałem, to nie jest sedno problemu XY. Niektórzy twierdzą, że Problem XY to problem osoby odpowiadającej na pytanie, a nie pytającego. Nie zgadzam się z tym całkowicie, ale myślę, że ważne jest, aby o tym wspomnieć. Problem XY może być pożywką dla braku empatii i narcyzmu odpowiadających.
 
 Wyobraź sobie, że zadajesz pytanie o problem, który wydaje Ci się istotny. Kilka osób stara Ci się pomóc, ale nagle pojawia się ktoś, kto mówi **„wcale nie masz problemu Y, tak naprawdę chciałaś/eś zapytać o X”. Jak się wtedy czujesz?** To właśnie brak empatii odpowiadającego sprawił, że prawdopodobnie uruchamiają Ci się mechanizmy obronne. Chcesz powiedzieć „wiem lepiej, czego chcę”. Może to prawda, a może nie, ale nie ulega wątpliwości, że dalsza rozmowa będzie odbywała się w atmosferze poczucia winy („jestem głupi, on ma rację”) albo defensywy („odpowiadający jest głupi, przecież napisałem, że nie o to mi chodzi”).
@@ -98,7 +91,6 @@ Gdy chcesz komuś pomóc i uznasz, że pytający nie wie, czego chce, albo pope�
 Artykuł [Two Attitudes in Psychiatry][1] opisuje tę dychotomię szerzej.
 
 ## Jak zadawać pytania?
-
 Eric S. Raymond w swojej publikacji [How To Ask Questions The Smart Way][5] odnośnie problemu XY napisał mniej-więcej tak:
 
 Q: Jak mogę użyć X do zrobienia Y?

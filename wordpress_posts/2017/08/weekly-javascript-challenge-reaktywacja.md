@@ -3,6 +3,7 @@ id: 41
 index: 29
 title: Weekly JavaScript Challenge – Reaktywacja!
 date: 2017-08-24T08:13:59.000Z
+isMarkdown: false
 status: publish
 permalink: weekly-javascript-challenge-reaktywacja
 authors:
@@ -20,8 +21,8 @@ categories:
 seo:
   focusKeywords:
     - Weekly JavaScript Challenge
----
 
+---
 Ponad rok temu rozpocząłem inicjatywę o nazwie <a href="https://www.facebook.com/groups/1131907053499522/">Weekly JavaScript Challenge</a> – stworzyłem grupę na Facebooku, która miała na celu wzajemną pomoc w nauce JavaScriptu. Założeniem grupy było wspólne rozwiązywanie zadań i wrzucanie ich na Facebooka do oceny. Głównym pomysłem było <strong>tworzenie realnych aplikacji, a nie implementowanie algorytmów</strong>, a każde rozwiązanie miało przechodzić przez <em>code review</em> pod kątem czytelności oraz architektury kodu. Z tych powodów aplikacji nie mógł łatwo sprawdzać automat i musiał to robić człowiek. Jednak dzięki temu nauka i wnioski były zdecydowanie bardziej wartościowe.
 
 Szukasz <strong>tl;dr</strong>? <a href="#noweweeklyjavascriptchallenge">Skocz do tego akapitu</a>.
@@ -32,7 +33,6 @@ Na początku działania grupy <strong>wszystkim wrzuconym rozwiązaniom osobiśc
 https://typeofweb.com/2016/07/25/weekly-javascript-challenge-1/
 
 Wrzucane przeze mnie posty były też inspiracją dla wielu osób – otrzymałem bardzo dużo prywatnych wiadomości z pytaniami i komplementami – za które serdecznie dziękuję :) <strong>Doszły mnie nawet słuchy, że pewna firma korzysta z Weekly JavaScript Challenge przy rekrutacji pracowników</strong> (a konkretnie z <a href="https://www.facebook.com/events/1062498357132335/">zadania numer 4</a>). Wow!
-
 <h2 id="weryfikacja">Weryfikacja</h2>
 Dlaczego więc grupa chwilowo nie funkcjonuje? Można powiedzieć, że padła ofiarą własnego sukcesu – a mnie zwyczajnie zaczęło brakować czasu, aby móc odpowiedzieć każdemu! Do tego doszły też problemy z Facebookiem – który codziennie wprowadza jakieś zmiany :| Po powstaniu Weekly JavaScript Challenge modyfikacji uległ sposób w jaki działają wydarzenia na grupach i, przykładowo, przestałem otrzymywać powiadomienia pod starymi zadaniami. Na dłuższą metę więc nie mogło to tak działać i cała inicjatywa wymagała solidnej weryfikacji.
 <h2 id="noweweeklyjavascriptchallenge">Nowe Weekly JavaScript Challenge</h2>

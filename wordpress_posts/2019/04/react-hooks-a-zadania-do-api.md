@@ -24,26 +24,25 @@ series:
   slug: react-js
   name: React.js
 seo: {}
----
 
+---
 React Hooks mocno upraszczają właściwie wszystko, co do tej pory robiłaś. W jednym z pierwszych odcinków kursu pokazywałem, jak można w szybki sposób pobierać dane z API używając `fetch` w Reakcie. Czy Hooki coś tutaj zmieniają? Ależ tak!
 
-<!--more-->
+{/* more */}
 
 ## Fetch do tej pory
-
 Zaczniemy może od przyjrzenia się, jak taki fetch wyglądał do tej pory w klasach:
 
 ```jsx
 export class App extends React.Component {
   state = {
-    contacts: [],
+    contacts: []
   };
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/?format=json&results=10')
-      .then((res) => res.json())
-      .then((json) => this.setState({ contacts: json.results }));
+    fetch("https://randomuser.me/api/?format=json&results=10")
+      .then(res => res.json())
+      .then(json => this.setState({ contacts: json.results }));
   }
 
   render() {
@@ -59,7 +58,6 @@ https://typeofweb.com/2018/02/27/komunikacja-z-api-w-react-js/
 Nie wygląda skomplikowanie, ale czy może być jeszcze prostsze?
 
 ## Wchodzą Hooki
-
 Z użyciem znanych Ci już Hooków `useState` i `useEffect` wygląda to tak:
 
 ```jsx
@@ -67,12 +65,12 @@ function App() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    fetch('https://randomuser.me/api/?format=json&results=10')
-      .then((res) => res.json())
-      .then((json) => setContacts(json.results));
+    fetch("https://randomuser.me/api/?format=json&results=10")
+      .then(res => res.json())
+      .then(json => setContacts(json.results));
   }, []);
 
-  return <ContactsList contacts={contacts} />;
+  return <ContactsList contacts={contacts} />
 }
 ```
 
@@ -81,7 +79,6 @@ Zwróć uwagę na jedną ważną rzecz: Jako drugi argument do `useEffect` poda�
 No ładnie, prawda? Ale wcale nie jest dużo krótsze. Dodajmy więc nowe wymaganie…
 
 ## Aktualizacja wyników gdy zmienia się ID
-
 Załóżmy, że Twój komponent ma wyświetlać dane pobrane z API dla danego ID przekazanego mu jako props. W użyciu:
 
 ```jsx
@@ -93,13 +90,13 @@ Gdy `id` się zmieni, komponent ma pobrać dane na nowo i wyświetlić. Jak to w
 ```jsx
 export class App extends React.Component {
   state = {
-    contacts: [],
+    contacts: []
   };
 
   fetchData() {
     fetch(`https://randomuser.me/api/?format=json&results=10&seed=${this.props.id}`)
-      .then((res) => res.json())
-      .then((json) => this.setState({ contacts: json.results }));
+      .then(res => res.json())
+      .then(json => this.setState({ contacts: json.results }));
   }
 
   componentDidMount() {
@@ -126,18 +123,17 @@ function App({ id }) {
 
   useEffect(() => {
     fetch(`https://randomuser.me/api/?format=json&results=10&seed=${id}`)
-      .then((res) => res.json())
-      .then((json) => setContacts(json.results));
+      .then(res => res.json())
+      .then(json => setContacts(json.results));
   }, [id]);
 
-  return <ContactsList contacts={contacts} />;
+  return <ContactsList contacts={contacts} />
 }
 ```
 
 To jest nadal tak samo krótkie, jak poprzednio. Zmieniły się tylko 3 fragmenty kodu: Props jako argument do komponentu, fetch pod inny adres i tablica jako drugi argument do `useEffect` już nie jest pusta: `[id]`.
 
 ## W tym kodzie jest bug
-
 Jest subtelny i pewnie się na niego nie natkniesz, ale uwierz mi, że w tym kodzie jest bug. Gdy szybko zmienisz wartość ID, wykonają się w krótkim czasie dwa żądania do API. A co się stanie, jeśli odpowiedź na pierwsze żądanie przyjdzie później niż na drugie? Komponent wyświetli nieaktualne dane. Bug!
 
 Aby go naprawić, trzeba anulować poprzednie żądanie. Jak to wygląda w klasie?
@@ -145,7 +141,7 @@ Aby go naprawić, trzeba anulować poprzednie żądanie. Jak to wygląda w klasi
 ```jsx
 export class App extends React.Component {
   state = {
-    contacts: [],
+    contacts: []
   };
 
   controller = new AbortController();
@@ -153,8 +149,8 @@ export class App extends React.Component {
   fetchData() {
     this.controller.abort();
     fetch(`https://randomuser.me/api/?format=json&results=10&seed=${this.props.id}`, { signal: this.controller.signal })
-      .then((res) => res.json())
-      .then((json) => this.setState({ contacts: json.results }));
+      .then(res => res.json())
+      .then(json => this.setState({ contacts: json.results }));
   }
 
   componentDidMount() {
@@ -190,27 +186,24 @@ function App({ id }) {
   useEffect(() => {
     const controller = new AbortController();
     fetch(`https://randomuser.me/api/?format=json&results=10&seed=${id}`, { signal: controller.signal })
-      .then((res) => res.json())
-      .then((json) => setContacts(json.results));
-
+      .then(res => res.json())
+      .then(json => setContacts(json.results));
+    
     return () => controller.abort();
   }, [id]);
 
-  return <ContactsList contacts={contacts} />;
+  return <ContactsList contacts={contacts} />
 }
 ```
 
 Tak, to już!
 
 ## Hooki są czystsze
-
 Zwróć uwagę jak bardo porozrzucany jest kod w ostatnim przykładzie w klasie — `constructor`, `componentDidMount`, `componentWillUnmount` i `componentDidUpdate`. W hookach zaś, wszystko jest obok siebie. **Powiązany kod leży blisko**.
 
 Dodatkowo, łatwo mogłabyś się pokusić o stworzenie nowego hooka, który by całą tę logikę enkapsulował. Dzięki temu mogłabyś łatwo go używać w różnych miejscach, bez konieczności duplikowania kodu. To w praktyce niemożliwe przy użyciu klas (chyba, że przez HoC lub zagnieżdżając kolejne komponenty…)
 
 ## Pytania?
-
-[typeofweb-courses-slogan category="React"] Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
-
-<div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
-<div style="text-align: center;">[typeofweb-facebook-page]</div>
+<a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>. Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
+<NewsletterForm />
+<FacebookPageWidget />

@@ -3,6 +3,7 @@ id: 23
 index: 12
 title: TypeScript – część 1
 date: 2016-07-11T06:19:00.000Z
+isMarkdown: false
 status: publish
 permalink: typescript-czesc-1
 authors:
@@ -20,11 +21,11 @@ series:
   slug: typescript
   name: TypeScript
 seo: {}
----
 
+---
 <p>„TypeScript – typowany nadzbiór JavaScriptu, kompilowany do czystego JavaScriptu” – głosi napis na stronie głównej <a href="https://www.typescriptlang.org/">typescriptlang.org</a>. Używam go praktycznie codziennie, w różnych projektach, z różnymi technologiami. Od pewnego czasu, w dużej mierze za sprawą Angulara 2, ale nie tylko, TS zaczął zyskiwać sporą popularność i uznanie w społeczności webdeveloperów.</p>
 
-<p class=important>W tym artykule zakładam, że czytelnicy są zaznajomieni JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>.</p>
+<p class="important">W tym artykule zakładam, że czytelnicy są zaznajomieni JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>.</p>
 
 <h1 id="czymjesttypescript">Czym jest TypeScript</h1>
 
@@ -191,7 +192,7 @@ x.push('a');
 x.push(new Date);  
 </code></pre>
 
-<p class=important>Zawsze polecam spróbować zrefaktorować kod tak, aby określenie typu było możliwe. <strong>Używanie typu <code>any</code> niweczy wszystkie zalety typowania</strong>.</p>
+<p class="important">Zawsze polecam spróbować zrefaktorować kod tak, aby określenie typu było możliwe. <strong>Używanie typu <code>any</code> niweczy wszystkie zalety typowania</strong>.</p>
 
 <h2 id="void">Void</h2>
 
@@ -255,7 +256,7 @@ dog.sayHello() // 'Hello, my name is Burek!';
 }
 </code></pre>
 
-<p class=important>Dobrą praktyką jest oznaczanie jako <code>private</code> wszystkiego co tylko się da, tak aby z zewnątrz był dostęp wyłącznie do tych pól i metod, które są potrzebne. Nazywa się to <strong>enkapsulacją</strong> lub hermetyzacją.</p>
+<p class="important">Dobrą praktyką jest oznaczanie jako <code>private</code> wszystkiego co tylko się da, tak aby z zewnątrz był dostęp wyłącznie do tych pól i metod, które są potrzebne. Nazywa się to <strong>enkapsulacją</strong> lub hermetyzacją.</p>
 
 <h2 id="interfejsy">Interfejsy</h2>
 
@@ -298,7 +299,7 @@ const message:Message = {
 };
 </code></pre>
 
-<p class=important>Na potrzeby tego wpisu interfejsy możemy traktować jako wymagania stawiane obiektom, jednak <strong>ich możliwości są znacznie większe</strong> i opiszę to w kolejne części kursu TypeScript.</p>
+<p class="important">Na potrzeby tego wpisu interfejsy możemy traktować jako wymagania stawiane obiektom, jednak <strong>ich możliwości są znacznie większe</strong> i opiszę to w kolejne części kursu TypeScript.</p>
 
 <h1 id="definicjetypw">Definicje typów</h1>
 

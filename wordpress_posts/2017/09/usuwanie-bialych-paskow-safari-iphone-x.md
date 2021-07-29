@@ -3,6 +3,7 @@ id: 453
 index: 35
 title: Usuwanie białych pasków w Safari na iPhone X
 date: 2017-09-25T20:29:55.000Z
+isMarkdown: false
 status: publish
 permalink: usuwanie-bialych-paskow-safari-iphone-x
 authors:
@@ -20,8 +21,8 @@ categories:
 seo:
   focusKeywords:
     - iPhone X
----
 
+---
 Apple przedstawiło niedawno swojego nowego flagowego smartfona – iPhone X. To co odróżnia go od poprzedników to głównie wyświetlacz rozciągający się od krawędzi do krawędzi. Oprócz pięknego wyglądu, niestety rodzi to pewne nowe problemy – między innymi z tym, że Safari na iOS domyślnie wyświetla białe paski po prawej i lewej na stronach www gdy obrócimy smartfon. Czy możemy zrobić coś, aby temu zaradzić? <strong>Okazuje się, że tak!</strong>
 
 Wiele osób nabija się z iPhone X:
@@ -35,7 +36,6 @@ Ale nie o tym ten wpis ;) Wpis jest o tym, że mój blog domyślnie wygląda w t
 <img class="aligncenter size-large wp-image-458" style="box-shadow: none;" src="https://typeofweb.com/wp-content/uploads/2017/09/iPhone-X-before-1024x579.png" alt="iPhone X horizontal before" width="1024" height="579" />
 
 Widoczne są wyraźne paski z prawej i lewej strony. Są szare, gdyż <strong>domyślnie przyjmują one background-color z body lub html</strong>. Nie można jednak normalnie ustawić tam background-image, czyli żadnych obrazków ani gradientów… Jest to tzw. <em>safe area</em>, za którą użytkownik będzie trzymał telefon palcami i nie będzie sobie niczego zasłaniał. Ma to sens, ale czy mogłoby lepiej wyglądać? I, co ważniejsze, <strong>czy mamy na to wpływ? Tak!</strong> Poniżej podsumowanie ciekawostek z <a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/" target="_blank" rel="noopener">bloga WebKit</a>.
-
 <h2>CSS round display: viewport-fit</h2>
 Szkic specyfikacji nieznanego mi dotąd <a href="https://drafts.csswg.org/css-round-display/" target="_blank" rel="noopener">CSS Round Display</a> zawiera definicję <code>viewport-fit</code>, z którego Apple postanowiło skorzystać. Najnowsze Safari na iOS na iPhone X pozwala na użycie tej właściwości, aby <strong>treść z naszej strony wypełniła puste dotąd fragmenty po bokach</strong>. Dodanie tej nowej właściwości do tagu meta viewport na stronie spowoduje poprawę wyglądu strony:
 <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover"&gt;</code></pre>
@@ -44,7 +44,6 @@ Szkic specyfikacji nieznanego mi dotąd <a href="https://drafts.csswg.org/css-ro
 <img class="aligncenter size-large wp-image-457" style="box-shadow: none;" src="https://typeofweb.com/wp-content/uploads/2017/09/iPhone-X-almost-1024x579.png" alt="iPhone X Safari 11 viewport-fit cover" width="1024" height="579" />
 
 Wygląda to już lepiej, aczkolwiek teraz możemy mieć inny problem: <strong>część treści jest zbyt blisko rogów ekranu, albo może być zupełnie schowana za czarnym paskiem</strong> (kamera, czujniki…) z prawej strony! Czy i na to można coś poradzić bez karkołomnych zmian w CSS celujących tylko w iPhone X? Okazuje się, że tak!
-
 <h2>safe-area-inset-* – top right bottom left</h2>
 Gdy mamy <code>viewport-fit=cover</code>, możemy skorzystać z kilku wartości <strong>dostarczanych przez przeglądarkę w naszych stylach CSS</strong>. Posłuży nam do tego <code>constant(…)</code> Jak to działa? Safari na iOS 11 definiuje pewne wartości – np. mówi, że bezpieczna odległość od krawędzi telefonu do treści to <em>ileś pikseli</em>. My, jako twórcy strony możemy z tej wartości skorzystać i odpowiednie elementy o tę odległość przesunąć! Początkowo dla testów chciałem tylko dodać padding do <code>body</code>:
 <pre><code class="language-css">body {
@@ -55,7 +54,6 @@ Oznacza to, że padding będzie wynosił odpowiednio tyle, ile przeglądarka ust
 <img class="aligncenter size-large wp-image-456" style="box-shadow: none;" src="https://typeofweb.com/wp-content/uploads/2017/09/iPhone-X-there-1024x579.png" alt="iPhone X Safari 11 safe-area-inset-left" width="1024" height="579" />
 
 Po dalszych poprawkach kod ostatecznie wygląda tak:
-
 <pre><code class="language-css">.entry-header, .entry-summary, .entry-content, .author-info, .entry-meta, #nav-below, #comments, .post-continue-container, #colophon, #mobile-menu {
     padding-left: constant(safe-area-inset-left);
     padding-right: constant(safe-area-inset-right);
@@ -70,17 +68,15 @@ Po dalszych poprawkach kod ostatecznie wygląda tak:
     padding-top: calc(6em + constant(safe-area-inset-top));
     padding-bottom: constant(safe-area-inset-bottom);
 }</code></pre>
-
 Dzięki czemu <strong>zdjęcia oraz menu są rozciągnięte na całą szerokość strony, ale treść nigdy nie zostanie przykryta</strong> przez pasek po prawej:
 
 <img class="aligncenter size-large wp-image-463" style="box-shadow: none;" src="https://typeofweb.com/wp-content/uploads/2017/09/iPhone-X-final-1024x579.png" alt="iPhone X Safari 11 safe-area-inset-left viewport-fit cover" width="1024" height="579" />
 
 Zauważ też, że <code>constant</code> można łączyć z <code>calc</code>!
-
 <p class="important">Ten kod wpływa również na wyświetlanie strony na Safari na MacOS, ale w tym przypadku wszystkie wartości <code>safe-area-inset-*</code> są równe 0.</p>
 Muszę tutaj jednak nadmienić, że kilka dni temu <a href="https://github.com/w3c/csswg-drafts/issues/1693#issuecomment-330909067" target="_blank" rel="noopener">słowo kluczowe <code>constant</code> zostało przemianowane w specyfikacji na <code>env</code></a>. W Safari nadal działa <code>constant</code>, ale niedługo może to ulec zmianie!
 
-<p class=important>Safari Technology Preview od wersji 42 nie ma już <code>constant</code> — zgodnie ze standardem używane jest <code>env</code>. Zmiana ta pojawi się w stabilnym Safari oraz w Safari na iOS za jakiś czas. Więcej informacji: <a href="https://developer.apple.com/safari/technology-preview/release-notes/" target="_blank">Safari Technology Preview Release Notes (Release 42)</a></p>
+<p class="important">Safari Technology Preview od wersji 42 nie ma już <code>constant</code> — zgodnie ze standardem używane jest <code>env</code>. Zmiana ta pojawi się w stabilnym Safari oraz w Safari na iOS za jakiś czas. Więcej informacji: <a href="https://developer.apple.com/safari/technology-preview/release-notes/" target="_blank">Safari Technology Preview Release Notes (Release 42)</a></p>
 
 <h2>Podsumowanie</h2>
 Ciekawą uwagę wyraził <a href="https://www.facebook.com/groups/742940452405327/permalink/1657069000992463/?comment_id=1657137494318947&amp;comment_tracking=%7B%22tn%22%3A%22R0%22%7D" target="_blank" rel="noopener">Comandeer na Facebooku</a>:

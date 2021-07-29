@@ -2,6 +2,7 @@
 // import RehypeToc from '@jsdevtools/rehype-toc';
 import RehypePrism from '@mapbox/rehype-prism';
 import HastUtilToString from 'hast-util-to-string';
+import { serialize } from 'next-mdx-remote/serialize';
 import RehypeAutolinkHeadings from 'rehype-autolink-headings';
 import RehypeKatex from 'rehype-katex';
 import RehypeRaw from 'rehype-raw';
@@ -41,9 +42,19 @@ interface PreNode extends HtmlNode {
     [prop: string]: string[] | string | undefined;
   };
 }
+interface CodeNode extends HtmlNode {
+  tagName: 'code';
+  properties?: {
+    className?: string[] | undefined;
+    [prop: string]: string[] | string | undefined;
+  };
+}
 
 function isPreNode(node: Node): node is PreNode {
   return node && node.type === 'element' && (node as PreNode).tagName === 'pre';
+}
+function isCodeNode(node: Node): node is CodeNode {
+  return node && node.type === 'element' && (node as CodeNode).tagName === 'code';
 }
 
 function isAnchorNode(node: Node): node is AnchorNode {
@@ -142,10 +153,10 @@ function getOnlyFirstPara(): import('unified').Transformer {
   };
 }
 
-function addDataToCodeBlocks(): import('unified').Transformer {
+export function addDataToCodeBlocks(): import('unified').Transformer {
   return (tree) => {
     visit(tree, 'element', (node) => {
-      if (!isPreNode(node)) {
+      if (!isPreNode(node) && !isCodeNode(node)) {
         return;
       }
 
@@ -155,16 +166,56 @@ function addDataToCodeBlocks(): import('unified').Transformer {
         node.properties = {
           ...node.properties,
           'data-lang': lang,
-          'aria-label': `Kod w języku programowania ${lang.toUpperCase()}`,
+          ...(isPreNode(node) && { 'aria-label': `Kod w języku programowania ${lang.toUpperCase()}` }),
         };
       }
     });
   };
 }
 
-export function toHtmlString(source: string, options: { excerpt: false }): import('vfile').VFile;
-export function toHtmlString(source: string, options: { excerpt: true }): string;
-export function toHtmlString(
+const toCamelCase = (str: string) => str.replace(/-([a-z])/g, (_, l: string) => l.toUpperCase());
+
+export function toMdx(source: string, frontmatter: object) {
+  return serialize(
+    source
+      .replace(/style="(.*?)"/g, (match, styles: string) => {
+        const jsxStyles = JSON.stringify(
+          Object.fromEntries(
+            [...styles.trim().matchAll(/(.*?)\s*:\s*(.*)/g)].map(([, property, value]) => {
+              if (!property?.trim() || !value?.trim()) {
+                return [];
+              }
+              const trimmedProperty = property.trim();
+              const trimmedValue = value.trim();
+              return [
+                toCamelCase(trimmedProperty),
+                trimmedValue.endsWith(';') ? trimmedValue.slice(0, -1) : trimmedValue,
+              ];
+            }),
+          ),
+        );
+        return `style={${jsxStyles}}`;
+      })
+      .replace(/class="(.*?)"/g, 'className="$1"'),
+    {
+      scope: { data: frontmatter },
+      mdxOptions: {
+        remarkPlugins: [RemarkGfm, RemarkMath as any],
+        rehypePlugins: [
+          [RehypeKatex, { strict: false }],
+          wrapLinksInSpans as any,
+          RehypeSlug as any,
+          RehypeAutolinkHeadings as any,
+          RehypePrism as any,
+        ],
+      },
+    },
+  );
+}
+
+export function toHtml(source: string, options: { excerpt: false }): import('vfile').VFile;
+export function toHtml(source: string, options: { excerpt: true }): string;
+export function toHtml(
   source: string,
   options: { excerpt: boolean } = { excerpt: false },
 ): string | import('vfile').VFile {

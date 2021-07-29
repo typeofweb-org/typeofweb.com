@@ -24,11 +24,11 @@ series:
 seo:
   focusKeywords:
     - pętla v-for
----
 
+---
 Pisząc aplikacje w Vue.js bardzo często bedziesz chciał(a) wyświetlić **listę elementów w pętli** na podstawie tablicy. Właśnie w tym celu "język szablonów" wbudowany w Vue.js udostępnia dyrektywę `v-for`. W najprostszej postaci odpowiada ona pętli `for` znanej z JavaScriptu.
 
-<!--more-->
+{/* more */}
 
 ## Wyświetlanie listy przy użyciu dyrektywy `v-for`
 
@@ -38,19 +38,20 @@ Dyrektywa `v-for` używa specjalnej składni `aktualnyElementy in tablicaZDanymi
 new Vue({
   data() {
     return {
-      fruits: ['Apple', 'Pear', 'Plum', 'Banana'],
+      fruits: ["Apple", "Pear", "Plum", "Banana"]
     };
-  },
-}).$mount('#app');
+  }
+}).$mount("#app");
 ```
-
 ```html
 <ul>
-  <li v-for="fruit in fruits">{{ fruit }}</li>
+  <li v-for="fruit in fruits">
+    {{ fruit }}
+  </li>
 </ul>
 ```
 
-<p data-height="265" data-theme-id="0" data-slug-hash="odZvvE" data-default-tab="result" data-user="wojtiku" data-embed-version="2" data-pen-title="v-for" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/odZvvE/">v-for</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="0" slugHash="odZvvE" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for"><a href="http://codepen.io/wojtiku/pen/odZvvE/">Zobacz Codepen v-for</a>.</CodepenWidget>
 
 ## Dostęp do indeksu elementu
 
@@ -60,22 +61,22 @@ Wewnąątrz pętli `v-for` możesz też korzystać z **indeksu elementu**, któr
 new Vue({
   data() {
     return {
-      prefix: 'I <3',
-      fruits: ['Apple', 'Pear', 'Plum', 'Banana'],
+      prefix: "I <3",
+      fruits: ["Apple", "Pear", "Plum", "Banana"]
     };
-  },
-}).$mount('#app');
+  }
+}).$mount("#app");
 ```
-
 ```html
 <div id="app">
-  <div v-for="(fruit, index) in fruits">{{ index }} - {{ prefix }} {{ fruit }}</div>
+    <div v-for="(fruit, index) in fruits">
+      {{ index }} - {{ prefix }} {{ fruit }}
+    </div>
 </div>
 ```
+<CodepenWidget height="265" themeId="0" slugHash="BxWajL" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for z indeksem"><a href="http://codepen.io/wojtiku/pen/BxWajL/">Zobacz Codepen v-for z indeksem</a>.</CodepenWidget>
 
-<p data-height="265" data-theme-id="0" data-slug-hash="BxWajL" data-default-tab="result" data-user="wojtiku" data-embed-version="2" data-pen-title="v-for z indeksem" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/BxWajL/">v-for z indeksem</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-
-Zwróć też uwagę na fakt, że wewnątrz pętli `v-for`, oprócz nowych zmiennych, masz normalny **dostęp do wszystkich pól danych** znajdujących się na instancji Vue. W powyższym przykładzie w każdej iteracji odnoszę się do pola `prefix`. [typeofweb-courses-slogan category="Vue.js"]
+Zwróć też uwagę na fakt, że wewnątrz pętli `v-for`, oprócz nowych zmiennych, masz normalny **dostęp do wszystkich pól danych** znajdujących się na instancji Vue. W powyższym przykładzie w każdej iteracji odnoszę się do pola `prefix`. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>.
 
 ## Pętla v-for na obiekcie
 
@@ -86,26 +87,26 @@ new Vue({
   data() {
     return {
       fruits: {
-        Apple: 4,
-        Pear: 3,
-        Plum: 5,
-        Banana: 2,
-      },
+        "Apple": 4,
+        "Pear": 3,
+        "Plum": 5,
+        "Banana": 2
+      }
     };
-  },
-}).$mount('#app');
+  }
+}).$mount("#app");
 ```
-
 ```html
 <div id="app">
-  <div v-for="(quantity, fruit, index) in fruits">{{ index }}. {{ quantity }}x {{ fruit }}</div>
+    <div v-for="(quantity, fruit, index) in fruits">
+      {{ index }}. {{ quantity }}x {{ fruit }}
+    </div>
 </div>
 ```
-
-<p data-height="265" data-theme-id="0" data-slug-hash="vjxOeb" data-default-tab="result" data-user="wojtiku" data-embed-version="2" data-pen-title="v-for na obiekcie" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/vjxOeb/">v-for na obiekcie</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="0" slugHash="vjxOeb" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for na obiekcie"><a href="http://codepen.io/wojtiku/pen/vjxOeb/">Zobacz Codepen v-for na obiekcie</a>.</CodepenWidget>
 
 ## Ćwiczenie
 
 Świetnie - wiesz już jak działa pętla `v-for` w Vue.js! Użyj tej wiedzy aby wyświetlić zagnieżdżoną listę, albo inaczej mówiąc listę list. Możesz posłużyć się poniższym Code Penem. Zdefiniowałem tam listę kategorii, a w każdej z kategorii listę produktów. Po prostu kliknij "edit on CodePen" i do dzieła! Nie zapomnij zamieścić swojego rozwiązania w komentarzu.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="ZoeGPa" data-default-tab="html,result" data-user="wojtiku" data-embed-version="2" data-pen-title="v-for - zadanie" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/ZoeGPa/">v-for - zadanie</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="0" slugHash="ZoeGPa" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-for - zadanie"><a href="http://codepen.io/wojtiku/pen/ZoeGPa/">Zobacz Codepen v-for - zadanie</a>.</CodepenWidget>

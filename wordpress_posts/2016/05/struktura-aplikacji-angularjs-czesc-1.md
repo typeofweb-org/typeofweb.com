@@ -3,6 +3,7 @@ id: 15
 index: 5
 title: "Struktura aplikacji AngularJS (część\_1\_‑\_trochę historii)"
 date: 2016-05-14T17:08:00.000Z
+isMarkdown: false
 status: publish
 permalink: struktura-aplikacji-angularjs-czesc-1
 authors:
@@ -18,8 +19,8 @@ categories:
   - slug: front-end
     name: Front-end
 seo: {}
----
 
+---
 <p>W trakcie kilku ostatnich lat pracy z AngularJS obserwuję całkowitą zmianę podejścia do architektury aplikacji internetowych. Była to powolna ewolucja, po drodze mocno inspirowana dobrymi wzorcami projektowymi, szkicem Web Components oraz biblioteką React. Sublimacją tego wysiłku jest powstanie angular2, ale wszystkie wypracowane praktyki wdrożono również do AngularJS 1. Od bałaganu, porozrzucanych zależnych od siebie kontrolerów i pomieszanych <em>scope’ów</em> doszliśmy w końcu do czegoś co może wydawać się dziś oczywiste: <strong>Czystych, prostych, krótkich komponentów, odpowiedzialnych tylko za jedną konkretną funkcję aplikacji</strong>.</p>
 
 <h1 id="trochhistorii">Trochę historii</h1>

@@ -3,6 +3,7 @@ id: 20
 index: 9
 title: Komunikacja pomiędzy komponentami w Angular 2
 date: 2016-07-02T13:29:16.000Z
+isMarkdown: false
 status: publish
 permalink: komunikacja-pomiedzy-komponentami-w-angular-2
 authors:
@@ -21,11 +22,11 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
----
 
+---
 <p>Przed Wami trzecia część kursu Angular 2. W tym wpisie omawiam różne sposoby komunikacji pomiędzy komponentami na prostych przykładach.</p>
 
-<p class=important><strong>Angular 2 nie jest jeszcze gotowy na produkcję</strong>. W momencie powstawania tego wpisu najnowszą wersją tego frameworka była <em>Release Candidate 4</em>. Jest to wersja prawie gotowa do wydania, jednak minie jeszcze trochę czasu zanim całość się ustabilizuje, a pomiędzy wersjami RC-1, RC-2 i RC-3 pojawiły się dość poważne zmiany (routing, formularze).</p>
+<p class="important"><strong>Angular 2 nie jest jeszcze gotowy na produkcję</strong>. W momencie powstawania tego wpisu najnowszą wersją tego frameworka była <em>Release Candidate 4</em>. Jest to wersja prawie gotowa do wydania, jednak minie jeszcze trochę czasu zanim całość się ustabilizuje, a pomiędzy wersjami RC-1, RC-2 i RC-3 pojawiły się dość poważne zmiany (routing, formularze).</p>
 
 <h1 id="interakcjapomidzykomponentami">Interakcja pomiędzy komponentami</h1>
 
@@ -147,19 +148,19 @@ progress: {{ child.progress * 100 }}%
 }
 </code></pre>
 
-<p class=important>Jeśli chcemy robić z komponentem-dzieckiem coś bardziej skomplikowanego to musimy poczekać na jego zainicjalizowanie. Mamy pewność, że tak się stało dopiero w zdarzeniu cyklu życia <code>ngAfterViewInit</code>.</p>
+<p class="important">Jeśli chcemy robić z komponentem-dzieckiem coś bardziej skomplikowanego to musimy poczekać na jego zainicjalizowanie. Mamy pewność, że tak się stało dopiero w zdarzeniu cyklu życia <code>ngAfterViewInit</code>.</p>
 
 <p>Dla porównania prezentuję dokładnie ten sam przykład co w poprzednim akapicie, jednak zaimplementowany z użyciem <code>@ViewChild</code>:</p>
 
 <iframe class=large style="height: 400px" src="//embed.plnkr.co/PnmD1az3mIr4b57j3wzg/" frameborder="0" allowfullscren="allowfullscren"></iframe>
 
-<p class=important>Jeśli komponentów-dzieci jest kilka możemy skorzystać z dekoratora <code>@ViewChildren</code>, który pobiera kilka komponentów-dzieci i zwraca jako <a href=https://angular.io/docs/js/latest/api/core/index/QueryList-class.html><code>QueryList</code></a>, który jest żywą obserwowalną kolekcją</p>
+<p class="important">Jeśli komponentów-dzieci jest kilka możemy skorzystać z dekoratora <code>@ViewChildren</code>, który pobiera kilka komponentów-dzieci i zwraca jako <a href=https://angular.io/docs/js/latest/api/core/index/QueryList-class.html><code>QueryList</code></a>, który jest żywą obserwowalną kolekcją</p>
 
 <h1 id="komunikacjaprzypomocyserwisu">Komunikacja przy pomocy serwisu</h1>
 
 <p>W bardziej rozbudowanych aplikacjach komunikacja pomiędzy rodzicem a dzieckiem to jedno, natomiast <strong>bardzo potrzebny jest również sposób na przesyłanie informacji pomiędzy komponentami, które są od siebie bardziej oddalone</strong>. W szczególności: Pomiędzy komponentami, które nie wiedzą gdzie wzajemnie znajdują się w strukturze aplikacji. Użycie do tego pośredniczącego serwisu jest bardzo uniwersalne. Dodatkowo możemy tutaj użyć biblioteki <code>rxjs</code>, z której korzysta zresztą sam Angular 2.</p>
 
-<p class=important><code>rxjs</code> jest biblioteką implementującą reaktywne programowanie funkcyjne (FRP) w JavaScripcie. Jest to dość skomplikowany koncept wymagający zmiany myślenia o programowaniu, dlatego na potrzeby tego artykułu skorzystamy tylko z podstawowych możliwości <code>rxjs</code>. Więcej można doczytać <a href=http://reactivex.io/rxjs/>w dokumentacji</a>.</p>
+<p class="important"><code>rxjs</code> jest biblioteką implementującą reaktywne programowanie funkcyjne (FRP) w JavaScripcie. Jest to dość skomplikowany koncept wymagający zmiany myślenia o programowaniu, dlatego na potrzeby tego artykułu skorzystamy tylko z podstawowych możliwości <code>rxjs</code>. Więcej można doczytać <a href=http://reactivex.io/rxjs/>w dokumentacji</a>.</p>
 
 <p>Przykładowy serwis zamieszczam poniżej. Publiczne pole <code>data$</code> jest tym, co będą mogły obserwować komponenty (za pośrednictwem tego pola będą odbierać informacje). Metoda <code>addData</code> posłuży im zaś do przesyłania danych.</p>
 

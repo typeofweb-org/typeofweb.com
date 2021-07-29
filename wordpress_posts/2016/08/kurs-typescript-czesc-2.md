@@ -3,6 +3,7 @@ id: 29
 index: 18
 title: Kurs TypeScript – część 2
 date: 2016-08-08T13:55:32.000Z
+isMarkdown: false
 status: publish
 permalink: kurs-typescript-czesc-2
 authors:
@@ -20,11 +21,11 @@ series:
   slug: typescript
   name: TypeScript
 seo: {}
----
 
+---
 <p><a href="https://typeofweb.com/2016/07/11/typescript-czesc-1/">Poprzedni wpis na temat TypeScript</a> cieszył się niemałym zainteresowaniem i wiele osób pisało do mnie z pytaniem, kiedy pojawi się kontynuacja. I oto ona! <strong>W tym artykule nauczymy się korzystać z klas, klas abstrakcyjnych i dziedziczenia. Dodatkowo będziemy implementować interfejsy i zobaczymy czym różnią się od klas abstrakcyjnych</strong>. Zapraszam do czytania!</p>
 
-<p class=important>Zakładam, że czytelnicy są zaznajomieni z JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>. Jeśli jednak coś jest niejasne to chętnie odpowiem na pytania w komentarzach.</p>
+<p class="important">Zakładam, że czytelnicy są zaznajomieni z JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>. Jeśli jednak coś jest niejasne to chętnie odpowiem na pytania w komentarzach.</p>
 
 <h1 id="argumentykonstruktora">Argumenty konstruktora</h1>
 
@@ -49,7 +50,7 @@ seo: {}
 
 <p>W poprzednim wpisie pobieżnie omówiłem klasy i podstawy interfejsów w TypeScripcie. Nie napisałem jednak ani słowa o jednej z bardziej znanych cech programowania orientowanego obiektowo: <strong>O dziedziczeniu.</strong></p>
 
-<p class=important>Dziedziczenie jest bez wątpienia przydatnym elementem programowania obiektowego, jednak jego nadużywanie jest bardzo szkodliwym antywzorcem. <strong>Zdecydowanie lepiej jest <a href=https://en.wikipedia.org/wiki/Composition_over_inheritance>faworyzować kompozycję nad dziedziczeniem</a>.</strong></p>
+<p class="important">Dziedziczenie jest bez wątpienia przydatnym elementem programowania obiektowego, jednak jego nadużywanie jest bardzo szkodliwym antywzorcem. <strong>Zdecydowanie lepiej jest <a href=https://en.wikipedia.org/wiki/Composition_over_inheritance>faworyzować kompozycję nad dziedziczeniem</a>.</strong></p>
 
 <p>Weźmy typowy, całkowicie oderwany od rzeczywistości przykład, używany chyba we wszystkich kursach programowania obiektowego. Stwórzmy klasę reprezentującą zwierzę!<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
@@ -118,7 +119,7 @@ class ShibaInu extends Dog {
 }
 </code></pre>
 
-<p class=important>TypeScript nie posiada dziedziczenia wielokrotnego (<em>multiple inheritance</em>). Wynika to bezpośrednio z idei prototypowego dziedziczenia w JavaScript. Obejściem tego ograniczenia jest przykładowo skorzystanie z mixinów.</p>
+<p class="important">TypeScript nie posiada dziedziczenia wielokrotnego (<em>multiple inheritance</em>). Wynika to bezpośrednio z idei prototypowego dziedziczenia w JavaScript. Obejściem tego ograniczenia jest przykładowo skorzystanie z mixinów.</p>
 
 <h1 id="polimorfizm">Polimorfizm</h1>
 

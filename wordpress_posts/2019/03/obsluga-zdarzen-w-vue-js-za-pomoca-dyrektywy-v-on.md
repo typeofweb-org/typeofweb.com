@@ -26,11 +26,11 @@ series:
 seo:
   focusKeywords:
     - Zdarzenia
----
 
+---
 Aby aplikacja była ciekawa, musi pozwalać użytkownikowi na interakcję. Może to być nie tylko wprowadzanie danych do pól formularzy, ale również reagowanie na **zdarzenia kliknięcia**, czy ruchy myszką. Niezależnie od tego, jaki rodzaj interakcji chcesz oprogramować, Vue.js pozwoli Ci obsłużyć go za pomocą dyrektywy `v-on`.
 
-<!--more-->
+{/* more */}
 
 ## Dyrektywa `v-on`
 
@@ -40,7 +40,7 @@ Dzięki dyrektywie `v-on` możesz nasłuchiwać na **zdarzenia DOM** i wykonać 
 new Vue({
   data() {
     return {
-      counter: 0,
+      counter: 0
     };
   },
   methods: {
@@ -49,27 +49,22 @@ new Vue({
     },
     decrement() {
       this.counter = this.counter - 1;
-    },
-  },
-}).$mount('#app');
+    }
+  }
+}).$mount("#app");
 ```
-
 ```html
 <div id="app">
   Licznik: {{ counter }}
-  <button>+</button>
-  <!-- (1) -->
-  <button>-</button>
-  <!-- (2) -->
+  <button>+</button> <!-- (1) -->
+  <button>-</button> <!-- (2) -->
 </div>
 ```
-
-<p class="codepen" data-height="164" data-theme-id="0" data-slug-hash="PBZjWe" data-default-tab="result" data-user="wojtiku" data-embed-version="2" data-pen-title="Zdarzenia z użyciem dyrektywy v-on">See the Pen <a href="https://codepen.io/wojtiku/pen/PBZjWe/">Zdarzenia z użyciem dyrektywy v-on</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="164" themeId="0" slugHash="PBZjWe" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="Zdarzenia z użyciem dyrektywy v-on"><a href="http://codepen.io/wojtiku/pen/PBZjWe/">Zobacz Codepen Zdarzenia z użyciem dyrektywy v-on</a>.</CodepenWidget>
 
 Dyrektywę `v-on`, podobnie jak `v-bind`, możesz zapisać też w **formie skróconej**. Wtedy nazwa zdarzenia poprzedzona jest znakiem małpy, np. `@click` (2). Ta bardzo wygodna forma zapisu jest tym, czego będziesz używać najczęściej do nasłuchiwania na zdarzenia.
 
 ## Modyfikatory zdarzeń
-
 Obsługując zdarzenia, często będziesz chcieć wykonać pewne **standardowe operacje** takie jak `e.preventDefault()`, czy wywołać kod jedynie jeśli kliknięto dokładnie w dany element (a nie np. w jego dziecko).
 
 Do tej pory sposobem na zrobienie tych rzeczy było **ręczne wywołanie** ich w funkcji obsługującej dane zdarzenie (1). Wadą takiego rozwiązania jest jednak to, że **mieszamy logikę obsługi zdarzeń** przeglądarki z logiką biznesową naszej aplikacji. Oczywiście powtarzanie tego typu fragmentów kodu jest również **nużące**.
@@ -80,18 +75,17 @@ Na szczęście Vue daje name rozwiązanie w postaci **modyfikatorów dyrektyw**,
 new Vue({
   data() {
     return {
-      counter: 0,
+      counter: 0
     };
   },
   methods: {
     onClick(e) {
       e.preventDefault(); // (1)
       this.counter = this.counter + 1;
-    },
-  },
-}).$mount('#app');
+    }
+  }
+}).$mount("#app");
 ```
-
 ```html
 <!-- (2) -->
 <ul id="app">
@@ -100,10 +94,7 @@ new Vue({
   <li>Licznik kliknięć: {{ counter }}</li>
 </ul>
 ```
-
-<p class="codepen" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="265" data-theme-id="0" data-default-tab="result" data-user="wojtiku" data-slug-hash="Mxoovp" data-pen-title="Modyfikatory zdarzeń w Vue.js">See the Pen <a href="https://codepen.io/wojtiku/pen/Mxoovp/">
-Modyfikatory zdarzeń w Vue.js</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>)
-on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="0" slugHash="Mxoovp" defaultTab="result" user="wojtiku" penTitle="Modyfikatory zdarzeń w Vue.js"><a href="http://codepen.io/wojtiku/pen/Mxoovp/">Zobacz Codepen Modyfikatory zdarzeń w Vue.js</a>.</CodepenWidget>
 
 Vue udostępnia także modyfikatory takie jak:
 
@@ -113,15 +104,12 @@ Vue udostępnia także modyfikatory takie jak:
 - `.once` - wywoła Twój kod tylko przy pierwszym wystąpieniu zdarzenia
 - oraz kilka innych
 
-Chociaż z pomocą modyfikatorów Vue ułatwia jeszcze takie rzeczy jak obsługa klawiatury, to na dziś to wszystko. Do zdarzeń na pewno wrócimy jeszcze w dalszych częściach kursu. [typeofweb-courses-slogan category="Vue.js"]
+Chociaż z pomocą modyfikatorów Vue ułatwia jeszcze takie rzeczy jak obsługa klawiatury, to na dziś to wszystko. Do zdarzeń na pewno wrócimy jeszcze w dalszych częściach kursu. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>.
 
 ## Pytania?
-
 Jeśli chcesz na bieżąco śledzić kolejne części kursu Vue.js to koniecznie <strong>polub Type of Web na Facebooku i zapisz się na newsletter.</strong>
-
-<div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
-<div style="text-align: center;">[typeofweb-facebook-page]</div>
+<NewsletterForm />
+<FacebookPageWidget />
 
 ## Ćwiczenie
-
 Stwórz prostą aplikację, która będzie liczyła wciśnięcia klawiszy wewnątrz inputa, w którym jest kursor i wyświetlała je na ekranie.

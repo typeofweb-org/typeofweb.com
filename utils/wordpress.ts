@@ -4,13 +4,13 @@ import Url from 'url';
 
 import GrayMatter from 'gray-matter';
 
-import { toHtmlString } from './markdown';
+import { toHtml, toMdx } from './markdown';
 
 import type { PromiseValue } from '../types';
 
 const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', 'wordpress_posts');
 
-async function readFilesInDir(dir: string): Promise<readonly string[]> {
+export async function readFilesInDir(dir: string): Promise<readonly string[]> {
   const entries = await Fs.readdir(dir, { withFileTypes: true });
   return (
     await Promise.all(
@@ -60,27 +60,52 @@ export async function getPostByPermalink(permalink: string) {
 }
 export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>>;
 
-export function getExcerptAndContent(post: string) {
-  const match = /<!--\s*more\s*-->|$##\s*|\n\n|\r\n\r\n|\<h\d/.exec(post);
+export async function getExcerptAndContent(
+  post: PostByPermalink,
+  { onlyExcerpt }: { readonly onlyExcerpt?: boolean } = {},
+) {
+  if (!post) {
+    throw new Error();
+  }
+
+  const more = /<!--\s*more\s*-->|{\s*\/_\s*more\s*_\/\s*}|{\s*\/\*\s*more\s*\*\/\s*}/;
+  const other = /$##\s*|\n\n|\r\n\r\n|\<h\d/;
+  const match = more.exec(post.content) || other.exec(post.content);
 
   if (!match) {
     throw new Error('???');
   }
 
-  const [excerpt, content] = [post.slice(0, match.index), post.slice(match.index)];
+  const [excerpt, content] = [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')];
 
   /**
    * @todo:
-   * - parse HTML and add missing <p> tags
    * - fix headings level (h1 -> h2 etc.)
    * - if markdown – compile it
-   * - add syntax highlighting
    */
 
-  return {
-    excerpt: toHtmlString(excerpt, { excerpt: true }),
-    content: toHtmlString(content, { excerpt: false }).toString('utf-8'),
-  };
+  const excerptHtml = toHtml(excerpt, { excerpt: true });
+  if (onlyExcerpt) {
+    return {
+      excerpt: excerptHtml,
+      content: '',
+      isMdx: false as const,
+    };
+  }
+
+  try {
+    return {
+      excerpt: excerptHtml,
+      content: await toMdx(content, post.data),
+      isMdx: true as const,
+    };
+  } catch {
+    return {
+      excerpt: excerptHtml,
+      content: toHtml(content, { excerpt: false }).toString('utf-8'),
+      isMdx: false as const,
+    };
+  }
 }
 
 interface PostFrontmatter {

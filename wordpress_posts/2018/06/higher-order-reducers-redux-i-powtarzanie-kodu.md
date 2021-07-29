@@ -23,25 +23,24 @@ series:
   slug: react-js
   name: React.js
 seo: {}
----
 
+---
 Higher Order Reducers — co to takiego? Gdy popracujesz dłużej z Reduksem to na pewno zauważysz pewne powtarzalne wzorce. Napisanie akcji i reducerów do obsługi API to konieczność powtórzenia bardzo podobnego kodu kilka, kilkanaście razy! Czy na pewno jest to konieczne? Z pomocą przychodzą właśnie _Higher Order Reducers_ i kompozycja.
 
-<!--more-->
+{/* more */}
 
 ## Definicja Higher Order Reducer
 
-<p class=important>Higher Order Reducer to funkcja, która zwraca reducer i (opcjonalnie) przyjmuje reducer jako argument.</p>
+<p class="important">Higher Order Reducer to funkcja, która zwraca reducer i (opcjonalnie) przyjmuje reducer jako argument.</p>
 
 Brzmi zrozumiale? Proste HOR są… proste ;) Ale koncept jest bardziej rozbudowany niż się może początkowo wydawać, szczególnie jeśli weźmiemy pod uwagę kompozycję!
 
 ## Zastosowanie
-
 Weźmy sobie jako przykład operowanie na API. Pobieranie danych z endpointa. Musisz obsłużyć takie akcje:
 
-- pobieranie rozpoczęte
-- pobieranie zakończone sukcesem (dane)
-- błąd pobierania (błąd)
+* pobieranie rozpoczęte
+* pobieranie zakończone sukcesem (dane)
+* błąd pobierania (błąd)
 
 W podstawowej werji wygląda to tak jak poniżej. Action Creatory:
 
@@ -64,13 +63,16 @@ const dataFetchErrored = error => ({
 I do tego reducer:
 
 ```js
-const data = (state = { data: null, isLoading: false, error: null }, action) => {
+const data = (
+  state = { data: null, isLoading: false, error: null },
+  action
+) => {
   switch (action) {
-    case 'FETCH_DATA_STARTED':
+    case "FETCH_DATA_STARTED":
       return { data: null, isLoading: true, error: null };
-    case 'FETCH_DATA_SUCCESS':
+    case "FETCH_DATA_SUCCESS":
       return { data: action.payload, isLoading: false, error: null };
-    case 'FETCH_DATA_ERROR':
+    case "FETCH_DATA_ERROR":
       return { data: null, isLoading: false, error: action.payload };
     default:
       return state;
@@ -134,18 +136,17 @@ const contacts = asyncReducerFactory('CONTACTS');
 I tak dalej. Kolejne użycia nie wymagają pisania więcej boilerplate'u.
 
 ## Higher Order Action Creator
-
 No, ale nadal mam sporo boilerplate'u, prawda? Na szczęście _action creator_ też mogę generować dynamicznie:
 
 ```js
 const asyncActionCreatorFactory = (name, thunk) => () => {
-  return (dispatch) => {
+  return dispatch => {
     dispatch({ type: `FETCH_${name}_STARTED` });
 
     return dispatch(thunk)
-      .then((data) => data.json())
-      .then((json) => dispatch({ type: `FETCH_${name}_SUCCESS`, payload: json }))
-      .catch((err) => dispatch({ type: `FETCH_${name}_ERROR`, payload: err }));
+      .then(data => data.json())
+      .then(json => dispatch({ type: `FETCH_${name}_SUCCESS`, payload: json }))
+      .catch(err => dispatch({ type: `FETCH_${name}_ERROR`, payload: err }));
   };
 };
 ```
@@ -155,30 +156,36 @@ Ponownie — na podstawie `name` generuję nazwy akcji. `thunk` to pewna asynchr
 Jak tego używam?
 
 ```js
-const fetchContacts = asyncActionCreatorFactory('DATA', (dispatch, getState) => {
-  return fetch('endpoint');
-});
+const fetchContacts = asyncActionCreatorFactory(
+  "DATA",
+  (dispatch, getState) => {
+    return fetch("endpoint");
+  }
+);
 ```
 
 A dla kontaktów?
 
 ```js
-const fetchContacts = asyncActionCreatorFactory('CONTACTS', (dispatch, getState) => {
-  return fetch('https://randomuser.me/api/?format=json&results=10&seed=' + encodeURIComponent(getState().seed));
-});
+const fetchContacts = asyncActionCreatorFactory(
+  "CONTACTS",
+  (dispatch, getState) => {
+    return fetch(
+      "https://randomuser.me/api/?format=json&results=10&seed=" +
+        encodeURIComponent(getState().seed)
+    );
+  }
+);
 ```
 
 Tutaj dodatkowo „przemyciłem” parametr pochodzący z `getState` — tak samo jak we wpisie o redux-thunk.
 
 ## Podsumowanie
-
-W taki sposób, korzystając z funkcji wyższego rzędu, można uprościć wiele rzeczy w React i Redux. Tworzenie reducerów, action creatorów, a nawet komponentów! Mam nadzieję, że będziesz już potrafiła szybko stworzyć następne akcje i reducery dla kolejnych endpointów Twojego API! [typeofweb-courses-slogan category="React"]
+W taki sposób, korzystając z funkcji wyższego rzędu, można uprościć wiele rzeczy w React i Redux. Tworzenie reducerów, action creatorów, a nawet komponentów! Mam nadzieję, że będziesz już potrafiła szybko stworzyć następne akcje i reducery dla kolejnych endpointów Twojego API! <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
-
-<div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
-<div style="text-align: center;">[typeofweb-facebook-page]</div>
+<NewsletterForm />
+<FacebookPageWidget />
 
 ## Ćwiczenie
-
 **Ćwiczenie:** Zrefaktoruj kod z naszą listą kontaktów tak, aby skorzystać z napisanych w tym wpisie funkcji. Kod znajdziesz tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-4-redux](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-4-redux)

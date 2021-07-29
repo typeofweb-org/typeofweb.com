@@ -1,24 +1,33 @@
-import { cloneElement, Children } from 'react';
+import { cloneElement, Children, forwardRef } from 'react';
 
-import type { ReactElement } from 'react';
+import type { ReactElement, FunctionComponentElement, MutableRefObject, RefCallback } from 'react';
 
-export const LinkUnderlineEffect = ({ children }: { readonly children: ReactElement<JSX.IntrinsicElements['a']> }) => {
+export const LinkUnderlineEffect = forwardRef<
+  HTMLAnchorElement,
+  {
+    readonly children: FunctionComponentElement<
+      ReactElement<JSX.IntrinsicElements['a']> & {
+        readonly ref?: MutableRefObject<HTMLAnchorElement> | RefCallback<HTMLAnchorElement>;
+      }
+    >;
+    readonly href?: string;
+  }
+>(({ children, href }, fref) => {
   const link = Children.only(children);
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ok
+  const className: string = link.props.className ?? '';
 
   return (
     <span className="fancy-inner-link">
       {cloneElement(link, {
         ...link.props,
-        className: `${link.props.className ?? ''} fancy-link`,
-        children: (
-          <>
-            {link.props.children}
-            {/* <svg aria-hidden version="2.0" className={Styles.image}>
-          <use href="#fancy-link-underline" />
-        </svg> */}
-          </>
-        ),
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ok
+        href: href || link.props.href,
+        ref: fref,
+        className: `${className} fancy-link`,
       })}
     </span>
   );
-};
+});
+LinkUnderlineEffect.displayName = 'LinkUnderlineEffect';

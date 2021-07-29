@@ -23,7 +23,7 @@ export const MainNav = () => {
           return (
             <li key={item.label} className="flex items-stretch">
               <a
-                className={`inline-flex items-center transition-colors ${
+                className={`inline-flex items-center transition-colors text-3xl lg:text-base ${
                   item.isActive
                     ? 'text-green-500 font-semibold border-b-2 border-green-500 hover:border-green-700 hover:text-green-700'
                     : 'text-gray-800 hover:text-green-500 border-b-2 border-transparent hover:border-green-500'

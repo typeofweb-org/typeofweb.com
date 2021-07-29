@@ -1,3 +1,4 @@
+import { MDXComponent } from '../components/MDXComponent';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { SingleArticle } from '../components/organisms/SingleArticle';
 import { TwoColumns } from '../components/templates/TwoColumns';
@@ -38,7 +39,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   return { props: await postToProps(post, authorsJson) };
 };
 
-const PermalinkPage = ({ excerpt, content, frontmatter }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const PermalinkPage = ({ excerpt, frontmatter, ...contentObj }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { setRunningHeader } = useRunningHeader();
 
   return (
@@ -46,7 +47,14 @@ const PermalinkPage = ({ excerpt, content, frontmatter }: InferGetStaticPropsTyp
       <SingleArticle
         ref={setRunningHeader}
         excerpt={excerpt}
-        content={content}
+        isMdx={contentObj.isMdx}
+        content={
+          contentObj.isMdx ? (
+            <MDXComponent {...contentObj.content} />
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: contentObj.content }} />
+          )
+        }
         id={frontmatter.id}
         index={frontmatter.index}
         title={frontmatter.title}

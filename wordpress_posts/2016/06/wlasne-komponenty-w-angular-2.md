@@ -3,6 +3,7 @@ id: 19
 index: 8
 title: Własne komponenty w Angular 2
 date: 2016-06-14T17:27:29.000Z
+isMarkdown: false
 status: publish
 permalink: wlasne-komponenty-w-angular-2
 authors:
@@ -18,8 +19,8 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
----
 
+---
 <p><a href="https://typeofweb.com/2016/06/03/wstep-do-angular-2/">W poprzedniej części kursu Angular 2</a> omówiłem założenia frameworka, tworzenie nowego projektu, podstawy bindingów oraz wreszcie kod pierwszego komponentu. Pominąłem jednak kilka kwestii takich jak <strong>bindingi na własnych komponentach</strong>, pełna składnia bindingu dwukierunkowego, czy możliwość odwoływania się do referencji do obiektów na poziomie szablonów (brzmi skomplikowanie, ale nie jest!). Chciałbym teraz do tych kwestii wrócić. W tym celu odtworzę projekt, który poprzednio <a href="https://typeofweb.com/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/">zaimplementowałem w AngularJS 1.5</a> gdy opisywałem koncept komponentów. Będzie to prosta lista kontaktów z gravatarami.</p>
 
 <h1 id="koncepcyjnie">Koncepcyjnie</h1>
@@ -42,7 +43,7 @@ ng g component gravatar
 
 <p>Dzięki pomocy Angular CLI, nie musimy już powtarzać wielu manualnych czynności co znacznie przyspiesza pracę z Angular 2.</p>
 
-<p class=important>Określenie „serwis” dotyczy w zasadzie dowolnej klasy w Angularze, która nie jest komponentem. Na przykład modele, wszelkie klasy pomocnicze i pośredniczące.</p>
+<p class="important">Określenie „serwis” dotyczy w zasadzie dowolnej klasy w Angularze, która nie jest komponentem. Na przykład modele, wszelkie klasy pomocnicze i pośredniczące.</p>
 
 <h1 id="serwisywangular2">Serwisy w Angular 2</h1>
 
@@ -57,7 +58,7 @@ export class ContactsService {
 
 <p>Jest to zwykła klasa z dodanym dekoratorem <code>@Injectable</code>. Do czego jest potrzebny dekorator <code>@Injectable</code>? Jeśli klasa, którą tworzymy wykorzystuje <em>Dependency Injection</em> to musi mieć jakiś dekorator, np. <code>@Injectable</code>. Jest to wymaganie stawiane przez TypeScript – Angular 2 korzysta z metadanych parametrów przekazywanych do konstruktora, aby wstrzyknąć prawidłowe zależności. Te metadane są jednak nieobecne jeśli klasa nie ma żadnego dekoratora! W tym przypadku nie korzystamy (jeszcze) z <em>Dependency Injection</em>, jednak zalecam dodać dekorator ze względu na spójność z resztą aplikacji.</p>
 
-<p class=important>Dobrą praktyką jest dodawanie dekoratora <code>@Injectable</code> do każdego serwisu.</p>
+<p class="important">Dobrą praktyką jest dodawanie dekoratora <code>@Injectable</code> do każdego serwisu.</p>
 
 <p>Stworzony serwis ma za zadanie przechowywać tablicę kontaktów. Zaczynamy więc od zadeklarowania interfejsu reprezentującego kontakt, a następnie dodajemy do klasy serwisu odpowiednie pole z jednym kontaktem (przykładowo). Cała klasa serwisu wygląda tak:</p>
 
@@ -85,7 +86,7 @@ export class ContactsService {
 
 <p>Tak napisaną klasę <code>ContactsService</code> możemy wstrzyknąć w dowolne miejsce w aplikacji. <em>Dependency Injection</em> w Angular 2 jest podobne do tego z AngularJS, ale znacznie bardziej rozbudowane i dające więcej możliwości.</p>
 
-<p class=important>Dependency Injection jest wzorcem projektowym, który ma na celu usuwanie ścisłych powiązań pomiędzy komponentami aplikacji. Jest to realizowane poprzez odwrócenie kontroli (<i>Inversion of Control</i>) – komponenty nie tworzą ani nie ładują potrzebnych serwisów, a zamiast tego definiują listę zależności i oczekują, że te zależności zostaną im przekazane. Rozwiązanie to jest niezwykle elastyczne i ułatwia tworzenie aplikacji. Więcej na temat teorii można poczytać choćby <a href=https://pl.wikipedia.org/wiki/Wstrzykiwanie_zale%C5%BCno%C5%9Bci>na wikipedii</a>.</p>
+<p class="important">Dependency Injection jest wzorcem projektowym, który ma na celu usuwanie ścisłych powiązań pomiędzy komponentami aplikacji. Jest to realizowane poprzez odwrócenie kontroli (<i>Inversion of Control</i>) – komponenty nie tworzą ani nie ładują potrzebnych serwisów, a zamiast tego definiują listę zależności i oczekują, że te zależności zostaną im przekazane. Rozwiązanie to jest niezwykle elastyczne i ułatwia tworzenie aplikacji. Więcej na temat teorii można poczytać choćby <a href=https://pl.wikipedia.org/wiki/Wstrzykiwanie_zale%C5%BCno%C5%9Bci>na wikipedii</a>.</p>
 
 <p>Jednym z nowych elementów DI w Angular 2 jest fakt, że równolegle do drzewa komponentów istnieje również drzewo hierarchicznych zależności, a konfiguracja Dependency Injection może nastąpić na dowolnym poziomie tego drzewa (w dowolnym komponencie). Więcej na ten temat można doczytać <a href="https://angular.io/docs/ts/latest/guide/hierarchical-dependency-injection.html">w dokumentacji</a>. Na potrzeby tego wpisu wystarczy nam informacja, że <strong>aby zależność można było wstrzyknąć, musimy podać również który komponent ją udostępnia</strong>. Robimy to przy pomocy tablicy <code>providers</code> w dekoratorze <code>@Component</code>. Ponieważ chcemy, aby serwis był „globalny”, więc dodajemy tablicę <code>providers</code> w najwyższym komponencie aplikacji. W tym przykładzie akurat do tego samego komponentu wstrzykujemy również instancję serwisu, aby skorzystać z tablicy kontaktów:</p>
 
@@ -103,7 +104,7 @@ export class AppComponent {
 
 <p><a href="https://typeofweb.com/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/">Opisywałem już</a> zdarzenia cyklu życia (<em>lifecycle hooks</em>) w AngularJS 1.5 i podobny koncept istnieje również w Angular 2. Krótko mówiąc, chodzi o takie metody w klasie komponentu, które są automatycznie wywoływane przez Angulara gdy komponent jest tworzony, zmieniany lub niszczony. Szczegóły można <a href="https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html">doczytać</a>, w tym przypadku interesuje nas jedno konkretne zdarzenie: tworzenie komponentu.</p>
 
-<p class=important>Dobrą praktyką jest umieszczanie jak najmniej logiki w konstruktorze klasy. Dzięki temu instancjonowanie komponentu jest szybsze, łatwiej nim zarządzać i testować. Bardziej skomplikowane operacje zalecam przenieść do metody <code>ngOnInit</code> z interfejsu <code>OnInit</code>.</p>
+<p class="important">Dobrą praktyką jest umieszczanie jak najmniej logiki w konstruktorze klasy. Dzięki temu instancjonowanie komponentu jest szybsze, łatwiej nim zarządzać i testować. Bardziej skomplikowane operacje zalecam przenieść do metody <code>ngOnInit</code> z interfejsu <code>OnInit</code>.</p>
 
 <p>Aby wpiąć się w jedno ze zdarzeń cyklu życia, polecane jest zaimplementowanie w klasie komponentu odpowiedniego interfejsu udostępnianego przez Angulara. Chcemy wykonać pewne operacje od razu po stworzeniu komponentu, więc implementujemy interfejs <code>OnInit</code>, który zawiera metodę <code>ngOnInit</code>. Zostanie ona automatycznie wywołana przez Angulara po stworzeniu komponentu. Cały kod klasy ostatecznie wygląda w ten sposób:</p>
 

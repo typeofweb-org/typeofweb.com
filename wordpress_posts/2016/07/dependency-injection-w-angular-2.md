@@ -3,6 +3,7 @@ id: 24
 index: 14
 title: Dependency Injection w Angular 2
 date: 2016-07-19T10:40:43.000Z
+isMarkdown: false
 status: publish
 permalink: dependency-injection-w-angular-2
 authors:
@@ -20,11 +21,11 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
----
 
+---
 <p>Angular 2 aktywnie korzysta ze wzorca projektowego Dependency Injection. Ten wpis poświęciłem wyłącznie implementacji DI w tym frameworku. Jest ona bardzo rozbudowana i niezwykle ciekawa, a jej dokładne poznanie pozwoli na lepsze zrozumienie wstrzykiwania zależności w Angularze oraz sprawi, że będziemy tworzyć aplikacje bardziej świadomie i łatwiej.</p>
 
-<p class=important>Samemu <a href=https://typeofweb.com/2016/07/07/wzorce-projektowe-dependency-injection/>tematowi Dependency Injection przeznaczyłem osobny wpis</a>. Piszę tam o wzorcu projektowym, niezależnie od implementacji.</p>
+<p class="important">Samemu <a href=https://typeofweb.com/2016/07/07/wzorce-projektowe-dependency-injection/>tematowi Dependency Injection przeznaczyłem osobny wpis</a>. Piszę tam o wzorcu projektowym, niezależnie od implementacji.</p>
 
 <p>Zacznijmy może od tego, że Dependency Injection jest bardzo ważną częścią Angular 2. <strong>Bez korzystania z DI nie możemy budować nawet prostych aplikacji</strong>. Angular 2 ma własny framework DI (który ma być udostępniony jako moduł niezależny od Angulara, do wykorzystania w dowolnej aplikacji). Co takiego robi dla nas DI w Angular 2? Spójrzmy na prosty przykład. Podobny kod widzieliśmy już wielokrotnie:</p>
 
@@ -88,7 +89,7 @@ class MyAppComponent { … }
 
 <p>W pierwszym przypadku rejestracja <code>DataService</code> ma miejsce w komponencie <code>MyChildComponent</code> i przez to każdy z komponentów <code>MyChildComponent</code> otrzymał swoją własną instancję serwisu. W drugim przypadku serwis zostaje zarejestrowany w rodzicu (<code>AppComponent</code>) i dzięki temu komponenty-dzieci współdzielą tę samą instancję <code>DataService</code>. Nasuwa się tutaj jeden ważny wniosek: <strong>Instancje zależności zarejestrowanych w komponencie są współdzielone przez wszystkie jego dzieci</strong>.</p>
 
-<p class=important>Innymi słowy, zależności w Angular 2 są <strong>singletonami</strong> na poziomie danego injectora.</p>
+<p class="important">Innymi słowy, zależności w Angular 2 są <strong>singletonami</strong> na poziomie danego injectora.</p>
 
 <h1 id="wieleinjectorw">Wiele injectorów</h1>
 
@@ -233,7 +234,7 @@ class LocalStorageDataService { … }
 { provide: DataService, useClass: LocalStorageDataService }
 </code></pre>
 
-<p class=important>Jeśli myślisz teraz o <strong>wzorcu projektowym strategia</strong> – to dobrze. Jest to jeden ze scenariuszy gdy <code>useClass</code> jest przydatne.</p>
+<p class="important">Jeśli myślisz teraz o <strong>wzorcu projektowym strategia</strong> – to dobrze. Jest to jeden ze scenariuszy gdy <code>useClass</code> jest przydatne.</p>
 
 <h3 id="useexistingtworzeniealiasw"><code>useExisting</code> - tworzenie aliasów</h3>
 

@@ -23,18 +23,16 @@ series:
   slug: react-js
   name: React.js
 seo: {}
----
 
+---
 Wbudowanych Hooków w React jest kilka, a jeszcze więcej możesz tworzyć sam(a). Zaczniemy jednak od podstawowego wbudowanego Hooka `useState`. Dodamy stan do komponentu funkcyjnego!
 
-<!--more-->
+{/* more */}
 
 ## Komponenty funkcyjne
-
 Na początek krótka informacja od twórców React. Do tej pory komponenty będące funkcjami nazywały się **Stateless Functional Component**. Od momentu wprowadzenia Hooków ta nazwa nie miałaby dłuższej sensu. Dlatego od teraz takie komponenty nazywamy **Function Component**.
 
 ## useState — stan
-
 Zgodnie z konwencją, **nazwy React Hook zaczynają się od słowa _use_**. Mamy więc `useState`, `useEffect`, `useContext` itd. W tym wpisie będę mówił tylko o tym pierwszym, kolejne wkrótce :)
 
 Weźmy pierwszy najprostszy przykład z hookami: Dodanie stanu do komponentu funkcyjnego. Zróbmy licznik ;)
@@ -42,14 +40,14 @@ Weźmy pierwszy najprostszy przykład z hookami: Dodanie stanu do komponentu fun
 ```jsx
 function App() {
   const [counter, setCounter] = React.useState(0);
-
+  
   return (
     <div>
       {counter}
       <button onClick={() => setCounter(counter + 1)}>+</button>
     </div>
   );
-}
+};
 ```
 
 Co tu się dzieje? Wywołuję funkcję `React.useState(0);`. Jest to Hook. Ten Hook zwraca tablicę z dwoma elementami:
@@ -65,16 +63,14 @@ Stała `counter` zawiera aktualny stan. Na początku jest to stan początkowy, c
 
 Sprawdźmy jak to działa w praktyce:
 
-<p class="codepen" data-height="265" data-theme-id="0" data-slug-hash="zedadL" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="React.js w przykładach: Filtrowanie listy">See the Pen <a href="https://codepen.io/mmiszy/pen/zedadL/">React Hooks: Licznik</a> by Michał Miszczyszyn (<a href="https://codepen.io/mmiszy">@mmiszy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="0" slugHash="zedadL" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy"><a href="http://codepen.io/mmiszy/pen/zedadL/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.</CodepenWidget>
 
 ## Ale co to w ogóle jest Hook?
-
 Abstrakcyjnie: Hooki to mechanizm mocno inspirowany [**State Monad z Haskella**](https://mmhaskell.com/monads-5/). **Pozwalają na przechowywanie stanu pomiędzy kolejnymi wywołaniami funkcji**, bez konieczności martwienia się mutacjami czy jakimiś referencjami.
 
 Jak to działa pod podszewką? W telegraficznych skrócie: React wywołuje Twoją funkcję (komponent funkcyjny) i może przechowywać sobie związany z nią stan. Przed wywołaniem komponentu funkcyjnego, React wie dokładnie, który komponent jest wywoływany i który stan powinien zostać „włożony” do Hooków. Po zakończeniu wywołania funkcji, React sprawdza czy stan się zmienił i odkłada na odpowiednie miejsce. **React robi za Ciebie dokładnie to, co do tej pory było robione manualnie przez Ciebie w metodach cyklu życia**. To ogromne ułatwienie!
 
 ## Filtrowanie listy z Hookami
-
 Wróćmy do przykładu, który był implementowany w tym kursie już 2 razy:
 
 https://typeofweb.com/2018/01/24/react-js-w-przykladach-filtrowanie-statycznej-listy/
@@ -90,27 +86,24 @@ function App() {
     const filteredUsers = getFilteredUsersForText(text);
     setUsers(filteredUsers);
   }
-
+  
   return (
     <div>
       <input onInput={filterUsers} />
       <UsersList users={filteredUsers} />
     </div>
   );
-}
+};
 ```
 
 W momencie wpisania czegoś w input, wywoływana jest funkcja `filterUsers`, która filtruje listę i wywołuje `setUsers` pochodzące z Hooka. Ot, cała filozofia. Stan jest _gdzieś_ przechowywany i nie bardzo obchodzi nas gdzie. To po prostu działa.
 
-<p class="codepen" data-height="265" data-theme-id="0" data-slug-hash="ErvLzo" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="React.js w przykładach: Filtrowanie listy">See the Pen <a href="https://codepen.io/mmiszy/pen/ErvLzo/">React Hooks: Filtrowanie listy</a> by Michał Miszczyszyn (<a href="https://codepen.io/mmiszy">@mmiszy</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="0" slugHash="ErvLzo" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy"><a href="http://codepen.io/mmiszy/pen/ErvLzo/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.</CodepenWidget>
 
 ## Pytania?
-
-[typeofweb-courses-slogan category="React"] Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
-
-<div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
-<div style="text-align: center;">[typeofweb-facebook-page]</div>
+<a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>. Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
+<NewsletterForm />
+<FacebookPageWidget />
 
 ## Ćwiczenie
-
 **Ćwiczenie**: Przepisz jakiś komponent z klasy na Hooka `useState`. Jak wrażenia?

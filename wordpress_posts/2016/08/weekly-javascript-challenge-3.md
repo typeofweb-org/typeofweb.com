@@ -3,6 +3,7 @@ id: 28
 index: 17
 title: 3. Weekly JavaScript Challenge
 date: 2016-08-07T13:15:30.000Z
+isMarkdown: false
 status: publish
 permalink: weekly-javascript-challenge-3
 authors:
@@ -15,11 +16,11 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
----
 
+---
 <p>Zakończył się trzeci Weekly JavaScript Challenge. Grupa zyskuje co raz większą popularność, zapisały się do niej już 494 osoby. <strong>Dziękuję</strong> wszystkim, którzy rozwiązują zadania i komentują pod rozwiązaniami innych osób!</p>
 
-<p class=important>Weekly JavaScript Challenge to <a href=https://www.facebook.com/groups/1131907053499522>grupa na Facebooku</a>. Celem jej istnienia jest wspólna nauka JavaScriptu poprzez rozwiązywanie prostych zadań i wzajemną ocenę kodu.</p>
+<p class="important">Weekly JavaScript Challenge to <a href=https://www.facebook.com/groups/1131907053499522>grupa na Facebooku</a>. Celem jej istnienia jest wspólna nauka JavaScriptu poprzez rozwiązywanie prostych zadań i wzajemną ocenę kodu.</p>
 
 <p>Pamiętajcie, że <strong>poprzednie zadania można rozwiązywać przez cały czas!</strong></p>
 

@@ -3,7 +3,7 @@ id: 751
 index: 49
 title: Klasy jako komponenty React.js
 date: 2017-12-19T12:26:57.000Z
-isMarkdown: true
+isMarkdown: false
 status: publish
 permalink: klasy-jako-komponenty-react-js
 authors:
@@ -23,13 +23,16 @@ series:
   slug: react-js
   name: React.js
 seo: {}
----
 
+---
 Do tej pory używaliśmy prostych funkcji i z nich tworzyliśmy komponenty React. Mimo, że przeważająca część komponentów, które tworzę są właśnie takimi prostymi funkcjami, to jednak nie wszystkie. Funkcje są bardzo przydatne, jednak poniekąd ograniczone. Jak więc inaczej można tworzyć komponenty w React.js? <strong>Używając klas</strong>!
 
-<!--more-->
+{/* more */}
+
 <h2>Stateless Functional Component</h2>
+
 SFC, albo Stateless Functional Component — tak profesjonalnie nazywają się te komponenty, które do tej pory tworzyliśmy. Bezstanowe, funkcyjne — dokładnie takie one są :) Spróbujmy przepisać SFC, które wcześniej stworzyliśmy na klasę:
+
 <pre class="language-javascript"><code>function ContactItem({ login, name, department }) {
   const imgUrl = `https://api.adorable.io/avatars/55/${login}.png`;
   return (
@@ -42,8 +45,11 @@ SFC, albo Stateless Functional Component — tak profesjonalnie nazywają się 
     &lt;/li&gt;
   );
 }</code></pre>
+
 <h2>Class w React.js</h2>
+
 Korzystamy z klas znanych z ES2015. Klasa ta koniecznie musi dziedziczyć po <code>React.Component</code> (lub <code>PureComponent</code> — o tym kiedy indziej). Implementujemy w niej tylko jedną metodę: <code>render</code>. Oto kod poniżej:
+
 <pre class="language-javascript"><code>class ContactItem extends React.Component {
   render() {
     const { login, name, department } = this.props
@@ -59,19 +65,24 @@ Korzystamy z klas znanych z ES2015. Klasa ta koniecznie musi dziedziczyć po <co
     );
   }
 }</code></pre>
+
 Widzisz jakieś znaczące różnice?
+
 <h2>Po co Ci class w React.js?</h2>
+
 Na razie nie widać żadnej przewagi klasy nad funkcją. I rzeczywiście — <strong>przy takich komponentach (prezentacyjnych) lepiej jest napisać funkcję niż klasę.</strong> Gdzie klasy wygrywają i co możemy z nimi zrobić?
 
 Klasy nie istnieją bez powodu :) Oto kilka możliwości. Wszystkie omówimy w kolejnych częściach tego kursu:
 
 <ul>
- 	<li>możliwość definiowania stanu komponentu (<code>state</code>), który sprawi, że Twoja aplikacja zacznie „żyć”</li>
- 	<li>dostęp do metod cyklu życia komponentu (<em>lifecycle methods</em>), dzięki którym będziemy mogli reagować na różne wydarzenia</li>
- 	<li>możliwość definiowania fragmentów komponentów (każda funkcja może zwracać JSX!) jako metod w klasie — poprawa czytelności kodu</li>
- 	<li>możliwość tworzenia metod pomocniczych, z których można korzystać wewnątrz funkcji <code>render</code>. Na przykład do walidacji danych (przykład poniżej)</li>
+    <li>możliwość definiowania stanu komponentu (<code>state</code>), który sprawi, że Twoja aplikacja zacznie „żyć”</li>
+    <li>dostęp do metod cyklu życia komponentu (<em>lifecycle methods</em>), dzięki którym będziemy mogli reagować na różne wydarzenia</li>
+    <li>możliwość definiowania fragmentów komponentów (każda funkcja może zwracać JSX!) jako metod w klasie — poprawa czytelności kodu</li>
+    <li>możliwość tworzenia metod pomocniczych, z których można korzystać wewnątrz funkcji <code>render</code>. Na przykład do walidacji danych (przykład poniżej)</li>
 </ul>
+
 Przykładowo, jeśli korzystasz z jakiegoś modułu do formularzy w React, pewnie możesz napisać kod podobny do tego:
+
 <pre class="language-javascript"><code>class MyForm extends React.Component {
   render() {
     return (
@@ -79,18 +90,21 @@ Przykładowo, jeśli korzystasz z jakiegoś modułu do formularzy w React, pewni
     )
   }
 
-validateInput(value) {
-return value &amp;&amp; value.length === 10;
-}
+  validateInput(value) {
+    return value &amp;&amp; value.length === 10;
+  }
 }</code></pre>
 
 <h2>Co dalej?</h2>
-Interakcje z komponentami. Poznasz też <code>state</code> oraz metody cyklu życia. Czytanie ponad 40 artykułów może być przytłaczające, więc może [typeofweb-courses-slogan category="React"]
+
+Interakcje z komponentami. Poznasz też <code>state</code> oraz metody cyklu życia. Czytanie ponad 40 artykułów może być przytłaczające, więc może <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 
-<div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
-<div style="text-align: center;">[typeofweb-facebook-page]</div>
+<NewsletterForm />
+
+<FacebookPageWidget />
 
 <h2>Ćwiczenie</h2>
+
 <strong>Ćwiczenie:</strong> Przepisz pozostałe komponenty na klasy. Czy napotkałeś/aś jakieś trudności? Napisz w komentarzu!

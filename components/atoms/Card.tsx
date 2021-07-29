@@ -18,7 +18,7 @@ export const Card = forwardRef<HTMLElement, PropsWithChildren<CardProps>>(
         {...props}
         // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- it's alright
         ref={ref as any}
-        className={`mb-4 ${p} bg-gray-100 ${rounded} shadow-md ${className ?? ''} sm:mb-8`}
+        className={`mb-8 ${p} bg-gray-100 ${rounded} shadow-md ${className ?? ''} sm:mb-8`}
       >
         {children}
         <span className="intersection-observer--pixel-to-watch" />

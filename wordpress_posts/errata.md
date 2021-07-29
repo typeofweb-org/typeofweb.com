@@ -12,10 +12,9 @@ guid: https://typeofweb.com/?page_id=2488
 type: page
 categories: []
 seo: {}
+
 ---
-
 ## Książka „TypeScript na poważnie”
-
 Informacje o książce znajdziesz tutaj: [https://typescriptnapowaznie.pl](https://typescriptnapowaznie.pl/)
 
 Dołożyłem wszelkich starań, aby w niniejszej książce znalazły się wyłącznie informacje rzetelne i sprawdzone. Przetestowałem każdy fragment kodu i każdy przykład. Pomimo tego, może się tak zdarzyć, że gdzieś wkradły się błędy.

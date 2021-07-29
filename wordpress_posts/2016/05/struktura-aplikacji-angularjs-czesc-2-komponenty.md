@@ -3,6 +3,7 @@ id: 16
 index: 6
 title: "Struktura aplikacji AngularJS (część\_2\_‑\_komponenty)"
 date: 2016-05-15T15:46:17.000Z
+isMarkdown: false
 status: publish
 permalink: struktura-aplikacji-angularjs-czesc-2-komponenty
 authors:
@@ -18,8 +19,8 @@ categories:
   - slug: front-end
     name: Front-end
 seo: {}
----
 
+---
 <p>W poprzednim artykule z tej serii opowiadałem bardziej o osobistych doświadczeniach z początków pracy z AngularJS 1.0 oraz o drodze jaką przebyło środowisko AngularJS - <strong>w skrócie od bałaganu aż do komponentów</strong>. Wspomniałem tam również, że AngularJS 1.5 wprowadził nową pomocniczą funkcję <code>angular.component(…)</code> i na jej wykorzystaniu chciałbym się skupić w tym wpisie. W tym celu napiszę bardzo prosty komponent - listę kontaktów z avatarami.</p>
 
 <p>Jeśli z jakiegoś powodu nie możesz zaktualizować AngularJS do wersji 1.5, Todd Motto napisał skrypt, który dodaje <code>angular.component(…)</code> do AngularJS od wersji 1.3. Dokładne informacje na ten temat można znaleźć na <a href="https://toddmotto.com/angular-component-method-back-ported-to-1.3/">jego blogu</a>.</p>
@@ -131,7 +132,7 @@ seo: {}
 
 <p>W poprzednim artykule wspomniałem już o nowym rodzaju <em>bindingu</em>: <strong>jednokierunkowym</strong>. Do uzyskania takiego <em>bindingu</em> używa się symbolu <code>&lt;</code>. Oznacza on, że <strong>zmiany w rodzicu będą widoczne w komponencie, natomiast zmiany w komponencie nie staną się widoczne dla rodzica</strong>. Nic nie oddaje tego lepiej niż interaktywny przykład. W trakcie edycji pierwszego pola wartość automatycznie kopiowana jest również do drugiego (wewnątrz komponentu). Natomiast zmiany dokonane w drugim polu nie są już widoczne w pierwszym:</p>
 
-<p data-height="265" data-theme-id="light" data-slug-hash="VaNVOZ" data-default-tab="result" data-user="mmiszy" data-embed-version="2" class="codepen">Zobacz Pen <a href="http://codepen.io/mmiszy/pen/VaNVOZ/">Jednokierunkowy binding w AngularJS</a> - Michał Miszczyszyn (<a href="http://codepen.io/mmiszy">@mmiszy</a>) na <a href="http://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="265" themeId="light" slugHash="VaNVOZ" defaultTab="result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/VaNVOZ/">Zobacz Codepen</a>.</CodepenWidget>
 
 <p>Istotnym jest, aby pamiętać, że mowa tutaj o zmianach wartości prostej (jak powyżej) lub referencji. Jeśli do <em>bindingu</em> przekazany jest obiekt i w komponencie zmienione zostanie jakieś pole tego obiektu to <strong>taka zmiana będzie widoczna w rodzicu</strong>. Jeśli natomiast cały obiekt zostanie nadpisany to modyfikacja nie będzie propagowana. Jest to zachowanie znane każdemu programiście JavaScript:</p>
 
@@ -268,4 +269,4 @@ app.controller('MyGravatarCtrl', class MyGravatarCtrl {
 
 <p>Cały kod, łącznie z pominiętymi tutaj fragmentami dostępny jest na <a href="https://gist.github.com/mmiszy/3736f131fe7cb7a1d37be892dcc00bab">gist.github.com/mmiszy/3736f131fe7cb7a1d37be892dcc00bab</a></p>
 
-<p data-height="465" data-theme-id="light" data-slug-hash="zqXyOM" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" class="codepen">Zobacz Pen <a href="http://codepen.io/mmiszy/pen/zqXyOM/">zqXyOM</a> – Michał Miszczyszyn (<a href="http://codepen.io/mmiszy">@mmiszy</a>) na <a href="http://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="465" themeId="light" slugHash="zqXyOM" defaultTab="js,result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/zqXyOM/">Zobacz Codepen</a>.</CodepenWidget>

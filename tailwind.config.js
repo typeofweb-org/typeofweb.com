@@ -122,12 +122,28 @@ module.exports = {
             'user-select': 'none',
           },
           '.transcluent-white': {
-            'backdrop-filter': 'blur(10px)',
-            'background-color': 'rgba(255, 255, 255, 0.9)',
+            /**
+             * Co = Ca*alpha + Cb*(1-alpha)
+             * green: #73b588
+             * blue: #301cd2
+             * pink: #cf3c96
+             *
+             * dark:
+             * green: #375841
+             * blue: #342a84
+             * pink: #7d3261
+             *
+             * light:
+             * green: #e6f1ea
+             * blue: #dddaf4
+             * pink: #f3ddec
+             */
+            'backdrop-filter': 'blur(25px)',
+            'background-color': 'rgba(255, 255, 255, 0.825)',
           },
           '.transcluent-black': {
-            'backdrop-filter': 'blur(10px)',
-            'background-color': 'rgba(0, 0, 0, 0.9)',
+            'backdrop-filter': 'blur(25px)',
+            'background-color': 'rgba(0, 0, 0, 0.36)',
           },
         });
       }

@@ -25,14 +25,13 @@ seo:
     - serwer HTTP
   focusKeywordSynonyms:
     - serwera HTTP, serwerem HTTP
----
 
+---
 Po co Ci lokalny serwer HTTP? Bardzo wiele osób skarży się mi na dziwne problemy z aplikacjami. Błędy są przeróżne np. nawiązujące do magicznego „CORS”, a często mają wspólne źródło: Próba otwarcia pliku `.html` w przeglądarce przez `file://` i brak serwera HTTP.
 
-<!--more-->
+{/* more */}
 
 ## Błędy CORS a protokoł `file://`
-
 Przykładem błędu, na który często skarżą się czytelnicy jest:
 
 ```
@@ -57,13 +56,11 @@ GET file:///……… net::ERR_FILE_NOT_FOUND
 Wynika to najczęściej z tego, że aplikacja została zbudowana z pewnymi założeniami co do adresu (folderu, ścieżki) pod którym się znajduje. Natomiast gdy próbujesz uruchomić ją prosto z dysku, to ścieżka jest zupełnie inna — zależna od tego gdzie umieściłaś/eś plik. Brakuje serwera HTTP.
 
 ## Rozwiązanie: Serwer HTTP
-
 Nie będziemy mówić o hackowaniu Chrome'a ;) Tylko o prawdziwym rozwiązaniu problemu. **Postaw lokalny serwer HTTP**.
 
 Jak? Nie, nie każę Ci instalować XAMPP-a 😂 Masz kilka opcji.
 
 ### python 2 i SimpleHTTPServer
-
 Mój ulubiony i najprostszy sposób to skorzystanie z pythona. Na MacOS jest on dostępny bez konieczności instalowania czegokolwiek. Wchodzę tylko do folderu, który chcę zaserwować i wpisuję:
 
 ```bash
@@ -77,7 +74,6 @@ python -m SimpleHTTPServer 9999
 ```
 
 ### python 3 i http.server
-
 Analogiczny serwer HTTP w Pythonie 3 można szybko postawić korzystając z polecenia:
 
 ```bash
@@ -91,7 +87,6 @@ python3 -m http.server 9999
 ```
 
 ### Serwer HTTP w node i `http-server`
-
 Jeśli Twoim ulubionym środowiskiem jest Node.js, a ukochanym językiem JavaScript to na pewno masz już zainstalowany `npm` i `npx`, prawda? Jest paczka npm, która służy do uruchomienia **prostego serwera HTTP**. Znowu, wchodzę do folderu i wpisuję:
 
 ```bash
@@ -119,9 +114,7 @@ http-server
 ```
 
 ## HTTPS
-
 Przy okazji muszę wspomnieć, że o ile lokalnie możesz używać HTTP, to jednak na produkcji na pewno powinnaś(-eś) mieć HTTPS! To jest absolutnie niezbędne. Przeczytaj, [dlaczego Twoja strona musi używać HTTPS](https://typeofweb.com/twoja-strona-powinna-byc-na-https/).
 
 ## Podsumowanie
-
 Nie zagłębiałem się w teorię. Sama praktyka (podobnie zresztą, jak na naszych [szkoleniach z programowania](https://typeofweb.com/szkolenia?utm_source=https%3A%2F%2Ftypeofweb.com%2F&utm_medium=courses_slogan_manual)). Umiesz postawić swój własny serwer http i pozbyć się problemu z CORS, a to wszystko dosłownie w kilka sekund. Mam nadzieję, że pomogłem :) Zapamiętaj jedno z tych poleceń — mi się one przydają praktycznie codziennie!

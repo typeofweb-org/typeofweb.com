@@ -3,6 +3,7 @@ id: 30
 index: 19
 title: "Kurs TypeScript – część\_3"
 date: 2016-08-10T08:22:00.000Z
+isMarkdown: false
 status: publish
 permalink: kurs-typescript-czesc-3
 authors:
@@ -20,11 +21,11 @@ series:
   slug: typescript
   name: TypeScript
 seo: {}
----
 
+---
 <p>Kontynuuję serię wpisów na temat TypeScript. Pisząc poprzedni post złapałem się na tym, że dobijałem już do blisko 1800 słów. Uznałem, że to zdecydowanie za dużo jak na jeden wpis i stąd tak szybko kolejna część ;) W tym odcinku mówię o <strong>zaawansowanych typach, aliasach i literałach. Dodatkowo poruszam również temat inferencji typów</strong>. Zapraszam do czytania :)</p>
 
-<p class=important>Zakładam, że czytelnicy są zaznajomieni z JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>. Jeśli jednak coś jest niejasne to chętnie odpowiem na pytania w komentarzach.</p>
+<p class="important">Zakładam, że czytelnicy są zaznajomieni z JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>. Jeśli jednak coś jest niejasne to chętnie odpowiem na pytania w komentarzach.</p>
 
 <h1 id="zaawansowanetypy">Zaawansowane typy</h1>
 

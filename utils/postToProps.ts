@@ -6,18 +6,22 @@ import type { PostByPermalink } from './wordpress';
 
 type AuthorJson = typeof import('../authors.json')[number];
 
-export const postToProps = async (post: Exclude<PostByPermalink, undefined>, authorsJson: readonly AuthorJson[]) => {
-  const { excerpt, content } = getExcerptAndContent(post.content);
+export const postToProps = async (
+  post: Exclude<PostByPermalink, undefined>,
+  authorsJson: readonly AuthorJson[],
+  { onlyExcerpt }: { readonly onlyExcerpt?: boolean } = {},
+) => {
+  const { excerpt, ...contentObj } = await getExcerptAndContent(post, { onlyExcerpt });
 
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
   const { base64: blurDataURL = null, img = null } = post.data.thumbnail
-    ? await getPlaiceholder(post.data.thumbnail.url)
+    ? await getPlaiceholder(encodeURI(post.data.thumbnail.url))
     : {};
 
   return {
     excerpt,
-    content,
+    ...contentObj,
     frontmatter: {
       id: post.data.id,
       title: post.data.title,

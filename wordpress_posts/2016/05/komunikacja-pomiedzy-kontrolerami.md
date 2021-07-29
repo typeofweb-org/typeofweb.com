@@ -3,6 +3,7 @@ id: 14
 index: 4
 title: Komunikacja pomiędzy kontrolerami w AngularJS
 date: 2016-05-05T12:47:00.000Z
+isMarkdown: false
 status: publish
 permalink: komunikacja-pomiedzy-kontrolerami
 authors:
@@ -19,8 +20,8 @@ categories:
 seo:
   focusKeywords:
     - AngularJS
----
 
+---
 <p>Jednym z aspektów sprawiających trudność w AngularJS, który wciąż i wciąż powraca w moich rozmowach z różnymi programistami jest prawidłowa implementacja komunikacji pomiędzy modułami. Dokumentacja i poradniki najczęściej opisują tylko najbardziej podstawowe przykłady porozumiewania się np. pomiędzy komponentem-rodzicem a komponentem-dzieckiem, co w zasadzie nie sprawia problemu. Co jednak w przypadku, gdy komunikacja musi zachodzić w obu kierunkach albo pomiędzy komponentami, które w strukturze aplikacji są od siebie odległe?</p>
 
 <p>Aby problem był mniej abstrakcyjny, postaram się nakreślić bardziej konkretny przykład. Weźmy koncept aplikacji:</p>
@@ -120,4 +121,4 @@ DataService.addObserver(newData =&gt; {
 
 <p>Niezależnie czy implementujemy obserwator czy publish-subscribe, to rozwiązanie jest zdecydowanie najbardziej elastyczne i najbardziej wydajne ze wszystkich wcześniej wymienionych. Istotny jest tutaj również fakt, że <strong>zapoznanie się ze wzorcem projektowym obserwatora jest wiedzą uniwersalną, a nie tylko specyficzną dla danego frameworka</strong>. Dzięki temu jest to wiedza użyteczna niezależnie od środowiska, w którym się pracuje i przez to bardzo cenna. Przykładową implementację tego wzorca wraz z prostymi testami jednostkowymi udostępniam poniżej. Kod jest również na <a href="https://gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d">gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d</a>.</p>
 
-<p data-height="266" data-theme-id="light" data-slug-hash="vGvaEN" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mmiszy/pen/vGvaEN/">Observer pattern - simple implementation</a> by Michał Miszczyszyn (<a href="http://codepen.io/mmiszy">@mmiszy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="266" themeId="light" slugHash="vGvaEN" defaultTab="js,result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/vGvaEN/">Zobacz Codepen</a>.</CodepenWidget>

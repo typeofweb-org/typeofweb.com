@@ -23,11 +23,11 @@ series:
   slug: vue-js
   name: Vue.js
 seo: {}
----
 
+---
 Vue.js jest reaktywnym frameworkiem JavaScript. Znaczy to, że dowolna zmiana danych używanych do wyświetlania strony sprawia, że widok automatycznie jest aktualizowany tak, aby odzwierciedlić tę zmianę.
 
-<!--more-->
+{/* more */}
 
 ## Dodanie Vue.js do strony
 
@@ -36,7 +36,6 @@ Vue.js jest reaktywnym frameworkiem JavaScript. Znaczy to, że dowolna zmiana da
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 ```
-
 W dalszych częściach kursu omówimy bardziej skomplikowane techniki dołączania Vue.js do Twojej strony, ale pamiętaj, że powyższy sposób w zupełności wystarczy i jest poprawny. Nie potrzebujesz niczego więcej by zacząć pracę!
 
 ## Pierwszy komponent
@@ -48,7 +47,6 @@ Wyświetlanie danych we Vue odbywa się dzięki tzw. **wąsom** znanym z wielu j
   <h1>{{ appTitle }}</h1>
 </div>
 ```
-
 Aby Vue mogło zmienić zwykłe dane w reaktywne, musisz zwrócić je z metody `data()`. Dzięki temu framework będzie w stanie **śledzić ich zmiany i odpowiednio aktualizować elementy DOM**.
 
 Teraz musisz już tylko zainicjalizować nową instancję Vue i podłączyć ją do elementu DOM za pomocą metody `$mount`:
@@ -57,15 +55,14 @@ Teraz musisz już tylko zainicjalizować nową instancję Vue i podłączyć j�
 new Vue({
   data() {
     return {
-      appTitle: 'Pierwsza aplikacja Vue!',
+      appTitle: "Pierwsza aplikacja Vue!"
     };
-  },
-}).$mount('#app');
+  }
+}).$mount("#app");
 ```
 
 ## Reaktywność `v-model`
-
-Właśnie napisałaś/eś swoją pierwszą aplikację używając Vue.js. Szkoda tylko, że jest taka nudna — nie robi nic poza wyświetlaniem tekstu.
+Właśnie napisałaś/eś swoją pierwszą aplikację używając Vue.js. Szkoda tylko, że jest taka nudna — nie robi nic poza wyświetlaniem tekstu. 
 
 Zróbmy coś ciekawszego! :) W tym celu wykorzystamy dyrektywę `v-model`. Odpowiada ona za **powiązanie wartości inputa z polem danych**. W tym wypadku ustawia ona `value` inputa na wartość pola `appTitle` i podpina się pod zdarzenie `input` w celu aktualizacji pola `appTitle` kiedy użytkownik coś w nie wpisze:
 
@@ -76,14 +73,14 @@ Zróbmy coś ciekawszego! :) W tym celu wykorzystamy dyrektywę `v-model`. Odpow
 </div>
 ```
 
-Gratulacje! Teraz Twoja aplikacja jest dynamiczna! Oczywiście to dopiero początek tego, co potrafi Vue.js — **więcej w kolejnych częściach kursu** lub na szkoleniu: [typeofweb-courses-slogan category="Vue.js"]
+Gratulacje! Teraz Twoja aplikacja jest dynamiczna! Oczywiście to dopiero początek tego, co potrafi Vue.js — **więcej w kolejnych częściach kursu** lub na szkoleniu: <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>.
 
-<p data-height="400" data-theme-id="0" data-slug-hash="RMJPoK" data-default-tab="html,result" data-user="wojtiku" data-embed-version="2" data-pen-title="RMJPoK" class="codepen">See the Pen <a href="https://codepen.io/wojtiku/pen/RMJPoK/">RMJPoK</a> by Wojciech Urbański (<a href="https://codepen.io/wojtiku">@wojtiku</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<CodepenWidget height="400" themeId="0" slugHash="RMJPoK" defaultTab="html,result" user="wojtiku" embedVersion="2"><a href="http://codepen.io/wojtiku/pen/RMJPoK/">Zobacz Codepen</a>.</CodepenWidget>
 
 **Aby być na bieżąco z kolejnymi wpisami, zapisz się na newsletter poniżej i śledź Type of Web na Facebooku! :)**
 
-<div style="text-align: center; margin-bottom: 40px;">[typeofweb-mailchimp title=""]</div>
-<div style="text-align: center;">[typeofweb-facebook-page]</div>
+<NewsletterForm />
+<FacebookPageWidget />
 
 ## Ćwiczenie
 

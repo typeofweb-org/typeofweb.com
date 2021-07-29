@@ -3,6 +3,7 @@ id: 12
 index: 2
 title: ASI czyli automatyczne wstawianie średników
 date: 2016-04-12T19:19:06.000Z
+isMarkdown: false
 status: publish
 permalink: asi-czyli-automatyczne-wstawianie-srednikow
 authors:
@@ -24,12 +25,11 @@ categories:
   - slug: back-end
     name: Back-end
 seo: {}
----
 
+---
 Specyfikacja ECMAScript zawiera w sobie wiele zaskakujących elementów i mechanizmów, i gorąco polecam się z nią zapoznać. Jeśli język, którym napisano specyfikację wydaje się być odstraszający, to warto przeczytać chociaż serię artykułów <a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">ECMA-262-3 in detail</a> i <a href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-0-introduction/">ECMA-262-5 in detail</a> których autorem jest Dmitry Soshnikov. Dmitry omawia w nich specyfikację ES i sposób działania JavaScriptu, ale robi to w sposób bardzo przystępny w zasadzie dla każdego dociekliwego odbiorcy.
 
 Ja chciałbym jednak dzisiaj skupić się na jednym konkretnym mechanizmie zawartym w specyfikacji ES: <em>Automatic Semicolon Insertion</em> (ASI) – czyli automatycznym wstawianiu średników. Składnia JavaScriptu na pierwszy rzut oka podobna jest z grubsza do składni Javy czy C++ – od razu uwagę na siebie zwracają <code>{</code>, <code>}</code> i <code>;</code>. Jednak okazuje się, że ES pozwala na coś, co dla progamistów dwóch wymienionych języków byłoby nie do pomyślenia: <strong>swobodne pomijanie średnika na końcach wyrażeń</strong>.
-
 <h1 id="asiwth">ASI, WTH?</h1>
 Na początku swojej kariery programisty JS niejednokrotnie znajdowałem w napisanym przeze mnie kodzie miejsca, w których brakowało średników i zachodziłem w głowę dlaczego ten kod w ogóle bez nich działał. Weźmy prosty przykład:
 <pre><code class="language-javascript">console.log(‘Hello, world!’)  
@@ -74,7 +74,6 @@ Pomijam nawet wyjątki od tych reguł, ale łał, czy to już nie brzmi trochę�
 ‘hello, world!’
 </code></pre>
 Pierwsza linijka kodu jest niepoprawna. Średnik nie zostanie automatycznie wstawiony po <code>123</code>. W drugim przypadku jednak już tak, gdyż po <code>123</code> znalazł się znak końca linii. A więc białe znaki zmieniają sposób, w jaki ten kod jest rozumiany przez silniki JavaScriptu.
-
 <h1 id="asizbytautomatyczne">ASI zbyt automatyczne</h1>
 Co jeszcze wynika z tej specyfikacji? Oto jeden z moich ulubionych przykładów kodu, który zaskakuje początkujących:
 <pre><code class="language-javascript">function fn() {  
@@ -90,9 +89,7 @@ Są grupy osób, które sugerują aby całkowicie polegać na ASI, na przykład 
 (EDIT 10.07.2017) Zasady ASI warto znać, jednak jeśli ktoś decyduje się na zrezygnowanie ze stawiania średników to naraża się <a href="https://github.com/tc39/ecma262/issues/943">na całą gamę przypadków i błędów</a>, których standardjs.com nie uwzględnia.
 
 Sprawę może ułatwiać fakt, że większość programistów JS i tak korzysta z tzw. linterów (a jeśli nie korzysta to powinna). Zasady sprawdzania kodu pod względem poprawności można ustawić tak, aby średniki były ściśle wymagane, ale również w ten sposób, aby średników było jak najmniej. O <del>pełną</del> pewną spójność i poprawność kodu pomoże zadbać odpowiednio skonfigurowane narzędzie <del>i dlatego decyzja o używaniue (bądź nie) ASI jest właściwie wyłącznie kwestią preferencji zespołu.</del> (EDIT 10.07.2017) ale mimo wszystko pomijanie średników jest ryzykowne, szczególnie jeśli natrafimy na przypadek, którego linter nie potrafi obsłużyć prawidłowo z powodu buga albo nowej składni w ES. Przykład? Pierwsze z głowy: template stringi, które dodają sporo nowej składni i nowych <em>edge case</em> dla ASI, a które przez długi czas nie były wymienione w standardjs ani obsługiwane przez lintery.
-
 <h1 id="amoimzdaniem">A moim zdaniem…</h1>
 Czy są jednak jakieś szczególne zalety polegania na ASI? Nie jestem w stanie ich dostrzec. Notabene, specyfikacja ECMAScript wyraźnie mówi, że <em>Automatic Semicolon Insertion</em> jest <strong>jedynie próbą zinterpretowania kodu, który zawiera błędy</strong>, a przy tym, według specyfikacji, niektóre średniki <strong>są obowiązkowe</strong>. W związku z powyższym, moim zdaniem poleganie na ASI zmusza do pewnej niekonsekwencji w składni – bo nie znikają wszystkie średniki, a jedynie ich część. Podobne zdanie wyraża również Kyle Simpson w swojej słynnej publikacji <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#error-correction">You Don't Know JS</a>:
 <blockquote>So, to put it more bluntly, when I hear someone claim that they want to omit "optional semicolons," my brain translates that claim to "I want to write the most parser-broken program I can that will still work."</blockquote>
 Idąc dalej, pozwolę sobie nawet wysunąć tezę, iż <strong>poleganie na ASI to proszenie się o problem</strong>. Po pierwsze dlatego, że jego reguły są trudne do zapamiętania i łatwo popełnić błąd. Oczywiście może przed tym chronić odpowiednio skonfigurowany linter, ale mimo to mam wrażenie, że łatwiejsze jest zapamiętanie nielicznych haczyków (np. wspomnianego z <code>return</code>) gdy wstawia się średniki, niż <a href="http://standardjs.com/rules.html#semicolons">wielu wyjątków</a> gdy zazwyczaj średników się nie stawia. Ponadto zauważyłem, że większość programistów, z którym pracowałem zna składnię C lub podobną i wstawianie średników jest dla nich czymś <strong>całkowicie naturalnym</strong>. W związku z tym kod bez średników jest jednak znacznie trudniejszy do zrozumienia przez większość osób, a nowi programiści w zespole mają o wiele <strong>wyższy próg wejścia</strong> do projektu, w którym nie stawia się średników. No i już tak zupełnie subiektywnie: taki kod jest po prostu znacznie mniej czytelny i łatwiej się w nim zgubić. Po co więc używać ASI? Nie widzę żadnych korzyści, a potencjalnych problemów dostrzegam sporo.
-<div class="grammarly-disable-indicator"></div>
