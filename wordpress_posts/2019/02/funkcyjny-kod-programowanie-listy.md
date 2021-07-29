@@ -22,21 +22,24 @@ categories:
   - slug: opinie
     name: Opinie
 seo: {}
-
 ---
+
 Jakiś czas temu zacząłem się mocniej interesować programowaniem funkcyjnym. O ile wydawało mi się, że rozumiem `rxjs`, `lodash/fp` i inne podobne biblioteki, to jednak tak naprawdę nigdy nie próbowałem pisać w 100% funkcyjnie. I uwierz mi, to niesamowite doświadczenie! W tym krótkim wpisie pokazuję jeden przykład kodu, który mocno poszerzył mi horyzont myślowy.
 
-{/* more */}
+{/_ more _/}
 
 ## OCaml / Reason
+
 Jestem ogromnym fanem języka Reason (dialekt OCamla). Pisałem w nim zanim to było modne ;) Ale to był głównie front-end, React w **Reason jest całkiem przyjemny**. Jednak, nie czuje się tam za bardzo samego programowania funkcyjnego. Tworzysz obiekty, przekazujesz parametry, dostajesz komponent. Cudowne, praktyczne, bezpieczne, ale nie jest to ten kod funkcyjny, o którym chcę dzisiaj pisać. Samemu React/Reason poświęcę chyba osobny wpis.
 
 Aby lepiej poznać programowanie funkcyjne, zacząłem rozwiązywać proste łamigłówki algorytmiczne, ale rozwiązana implementowałem wyłącznie czysto funkcyjnie. I tak, o ile nie mam najmniejszego problemu np. ze znalezieniem wysokości drzewa pisząc imperatywnie, to jak to jednak ugryźć funkcyjnie? 🤔 **Zmuszanie się do myślenia wyłącznie w kontekście funkcji zmieniło mi nieco perspektywę na pisanie kodu**. Ale zacznijmy od czegoś prostszego: Długość listy.
 
 ## Znajdź długość listy
+
 Policz długość listy. Jak byś to rozwiązała w języku imperatywnym? A jak funkcyjnie? Początek wymaga pewnej gimnastyki umysłu — i dokładnie o to chodzi ;)
 
 ### Co to jest lista?
+
 Na potrzeby tego wpisu przez „listę” rozumiem klasyczną strukturę danych. Mamy pierwszy element listy i możemy z niego przejść do następnego. Odczytanie n-tego elementu listy wymaga n operacji (musisz przejść z pierwszego elementu po kolei aż do n-tego). Jest to zasadnicza różnica w stosunku do tablic, w których tradycyjnie można pobrać dowolny element.
 
 Piszę „tradycyjnie” i „klasycznie”, gdyż konkretna implementacja tych struktur danych w bibliotekach standardowych języków wysokiego poziomu może się różnić.
@@ -44,6 +47,7 @@ Piszę „tradycyjnie” i „klasycznie”, gdyż konkretna implementacja tych 
 A więc jak znaleźć długość listy?
 
 ### Długość listy imperatywnie
+
 Rozwiązanie imperatywne to:
 
 1. Weź początek listy.
@@ -71,6 +75,7 @@ listLength(myList);
 ```
 
 ### Długość listy funkcyjnie
+
 **Programowanie funkcyjne wymaga innego sposobu myślenia** i często polega na **deklarowaniu faktów i wyciągania na ich podstawie wniosków**. W przypadku takiej listy mamy 2 fakty:
 
 1. Wielkość pustej listy równa się 0.
@@ -93,9 +98,11 @@ solution(0, myList);
 I ten kod dokładnie to opisuje!
 
 ## Dlaczego kod funkcyjny jest lepszy?
+
 Przynajmniej z dwóch powodów: **Jest prostszy i nie ma mutacji.**
 
 ### Brak mutacji
+
 Niemutowalne struktury danych i brak mutacji to klasyka języków funkcyjny. I o ile Reason/OCaml pozwalają na mutacje, to są one bardzo wyraźnie oznaczane, a ich wykorzystywanie jest niezalecane.
 
 **Co złego w mutacjach**? Łatwo popełnić **przypadkowy błąd** mutując nie to, co trzeba. Ponadto, jeśli jakaś inna część aplikacji trzyma referencję do czegoś co mutujesz, to możesz na nią wpłynąć nawet o tym nie wiedząc.
@@ -107,6 +114,7 @@ Co prawda w tym przykładzie nie ma zależnych od siebie części aplikacji, ale
 **Te problemy całkowicie eliminuje implementacja bez mutacji, funkcyjna.**
 
 ### Prostota
+
 To nieco bardziej subiektywne. Ale zastanów się co musi zrobić ktoś, kto nie zna dobrze programowania, aby w ogóle zrozumieć jak działa ten kod imperatywny? Musiałaby dokładnie prześledzić wszystkie jego linijki, wykonać w głowie pętle, a najlepiej rozpisać kolejne wywołania na kartce. **Sporo roboty.**
 
 A teraz kod funkcyjny. Zdefiniowane są 2 relatywnie proste fakty. Nie trzeba dokładnie śledzić wszystkich wywołań ani rozpisywać na kartce rekurencji. **Wystarczy tylko zweryfikować czy oba podane twierdzenia są prawdziwe.**
@@ -124,11 +132,12 @@ let rec solution = (length, list) => {
 Daje błąd w czasie kompilacji:
 
 ```
-You forgot to handle a possible value here, for example: 
+You forgot to handle a possible value here, for example:
 []
 ```
 
 To już trochę dygresja na temat _pattern matchingu_, ale **podobnego inteligentnego zachowania nie można oczekiwać w przypadku kodu imperatywnego**.
 
 ## Podsumowanie
+
 Chciałbym zasadzić w Tobie ziarno zainteresowania programowaniem funkcyjnym. Czy mi się udało? Mam nadzieję, że tak! Planuję jeszcze kilka kolejnych wpisów w tej serii. **O czym chciałabyś/chciałbyś przeczytać**?

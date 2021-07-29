@@ -25,11 +25,11 @@ series:
 seo:
   focusKeywords:
     - React
-
 ---
+
 <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> jest biblioteką do budowania interfejsów w JavaScript, stworzoną przez Facebooka. React zdobył ogromną popularność wśród programistów i jest jedną z tych bibliotek, w których pisze się całkiem przyjemnie. Koncept Reacta opiera się o znane od dawna wzorce, które zostały tutaj odświeżone i zunifikowane: Jednokierunkowy przepływ danych i budowanie aplikacji w oparciu o <strong>komponenty</strong>.
 
-{/* more */}
+{/_ more _/}
 
 <h2>Co to jest React.js?</h2>
 
@@ -78,7 +78,5 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
 <h2>Ćwiczenie</h2>
 
 <strong>Ćwiczenie:</strong> Spróbuj edytować przykład wyżej (kliknij w guzik <a href="https://codepen.io/mmiszy/pen/zEbygp">edit on CodePen</a>) i spraw, aby komponent wyświetlał inny tekst. Podejrzyj źródła — jak wygląda wygenerowany przez React.js kod? Czy dostrzegasz coś szczególnego? Napisz o tym w komentarzu.
-
-
 
 <div class="grammarly-disable-indicator"></div>

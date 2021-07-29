@@ -18,8 +18,8 @@ categories:
   - slug: javascript
     name: JavaScript
 seo: {}
-
 ---
+
 To nie będzie wpis na temat teorii reaktywnego programowania funkcyjnego. Nie jest to też wyciąg z dokumentacji rxjs. Ten wpis jest krótkim praktycznym wprowadzeniem do Obserwabli na przykładzie. Zaczynajmy!
 
 <CodepenWidget height="265" themeId="0" slugHash="KmQyJL" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 1"><a href="http://codepen.io/mmiszy/pen/KmQyJL/">Zobacz Codepen Observables 1</a>.</CodepenWidget>

@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Jak pewnie zauważyłaś/eś — wywołanie metody klasy w React.js z poziomu funkcji <code>render</code> kończy się źle, o ile nie użyjesz <code>bind</code>. Wspominałem też o tym w kursie i sam używałem po prostu <code>bind</code> w czasie renderowania. Ale czy to dobre rozwiązanie? Co z wydajnością i czytelnością takiego kodu?
 
-{/* more */}
+{/_ more _/}
 
 <h2><code>bind</code> w ogóle</h2>
 

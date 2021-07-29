@@ -16,8 +16,8 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
-
 ---
+
 <p>Jakiś czas temu zainspirowałem się dość mocno Facebookową grupą Weekly WebDev Challenge i postanowiłem utworzyć grupę siostrzaną: <a href="https://www.facebook.com/groups/1131907053499522/"><strong>Weekly JavaScript Challenge</strong></a>. Jest to miejsce, w którym średnio raz w tygodniu będę wrzucał nowe zadanie do wykonania. Celem jest wspólna nauka JavaScriptu, <em>code review</em> i wzajemna pomoc.</p>
 
 <h1 id="kilkaliczb">Kilka liczb…</h1>

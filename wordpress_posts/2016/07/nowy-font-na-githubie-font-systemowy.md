@@ -20,8 +20,8 @@ categories:
   - slug: front-end
     name: Front-end
 seo: {}
-
 ---
+
 Zauważyliście, że GitHub zmienił fonta? Zainteresowało mnie to, gdy zauważyłem, że teraz strona <strong>wygląda inaczej na OS X i inaczej na Windowsie</strong>. Po sprawdzeniu źródła okazało się, że GitHub korzysta teraz z <strong>domyślnego fonta systemowego</strong>, który zależy od użytkownika. Jak to jest zrobione?</p>
 
 <h1 id="fontsystemowywcss">Font systemowy w CSS</h1>

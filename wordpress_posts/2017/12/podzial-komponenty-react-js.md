@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W tej części skupisz się na teorii i praktyce dzielenia zaprojektowanych aplikacji na poszczególne komponenty. Zaczniesz też tworzyć prostą appkę — menedżer kontaktów. W planach wyświetlanie, dodawanie i edycja kontaktów. Ale najpierw — musimy przecież zaprojektować HTML i CSS dla tej aplikacji.
 
-{/* more */}
+{/_ more _/}
 
 <h2>Projekt</h2>
 
@@ -96,8 +96,6 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
 
 <strong>Ćwiczenie:</strong> Stwórz komponent do wyświetlania avatarów i przenieś do niego kod za to odpowiedzialny. Niech ten komponent przyjmuje jako props tylko login. Wrzuć swój kod w komentarzu!
 
-<strong>Ćwiczenie*:</strong> Zmodyfikuj stworzony komponent z avatarem tak, aby obecne obrazki były wyświetlane gdy login nie jest mailem. Natomiast gdy jest mailem to skorzystaj z Gravatara. Zauważ, że całkowita zmiana działania tego komponentu nie wymaga wprowadzania żadnych zmian w pozostałym kodzie aplikacji!
-
-
+<strong>Ćwiczenie\*:</strong> Zmodyfikuj stworzony komponent z avatarem tak, aby obecne obrazki były wyświetlane gdy login nie jest mailem. Natomiast gdy jest mailem to skorzystaj z Gravatara. Zauważ, że całkowita zmiana działania tego komponentu nie wymaga wprowadzania żadnych zmian w pozostałym kodzie aplikacji!
 
 <div class="grammarly-disable-indicator"></div>

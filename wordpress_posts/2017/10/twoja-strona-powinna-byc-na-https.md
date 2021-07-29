@@ -23,11 +23,11 @@ seo:
     - SSL
     - Let's encrypt
     - HTTPS
-
 ---
+
 Niemal cała Twoja aktywność w Internecie odbywa się za pośrednictwem protokołu HTTP (Hypertext Transfer Protocol). Właściwie niezależnie co robisz, z czym albo skąd się łączysz – prawdopodobnie robisz to przez HTTP. Wraz z tym jak Twoja zależność od Internetu rośnie, jesteś narażona/y na coraz więcej różnego rodzaju zagrożeń. <strong>Każde nieszyfrowane połączenie HTTP upublicznia informacje o tym co robisz, jakie strony odwiedzasz oraz jakie akcje na nich wykonujesz.</strong> Dlatego tak ważne jest, abyś już dzisiaj zaczęła/zaczął używać HTTPS (SSL) – niezależnie, czy jesteś twórcą, czy konsumentem treści! Teraz to możliwe, zupełnie za darmo, dzięki Let's encrypt!
 
-{/* more */}
+{/_ more _/}
 
 <h2>HTTPS</h2>
 
@@ -103,12 +103,10 @@ Oczywiście niektóre firmy nadal sprzedają certyfikaty DV – i nie ma w tym n
 
 Na pewno niejednokrotnie zauważyłaś/eś, że „kłódki” przy adresie strony mogą się między sobą różnić. Przykładowo inaczej wygląda na stronie banku, a inaczej u mnie na blogu, prawda?
 
-
 <Gallery columns="2" link="file" size="medium">
   <img src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-09-19.42.42.png" loading="lazy" alt="Certyfikat DV" title="Certyfikat DV" width="488" height="70" />
 <img src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-09-19.47.01.png" loading="lazy" alt="Certyfikat EV" title="Certyfikat EV" width="642" height="70" />
 </Gallery>
-
 
 Wyróżnia się 3 rodzaje certyfikatów:
 

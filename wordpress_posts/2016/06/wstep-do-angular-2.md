@@ -19,8 +19,8 @@ series:
   slug: angular-2
   name: Angular 2
 seo: {}
-
 ---
+
 <p>Obiecywałem i oto jest: Mój wstęp do tworzenia aplikacji w Angular 2. Chciałbym omówić tutaj podstawy nowego frameworka oraz narzędzia Angular CLI na przykładzie zbudowania od zera prostej <em>Single Page Application</em> – listy zadań. Jest to typowy, wielokrotnie powielany przykład używany do szybkiego poznania nowych front-endowych narzędzi.</p>
 
 W tym kursie korzystam z TypeScript, więc jeśli jeszcze nie znasz tego języka to zapraszam do mojego kursu TypeScript:
@@ -149,7 +149,6 @@ export class TodoListAppComponent {
 bind-target="expression"  
 </code></pre>
 
-
             </td>
             <td>
             Interpolacja<br>
@@ -167,7 +166,6 @@ bind-target="expression"
 on-target="statement"  
 </code></pre>
 
-
             </td>
             <td>
             Zdarzenie
@@ -181,13 +179,13 @@ on-target="statement"
 bindon-target="expression"  
 </code></pre>
 
-
             </td>
             <td>
             Dwukierunkowy
             </td>
         </tr>
     </tbody>
+
 </table>
 
 <p>Jak widzimy, bindingi w Angular 2 otoczone są <code>[]</code> lub <code>()</code>, albo poprzedzone jednym z prefiksów <code>bind-</code>, <code>on-</code> lub <code>bindon-</code>. Zarówno użycie znaków interpunkcyjnych jak i prefiksów jest sobie równoważne i zależy wyłącznie od preferencji programisty. Dzięki odróżnieniu od siebie bindingów, składnia szablonów staje się bardziej czytelna. </p>

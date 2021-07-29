@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W jednym z komentarzy ktoś zasugerował mi, abym pokazywał jak najwięcej praktycznych przykładów. Inna osoba pytała konkretnie o przykład filtrowania listy na podstawie tekstu wpisywanego w input. Stwierdziłem, że warto skorzystać z tych sugestii. Oto powstaje seria wpisów, które będą się przeplatały z kursem Reacta jako takim. Tutaj będę pokazywał <strong>konkretne przykłady i implementacje</strong>, bez tłumaczenia teorii. Pierwszym przykładem będzie właśnie taka lista — na razie wersja prosta, ze statycznymi danymi i synchronicznym wyszukiwaniem. Do dzieła!
 
-{/* more */}
+{/_ more _/}
 
 <h2>Plan działania</h2>
 
@@ -59,4 +59,4 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
   });
 }</code></pre>
 
-<strong>Ćwiczenie*:</strong> Spróbuj szybko wpisać coś w input. Czy zawsze wyświetlają się poprawne dane? Takie problemy to tzw. <em>race conditions</em>. Czy umiesz je tutaj jakoś rozwiązać? Pamiętaj, że React.js to tylko biblioteka do budowania widoków, a wiedza na temat rozwiązywania ogólnych problemów jest uniwersalna i bardzo przydatna z dowolnym frameworkiem :)
+<strong>Ćwiczenie\*:</strong> Spróbuj szybko wpisać coś w input. Czy zawsze wyświetlają się poprawne dane? Takie problemy to tzw. <em>race conditions</em>. Czy umiesz je tutaj jakoś rozwiązać? Pamiętaj, że React.js to tylko biblioteka do budowania widoków, a wiedza na temat rozwiązywania ogólnych problemów jest uniwersalna i bardzo przydatna z dowolnym frameworkiem :)

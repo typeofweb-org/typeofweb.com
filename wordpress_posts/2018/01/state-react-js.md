@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Przyszedł czas na poznanie tajemniczego <code>state</code> w React.js. Udało nam się tworzyć komponenty, które pięknie wyświetlały przekazane propsy, ale trzeba przyznać szczerze: <strong>Bez wewnątrznego stanu nie da się zbudować funkcjonalnej aplikacji</strong>. Dzisiaj nauczysz się taki stan dodawać i wykorzystywać :)
 
-{/* more */}
+{/_ more _/}
 
 Zacznijmy może od typowego przykładu powielonego w wielu kursach: Licznika. Stwórz komponent, który ma dwa przyciski (plus i minus) oraz <code>output</code> na wyświetlanie wyniku. Początkowo wartość wynosi 0, kliknięcie w przycisk odpowiednio zwiększa lub zmniejsza liczbę. Umiesz już obsłużyć kliknięcia, potrafisz też wyświetlać dane. Jak jednak je modyfikować?
 

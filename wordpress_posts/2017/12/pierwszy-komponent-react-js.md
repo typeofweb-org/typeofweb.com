@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W tym wpisie pokażę prosty <strong>komponent React.js</strong>, opiszę jego budowę i podstawowe elementy. Napiszemy też (razem) pierwszą pełnoprawną aplikację w React, którą będziesz mogła/mógł uruchomić u siebie na dysku. Będzie to baza do dalszych części <strong>kursu React.js</strong>.
 
-{/* more */}
+{/_ more _/}
 
 Wróćmy do poprzedniego przykładu, tak zwanego Hello World, w React.js. Oto on, tym razem w pełnej okazałości:
 

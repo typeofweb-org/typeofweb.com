@@ -20,11 +20,11 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
-
 ---
+
 Najlepiej uczy się na konkretnych przykładach. Dzisiaj napiszesz własną bibliotekę do Dependency Injection w TypeScripcie! Przydadzą nam się dekoratory, metadane, refleksja i kilka sztuczek. Do dzieła :)
 
-{/* more */}
+{/_ more _/}
 
 <h2>Zaczynamy</h2>
 

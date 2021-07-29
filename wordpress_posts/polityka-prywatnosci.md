@@ -12,8 +12,8 @@ guid: https://typeofweb.com/?page_id=2466
 type: page
 categories: []
 seo: {}
-
 ---
+
 <ul>
 <li><a href="https://typeofweb.com/regulamin/">Regulamin Newslettera Type of Web</a></li>
 <li>Polityka prywatności Type of Web</li>

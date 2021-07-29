@@ -23,8 +23,8 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Bardzo często początkujący pytają mnie gdzie mogą łatwo wrzucić nieco bardziej rozbudowany projekt, żeby go pokazać. Nie mają swojego hostingu, na Codepenie nie będzie to wygodne jeśli aplikacja podzielona jest na wiele plików. Co robić? Zazwyczaj odpowiadam: <strong>GitHub Pages.</strong>
 
 <h2>GitHub Pages</h2>

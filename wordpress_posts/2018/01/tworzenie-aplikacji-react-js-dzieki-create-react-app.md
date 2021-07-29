@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Do tej pory pokazałem kilka przykładów z React.js, a wszystkie wrzuciłem na codepen. Jak się pewnie domyślasz, <strong>tworzenie rozbudowanych aplikacji wygląda nieco inaczej</strong>. Dzielisz je na wiele plików, chcesz odpalać testy jednostkowe, a ostatecznie chciałabyś kod zminifikować.  <code>create-react-app</code> to paczka pozwalająca na łatwe stworzenie projektu opartego o React.js. Tworzy dla Ciebie strukturę katalogów i plików, zawiera wszystkie potrzebne na początek narzędzia i pozwala na odpalanie, testowanie i budowanie aplikacji. <strong>Czego chcieć więcej?</strong>
 
-{/* more */}
+{/_ more _/}
 
 <h2>Początek z <code>create-react-app</code></h2>
 
@@ -126,4 +126,4 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
 
 <strong>Ćwiczenie:</strong> Stwórz nowy projekt z użyciem <code>create-react-app</code>. Spróbuj zaimplementować filtrowanie, które pokazywałem w poprzednim odcinku kursu.
 
-<strong>Ćwiczenie*:</strong> Zrób build i wrzuć projekt na GitHub Pages. Pochwal się w komentarzu :)
+<strong>Ćwiczenie\*:</strong> Zrób build i wrzuć projekt na GitHub Pages. Pochwal się w komentarzu :)

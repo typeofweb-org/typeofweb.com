@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Do tej pory używaliśmy prostych funkcji i z nich tworzyliśmy komponenty React. Mimo, że przeważająca część komponentów, które tworzę są właśnie takimi prostymi funkcjami, to jednak nie wszystkie. Funkcje są bardzo przydatne, jednak poniekąd ograniczone. Jak więc inaczej można tworzyć komponenty w React.js? <strong>Używając klas</strong>!
 
-{/* more */}
+{/_ more _/}
 
 <h2>Stateless Functional Component</h2>
 

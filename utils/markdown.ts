@@ -49,6 +49,13 @@ interface CodeNode extends HtmlNode {
     [prop: string]: string[] | string | undefined;
   };
 }
+interface PathNode extends HtmlNode {
+  tagName: 'path';
+  properties?: {
+    d?: string;
+    [prop: string]: string[] | string | undefined;
+  };
+}
 
 function isPreNode(node: Node): node is PreNode {
   return node && node.type === 'element' && (node as PreNode).tagName === 'pre';
@@ -63,6 +70,9 @@ function isAnchorNode(node: Node): node is AnchorNode {
 
 function isPNode(node: Node): node is PNode {
   return node && node.type === 'element' && (node as PNode).tagName === 'p';
+}
+function isPathNode(node: Node): node is PathNode {
+  return node && node.type === 'element' && (node as PathNode).tagName === 'path';
 }
 
 function isParentNode(node: Node): node is Parent {
@@ -89,6 +99,27 @@ function wrapLinksInSpans(): import('unified').Transformer {
     };
 
     return preorder(tree);
+  };
+}
+
+function fixSvgPaths(): import('unified').Transformer {
+  return function transformer(tree) {
+    const run = (node: Node) => {
+      if (isPathNode(node)) {
+        if (node.properties?.d) {
+          node.properties.d = node.properties.d.replaceAll('\n', ' ');
+        }
+        return node;
+      }
+      if (isParentNode(node)) {
+        node.children = node.children.map((child) => {
+          return run(child);
+        });
+      }
+      return node;
+    };
+
+    return run(tree);
   };
 }
 
@@ -202,11 +233,12 @@ export function toMdx(source: string, frontmatter: object) {
       mdxOptions: {
         remarkPlugins: [RemarkGfm, RemarkMath as any],
         rehypePlugins: [
-          [RehypeKatex, { strict: false }],
           wrapLinksInSpans as any,
           RehypeSlug as any,
           RehypeAutolinkHeadings as any,
           RehypePrism as any,
+          [RehypeKatex, { strict: false }],
+          fixSvgPaths as any,
         ],
       },
     },

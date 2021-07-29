@@ -22,11 +22,11 @@ categories:
 seo:
   focusKeywords:
     - Reactive
-
 ---
+
 W tym roku po raz pierwszy wybrałem się na ReactiveConf do Bratysławy (Słowacja). Strona konferencji zachęcała znanymi prelegentami i ciekawymi prezentacjami, więc bez dłuższego namysłu kupiłem bilet. ReactiveConf to 2 dni prezentacji oraz 1 dzień warsztatów poświęconych programowaniu reaktywnemu, FRP, React.js, Angular, Elm i wielu, wielu innym tematom…
 
-{/* more */}
+{/_ more _/}
 
 <h2>Digital nomad</h2>
 

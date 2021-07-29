@@ -25,8 +25,8 @@ series:
 seo:
   focusKeywords:
     - pola computed
-
 ---
+
 Czasami musisz zrobić coś więcej, niż tylko **wyświetlić pola komponentu** w szablonie. Np. mając pola `firstName` i `lastName` chcesz wyświetlić pełne imię i nazwisko osoby. Oczywiście możesz zrobić to za pomocą wyrażenia w szablonie `{{ firstName + ' ' + lastName }}`. Jest to jednak mało efektywne, i to z kilku powodów. Co, jeśli tę samą wartość musisz wyświetlić w innym miejscu? Co, jeśli potrzebujesz jej również w jednej z metod komponentu? Możesz rozwiązać ten problem używając metod, albo pól wyliczonych (ang. computed).
 
 <CodepenWidget height="265" themeId="0" slugHash="YvRbKV" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 1"><a href="http://codepen.io/wojtiku/pen/YvRbKV/">Zobacz Codepen Metody i computed - 1</a>.</CodepenWidget>
@@ -40,22 +40,26 @@ new Vue({
   data() {
     return {
       favouriteNumber: 42, // (5)
-      firstName: "Wojciech",
-      lastName: "Urbański"
+      firstName: 'Wojciech',
+      lastName: 'Urbański',
     };
   },
-  methods: {  // (1)
-    fullName() {  // (2)
-      console.log("Metoda została zawołana");  // (4)
-      return this.firstName + " " + this.lastName;
-    }
-  }
-}).$mount("#app");
+  methods: {
+    // (1)
+    fullName() {
+      // (2)
+      console.log('Metoda została zawołana'); // (4)
+      return this.firstName + ' ' + this.lastName;
+    },
+  },
+}).$mount('#app');
 ```
+
 ```html
 <div id="app">
-  <input type="number" v-model="favouriteNumber">
-  <p>Metoda: {{ fullName() }}</p>  <!-- (3) -->
+  <input type="number" v-model="favouriteNumber" />
+  <p>Metoda: {{ fullName() }}</p>
+  <!-- (3) -->
 </div>
 ```
 
@@ -74,23 +78,27 @@ new Vue({
   data() {
     return {
       favouriteNumber: 42,
-      firstName: "Wojciech",
-      lastName: "Urbański"
+      firstName: 'Wojciech',
+      lastName: 'Urbański',
     };
   },
-  computed: { // (1)
-    fullName() { // (2)
-      console.log("Wartość pola została wyliczona");
-      return this.firstName + " " + this.lastName;
-    }
-  }
-}).$mount("#app");
+  computed: {
+    // (1)
+    fullName() {
+      // (2)
+      console.log('Wartość pola została wyliczona');
+      return this.firstName + ' ' + this.lastName;
+    },
+  },
+}).$mount('#app');
 ```
+
 ```html
 <div id="app">
-  <input type="number" v-model="favouriteNumber"><br>
-    <input type="tezt" v-model="firstName">
-  <p>Metoda: {{ fullName }}</p> <!-- (3) -->
+  <input type="number" v-model="favouriteNumber" /><br />
+  <input type="tezt" v-model="firstName" />
+  <p>Metoda: {{ fullName }}</p>
+  <!-- (3) -->
 </div>
 ```
 

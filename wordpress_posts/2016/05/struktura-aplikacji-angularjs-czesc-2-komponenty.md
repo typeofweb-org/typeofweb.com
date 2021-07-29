@@ -19,8 +19,8 @@ categories:
   - slug: front-end
     name: Front-end
 seo: {}
-
 ---
+
 <p>W poprzednim artykule z tej serii opowiadałem bardziej o osobistych doświadczeniach z początków pracy z AngularJS 1.0 oraz o drodze jaką przebyło środowisko AngularJS - <strong>w skrócie od bałaganu aż do komponentów</strong>. Wspomniałem tam również, że AngularJS 1.5 wprowadził nową pomocniczą funkcję <code>angular.component(…)</code> i na jej wykorzystaniu chciałbym się skupić w tym wpisie. W tym celu napiszę bardzo prosty komponent - listę kontaktów z avatarami.</p>
 
 <p>Jeśli z jakiegoś powodu nie możesz zaktualizować AngularJS do wersji 1.5, Todd Motto napisał skrypt, który dodaje <code>angular.component(…)</code> do AngularJS od wersji 1.3. Dokładne informacje na ten temat można znaleźć na <a href="https://toddmotto.com/angular-component-method-back-ported-to-1.3/">jego blogu</a>.</p>

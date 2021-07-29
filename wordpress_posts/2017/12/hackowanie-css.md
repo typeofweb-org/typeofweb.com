@@ -21,11 +21,11 @@ categories:
   - slug: back-end
     name: Back-end
 seo: {}
-
 ---
+
 Numerem 1 podatności aplikacji internetowych wg. OWASP jest szerokopojęte „Injection”. Zazwyczaj kiedy o tym mówimy gdzieś z tyłu głowy mamy wyłącznie JavaScript i tylko XSS. A to przecież błąd 😲 W tym wpisie pokażę Ci <strong>jak można wykorzystać ciekawe elementy języka CSS do kradzieży wrażliwych danych</strong> z aplikacji ofiary.
 
-{/* more */}
+{/_ more _/}
 
 <p class="important">Wpis powstał na podstawie mojej prezentacji z UnleashConf 2017 w Krakowie (występowałem z nią również na meet.js Gdańsk). <strong>Slajdy oraz kod znajdziesz na samym końcu wpisu, w podsumowaniu.</strong></p>
 
@@ -97,14 +97,12 @@ A co się stanie jeśli zdefiniujemy po jednym <code>font-face</code> z osobnym
 
 I tak dalej, dla każdej litery alfabetu. <strong>Następnie używamy tego fonta do ostylowania jednego konkretnego elementu na stronie ofiary i wstrzykujemy jej ten CSS.</strong> Efekt widoczny na zrzucie ekranu poniżej:
 
-
 <figure id="attachment_857" align="aligncenter" width="1024">
   <a href="https://typeofweb.com/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM.png"><img class="size-large wp-image-857" src="https://typeofweb.com/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM-1024x690.png" alt="Dzięki unicode-range poznałeś wszystkie znaki w tokenie. W tym przypadku deadbeef01." width="1024" height="690" /></a>
   <figcaption>
     Dzięki unicode-range poznałaś/eś wszystkie znaki w tokenie. W tym przypadku deadbeef01.
   </figcaption>
 </figure>
-
 
 Rezultat? Poznałaś/eś właśnie wszystkie znaki użyte w konkretnym miejscu w aplikacji ofiary. Co mogłaś/eś wykraść? Przykładowo <strong>wszystkie znaki tokena</strong> — z GitHuba, Travisa lub, przykład na czasie, jakiejś giełdy BitCoinowej. <strong>Oczywiście nie znamy konkretnej kombinacji, ale bardzo mocno zawężyłaś/eś sobie zakres poszukiwań i łatwiej będzie Ci teraz przeprowadzić kolejny atak</strong> (bruteforce, albo może socjotechnika?)
 

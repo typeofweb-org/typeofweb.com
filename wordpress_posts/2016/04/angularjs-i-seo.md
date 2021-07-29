@@ -16,8 +16,8 @@ categories:
   - slug: front-end
     name: Front-end
 seo: {}
-
 ---
+
 Wielokrotnie na licznych forach, grupach dyskusyjnych i spotkaniach pada pytanie odnośnie Single Page Applications i SEO. React, Angular, AngularJS, Vue — jak się mają do SEO? Jak to zrobić? Jak sprawić, by wyszukiwarki indeksowały <em>strony www</em> oparte o frameworki JavaScript? Jak poprawić podgląd udostępnianych linków do <em>Single Page Application</em> na Facebooku? Jak uzyskać lepsze rezultaty? Co prawda poniższy wpis skupia się na Angularze, jednak zawarte w nim porady <strong>można z powodzeniem zastosować do aplikacji działających w oparciu o dowolny framework JS</strong> np. React, Vue, Backbone, Ember, czy Knockout.</p>
 
 <h2 id="stronawangularze">Strona w Angularze</h2>
@@ -42,7 +42,7 @@ Jest kilka sposobów na rozwiązanie opisanego problemu, ale zasadniczo wszystki
 
 <h3 id="prerenderio">prerender.io</h3>
 
-<a href="https://prerender.io">Prerender.io</a> jest serwisem typu SaaS oraz <a href="https://github.com/prerender/prerender">biblioteką Open Source</a>. Zasada działania jest dokładnie taka, jak opisana wcześniej: Prerender pobiera wskazane podstrony, wykonuje na nich JS, cache’uje statyczny HTML i następnie serwuje botom. Wykorzystanie Prerender.io wymaga zmian w konfiguracji serwera, z którego się korzysta – ale na szczęście twórcy oraz społeczność udostępniają odpowiednie <em>middleware</em> m.in do Nginx,  ExpressJS, Rails, Apache, Spring, Symfony 2 i wielu innych. Szczegóły konfiguracji opisane są w <a href="https://prerender.io/documentation">dokumentacji</a>.
+<a href="https://prerender.io">Prerender.io</a> jest serwisem typu SaaS oraz <a href="https://github.com/prerender/prerender">biblioteką Open Source</a>. Zasada działania jest dokładnie taka, jak opisana wcześniej: Prerender pobiera wskazane podstrony, wykonuje na nich JS, cache’uje statyczny HTML i następnie serwuje botom. Wykorzystanie Prerender.io wymaga zmian w konfiguracji serwera, z którego się korzysta – ale na szczęście twórcy oraz społeczność udostępniają odpowiednie <em>middleware</em> m.in do Nginx, ExpressJS, Rails, Apache, Spring, Symfony 2 i wielu innych. Szczegóły konfiguracji opisane są w <a href="https://prerender.io/documentation">dokumentacji</a>.
 
 Prerender SaaS jest bezpłatny do 250 podstron co bez wątpienia jest jego ogromną zaletą. Dodatkowo, w przypadku gdy bot spróbuje pobrać stronę, która jeszcze nie znajduje się w cache’u Prerendera, zostanie ona w locie pobrana i dodana do cache. Może to zająć chwilę dłużej, co z kolei może skutkować obniżeniem rankingu przez bota, jednak z drugiej strony to na pewno bardzo elastyczne rozwiązanie. Dodatkowo Prerender pozwala też na ręczne wymuszenie dodania nowych podstron do cache’a przy użyciu odpowiedniego zapytania <code>POST</code> do API.
 
@@ -71,6 +71,7 @@ Dawniej technika ta służyła podbiciu rankingu danej strony w wynikach wyszuki
 Korzystałem zarówno z BromBone, jak i Prerender.io, i oba te rozwiązania dobrze się sprawdziły – robiły dokładnie to, co powinny. Jednak ostatecznie zrezygnowaliśmy z nich na rzecz własnego skryptu i PhantomJS. Ostatnio implementowałem możliwość udostępniania na Facebooku dynamicznie generowanych linków do podstrony w aplikacji i tu już niestety gotowe rozwiązania się nie sprawdziły. BromBone nie serwował zupełnie niczego, bo potrzebuje aż 6 godzin na zaindeksowanie nowych linków. W prerender.io natomiast szybko przekroczyliśmy limit 250, a nawet kilku tysięcy podstron, co po prostu przestało się opłacać. Własny skrypt i PhantomJS wymagały poświęcenia trochę więcej czasu na skonfigurowanie, jednak ostatecznie okazały się mniej zawodne i tańsze.
 
 Bez wątpienia z tego wpisu należy wyciągnąć dwa wnioski: <br />
+
 1. Do stworzenia strony www nie potrzeba frameworka. <br />
 2. Jeśli zajdzie potrzeba, to nie trzeba już dzisiaj obawiać się SEO w aplikacjach JavaScriptowych.
 

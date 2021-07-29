@@ -29,13 +29,13 @@ seo:
     - >-
       kursu programowania, kursów programowania, kursie programowania, kursom
       programowania
-
 ---
+
 Jestem <strong>absolwentką</strong> dwóch <strong>kursów programowania</strong>: Front-end z biblioteką React oraz podstaw Javy.
 
 Po kilku latach spędzonych za granicą i odłożeniu odpowiedniej ilości pieniędzy, postanowiłam świadomie dokonać w swoim życiu przewrotu. Ze specjalistki ds. marketingu internetowego chciałam <strong>przebranżowić się w programistkę</strong>.
 
-{/* more */}
+{/_ more _/}
 
 Uczestnictwo w pierwszym kursie programowania planowałam przez kilka miesięcy i opłaciłam z własnych środków. Decyzja o skorzystaniu z drugiego kursu programowania zapadła spontanicznie. Głównie ze względu na to, że koszty pokrywał Urząd Pracy. Czułam też, że nie jestem jeszcze wystarczająco przygotowana do podjęcia zatrudnienia. Jak się później okazało, <strong>nawet po drugim kursie i trzymiesięcznym stażu</strong> moja wiedza programistyczna wciąż była bardzo podstawowa. A przecież miałam <strong>zostać programistką w dwa miesiące</strong> :)
 
@@ -303,8 +303,8 @@ Na koniec przygotowałam zestawienie najbardziej popularnych<strong> szkół pro
 </table>
 </div>
 
-<span style="font-size: 10px">*Powyższa oferta jest aktualna na marzec 2018 roku i jest tylko poglądowym zestawieniem.
-<span style="font-size: 10px">**Na dzień pisania artykułu w podanych miejscowościach nie było ofert szkoleniowych.</span></span>
+<span style="font-size: 10px">\*Powyższa oferta jest aktualna na marzec 2018 roku i jest tylko poglądowym zestawieniem.
+<span style="font-size: 10px">\*\*Na dzień pisania artykułu w podanych miejscowościach nie było ofert szkoleniowych.</span></span>
 
 <h2>Podsumowanie</h2>
 

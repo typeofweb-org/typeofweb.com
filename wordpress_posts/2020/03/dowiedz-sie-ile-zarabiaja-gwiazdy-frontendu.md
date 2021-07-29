@@ -25,13 +25,14 @@ seo:
     - zarabiają
   focusKeywordSynonyms:
     - zarobki, zarabia, zarabiająca, zarabiające
-
 ---
+
 Ostatnio na Twitterze pojawił się ciekawa moda polegająca na ujawnianiu swojego doświadczenia i zarobków przez programistów i programistki w celu uświadamiania i zmniejszenia nierówności płac. Udział w zabawie wzięły także znane gwiazdy takie, jak Dan Abramov albo Sara Vieira. Ile zarabiają?
 
-{/* more */}
+{/_ more _/}
 
 ## #KnowYourWorth
+
 Pierwszy Tweet pojawił się 14. lutego i został wrzucony przez osobę o imieniu Zac Sweers. Jest to programista z Nowego Jorku pracujący dla Slacka, a przedtem dla Ubera. Napisał on (tłumaczenie własne):
 
 > Nierówność płac to ogromny problem w IT, w szczególności w niedostatecznie reprezentowanych grupach takich, jak kobiety i mniejszości. Najlepszy sposób, w jaki możesz pomóc, to poprzez ujawnienie swoich zarobków. Ja zaczynam.
@@ -46,6 +47,7 @@ https://twitter.com/ZacSweers/status/1228205724255154177
 Przyjmując kurs dolara na poziomie 3,90zł (taki jest średni kurs NBP 2. marca 2020, ale zaznaczam, że dolar jest bardzo wysoko!) okazuje się, że Zac zarabia 799500zł rocznie, czyli, w formie bardziej przystępnej dla Polaków, 66625zł miesięcznie. Od tego należałoby odjąć podatki i ubezpieczenia (więc jest to pensja brutto). Skorzystałem z kalkulatora znalezionego w Google i wyszło mi ponad 36% podatków razem z jakimś ubezpieczeniem. To daje **ok. 42000zł miesięcznie „na rękę”.** Do tego należałoby doliczyć udziały, czyli **dodatkowe ok. 40625zł miesięcznie brutto**. Nie wiem, w jaki sposób konkretnie opodatkowane, ani czy te udziały da się tak łatwo upłynnić, dlatego na razie pomińmy to.
 
 ## Czy to dużo?
+
 Pewnie zaczynacie się zastanawiać, czy to jest dużo. Zaglądam na numbeo, aby porównać koszty życia w Gdańsku i Nowym Jorku, i otrzymuję jasną informację:
 
 > Potrzebowałbyś ok. 32245,27zł w Nowym Jorku, aby utrzymać ten sam poziom życia, co za 9500,00zł w Gdańsku.
@@ -53,9 +55,11 @@ Pewnie zaczynacie się zastanawiać, czy to jest dużo. Zaglądam na numbeo, aby
 Można by więc na tej podstawie wyciągnąć wniosek, że **pensja z Nowego Jorku byłaby warta z grubsza x3,4 więcej w Gdańsku!** To naprawdę kolosalna różnica 😵 Idąc jeszcze dalej i trochę naciągając, możemy uznać, że **osoba zarabiająca 12360zł miesięcznie na rękę w Gdańsku, zarabia już efektywnie więcej od naszego bohatera w Nowym Jorku.**
 
 ## Ile zarabiają programiści
+
 Rozmowy o pensjach zawsze są tabu. Dawniej wynikało to pewnie z nierówności społecznych i wstydu, ale dzisiaj jest to efekt działania polityk firm, które wmawiają ludziom poczucie winy z powodu dzielenia się wysokością swojej pensji. Korzyść dla firmy jest oczywista – lepiej zarabiające osoby nie będą sugerowały tym gorzej opłacanym, aby te prosiły o podwyżkę. **Dlatego z punktu widzenia pracowników i pracowniczek jak najbardziej warto rozmawiać o wysokości swojej pensji, bo z takiej rozmowy możemy wynieść wyłącznie konkretne korzyści!**
 
 ## Dzielenie się zarobkami jest nielegalne
+
 Powszechnie powtarzane jest w Polsce twierdzenie, że pensji nie można ujawniać, gdyż jest to niezgodne z prawem, albo dlatego, że pracodawca wprost zabronił w umowie mówić, ile zarabiają. Mówiąc krótko: **to bzdura**. Już wyjaśniam. Na mocy Kodeksu Pracy rzeczywiście istnieje coś takiego, jak **tajemnica wynagrodzenia, jednak jest to prawo chroniące pracowników i pracowniczki, a nie firmy je zatrudniające!** Firma nie ma prawa wyjawić Twoich dochodów innym osobom lub firmom, na tym polega ochrona. Ale **Ty możesz ujawniać swoje dochody gdzie, kiedy i komu chcesz.**
 
 Czy pracodawca może wprost zapisać w umowie o pracę zakaz dzielenia się informacjami o swoich zarobkach? Może, ale to **zapis w świetle prawa po prostu nieważny**. Doczytałem, że mówi o tym wprost przepis Kodeksu pracy, który stanowi, że postanowienia umów o pracę mniej korzystne, niż przepisy Kodeksu Pracy są nieważne. Zapytałem <a href="https://paulinapiatek.pl/" rel="noreferrer noopener">radczyni prawnej Pauliny Piątek</a>:
@@ -70,9 +74,11 @@ Oczywiście, rozumiem, jeśli ktoś chce być **lojalny wobec firmy** i wolałby
 Ah, no i jeśli nie jest to całkowicie jasne, to mówię tutaj o pracowniczkach i pracownikach zatrudnionych na podstawie omowy o pracę. Przy innych umowach, w szczególności b2b, zakaz ujawniania wysokości zarobków mógłby się pojawić.
 
 ## Ile można zarobić na froncie?
+
 No dobra, to przejdźmy do _clou_ sprawy. Ile zarabiają te osoby pałające się front-endem, które większość z nas zna? Pudelek.js.
 
 ### Ile zarabia Dan Abramov?
+
 > 🏫: Samouk
 > ⏳: 9 lat doświadczenia
 > 🏷: Software engineer
@@ -84,6 +90,7 @@ https://twitter.com/dan_abramov/status/1228454264915271683
 To daje nam ok. 507000zł rocznie, czyli 42250zł miesięcznie. Korzystając z kalkulatora dostępnego na gov.uk, oszacowałem pensję **„na rękę” na 28112,15zł miesięcznie** (po odjęciu podatku i ubezpieczenia).
 
 ### Sara Vieira i jej pensja
+
 > 🏫: Samouk
 > ⏳: 6 lat doświadczenia
 > 🏷: Software engineer
@@ -95,17 +102,19 @@ https://twitter.com/NikkitaFTW/status/1228450760926560273
 To daje nam około 350000zł rocznie, czyli 29167zł miesięcznie brutto. Sara w komentarzach pod tweetem podała też swoją wypłatę po podatkach i ubezpieczeniu: 49000 euro, czyli **„na rękę” ok. 17630zł miesięcznie.**
 
 ### Zarobki Kent C. Dodds
+
 > 🏫: Magister Systemów Informacyjnych
 > ⏳: 4 lata doświadczenia
 > 🏷: Software engineer
 > 🌎: Utah, USA
-> 💸:  $150000 pensji podstawowej rocznie + ok. $300000 w udziałach przez 3 lata
+> 💸: $150000 pensji podstawowej rocznie + ok. $300000 w udziałach przez 3 lata
 
 https://twitter.com/kentcdodds/status/1228455789427404800
 
 A więc Kent ma 5 (jak wyjaśnił w komentarzach) lat doświadczenia i zarabia imponujące 150000 amerykańskich dolarów rocznie. Zróbmy nasze przeliczenia: 585000zł rocznie brutto, czyli 48750zł miesięcznie brutto. Podatek i ubezpieczenie w Utah przy tych dochodach wyniesie ponad 30%, czyli (używając kalkulatora online) zostaje nam **ok. 34100zł miesięcznie „na rękę”**.
 
 ### Ile dostawał Jared Palmer?
+
 > 🏫: Samouk
 > ⏳: 7 lat doświadczenia
 > 🏷: Software engineer (prowadził agencję)
@@ -121,6 +130,7 @@ Zróbmy obliczenia. Podane stawki to od 1852500zł do 2535000zł brutto rocznie,
 Co ciekawe, Jared rzucił tę robotę, żeby skupić się na pracy nad Formikiem na pełen etat. Oprócz popularnej biblioteki, rozwija też płatny serwis Formik Cloud. Jak słusznie zauważa jeden z komentujących (Seth Reid), **pieniądze szczęścia nie dają**.
 
 ## Ile zarabiają polskie gwiazdy?
+
 Zapytałem ludzi na Discordzie, kogo uważają za najbardziej znanych frontendowców w Polsce, a następnie odezwałem się do wymienionych osób z zapytaniem o wzięcie udział w tej akcji i odpowiedzenie na pytanie, ile zarabiają. Niestety, **wszyscy oprócz jednej osoby odmówili**, w związku z czym zdecydowałem się nie publikować informacji tylko od jednego człowieka, aby nie stawiać go w ogniu Waszych komentarzy.
 
 Jakie powody podały pozostałe osoby? „Nie mogę”, „umowa mi nie pozwala”, „nie czuję się komfortowo”, „nie chcę robić przykrości kolegom z pracy”. Szczególnie ten ostatni jest ciekawy, bo udowadnia, że te nierówności istnieją, a robienie z pensji tematu tabu tylko sprawę pogarsza!

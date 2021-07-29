@@ -25,11 +25,11 @@ series:
 seo:
   focusKeywords:
     - enzyme
-
 ---
+
 Testowanie aplikacji to rzecz ważna. Do tej pory jednak nie wspomniałem ani słowem o testowaniu React.js. Czas najwyższy to zrobić! I <strong>od razu wrzucam Cię na głęboką wodę — użyjesz React.js i Enzyme</strong> — przemiłej biblioteki do testowania komponentów.
 
-{/* more */}
+{/_ more _/}
 
 O zaletach samego testowania nie muszę chyba pisać. <strong>Utrzymanie kodu, łatwiejsze dodawanie nowych funkcji, testy służące jako dokumentacja</strong>… bajka ;) Dlatego teraz po prostu weźmiesz poprzedni przykład (filtrowanie listy) i napiszesz do niego testy jednostkowe. Zacznij od zainstalowania enzyme.
 
@@ -169,4 +169,4 @@ Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.
 
 <h2>Ćwiczenie</h2>
 
-<strong>Ćwiczenie*:</strong>  Przetestuj czy komponent <code>App</code> przekazuje do komponentu <code>UsersList</code> tablicę z imionami. Kod dodaj w komentarzu!
+<strong>Ćwiczenie\*:</strong>  Przetestuj czy komponent <code>App</code> przekazuje do komponentu <code>UsersList</code> tablicę z imionami. Kod dodaj w komentarzu!

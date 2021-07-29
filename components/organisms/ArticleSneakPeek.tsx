@@ -41,7 +41,7 @@ export const ArticleSneakPeek = ({
       <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
         <p className="!indent-0">
           {excerpt}{' '}
-          <span className="inner-link ml-4">
+          <span className="inner-link ml-2">
             <Link href={href}>
               <a className="!tracking-wider">Czytaj dalej…</a>
             </Link>

@@ -23,13 +23,13 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 W tej części nauczysz się <strong>parametryzować komponenty w React.js</strong>. Poznasz pojęcie "props" oraz dowiesz się do czego one (te „propsy”) służą.
 
 To co zrobiliśmy do tej pory było spoko, ale przecież nie będziesz tworzyć nowego komponentu zawsze gdy będziesz chciał(a) wyświetlić inny tekst w aplikacji, prawda? Wyobraź sobie, że masz do zaprojektowania popup, w którym będzie wyświetlony tytuł oraz tekst. Za moment to zaimplementujemy!
 
-{/* more */}
+{/_ more _/}
 
 <h2>Projekt</h2>
 

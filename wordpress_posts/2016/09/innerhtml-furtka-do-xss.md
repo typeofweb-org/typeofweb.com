@@ -21,15 +21,15 @@ seo:
   focusKeywords:
     - innerHTML
     - XSS
-
 ---
+
 Bardzo często popełnianym błędem, na który zwracam uwagę praktycznie w każdym kolejnym Weekly JavaScript Challenge, jest niewłaściwe wykorzystywanie innerHTML. Bardzo łatwo może to doprowadzić do wystąpienia podatności typu <strong>XSS</strong>! Ten wpis chciałem poświęcić tej właściwości oraz zagrożeniom, które płyną z jej nieprawidłowego wykorzystania. Będę analizował konkretny przykład kodu z nadesłanego rozwiązania i pokażę jak przeprowadzić prosty atak na ten kod. Zapraszam!</p>
 
-{/* more */}
+{/_ more _/}
 
 <h2 id="xss">XSS przez innerHTML</h2>
 
-Atak, który tutaj pokażę nazywa się _Cross-site scripting_, a w skrócie XSS. Odmian XSS jest kilka, a sposobów na przeprowadzenie takich ataków niezliczone mnóstwo. Skupmy się więc na najprostszym przykładzie. Typowym dowodem na to, że podatność na XSS istnieje, jest wyświetlenie na stronie alerta z napisem “1”. Oznacza to, że możliwe jest wykonanie dowolnego kodu JavaScript, a stąd już bliska droga np. do tego, aby wykraść zawartość cookies lub token sesji i móc podszyć się pod danego użytkownika.
+Atak, który tutaj pokażę nazywa się *Cross-site scripting*, a w skrócie XSS. Odmian XSS jest kilka, a sposobów na przeprowadzenie takich ataków niezliczone mnóstwo. Skupmy się więc na najprostszym przykładzie. Typowym dowodem na to, że podatność na XSS istnieje, jest wyświetlenie na stronie alerta z napisem “1”. Oznacza to, że możliwe jest wykonanie dowolnego kodu JavaScript, a stąd już bliska droga np. do tego, aby wykraść zawartość cookies lub token sesji i móc podszyć się pod danego użytkownika.
 
 <h2 id="popierwszebrakzaufania">Po pierwsze brak zaufania</h2>
 

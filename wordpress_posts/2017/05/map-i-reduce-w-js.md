@@ -18,8 +18,8 @@ categories:
   - slug: javascript
     name: JavaScript
 seo: {}
-
 ---
+
 Napisałem artykuł o obserwablach, ale czegoś mi w nim zabrakło: Objaśnienia tak podstawowych pojęć i funkcji jak <code>map</code> i <code>reduce</code>. Observable na blogu pojawią się wkrótce, a ten krótki wpis ma na celu tylko lekkie wprowadzenie. Bardzo krótko i pobieżnie.
 
 Jeśli oczekujesz zgłębiania programowania funkcyjnego w JS to natychmiast zamknij ten wpis. Nie jest dla Ciebie!
@@ -31,12 +31,14 @@ Jaka jest zaleta tego rozwiązania? Na pewno zwięzłość. Dodatkowo, jak już 
 Jeśli rozumiesz powyższe przykłady i czujesz się swobodnie z <code>map</code> i <code>reduce</code> to prawdopodobnie Observable będą dla Ciebie łatwe do zrozumienia. O tym mój kolejny wpis:
 
 https://typeofweb.com/2017/05/19/observable-rxjs/
+
 <h1 id="dladociekliwych">Dla dociekliwych</h1>
 Pomimo, że obiecałem, że będzie prosto i pobieżnie, to jednak warto zastanowić się nad tym jak bardzo uniwersalne koncepty zostały tutaj omówione… Przykładowo, jeśli w opisie funkcji map zamiast słowa „tablica” wstawimy „funktor” to prawdopodobnie nadal wszystko co napisałem będzie prawdą.
 
 Czym jest funktor? Funktor to koncept z teorii kategorii, bardzo abstrakcyjnej gałęzi matematyki, na której bazuje całe programowanie funkcyjne. Teraz w zasadzie nie jest do końca istotne czym funktor jest, ważne co jeszcze jest funktorem… <strong>a funktorami są np. tablica, Promise albo Observable</strong>. Wszystko co tutaj opisałem, mimo że proste, jest bardzo uniwersalne i opisuje tak naprawdę szerokie pojęcia.
 
 Czym na przykład jest funkcja <code>Promise.resolve</code>? To przecież <code>flatMap</code> gdy wywołamy ją na innym obiekcie Promise oraz <code>map</code> gdy na wartości niebędącej Promise. Warto się zastanowić dlaczego i jakie są tego implikacje :)
+
 <div class="footnotes">
 <ol>
  	<li id="fn:1" class="footnote">Opinia własna ;) <a title="return to article" href="#fnref:1">↩</a></li>

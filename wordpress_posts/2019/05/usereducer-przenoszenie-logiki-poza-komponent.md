@@ -24,13 +24,14 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 `useReducer` to alternatywa dla `useState`. Ale po co i kiedy jej używać? W skrócie: Gdy logika komponentu się rozrasta i chcemy oddzielić ją całkowicie od widoku. Zgodnie z dobrymi praktykami!
 
-{/* more */}
+{/_ more _/}
 
 ## Użycie `useReducer`
+
 `useReducer` i `useState` pełnią bardzo podobne role: Służą do ustawiania stanu komponentu. Robią to jednak w inny sposób. Przypominam: `useState` przyjmuje stan początkowy, a zwraca aktualny stan i funkcję do ustawiania stanu:
 
 ```js
@@ -50,16 +51,17 @@ const [count, dispatch] = useReducer(countReducer, 0);
 [Jeśli znasz Reduksa](https://typeofweb.com/2018/04/06/react-redux-kurs-wprowadzenie-i-podstawy/), to na pewno od razu kojarzysz ten koncept!
 
 ## Napiszmy reducer
+
 Kontynuujmy przykład z prostym licznikiem. Tak, wiem, banały, ale od czegoś trzeba zacząć 🙄
 
 ```jsx
 function countReducer(state, action) {
-    switch (action.type) {
-        case 'increment':
-            return state + 1;
-        case 'decrement':
-            return state - 1;
-    }
+  switch (action.type) {
+    case 'increment':
+      return state + 1;
+    case 'decrement':
+      return state - 1;
+  }
 }
 
 function App() {
@@ -68,11 +70,11 @@ function App() {
   return (
     <div>
       {counter}
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
     </div>
   );
-};
+}
 ```
 
 Po kliknięciu w przyciski wysyłane są akcje: `increment` i `decrement`. Są one obsługiwane przez `countReducer`, który odpowiednio zwiększa lub zmniejsza licznik o 1.
@@ -80,9 +82,11 @@ Po kliknięciu w przyciski wysyłane są akcje: `increment` i `decrement`. Są o
 <CodepenWidget height="485" themeId="light" slugHash="QRbpPa" defaultTab="js,result" user="mmiszy" penTitle="React Hooks: useReducer"><a href="http://codepen.io/mmiszy/pen/QRbpPa/">Zobacz Codepen React Hooks: useReducer</a>.</CodepenWidget>
 
 ## Pytania?
+
 <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>. Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
 <NewsletterForm />
 <FacebookPageWidget />
 
 ## Podsumowanie
+
 `useReducer` jest dobrym zamiennikiem `useState` w sytuacjach, gdy potrzebujemy wymodelować **bardziej rozbudowane komponenty i ich stany**. Możliwość łatwego **wydzielenia reducera oraz testowania go jednostkowo** to wisienka na torcie. `useReducer` na pewno się przyda!

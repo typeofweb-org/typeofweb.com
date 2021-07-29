@@ -25,15 +25,15 @@ seo:
     - this
   focusKeywordSynonyms:
     - kontekstem wywołania, kontekście wywołania, kontekstu wywołania
-
 ---
+
 Czy kiedykolwiek spotkałaś(-eś) się z błędem w aplikacji, który wynikał z tego, że "this" było ustawione na coś innego, niż się spodziewałaś/eś? Jeśli tak, to nie jesteś jedyna(-y). W swojej karierze programisty miałem okazję występować w roli rekrutera na ponad 160-ciu rozmowach kwalifikacyjnych na stanowiska front-endowe. Jeśli nauczyło mnie to jednego, to tego, że odpowiedź na pytanie „na co wskazuje <code>this</code>?” albo „co to jest kontekst wywołania?” sprawia największą trudność nie tylko kandydatom, ale również doświadczonym programistom w ich codziennej pracy. <strong>W tym wpisie pokazuję, że <code>this</code> nie jest tak magiczne jakby się mogło wydawać, a kontekst wywołania da się zrozumieć.</strong>
 
-{/* more */}
+{/_ more _/}
 
 <h2>Wstęp do "this" w JS</h2>
 
-JavaScript to niezwykły język. Jego składnia jest bardzo podobna do tych znanych z C++ czy z Javy. Bardzo wiele wybacza — błąd w JS niekoniecznie skutkuje niezdatnością strony WWW na której wystąpił do użycia, bardzo często działa ona dalej bez najmniejszego problemu. Oba te aspekty bez wątpienia wpłynęły na to, że jest on tak popularny. W końcu wystarczy napisać kilka linijek w pliku *.js i odświeżyć stronę. To wszystko sprawia, że <strong>pisać w JS można praktycznie bez żadnego wcześniejszego przygotowania</strong>. I dokładnie tak się dzieje.
+JavaScript to niezwykły język. Jego składnia jest bardzo podobna do tych znanych z C++ czy z Javy. Bardzo wiele wybacza — błąd w JS niekoniecznie skutkuje niezdatnością strony WWW na której wystąpił do użycia, bardzo często działa ona dalej bez najmniejszego problemu. Oba te aspekty bez wątpienia wpłynęły na to, że jest on tak popularny. W końcu wystarczy napisać kilka linijek w pliku \*.js i odświeżyć stronę. To wszystko sprawia, że <strong>pisać w JS można praktycznie bez żadnego wcześniejszego przygotowania</strong>. I dokładnie tak się dzieje.
 
 Z drugiej strony mamy programistów, nie JavaScriptu ogólnie, a konkretnej biblioteki, czy frameworka. Kiedyś było to jQuery, potem Angular.js, a obecnie React.js. Osoby takie często swoją znajomość JS ograniczają właśnie do APi używanego rozwiązania.
 

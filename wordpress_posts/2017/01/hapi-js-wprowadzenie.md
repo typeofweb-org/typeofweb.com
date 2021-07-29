@@ -19,8 +19,8 @@ series:
   slug: hapijs
   name: HapiJS
 seo: {}
-
 ---
+
 <p>Po moich dwóch poprzednich wpisach dotyczących frameworka hapi.js na platformę Node.js, wiele osób zaczęło zadawać mi różne pytania. Poniżej zebrałem najciekawsze z nich oraz kilka własnych przemyśleń. Należy potraktować to jako miękkie <strong>wprowadzenie do tworzenia backendu w Node.js z hapi.js</strong>.</p>
 
 <h1 id="skdsiwoglewziohapijs">Skąd się w ogóle wzięło hapi.js?</h1>

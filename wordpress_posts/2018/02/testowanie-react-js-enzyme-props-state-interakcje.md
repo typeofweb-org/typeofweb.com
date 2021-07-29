@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Pokazałem już jak pisać proste testy do aplikacji React.js z użyciem Enzyme. Sprawdzanie czy coś się renderuje, czy zawiera tekst, czy dobrze pokazuje elementy… W tym wpisie idę o krok dalej. Pokazuję jak w Enzyme testować interakcje z komponentami, odczytywać i zmieniać propsy a także state.
 
-{/* more */}
+{/_ more _/}
 
 <h2>Pobieranie i ustawianie propsów oraz state</h2>
 

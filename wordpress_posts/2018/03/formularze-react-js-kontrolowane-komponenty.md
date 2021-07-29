@@ -23,11 +23,12 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Dzisiaj zajmiesz się imlementacją formularzy w React.js. Już wcześniej dokonywałaś/eś interakcji z polami formularza — ale raczej w prosty sposób. Dzisiaj o formularzach kontrolowanych w React.js
 
 ## Kontrolowane formularze w React.js
+
 Kontrolowane komponenty w React.js (_Controlled Components_) — to takie komponenty, których wewnętrzny stan jest kontrolowany przez Reacta. O czym mówię? Weźmy prosty kod:
 
 ```jsx
@@ -44,16 +45,14 @@ Teraz jeśli spróbujesz coś wpisać w taki input — to aby zmiany były w og
 
 ```jsx
 class MyFirstForm extends React.Component {
-  state = {value: ''};
+  state = { value: '' };
 
   handleChange = (event) => {
     this.setState({ value: event.target.value });
-  }
+  };
 
   render() {
-    return (
-      <input value={this.state.value} onChange={this.handleChange} />
-    );
+    return <input value={this.state.value} onChange={this.handleChange} />;
   }
 }
 ```
@@ -61,19 +60,21 @@ class MyFirstForm extends React.Component {
 Tym sposobem React jest **jedynym źródłem prawdy**.
 
 ## Elementy w formularzach
+
 Przyjrzysz się teraz innym elementom, których używasz w formularzach :) Wszystkie mogą być kontrolowane:
 
 ### `select`
+
 Tutaj warto zwrócić uwagę na dwie rzeczy:
 
-* żaden option nie ma atrybutu `selected` znanego z HTML
-* element `<select>` ma atrybut `value`
+- żaden option nie ma atrybutu `selected` znanego z HTML
+- element `<select>` ma atrybut `value`
 
 Odpowiednia wartość `value` sprawia, że React sam automatycznie wie, który element na liście jest wybrany i poprawnie renderuje formularz:
 
 ```jsx
 class MyFirstForm extends React.Component {
-  state = {value: 'blue'}
+  state = { value: 'blue' };
 
   render() {
     return (
@@ -90,6 +91,7 @@ class MyFirstForm extends React.Component {
 W powyższym przykładzie wybrany będzie Niebieski.
 
 ### `textarea`
+
 W HTML-u element `textarea` zachowuje się nieco inaczej niż pozostałe inputy. Jego wartość określona jest przez jego dziecko, a nie przez atrybut:
 
 ```html
@@ -105,6 +107,7 @@ W React jest inaczej. Ustandaryzowano to i wykorzystywany jest atrybut `value`:
 Dzięki temu `textarea` możesz traktować tak jak inne pola formularza bez konieczności robienia wyjątków :)
 
 ### `checkbox` i `radio`
+
 Te inputy mają, podobnie jak w HTML, specjalny atrybut `checked` do którego należy przekazać zmienną typu `boolean` — `true` lub `false`.
 
 ```jsx
@@ -112,11 +115,13 @@ Te inputy mają, podobnie jak w HTML, specjalny atrybut `checked` do którego na
 ```
 
 ## Demo
+
 Przyszedł czas na demo — przykład kontrolowanego formularza w React.js:
 
 <CodepenWidget height="465" themeId="0" slugHash="mXZLwp" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com"><a href="http://codepen.io/mmiszy/pen/mXZLwp/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.</CodepenWidget>
 
 ## Podsumowanie
+
 Przedstawiłem tutaj podstawowy sposób obsługi formularzy w React.js. W kolejnym odcinku kursu porozmawiamy o formularzach niekontrolowanych. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
@@ -124,4 +129,5 @@ Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.
 <FacebookPageWidget />
 
 ## Ćwiczenie
+
 **Ćwiczenie**: Spróbuj tak zmienić obsługę formularza, aby niepotrzebne było używanie osobnej funkcji `handle…Change` dla każdego elementu.

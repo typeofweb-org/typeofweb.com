@@ -23,11 +23,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Przyszedł ten moment, gdy Twoja aplikacja zaczyna się rozrastać i zmagasz się z różnymi problemami z architekturą. Zacznijmy od prostego problemu: Komunikacja pomiędzy komponentami. Ale nie tylko tymi, które są bezpośrednio obok siebie, ale też tymi dowolnie oddalonymi w aplikacji…
 
-{/* more */}
+{/_ more _/}
 
 <p class="important">Napisałem wcześniej podobne artykuły na temat <a href="https://typeofweb.com/2016/05/05/komunikacja-pomiedzy-kontrolerami/">AngularJS (link)</a> i <a href="https://typeofweb.com/2016/07/02/komunikacja-pomiedzy-komponentami-w-angular-2/">Angular2 (link)</a>. Wiedza tam zawarta jest w dużej części uniwersalna i możesz chcieć do nich zajrzeć.</p>
 

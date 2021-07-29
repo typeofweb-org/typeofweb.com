@@ -248,3 +248,11 @@ progress::-webkit-progress-value {
 .katex .mfrac .frac-line {
   border-color: currentColor;
 }
+
+.math {
+  white-space: nowrap;
+}
+
+.math .katex-html {
+  white-space: normal;
+}

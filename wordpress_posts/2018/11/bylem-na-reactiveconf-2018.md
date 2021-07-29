@@ -21,11 +21,11 @@ categories:
   - slug: opinie
     name: Opinie
 seo: {}
-
 ---
+
 Tegoroczna konferencja ReactiveConf odbywała się w czeskiej Pradze. Po pozytywnych doświadczeniach w ubiegłym roku, nie myślałem długo, nie przeglądałem nawet agendy, po prostu kupiłem bilet i pojechałem. Spodziewałem się dużo JS, React, Elm, FRP… i w zasadzie się nie zawiodłem. W zasadzie, bo przecież nie o to w tym wszystkim chodzi!
 
-{/* more */}
+{/_ more _/}
 
 ## ReactiveConf
 
@@ -42,6 +42,7 @@ Do Pragi przyjechałem w weekend przed konferencją. W planach? Standardowo, **z
 <a href="https://typeofweb.com/wp-content/uploads/2018/11/IMG_2699.jpg"><img src="https://typeofweb.com/wp-content/uploads/2018/11/IMG_2699-981x1024.jpg" alt="Praga" width="981" height="1024" class="aligncenter size-large wp-image-1722" /></a>
 
 ## Venue
+
 Konferencja odbywała się poza centrum Pragi, w dzielnicy Karlín. 3 stacje metra od ścisłego centrum, bardzo dobra lokalizacja. Praga-Karlín to trochę takie zagłębię biurowe, ale jednocześnie też na każdym rogu i w każdej uliczce jest tam mnóstwo pubów i restauracji z przeróżnymi daniami. Świetna lokacja!
 
 Sama konferencja miała miejsce w ogromnej hali z antresolą. Budynek był połączony z piekarnią/restauracją oraz różnymi biurami. W tej części biurowej odbywały się równolegle sesje Q&A oraz „mniejsze” prezentacje. **Sesje Q&A uważam za pomysł niezwykle trafiony**.
@@ -52,10 +53,10 @@ W poniedziałek rano, oprócz resztek śniadania, powitał mnie tradycyjny szamp
 
 Zamiast wybierać swoje ulubione prezentacje, podrzucę Ci kilka zajawek i wątków do zobaczenia we własnym zakresie.
 
-* React — większość talków była mu poświęcona w taki lub inny sposób. Zdecydowany król.
-* Angular — prawdopodobnie gdyby nie sponsoring Microsoftu, o Angularze nie mówiłby zupełnie nikt. Vue.js też nie było 🤔
-* rxjs — nadal interesujący, nadal na topie
-* Reason — w zdecydowanym trendzie wzrostowym; zainteresowanie językiem Reason rośnie chyba teraz wykładniczo; warto nadmienić, że prezentacja na temat Reason pojawiła się również na meet.js Summit!
+- React — większość talków była mu poświęcona w taki lub inny sposób. Zdecydowany król.
+- Angular — prawdopodobnie gdyby nie sponsoring Microsoftu, o Angularze nie mówiłby zupełnie nikt. Vue.js też nie było 🤔
+- rxjs — nadal interesujący, nadal na topie
+- Reason — w zdecydowanym trendzie wzrostowym; zainteresowanie językiem Reason rośnie chyba teraz wykładniczo; warto nadmienić, że prezentacja na temat Reason pojawiła się również na meet.js Summit!
 
 ## Ciekawostki
 
@@ -84,13 +85,14 @@ Nieskromnie napiszę, że, razem z kolegą Bartoszem, oba te konkursy wygraliśm
 Warto dodać, że ten sponsor przywiózł ze sobą **śliwowicę** i częstował nią zainteresowanych. To było… _mocne_ zaskoczenie.
 
 ## Digital nomad
+
 Ponownie, w czasie konferencji praktycznie cały czas pracowałem. W ten sposób łączę przyjemne z pożytecznym — zamiast włóczyć się w trakcie **nudnych prezentacji, których zawsze jest zdecydowanie więcej niż tych ciekawych**, można zająć się czymś co płaci. Poza tym, hej, cały wyjazd sponsoruje firma 😉 Jeśli dla Ciebie też brzmi to jak niezły pomysł, zajrzyj tutaj:
 
 https://typeofweb.com/2018/02/28/x-team-opis-rekrutacja-opinia/
 
-
 ## Podsumowanie
-Konferencje nie są od przekazywania wiedzy. Są od pokazywania tematów, idei, które zainteresowani mogą wygooglać później sami w domu i spokojnie doczytać. Jeśli interesujesz się programowaniem,  jeśli śledzisz newslettery, blogi, newsy… to **prawdopodobnie większość tematów z dowolnej konferencji branżowej już znasz**.
+
+Konferencje nie są od przekazywania wiedzy. Są od pokazywania tematów, idei, które zainteresowani mogą wygooglać później sami w domu i spokojnie doczytać. Jeśli interesujesz się programowaniem, jeśli śledzisz newslettery, blogi, newsy… to **prawdopodobnie większość tematów z dowolnej konferencji branżowej już znasz**.
 
 Mimo to uważam, że warto bywać na takich wydarzeniach. Zawsze znajdzie się chociaż ten jeden talk, który zwróci Twoją uwagę albo zainspiruje. Podobnie jest i tym razem — sesja Q&A na temat Reason była dla mnie **silną inspiracją** do rozpoczęcia nowego projektu pobocznego — tym razem gry przeglądarkowej (będą wpisy!). Podobną inspiracją lub dawką wiedzy mogą być szkolenia: <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie w Type of Web</a>.
 

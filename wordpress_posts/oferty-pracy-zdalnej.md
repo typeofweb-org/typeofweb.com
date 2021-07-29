@@ -19,20 +19,22 @@ categories: []
 seo:
   focusKeywords:
     - praca zdalna
-
 ---
+
 Hej! Praca zdalna to ostatnio bardzo modny temat. Oto oferty pracy zdalnej, które wybrałem dla Ciebie. Jest to agregacja ofert z kilku sprawdzonych serwisów, które szczerze Ci polecam. <strong>Jeśli nigdy nie próbowałaś/eś pracy zdalnej — to może być idealny moment, aby zacząć!</strong> Ja nie wyobrażam sobie już powrotu do pracy w biurze. Ta strona będzie aktualizowana o kolejne oferty i sprawdzone portale, więc warto tutaj zaglądać co jakiś czas.
 
-{/* more */}
+{/_ more _/}
 
 Jeśli szukasz recenzji portali, które sam testowałem — koniecznie zajrzyj tutaj:
 
 https://typeofweb.com/znajdz-prace-zdalna-tymi-serwisami/
+
 <h2>Lista ofert pracy zdalnej</h2>
 Przejrzyj oferty pracy zdalnej poniżej i aplikuj!
 
 [typeofweb-jobs]
 
 <strong>Jeśli masz jakieś sugestie lub pytania – napisz w komentarzu lub odezwij się bezpośrednio do mnie. Odpisuję każdemu :)</strong>
+
 <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">[typeofweb-facebook-page width="640" small-header="true" tabs="messages"]</div>
 <p style="text-align: right; font-size: 11px; margin: 0;">Zdjęcie: <a href="http://blog.wojtekzajac.com/post/156400904442" target="_blank" rel="noopener nofollow">Wojtek Zając</a></p>

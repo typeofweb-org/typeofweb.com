@@ -24,11 +24,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Tworzenie aplikacji nie miałoby sensu, gdyby użytkownik nie mógł wchodzić z nią w interakcje :) Dzisiaj nauczysz się obsługiwać zdarzenia wywoływane przez użytkowników: Kliknięcia, najechania kursorem, zmiany tekstu w polu tekstowym… oczywiście w React.js.
 
-{/* more */}
+{/_ more _/}
 
 <h2>Zdarzenia w JS</h2>
 

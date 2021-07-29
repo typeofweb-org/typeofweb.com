@@ -22,8 +22,8 @@ categories:
 seo:
   focusKeywords:
     - meet.js Summit
-
 ---
+
 meet.js Summit 2017 dobiegł końca! Minął ponad tydzień i opadły już emocje po zakończeniu <strong>największej tego typu konferencji w Polsce</strong> i przede wszystkim największego meet.js Summit w historii meet.js! Jako organizatorzy, chcielibyśmy tutaj przedstawić naszą relację: Jak to wszystko wyglądało z drugiej strony, czy organizacja konferencji to czysta przyjemność, co uważamy za udane, a co chcielibyśmy jeszcze dopracować.
 
 Tegoroczny meet.js <strong>Summit był organizowany przez Michała Miszczyszyna, Wojtka Urbańskiego, Arkadiusza Putko i Łukasza Nowackiego</strong> – czyli osoby raczej kojarzone w lokalnej (i nie tylko) społeczności. Ten wpis jest wspólnym podsumowaniem Summita z naszej perspektywy.

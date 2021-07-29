@@ -26,11 +26,11 @@ seo:
   focusKeywords:
     - Redux
     - Flux
-
 ---
+
 Na codzień korzystam z <strong>Redux razem z React</strong>. Dawniej używałem też własnej implementacji architektury Flux razem z AngularJS. Postanowiłem napisać o tym koncepcie coś więcej — bo jest to bez wątpienia bardzo ciekawe! <strong>Jednokierunkowy przepływ danych, akcje, dispatcher, action creator, reducer</strong>… to wszystko w tym wpisie :) A do tego klarowne, praktyczne przykłady!
 
-{/* more */}
+{/_ more _/}
 
 Gdy opisywałem <a href="https://typeofweb.com/2016/05/05/komunikacja-pomiedzy-kontrolerami/">sposoby komunikacji pomiędzy kontrolerami</a> w AngularJS, poniekąd celowo pominąłem pewną alternatywę, która zyskuje ostatnio sporą popularność: Architekturę Flux. Nie wspominałem o Fluksie głównie ze względu na to, że to koncept trochę szerszy niż prosta komunikacja pomiędzy elementami aplikacji o jakiej traktował tamten wpis.
 
@@ -66,14 +66,12 @@ Tak to wygląda koncepcyjnie. Więcej na ten temat można poczytać na <a href="
 
 <strong>Redux jest implementacją architektury Flux</strong>, do której dodano nieco <strong>programowania funkcyjnego</strong> i skorzystano ze wzorca <storng><a href="http://martinfowler.com/eaaDev/EventSourcing.html">Event Sourcing</a></strong>. Na stronie Reduksa podane są trzy główne zasady, o której opiera się cała filozofia tej biblioteki:
 
-
 <figure id="attachment_1308" align="alignright" width="1024">
   <a href="https://typeofweb.com/wp-content/uploads/2016/06/redux-logo-e1522339859612.png"><img src="https://typeofweb.com/wp-content/uploads/2016/06/redux-logo-e1522339859612-1024x380.png" alt="Kurs Flux i Redux" width="1024" height="380" class="size-large wp-image-1308" /></a>
   <figcaption>
     Logo Redux
   </figcaption>
 </figure>
-
 
 <h3 id="caystanaplikacjijestprzechowywanywdrzewiewjednym_storze_">Cały stan aplikacji jest przechowywany w drzewie w jednym <em>storze</em></h3>
 

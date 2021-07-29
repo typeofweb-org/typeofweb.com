@@ -27,13 +27,13 @@ seo:
   focusKeywordSynonyms:
     - czytelność kodu, czytelnego kodu
     - czystego kodu
-
 ---
+
 Pisanie czytelnego kodu sprawia wielu programistom ogromne kłopoty. Ta uwaga bynajmniej nie dotyczy wyłącznie osób początkujących, ale niestety także tych z latami doświadczenia. Z czego wynika problem? Jak sprawić, aby pisany kod był bardziej czytelny i przystępny? Co to jest czysty kod?
 
-{/* more */}
+{/_ more _/}
 
-Ostatnio mam okazję prowadzić webinary, warsztaty i szkolenia. Dodatkowo od dłuższego czasu staram się kontynuować inicjatywę <a href="https://www.facebook.com/groups/1131907053499522/">Weekly JavaScript Challenge</a>. Dzięki temu  mam kontakt z wieloma programistami o różnym poziomie doświadczenia i z nieudawanym przerażeniem stwierdzam, że <strong>czytelność kodu nadal traktowana jest jako coś mało istotnego</strong>. Nic bardziej błędnego!
+Ostatnio mam okazję prowadzić webinary, warsztaty i szkolenia. Dodatkowo od dłuższego czasu staram się kontynuować inicjatywę <a href="https://www.facebook.com/groups/1131907053499522/">Weekly JavaScript Challenge</a>. Dzięki temu mam kontakt z wieloma programistami o różnym poziomie doświadczenia i z nieudawanym przerażeniem stwierdzam, że <strong>czytelność kodu nadal traktowana jest jako coś mało istotnego</strong>. Nic bardziej błędnego!
 
 Programiści przez zdecydowaną większość czasu czytają, a nie piszą kod źródłowy. Dodanie krótkiego fragmentu do istniejącego projektu często wymaga przeczytania kilku lub kilkunastu linii kodu. To jeden z powodów, dla których czytelność powinna stać na pierwszym miejscu. <strong>Nieczytelny kod znacznie wydłuża czas potrzebny do napisania czegokolwiek nowego</strong>. Na domiar złego, niejasny i zagmatwany kod prowadzi do powstawania <strong>nieprzewidzianych błędów w aplikacjach</strong>, wynikających z niezrozumienia przepływu danych albo niespodziewanych efektów ubocznych.
 

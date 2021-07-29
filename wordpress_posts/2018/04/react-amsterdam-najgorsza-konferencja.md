@@ -20,31 +20,34 @@ categories:
 seo:
   focusKeywords:
     - React.Amsterdam
-
 ---
+
 Zachęcony ciekawym miejscem, dobrą agendą i tematyką, kupiłem bilet na React.Amsterdam. I poleciałem. Jakie są moje wrażenia? Jaka jest moja opinia? **Czy była to najgorsza konferencja na jakiej byłem?**
 
-{/* more */}
+{/_ more _/}
 
 ## tl;dr: Tak.
 
 ## React.Amsterdam
+
 Do Amsterdamu przyleciałem dzień wcześniej, z nadzieją na jakieś zwiedzanie. W praktyce cały poranek przespałem, a popołudnie pracowałem 😂 Mniejsza o to. Skupmy się na konferencji.
 
 Następnego dnia rano poszliśmy w kierunku dworca w Amsterdamie — tam **czekał na nas statek** (!), który zabrał nas do północnej części Amsterdamu gdzie odbywała się konferencja. Własny statek? Z flagą React.Amsterdam? NICE.
 
 <a href="https://typeofweb.com/wp-content/uploads/2018/04/IMG_0186.jpg"><img src="https://typeofweb.com/wp-content/uploads/2018/04/IMG_0186-768x1024.jpg" alt="Flaga React.Amsterdam" width="768" height="1024" class="aligncenter size-large wp-image-1441" /></a>
 
-__Statek: 10/10__
+**Statek: 10/10**
 
 ## Venue
+
 Konferencja odbywała się w jakiejś hali, coś _a'la_ nasza Gdańska stocznia, te klimaty. Bardzo fajne miejsce, nad wodą, przyjemnie. **Problemem był natomiast powrót** do centrum Amsterdamu — łódź kursowała rano, a potem znowu wieczorem w trakcie after-party. A co pomiędzy? 15 minut piechotą na prom. To zdecydowanie na minus. **Nie było możliwości, aby skoczyć do hotelu, zostawić rzeczy i wrócić na after-party** — nie zostało to w ogóle przewidziane.
 
 Z profesjonalnego punktu widzenia jednak, sala nie spełniała swojej roli. Konferencja na kilkaset osób — z końca sali **nie było widać zupełnie nic na scenie**. Slajdy były wyświetlane na ogromnym monitorze, ale nie było na nim prelegentki/a, więc przez większość czasu nie wiedziałem w ogóle kto mówi. Na innych konferencjach rozwiązano to dużo lepiej.
 
-__Venue: 5/10__
+**Venue: 5/10**
 
 ## Jedzenie
+
 Organizatorzy konferencji dumnie ogłosili, że rano na miejscu czekać będzie na nas śniadanie. I co? Czekał na mnie _croissant_ i niedobra kawa. I tyle. Warzywa? Nope. Owoce? Nope. Kanapki? Nope. **Tylko croissant**.
 
 Pomyślałem sobie „okej, to tylko śniadanie, na pewno lunch będzie dobry”. Nie będę Cię trzymał w niepewności: Lunch nie był dobry. **Nie było nic ciepłego do jedzenia**. Dostaliśmy zapakowane kanapki i jogurt naturalny. I znowu — owoce? Nope. Był soczek (1 na głowę). Warzywa? Nope. Były też herbatniki.
@@ -57,22 +60,26 @@ Dla porównania warto spojrzeć jak to wyglądało na Reactive Conf w Bratysław
 
 https://typeofweb.com/2017/11/07/krotka-relacja-z-reactiveconf-2017/
 
-__Jedzenie: 1/10__
+**Jedzenie: 1/10**
 
 ## Alkohol
+
 Nope. Nie uświadczysz. Znowu: serwowanie alkoholu to raczej standard na konferencjach… ale nie tutaj. Szczęśliwie tuż obok venue była restauracja, która serwowała także różne piwa. Uff.
 
 Piwo pojawiło się po wszystkich prezentacjach, ale to zdecydowanie za późno, przynajmniej jak dla mnie ;)
 
 ## Prezentacje
+
 Prezentacje były ok. Znalazło się kilka ciekawych, jak np. ta o `react-automata`. Większość była przeciętna, a niektóre słabe, ale, hej, na konferencje nie jeździ się dla prezentacji! Gdybym chciał oglądać prezentacje to zrobiłbym to z domu bo [wszystkie wystąpienia są na YouTube](https://www.youtube.com/playlist?list=PLNBNS7NRGKMFi_glL49hsoyqu7dHTMnNm).
 
 ## Networking
+
 Organizatorzy zaplanowali networking! W torbach powitalnych oprócz koszulki (meh) znalazły się też naklejki do naklejenia na identyfikator — z hasłami typu React, Redux, SSR i tym podobnymi — aby ludzie mogli się łatwiej szufladkować. Szkoda, że nikt mi o tym nie powiedział i zobaczyłem to dopiero w domu 🤔
 
 Na konferencji wystąpiło całkiem sporo różnorodnych ludzi, kobiet i mężczyzn z całego świata. Wśród uczestników było jednak widać zdecydowaną przewagę mężczyzn. I mam na myśli tutaj zdecydowaną zdecydowaną przewagę. Słyszałem też komentarze na ten temat od kilku osób, o tym jak niewiele przyjechało kobiet. Trochę to dziwne, biorąc pod uwagę różnorodność prelegentów i zasięg samej konferencji.
 
 ## Podsumowanie
+
 **Amsterdam to na pewno najlepsze miasto do organizowania słabych konferencji.** Wszelkie braki nadrabia się we własnym zakresie, po prostu ciesząc się Amsterdamem i pięknymi kwiatami w Keukenhof (polecam!)
 
 Ale teraz krótko: **React.Amsterdam to była najgorsza konferencja** na jakiej byłem. W zasadzie wszystko od początku do końca było po prostu niedopracowane.

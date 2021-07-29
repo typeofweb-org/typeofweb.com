@@ -24,11 +24,11 @@ series:
   slug: react-js
   name: React.js
 seo: {}
-
 ---
+
 Przy okazji omawiania komponentów będących klasami w React.js, wspomniałem też o możliwości korzystania z metod cyklu życia (<em>lifecycle methods</em>). Chciałbym do tego tematu teraz powrócić. Pokażę jakie metody cyklu życia definiuje React.js, do czego one służą i kiedy mogą się przydać.
 
-{/* more */}
+{/_ more _/}
 
 <h2>Cykl życia komponentu</h2>
 

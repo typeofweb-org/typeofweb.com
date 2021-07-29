@@ -21,8 +21,8 @@ categories:
   - slug: dobry-kod
     name: Dobry Kod
 seo: {}
-
 ---
+
 Wiele razy wspominałem o wstrzykiwaniu zależności, nigdy jednak nie wytłumaczyłem tego konceptu do końca. Na czym polega wzorzec <em>Dependency Injection</em> i jakie problemy rozwiązuje? W tym artykule chciałbym odpowiedzieć na te pytania oraz omówić teorię stojącą za wstrzykiwaniem zależności.
 
 <h1 id="problempowizanychzalenoci">Problem powiązanych zależności</h1>
@@ -67,7 +67,7 @@ Tyle problemów, a napisaliśmy ledwie jedną prostą metodę do wysyłania mail
   Nie dzwoń do nas. My zadzwonimy do ciebie.
 </blockquote>
 
-Mówiąc jaśniej, w klasycznie napisanej aplikacji to kod programisty wywołuje funkcje z zewnętrznych bibliotek. Natomiast  gdy zastosowane jest IoC, to zewnętrzny <em>framework</em> wywołuje kod programisty w odpowiednich momentach. Prosty przykład bez IoC<sup id="fnref-1"><a href="#fn-1" rel="footnote">1</a></sup>:
+Mówiąc jaśniej, w klasycznie napisanej aplikacji to kod programisty wywołuje funkcje z zewnętrznych bibliotek. Natomiast gdy zastosowane jest IoC, to zewnętrzny <em>framework</em> wywołuje kod programisty w odpowiednich momentach. Prosty przykład bez IoC<sup id="fnref-1"><a href="#fn-1" rel="footnote">1</a></sup>:
 
 <pre><code class="language-javascript">const name = window.prompt('Podaj imie!');  
 const validatedName = validateName(name);  
