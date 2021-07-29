@@ -27,7 +27,7 @@ export const SingleArticle = forwardRef<HTMLElement, SingleArticleProps>(
       <Card as="article" roundAllCorners={true} moreSpace={true} ref={ref} className={isMdx ? '__mdx' : '__html'}>
         <header className="bg-gray-200">
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-6 ${cover ? 'pt-0' : 'mb-6'}`}>
-            <ArticleTitle title={title} id={id} index={index} href={href} />
+            <ArticleTitle title={title} id={id} index={index} href={href} level={1} />
             <div className="prose mt-4 pb-2">
               <p className="lead">{excerpt}</p>
             </div>

@@ -32,9 +32,15 @@ export const ArticleSneakPeek = ({
   return (
     <Card as="article" roundAllCorners={!cover} moreSpace={!cover}>
       <header className="bg-gray-200">
-        {cover && <ArticleCoverImage cover={cover} wide={false} />}
+        {cover && (
+          <Link href={href}>
+            <a>
+              <ArticleCoverImage cover={cover} wide={false} />
+            </a>
+          </Link>
+        )}
         <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
-          <ArticleTitle title={title} id={id} index={index} href={href} />
+          <ArticleTitle title={title} id={id} index={index} href={href} level={2} />
           <ArticleMeta authors={authors} mainCategory={mainCategory} />
         </div>
       </header>

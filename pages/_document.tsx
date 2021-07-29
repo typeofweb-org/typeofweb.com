@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pl-PL">
+      <Html lang="pl-PL" dir="ltr" vocab="http://schema.org" typeof="Blog">
         <Head>
           <script
             dangerouslySetInnerHTML={{

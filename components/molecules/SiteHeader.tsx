@@ -11,6 +11,8 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
   const { text, progress } = useRunningHeader();
   const { uiState } = useUIState();
 
+  const HeaderEl = pageKind === 'index' ? 'h1' : 'div';
+
   return (
     <>
       <a href="#main-content" className="sr-only">
@@ -26,17 +28,20 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
         <div className="flex flex-1 flex-row pl-8 max-w-3xl">
           <Link href="/">
             <a>
-              <h1 className="-ml-2 p-2">
+              <HeaderEl className="-ml-2 p-2">
                 <span className="sr-only">Type of Web</span>
                 <TypeOfWebLogo className="w-40 max-w-full" />
-              </h1>
+              </HeaderEl>
             </a>
           </Link>
           <MainNav />
         </div>
         <div className="hidden lg:flex lg:items-center lg:mx-4 lg:px-8 lg:w-80" aria-hidden>
           {pageKind === 'post' && (
-            <span className="text-gray-600 font-serif text-xs animate-appear lg:whitespace-nowrap lg:text-sm">
+            <span
+              aria-live="off"
+              className="text-gray-600 font-serif text-xs animate-appear lg:whitespace-nowrap lg:text-sm"
+            >
               {text}
             </span>
           )}

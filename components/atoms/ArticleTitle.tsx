@@ -6,16 +6,18 @@ export const ArticleTitle = ({
   title,
   index,
   href,
+  level,
 }: {
   readonly title: string;
   readonly id: number;
   readonly index: number;
   readonly href: string;
+  readonly level: 1 | 2;
 }) => {
   return (
     <Link href={href}>
       <a className="block">
-        <SectionTitle size="large">
+        <SectionTitle size="large" level={level}>
           {title}
           <span
             aria-label={`Artykuł numer ${index}`}
