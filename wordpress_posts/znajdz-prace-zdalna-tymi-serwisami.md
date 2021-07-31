@@ -20,14 +20,12 @@ seo: {}
 
 Praca zdalna to popularne marzenie wielu osób — nie tylko programistów. Sam pracuję zdalnie od dłuższego czasu i chyba nie ma sensu, żebym znowu zachwalał tę formę pracy. W tym wpisie skupiam się na krótkim przedstawieniu popularnych <strong>serwisów, w których można szukać pracy zdalnej</strong>. Różnego rodzaju: <strong>od długich kontraktów, przez projekty, aż po króciutkie zlecenia.</strong>
 
-{/_ more _/}
-
 <h2>Pomóż mi w rozwoju tej strony!</h2>
 Ta podstrona będzie istniała na zasadzie „żyjącej dokumentacji” — nowe portale i opinie będą tutaj dodawane na bieżąco. <strong>Koniecznie napisz w komentarzu jeśli znasz jakieś inne strony lub masz jakieś ciekawe doświadczenia związane z pracą zdalną!</strong>
 
 Jeśli jeszcze nie znasz moich doświadczeń z pracą zdalną to zachęcam do przeczytania tego wpisu:
 
-https://typeofweb.com/2017/06/13/praca-zdalna-obalamy-mity/
+https://typeofweb.com/praca-zdalna-obalamy-mity/
 
 <h2>Serwisy z pracą zdalną</h2>
 Krótki wstęp. Zacznę od portali, które znam i z których korzystałem. Mam tutaj wyrobione własne opinie i mogę z czystym sumieniem polecać (bądź nie). Dalej przejdę do innych stron, których nigdy nie użyłem, ale polecali mi je znajomi. To tyle. Do dzieła!
@@ -43,7 +41,7 @@ Toptal — bardzo popularna platforma — Pośredniczy pomiędzy programistami i
 
 Na pewno zaletą Toptala w stosunku do innych podobnych tablic ogłoszeń jest to, że <strong>Toptal gwarantuje Ci zapłatę</strong> — niezależnie od tego czy klient rzeczywiście zapłaci Toptalowi czy nie. Na pewno dla freelancerów będzie to ogromny plus. Jeśli szukasz <strong>tylko pośrednika</strong> to na pewno dobry serwis. Więcej we wpisie:
 
-https://typeofweb.com/2017/08/30/praca-zdalna-rekrutacja-do-toptal/
+https://typeofweb.com/praca-zdalna-rekrutacja-do-toptal/
 
 <h2><a href="https://pilot.co/">pilot.co</a></h2>
 Na początku postrzegałem Pilot.co tylko jako pośrednika, ale po przejściu <strong>krótkiej</strong> (!) rekrutacji i kilku wideorozmowach poczułem miłą i przyjazną atmosferę — niczym w domu. <strong>Pilot jest polską inicjatywą</strong>, ale wspartą przez amerykańskich inwestorów. Działa podobnie do Toptala, prowadzi Cię przez cały proces kontaktu z klientem za rękę.
@@ -57,10 +55,10 @@ Serwis oferuje również newsletter, dzięki któremu będziesz otrzymywać nowe
 
 <h2><a href="https://remoteok.io">remoteok.io</a></h2>
 remote ok to chyba drugi najbardziej rozpoznawalny i popularny portal dla osób szukających pracy zdalnej. Setki ogłoszeń, <strong>nie tylko dla programistów</strong>, wygodne filtrowanie po tagach. Znalazłem tutaj ogłoszenia m.in. takich firm jak GitLab, USA Today Network, GitHub czy Invisionapp.
-<p class="important">Jeśli chcesz szybko przejrzeć zbiór ofert pracy zdalnej z kilku serwisów to zajrzyj na moją podstronę:</p>
-https://typeofweb.com/oferty-pracy-zdalnej/
+
 <h2><a href="https://stackoverflow.com/jobs">stackoverflow.com/jobs</a></h2>
 Być może przeoczyłaś/eś fakt, że StackOverflow nie jest już tylko wspaniałym forum, ale zawiera też podstronę z ofertami pracy. Ale to nie wszystko! Na specjalnej podstronie możesz także <strong>stworzyć swoje CV</strong> (tzw. Developer Story) i wpleść w nie <strong>Twoje najlepsze odpowiedzi na StackOverflow</strong>. Subiektywnie też wygląda to lepiej niż LinkedIn ;)
+
 <h2><a href="https://hired.com">hired.com</a></h2>
 W wątku poświęconym pracy zdalnej na Facebooku ktoś wymienił hired.com. Okazało się, że miałem już tam konto, o którym nie pamiętałem. <strong>Bez konta nie udało mi się przejrzeć żadnych ofert</strong>. Po ukończeniu procesu uzupełniania profilu — nadal nie zobaczyłem żadnych ofert. Hmmm…
 <h2>Znasz inne strony?</h2>
