@@ -10,7 +10,9 @@ export const NewsletterForm = () => {
   return (
     <Card as="form" roundAllCorners={true} moreSpace={true} className="mx-auto max-w-xl">
       <div className="pb-4 px-5">
-        <SectionTitle size="small">Podoba się? Nie przegap kolejnych artykułów!</SectionTitle>
+        <SectionTitle level="none" size="small">
+          Podoba się? Nie przegap kolejnych artykułów!
+        </SectionTitle>
       </div>
       <div className="flex flex-col gap-4 px-7">
         <div className="flex flex-row gap-4">

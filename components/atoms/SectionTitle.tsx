@@ -2,13 +2,13 @@ import type { PropsWithChildren } from 'react';
 
 interface SectionTitleProps {
   readonly size?: 'small' | 'large';
-  readonly level: 1 | 2;
+  readonly level: 1 | 2 | 'none';
 }
 
 export const SectionTitle = ({ children, level, size = 'large' }: PropsWithChildren<SectionTitleProps>) => {
   const textSize = size === 'large' ? 'text-3xl lg:text-5xl' : 'text-2xl lg:text-3xl';
 
-  const El = `h${level}` as const;
+  const El = level === 'none' ? 'span' : (`h${level}` as const);
 
   return (
     <El

@@ -31,7 +31,7 @@ export const Seo = ({ title = '', description = defaultDescription, author }: Se
   const next = query.page ? page + 1 : null;
   const prev = query.page ? page - 1 : null;
 
-  let fullTitle = [title, pageTitle, siteName].filter((x) => !!x.trim()).join(SEP);
+  let fullTitle = [title, pageTitle, siteName].filter((x): x is string => !!x && !!x.trim()).join(SEP);
   if (fullTitle.length < MAX_TITLE_LEN) {
     fullTitle += ` ${SEP} ${shortDescription}`;
   }
