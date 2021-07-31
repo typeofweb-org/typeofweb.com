@@ -4,6 +4,9 @@ import Url from 'url';
 
 import GrayMatter from 'gray-matter';
 
+import { navItems } from '../components/molecules/MainNav';
+
+import { categoriesToMainCategory } from './mainCategory';
 import { toHtml, toMdx } from './markdown';
 
 import type { PromiseValue } from '../types';
@@ -30,32 +33,56 @@ export async function readFilesInDir(dir: string): Promise<readonly string[]> {
     .filter((x: string | undefined): x is string => !!x);
 }
 
-export async function readAllPosts() {
+export async function readAllPosts({
+  category,
+  skip,
+  limit,
+  includePages,
+}: {
+  readonly category?: string;
+  readonly skip?: number;
+  readonly limit?: number;
+  readonly includePages?: boolean;
+} = {}) {
   const files = await readFilesInDir(pathToPosts);
 
   const posts = await Promise.all(files.map((file) => Fs.readFile(file, 'utf-8')));
-  return posts
-    .map(readFrontMatter)
-    .sort((a, b) => Number(b.data.date) - Number(a.data.date))
-    .map((fm) => {
-      return {
-        content: fm.content,
-        data: {
-          ...fm.data,
-          date: fm.data.date?.toISOString(),
-          permalink: fm.data.permalink,
-        },
-      };
-    });
+
+  let postsWithFm = posts.map(readFrontMatter).sort((a, b) => Number(b.data.date) - Number(a.data.date));
+
+  if (!includePages) {
+    postsWithFm = postsWithFm.filter((p) => p.data.type === 'post');
+  }
+  if (category) {
+    postsWithFm = postsWithFm.filter((post) => categoriesToMainCategory(post.data.categories)?.slug === category);
+  }
+  if (skip != null && limit) {
+    postsWithFm = postsWithFm.slice(skip, skip + limit);
+  }
+
+  return postsWithFm.map((fm) => {
+    return {
+      content: fm.content,
+      data: {
+        ...fm.data,
+        date: fm.data.date?.toISOString(),
+        permalink: fm.data.permalink,
+      },
+    };
+  });
 }
 
 export async function getAllPermalinks() {
-  const posts = await readAllPosts();
-  return posts.map((fm) => fm.data.permalink);
+  const posts = await readAllPosts({ includePages: true });
+  return [...navItems.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
+}
+
+export function permalinkIsCategory(permalink: string) {
+  return navItems.map((c) => c.slug).includes(permalink);
 }
 
 export async function getPostByPermalink(permalink: string) {
-  const posts = await readAllPosts();
+  const posts = await readAllPosts({ includePages: true });
   return posts.find((fm) => fm.data.permalink === permalink);
 }
 export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>>;
@@ -76,7 +103,10 @@ export async function getExcerptAndContent(
     throw new Error('???');
   }
 
-  const [excerpt, content] = [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')];
+  const [excerpt, content] =
+    post.data.type === 'post'
+      ? [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')]
+      : [null, post.content];
 
   /**
    * @todo:
@@ -84,10 +114,14 @@ export async function getExcerptAndContent(
    * - if markdown – compile it
    */
 
-  const excerptHtml = toHtml(excerpt, { excerpt: true });
+  const excerptString = excerpt ? toHtml(excerpt, { excerpt: true }) : null;
+  const excerptWords = excerptString?.split(/\s+/);
+  const ex =
+    excerptWords && (excerptWords.length > 50 ? excerptWords.slice(0, 50).join(' ') + '…' : excerptWords.join(' '));
+
   if (onlyExcerpt) {
     return {
-      excerpt: excerptHtml,
+      excerpt: ex,
       content: '',
       isMdx: false as const,
     };
@@ -95,13 +129,13 @@ export async function getExcerptAndContent(
 
   try {
     return {
-      excerpt: excerptHtml,
+      excerpt: excerptString,
       content: await toMdx(content, post.data),
       isMdx: true as const,
     };
   } catch {
     return {
-      excerpt: excerptHtml,
+      excerpt: excerptString,
       content: toHtml(content, { excerpt: false }).toString('utf-8'),
       isMdx: false as const,
     };
@@ -124,7 +158,7 @@ interface PostFrontmatter {
     readonly width: number;
     readonly height: number;
   };
-  readonly category?: readonly { readonly slug: string; readonly name: string }[];
+  readonly categories?: readonly { readonly slug: string; readonly name: string }[];
   readonly series?: { readonly slug: string; readonly name: string };
   readonly seo?: {
     readonly focusKeywords?: readonly string[];

@@ -16,6 +16,7 @@ import RemarkRehype from 'remark-rehype';
 import * as Unified from 'unified';
 import { visit } from 'unist-util-visit';
 
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { Node, Parent } from 'unist';
 
 interface HtmlNode extends Node {
@@ -206,7 +207,7 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
 
 const toCamelCase = (str: string) => str.replace(/-([a-z])/g, (_, l: string) => l.toUpperCase());
 
-export function toMdx(source: string, frontmatter: object) {
+export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
   return serialize(
     source
       .replace(/style="(.*?)"/g, (match, styles: string) => {

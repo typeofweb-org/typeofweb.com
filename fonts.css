@@ -25,27 +25,33 @@
   line-gap-override: 0;
 }
 
-html:not(.fonts-loaded) :is(.font-sans, .prose ol > li::before) {
-  font-family: 'typeofweb-fallback-sans', sans-serif !important;
-  letter-spacing: 0.1px !important;
-  word-spacing: 0.05px !important;
-}
+html:not(.fonts-loaded) {
+  & .font-sans,
+  & .prose ol > li::before {
+    font-family: 'typeofweb-fallback-sans', sans-serif !important;
+    letter-spacing: 0.1px !important;
+    word-spacing: 0.05px !important;
+  }
 
-html:not(.fonts-loaded) :is(.font-serif, .prose [class~='lead'], .prose p, .prose ol > li) {
-  font-family: 'typeofweb-fallback-serif', serif !important;
-  letter-spacing: 2.4px !important;
-  word-spacing: -2px !important;
-}
+  & .font-serif,
+  & .prose [class~='lead'],
+  & .prose p,
+  & .prose ol > li {
+    font-family: 'typeofweb-fallback-serif', serif !important;
+    letter-spacing: 2.4px !important;
+    word-spacing: -2px !important;
+  }
 
-html:not(.fonts-loaded) :is(.font-mono) {
-  font-family: 'typeofweb-fallback-mono', monospace !important;
-  letter-spacing: 0 !important;
-  word-spacing: 0 !important;
+  & .font-mono {
+    font-family: 'typeofweb-fallback-mono', monospace !important;
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+  }
 }
 
 @font-face {
   font-family: 'Merriweather';
-  src: local('aMerriweather Regular'), local('aMerriweather-Regular'), local('aMerriweather'),
+  src: local('Merriweather Regular'), local('Merriweather-Regular'), local('Merriweather'),
     url('/fonts/merriweather-12ptregular-typeofweb.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
@@ -54,7 +60,7 @@ html:not(.fonts-loaded) :is(.font-mono) {
 
 @font-face {
   font-family: 'Merriweather';
-  src: local('aMerriweather Italic'), local('aMerriweather-Italic'), local('aMerriweather'),
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), local('Merriweather'),
     url('/fonts/merriweather-12ptitalic-typeofweb.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
@@ -63,7 +69,7 @@ html:not(.fonts-loaded) :is(.font-mono) {
 
 @font-face {
   font-family: 'Merriweather';
-  src: local('aMerriweather Bold'), local('aMerriweather-Bold'), local('aMerriweather'),
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), local('Merriweather'),
     url('/fonts/merriweather-12ptbold-typeofweb.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
@@ -72,7 +78,7 @@ html:not(.fonts-loaded) :is(.font-mono) {
 
 @font-face {
   font-family: 'Merriweather';
-  src: local('aMerriweather Bold Italic'), local('aMerriweather-Bold-Italic'), local('aMerriweather'),
+  src: local('Merriweather Bold Italic'), local('Merriweather-Bold-Italic'), local('Merriweather'),
     url('/fonts/merriweather-12ptbolditalic-typeofweb.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
@@ -81,8 +87,8 @@ html:not(.fonts-loaded) :is(.font-mono) {
 
 @font-face {
   font-family: 'Fira Sans';
-  src: local('aFiraSans Regular'), local('aFiraSans-Regular'), local('aFira Sans Regular'), local('aFira-Sans-Regular'),
-    local('aFira Sans'), local('aFira-Sans'), url('/fonts/firasans-regular-typeofweb.woff2') format('woff2');
+  src: local('FiraSans Regular'), local('FiraSans-Regular'), local('Fira Sans Regular'), local('Fira-Sans-Regular'),
+    local('Fira Sans'), local('Fira-Sans'), url('/fonts/firasans-regular-typeofweb.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -90,9 +96,8 @@ html:not(.fonts-loaded) :is(.font-mono) {
 
 @font-face {
   font-family: 'Fira Sans';
-  src: local('aFiraSans Semibold'), local('aFiraSans-Semibold'), local('aFira Sans Semibold'),
-    local('aFira-Sans-Semibold'), local('aFira Sans'), local('aFira-Sans'),
-    url('/fonts/firasans-semibold-typeofweb.woff2') format('woff2');
+  src: local('FiraSans Semibold'), local('FiraSans-Semibold'), local('Fira Sans Semibold'), local('Fira-Sans-Semibold'),
+    local('Fira Sans'), local('Fira-Sans'), url('/fonts/firasans-semibold-typeofweb.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -100,8 +105,8 @@ html:not(.fonts-loaded) :is(.font-mono) {
 
 @font-face {
   font-family: 'Fira Mono';
-  src: local('aFiraMono Regular'), local('aFiraMono-Regular'), local('aFira Mono Regular'), local('aFira-Mono-Regular'),
-    local('aFira Mono'), url('/fonts/firamono-regular-typeofweb.woff2') format('woff2');
+  src: local('FiraMono Regular'), local('FiraMono-Regular'), local('Fira Mono Regular'), local('Fira-Mono-Regular'),
+    local('Fira Mono'), url('/fonts/firamono-regular-typeofweb.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Button } from '../atoms/Button';
 import { Card } from '../atoms/Card';
 import { Checkbox } from '../atoms/Checkbox';
@@ -23,13 +25,17 @@ export const NewsletterForm = () => {
         <div className="flex">
           <Checkbox label="tiny" required>
             Rozumiem i akceptuję{' '}
-            <a href="#" className="text-blue-500 hover:underline font-normal">
-              Regulamin Newslettera
-            </a>{' '}
+            <Link href="/regulamin">
+              <a target="_blank" className="text-blue-500 hover:underline font-normal">
+                Regulamin Newslettera
+              </a>
+            </Link>{' '}
             oraz{' '}
-            <a href="#" className="text-blue-500 hover:underline font-normal">
-              Politykę Prywatności
-            </a>
+            <Link href="/polityka-prywatnosci">
+              <a target="_blank" className="text-blue-500 hover:underline font-normal">
+                Politykę Prywatności
+              </a>
+            </Link>
             . Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18
             lipca 2002 r. o świadczeniu usług drogą elektroniczną.
           </Checkbox>

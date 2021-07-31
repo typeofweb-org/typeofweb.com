@@ -17,26 +17,28 @@ interface SingleArticleProps {
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;
   readonly href: string;
-  readonly excerpt: string;
+  readonly excerpt: string | null;
   readonly content: JSX.Element;
 }
 
 export const SingleArticle = forwardRef<HTMLElement, SingleArticleProps>(
   ({ cover, id, index, title, authors, mainCategory, href, excerpt, content, isMdx }, ref) => {
     return (
-      <Card as="article" roundAllCorners={true} moreSpace={true} ref={ref} className={isMdx ? '__mdx' : '__html'}>
+      <Card as="article" roundAllCorners={true} moreSpace={true} ref={ref} className={`${isMdx ? '__mdx' : '__html'}`}>
         <header className="bg-gray-200">
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-6 ${cover ? 'pt-0' : 'mb-6'}`}>
             <ArticleTitle title={title} id={id} index={index} href={href} level={1} />
-            <div className="prose mt-4 pb-2">
-              <p className="lead">{excerpt}</p>
-            </div>
+            {excerpt && (
+              <div className="prose mt-4 pb-2">
+                <p className="lead">{excerpt}</p>
+              </div>
+            )}
             <ArticleMeta authors={authors} mainCategory={mainCategory} />
           </div>
 
           {cover && <ArticleCoverImage cover={cover} wide={true} />}
         </header>
-        <div className="prose lg:prose-xl pb-2 px-7 sm:px-8 lg:px-12">{content}</div>
+        <div className="prose lg:prose-xl mx-auto pb-2 px-7 sm:px-8 lg:px-12">{content}</div>
       </Card>
     );
   },

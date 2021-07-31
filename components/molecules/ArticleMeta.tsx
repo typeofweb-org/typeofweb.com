@@ -18,7 +18,7 @@ export const ArticleMeta = ({
 }) => {
   return (
     <div className="mt-2">
-      <div className="flex items-center">
+      <div className="flex items-center justify-center">
         <div className="flex flex-shrink-0 mr-2">
           {authors.map((author, idx) => (
             <img

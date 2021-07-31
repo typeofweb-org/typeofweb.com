@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import { Seo } from '../components/Seo';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
 import { UIStateProvider } from '../hooks/useUiState';
 
@@ -22,6 +23,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <Head>
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover" />
       </Head>
+      <Seo />
       <RunningHeaderProvider>
         <UIStateProvider>
           <Component {...pageProps} />

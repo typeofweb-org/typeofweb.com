@@ -1,4 +1,4 @@
-import { getMarkdownPostsForPage, PAGE_SIZE, postToProps } from '../../utils/postToProps';
+import { getMarkdownPostsFor, PAGE_SIZE, postToProps } from '../../utils/postToProps';
 import { getAllPermalinks } from '../../utils/wordpress';
 import IndexPage from '../index';
 
@@ -23,20 +23,20 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   }
 
   const page = Number(params.page);
-  const { markdownPosts } = await getMarkdownPostsForPage(page);
+  const { allPosts } = await getMarkdownPostsFor({ page });
 
-  if (markdownPosts.length === 0) {
+  if (allPosts.length === 0) {
     return { notFound: true };
   }
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
 
-  const posts = (
-    await Promise.all(markdownPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))
-  ).map((p) => ({
-    ...p,
-    content: '',
-  }));
+  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
+    (p) => ({
+      ...p,
+      content: '',
+    }),
+  );
 
   return { props: { posts, page } };
 };

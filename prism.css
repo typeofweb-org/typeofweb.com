@@ -5,12 +5,12 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-pre[data-lang] {
+pre[data-lang]:not(pre[data-lang='']) {
   position: relative;
-}
-pre[data-lang]:not(pre[data-lang=''])::after {
-  content: attr(data-lang);
-  @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md;
+  &::after {
+    content: attr(data-lang);
+    @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md;
+  }
 }
 
 code[class*='language-'],
@@ -35,20 +35,14 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
+:is(pre, code)[class*='language-'] {
+  &::selection,
+  & ::selection,
+  &::-moz-selection,
+  & ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
 }
 
 /* Code blocks */

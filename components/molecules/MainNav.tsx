@@ -1,14 +1,19 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import { useUIState } from '../../hooks/useUiState';
 
-const navItems = [
-  { label: 'React', isActive: false },
-  { label: 'Dobry kod', isActive: false },
-  { label: 'Opinie', isActive: true },
-  { label: 'O mnie', isActive: false },
+export const navItems = [
+  { slug: 'javascript', label: 'JavaScript' },
+  { slug: 'opinie', label: 'Opinie' },
+  { slug: 'dobry-kod', label: 'Dobry kod' },
+  { slug: 'praca-zdalna', label: 'Praca zdalna' },
 ];
 
 export const MainNav = () => {
   const { uiState } = useUIState();
+  const router = useRouter();
+  const permalink = router.query['permalink'];
 
   return (
     <nav
@@ -21,17 +26,18 @@ export const MainNav = () => {
       <ul className="flex flex-1 flex-col gap-8 items-center justify-center -mt-16 text-3xl lg:flex-row lg:gap-0 lg:items-stretch lg:justify-around lg:mt-0 lg:text-base">
         {navItems.map((item) => {
           return (
-            <li key={item.label} className="flex items-stretch">
-              <a
-                className={`inline-flex items-center transition-colors text-3xl lg:text-base ${
-                  item.isActive
-                    ? 'text-green-500 font-semibold border-b-2 border-green-500 hover:border-green-700 hover:text-green-700'
-                    : 'text-gray-800 hover:text-green-500 border-b-2 border-transparent hover:border-green-500'
-                }`}
-                href="#"
-              >
-                {item.label}
-              </a>
+            <li key={item.slug} className="flex items-stretch mt-0.5">
+              <Link href={`/${item.slug}`}>
+                <a
+                  className={`inline-flex items-center transition-colors text-3xl lg:text-base ${
+                    permalink === item.slug
+                      ? 'text-green-500 font-semibold border-b-2 border-green-500 hover:border-green-700 hover:text-green-700'
+                      : 'text-gray-800 hover:text-green-500 border-b-2 border-transparent hover:border-green-500'
+                  }`}
+                >
+                  {item.label}
+                </a>
+              </Link>
             </li>
           );
         })}

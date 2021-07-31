@@ -23,10 +23,10 @@ html,
   display: inline-block;
   opacity: 0;
   transition: opacity 0.3s ease-in;
-}
 
-:is(h1, h2, h3, h4):hover .icon.icon-link {
-  opacity: 1;
+  @nest :is(h1, h2, h3, h4):hover & {
+    opacity: 1;
+  }
 }
 
 * {
@@ -47,122 +47,130 @@ html,
 @layer utilities {
   .prose {
     max-width: 75ch;
-  }
 
-  .prose [class~='lead'] {
-    @apply text-justify text-gray-800 font-serif text-base font-bold tracking-wide lg:text-lg;
-    word-spacing: theme('spacing[0.5]');
-    text-indent: 0;
+    & [class~='lead'] {
+      @apply text-justify text-gray-800 font-serif text-base font-bold tracking-wide lg:text-lg;
+      word-spacing: theme('spacing[0.5]');
+      text-indent: 0;
+    }
+
+    & p {
+      text-indent: 2rem;
+      hyphens: auto;
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      @apply my-0 text-justify font-serif font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
+    }
+
+    &.prose-xl p {
+      @apply my-0;
+      text-indent: 3rem;
+    }
+
+    & a {
+      @apply text-blue-500 no-underline font-bold tracking-tight;
+    }
+
+    & blockquote {
+      quotes: auto;
+      @apply relative text-transparent bg-no-repeat bg-clip-text;
+      @apply -ml-7 -mr-7 pl-8 pr-8 py-4 border-b border-l-0 border-r-0 border-t border-b-blue-500 border-t-pink-500 sm:-ml-6 sm:-mr-32 sm:pr-32 md:-mr-32 lg:-mr-12 lg:pr-20;
+
+      &,
+      &::before {
+        @apply bg-gradient-to-t from-blue-500 to-pink-500;
+      }
+
+      &::before {
+        content: '';
+        @apply absolute left-0 top-0 block w-2 h-full;
+      }
+
+      & br {
+        content: '';
+        @apply my-[1ex] block;
+      }
+    }
+
+    &.prose-xl blockquote {
+      @apply pl-8;
+    }
+
+    & blockquote p,
+    & :is(ol, ul) p {
+      @apply text-left;
+      text-indent: 0;
+      hyphens: none;
+      -ms-hyphens: none;
+      -moz-hyphens: none;
+      -webkit-hyphens: none;
+    }
+
+    &.prose-xl :is(ol, ul),
+    & :is(ol, ul) {
+      @apply mt-3;
+      @apply counter-reset;
+    }
+
+    & :is(ol, ul) {
+      & > li {
+        @apply counter-increment pt-[0.5ex] my-0 font-serif leading-normal;
+      }
+    }
+
+    & :is(ol, ul) {
+      & p {
+        @apply contents;
+      }
+    }
+
+    & ol > li {
+      @apply before:counter-result before:text-stroke before:top-0 my-0 before:font-sans before:text-4xl before:proportional-nums before:font-semibold before:leading-none;
+    }
+
+    & strong {
+      /* margin: 0 -0.4em;
+      padding: 0.1em 0.4em;
+      border-radius: 0.8em 0.3em;
+      background: transparent;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 225, 0, 0.1),
+        rgba(255, 225, 0, 0.7) 4%,
+        rgba(255, 225, 0, 0.3)
+      );
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; */
+
+      background: linear-gradient(
+          104deg,
+          rgba(130, 255, 173, 0) 0.9%,
+          rgba(130, 255, 173, 1.25) 2.4%,
+          rgba(130, 255, 173, 0.5) 5.8%,
+          rgba(130, 255, 173, 0.1) 93%,
+          rgba(130, 255, 173, 0.7) 96%,
+          rgba(130, 255, 1732, 0) 98%
+        ),
+        linear-gradient(183deg, rgba(130, 255, 173, 0) 0%, rgba(130, 255, 173, 0.3) 7.9%, rgba(130, 255, 173, 0) 15%);
+      padding: 0.1em 0.4em;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      margin: 0;
+      border-radius: 7.5px;
+      text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7), 21px -18.1px 7.3px rgba(255, 255, 255, 1),
+        -18.1px -27.3px 30px rgba(255, 255, 255, 1);
+    }
+
+    & img {
+      @apply hover:shadow-md shadow-sm transition-shadow;
+    }
   }
 
   .prose p,
   li,
   blockquote {
     @apply text-base lg:text-lg;
-  }
-
-  .prose p {
-    text-indent: 2rem;
-    hyphens: auto;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    @apply my-0 text-justify font-serif font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
-  }
-
-  .prose a {
-    @apply text-blue-500 no-underline font-bold tracking-tight;
-  }
-
-  .prose blockquote {
-    quotes: auto;
-    @apply relative text-transparent bg-no-repeat bg-clip-text;
-    @apply -ml-7 -mr-7 pl-8 pr-8 py-4 border-b border-l-0 border-r-0 border-t border-b-blue-500 border-t-pink-500 sm:-ml-6 sm:-mr-32 sm:pr-32 md:-mr-32 lg:-mr-12 lg:pr-20;
-  }
-
-  .prose blockquote,
-  .prose blockquote::before {
-    @apply bg-gradient-to-t from-blue-500 to-pink-500;
-  }
-
-  .prose-xl blockquote {
-    @apply pl-8;
-  }
-
-  .prose blockquote::before {
-    content: '';
-    @apply absolute left-0 top-0 block w-2 h-full;
-  }
-
-  .prose blockquote br {
-    content: '';
-    @apply my-[1ex] block;
-  }
-
-  .prose blockquote p,
-  .prose :is(ol, ul) p {
-    @apply text-left;
-    text-indent: 0;
-    hyphens: none;
-    -ms-hyphens: none;
-    -moz-hyphens: none;
-    -webkit-hyphens: none;
-  }
-
-  .prose-xl p {
-    @apply my-0;
-    text-indent: 3rem;
-  }
-
-  .prose-xl :is(ol, ul),
-  .prose :is(ol, ul) {
-    @apply mt-3;
-    @apply counter-reset;
-  }
-
-  .prose :is(ol, ul) > li {
-    @apply counter-increment pt-[0.5ex] my-0 font-serif leading-normal;
-  }
-
-  .prose ol > li {
-    @apply before:counter-result before:text-stroke before:top-0 my-0 before:font-sans before:text-4xl before:proportional-nums before:font-semibold before:leading-none;
-  }
-
-  .prose :is(ol, ul) p {
-    @apply contents;
-  }
-
-  .prose strong {
-    /* margin: 0 -0.4em;
-    padding: 0.1em 0.4em;
-    border-radius: 0.8em 0.3em;
-    background: transparent;
-    background-image: linear-gradient(
-      to right,
-      rgba(255, 225, 0, 0.1),
-      rgba(255, 225, 0, 0.7) 4%,
-      rgba(255, 225, 0, 0.3)
-    );
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone; */
-
-    background: linear-gradient(
-        104deg,
-        rgba(130, 255, 173, 0) 0.9%,
-        rgba(130, 255, 173, 1.25) 2.4%,
-        rgba(130, 255, 173, 0.5) 5.8%,
-        rgba(130, 255, 173, 0.1) 93%,
-        rgba(130, 255, 173, 0.7) 96%,
-        rgba(130, 255, 1732, 0) 98%
-      ),
-      linear-gradient(183deg, rgba(130, 255, 173, 0) 0%, rgba(130, 255, 173, 0.3) 7.9%, rgba(130, 255, 173, 0) 15%);
-    padding: 0.1em 0.4em;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    margin: 0;
-    border-radius: 7.5px;
-    text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7), 21px -18.1px 7.3px rgba(255, 255, 255, 1),
-      -18.1px -27.3px 30px rgba(255, 255, 255, 1);
   }
 
   @supports (background-image: paint(fancyLinkUnderline)) {
@@ -227,32 +235,86 @@ a:focus {
 progress {
   position: relative;
   @apply animate-appear;
+
+  &::-webkit-progress-bar {
+    @apply bg-gray-200;
+  }
+  &::-moz-progress-bar {
+    @apply bg-gray-200;
+  }
+
+  &::-webkit-progress-value {
+    @apply bg-gradient-to-r from-blue-500 to-pink-500 transition-all ease-out;
+    background-size: 100vw;
+  }
 }
 
-progress::-webkit-progress-bar {
-  @apply bg-gray-200;
-}
-progress::-moz-progress-bar {
-  @apply bg-gray-200;
-}
+.katex {
+  & .katex-html > .newline + .newline {
+    min-height: 0.5em;
+  }
 
-progress::-webkit-progress-value {
-  @apply bg-gradient-to-r from-blue-500 to-pink-500 transition-all ease-out;
-  background-size: 100vw;
-}
-
-.katex .katex-html > .newline + .newline {
-  min-height: 0.5em;
-}
-
-.katex .mfrac .frac-line {
-  border-color: currentColor;
+  & .mfrac .frac-line {
+    border-color: currentColor;
+  }
 }
 
 .math {
   white-space: nowrap;
+
+  & .katex-html {
+    white-space: normal;
+  }
 }
 
-.math .katex-html {
-  white-space: normal;
+.aligncenter {
+  @apply mx-auto;
+}
+
+.regulations {
+  font-size: 90%;
+  text-indent: 0 !important;
+
+  & li::before {
+    content: none !important;
+  }
+
+  & li {
+    padding-left: 1rem !important;
+  }
+
+  & ol {
+    margin-top: 0 !important;
+  }
+
+  & ol {
+    list-style-type: upper-roman;
+  }
+
+  & ol ol {
+    list-style-type: decimal;
+  }
+
+  & ol ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  & ol ol ol ol {
+    list-style-type: decimal;
+  }
+
+  & ol ol ol ol ol {
+    list-style-type: lower-roman;
+  }
+
+  & ol ol ol ol ol ol {
+    list-style-type: upper-latin;
+  }
+
+  & ol h2,
+  & ol h3 {
+    display: inline-block;
+    font-size: 100%;
+    font-weight: 900;
+  }
 }

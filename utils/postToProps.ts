@@ -1,5 +1,6 @@
 import { getPlaiceholder } from 'plaiceholder';
 
+import { categoriesToMainCategory } from './mainCategory';
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
 import type { PostByPermalink } from './wordpress';
@@ -11,7 +12,7 @@ export const postToProps = async (
   authorsJson: readonly AuthorJson[],
   { onlyExcerpt }: { readonly onlyExcerpt?: boolean } = {},
 ) => {
-  const { excerpt, ...contentObj } = await getExcerptAndContent(post, { onlyExcerpt });
+  const contentObj = await getExcerptAndContent(post, { onlyExcerpt });
 
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
@@ -19,8 +20,9 @@ export const postToProps = async (
     ? await getPlaiceholder(encodeURI(post.data.thumbnail.url))
     : {};
 
+  const mainCategory = categoriesToMainCategory(post.data.categories);
+
   return {
-    excerpt,
     ...contentObj,
     frontmatter: {
       id: post.data.id,
@@ -35,7 +37,7 @@ export const postToProps = async (
             slug: author.slug,
           };
         }),
-      mainCategory: post.data.category?.[0] ?? null,
+      mainCategory,
       permalink: post.data.permalink,
       cover: img && blurDataURL ? { img, blurDataURL } : null,
     },
@@ -43,12 +45,11 @@ export const postToProps = async (
 };
 
 export const PAGE_SIZE = 10;
-export async function getMarkdownPostsForPage(page?: number) {
-  const allPosts = await readAllPosts();
-  const maxPages = Math.ceil(allPosts.length / PAGE_SIZE);
+export async function getMarkdownPostsFor({
+  page = 1,
+  category,
+}: { readonly page?: number; readonly category?: string } = {}) {
+  const allPosts = await readAllPosts({ category, skip: (page - 1) * PAGE_SIZE, limit: PAGE_SIZE });
 
-  const p = page ?? maxPages;
-
-  const markdownPosts = p === 1 ? allPosts.slice(-p * PAGE_SIZE) : allPosts.slice(-p * PAGE_SIZE, -(p - 1) * PAGE_SIZE);
-  return { markdownPosts, page: p };
+  return { allPosts, page };
 }

@@ -11,6 +11,7 @@ const widgetsPerPage = {
     </>
   ),
   post: null,
+  page: null,
 };
 
 export const Sidebar = ({ pageKind }: { readonly pageKind: PageKind }) => {
