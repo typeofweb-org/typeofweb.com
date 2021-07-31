@@ -116,8 +116,11 @@ export async function getExcerptAndContent(
 
   const excerptString = excerpt ? toHtml(excerpt, { excerpt: true }) : null;
   const excerptWords = excerptString?.split(/\s+/);
-  const ex =
-    excerptWords && (excerptWords.length > 50 ? excerptWords.slice(0, 50).join(' ') + '…' : excerptWords.join(' '));
+  const ex = excerptWords
+    ? excerptWords.length > 50
+      ? excerptWords.slice(0, 50).join(' ') + '…'
+      : excerptWords.join(' ')
+    : null;
 
   if (onlyExcerpt) {
     return {

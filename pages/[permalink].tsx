@@ -1,4 +1,5 @@
 import { MDXComponent } from '../components/MDXComponent';
+import { Seo } from '../components/Seo';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { SingleArticle } from '../components/organisms/SingleArticle';
 import { TwoColumns } from '../components/templates/TwoColumns';
@@ -79,6 +80,7 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
 
   return (
     <TwoColumns withSidebar={true} pageKind={pageKind}>
+      <Seo title={frontmatter.title} description={excerpt} author={frontmatter.authors[0]?.facebook} />
       <SingleArticle
         ref={setRunningHeader}
         excerpt={excerpt}

@@ -15,9 +15,9 @@ const MAX_TITLE_LEN = 50;
 const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
 
 interface SeoProps {
-  readonly title?: string;
-  readonly description?: string;
-  readonly author?: string;
+  readonly title?: string | null;
+  readonly description?: string | null;
+  readonly author?: string | null;
 }
 
 export const Seo = ({ title = '', description = defaultDescription, author }: SeoProps) => {
@@ -41,25 +41,27 @@ export const Seo = ({ title = '', description = defaultDescription, author }: Se
   return (
     <Head>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="robots" content={robots} />
-      <meta name="googlebot" content={robots} />
-      <meta name="bingbot" content={robots} />
-      <link rel="profile" href="https://gmpg.org/xfn/11" />
-      <link rel="canonical" href={`https://${origin}${asPath}`} />
-      {next && <link rel="next" href={`https://${origin}/strona/${next}/`} />}
-      {prev && prev > 0 && <link rel="prev" href={`https://${origin}/strona/${prev}/`} />}
-      <meta property="og:locale" content="pl_PL" />
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={`https://${origin}${asPath}`} />
-      <meta property="og:site_name" content={siteName} />
-      {type === 'article' && <meta property="article:publisher" content="https://www.facebook.com/typeofweb" />}
-      {type === 'article' && author && <meta property="article:author" content={author} />}
-      <meta property="fb:app_id" content="1709793622637583" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@mmiszy" />
+      {description && <meta key="description" name="description" content={description} />}
+      <meta key="robots" name="robots" content={robots} />
+      <meta key="googlebot" name="googlebot" content={robots} />
+      <meta key="bingbot" name="bingbot" content={robots} />
+      <link key="profile" rel="profile" href="https://gmpg.org/xfn/11" />
+      <link key="canonical" rel="canonical" href={`https://${origin}${asPath}`} />
+      {next && <link key="next" rel="next" href={`https://${origin}/strona/${next}/`} />}
+      {prev && prev > 0 && <link key="prev" rel="prev" href={`https://${origin}/strona/${prev}/`} />}
+      <meta key="og:locale" property="og:locale" content="pl_PL" />
+      <meta key="og:type" property="og:type" content={type} />
+      <meta key="og:title" property="og:title" content={fullTitle} />
+      {description && <meta key="og:description" property="og:description" content={description} />}
+      <meta key="og:url" property="og:url" content={`https://${origin}${asPath}`} />
+      <meta key="og:site_name" property="og:site_name" content={siteName} />
+      {type === 'article' && (
+        <meta key="article:publisher" property="article:publisher" content="https://www.facebook.com/typeofweb" />
+      )}
+      {type === 'article' && author && <meta key="article:author" property="article:author" content={author} />}
+      <meta key="fb:app_id" property="fb:app_id" content="1709793622637583" />
+      <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+      <meta key="twitter:site" name="twitter:site" content="@mmiszy" />
 
       {/* <link
         rel="alternate"

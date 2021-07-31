@@ -35,6 +35,7 @@ export const postToProps = async (
             avatarUrl: author.avatarUrl,
             displayName: author.displayName,
             slug: author.slug,
+            facebook: author.meta.facebook,
           };
         }),
       mainCategory,
