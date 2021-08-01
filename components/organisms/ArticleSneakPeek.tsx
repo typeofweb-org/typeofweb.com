@@ -43,7 +43,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
             <span className="inner-link ml-2">
               <Link href={href}>
                 <a className="!tracking-wider">
-                  Czytaj dalej<span className="sr-only"> artykuł {title}</span>…
+                  Czytaj dalej… <span className="sr-only">artykuł {title}</span>
                 </a>
               </Link>
             </span>

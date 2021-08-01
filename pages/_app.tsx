@@ -9,6 +9,7 @@ import type { AppType } from 'next/dist/next-server/lib/utils';
 import '../styles.css';
 import '../fonts.css';
 import '../prism.css';
+import '../node_modules/katex/dist/katex.min.css';
 
 // @ts-ignore
 if (typeof CSS !== 'undefined' && typeof CSS.paintWorklet !== 'undefined') {

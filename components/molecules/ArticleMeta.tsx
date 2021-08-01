@@ -13,7 +13,8 @@ export interface Author {
 export const ArticleMeta = memo<{
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;
-}>(({ authors, mainCategory }) => {
+  readonly rel?: boolean;
+}>(({ authors, mainCategory, rel }) => {
   return (
     <div className="mt-2">
       <div className="flex items-center justify-center">
@@ -52,7 +53,7 @@ export const ArticleMeta = memo<{
             <span className="before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap">
               <LinkUnderlineEffect>
                 <Link href={`/${mainCategory.slug}`}>
-                  <a>{mainCategory.name}</a>
+                  <a {...(rel && { rel: 'tag' })}>{mainCategory.name}</a>
                 </Link>
               </LinkUnderlineEffect>
             </span>

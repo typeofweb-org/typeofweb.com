@@ -40,7 +40,7 @@ export const SingleArticle = memo(
                   <p className="lead">{excerpt}</p>
                 </div>
               )}
-              <ArticleMeta authors={authors} mainCategory={mainCategory} />
+              <ArticleMeta rel={true} authors={authors} mainCategory={mainCategory} />
             </div>
 
             {cover && <ArticleCoverImage cover={cover} wide={true} />}

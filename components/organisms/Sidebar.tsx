@@ -17,6 +17,10 @@ const widgetsPerPage = {
 };
 
 export const Sidebar = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
-  return <aside className="hidden lg:sticky lg:top-16 lg:block lg:mx-4 lg:w-80">{widgetsPerPage[pageKind]}</aside>;
+  return (
+    <aside role="complementary" className="hidden lg:sticky lg:top-16 lg:block lg:mx-4 lg:w-80">
+      {widgetsPerPage[pageKind]}
+    </aside>
+  );
 });
 Sidebar.displayName = 'Sidebar';
