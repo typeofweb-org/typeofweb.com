@@ -12,8 +12,8 @@ export const ArticleTitle = memo<{
 }>(({ title, index, href, level }) => {
   return (
     <Link href={href}>
-      <a className="block">
-        <SectionTitle size="large" level={level}>
+      <a className="block" itemProp="mainEntityOfPage" rel="bookmark">
+        <SectionTitle size="large" level={level} itemProp="headline">
           {title}
           <span
             aria-label={`Artykuł numer ${index}`}

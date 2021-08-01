@@ -31,6 +31,9 @@ export const SingleArticle = memo(
           moreSpace={true}
           ref={ref}
           className={`${isMdx ? '__mdx' : '__html'}`}
+          itemScope
+          itemProp="mainEntity"
+          itemType="http://schema.org/Article"
         >
           <header className="bg-gray-200">
             <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-6 ${cover ? 'pt-0' : 'mb-6'}`}>
@@ -45,7 +48,16 @@ export const SingleArticle = memo(
 
             {cover && <ArticleCoverImage cover={cover} wide={true} />}
           </header>
-          <div className="prose lg:prose-xl mx-auto pb-2 px-7 sm:px-8 lg:px-12">{content}</div>
+          <div itemProp="articleBody" className="prose lg:prose-xl mx-auto pb-2 px-7 sm:px-8 lg:px-12">
+            {content}
+          </div>
+          <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
+            <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
+              <meta itemProp="url" content="https://typeofweb.com/wp-content/uploads/2020/04/logo_kwadrat11.png" />
+            </span>
+            <meta itemProp="name" content="Type of Web" />
+          </span>
+          <link itemProp="mainEntityOfPage" href={href} />
         </Card>
       );
     },

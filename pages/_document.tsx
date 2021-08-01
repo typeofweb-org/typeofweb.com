@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           />
           <meta name="format-detection" content="telephone=no" />
         </Head>
-        <body>
+        <body itemScope itemType="http://schema.org/WebPage">
           <Main />
           <NextScript />
         </body>

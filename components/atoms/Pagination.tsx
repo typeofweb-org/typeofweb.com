@@ -65,7 +65,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
               key={page}
               value={page}
               aria-label={isCurrent ? `Obecna strona, strona ${page}` : `Strona ${page}`}
-              aria-current={isCurrent}
+              aria-current={isCurrent ? 'page' : false}
               disabled={isCurrent}
             >
               {page}

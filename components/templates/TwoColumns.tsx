@@ -19,7 +19,12 @@ export const TwoColumns = memo<
     <>
       <SiteHeader pageKind={pageKind} />
       <div className="flex flex-row items-start justify-center">
-        <main id="main-content" className="flex-1 mt-4 pb-20 px-2 w-full max-w-3xl lg:mt-0 lg:px-0">
+        <main
+          itemScope
+          itemType="http://schema.org/Blog"
+          id="main-content"
+          className="flex-1 mt-4 pb-20 px-2 w-full max-w-3xl lg:mt-0 lg:px-0"
+        >
           {children}
         </main>
         {withSidebar && <Sidebar pageKind={pageKind} />}

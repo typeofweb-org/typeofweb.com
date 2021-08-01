@@ -22,6 +22,63 @@ interface SeoProps {
   readonly author?: string | null;
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://typeofweb.com/#organization',
+      name: 'Type of Web',
+      url: 'https://typeofweb.com/',
+      sameAs: [
+        'https://www.facebook.com/typeofweb',
+        'https://www.instagram.com/michal_typeofweb/',
+        'https://linkedin.com/in/mmiszczyszyn',
+        'https://www.youtube.com/typeofweb',
+        'https://twitter.com/mmiszy',
+      ],
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://typeofweb.com/#logo',
+        inLanguage: 'pl-PL',
+        url: 'https://typeofweb.com/wp-content/uploads/2018/12/typeofweb-facebook-image-sharer.png',
+        width: 1200,
+        height: 627,
+        caption: 'Type of Web',
+      },
+      image: { '@id': 'https://typeofweb.com/#logo' },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://typeofweb.com/#website',
+      url: 'https://typeofweb.com/',
+      name: 'Type of Web',
+      description:
+        'Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…',
+      publisher: { '@id': 'https://typeofweb.com/#organization' },
+      // potentialAction: [
+      //   {
+      //     '@type': 'SearchAction',
+      //     target: 'https://typeofweb.com/?s={search_term_string}',
+      //     'query-input': 'required name=search_term_string',
+      //   },
+      // ],
+      inLanguage: 'pl-PL',
+    },
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://typeofweb.com/#webpage',
+      url: 'https://typeofweb.com/',
+      name: 'Type of Web &bull; Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…',
+      isPartOf: { '@id': 'https://typeofweb.com/#website' },
+      about: { '@id': 'https://typeofweb.com/#organization' },
+      description:
+        'Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…',
+      inLanguage: 'pl-PL',
+    },
+  ],
+};
+
 export const Seo = memo<SeoProps>(({ title = '', description = defaultDescription, author }) => {
   const { query: _query, asPath } = useRouter();
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- RouterQuery
@@ -73,6 +130,8 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
       <meta key="fb:app_id" property="fb:app_id" content="1709793622637583" />
       <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
       <meta key="twitter:site" name="twitter:site" content="@mmiszy" />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* <link
         rel="alternate"

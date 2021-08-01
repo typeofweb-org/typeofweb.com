@@ -26,10 +26,10 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
             : 'overflow-hidden ios:transcluent-white dark:ios:transcluent-black shadow sticky'
         } top-0 z-10`}
       >
-        <div className="flex flex-1 flex-row pl-8 max-w-3xl">
+        <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row pl-8 max-w-3xl">
           <Link href="/">
             <a>
-              <HeaderEl className="-ml-2 p-2">
+              <HeaderEl itemProp="headline" className="-ml-2 p-2">
                 <span className="sr-only">Type of Web</span>
                 <TypeOfWebLogo className="w-40 max-w-full" />
               </HeaderEl>

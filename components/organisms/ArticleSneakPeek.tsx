@@ -23,7 +23,7 @@ interface ArticleSneakPeekProps {
 export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
   ({ cover, id, index, title, authors, mainCategory, href, excerpt }) => {
     return (
-      <Card as="article" roundAllCorners={!cover} moreSpace={!cover}>
+      <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
         <header className="bg-gray-200">
           {cover && (
             <Link href={href}>
@@ -49,6 +49,13 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
             </span>
           </p>
         </div>
+        <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
+          <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
+            <meta itemProp="url" content="https://typeofweb.com/wp-content/uploads/2020/04/logo_kwadrat11.png" />
+          </span>
+          <meta itemProp="name" content="Type of Web" />
+        </span>
+        <link itemProp="mainEntityOfPage" href={href} />
       </Card>
     );
   },

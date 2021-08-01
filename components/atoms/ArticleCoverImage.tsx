@@ -17,6 +17,9 @@ export const ArticleCoverImage = memo<{
     <div className={`text-[length:0] overflow-hidden ${wide ? `lg:-mx-4 mb-8` : `rounded-t-xl`}`}>
       <Image
         {...cover.img}
+        itemProp="image"
+        itemScope
+        itemType="http://schema.org/ImageObject"
         className="duration-[10s] motion-safe:hover:scale-110 transition-transform ease-in hover:ease-out"
         alt=""
         sizes="(min-width: 768px) 768px, 100vw"
@@ -25,6 +28,8 @@ export const ArticleCoverImage = memo<{
         blurDataURL={cover.blurDataURL}
         {...(cover.preload ? { loading: 'eager', priority: true } : { loading: 'lazy', priority: false })}
       />
+      <meta itemProp="width" content={String(cover.img.width)} />
+      <meta itemProp="height" content={String(cover.img.height)} />
     </div>
   );
 });
