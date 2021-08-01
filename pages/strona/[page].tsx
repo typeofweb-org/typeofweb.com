@@ -1,13 +1,14 @@
-import { getMarkdownPostsFor, PAGE_SIZE, postToProps } from '../../utils/postToProps';
-import { getAllPermalinks } from '../../utils/wordpress';
+import { pageSize } from '../../constants';
+import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
+import { readAllPosts } from '../../utils/wordpress';
 import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getAllPermalinks();
+  const { postsCount } = await readAllPosts({ includePages: false });
 
-  const maxPages = Math.ceil(posts.length / PAGE_SIZE);
+  const maxPages = Math.ceil(postsCount / pageSize);
 
   return {
     paths: Array.from({ length: maxPages })
@@ -23,7 +24,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   }
 
   const page = Number(params.page);
-  const { allPosts } = await getMarkdownPostsFor({ page });
+  const { posts: allPosts, postsCount } = await getMarkdownPostsFor({ page });
 
   if (allPosts.length === 0) {
     return { notFound: true };
@@ -38,7 +39,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     }),
   );
 
-  return { props: { posts, page } };
+  return { props: { posts, page, postsCount } };
 };
 
 export default IndexPage;

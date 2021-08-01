@@ -56,24 +56,29 @@ export async function readAllPosts({
   if (category) {
     postsWithFm = postsWithFm.filter((post) => categoriesToMainCategory(post.data.categories)?.slug === category);
   }
+  const postsCount = postsWithFm.length;
+
   if (skip != null && limit) {
     postsWithFm = postsWithFm.slice(skip, skip + limit);
   }
 
-  return postsWithFm.map((fm) => {
-    return {
-      content: fm.content,
-      data: {
-        ...fm.data,
-        date: fm.data.date?.toISOString(),
-        permalink: fm.data.permalink,
-      },
-    };
-  });
+  return {
+    postsCount,
+    posts: postsWithFm.map((fm) => {
+      return {
+        content: fm.content,
+        data: {
+          ...fm.data,
+          date: fm.data.date?.toISOString(),
+          permalink: fm.data.permalink,
+        },
+      };
+    }),
+  };
 }
 
 export async function getAllPermalinks() {
-  const posts = await readAllPosts({ includePages: true });
+  const { posts } = await readAllPosts({ includePages: true });
   return [...navItems.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
 }
 
@@ -82,7 +87,7 @@ export function permalinkIsCategory(permalink: string) {
 }
 
 export async function getPostByPermalink(permalink: string) {
-  const posts = await readAllPosts({ includePages: true });
+  const { posts } = await readAllPosts({ includePages: true });
   return posts.find((fm) => fm.data.permalink === permalink);
 }
 export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>>;

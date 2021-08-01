@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
 
+import { host } from '../constants';
+
 interface RouterQuery {
   readonly page?: string;
   readonly permalink?: string;
@@ -11,7 +13,6 @@ const siteName = `Type of Web`;
 const shortDescription = `Blog o programowaniu`;
 const defaultDescription = `Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…`;
 const SEP = ' • ';
-export const origin = process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com';
 const MAX_TITLE_LEN = 50;
 const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
 
@@ -41,7 +42,7 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
     fullTitle += ` ${SEP} ${shortDescription}`;
   }
 
-  const canonical = page === 1 ? `https://${origin}${asPath}`.replace('/strona/1', '/') : `https://${origin}${asPath}`;
+  const canonical = page === 1 ? `${host}${asPath}`.replace('/strona/1', '/') : `${host}${asPath}`;
 
   const type = query.permalink ? 'article' : 'website';
 
@@ -55,9 +56,9 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
       <link key="profile" rel="profile" href="https://gmpg.org/xfn/11" />
       <link key="canonical" rel="canonical" href={canonical} />
 
-      <link rel="index" title="Strona główna" href={`https://${origin}/`} />
-      {next && <link key="next" rel="next" href={`https://${origin}/strona/${next}/`} />}
-      {prev && prev > 0 && <link key="prev" rel="prev" href={`https://${origin}/strona/${prev}/`} />}
+      <link rel="index" title="Strona główna" href={`${host}/`} />
+      {next && <link key="next" rel="next" href={`${host}/strona/${next}/`} />}
+      {prev && prev > 0 && <link key="prev" rel="prev" href={`${host}/strona/${prev}/`} />}
 
       <meta key="og:locale" property="og:locale" content="pl_PL" />
       <meta key="og:type" property="og:type" content={type} />

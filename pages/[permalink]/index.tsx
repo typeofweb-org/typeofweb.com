@@ -1,15 +1,14 @@
-import { MDXComponent } from '../components/MDXComponent';
-import { Seo } from '../components/Seo';
-import { NewsletterForm } from '../components/molecules/NewsletterForm';
-import { SingleArticle } from '../components/organisms/SingleArticle';
-import { TwoColumns } from '../components/templates/TwoColumns';
-import { useRunningHeader } from '../hooks/runningHeader';
-import { getMarkdownPostsFor, postToProps } from '../utils/postToProps';
-import { getAllPermalinks, getPostByPermalink, permalinkIsCategory } from '../utils/wordpress';
+import { MDXComponent } from '../../components/MDXComponent';
+import { Seo } from '../../components/Seo';
+import { NewsletterForm } from '../../components/molecules/NewsletterForm';
+import { SingleArticle } from '../../components/organisms/SingleArticle';
+import { TwoColumns } from '../../components/templates/TwoColumns';
+import { useRunningHeader } from '../../hooks/runningHeader';
+import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
+import { getAllPermalinks, getPostByPermalink, permalinkIsCategory } from '../../utils/wordpress';
+import IndexPage from '../index';
 
-import IndexPage from './index';
-
-import type { InferGetStaticPropsType } from '../types';
+import type { InferGetStaticPropsType } from '../../types';
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -40,13 +39,13 @@ export const getStaticProps = ({ params }: GetStaticPropsContext) => {
 };
 
 async function getStaticPropsForCategory(category: string) {
-  const { allPosts, page } = await getMarkdownPostsFor({ category, page: 1 });
+  const { posts: allPosts, page, postsCount } = await getMarkdownPostsFor({ category, page: 1 });
 
   if (allPosts.length === 0) {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
+  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
 
   const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
     (p) => ({
@@ -55,7 +54,7 @@ async function getStaticPropsForCategory(category: string) {
     }),
   );
 
-  return { props: { posts, page, pageKind: 'index' as const } };
+  return { props: { posts, page, postsCount, permalink: category, pageKind: 'index' as const } };
 }
 
 async function getStaticPropsForSingleArticle(permalink: string) {
@@ -65,7 +64,7 @@ async function getStaticPropsForSingleArticle(permalink: string) {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
+  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
   return { props: { ...(await postToProps(post, authorsJson)), pageKind: post.data.type } };
 }
 

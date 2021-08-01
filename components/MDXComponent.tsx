@@ -2,7 +2,8 @@ import { MDXRemote } from 'next-mdx-remote';
 import Link from 'next/link';
 import { memo } from 'react';
 
-import { origin } from './Seo';
+import { origin, host } from '../constants';
+
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
 
 type MDXRemoteProps = Parameters<typeof MDXRemote>[0];
@@ -16,7 +17,7 @@ const warned: Partial<Record<keyof typeof components, boolean>> = {};
 
 const isLocalUrl = (href: string) => {
   try {
-    return new URL(href, `https://${origin}`).hostname === origin;
+    return new URL(href, host).hostname === origin;
   } catch {
     return false;
   }

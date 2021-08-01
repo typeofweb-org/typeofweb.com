@@ -1,15 +1,17 @@
 import { Fragment } from 'react';
 
+import { Pagination } from '../components/atoms/Pagination';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
 import { TwoColumns } from '../components/templates/TwoColumns';
+import { host } from '../constants';
 import { getMarkdownPostsFor, postToProps } from '../utils/postToProps';
 
 import type { InferGetStaticPropsType } from '../types';
 import type { GetStaticPropsContext } from 'next';
 
 export const getStaticProps = async ({}: GetStaticPropsContext) => {
-  const { allPosts, page } = await getMarkdownPostsFor();
+  const { posts: allPosts, page, postsCount } = await getMarkdownPostsFor();
 
   if (allPosts.length === 0) {
     return { notFound: true };
@@ -24,10 +26,11 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
     }),
   );
 
-  return { props: { posts, page } };
+  // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
+  return { props: { posts, page, postsCount, permalink: null as string | null } };
 };
 
-const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <TwoColumns withSidebar={true} pageKind="index">
       {posts.map((post, i) => {
@@ -59,6 +62,7 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
         }
         return sneakPeek;
       })}
+      <Pagination pages={Math.ceil(postsCount / 10)} prefix={permalink ? `${host}/${permalink}` : host} />
     </TwoColumns>
   );
 };

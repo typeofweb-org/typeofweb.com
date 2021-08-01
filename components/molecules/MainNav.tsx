@@ -26,15 +26,17 @@ export const MainNav = memo(() => {
     >
       <ul className="flex flex-1 flex-col gap-8 items-center justify-center -mt-16 text-3xl lg:flex-row lg:gap-0 lg:items-stretch lg:justify-around lg:mt-0 lg:text-base">
         {navItems.map((item) => {
+          const isActive = permalink === item.slug;
           return (
             <li key={item.slug} className="flex items-stretch mt-0.5">
               <Link href={`/${item.slug}`}>
                 <a
                   className={`inline-flex items-center transition-colors text-3xl lg:text-base ${
-                    permalink === item.slug
+                    isActive
                       ? 'text-green-500 font-semibold border-b-2 border-green-500 hover:border-green-700 hover:text-green-700'
                       : 'text-gray-800 hover:text-green-500 border-b-2 border-transparent hover:border-green-500'
                   }`}
+                  aria-current={isActive}
                 >
                   {item.label}
                 </a>

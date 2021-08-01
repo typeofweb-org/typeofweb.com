@@ -234,7 +234,8 @@ button {
   @apply transition-shadow;
 }
 
-:focus {
+:focus,
+select:focus {
   outline: 0;
   @apply border-blue-200 ring ring-blue-100 ring-opacity-50 ring-offset-2;
 }

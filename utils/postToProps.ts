@@ -1,5 +1,7 @@
 import { getPlaiceholder } from 'plaiceholder';
 
+import { pageSize } from '../constants';
+
 import { categoriesToMainCategory } from './mainCategory';
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
@@ -46,12 +48,11 @@ export const postToProps = async (
   };
 };
 
-export const PAGE_SIZE = 10;
 export async function getMarkdownPostsFor({
   page = 1,
   category,
 }: { readonly page?: number; readonly category?: string } = {}) {
-  const allPosts = await readAllPosts({ category, skip: (page - 1) * PAGE_SIZE, limit: PAGE_SIZE });
+  const { postsCount, posts } = await readAllPosts({ category, skip: (page - 1) * pageSize, limit: pageSize });
 
-  return { allPosts, page };
+  return { postsCount, posts, page };
 }

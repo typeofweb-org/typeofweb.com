@@ -24,7 +24,7 @@ const config = withPlaiceholder(
 );
 
 config.images = {
-  domains: ['typeofweb.com'],
+  domains: ['typeofweb.com', 'secure.gravatar.com'],
   deviceSizes: [320, 640, 768, 828, 1080, 1200, 1920],
   imageSizes: [16, 32, 48, 64, 96, 128, 256, 320, 768],
 };

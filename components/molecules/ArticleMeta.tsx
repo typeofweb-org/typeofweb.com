@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, memo } from 'react';
 
@@ -16,17 +17,18 @@ export const ArticleMeta = memo<{
   return (
     <div className="mt-2">
       <div className="flex items-center justify-center">
-        <div className="flex flex-shrink-0 mr-2">
+        <div className="flex flex-shrink-0 items-center mr-2">
           {authors.map((author, idx) => (
-            <img
-              key={author.slug}
-              src={author.avatarUrl}
-              width="32"
-              height="32"
-              alt={`Zdjęcie ${author.displayName}`}
-              style={{ zIndex: authors.length - idx }}
-              className="block -mr-4 last:mr-0 w-8 h-8 border-2 border-gray-100 rounded-full lg:w-10 lg:h-10"
-            />
+            <span key={author.slug} className="inline-flex" style={{ zIndex: authors.length - idx }}>
+              <Image
+                src={author.avatarUrl}
+                width="32"
+                height="32"
+                layout="fixed"
+                alt={`Zdjęcie ${author.displayName}`}
+                className="block -mr-4 last:mr-0 w-8 h-8 border-2 border-gray-100 rounded-full lg:w-10 lg:h-10"
+              />
+            </span>
           ))}
         </div>
         <div className="font-sans text-sm font-semibold leading-tight sm:text-base">
