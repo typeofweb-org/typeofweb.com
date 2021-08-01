@@ -1,6 +1,6 @@
 ---
 id: 2242
-index: 116
+index: 115
 title: Continuous Integration — Recenzja Buddy.works
 date: 2019-11-04T13:55:01.000Z
 isMarkdown: true
@@ -30,6 +30,10 @@ seo:
   focusKeywordSynonyms:
     - Continuous Delivery
     - Buddy.works
+  metadesc: >-
+    Oto moja recenzja Buddy.works, czyli narzędzia do Continuous Integration i
+    Continuous Delivery. Czym się różni od konkurencji i czemu mnie
+    zainteresowało?
 ---
 
 Przez ostatnie kilka lat pracy w branży poznałem wiele różnych narzędzi do _Continuous Integration_ (CI) i _Continuous Delivery_ (CD). Sądziłem, że już nic nie będzie w stanie mnie zaskoczyć i nic nie będzie łatwiejsze, bo niby co dałoby się tutaj uprościć? Otóż, myliłem się. Poznajcie <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_review&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy.works</a>!

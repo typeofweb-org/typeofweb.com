@@ -1,6 +1,6 @@
 ---
 id: 1814
-index: 103
+index: 102
 title: React Hooks — wprowadzenie i motywacja
 date: 2019-02-04T08:36:21.000Z
 isMarkdown: true
@@ -30,6 +30,7 @@ seo:
   focusKeywordSynonyms:
     - React.js Hooks
     - Kurs React.js Hooks, kursu React Hooks, kursu React.js Hooks
+  metadesc: "React Hooks wkrótce trafią\_do wersji stabilnej React.js. Oto kurs React Hooks. Co to jest Hook? Po co powstały Hooki w React.js i jaka jest motywacja?"
 ---
 
 Jakiś czas temu zrobiło się głośno na temat React Hooks. Co to jest i po co Ci to? Przez dłuższy czas celowo nie pisałem o tym na blogu, gdyż była to ledwie propozycja i to do tego mocno niestabilna. Teraz jednak sytuacja się zmieniła i wszystko wskazuje na to, że React Hooks wkrótce trafią do wersji stabilnej. Czas się zaprzyjaźnić! Dlatego powstał **kurs React Hooks**.

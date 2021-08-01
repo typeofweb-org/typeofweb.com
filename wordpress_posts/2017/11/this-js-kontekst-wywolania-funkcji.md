@@ -1,6 +1,6 @@
 ---
 id: 799
-index: 42
+index: 41
 title: this w JS — czyli kilka słów o kontekście wywołania funkcji
 date: 2017-11-14T17:33:21.000Z
 isMarkdown: false
@@ -25,6 +25,10 @@ seo:
     - this
   focusKeywordSynonyms:
     - kontekstem wywołania, kontekście wywołania, kontekstu wywołania
+  metadesc: >-
+    this w JavaScripcie — czym jest? Jak zachowuje się this wewnątrz funkcji i
+    konstruktorów? Jak zmienia się kontekst wywołania? Jak działają arrow
+    functions?
 ---
 
 Czy kiedykolwiek spotkałaś(-eś) się z błędem w aplikacji, który wynikał z tego, że "this" było ustawione na coś innego, niż się spodziewałaś/eś? Jeśli tak, to nie jesteś jedyna(-y). W swojej karierze programisty miałem okazję występować w roli rekrutera na ponad 160-ciu rozmowach kwalifikacyjnych na stanowiska front-endowe. Jeśli nauczyło mnie to jednego, to tego, że odpowiedź na pytanie „na co wskazuje <code>this</code>?” albo „co to jest kontekst wywołania?” sprawia największą trudność nie tylko kandydatom, ale również doświadczonym programistom w ich codziennej pracy. <strong>W tym wpisie pokazuję, że <code>this</code> nie jest tak magiczne jakby się mogło wydawać, a kontekst wywołania da się zrozumieć.</strong>

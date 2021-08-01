@@ -1,6 +1,6 @@
 ---
 id: 2495
-index: 130
+index: 129
 title: Podsumowanie roku 2019
 date: 2020-04-27T14:49:48.000Z
 isMarkdown: true

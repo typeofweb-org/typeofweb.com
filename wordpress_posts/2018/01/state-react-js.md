@@ -1,6 +1,6 @@
 ---
 id: 748
-index: 52
+index: 51
 title: Stan komponentów React.js
 date: 2018-01-11T14:34:52.000Z
 isMarkdown: false
@@ -22,7 +22,12 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Przyszedł czas na poznanie tajemniczego "state" w React.js. Udało nam się
+    tworzyć komponenty, które pięknie wyświetlały przekazane propsy, ale trzeba
+    przyznać szczerze: Bez wewnątrznego stanu nie da się zbudować funkcjonalnej
+    aplikacji. Dzisiaj nauczysz się taki stan dodawać i wykorzystywać :)
 ---
 
 Przyszedł czas na poznanie tajemniczego <code>state</code> w React.js. Udało nam się tworzyć komponenty, które pięknie wyświetlały przekazane propsy, ale trzeba przyznać szczerze: <strong>Bez wewnątrznego stanu nie da się zbudować funkcjonalnej aplikacji</strong>. Dzisiaj nauczysz się taki stan dodawać i wykorzystywać :)

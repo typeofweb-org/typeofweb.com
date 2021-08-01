@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { memo } from 'react';
 
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
@@ -19,41 +20,37 @@ interface ArticleSneakPeekProps {
   readonly excerpt: string;
 }
 
-export const ArticleSneakPeek = ({
-  cover,
-  id,
-  index,
-  title,
-  authors,
-  mainCategory,
-  href,
-  excerpt,
-}: ArticleSneakPeekProps) => {
-  return (
-    <Card as="article" roundAllCorners={!cover} moreSpace={!cover}>
-      <header className="bg-gray-200">
-        {cover && (
-          <Link href={href}>
-            <a>
-              <ArticleCoverImage cover={cover} wide={false} />
-            </a>
-          </Link>
-        )}
-        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
-          <ArticleTitle title={title} id={id} index={index} href={href} level={2} />
-          <ArticleMeta authors={authors} mainCategory={mainCategory} />
-        </div>
-      </header>
-      <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
-        <p className="!indent-0">
-          {excerpt}{' '}
-          <span className="inner-link ml-2">
+export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
+  ({ cover, id, index, title, authors, mainCategory, href, excerpt }) => {
+    return (
+      <Card as="article" roundAllCorners={!cover} moreSpace={!cover}>
+        <header className="bg-gray-200">
+          {cover && (
             <Link href={href}>
-              <a className="!tracking-wider">Czytaj dalej…</a>
+              <a tabIndex={-1}>
+                <ArticleCoverImage cover={cover} wide={false} />
+              </a>
             </Link>
-          </span>
-        </p>
-      </div>
-    </Card>
-  );
-};
+          )}
+          <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
+            <ArticleTitle title={title} id={id} index={index} href={href} level={2} />
+            <ArticleMeta authors={authors} mainCategory={mainCategory} />
+          </div>
+        </header>
+        <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
+          <p className="!indent-0">
+            {excerpt}{' '}
+            <span className="inner-link ml-2">
+              <Link href={href}>
+                <a className="!tracking-wider">
+                  Czytaj dalej<span className="sr-only"> artykuł {title}</span>…
+                </a>
+              </Link>
+            </span>
+          </p>
+        </div>
+      </Card>
+    );
+  },
+);
+ArticleSneakPeek.displayName = 'ArticleSneakPeek';

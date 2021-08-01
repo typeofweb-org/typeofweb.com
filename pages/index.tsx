@@ -42,7 +42,7 @@ const IndexPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
             mainCategory={post.frontmatter.mainCategory}
             href={'/' + post.frontmatter.permalink}
             authors={post.frontmatter.authors}
-            cover={post.frontmatter.cover ?? null}
+            cover={post.frontmatter.cover ? { ...post.frontmatter.cover, preload: i === 0 } : null}
             id={post.frontmatter.id}
             index={post.frontmatter.index}
             excerpt={post.excerpt}

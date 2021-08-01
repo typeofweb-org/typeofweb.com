@@ -1,6 +1,6 @@
 ---
 id: 1318
-index: 88
+index: 87
 title: Wprowadzenie do kursu Vue.js od podstaw
 date: 2018-06-08T12:20:00.000Z
 isMarkdown: true
@@ -25,6 +25,9 @@ series:
 seo:
   focusKeywords:
     - Vue.js
+  metadesc: >-
+    Oto kurs Vue.js! Moje gratulacje za podjęcie tego tematu! Vue.js to bardzo
+    popularna biblioteka i warto ją poznać! Poznaj framework JavaScript Vue!
 ---
 
 Witaj w kursie **Vue.js od podstaw**. Bardzo się cieszę, że chcesz się nauczyć tego wspaniałego **frameworka JavaScript**. Niezależnie od tego, czy chcesz szukać pracy, w której będziesz wykorzystywać Vue.js, napisać w nim hobbystyczny projekt, czy po prostu poszerzyć swoje horyzonty jako programist(k)a JavaScript ten kurs jest dla Ciebie.

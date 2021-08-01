@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import type { PropsWithChildren } from 'react';
 
 interface SectionTitleProps {
@@ -5,7 +7,7 @@ interface SectionTitleProps {
   readonly level: 1 | 2 | 'none';
 }
 
-export const SectionTitle = ({ children, level, size = 'large' }: PropsWithChildren<SectionTitleProps>) => {
+export const SectionTitle = memo<PropsWithChildren<SectionTitleProps>>(({ children, level, size = 'large' }) => {
   const textSize = size === 'large' ? 'text-3xl lg:text-5xl' : 'text-2xl lg:text-3xl';
 
   const El = level === 'none' ? 'span' : (`h${level}` as const);
@@ -17,4 +19,5 @@ export const SectionTitle = ({ children, level, size = 'large' }: PropsWithChild
       {children}
     </El>
   );
-};
+});
+SectionTitle.displayName = 'SectionTitle';

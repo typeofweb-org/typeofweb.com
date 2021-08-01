@@ -1,6 +1,6 @@
 ---
 id: 1903
-index: 110
+index: 109
 title: React Hooks a żądania do API
 date: 2019-04-16T09:27:55.000Z
 isMarkdown: true
@@ -23,7 +23,8 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: "Jak pogodzić React Hooks i fetch? W tym wpisie pokazuję jak wykonać\_Ajax razem z React Hooks i jak pobierać dane z REST API przez React Hook useEffect."
 ---
 
 React Hooks mocno upraszczają właściwie wszystko, co do tej pory robiłaś. W jednym z pierwszych odcinków kursu pokazywałem, jak można w szybki sposób pobierać dane z API używając `fetch` w Reakcie. Czy Hooki coś tutaj zmieniają? Ależ tak!

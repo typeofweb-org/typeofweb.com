@@ -1,6 +1,6 @@
 ---
 id: 2383
-index: 124
+index: 123
 title: Wady React Hooks
 date: 2020-02-13T09:26:57.000Z
 isMarkdown: true
@@ -25,6 +25,9 @@ seo:
     - Wady hooks
   focusKeywordSynonyms:
     - Wady hooków
+  metadesc: >-
+    React Hooks: Jakie są ich wady? Krytyka React Hooks. Dlaczego to rozwiązanie
+    dalekie od ideału i jak można zrobić to lepiej?
 ---
 
 Od wielu tygodni nie opada kurz po zamieszaniu związanym z React Hooks. Poziom _hype_ przebił wszelki hajpometry, a rozsądna debata na temat kodu została zastąpiona prześciganiem się w pisaniu co raz to sprytniejszych i czystszych (w sensie _pure_) reReact Hooków. Zastanówmy się jednak nad wadami tego rozwiązania.

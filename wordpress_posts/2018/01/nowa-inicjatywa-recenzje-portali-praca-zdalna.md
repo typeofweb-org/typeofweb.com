@@ -1,6 +1,6 @@
 ---
 id: 996
-index: 59
+index: 58
 title: 'Nowa inicjatywa: Recenzje portali z pracą zdalną'
 date: 2018-01-28T01:00:20.000Z
 isMarkdown: false
@@ -22,6 +22,12 @@ categories:
 seo:
   focusKeywords:
     - praca zdalna
+  metadesc: >-
+    Praca zdalna jest celem dla wielu osób. Wiele razy ludzie pytali mnie:
+    „Gdzie szukać pracy zdalnej?” Różnorakich portali z pracą zdalną w
+    Internecie na pewno jest mnóstwo! Dlatego stworzyłem stronę, na której
+    zbierzemy wszystkie interesujące portale z pracą zdalną! Znajdź pracę zdalną
+    z tymi serwisami.
 ---
 
 Praca zdalna jest celem dla wielu osób. Wiele razy ludzie pytali mnie: „Gdzie szukać pracy zdalnej?”. Z pamięci jestem w stanie przytoczyć zazwyczaj tylko kilka serwisów. A przecież podobnych portali z pracą zdalną w Internecie na pewno jest więcej! Dlatego stworzyłem stronę, na której zbierzemy wszystkie interesujące portale z pracą zdalną! <a href="https://typeofweb.com/znajdz-prace-zdalna-tymi-serwisami/">Znajdź pracę zdalną z tymi serwisami</a>.

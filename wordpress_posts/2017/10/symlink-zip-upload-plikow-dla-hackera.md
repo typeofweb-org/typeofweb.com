@@ -1,6 +1,6 @@
 ---
 id: 567
-index: 39
+index: 38
 title: Symlink, zip i upload plików – łatwo padniesz łupem hackera
 date: 2017-10-17T11:45:29.000Z
 isMarkdown: false
@@ -22,6 +22,10 @@ categories:
 seo:
   focusKeywords:
     - Symlink
+  metadesc: >-
+    Pozornie niewinne fragmenty kodu mogą prowadzić do katastrofy. Zip, symlink,
+    upload plików – jeśli nie wiesz co mam na myśli to musisz przeczytać ten
+    wpis!
 ---
 
 Bardzo często ścieram się z sytuacjami gdzie ktoś kopiuje kod z Internetu do aplikacji bez zweryfikowania co ten kod do końca robi… Zresztą: Kto nie wykorzystał gotowca ze StackOverflow bez czytania opisu i komentarzy niech pierwszy rzuci kamień ;) Czasem jednak pozornie niewinne fragmenty kodu mogą doprowadzić do katastrofy. Weźmy prosty przykład: Upload plików. Wszystko działa, wszędzie prawidłowa sanityzacja i obsługa błędów… ale czy na pewno? <strong>Przeoczenie jednego małego szczegółu sprawia, że aplikacja staje się celem dla hackerów.</strong> Oto prawdziwa historia o symlinkach, zipach i uploadzie plików.

@@ -1,6 +1,6 @@
 ---
 id: 1416
-index: 108
+index: 107
 title: Obsługa zdarzeń w Vue.js za pomocą dyrektywy v-on
 date: 2019-03-10T12:36:33.000Z
 isMarkdown: true
@@ -26,6 +26,10 @@ series:
 seo:
   focusKeywords:
     - Zdarzenia
+  metadesc: >-
+    Zdarzenia wywoływane przez użytkownika Vue.js pozwala obsługiwać dyrektywą
+    v-on. Zobacz jak podpiąć się pod kliknięcia, focus, czy zdarzenia
+    klawiatury.
 ---
 
 Aby aplikacja była ciekawa, musi pozwalać użytkownikowi na interakcję. Może to być nie tylko wprowadzanie danych do pól formularzy, ale również reagowanie na **zdarzenia kliknięcia**, czy ruchy myszką. Niezależnie od tego, jaki rodzaj interakcji chcesz oprogramować, Vue.js pozwoli Ci obsłużyć go za pomocą dyrektywy `v-on`.

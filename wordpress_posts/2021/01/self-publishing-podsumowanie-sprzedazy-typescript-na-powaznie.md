@@ -1,6 +1,6 @@
 ---
 id: 2622
-index: 137
+index: 136
 title: 'Self-publishing: Podsumowanie sprzedaży TypeScript na poważnie'
 date: 2021-01-01T12:27:22.000Z
 isMarkdown: true
@@ -26,6 +26,10 @@ series:
 seo:
   focusKeywords:
     - self-publishing
+  metadesc: >-
+    Ile zarobiłem na książce „TypeScript na poważnie”? Jaka była sprzedaż? Czego
+    się spodziewałem? Jakie koszta musiałem ponieść? Ciąg dalszy o
+    self-publishing.
 ---
 
 Jakiś czas temu na moim [instagramie](https://www.instagram.com/michal_typeofweb/) zadałem pytanie, czy chcielibyście zobaczyć podsumowanie sprzedaży książki „TypeScript na poważnie” w self-publishing. Blisko 100% odpowiedzi było na TAK, więc oto i ono :)

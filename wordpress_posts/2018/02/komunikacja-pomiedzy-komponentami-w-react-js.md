@@ -1,6 +1,6 @@
 ---
 id: 1045
-index: 66
+index: 65
 title: Komunikacja pomiędzy komponentami w React.js
 date: 2018-02-24T09:15:02.000Z
 isMarkdown: false
@@ -22,7 +22,8 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: "Komunikacja pomiędzy komponentami w React to często trudny temat. Wszystko wyjaśniam! Jak przekazywać dane między komponentami? Jak dziecko ma informować o czymś rodzica? No i jak połączyć ze sobą\_dowolne dwa komponenty, które leżą gdzieś\_daleko w aplikacji? Wszystko we wpisie."
 ---
 
 Przyszedł ten moment, gdy Twoja aplikacja zaczyna się rozrastać i zmagasz się z różnymi problemami z architekturą. Zacznijmy od prostego problemu: Komunikacja pomiędzy komponentami. Ale nie tylko tymi, które są bezpośrednio obok siebie, ale też tymi dowolnie oddalonymi w aplikacji…

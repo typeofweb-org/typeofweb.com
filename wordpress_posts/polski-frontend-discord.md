@@ -1,6 +1,6 @@
 ---
 id: 1510
-index: 82
+index: 81
 title: Polski front-end na Discordzie!
 date: 2018-05-01T16:29:35.000Z
 isMarkdown: true

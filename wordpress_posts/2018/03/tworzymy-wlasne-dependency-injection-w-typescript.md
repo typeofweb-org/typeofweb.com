@@ -1,6 +1,6 @@
 ---
 id: 1062
-index: 71
+index: 70
 title: Tworzymy własne Dependency Injection w TypeScript
 date: 2018-03-15T00:14:33.000Z
 isMarkdown: false
@@ -19,7 +19,12 @@ categories:
     name: JavaScript
   - slug: dobry-kod
     name: Dobry Kod
-seo: {}
+seo:
+  metadesc: >-
+    Dependency Injection w TypeScript z użyciem dekoratorów. Najlepiej uczy się
+    na konkretnych przykładach. Dzisiaj napiszesz własną bibliotekę do
+    Dependency Injection w TypeScripcie! Przydadzą nam się dekoratory, metadane,
+    refleksja i kilka sztuczek. Do dzieła :)
 ---
 
 Najlepiej uczy się na konkretnych przykładach. Dzisiaj napiszesz własną bibliotekę do Dependency Injection w TypeScripcie! Przydadzą nam się dekoratory, metadane, refleksja i kilka sztuczek. Do dzieła :)

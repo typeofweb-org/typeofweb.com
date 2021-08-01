@@ -1,6 +1,6 @@
 ---
 id: 965
-index: 62
+index: 61
 title: Testowanie aplikacji React.js — podstawy Enzyme
 date: 2018-02-09T08:20:22.000Z
 isMarkdown: false
@@ -25,6 +25,11 @@ series:
 seo:
   focusKeywords:
     - enzyme
+  metadesc: >-
+    Enzyme to biblioteka do testowania komponentów React.js. Ułatwia tworzenie
+    komponentów na potrzeby testów, odczytywanie oraz zmianę propsów i state, a
+    także pozwala na asercje. Testowanie aplikacji to rzecz ważna. I od razu
+    wrzucam Cię na głęboką wodę — użyjesz React.js i Enzyme!
 ---
 
 Testowanie aplikacji to rzecz ważna. Do tej pory jednak nie wspomniałem ani słowem o testowaniu React.js. Czas najwyższy to zrobić! I <strong>od razu wrzucam Cię na głęboką wodę — użyjesz React.js i Enzyme</strong> — przemiłej biblioteki do testowania komponentów.

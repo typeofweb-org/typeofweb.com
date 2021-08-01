@@ -1,6 +1,6 @@
 ---
 id: 2424
-index: 126
+index: 125
 title: 'Praca zdalna: Lista 20 przydatnych narzędzi'
 date: 2020-03-16T16:40:30.000Z
 isMarkdown: true

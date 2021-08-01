@@ -1,6 +1,6 @@
 ---
 id: 885
-index: 53
+index: 52
 title: Podsumowanie roku 2017 i plany na 2018
 date: 2018-01-13T08:03:46.000Z
 isMarkdown: false

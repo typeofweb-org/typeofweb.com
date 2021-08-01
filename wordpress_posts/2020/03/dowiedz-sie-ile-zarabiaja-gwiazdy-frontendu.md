@@ -1,6 +1,6 @@
 ---
 id: 2405
-index: 125
+index: 124
 title: Dowiedz się ile zarabiają gwiazdy frontendu!
 date: 2020-03-04T14:58:19.000Z
 isMarkdown: true
@@ -25,6 +25,9 @@ seo:
     - zarabiają
   focusKeywordSynonyms:
     - zarobki, zarabia, zarabiająca, zarabiające
+  metadesc: >-
+    Ile zarabiają frontendowcy? Jakie pensje otrzymują gwiazdy programowania?
+    Czy zarobki to tabu, a rozmowa na ten temat jest nielegalna? Ależ skąd!
 ---
 
 Ostatnio na Twitterze pojawił się ciekawa moda polegająca na ujawnianiu swojego doświadczenia i zarobków przez programistów i programistki w celu uświadamiania i zmniejszenia nierówności płac. Udział w zabawie wzięły także znane gwiazdy takie, jak Dan Abramov albo Sara Vieira. Ile zarabiają?

@@ -1,6 +1,6 @@
 ---
 id: 1351
-index: 91
+index: 90
 title: Dynamiczne atrybuty w Vue.js - dyrektywa v-bind
 date: 2018-06-25T07:45:37.000Z
 isMarkdown: true
@@ -26,6 +26,7 @@ series:
 seo:
   focusKeywords:
     - v-bind
+  metadesc: "Dyrektywy w Vue.js to specjalne atrybuty z przedrostkiem v-. W tej części kursu Vue.js dowiesz się jak przekazać dynamiczne dane za pomocą\_dyrektywy v-bind."
 ---
 
 W poprzednim wpisie pokazałem Ci jak wyświetlić **dynamiczne dane w Vue.js** za pomocą wąsów, czyli podwójnych nawiasów klamrowych (`{{ nazwaZmiennej }}`). Dziś dowiesz się jak przekazać je do atrybutów elementu HTML za pomocą dyrektywy `v-bind`.

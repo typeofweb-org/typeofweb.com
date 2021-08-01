@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { useUIState } from '../../hooks/useUiState';
 import { SiteHeader } from '../molecules/SiteHeader';
 import { Sidebar } from '../organisms/Sidebar';
@@ -5,14 +7,12 @@ import { Sidebar } from '../organisms/Sidebar';
 import type { PageKind } from '../../types';
 import type { PropsWithChildren } from 'react';
 
-export const TwoColumns = ({
-  children,
-  withSidebar,
-  pageKind,
-}: PropsWithChildren<{
-  readonly withSidebar: boolean;
-  readonly pageKind: PageKind;
-}>) => {
+export const TwoColumns = memo<
+  PropsWithChildren<{
+    readonly withSidebar: boolean;
+    readonly pageKind: PageKind;
+  }>
+>(({ children, withSidebar, pageKind }) => {
   const { setUIState, uiState } = useUIState();
 
   return (
@@ -42,4 +42,5 @@ export const TwoColumns = ({
       </button>
     </>
   );
-};
+});
+TwoColumns.displayName = 'TwoColumns';

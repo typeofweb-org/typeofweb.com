@@ -1,6 +1,6 @@
 ---
 id: 2076
-index: 115
+index: 114
 title: "Złożoność\_obliczeniowa, czasowa i pamięciowa algorytmów"
 date: 2019-09-16T16:45:25.000Z
 isMarkdown: true
@@ -32,6 +32,7 @@ seo:
     - >-
       algorytmy, algorytmu, algorytmów, algorytmiczny, algorytmiczna,
       algorytmicznych
+  metadesc: "Złożoność\_obliczeniowa i złożoność pamięciowa algorytmów to niezwykle ważne pojęcia! Naucz się z je rozumieć, aby łatwiej przejść rozmowy rekrutacyjne."
 ---
 
 Często w algorytmicznych zadaniach rekrutacyjnych można natrafić na wymagania dotyczące pojęć takich, jak **złożoność obliczeniowa lub złożoność pamięciowa algorytmów**. Są to też pojęcia, które warto znać, aby bardziej świadomie podejmować codzienne decyzje dotyczące kodu. Ale co to oznacza? W tym wpisie wyjaśniam, o co chodzi z notacją „duże O” `O(n)`. Od prostego wytłumaczenia dla laików, po formalny opis. Zaczynajmy!

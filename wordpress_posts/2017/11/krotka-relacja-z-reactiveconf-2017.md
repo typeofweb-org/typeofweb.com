@@ -1,6 +1,6 @@
 ---
 id: 773
-index: 41
+index: 40
 title: Krótka relacja z ReactiveConf 2017
 date: 2017-11-07T19:16:05.000Z
 isMarkdown: false
@@ -22,6 +22,10 @@ categories:
 seo:
   focusKeywords:
     - Reactive
+  metadesc: >-
+    ReactiveConf to 2 dni prezentacji oraz 1 dzień warsztatów poświęconych
+    programowaniu reaktywnemu, FRP, React.js, Angular, Elm i wielu, wielu innym
+    tematom…
 ---
 
 W tym roku po raz pierwszy wybrałem się na ReactiveConf do Bratysławy (Słowacja). Strona konferencji zachęcała znanymi prelegentami i ciekawymi prezentacjami, więc bez dłuższego namysłu kupiłem bilet. ReactiveConf to 2 dni prezentacji oraz 1 dzień warsztatów poświęconych programowaniu reaktywnemu, FRP, React.js, Angular, Elm i wielu, wielu innym tematom…

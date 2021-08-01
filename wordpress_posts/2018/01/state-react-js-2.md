@@ -1,6 +1,6 @@
 ---
 id: 785
-index: 54
+index: 53
 title: State w React.js 2
 date: 2018-01-15T12:51:05.000Z
 isMarkdown: false
@@ -22,7 +22,13 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Kontynuacja kursu React.js — state. W tym wpisie rozwijam temat state,
+    opisuję dokładniej jak działa setState i jakie argumenty przyjmuje.
+    Opowiadam o przekazywaniu do niego funkcji (updatera) oraz drugiej funkcji
+    (callbacka), a także po prostu o zmianie stanu przy pomocy prostego obiektu
+    w React.
 ---
 
 Pod koniec poprzedniego wpisu zadałem podchwytliwe ćwiczenie dotyczące <code>state</code> w React.js. Jeśli jeszcze go nie wykonałaś/eś to teraz jest ten moment, aby wrócić i spróbować ;) W tym wpisie rozwijam temat <code>state</code>, opisuję dokładniej jak działa <code>setState</code> i jakie argumenty przyjmuje.

@@ -1,6 +1,6 @@
 ---
 id: 714
-index: 46
+index: 45
 title: Props czyli atrybuty w React.js
 date: 2017-12-12T14:25:59.000Z
 isMarkdown: false
@@ -22,7 +22,10 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    W tej części kursu React.js nauczysz się parametryzować komponenty w
+    React.js. Poznasz pojęcie "props" oraz dowiesz się do czego propsy służą.
 ---
 
 W tej części nauczysz się <strong>parametryzować komponenty w React.js</strong>. Poznasz pojęcie "props" oraz dowiesz się do czego one (te „propsy”) służą.

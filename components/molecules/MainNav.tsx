@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { memo } from 'react';
 
 import { useUIState } from '../../hooks/useUiState';
 
@@ -10,7 +11,7 @@ export const navItems = [
   { slug: 'praca-zdalna', label: 'Praca zdalna' },
 ];
 
-export const MainNav = () => {
+export const MainNav = memo(() => {
   const { uiState } = useUIState();
   const router = useRouter();
   const permalink = router.query['permalink'];
@@ -44,4 +45,5 @@ export const MainNav = () => {
       </ul>
     </nav>
   );
-};
+});
+MainNav.displayName = 'MainNav';

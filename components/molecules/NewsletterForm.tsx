@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { memo } from 'react';
 
 import { Button } from '../atoms/Button';
 import { Card } from '../atoms/Card';
@@ -6,7 +7,7 @@ import { Checkbox } from '../atoms/Checkbox';
 import { Input } from '../atoms/Input';
 import { SectionTitle } from '../atoms/SectionTitle';
 
-export const NewsletterForm = () => {
+export const NewsletterForm = memo(() => {
   return (
     <Card as="form" roundAllCorners={true} moreSpace={true} className="mx-auto max-w-xl">
       <div className="pb-4 px-5">
@@ -46,4 +47,5 @@ export const NewsletterForm = () => {
       </div>
     </Card>
   );
-};
+});
+NewsletterForm.displayName = 'NewsletterForm';

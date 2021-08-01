@@ -1,6 +1,6 @@
 ---
 id: 856
-index: 47
+index: 46
 title: Hackowanie CSS
 date: 2017-12-15T12:36:18.000Z
 isMarkdown: false

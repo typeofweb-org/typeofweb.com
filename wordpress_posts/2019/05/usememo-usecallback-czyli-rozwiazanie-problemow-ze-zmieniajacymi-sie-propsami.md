@@ -1,6 +1,6 @@
 ---
 id: 2015
-index: 112
+index: 111
 title: >-
   useMemo, useCallback, czyli rozwiązanie problemów ze zmieniającymi się
   propsami

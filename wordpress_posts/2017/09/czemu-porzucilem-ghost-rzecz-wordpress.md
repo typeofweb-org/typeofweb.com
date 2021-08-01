@@ -23,6 +23,8 @@ categories:
 seo:
   focusKeywords:
     - WordPress
+  title: Dlaczego porzuciłem Ghost na rzecz WordPress, ale Ty nie powinieneś?
+  metadesc: "Do tej pory do blogowania na Type of Web korzystałem z systemu Ghost, jednak zrezygnowałem z niego na rzecz WordPress. Dlaczego? Co było moją\_motywacją?"
 ---
 
 Od nieco ponad tygodnia możesz podziwiać całkowicie nową wersję strony Type of Web. Do tej pory korzystałem z systemu Ghost, jednak zrezygnowałem z niego na rzecz WordPress. Prawdę mówiąc, nosiłem się z tym zamiarem już od dłuższego czasu… co było moją motywacją? <strong>Dlaczego Type of Web lepiej sprawdza się na WordPressie?</strong> I, co ważne, dlaczego nadal uważam Ghost za świetną platformę<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> do blogowania? O tym wszystkim poniżej!

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { Card } from './Card';
 
 import type { ReactNode, PropsWithChildren } from 'react';
@@ -6,7 +8,7 @@ interface WidgetProps {
   readonly title: ReactNode;
 }
 
-export const Widget = ({ children, title }: PropsWithChildren<WidgetProps>) => {
+export const Widget = memo<PropsWithChildren<WidgetProps>>(({ children, title }) => {
   return (
     <Card as="section" roundAllCorners={true} moreSpace={true}>
       <div className="-my-2 px-8">
@@ -15,4 +17,5 @@ export const Widget = ({ children, title }: PropsWithChildren<WidgetProps>) => {
       </div>
     </Card>
   );
-};
+});
+Widget.displayName = 'Widget';

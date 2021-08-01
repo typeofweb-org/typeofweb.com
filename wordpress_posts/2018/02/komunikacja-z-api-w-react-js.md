@@ -1,6 +1,6 @@
 ---
 id: 1092
-index: 67
+index: 66
 title: Komunikacja z API w React.js
 date: 2018-02-27T06:58:57.000Z
 isMarkdown: true
@@ -22,7 +22,12 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Bardzo często powracającym wątkiem jest pytanie o to, w jaki sposób
+    zaimplementować komunikację z API w React.js. Moja odpowiedź może Cię nieco
+    zaskoczyć: React nie ma nic do tego. Możesz to robić absolutnie dowolnie.
+    Pokażę jak użyć fetch do pobrania danych z REST API w React.js
 ---
 
 Bardzo często powracającym wątkiem jest pytanie o to, w jaki sposób zaimplementować komunikację z API w React.js. Moja odpowiedź może Cię nieco zaskoczyć: **React nie ma nic do tego**. Możesz to robić absolutnie dowolnie.

@@ -1,6 +1,6 @@
 ---
 id: 18
-index: 74
+index: 73
 title: 'Flux i Redux: globalny store i jednokierunkowy przepływ danych'
 date: 2018-03-29T11:16:34.000Z
 isMarkdown: false
@@ -26,6 +26,9 @@ seo:
   focusKeywords:
     - Redux
     - Flux
+  metadesc: >-
+    Redux w React. Jednokierunkowy architektura Flux, przepływ danych, akcje,
+    dispatcher, action creator, reducer… to wszystko w tym wpisie :)
 ---
 
 Na codzień korzystam z <strong>Redux razem z React</strong>. Dawniej używałem też własnej implementacji architektury Flux razem z AngularJS. Postanowiłem napisać o tym koncepcie coś więcej — bo jest to bez wątpienia bardzo ciekawe! <strong>Jednokierunkowy przepływ danych, akcje, dispatcher, action creator, reducer</strong>… to wszystko w tym wpisie :) A do tego klarowne, praktyczne przykłady!

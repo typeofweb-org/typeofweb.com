@@ -1,6 +1,6 @@
 ---
 id: 1231
-index: 76
+index: 75
 title: 'React + Redux — kurs: wprowadzenie i podstawy'
 date: 2018-04-06T11:54:56.000Z
 isMarkdown: true
@@ -25,6 +25,11 @@ series:
 seo:
   focusKeywords:
     - Redux
+  metadesc: >-
+    Redux + React! Kurs Reacta dorobił się odcinka o Reduksie! Powoli wprowadzę
+    Cię świat Reduksa, nauczysz się używać tej łatwej biblioteki, poznasz
+    koncepty stojące za nią i napiszesz prostą aplikację. Redux: Oto wpis, na
+    który wszyscy czekali!
 ---
 
 Redux! Kurs Reacta dorobił się odcinka o Reduksie! Powoli wprowadzę Cię świat Reduksa, nauczysz się używać tej łatwej biblioteki, poznasz koncepty stojące za nią i napiszesz prostą aplikację.

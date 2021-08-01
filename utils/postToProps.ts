@@ -38,6 +38,7 @@ export const postToProps = async (
             facebook: author.meta.facebook,
           };
         }),
+      seo: post.data.seo,
       mainCategory,
       permalink: post.data.permalink,
       cover: img && blurDataURL ? { img, blurDataURL } : null,

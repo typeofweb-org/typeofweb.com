@@ -1,6 +1,6 @@
 ---
 id: 2581
-index: 135
+index: 134
 title: 'Self-publishing: Jak napisałem książkę w markdownie?'
 date: 2020-09-30T14:24:58.000Z
 isMarkdown: true
@@ -26,6 +26,10 @@ series:
 seo:
   focusKeywords:
     - self-publishing
+  metadesc: >-
+    Self-publishing i narzędzia, z których korzystam. Opisuję dlaczego do
+    self-publishing najlepszy jest Markdown i jak wygenerować e-booki w EPUB,
+    PDF i MOBI.
 ---
 
 # Self-publishing: Jak napisałem książkę w markdownie?

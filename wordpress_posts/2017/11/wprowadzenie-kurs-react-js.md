@@ -1,6 +1,6 @@
 ---
 id: 695
-index: 43
+index: 42
 title: 'React.js: Wprowadzenie do kursu od podstaw'
 date: 2017-11-28T14:54:47.000Z
 isMarkdown: false
@@ -29,6 +29,9 @@ seo:
   focusKeywordSynonyms:
     - react-js, react
     - kurs React, kurs Reacta, kurs Reakta
+  metadesc: >-
+    Oto kurs React.js! Moje gratulacje za podjęcie tego tematu! React.js to
+    aktualnie najpopularniejsza biblioteka na front-endzie i warto ją poznać!
 ---
 
 Oto kurs React.js od podstaw. Moje gratulacje za podjęcie tego tematu! To pierwszy krok w kierunku realizacji Twoich ambicji i poznania tego niezwykle przydatnego narzędzia. Ten <strong>kurs React.js</strong> sprawi, że będziesz umiał(a) tworzyć <strong>rozbudowane i profesjonalne aplikacje internetowe</strong> oraz przybliży Cię do celu jakim zapewne jest znalezienie pracy w tej technologii. Na pewno warto!

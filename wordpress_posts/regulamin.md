@@ -1,6 +1,6 @@
 ---
 id: 2457
-index: 127
+index: 126
 title: Regulamin Newslettera Type of Web
 date: 2020-03-29T11:18:49.000Z
 isMarkdown: false

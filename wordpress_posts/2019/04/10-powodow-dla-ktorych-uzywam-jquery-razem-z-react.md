@@ -1,6 +1,6 @@
 ---
 id: 1896
-index: 109
+index: 108
 title: 10 powodów, dla których używam jQuery razem z React
 date: 2019-04-01T09:54:18.000Z
 isMarkdown: true
@@ -24,6 +24,9 @@ seo:
   focusKeywords:
     - React
     - jQuery
+  metadesc: >-
+    jQuery razem z React — dlaczego ich używam? Czemu warto korzystać z jQuery
+    we frameworku React.js? jQuery to wspaniała biblioteka do manipulacji DOM.
 ---
 
 W dobie frameworków takich jak React i bibliotek takich jak Angular, można by pomyśleć, że jQuery nie ma już prawa bytu. **Nic bardziej mylnego**! Ten najpopularniejszy dawniej framework nadal jest niezwykle przydatny w codziennej pracy!

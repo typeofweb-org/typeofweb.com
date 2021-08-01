@@ -167,6 +167,17 @@ html,
     }
   }
 
+  :is(.prose, .prose.prose-xl) {
+    & figure {
+      & img {
+        @apply mb-0;
+      }
+      & figcaption p {
+        @apply indent-0 text-center text-gray-700 text-sm;
+      }
+    }
+  }
+
   .prose p,
   li,
   blockquote {

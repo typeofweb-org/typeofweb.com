@@ -1,6 +1,6 @@
 ---
 id: 1429
-index: 94
+index: 93
 title: Dyrektywy warunkowe w Vue.js
 date: 2018-07-04T18:58:00.000Z
 isMarkdown: true
@@ -25,6 +25,9 @@ series:
 seo:
   focusKeywords:
     - dyrektywy warunkowe
+  metadesc: >-
+    Darmowy kurs Vue.js: dyrektywy warunkowe `v-if`, `v-else`, `v-else-if` oraz
+    `v-show`. Dynamiczne ukrywanie i pokazywanie elementów.
 ---
 
 Pisząc aplikacje w Vue.js często spotkasz się z sytuacją, w której wyświetlenie lub nie danego elementu będzie zależało od wartości zmiennej. Właśnie do tego służą dyrektywy warunkowe `v-if`, `v-else`, `v-else-if`, (oraz w pewnym sensie `v-show`), które odpowiadają **instrukcjom warunkowym** znanym z JavaScript. To właśnie te dyrektywy Ci dziś zademonstruję.

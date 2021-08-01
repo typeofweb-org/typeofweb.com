@@ -1,6 +1,6 @@
 ---
 id: 756
-index: 50
+index: 49
 title: Interakcja z komponentami React.js
 date: 2018-01-08T02:12:39.000Z
 isMarkdown: false
@@ -23,7 +23,13 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Tworzenie aplikacji nie miałoby sensu, gdyby użytkownik nie mógł wchodzić z
+    nią w interakcje :) W tej części kursu React.js nauczysz się obsługiwać
+    zdarzenia wywoływane przez użytkowników: Kliknięcia, ruchy kursorem, zmiany
+    w polu tekstowym i tym podobne… Zobaczysz, że obsługa zdarzeń w React.js
+    jest bardzo prosta.
 ---
 
 Tworzenie aplikacji nie miałoby sensu, gdyby użytkownik nie mógł wchodzić z nią w interakcje :) Dzisiaj nauczysz się obsługiwać zdarzenia wywoływane przez użytkowników: Kliknięcia, najechania kursorem, zmiany tekstu w polu tekstowym… oczywiście w React.js.

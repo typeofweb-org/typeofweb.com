@@ -1,6 +1,6 @@
 ---
 id: 1555
-index: 85
+index: 84
 title: 24 blogi, które musi śledzić każdy JavaScript developer
 date: 2018-05-22T09:49:31.000Z
 isMarkdown: true
@@ -20,7 +20,12 @@ categories:
     name: Front-end
   - slug: opinie
     name: Opinie
-seo: {}
+seo:
+  metadesc: >-
+    Wciąż pytacie jakie blogi polecam śledzić. A ja nigdy nie pamiętam :) No,
+    ale teraz jest już cała lista! Moja lista polecanych linków dla front-end
+    developerów! To drugi wpis z serii. Blogi Na drugi ogień idą blogi, po
+    grupach na Facebooku.
 ---
 
 Wciąż pytacie jakie blogi polecam śledzić. A ja nigdy nie pamiętam! No, ale teraz jest już cała lista! Moja **lista polecanych linków dla front-end developerów**! To drugi wpis z serii.

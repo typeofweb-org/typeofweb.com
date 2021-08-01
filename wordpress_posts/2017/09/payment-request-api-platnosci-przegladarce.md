@@ -23,6 +23,9 @@ categories:
 seo:
   focusKeywords:
     - Payment Request API
+  metadesc: >-
+    Płatności online są problematyczne, w szczególności na smartfonach. Problemy
+    te rozwiązuje Payment Request API, czyli obsługa płatności w przeglądarkach.
 ---
 
 Płatności online niejednokrotnie okazują się być problematyczne. W szczególności na telefonach – przypomnij sobie kiedy ostatni raz chciałaś/eś za coś zapłacić, ale zrezygnowałaś/eś, bo wpisywanie wszystkich danych i numeru karty na telefonie Cię zmęczyło? Właśnie. Ja miewam tak często. Na szczęście <strong>koniec tej męki wydaje się być bliski: Wchodzi Payment Request API!</strong>

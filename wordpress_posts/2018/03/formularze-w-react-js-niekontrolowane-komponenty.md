@@ -1,6 +1,6 @@
 ---
 id: 1196
-index: 72
+index: 71
 title: Formularze w React.js — niekontrolowane komponenty
 date: 2018-03-20T12:13:30.000Z
 isMarkdown: true
@@ -22,7 +22,12 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Formularze niekontrolowane (Uncontrolled Components) w React.js. Po co
+    istnieją? Jakie są ich zastosowania? Jest to druga część wpisu na temat
+    formularzy w React.js — tym razem formularze tak zwane „niekontrolowane”.
+    Dowiesz się do czego służą i jak ich używać!
 ---
 
 Część druga formularzy w React.js — tym razem formularze tak zwane „niekontrolowane” — czyli _Uncontrolled Components_. Czym są i jak się ich używa? No i po co Ci w ogóle formularze niekontrolowane w React.js?

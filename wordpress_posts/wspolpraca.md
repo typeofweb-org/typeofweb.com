@@ -15,7 +15,11 @@ thumbnail:
   width: 960
   height: 540
 categories: []
-seo: {}
+seo:
+  metadesc: >-
+    Nazywam się Michał Miszczyszyn i jestem Full-Stack JavaScript Developerem:
+    buduję aplikacje internetowe. Moją ambicją jest pomóc innym w nauce
+    programowania.
 ---
 
 ## O mnie

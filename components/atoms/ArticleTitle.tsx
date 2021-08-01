@@ -1,19 +1,15 @@
 import Link from 'next/link';
+import { memo } from 'react';
 
 import { SectionTitle } from './SectionTitle';
 
-export const ArticleTitle = ({
-  title,
-  index,
-  href,
-  level,
-}: {
+export const ArticleTitle = memo<{
   readonly title: string;
   readonly id: number;
   readonly index: number;
   readonly href: string;
   readonly level: 1 | 2;
-}) => {
+}>(({ title, index, href, level }) => {
   return (
     <Link href={href}>
       <a className="block">
@@ -30,4 +26,5 @@ export const ArticleTitle = ({
       </a>
     </Link>
   );
-};
+});
+ArticleTitle.displayName = 'ArticleTitle';

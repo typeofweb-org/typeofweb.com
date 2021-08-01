@@ -1,6 +1,6 @@
 ---
 id: 1125
-index: 69
+index: 68
 title: Formularze w React.js — kontrolowane komponenty
 date: 2018-03-06T09:14:25.000Z
 isMarkdown: true
@@ -22,7 +22,12 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Dzisiaj zajmiesz się imlementacją formularzy w React.js. Już wcześniej
+    dokonywałaś/eś interakcji z polami formularza — ale raczej w prosty sposób.
+    Dzisiaj o formularzach kontrolowanych w React.js i o kontrolowanych
+    komponentach w React.js (Controlled Components)
 ---
 
 Dzisiaj zajmiesz się imlementacją formularzy w React.js. Już wcześniej dokonywałaś/eś interakcji z polami formularza — ale raczej w prosty sposób. Dzisiaj o formularzach kontrolowanych w React.js

@@ -1,6 +1,6 @@
 ---
 id: 751
-index: 49
+index: 48
 title: Klasy jako komponenty React.js
 date: 2017-12-19T12:26:57.000Z
 isMarkdown: false
@@ -22,7 +22,10 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Kurs React.js. Po co klasy w React? Przeważająca liczba moich komponentów to
+    funkcje, jednak mają one spore ograniczenia. Jakie? To wszystkow tym wpisie!
 ---
 
 Do tej pory używaliśmy prostych funkcji i z nich tworzyliśmy komponenty React. Mimo, że przeważająca część komponentów, które tworzę są właśnie takimi prostymi funkcjami, to jednak nie wszystkie. Funkcje są bardzo przydatne, jednak poniekąd ograniczone. Jak więc inaczej można tworzyć komponenty w React.js? <strong>Używając klas</strong>!

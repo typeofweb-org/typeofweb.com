@@ -166,6 +166,8 @@ interface PostFrontmatter {
   readonly seo?: {
     readonly focusKeywords?: readonly string[];
     readonly focusKeywordSynonyms?: readonly string[];
+    readonly metadesc?: string;
+    readonly title?: string;
   };
 }
 

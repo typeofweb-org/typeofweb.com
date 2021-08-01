@@ -1,6 +1,6 @@
 ---
 id: 1590
-index: 89
+index: 88
 title: "W 2018 migruję\_z GitHuba"
 date: 2018-06-11T08:39:26.000Z
 isMarkdown: true
@@ -20,7 +20,8 @@ categories:
     name: Inicjatywy
   - slug: opinie
     name: Opinie
-seo: {}
+seo:
+  metadesc: "Microsoft kupił GitHuba za przewrotną\_kwotę 7,5 miliarda dolarów. Co to oznacza dla użytkowników? I najważniejsze: Co to oznacza dla idei Open Source?"
 ---
 
 Microsoft kupił GitHuba za przewrotną kwotę 7,5 miliarda dolarów. Co to oznacza dla użytkowników? I najważniejsze: Co to oznacza dla idei Open Source?

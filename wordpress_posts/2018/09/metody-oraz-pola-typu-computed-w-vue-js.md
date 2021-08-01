@@ -1,6 +1,6 @@
 ---
 id: 1420
-index: 97
+index: 96
 title: Metody oraz pola typu computed w Vue.js
 date: 2018-09-28T16:39:45.000Z
 isMarkdown: true
@@ -25,6 +25,10 @@ series:
 seo:
   focusKeywords:
     - pola computed
+  metadesc: >-
+    Metody oraz pola typu computed pozwalają zgrabnie enkapsulować logikę
+    wyliczania wartości na podstawie pól danych komponentu i prowadzą do
+    lepszego kodu.
 ---
 
 Czasami musisz zrobić coś więcej, niż tylko **wyświetlić pola komponentu** w szablonie. Np. mając pola `firstName` i `lastName` chcesz wyświetlić pełne imię i nazwisko osoby. Oczywiście możesz zrobić to za pomocą wyrażenia w szablonie `{{ firstName + ' ' + lastName }}`. Jest to jednak mało efektywne, i to z kilku powodów. Co, jeśli tę samą wartość musisz wyświetlić w innym miejscu? Co, jeśli potrzebujesz jej również w jednej z metod komponentu? Możesz rozwiązać ten problem używając metod, albo pól wyliczonych (ang. computed).

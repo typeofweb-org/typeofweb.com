@@ -1,6 +1,6 @@
 ---
 id: 1143
-index: 70
+index: 69
 title: >-
   Jak kurs programowania ani bootcamp nie zrobi z Ciebie programisty w dwa
   miesiące
@@ -29,6 +29,11 @@ seo:
     - >-
       kursu programowania, kursów programowania, kursie programowania, kursom
       programowania
+  title: Jak kurs programowania nie zrobi z Ciebie programisty %%sep%% %%sitename%%
+  metadesc: >-
+    Bootcampy i kursy programowania, są obecnie bardzo popularne. Wiele osób
+    chce się przebranżowić na programistę korzystając z takich kursów
+    programowania.
 ---
 
 Jestem <strong>absolwentką</strong> dwóch <strong>kursów programowania</strong>: Front-end z biblioteką React oraz podstaw Javy.

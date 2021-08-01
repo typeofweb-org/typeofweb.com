@@ -1,6 +1,6 @@
 ---
 id: 1385
-index: 78
+index: 77
 title: TDD w React.js z pomocą react-testing-library
 date: 2018-04-13T09:28:29.000Z
 isMarkdown: true

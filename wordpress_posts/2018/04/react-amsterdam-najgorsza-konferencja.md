@@ -1,6 +1,6 @@
 ---
 id: 1425
-index: 79
+index: 78
 title: Czy React.Amsterdam to najgorsza konferencja na jakiej byłem?
 date: 2018-04-20T13:16:18.000Z
 isMarkdown: true
@@ -20,6 +20,11 @@ categories:
 seo:
   focusKeywords:
     - React.Amsterdam
+  metadesc: >-
+    Zachęcony ciekawym miejscem, dobrą agendą i tematyką, kupiłem bilet na
+    React.Amsterdam. I poleciałem. Jakie są moje wrażenia? Jaka jest moja
+    opinia? Czy była to najgorsza konferencja na jakiej byłem? Moja opinia o
+    konferencji React.Amsterdam w tym wpisie.
 ---
 
 Zachęcony ciekawym miejscem, dobrą agendą i tematyką, kupiłem bilet na React.Amsterdam. I poleciałem. Jakie są moje wrażenia? Jaka jest moja opinia? **Czy była to najgorsza konferencja na jakiej byłem?**

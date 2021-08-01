@@ -1,6 +1,6 @@
 ---
 id: 1130
-index: 77
+index: 76
 title: 'Serwer HTTP lokalnie: Sposób na problemy z CORS i file:///'
 date: 2018-04-09T14:24:38.000Z
 isMarkdown: true
@@ -25,6 +25,9 @@ seo:
     - serwer HTTP
   focusKeywordSynonyms:
     - serwera HTTP, serwerem HTTP
+  metadesc: >-
+    Stawiamy lokalny serwer HTTP. Jak pozbyć się błędów CORS, file:///?
+    Wystarczy serwer http. Postaw własny lokalny serwer w kilka sekund!
 ---
 
 Po co Ci lokalny serwer HTTP? Bardzo wiele osób skarży się mi na dziwne problemy z aplikacjami. Błędy są przeróżne np. nawiązujące do magicznego „CORS”, a często mają wspólne źródło: Próba otwarcia pliku `.html` w przeglądarce przez `file://` i brak serwera HTTP.

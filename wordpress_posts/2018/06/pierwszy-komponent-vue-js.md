@@ -1,6 +1,6 @@
 ---
 id: 1331
-index: 90
+index: 89
 title: Pierwszy komponent Vue.js
 date: 2018-06-18T11:15:12.000Z
 isMarkdown: true
@@ -22,7 +22,10 @@ categories:
 series:
   slug: vue-js
   name: Vue.js
-seo: {}
+seo:
+  metadesc: >-
+    Vue.js jest reaktywnym frameworkiem JavaScript. Stwórz swój pierwszy
+    komponent w Vue z pomocą tego darmowego kursu Vue.js!
 ---
 
 Vue.js jest reaktywnym frameworkiem JavaScript. Znaczy to, że dowolna zmiana danych używanych do wyświetlania strony sprawia, że widok automatycznie jest aktualizowany tak, aby odzwierciedlić tę zmianę.

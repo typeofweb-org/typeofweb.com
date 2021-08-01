@@ -1,6 +1,6 @@
 ---
 id: 650
-index: 45
+index: 44
 title: Pierwszy komponent w React.js
 date: 2017-12-08T14:30:58.000Z
 isMarkdown: false

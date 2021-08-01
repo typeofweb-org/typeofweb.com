@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { LatestPostsWidget } from '../molecules/LatestPostsWidget';
 import { SocialWidget } from '../molecules/SocialWidget';
 
@@ -14,6 +16,7 @@ const widgetsPerPage = {
   page: null,
 };
 
-export const Sidebar = ({ pageKind }: { readonly pageKind: PageKind }) => {
+export const Sidebar = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
   return <aside className="hidden lg:sticky lg:top-16 lg:block lg:mx-4 lg:w-80">{widgetsPerPage[pageKind]}</aside>;
-};
+});
+Sidebar.displayName = 'Sidebar';

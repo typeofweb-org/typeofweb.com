@@ -1,6 +1,6 @@
 ---
 id: 2048
-index: 114
+index: 113
 title: Syndrom oszusta – impostor syndrome
 date: 2019-06-14T14:27:46.000Z
 isMarkdown: true
@@ -27,6 +27,9 @@ seo:
     - >-
       syndromem oszusta, syndromu oszusta, syndromu impostera, syndromem
       impostera, syndrom impostera
+  metadesc: >-
+    Impostor syndrome, czyli inaczej syndrom oszusta. Co to jest syndrom
+    oszusta? Jak go rozpoznać? Jak walczyć z impostor syndrome?
 ---
 
 Czasami zdarza mi się leżeć w nocy i zastanawiać się nad tym, jak niewiele potrafię. Jest cienka, ale bardzo ważna granica pomiędzy skromnością i dostrzeganiem swoich braków, a poczuciem, że wszystko, co wiem jest bezwartościowe. Czasami sam nie wiem, po której stronie stoję. Przypomina Ci to coś? Czy to już _impostor syndrome_ — syndrom oszusta?
@@ -74,12 +77,12 @@ Ponadto, jak piszą Jaruwan Sakulku i James Alexander, osoby z impostorem obawi
 Czy to wszystko brzmi znajomo? Czujesz to u siebie? Widzisz to u innych? Spróbuj ustosunkować się do twierdzeń poniżej:
 
 1.  Czuję, że nie zasługuję na sukces, który osiągnęłam/osiągnąłem.
-2.      Nawet, gdy jestem chwalona/y przez innych, nie czuję, abym osiągnęła/osiągnął aż tak wiele, jak oni sądzą.
-3.      Może i jestem nagradzany za swoją pracę, ale nie czuję, abym na to zapracował/a.
-4.      Obawiam się, że ludzie wkrótce dostrzegą, że wcale nie jestem aż tak bystra/bystry, jak udawałam/em, że jestem.
-5.      Większość moich osiągnęć to szczęśliwy traf.
-6.      Trudno mi zaakceptować komplementy.
-7.      Bagatelizuję swoje osiągnięcia, bo nie sądzę, że są aż tak niesamowite, jak ludzie uważają.
+2.       Nawet, gdy jestem chwalona/y przez innych, nie czuję, abym osiągnęła/osiągnął aż tak wiele, jak oni sądzą.
+3.       Może i jestem nagradzany za swoją pracę, ale nie czuję, abym na to zapracował/a.
+4.       Obawiam się, że ludzie wkrótce dostrzegą, że wcale nie jestem aż tak bystra/bystry, jak udawałam/em, że jestem.
+5.       Większość moich osiągnęć to szczęśliwy traf.
+6.       Trudno mi zaakceptować komplementy.
+7.       Bagatelizuję swoje osiągnięcia, bo nie sądzę, że są aż tak niesamowite, jak ludzie uważają.
 
 Ponadto, z ust impostorów często padają takie charakterystyczne stwierdzenia, jak:
 

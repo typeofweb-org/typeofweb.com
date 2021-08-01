@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import FacebookIcon from '../../images/social/facebook.svg';
 import GithubIcon from '../../images/social/github.svg';
 import InstagramIcon from '../../images/social/instagram.svg';
@@ -16,7 +18,7 @@ const social = [
   { icon: LinkedinIcon, label: 'LinkedIn' },
 ];
 
-export const SocialWidget = () => {
+export const SocialWidget = memo(() => {
   return (
     <Widget title="Śledź mnie na:">
       <ul className="flex flex-row flex-wrap justify-between">
@@ -38,4 +40,5 @@ export const SocialWidget = () => {
       </ul>
     </Widget>
   );
-};
+});
+SocialWidget.displayName = 'SocialWidget';

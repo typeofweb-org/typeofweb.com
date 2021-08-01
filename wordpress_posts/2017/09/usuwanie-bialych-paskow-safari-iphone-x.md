@@ -21,6 +21,9 @@ categories:
 seo:
   focusKeywords:
     - iPhone X
+  metadesc: >-
+    Apple przedstawiło swojego nowego smartfona iPhone X. Jednak w Safari na iOS
+    na stronach www widoczne są białe paski z prawej i lewej. Jak je usunąć?
 ---
 
 Apple przedstawiło niedawno swojego nowego flagowego smartfona – iPhone X. To co odróżnia go od poprzedników to głównie wyświetlacz rozciągający się od krawędzi do krawędzi. Oprócz pięknego wyglądu, niestety rodzi to pewne nowe problemy – między innymi z tym, że Safari na iOS domyślnie wyświetla białe paski po prawej i lewej na stronach www gdy obrócimy smartfon. Czy możemy zrobić coś, aby temu zaradzić? <strong>Okazuje się, że tak!</strong>

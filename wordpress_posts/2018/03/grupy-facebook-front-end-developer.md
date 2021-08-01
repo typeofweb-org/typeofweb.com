@@ -1,6 +1,6 @@
 ---
 id: 1245
-index: 75
+index: 74
 title: "20 grup na Facebooku, które powinien śledzić\_każdy front-end developer"
 date: 2018-03-29T14:41:17.000Z
 isMarkdown: true
@@ -20,7 +20,8 @@ categories:
     name: Front-end
   - slug: opinie
     name: Opinie
-seo: {}
+seo:
+  metadesc: "Często pytacie mnie jakie strony, blogi, newslettery, RSS-y i Twittery śledzę. Oto lista materiałów, które powinien przejrzeć każdy front-end developer! Zaczynamy od grup na Facebooku dla front-end developerów, a także grup z pracą dla programistów z widełkami. Warto przejrzeć tę listę\_linków dla frontendów!"
 ---
 
 Często pytacie mnie jakie strony, blogi, newslettery, RSS-y i Twittery śledzę. Zazwyczaj nie potrafiłem na to pytanie szybko odpowiedzieć, bo nie miałem nigdzie pod ręką zebranej listy. Dotychczas. Ale oto jest. Powstaje. Moja **lista polecanych linków dla front-end developerów**! To pierwszy wpis z serii.

@@ -1,6 +1,6 @@
 ---
 id: 1505
-index: 96
+index: 95
 title: Atrybuty class i style w Vue.js
 date: 2018-07-25T17:36:46.000Z
 isMarkdown: true
@@ -26,6 +26,9 @@ series:
 seo:
   focusKeywords:
     - class i style vue
+  metadesc: >-
+    Vue traktuje inaczej dwa atrybuty html - `class` i `style` - sprawiając, że
+    korzystanie z tego frameworka jest przyjemniejsze i łatwiejsze.
 ---
 
 Czym dla mnie jest Vue.js? To przede wszystkim genialne "developer experience", czyli taki UX, ale w odniesieniu do wygody korzystania z narzędzia przydatnego w pracy programisty. Świetnym tego przykładem jest fakt, że Vue traktuje inaczej dwa atrybuty html - `class` i `style` - sprawiając, że korzystanie z tego frameworka jest przyjemniejsze. Tego, co dokładnie się tam dzieje dowiesz się z tego tekstu.

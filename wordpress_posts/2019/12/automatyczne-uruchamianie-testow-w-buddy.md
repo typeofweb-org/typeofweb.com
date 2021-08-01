@@ -1,6 +1,6 @@
 ---
 id: 2305
-index: 119
+index: 118
 title: Automatyczne uruchamianie testów w Buddy
 date: 2019-12-03T13:29:17.000Z
 isMarkdown: true

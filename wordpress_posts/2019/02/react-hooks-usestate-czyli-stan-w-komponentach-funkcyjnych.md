@@ -1,6 +1,6 @@
 ---
 id: 1847
-index: 104
+index: 103
 title: 'React Hooks: useState, czyli stan w komponentach funkcyjnych'
 date: 2019-02-11T16:55:10.000Z
 isMarkdown: true

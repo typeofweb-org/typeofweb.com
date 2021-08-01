@@ -1,6 +1,6 @@
 ---
 id: 1022
-index: 61
+index: 60
 title: React.js na GitHub Pages dzięki create-react-app
 date: 2018-01-31T16:14:36.000Z
 isMarkdown: false
@@ -22,7 +22,8 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: "create-react-app pozwala na łatwe tworzenie aplikacji React.js. Ale posiada też nieco ukrytą funkcję: Prosty deploy na GitHub Pages. GitHub Pages jest idealnym miejscem dla prostych aplikacji, dem i Twojego portfolio! W tym wpisie pokazuję\_jak łatwo zrobić deploy aplikacji React.js (create-react-app) na GitHub Pages."
 ---
 
 Bardzo często początkujący pytają mnie gdzie mogą łatwo wrzucić nieco bardziej rozbudowany projekt, żeby go pokazać. Nie mają swojego hostingu, na Codepenie nie będzie to wygodne jeśli aplikacja podzielona jest na wiele plików. Co robić? Zazwyczaj odpowiadam: <strong>GitHub Pages.</strong>

@@ -1,6 +1,6 @@
 ---
 id: 1873
-index: 107
+index: 106
 title: 'React Hooks: useEffect — efekty uboczne w komponencie'
 date: 2019-03-05T11:28:36.000Z
 isMarkdown: true
@@ -22,7 +22,8 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: "useEffect Hook w React: W React 16.8 pojawiły się\_hooki, które pozwalają m.in. na efekty uboczne w funkcjach. Dokładnie temu służy React hook useEffect!"
 ---
 
 W tym wpisie opowiadam o hooku useEffect w React. Na pewno często musisz wykonywać żądania HTTP wewnątrz komponentów, prawda? Albo nasłuchiwać jakichś subskrypcji? Jak często zdarzyło Ci się wykonywać **dokładnie ten sam kod** w `componentDidMount`, a potem też w `componentDidUpdate`? Mi cały czas się to przytrafia! A do tego jeszcze pamiętać o **posprzątaniu po sobie** w `componentWillUnmount`… Wciąż o tym zapominam. Ale już niedługo: Powitaj `useEffect`!

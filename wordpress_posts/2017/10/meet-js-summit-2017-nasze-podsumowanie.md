@@ -22,6 +22,10 @@ categories:
 seo:
   focusKeywords:
     - meet.js Summit
+  metadesc: >-
+    meet.js Summit 2017 to nawiększy meet.js i największa konferencja JavaScript
+    w Polsce! Relacja: Jak przebiegła konferencja i jak wyglądała jej
+    organizacja?
 ---
 
 meet.js Summit 2017 dobiegł końca! Minął ponad tydzień i opadły już emocje po zakończeniu <strong>największej tego typu konferencji w Polsce</strong> i przede wszystkim największego meet.js Summit w historii meet.js! Jako organizatorzy, chcielibyśmy tutaj przedstawić naszą relację: Jak to wszystko wyglądało z drugiej strony, czy organizacja konferencji to czysta przyjemność, co uważamy za udane, a co chcielibyśmy jeszcze dopracować.

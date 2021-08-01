@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { Widget } from '../atoms/Widget';
 
@@ -9,7 +11,7 @@ const posts = [
   'O obrotach ciał niebieskich',
 ];
 
-export const LatestPostsWidget = () => {
+export const LatestPostsWidget = memo(() => {
   return (
     <Widget title="Najpopularniejsze wpisy:">
       <ol className="counter-reset pl-6">
@@ -30,4 +32,5 @@ export const LatestPostsWidget = () => {
       </ol>
     </Widget>
   );
-};
+});
+LatestPostsWidget.displayName = 'LatestPostsWidget';

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, memo } from 'react';
 
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 
@@ -9,13 +9,10 @@ export interface Author {
   readonly slug: string;
 }
 
-export const ArticleMeta = ({
-  authors,
-  mainCategory,
-}: {
+export const ArticleMeta = memo<{
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;
-}) => {
+}>(({ authors, mainCategory }) => {
   return (
     <div className="mt-2">
       <div className="flex items-center justify-center">
@@ -62,4 +59,5 @@ export const ArticleMeta = ({
       </div>
     </div>
   );
-};
+});
+ArticleMeta.displayName = 'ArticleMeta';

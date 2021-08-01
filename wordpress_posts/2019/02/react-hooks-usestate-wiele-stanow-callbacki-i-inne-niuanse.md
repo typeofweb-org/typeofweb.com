@@ -1,6 +1,6 @@
 ---
 id: 1863
-index: 105
+index: 104
 title: 'React Hooks: useState — wiele stanów, callbacki i inne niuanse'
 date: 2019-02-15T12:03:18.000Z
 isMarkdown: true
@@ -22,7 +22,11 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    React.useState. Dalsza część o React Hooks. Wiele stanów w komponencie
+    funkcyjnym? Funkcja zmieniająca stan? Tak, to wszystko w Hooku useState w
+    React!
 ---
 
 W poprzednim wpisie omówiłem wstępnie React Hook useState. Pod postem na blogu oraz na Facebooku pojawiło się wiele komentarzy z pytaniami. Chciałbym odpowiedzieć na nie i wyjaśnić kilka niuansów tutaj. Jak to jest z rozbudowanym stanem? Czy można wywoływać `useState` w jednym komponencie wiele razy? I jak budować stan w oparciu o istniejący? To wszystko w tym wpisie.

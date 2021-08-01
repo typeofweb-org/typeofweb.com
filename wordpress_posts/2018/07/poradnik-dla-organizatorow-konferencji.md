@@ -1,6 +1,6 @@
 ---
 id: 1622
-index: 93
+index: 92
 title: Poradnik dla organizatorów konferencji
 date: 2018-07-03T09:49:29.000Z
 isMarkdown: true
@@ -20,7 +20,11 @@ categories:
     name: Inicjatywy
   - slug: opinie
     name: Opinie
-seo: {}
+seo:
+  metadesc: >-
+    Oto darmowy poradnik dla organizatorów konferencji! Chciałabyś zorganizować
+    konferencję? Martwisz się, czy o wszystkim pomyślałaś? To poradnik dla
+    Ciebie!
 ---
 
 Chciałabyś/chciałbyś zorganizować konferencję? Martwisz się, czy o wszystkim pomyślałaś/pomyślałeś? Czy wszystko będzie idealnie? Nie jesteś sam(a)! Po 5 latach organizowania spotkań meet.js Gdańsk, na które za każdym razem przychodzi ponad 150 osób, po 2 edycjach meet.js Summit Gdańsk, na których pojawiło się łącznie blisko 1000 uczestników i po udziale w nie pamiętam jak wielu konferencjach na całym świecie — chcemy podzielić się naszymi doświadczeniami. **Oto poradnik dla organizatorów konferencji.**

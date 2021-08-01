@@ -1,6 +1,6 @@
 ---
 id: 1040
-index: 63
+index: 62
 title: Testowanie React.js w Enzyme — props, state i interakcje
 date: 2018-02-13T13:46:21.000Z
 isMarkdown: false
@@ -22,7 +22,13 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    W tym wpisie pokazuję jak wykorzystać bibliotekę Enzyme do pisania
+    zaawansowanych testów komponentów React.js. Poznasz takie funkcje jak props,
+    setProps, state i setState, które pozwalają na modyfikowanie propsów i stanu
+    komponentu. Przetestujesz też obsługę zdarzeń dzięki metodzie
+    Enzyme.simulate.
 ---
 
 Pokazałem już jak pisać proste testy do aplikacji React.js z użyciem Enzyme. Sprawdzanie czy coś się renderuje, czy zawiera tekst, czy dobrze pokazuje elementy… W tym wpisie idę o krok dalej. Pokazuję jak w Enzyme testować interakcje z komponentami, odczytywać i zmieniać propsy a także state.

@@ -1,6 +1,6 @@
 ---
 id: 1104
-index: 68
+index: 67
 title: X-Team — opis, rekrutacja, moja opinia
 date: 2018-02-28T11:41:09.000Z
 isMarkdown: true
@@ -22,6 +22,11 @@ categories:
 seo:
   focusKeywords:
     - X-Team
+  metadesc: >-
+    Od momentu gdy zdecydowałem się na 100% pracę zdalną, już kilka razy
+    zmieniałem już „pracę” — klientów. Od pewnego czasu współpracuję z X-Team.
+    Jak mi jest z X-Team? Dawno obiecywałem sobie, że opiszę moje doświadczenia
+    z tą firmą i ten dzień nadszedł właśnie dzisiaj. Mój opis X-Team :)
 ---
 
 Od momentu gdy zdecydowałem się na 100% pracę zdalną, kilka razy zmieniałem już „pracę” — klientów. Od pewnego czasu współpracuję z [X-Team](https://x-team.com/join/?utm_referral=Michal-Miszczyszyn). Jak mi jest z X-Team? Dawno obiecywałem sobie, że opiszę moje doświadczenia z tą firmą i ten dzień nadszedł właśnie dzisiaj. Jeśli szukasz tylko krótkiego podsumowania to bardzo proszę: **Jest super.**

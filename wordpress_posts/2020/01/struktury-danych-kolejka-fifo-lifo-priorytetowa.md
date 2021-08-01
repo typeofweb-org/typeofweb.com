@@ -1,6 +1,6 @@
 ---
 id: 2122
-index: 123
+index: 122
 title: Kolejka FIFO, LIFO i priorytetowa – struktury danych
 date: 2020-01-31T11:49:10.000Z
 isMarkdown: true

@@ -27,6 +27,9 @@ seo:
   focusKeywordSynonyms:
     - czytelność kodu, czytelnego kodu
     - czystego kodu
+  metadesc: >-
+    Dlaczego piszemy nieczytelnie? Z czego wynika problem? Jak sprawić, aby
+    pisany kod był czytelny i jasny? Gdzie tkwi sekret i czysty kod?
 ---
 
 Pisanie czytelnego kodu sprawia wielu programistom ogromne kłopoty. Ta uwaga bynajmniej nie dotyczy wyłącznie osób początkujących, ale niestety także tych z latami doświadczenia. Z czego wynika problem? Jak sprawić, aby pisany kod był bardziej czytelny i przystępny? Co to jest czysty kod?

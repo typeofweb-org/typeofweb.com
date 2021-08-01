@@ -1,23 +1,38 @@
 import { MDXRemote } from 'next-mdx-remote';
 import Link from 'next/link';
+import { memo } from 'react';
 
+import { origin } from './Seo';
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
 
 type MDXRemoteProps = Parameters<typeof MDXRemote>[0];
 
-export const MDXComponent = (props: Omit<MDXRemoteProps, 'components'>) => {
+export const MDXComponent = memo<Omit<MDXRemoteProps, 'components'>>((props) => {
   return <MDXRemote {...props} components={components} />;
-};
+});
+MDXComponent.displayName = 'MDXComponent';
 
 const warned: Partial<Record<keyof typeof components, boolean>> = {};
 
+const isLocalUrl = (href: string) => {
+  try {
+    return new URL(href, `https://${origin}`).hostname === origin;
+  } catch {
+    return false;
+  }
+};
+
 const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { readonly href: string }) => {
-  return (
+  return isLocalUrl(href) ? (
     <Link href={href} passHref={true}>
       <LinkUnderlineEffect>
         <a {...props} />
       </LinkUnderlineEffect>
     </Link>
+  ) : (
+    <LinkUnderlineEffect>
+      <a href={href} {...props} />
+    </LinkUnderlineEffect>
   );
 };
 

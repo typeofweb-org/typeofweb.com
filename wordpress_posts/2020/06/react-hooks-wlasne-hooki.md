@@ -1,6 +1,6 @@
 ---
 id: 2510
-index: 131
+index: 130
 title: 'React Hooks: Piszemy własne hooki!'
 date: 2020-06-10T11:07:22.000Z
 isMarkdown: true
@@ -23,7 +23,10 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Tworzenie własnych hooków w React jest niezwykle proste. Pokazuję, jak
+    działają useDocumentTitle, usePrevious oraz useApi!
 ---
 
 Niewątpliwą zaletą React Hooks jest to, jak łatwo możemy wydzielać fragmenty logiki do własnych hooków. W tym artykule pokazuję Ci, jak napisać swoje hooki, jakie obowiązują zasady i jak sprawić, aby Twój kod był lepszy!

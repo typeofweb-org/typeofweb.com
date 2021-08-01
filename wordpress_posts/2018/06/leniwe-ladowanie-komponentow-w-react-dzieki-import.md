@@ -1,6 +1,6 @@
 ---
 id: 1463
-index: 87
+index: 86
 title: Leniwe ładowanie komponentów w React dzięki import
 date: 2018-06-04T11:05:42.000Z
 isMarkdown: true
@@ -22,7 +22,13 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Czy w React da się ładować komponenty leniwie? A więc masz już sporą
+    aplikację. Chcesz ją jakoś zoptymalizować. Do głowy przychodzi Ci,
+    oczywiście, podział jej na kilka części, które będą ładowane na żądanie,
+    dopiero gdy będą potrzebne — tzw. lazy load. Z pomocą przychodzi operator
+    import(…) — po prostu!
 ---
 
 Czy w React da się ładować komponenty leniwie? A więc masz już sporą aplikację. Chcesz ją jakoś zoptymalizować. Do głowy przychodzi Ci, oczywiście, podział jej na kilka części, które będą ładowane na żądanie, dopiero gdy będą potrzebne — tzw. _lazy load_. Z pomocą przychodzi operator `import(…)` — po prostu!

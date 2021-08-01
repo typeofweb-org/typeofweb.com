@@ -15,7 +15,10 @@ categories:
     name: Inicjatywy
   - slug: opinie
     name: Opinie
-seo: {}
+seo:
+  metadesc: >-
+    meet.js Summit 2017 Gdańsk to to największa konferencja JavaScript w Polsce.
+    450 osób, 11 prezentacji, 10 stanowisk na targach pracy przez 9,5 godziny.
 ---
 
 Już za nieco ponad 12 godzin rozpoczyna się meet.js Summit 2017. Jest to <strong>największa konferencja JavaScript w Polsce</strong> i oczywiście największe spotkanie meet.js w historii. W tym krótkim wpisie chciałbym przedstawić kilka liczb i wniosków, a także opowiedzieć jak meet.js wygląda „od kuchni”.

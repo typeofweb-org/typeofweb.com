@@ -20,6 +20,10 @@ categories:
 seo:
   focusKeywords:
     - Toptal
+  metadesc: >-
+    Wiele osób kojarzy mnie z pracą zdalną przez firmę Toptal. Jak wygląda
+    rekrutacja do Toptala? Opisuję swoje doświadczenia, testy z algorytmów i
+    rozmowy.
 ---
 
 Na pewno wiele osób kojarzy mnie z firmą Toptal – w szczególności ci, którzy brali udział w lokalnych meetupach w Gdańsku, na których opowiadałem o pracy zdalnej na przykładzie Toptala. W tym wpisie opisuję rekrutację do Toptala, mimo że od kilku miesięcy nie współpracuję już z Toptalem – zrezygnowałem z tego całkowicie na rzecz pełnego zaangażowania w projekty za pośrednictwem <a href="https://x-team.com">X-Team</a>. Dlaczego? Co wpłynęło na moją decyzję? Dokładnie tym pytaniom chciałbym poświęcić <strong>kolejny artykuł</strong>. A więc innym razem! W tym wpisie na razie skupiam się na opisaniu <strong>procesu rekrutacji do Toptala.</strong>

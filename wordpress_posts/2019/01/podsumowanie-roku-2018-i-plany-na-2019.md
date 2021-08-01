@@ -1,6 +1,6 @@
 ---
 id: 1786
-index: 102
+index: 101
 title: Podsumowanie roku 2018 i plany na 2019
 date: 2019-01-07T14:48:31.000Z
 isMarkdown: true

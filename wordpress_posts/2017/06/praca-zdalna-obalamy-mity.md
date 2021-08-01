@@ -21,6 +21,9 @@ categories:
 seo:
   focusKeywords:
     - praca zdalna
+  metadesc: >-
+    Jakie są moje dotychczasowe doświadczenia związane z pracą zdalną? Czy praca
+    zdalna jest rozwiązaniem wszystkich moich problemów?
 ---
 
 Od dłuższego czasu pracuję zdalnie. W poprzedniej firmie miałem biuro, do którego nie musiałem przychodzić, więc w praktyce sporo pracowałem z domu. Od ponad roku pracuję już wyłącznie zdalnie. Jakie są moje dotychczasowe doświadczenia związane z pracą zdalną? Czy praca zdalna jest rozwiązaniem wszystkich moich problemów?

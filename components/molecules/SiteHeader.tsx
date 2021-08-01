@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { memo } from 'react';
 
 import { useRunningHeader } from '../../hooks/runningHeader';
 import { useUIState } from '../../hooks/useUiState';
@@ -7,7 +8,7 @@ import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
 
-export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
+export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
   const { text, progress } = useRunningHeader();
   const { uiState } = useUIState();
 
@@ -56,4 +57,5 @@ export const SiteHeader = ({ pageKind }: { readonly pageKind: PageKind }) => {
       </header>
     </>
   );
-};
+});
+SiteHeader.displayName = 'SiteHeader';

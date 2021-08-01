@@ -1,6 +1,6 @@
 ---
 id: 2708
-index: 139
+index: 138
 title: 'YouTube: Moje pierwsze kroki'
 date: 2021-04-06T09:26:57.000Z
 isMarkdown: true

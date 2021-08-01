@@ -1,6 +1,6 @@
 ---
 id: 977
-index: 56
+index: 55
 title: Odmiana rzeczowników przy liczebnikach w języku polskim
 date: 2018-01-22T20:26:28.000Z
 isMarkdown: false
@@ -19,7 +19,12 @@ categories:
     name: JavaScript
   - slug: opinie
     name: Opinie
-seo: {}
+seo:
+  metadesc: >-
+    Jak odmieniać rzeczowniki przy liczebnikach w liczbie mnogiej? Język polski
+    tego nie ułatwia, ale są pewne sposoby. Stworzyłem paczkę npm polish-plurals
+    dzięki której odmiana stanie się prostsza niż kiedykolwiek :) Opis problemu
+    odmiany, przykłady użycia polish-plurals oraz link do GitHuba — w artykule.
 ---
 
 A to Ci nietypowe temat na tym blogu :D Ale spokojnie, <strong>będzie o programowaniu</strong> ;) Ostatnio szlifuję pierwszą publiczną wersję pewnej aplikacji, nad którą pracuję hobbystycznie. Gryzła mnie tylko jedna rzecz: Odmiana słów przy liczbach. Temat powszechnie znany i irytujący. <strong>Jak ładnie i prosto zapisać w kodzie „1 komentarz”, „2 komentarze” ale „5 komentarzy”?</strong> Czy da się to jakoś zautomatyzować?

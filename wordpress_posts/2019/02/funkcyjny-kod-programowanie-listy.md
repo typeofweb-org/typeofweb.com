@@ -1,6 +1,6 @@
 ---
 id: 1802
-index: 106
+index: 105
 title: >-
   Fragmenty funkcyjnego kodu, które zmieniły moje spojrzenie na programowanie —
   listy

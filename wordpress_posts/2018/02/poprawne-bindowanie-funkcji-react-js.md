@@ -1,6 +1,6 @@
 ---
 id: 1026
-index: 64
+index: 63
 title: Poprawne bindowanie funkcji w React.js
 date: 2018-02-16T15:34:32.000Z
 isMarkdown: false
@@ -22,7 +22,13 @@ categories:
 series:
   slug: react-js
   name: React.js
-seo: {}
+seo:
+  metadesc: >-
+    Wywołanie metody klasy w React.js z render kończy się źle, o ile nie użyjesz
+    bind. Wspominałem też o tym w kursie i sam używałem po prostu bind w czasie
+    renderowania. Ale czy to dobre rozwiązanie? Co z wydajnością i czytelnością
+    takiego kodu? W tym wpisie pokazuję problemy i ich rozwiązania: bind i arrow
+    functions.
 ---
 
 Jak pewnie zauważyłaś/eś — wywołanie metody klasy w React.js z poziomu funkcji <code>render</code> kończy się źle, o ile nie użyjesz <code>bind</code>. Wspominałem też o tym w kursie i sam używałem po prostu <code>bind</code> w czasie renderowania. Ale czy to dobre rozwiązanie? Co z wydajnością i czytelnością takiego kodu?

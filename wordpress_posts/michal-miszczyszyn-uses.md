@@ -1,6 +1,6 @@
 ---
 id: 2356
-index: 122
+index: 121
 title: Michał Miszczyszyn Uses
 date: 2020-01-14T17:41:12.000Z
 isMarkdown: true
@@ -11,7 +11,11 @@ authors:
 guid: https://typeofweb.com/?page_id=2356
 type: page
 categories: []
-seo: {}
+seo:
+  title: Moje biurko, sprzęt i oprogramowanie %%page%% %%sep%% %%sitename%%
+  metadesc: >-
+    Jaki komputer? Jaki edytor? Jakie ustawienia? Czy ciemny motyw? Jakie
+    biurko? Korzystam z okazji i odpowiadam na te oraz podobne pytania.
 ---
 
 **Scroll down for English version.**
