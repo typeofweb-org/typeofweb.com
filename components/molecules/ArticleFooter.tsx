@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React, { memo } from 'react';
 
 import Pattern from '../../images/typeofweb-pattern.svg';
-import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { SectionTitle } from '../atoms/SectionTitle';
 
 import { social } from './SocialWidget';
