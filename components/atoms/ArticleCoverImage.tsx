@@ -14,7 +14,7 @@ export const ArticleCoverImage = memo<{
   readonly wide: boolean;
 }>(({ cover, wide }) => {
   return (
-    <div className={`text-[length:0] overflow-hidden ${wide ? `lg:-mx-4 mb-8` : `rounded-t-xl`}`}>
+    <div className={`text-[length:0] overflow-hidden ${wide ? `lg:-mx-4 mb-8 rounded-xl` : `rounded-t-xl`}`}>
       <Image
         {...cover.img}
         itemProp="image"

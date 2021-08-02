@@ -3,6 +3,7 @@ import React, { forwardRef, memo } from 'react';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
+import { ArticleFooter } from '../molecules/ArticleFooter';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
@@ -43,7 +44,7 @@ export const SingleArticle = memo(
                   <p className="lead">{excerpt}</p>
                 </div>
               )}
-              <ArticleMeta rel={true} authors={authors} mainCategory={mainCategory} />
+              <ArticleMeta rel={true} authors={authors} mainCategory={mainCategory} size="small" />
             </div>
 
             {cover && <ArticleCoverImage cover={cover} wide={true} />}
@@ -58,6 +59,7 @@ export const SingleArticle = memo(
             <meta itemProp="name" content="Type of Web" />
           </span>
           <link itemProp="mainEntityOfPage" href={href} />
+          <ArticleFooter authors={authors} />
         </Card>
       );
     },

@@ -33,11 +33,28 @@ export const postToProps = async (
       authors: authors
         .filter((author): author is AuthorJson => !!author)
         .map((author) => {
+          if (onlyExcerpt) {
+            return {
+              avatarUrl: author.avatarUrl ?? null,
+              displayName: author.displayName ?? null,
+              slug: author.slug ?? null,
+              facebook: author.meta.facebook ?? null,
+            };
+          }
           return {
-            avatarUrl: author.avatarUrl,
-            displayName: author.displayName,
-            slug: author.slug,
-            facebook: author.meta.facebook,
+            avatarUrl: author.avatarUrl ?? null,
+            displayName: author.displayName ?? null,
+            slug: author.slug ?? null,
+            description: author.meta.description ?? null,
+            firstName: author.meta.first_name ?? null,
+            lastName: author.meta.last_name ?? null,
+            facebook: author.meta.facebook ?? null,
+            instagram: author.meta.instagram ?? null,
+            linkedin: author.meta.linkedin ?? null,
+            twitter: author.meta.twitter ?? null,
+            youtube: author.meta.youtube ?? null,
+            website: author.meta.website ?? null,
+            github: author.meta.github ?? null,
           };
         }),
       seo: post.data.seo,
