@@ -34,7 +34,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
           )}
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
             <ArticleTitle title={title} id={id} index={index} href={href} level={2} />
-            <ArticleMeta authors={authors} mainCategory={mainCategory} />
+            <ArticleMeta authors={authors} mainCategory={mainCategory} size="small" />
           </div>
         </header>
         <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
