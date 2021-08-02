@@ -27,7 +27,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
         <header className="bg-gray-200">
           {cover && (
             <Link href={href}>
-              <a tabIndex={-1}>
+              <a tabIndex={-1} aria-hidden="true">
                 <ArticleCoverImage cover={cover} wide={false} />
               </a>
             </Link>
