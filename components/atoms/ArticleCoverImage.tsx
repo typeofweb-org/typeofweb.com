@@ -20,7 +20,7 @@ export const ArticleCoverImage = memo<{
         itemProp="image"
         itemScope
         itemType="http://schema.org/ImageObject"
-        className="duration-[10s] motion-safe:hover:scale-110 transition-transform ease-in hover:ease-out"
+        className="duration-[10s] motion-safe:hover:scale-110 bg-gray-200 transition-transform ease-in hover:ease-out"
         alt=""
         sizes="(min-width: 768px) 768px, 100vw"
         layout="responsive"

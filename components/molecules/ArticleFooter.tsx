@@ -58,9 +58,7 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
                     ))}
                 </span>
               </span>
-              <p key={a.slug} className="mb-4 text-gray-900">
-                {a.description}
-              </p>
+              <p className="mb-4 text-gray-900">{a.description}</p>
             </div>
           );
         })}

@@ -75,6 +75,10 @@ html,
       text-indent: 3rem;
     }
 
+    & p :is(h1, h2, h3, h4) {
+      @apply indent-0;
+    }
+
     & a {
       @apply text-blue-500 no-underline font-bold tracking-tight;
     }
@@ -335,5 +339,19 @@ progress {
     display: inline-block;
     font-size: 100%;
     font-weight: 900;
+  }
+}
+
+.cp_embed_wrapper {
+  @apply my-8 pb-3 h-96 bg-gray-100 overflow-hidden resize-y;
+
+  & iframe {
+    @apply !h-full;
+  }
+}
+
+@media (max-width: 400px) {
+  iframe[src*='codepen.io'] {
+    width: 320px !important;
   }
 }

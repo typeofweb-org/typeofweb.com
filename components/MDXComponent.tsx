@@ -1,10 +1,13 @@
 import { MDXRemote } from 'next-mdx-remote';
+import Dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { memo } from 'react';
 
 import { origin, host } from '../constants';
 
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
+
+import type { CodepenWidgetProps } from './molecules/CodepenWidget';
 
 type MDXRemoteProps = Parameters<typeof MDXRemote>[0];
 
@@ -37,13 +40,9 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
   );
 };
 
-const NewsletterForm = () => {
-  if (!warned['NewsletterForm']) {
-    console.warn(`Not implemented: NewsletterForm`);
-    warned['NewsletterForm'] = true;
-  }
-  return null;
-};
+const NewsletterForm = Dynamic<{}>(() =>
+  import(/* webpackChunkName: "NewsletterForm" */ './molecules/NewsletterForm').then((m) => m.NewsletterForm),
+);
 
 const FacebookPageWidget = () => {
   if (!warned['FacebookPageWidget']) {
@@ -53,21 +52,10 @@ const FacebookPageWidget = () => {
   return null;
 };
 
-const CodepenWidget = (_props: {
-  readonly height?: `${number}`;
-  readonly themeId?: string;
-  readonly slugHash?: string;
-  readonly defaultTab?: string;
-  readonly user?: string;
-  readonly embedVersion?: string;
-  readonly penTitle?: string;
-}) => {
-  if (!warned['CodepenWidget']) {
-    console.warn(`Not implemented: CodepenWidget`);
-    warned['CodepenWidget'] = true;
-  }
-  return null;
-};
+const CodepenWidget = Dynamic<CodepenWidgetProps>(
+  () => import(/* webpackChunkName: "CodepenWidget" */ './molecules/CodepenWidget').then((m) => m.CodepenWidget),
+  { ssr: false },
+);
 
 const Gallery = (_props: {
   readonly columns?: '1' | '2' | '3';
