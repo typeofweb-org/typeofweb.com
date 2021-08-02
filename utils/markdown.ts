@@ -26,6 +26,14 @@ interface HtmlNode extends Node {
     [prop: string]: string[] | string | undefined;
   };
 }
+interface MdxNode extends Node {
+  type: 'mdxJsxTextElement';
+  name: string;
+  children?: (MdxNode | HtmlNode)[];
+  properties?: {
+    [prop: string]: string[] | string | undefined;
+  };
+}
 interface AnchorNode extends HtmlNode {
   tagName: 'a';
   properties?: {
@@ -35,6 +43,9 @@ interface AnchorNode extends HtmlNode {
 }
 interface PNode extends HtmlNode {
   tagName: 'p';
+}
+interface MdxPNode extends MdxNode {
+  name: 'p';
 }
 interface PreNode extends HtmlNode {
   tagName: 'pre';
@@ -71,6 +82,9 @@ function isAnchorNode(node: Node): node is AnchorNode {
 
 function isPNode(node: Node): node is PNode {
   return node && node.type === 'element' && (node as PNode).tagName === 'p';
+}
+function isMdxPNode(node: Node): node is MdxPNode {
+  return node && node.type === 'mdxJsxTextElement' && (node as MdxPNode).name === 'p';
 }
 function isPathNode(node: Node): node is PathNode {
   return node && node.type === 'element' && (node as PathNode).tagName === 'path';
@@ -185,6 +199,26 @@ function getOnlyFirstPara(): import('unified').Transformer {
   };
 }
 
+export function collapseParagraphs(): import('unified').Transformer {
+  return function transformer(tree) {
+    const run = (node: Node): HtmlNode | MdxNode | Node => {
+      if (isPNode(node)) {
+        if (node.children?.length === 1) {
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- ok because we know that node.children is defined
+          return node.children[0]!;
+        } else {
+          // what to do with multiple paragraphs?
+          return node;
+        }
+      } else if (isParentNode(node)) {
+        node.children = node.children.map(run);
+      }
+      return node;
+    };
+    return run(tree);
+  };
+}
+
 export function addDataToCodeBlocks(): import('unified').Transformer {
   return (tree) => {
     visit(tree, 'element', (node) => {
@@ -205,7 +239,16 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
   };
 }
 
-const toCamelCase = (str: string) => str.replace(/-([a-z])/g, (_, l: string) => l.toUpperCase());
+const commonRemarkPlugins = [RemarkGfm, RemarkFrontmatter, RemarkMath];
+const commonRehypePlugins = [
+  [RehypeKatex, { strict: false }],
+  wrapLinksInSpans,
+  RehypeSlug,
+  RehypeAutolinkHeadings,
+  RehypePrism,
+  addDataToCodeBlocks,
+  collapseParagraphs,
+];
 
 export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
   return serialize(
@@ -232,15 +275,8 @@ export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSer
     {
       scope: { data: frontmatter },
       mdxOptions: {
-        remarkPlugins: [RemarkGfm, RemarkMath as any],
-        rehypePlugins: [
-          wrapLinksInSpans as any,
-          RehypeSlug as any,
-          RehypeAutolinkHeadings as any,
-          RehypePrism as any,
-          [RehypeKatex, { strict: false }],
-          fixSvgPaths as any,
-        ],
+        remarkPlugins: [...commonRemarkPlugins],
+        rehypePlugins: [...commonRehypePlugins, fixSvgPaths as any],
       },
     },
   );
@@ -252,25 +288,15 @@ export function toHtml(
   source: string,
   options: { excerpt: boolean } = { excerpt: false },
 ): string | import('vfile').VFile {
-  let processor = Unified.unified()
-    .use(RemarkParse)
-    .use(RemarkGfm)
-    .use(RemarkFrontmatter)
-    .use(RemarkMath)
-    .use(RemarkRehype, { allowDangerousHtml: true })
-    .use(RehypeRaw);
+  let processor = Unified.unified().use(RemarkParse);
+  commonRemarkPlugins.forEach((plugin) => (processor = processor.use(plugin)));
+  processor = processor.use(RemarkRehype, { allowDangerousHtml: true }).use(RehypeRaw);
 
   if (options.excerpt) {
     processor = processor.use(getOnlyFirstPara).use(addLeadToFirstParagraph);
   }
 
-  processor = processor
-    .use(RehypeKatex as any, { strict: false })
-    .use(wrapLinksInSpans)
-    .use(RehypeSlug)
-    .use(RehypeAutolinkHeadings)
-    .use(RehypePrism)
-    .use(addDataToCodeBlocks);
+  commonRehypePlugins.forEach((plugin) => (processor = processor.use(plugin as any)));
 
   if (options.excerpt) {
     const parsed = processor.parse(source);

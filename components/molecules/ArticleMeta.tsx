@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { memo } from 'react';
+import { Fragment, memo } from 'react';
 
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 
@@ -56,8 +56,8 @@ export const ArticleMeta = memo<{
         </div>
         <div className="font-sans text-sm font-semibold leading-tight sm:text-base">
           {authors.map((author, idx) => (
-            <>
-              <span key={author.slug} itemScope itemType="http://schema.org/Person" itemProp="author">
+            <Fragment key={author.slug}>
+              <span itemScope itemType="http://schema.org/Person" itemProp="author">
                 <span className={`text-gray-800 ${isSmall ? 'text-base' : 'text-lg'}`} itemProp="name">
                   {author.displayName}
                 </span>
@@ -69,7 +69,7 @@ export const ArticleMeta = memo<{
               ) : (
                 ', '
               )}
-            </>
+            </Fragment>
           ))}
           {mainCategory && (
             <span
