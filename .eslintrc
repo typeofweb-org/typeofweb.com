@@ -7,7 +7,7 @@
   "extends": ["next", "plugin:@typeofweb/recommended"],
   "overrides": [
     {
-      "files": ["pages/**/*.tsx"],
+      "files": ["pages/**/*.tsx", "pages/**/*.ts"],
       "rules": {
         "import/no-default-export": 0
       }
