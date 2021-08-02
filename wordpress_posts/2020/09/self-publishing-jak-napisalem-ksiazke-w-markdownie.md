@@ -32,8 +32,6 @@ seo:
     PDF i MOBI.
 ---
 
-# Self-publishing: Jak napisałem książkę w markdownie?
-
 Wciąż dopytujecie się o proces _self-publishing_ [mojej książki „TypeScript na poważnie”](https://typescriptnapowaznie.pl/) od strony technicznej. W czym ją pisałem? Jak tworzyłem e-booki? Dlaczego zdecydowałem się na markdown? Jakich narzędzi używałem? Śpieszę odpowiedzieć – to wszystko w tym wpisie :)
 
 {/_ more _/}

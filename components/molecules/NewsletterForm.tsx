@@ -9,7 +9,7 @@ import { SectionTitle } from '../atoms/SectionTitle';
 
 export const NewsletterForm = memo(() => {
   return (
-    <Card as="form" roundAllCorners={true} moreSpace={true} className="mx-auto max-w-xl">
+    <Card as="form" roundAllCorners={true} moreSpace={true} className="newsletter-form mx-auto max-w-xl">
       <div className="pb-4 px-5">
         <SectionTitle level="none" size="small">
           Podoba się? Nie przegap kolejnych artykułów!

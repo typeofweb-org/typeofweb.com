@@ -176,6 +176,10 @@ html,
     & img {
       @apply hover:shadow-md shadow-sm transition-shadow;
     }
+
+    & .newsletter-form {
+      @apply -mx-6 mt-8 bg-white border sm:mx-auto;
+    }
   }
 
   :is(.prose, .prose.prose-xl) {

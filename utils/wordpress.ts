@@ -141,7 +141,8 @@ export async function getExcerptAndContent(
       content: await toMdx(content, post.data),
       isMdx: true as const,
     };
-  } catch {
+  } catch (err) {
+    console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
       content: toHtml(content, { excerpt: false }).toString('utf-8'),

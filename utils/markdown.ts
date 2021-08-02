@@ -20,6 +20,7 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { Node, Parent } from 'unist';
 
 interface HtmlNode extends Node {
+  tagName: string;
   type: 'element';
   children?: HtmlNode[];
   properties?: {
@@ -122,7 +123,7 @@ function fixSvgPaths(): import('unified').Transformer {
     const run = (node: Node) => {
       if (isPathNode(node)) {
         if (node.properties?.d) {
-          node.properties.d = node.properties.d.replaceAll('\n', ' ');
+          node.properties.d = node.properties.d.replace(/\s+/g, ' ');
         }
         return node;
       }
@@ -203,9 +204,12 @@ export function collapseParagraphs(): import('unified').Transformer {
   return function transformer(tree) {
     const run = (node: Node): HtmlNode | MdxNode | Node => {
       if (isPNode(node)) {
-        if (node.children?.length === 1) {
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- ok because we know that node.children is defined
-          return node.children[0]!;
+        if (
+          node.children?.length === 1 &&
+          node.children[0] &&
+          (isPNode(node.children[0]) || isMdxPNode(node.children[0]))
+        ) {
+          return node.children[0];
         } else {
           // what to do with multiple paragraphs?
           return node;
@@ -216,6 +220,33 @@ export function collapseParagraphs(): import('unified').Transformer {
       return node;
     };
     return run(tree);
+  };
+}
+
+export function normalizeHeaders(): import('unified').Transformer {
+  return function transformer(tree) {
+    const desiredHeading = 2;
+
+    let mostImportantHeading = Infinity;
+    visit(tree, 'element', (node: HtmlNode) => {
+      if (node.tagName.length === 2 && node.tagName.toLowerCase().startsWith('h')) {
+        const level = parseInt(node.tagName.substr(1), 10);
+        if (level < mostImportantHeading) {
+          mostImportantHeading = level;
+        }
+      }
+    });
+    if (mostImportantHeading === Infinity) {
+      return tree;
+    }
+
+    visit(tree, 'element', (node: HtmlNode) => {
+      if (node.tagName.length === 2 && node.tagName.toLowerCase().startsWith('h')) {
+        const level = parseInt(node.tagName.substr(1), 10);
+        const newLevel = desiredHeading - mostImportantHeading + level;
+        node.tagName = `h${newLevel}`;
+      }
+    });
   };
 }
 
@@ -241,7 +272,8 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
 
 const commonRemarkPlugins = [RemarkGfm, RemarkFrontmatter, RemarkMath];
 const commonRehypePlugins = [
-  [RehypeKatex, { strict: false }],
+  normalizeHeaders,
+  [RehypeKatex, { strict: 'ignore' }],
   wrapLinksInSpans,
   RehypeSlug,
   RehypeAutolinkHeadings,
@@ -296,7 +328,10 @@ export function toHtml(
     processor = processor.use(getOnlyFirstPara).use(addLeadToFirstParagraph);
   }
 
-  commonRehypePlugins.forEach((plugin) => (processor = processor.use(plugin as any)));
+  commonRehypePlugins.forEach(
+    (plugin) =>
+      (processor = Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin as any)),
+  );
 
   if (options.excerpt) {
     const parsed = processor.parse(source);
@@ -305,4 +340,8 @@ export function toHtml(
   }
 
   return processor.use(RehypeStringify).processSync(source) as any;
+}
+// snake case to camel case
+function toCamelCase(str: string): any {
+  return str.replace(/-([a-z])/gi, ([_, g]) => (g ? g.toUpperCase() : ''));
 }

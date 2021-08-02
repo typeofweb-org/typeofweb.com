@@ -33,27 +33,33 @@ Ja chciałbym jednak dzisiaj skupić się na jednym konkretnym mechanizmie zawar
 
 <h1 id="asiwth">ASI, WTH?</h1>
 Na początku swojej kariery programisty JS niejednokrotnie znajdowałem w napisanym przeze mnie kodzie miejsca, w których brakowało średników i zachodziłem w głowę dlaczego ten kod w ogóle bez nich działał. Weźmy prosty przykład:
-<pre><code class="language-javascript">console.log(‘Hello, world!’)  
-</code></pre>
+```javascript
+console.log(‘Hello, world!’)  
+```
 Powyższy kod zostanie bez problemu zinterpretowany i uruchomiony we wszystkich znanych mi silnikach JavaScript, pomimo braku średnika na końcu lini. WTH? Moje zdziwinie było ogromne, więc zacząłem szukać skąd się bierze ta pozorna magia. Wtedy pierwszy raz usłyszałem o ASI. Jako osoba, która zaczynała naukę programowania od C, podchodziłem do tego ułatwienia z dużym dystansem, ale jednocześnie próbowałem z niego czasem skorzystać. <em>Może to bardziej w duchu JS</em> – myślałem i uparcie kasowałem wstawiane średniki tak, aby się do tej składni przyzwyczaić. <strong>Skoro interpreter sam wstawia je za mnie to co mogłoby pójść źle</strong>?
 <h1 id="asiniewystarczajcoautomatyczne">ASI niewystarczająco automatyczne</h1>
 W ramach testów ASI napisałem kod podobny do tego poniżej:
-<pre><code class="language-javascript">console.log('test')  
+```javascript
+console.log('test')  
 [1,2,3].map(x =&gt; x * x)
-</code></pre>
+```
 Co powinno się wydarzyć? Teoretycznie najpierw w konsoli ma pojawić się słowo “test”, a później wykona się mapowanie wartości z tablicy. Tak rzeczywiście by się stało, gdyby po pierwszej linijce znalazł się średnik. Jak więc ten kod interpretowany jest zgodnie ze specyfikacją?
-<pre><code class="language-javascript">Uncaught TypeError: Cannot read property '3' of undefined  
-</code></pre>
+```javascript
+Uncaught TypeError: Cannot read property '3' of undefined  
+```
 Że co? Przeanalizujmy co się wydarzyło. <code>3</code> na pewno wzięła się stąd, że wyrażenie <code>1,2,3</code> daje po prostu <code>3</code> (operator przecinka). Nie zaglądając jeszcze do specyfikacji można dojść do wniosku, że kod został więc zinterpretowany w ten sposób:
-<pre><code class="language-javascript">console.log('test’)[3].map(x =&gt; x * x)  
-</code></pre>
+```javascript
+console.log('test’)[3].map(x =&gt; x * x)  
+```
 I wszystko jasne! Ta linia oznacza tyle co: <em>Wykonaj funkcję <code>console.log(‘test’)</code>, weź zwróconą przez nią wartość i pobierz z niej element leżący pod indeksem <code>3</code>. Ten element powinien mieć metodę <code>map</code>, którą wykonaj.</em> Wyjątek rzucany jest już po wykonaniu <code>console.log(‘test’)</code>, które zwraca <code>undefined</code>. Inny przykład, prosto ze specyfikacji:
-<pre><code class="language-javascript">a = b + c  
+```javascript
+a = b + c  
 (d + e).print()
-</code></pre>
+```
 interpretowane jako:
-<pre><code class="language-javascript">a = b + c(d + e).print()  
-</code></pre>
+```javascript
+a = b + c(d + e).print()  
+```
 Warto zauważyć, że zarówno moja oryginalna intencja, jak i sposób zinterpretowania jej zgodnie ze specyfikacją są całkowicie poprawnymi sposobami odczytania tego kodu. Czy da się w związku z tym odróżnić od siebie te dwa przypadki? Tak, ale <strong>wyłącznie poprzez wstawienie średnika po pierwszym wyrażeniu</strong>. Czy podobnych nieprzewidywalnych przypadków może być więcej? <strong>Niestety tak.</strong>
 <h1 id="pocojestasi">Po co jest ASI?</h1>
 Aby się definitywnie dowiedzieć o co w tym wszystkim chodzi sięgam do <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-automatic-semicolon-insertion">sekcji 11.9 specyfikacji ECMAScript 2015</a>. Dociekliwi mogą przeczytać ją w całości, ja tutaj skupię się tylko na istotnych fragmentach. Są dokładnie 3 zasady zgodnie z którym średniki są wstawiane automatycznie (i kilka wyjątków):
@@ -69,23 +75,31 @@ Aby się definitywnie dowiedzieć o co w tym wszystkim chodzi sięgam do <a hre
  	<li>Kiedy napotkany jest tzw. <em>restricted production</em> i w miejscu, w którym nie powinno być końca linii znajduje się znak końca linii to średnik jest wstawiany przed tym znakiem.</li>
 </ol>
 Pomijam nawet wyjątki od tych reguł, ale łał, czy to już nie brzmi trochę skomplikowanie? I co to w ogóle oznacza w praktyce? Po pierwsze okazuje się, że <strong>w JavaScripcie białe znaki zmieniają sposób interpretowania wyrażeń</strong> – w odróżnieniu chociażby od wspomnianego C++. Znów bardzo prosty przykład:
-<pre><code class="language-javascript">123 ‘hello, world!’
 
-123  
+```javascript
+123 ‘hello, world!’
+
+123
 ‘hello, world!’
-</code></pre>
+
+```
+
 Pierwsza linijka kodu jest niepoprawna. Średnik nie zostanie automatycznie wstawiony po <code>123</code>. W drugim przypadku jednak już tak, gdyż po <code>123</code> znalazł się znak końca linii. A więc białe znaki zmieniają sposób, w jaki ten kod jest rozumiany przez silniki JavaScriptu.
 
 <h1 id="asizbytautomatyczne">ASI zbyt automatyczne</h1>
 Co jeszcze wynika z tej specyfikacji? Oto jeden z moich ulubionych przykładów kodu, który zaskakuje początkujących:
-<pre><code class="language-javascript">function fn() {  
-    return
-    {
-        a: 1
-    }
+
+```javascript
+function fn() {
+  return;
+  {
+    a: 1;
+  }
 }
-</code></pre>
+```
+
 Co zwróci funkcja <code>fn</code> po wywołaniu? Oczywiście <code>undefined</code>. ASI powoduje, że po <code>return</code> automatycznie dodawany jest średnik. Osoby przyzwyczajone do takiego formatowania kodu niestety muszą się z nim pożegnać – nie da się tego problemu obejść inaczej niż poprzez wstawienie <code>{</code> w tej samej linii co <code>return</code>. Więcej o podobnych haczykach można przeczytać w artykułach <a href="http://cjihrig.com/blog/the-dangers-of-javascripts-automatic-semicolon-insertion/">The Dangers of JavaScript’s Automatic Semicolon Insertion</a> i <a href="http://inimino.org/~inimino/blog/javascript_semicolons">JavaScript Semicolon Insertion</a>.
+
 <h1 id="zerednikiemczyjednakbez">Ze średnikiem czy jednak bez?</h1>
 Są grupy osób, które sugerują aby całkowicie polegać na ASI, na przykład <a href="http://standardjs.com">standardjs.com</a>. Głośno również było o <a href="https://github.com/electron/electron/pull/4909">wdrożeniu tego podejścia</a> przez zespół rozwijający <a href="http://electron.atom.io">electron</a>. Rzeczywiście jest prawdą stwierdzenie, że pomijanie średników jest całkiem bezpieczne patrząc jedynie przez pryzmat silników JavaScript. Wszystkie sprawdzone przeze mnie poprawnie implementują ASI i konsekwentnie interpretują kod bez średników w ten sam sposób. <del>W związku z tym, jeśli konsekwentnie podążać za zasadami opisanymi w standardjs.com, <strong>nie ma żadnego ryzyka, że kod zostanie nieprawidłowo zinterpretowany</strong>. Ponadto należy pamiętać, że ASI działa zawsze, niezależnie od intencji programisty, więc <strong>każdy programista JS powinien znać zasady automatycznego wstawiania średników</strong> chociażby po to, aby uniknąć sytuacji opisanej w poprzednim akapicie. Więcej: <a href="http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding">An Open Letter to JavaScript Leaders Regarding Semicolons</a>. Skoro zasady i tak trzeba znać, to czemu by ASI nie wykorzystać?</del>
 (EDIT 10.07.2017) Zasady ASI warto znać, jednak jeśli ktoś decyduje się na zrezygnowanie ze stawiania średników to naraża się <a href="https://github.com/tc39/ecma262/issues/943">na całą gamę przypadków i błędów</a>, których standardjs.com nie uwzględnia.

@@ -21,10 +21,10 @@ export const RunningHeaderProvider = ({ children }: PropsWithChildren<{}>) => {
   const [text, setText] = useState('');
   const [progress, setProgress] = useState(0);
 
-  const containerElRef = useRef<Element | null>();
+  const containerElRef = useRef<HTMLElement | null>();
 
   // eslint-disable-next-line functional/prefer-readonly-type -- need mutable
-  const currentlyVisibleHeadersRef = useRef<Set<Element>>(new Set());
+  const currentlyVisibleHeadersRef = useRef<Set<HTMLElement>>(new Set());
 
   const {
     observeElement: observeHeader,
@@ -38,12 +38,14 @@ export const RunningHeaderProvider = ({ children }: PropsWithChildren<{}>) => {
     }
 
     if (headerEntry.isIntersecting) {
-      currentlyVisibleHeadersRef.current.add(headerEntry.target);
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- HTMLElement
+      currentlyVisibleHeadersRef.current.add(headerEntry.target as HTMLElement);
     } else {
-      currentlyVisibleHeadersRef.current.delete(headerEntry.target);
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- HTMLElement
+      currentlyVisibleHeadersRef.current.delete(headerEntry.target as HTMLElement);
     }
 
-    const highestHeader = Array.from(currentlyVisibleHeadersRef.current).reduce<Element | null>((acc, node) => {
+    const highestHeader = Array.from(currentlyVisibleHeadersRef.current).reduce<HTMLElement | null>((acc, node) => {
       if (!acc) {
         return node;
       }
@@ -56,12 +58,7 @@ export const RunningHeaderProvider = ({ children }: PropsWithChildren<{}>) => {
     }, null);
 
     if (highestHeader) {
-      setText(
-        Array.from(highestHeader.childNodes)
-          .filter((node) => node.nodeType === node.TEXT_NODE)
-          .map((node) => node.textContent?.replace(/\s+/g, ' ') ?? '')
-          .join(' '),
-      );
+      setText(highestHeader.innerText.split('\n')[0]?.replace(/\s+/g, ' ') ?? '');
     }
   }, [headerEntry]);
 
