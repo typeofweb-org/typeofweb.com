@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "./build.sh",
+    "start": "next start",
+    "feed": "node --loader ts-node/esm --experimental-specifier-resolution=node generateFeed.ts"
   },
+  "type": "commonjs",
   "dependencies": {
     "@plaiceholder/next": "2.1.0",
     "critters": "0.0.10",
@@ -20,6 +22,9 @@
     "sharp": "0.28.3"
   },
   "devDependencies": {
+    "@babel/preset-env": "7.14.9",
+    "@babel/preset-typescript": "7.14.5",
+    "@babel/register": "7.14.5",
     "@jsdevtools/rehype-toc": "3.0.2",
     "@mapbox/rehype-prism": "0.7.0",
     "@mdx-js/mdx": "2.0.0-next.9",

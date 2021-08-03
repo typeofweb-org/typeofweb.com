@@ -2,18 +2,13 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
 
-import { host } from '../constants';
-
-import { permalinkIsCategory } from './molecules/MainNav';
+import { defaultDescription, host, permalinkIsCategory, shortDescription, siteName } from '../constants';
 
 interface RouterQuery {
   readonly page?: string;
   readonly permalink?: string;
 }
 
-export const siteName = `Type of Web`;
-export const shortDescription = `Blog o programowaniu`;
-export const defaultDescription = `Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…`;
 const SEP = ' • ';
 const MAX_TITLE_LEN = 50;
 const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
@@ -143,7 +138,7 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
         rel="alternate"
         type="application/rss+xml"
         title="Type of Web &raquo; Kanał z wpisami"
-        href={`${host}/feed/`}
+        href={`${host}/feed.xml`}
       />
       <link
         rel="alternate"

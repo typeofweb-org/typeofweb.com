@@ -48,7 +48,7 @@ export const SocialWidget = memo(() => {
           </a>
         </li>
         <li className="mt-4 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
-          <a href="/feed" aria-label="RSS" title="RSS" className="block">
+          <a href="/feed.xml" aria-label="RSS" title="RSS" className="block">
             <RssIcon className="inline-block mr-2 w-8 fill-current" />
             RSS
           </a>

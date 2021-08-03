@@ -2,18 +2,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
 
+import { navItems } from '../../constants';
 import { useUIState } from '../../hooks/useUiState';
-
-export const navItems = [
-  { slug: 'javascript', label: 'JavaScript' },
-  { slug: 'opinie', label: 'Opinie' },
-  { slug: 'dobry-kod', label: 'Dobry kod' },
-  { slug: 'praca-zdalna', label: 'Praca zdalna' },
-];
-
-export function permalinkIsCategory(permalink: string) {
-  return navItems.map((c) => c.slug).includes(permalink);
-}
 
 export const MainNav = memo(() => {
   const { uiState } = useUIState();

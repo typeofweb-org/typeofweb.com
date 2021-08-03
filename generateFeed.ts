@@ -1,16 +1,18 @@
+import Fs from 'fs/promises';
+import Path from 'path';
+import Url from 'url';
+
 import { Feed } from 'feed';
 
-import { siteName, defaultDescription } from '../../components/Seo';
-import { postToProps } from '../../utils/postToProps';
-import { readAllPosts } from '../../utils/wordpress';
+import { siteName, defaultDescription } from './constants';
+import { postToProps } from './utils/postToProps';
+import { readAllPosts } from './utils/wordpress';
 
-import type { NextApiHandler } from 'next';
-
-export async function generateFeed() {
+async function generateFeed() {
   const publicUrl = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
   const { posts: allPosts } = await readAllPosts({ includePages: false });
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
+  const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default;
   const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
     (p) => ({
       ...p,
@@ -55,14 +57,21 @@ export async function generateFeed() {
   return feed;
 }
 
-const feedApiHandler: NextApiHandler = async (req, res) => {
+async function run() {
   const feed = await generateFeed();
+  await Fs.writeFile(
+    Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), 'public', 'feed.xml'),
+    feed.rss2(),
+    'utf-8',
+  );
+  await Fs.writeFile(
+    Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), 'public', 'feed.json'),
+    feed.json1(),
+    'utf-8',
+  );
+}
 
-  res.setHeader('Content-Type', 'application/rss+xml; charset=utf-8');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Cache-Control', `s-maxage=${60 * 60}, stale-while-revalidate`);
-
-  res.end(feed.atom1());
-};
-
-export default feedApiHandler;
+run().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

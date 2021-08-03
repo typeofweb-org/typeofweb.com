@@ -1,5 +1,4 @@
-import { permalinkIsCategory } from '../../../components/molecules/MainNav';
-import { pageSize } from '../../../constants';
+import { pageSize, permalinkIsCategory } from '../../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
 import { getAllPermalinks, readAllPosts } from '../../../utils/wordpress';
 import IndexPage from '../../index';

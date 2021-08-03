@@ -1,9 +1,9 @@
 import { MDXComponent } from '../../components/MDXComponent';
 import { Seo } from '../../components/Seo';
-import { permalinkIsCategory } from '../../components/molecules/MainNav';
 import { NewsletterForm } from '../../components/molecules/NewsletterForm';
 import { SingleArticle } from '../../components/organisms/SingleArticle';
 import { TwoColumns } from '../../components/templates/TwoColumns';
+import { permalinkIsCategory } from '../../constants';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
 import { getAllPermalinks, getPostByPermalink } from '../../utils/wordpress';
