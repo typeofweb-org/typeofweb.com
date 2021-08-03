@@ -28,14 +28,19 @@ const config = withPlaiceholder(
 
 config.images = {
   domains: ['typeofweb.com', 'secure.gravatar.com'],
-  deviceSizes: [320, 640, 768, 828, 1080, 1200, 1920],
-  imageSizes: [16, 32, 48, 64, 96, 128, 256, 320, 768],
+  deviceSizes: [320, 640, 768, 1200],
+  imageSizes: [16, 32, 48, 64, 96, 128, 256, 320],
 };
 
 config.rewrites = () => [
   { source: '/feed', destination: '/api/feed' },
   { source: '/feed.json', destination: '/api/feed.json' },
 ];
+
+config.excludeDefaultMomentLocales = true;
+config.experimental = config.experimental || {};
+config.experimental.optimizeCss = true;
+config.experimental.optimizeImages = true;
 
 config.reactStrictMode = true;
 

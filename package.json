@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@plaiceholder/next": "2.1.0",
+    "critters": "0.0.10",
     "feed": "4.2.2",
     "gray-matter": "4.0.3",
     "next": "11.0.1",
