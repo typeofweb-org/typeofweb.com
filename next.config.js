@@ -38,9 +38,9 @@ config.rewrites = () => [
 ];
 
 config.excludeDefaultMomentLocales = true;
-// config.experimental = config.experimental || {};
-// config.experimental.optimizeCss = true;
-// config.experimental.optimizeImages = true;
+config.experimental = config.experimental || {};
+config.experimental.optimizeCss = true;
+config.experimental.optimizeImages = true;
 
 // config.reactStrictMode = true;
 
