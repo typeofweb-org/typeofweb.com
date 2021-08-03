@@ -35,7 +35,10 @@ config.excludeDefaultMomentLocales = true;
 config.experimental = config.experimental || {};
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
+config.reactStrictMode = true;
 
-// config.reactStrictMode = true;
+config.rewrites = () => {
+  return Promise.resolve([{ source: '/feed', destination: '/feed.xml' }]);
+};
 
 module.exports = config;

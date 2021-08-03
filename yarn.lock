@@ -1558,6 +1558,11 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
 
+"@types/w3c-css-typed-object-model-level-1@20180410.0.3":
+  version "20180410.0.3"
+  resolved "https://registry.yarnpkg.com/@types/w3c-css-typed-object-model-level-1/-/w3c-css-typed-object-model-level-1-20180410.0.3.tgz#698ffd0754770a467c6a547145559697770a5c42"
+  integrity sha512-AhXpgPrIaYia3uqLj9g3ZHnt6WZGWW8QgJpnr68Ovjs5WBk6Trf7o6XyAcTaRt5OWCtUIuPAKSaUOGyVfFRIpw==
+
 "@typescript-eslint/eslint-plugin@^4.26.1":
   version "4.28.4"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.28.4.tgz#e73c8cabbf3f08dee0e1bda65ed4e622ae8f8921"

@@ -145,6 +145,9 @@ module.exports = {
             'backdrop-filter': 'blur(25px)',
             'background-color': 'rgba(0, 0, 0, 0.36)',
           },
+          '.content-visibility': {
+            'content-visibility': 'auto',
+          },
         });
       }
 

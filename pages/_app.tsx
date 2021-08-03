@@ -52,6 +52,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </UIStateProvider>
       </RunningHeaderProvider>
+      <Script strategy="lazyOnload">{`if (typeof CSS !== 'undefined' && typeof CSS.paintWorklet !== 'undefined') {CSS.paintWorklet.addModule('/fancyLinkUnderline.js');}`}</Script>
+      <ScriptAfterInteraction src="/contentVisibility.js" defer async />
       <ScriptAfterInteraction
         src="https://www.googletagmanager.com/gtag/js?id=G-KNFC661M43"
         defer
@@ -61,7 +63,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           gtag('config', 'G-KNFC661M43');
         }}
       />
-      <Script strategy="lazyOnload">{`if (typeof CSS !== 'undefined' && typeof CSS.paintWorklet !== 'undefined') {CSS.paintWorklet.addModule('/fancyLinkUnderline.js');}`}</Script>
     </>
   );
 };

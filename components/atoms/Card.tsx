@@ -22,7 +22,7 @@ export const Card = memo(
           {...props}
           // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- it's alright
           ref={ref as any}
-          className={`mb-8 ${p} bg-gray-100 ${rounded} shadow-md ${className ?? ''} sm:mb-8`}
+          className={`mb-8 ${p} bg-gray-100 ${rounded} shadow-md sm:mb-8 ${className ?? ''}`}
         >
           {children}
           <span className="intersection-observer--pixel-to-watch" />
