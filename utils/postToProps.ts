@@ -45,6 +45,8 @@ export const postToProps = async (
           return {
             avatarUrl: author.avatarUrl ?? null,
             displayName: author.displayName ?? null,
+            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- m or f
+            gender: (author.meta.gender as 'm' | 'f') ?? null,
             slug: author.slug ?? null,
             description: author.meta.description ?? null,
             firstName: author.meta.first_name ?? null,

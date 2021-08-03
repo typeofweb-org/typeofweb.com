@@ -8,6 +8,7 @@ export interface Author {
   readonly avatarUrl: string;
   readonly displayName: string;
   readonly slug: string;
+  readonly gender?: 'm' | 'f' | null;
   readonly facebook?: string | null;
   readonly instagram?: string | null;
   readonly linkedin?: string | null;

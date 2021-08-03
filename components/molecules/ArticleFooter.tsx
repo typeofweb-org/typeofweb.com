@@ -12,13 +12,21 @@ interface ArticleFooterProps {
   readonly authors: readonly Author[];
 }
 
+const getAuthorsTitle = (authors: readonly Author[]) => {
+  if (authors.length === 1) {
+    return authors[0]?.gender === 'f' ? 'Autorka' : 'Autor';
+  }
+  return authors.every((a) => a.gender === 'f') ? 'Autorki' : 'Autorzy';
+};
+
 export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
+  const title = getAuthorsTitle(authors);
   return (
     <footer>
       <Pattern className="mb-6 mt-8 mx-auto w-32 text-green-500" />
       <div className="flex flex-col items-start mb-4 mt-4 mx-auto px-4 max-w-lg text-left">
         <SectionTitle level="none" size="small" pad={false}>
-          Autorzy
+          {title}
         </SectionTitle>
         {authors.map((a) => {
           return (
