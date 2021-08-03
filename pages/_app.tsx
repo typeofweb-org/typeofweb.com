@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 import { Seo } from '../components/Seo';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
@@ -11,6 +12,27 @@ import '../styles.css';
 import '../fonts.css';
 import '../prism.css';
 import '../node_modules/katex/dist/katex.min.css';
+
+function ScriptAfterInteraction(props: Partial<HTMLScriptElement>) {
+  useEffect(() => {
+    const listener = () => {
+      const script = Object.entries(props).reduce((script, [key, value]) => {
+        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions, @typescript-eslint/no-unsafe-member-access -- we know that value is a keyof script
+        script[key as any] = value;
+        return script;
+      }, document.createElement('script'));
+      document.body.appendChild(script);
+    };
+    window.addEventListener('scroll', listener, { passive: true, once: true });
+    return () => {
+      window.removeEventListener('scroll', listener);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- ignore
+  }, []);
+
+  return null;
+}
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -30,10 +52,11 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </UIStateProvider>
       </RunningHeaderProvider>
-      <Script
+      <ScriptAfterInteraction
         src="https://www.googletagmanager.com/gtag/js?id=G-KNFC661M43"
-        strategy="lazyOnload"
-        onLoad={() => {
+        defer
+        async
+        onload={() => {
           gtag('js', new Date());
           gtag('config', 'G-KNFC661M43');
         }}
