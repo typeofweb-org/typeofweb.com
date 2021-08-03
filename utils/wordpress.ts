@@ -11,6 +11,9 @@ import { toHtml, toMdx } from './markdown';
 
 import type { PromiseValue } from '../types';
 
+// keep
+Path.resolve('../wordpress_posts');
+
 const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', 'wordpress_posts');
 
 export async function readFilesInDir(dir: string): Promise<readonly string[]> {
