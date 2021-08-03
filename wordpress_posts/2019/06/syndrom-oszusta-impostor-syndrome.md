@@ -77,12 +77,12 @@ Ponadto, jak piszą Jaruwan Sakulku i James Alexander, osoby z impostorem obawi
 Czy to wszystko brzmi znajomo? Czujesz to u siebie? Widzisz to u innych? Spróbuj ustosunkować się do twierdzeń poniżej:
 
 1.  Czuję, że nie zasługuję na sukces, który osiągnęłam/osiągnąłem.
-2.       Nawet, gdy jestem chwalona/y przez innych, nie czuję, abym osiągnęła/osiągnął aż tak wiele, jak oni sądzą.
-3.       Może i jestem nagradzany za swoją pracę, ale nie czuję, abym na to zapracował/a.
-4.       Obawiam się, że ludzie wkrótce dostrzegą, że wcale nie jestem aż tak bystra/bystry, jak udawałam/em, że jestem.
-5.       Większość moich osiągnęć to szczęśliwy traf.
-6.       Trudno mi zaakceptować komplementy.
-7.       Bagatelizuję swoje osiągnięcia, bo nie sądzę, że są aż tak niesamowite, jak ludzie uważają.
+2.        Nawet, gdy jestem chwalona/y przez innych, nie czuję, abym osiągnęła/osiągnął aż tak wiele, jak oni sądzą.
+3.        Może i jestem nagradzany za swoją pracę, ale nie czuję, abym na to zapracował/a.
+4.        Obawiam się, że ludzie wkrótce dostrzegą, że wcale nie jestem aż tak bystra/bystry, jak udawałam/em, że jestem.
+5.        Większość moich osiągnęć to szczęśliwy traf.
+6.        Trudno mi zaakceptować komplementy.
+7.        Bagatelizuję swoje osiągnięcia, bo nie sądzę, że są aż tak niesamowite, jak ludzie uważają.
 
 Ponadto, z ust impostorów często padają takie charakterystyczne stwierdzenia, jak:
 

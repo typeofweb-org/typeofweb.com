@@ -1,5 +1,6 @@
 import React, { forwardRef, memo } from 'react';
 
+import { findCurrentSeriesIndex } from '../../utils/series';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
@@ -17,14 +18,24 @@ interface SingleArticleProps {
   readonly title: string;
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;
-  readonly href: string;
+  readonly permalink: string;
   readonly excerpt: string | null;
   readonly content: JSX.Element;
+  readonly series?: {
+    readonly name: string;
+    readonly slug: string;
+    readonly links: readonly {
+      readonly permalink: string;
+      readonly title: string;
+    }[];
+  } | null;
 }
 
 export const SingleArticle = memo(
   forwardRef<HTMLElement, SingleArticleProps>(
-    ({ cover, id, index, title, authors, mainCategory, href, excerpt, content, isMdx }, ref) => {
+    ({ cover, id, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
+      const href = '/' + permalink;
+
       return (
         <Card
           as="article"
@@ -43,6 +54,15 @@ export const SingleArticle = memo(
                 <div className="prose mt-4 pb-2">
                   <p className="lead">{excerpt}</p>
                 </div>
+              )}
+              {series && (
+                <p className="mb-4 mt-3 text-center text-lg">
+                  Ten artykuł jest częścią{' '}
+                  <strong>
+                    {findCurrentSeriesIndex(permalink, series) + 1} z {series.links.length}
+                  </strong>{' '}
+                  serii {series.name}.
+                </p>
               )}
               <ArticleMeta rel={true} authors={authors} mainCategory={mainCategory} size="small" />
             </div>

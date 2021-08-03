@@ -79,11 +79,12 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
   const { pageKind, excerpt, frontmatter, ...contentObj } = props;
 
   return (
-    <TwoColumns withSidebar={true} pageKind={pageKind}>
+    <TwoColumns withSidebar={true} pageKind={pageKind} series={frontmatter.series}>
       <Seo
         title={frontmatter.seo?.title || frontmatter.title}
         description={frontmatter.seo?.metadesc || excerpt}
         author={frontmatter.authors[0]?.facebook}
+        series={frontmatter.series}
       />
       <SingleArticle
         ref={setRunningHeader}
@@ -101,7 +102,8 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
         title={frontmatter.title}
         authors={frontmatter.authors}
         mainCategory={frontmatter.mainCategory}
-        href={'/' + frontmatter.permalink}
+        permalink={frontmatter.permalink}
+        series={frontmatter.series}
         cover={frontmatter.cover ? { ...frontmatter.cover, preload: true } : null}
       />
       <NewsletterForm />

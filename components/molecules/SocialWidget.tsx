@@ -31,23 +31,23 @@ const myUrls = {
 export const SocialWidget = memo(() => {
   return (
     <Widget title="Śledź mnie na:">
-      <ul className="flex flex-row flex-wrap justify-between">
+      <ul className="flex flex-row flex-wrap gap-3 justify-between">
         {social.map(({ icon: Icon, label, slug }) => {
           return (
-            <li key={label} className="first:ml-0 ml-3 text-gray-700 hover:text-green-700 transition-colors">
+            <li key={label} className="text-gray-700 hover:text-green-700 transition-colors">
               <a href={myUrls[slug]} aria-label={label} title={label} className="block">
                 <Icon className="w-8 fill-current" />
               </a>
             </li>
           );
         })}
-        <li className="mt-4 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
+        <li className="text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors sm:mt-4">
           <a href="/feed.json" aria-label="JSON Feed" title="JSON Feed" className="block">
             <JsonFeedIcon className="inline-block mr-2 w-8 fill-current" />
             JSON Feed
           </a>
         </li>
-        <li className="mt-4 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
+        <li className="text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors sm:mt-4">
           <a href="/feed.xml" aria-label="RSS" title="RSS" className="block">
             <RssIcon className="inline-block mr-2 w-8 fill-current" />
             RSS

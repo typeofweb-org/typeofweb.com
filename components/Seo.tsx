@@ -3,11 +3,8 @@ import { useRouter } from 'next/router';
 import { memo } from 'react';
 
 import { defaultDescription, host, permalinkIsCategory, shortDescription, siteName } from '../constants';
-
-interface RouterQuery {
-  readonly page?: string;
-  readonly permalink?: string;
-}
+import { usePage, usePermalink } from '../hooks/usePermalink';
+import { getNextSeriesLink, getPrevSeriesLink } from '../utils/series';
 
 const SEP = ' • ';
 const MAX_TITLE_LEN = 50;
@@ -17,6 +14,14 @@ interface SeoProps {
   readonly title?: string | null;
   readonly description?: string | null;
   readonly author?: string | null;
+  readonly series?: {
+    readonly name: string;
+    readonly slug: string;
+    readonly links: readonly {
+      readonly permalink: string;
+      readonly title: string;
+    }[];
+  } | null;
 }
 
 const jsonLd = {
@@ -76,20 +81,19 @@ const jsonLd = {
   ],
 };
 
-export const Seo = memo<SeoProps>(({ title = '', description = defaultDescription, author }) => {
+export const Seo = memo<SeoProps>(({ title = '', description = defaultDescription, author, series }) => {
   const { query: _query, asPath } = useRouter();
-  // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- RouterQuery
-  const query = _query as RouterQuery;
+  const permalink = usePermalink();
+  const page = usePage();
 
-  const page = Number(query.page);
-  const pageTitle = query.page ? `Strona ${query.page}` : ``;
+  const pageTitle = page ? `Strona ${page}` : ``;
 
-  const next = query.page ? page + 1 : null;
-  const prev = query.page ? page - 1 : null;
+  const next = getNext(permalink, series, page);
+  const prev = getPrev(permalink, series, page);
 
-  const type = query.permalink ? 'article' : 'website';
-  const isCategory = query.permalink ? permalinkIsCategory(query.permalink) : false;
-  const relevantTitle = isCategory ? `Kategoria ${query.permalink}` : title;
+  const type = permalink ? 'article' : 'website';
+  const isCategory = permalink ? permalinkIsCategory(permalink) : false;
+  const relevantTitle = isCategory ? `Kategoria ${permalink}` : title;
 
   let fullTitle = (relevantTitle ? [relevantTitle, pageTitle, siteName] : [siteName, pageTitle])
     .filter((x): x is string => !!x && !!x.trim())
@@ -115,8 +119,8 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
       <link key="canonical" rel="canonical" href={canonical} />
 
       <link rel="index" title="Strona główna" href={`${host}/`} />
-      {next && <link key="next" rel="next" href={`${host}/strona/${next}/`} />}
-      {prev && prev > 0 && <link key="prev" rel="prev" href={`${host}/strona/${prev}/`} />}
+      {next && <link key="next" rel="next" href={next} />}
+      {prev && <link key="prev" rel="prev" href={prev} />}
 
       <meta key="og:locale" property="og:locale" content="pl_PL" />
       <meta key="og:type" property="og:type" content={type} />
@@ -150,3 +154,59 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
   );
 });
 Seo.displayName = 'Seo';
+
+function getNext(
+  permalink: string | null | undefined,
+  series:
+    | {
+        readonly name: string;
+        readonly slug: string;
+        readonly links: readonly {
+          readonly permalink: string;
+          readonly title: string;
+        }[];
+      }
+    | null
+    | undefined,
+  page?: number,
+) {
+  if (permalink && series) {
+    const nextSeries = getNextSeriesLink(permalink, series);
+    if (nextSeries) {
+      return `${host}/${nextSeries.permalink}`;
+    }
+  }
+
+  if (page) {
+    return `${host}/strona/${page + 1}/`;
+  }
+
+  return null;
+}
+function getPrev(
+  permalink: string | null | undefined,
+  series:
+    | {
+        readonly name: string;
+        readonly slug: string;
+        readonly links: readonly {
+          readonly permalink: string;
+          readonly title: string;
+        }[];
+      }
+    | null
+    | undefined,
+  page?: number,
+) {
+  if (permalink && series) {
+    const prevSeries = getPrevSeriesLink(permalink, series);
+    if (prevSeries) {
+      return `${host}/${prevSeries.permalink}`;
+    }
+  }
+
+  if (page && page > 1) {
+    return `${host}/strona/${page - 1}/`;
+  }
+  return null;
+}

@@ -1,25 +1,61 @@
 import { memo } from 'react';
 
 import { LatestPostsWidget } from '../molecules/LatestPostsWidget';
+import { SeriesTableOfContentsWidget } from '../molecules/SeriesTableOfContentsWidget';
 import { SocialWidget } from '../molecules/SocialWidget';
 
 import type { PageKind } from '../../types';
+import type { ComponentType } from 'react';
 
-const widgetsPerPage = {
-  index: (
-    <>
-      <SocialWidget />
-      <LatestPostsWidget />
-    </>
-  ),
-  post: null,
-  page: null,
+const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
+  index() {
+    return (
+      <>
+        <div className="min-w-[294px] flex-1 flex-shrink-0">
+          <SocialWidget />
+        </div>
+        <div className="min-w-[294px] flex-1 flex-shrink-0">
+          <LatestPostsWidget />
+        </div>
+      </>
+    );
+  },
+  post({ series }) {
+    return (
+      <>
+        {series && (
+          <div className="min-w-[294px] flex-1 flex-shrink-0">
+            <SeriesTableOfContentsWidget series={series} />
+          </div>
+        )}
+      </>
+    );
+  },
+  page() {
+    return null;
+  },
 };
 
-export const Sidebar = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
+interface SidebarProps {
+  readonly pageKind: PageKind;
+  readonly series?: {
+    readonly name: string;
+    readonly slug: string;
+    readonly links: readonly {
+      readonly permalink: string;
+      readonly title: string;
+    }[];
+  } | null;
+}
+
+export const Sidebar = memo<SidebarProps>(({ pageKind, series }) => {
+  const Widgets = widgetsPerPage[pageKind];
   return (
-    <aside role="complementary" className="hidden lg:sticky lg:top-16 lg:block lg:mx-4 lg:w-80">
-      {widgetsPerPage[pageKind]}
+    <aside
+      role="complementary"
+      className="flex flex-row flex-wrap gap-4 px-2 w-full lg:sticky lg:top-16 lg:flex-col lg:flex-nowrap lg:mx-4 lg:px-0 lg:max-w-xs"
+    >
+      <Widgets pageKind={pageKind} series={series} />
     </aside>
   );
 });

@@ -43,7 +43,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
             aria-label="Poprzednia strona"
             title="Poprzednia strona"
           >
-            ⬅
+            <span className="rotate-180">➔</span>
           </a>
         </Link>
       )}
@@ -83,7 +83,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
             aria-label="Następna strona"
             title="Następna strona"
           >
-            ➡
+            ➔
           </a>
         </Link>
       )}

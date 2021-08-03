@@ -24,6 +24,19 @@ export const postToProps = async (
 
   const mainCategory = categoriesToMainCategory(post.data.categories);
 
+  const series = post.data.series
+    ? {
+        name: post.data.series.name,
+        slug: post.data.series.slug,
+        links: (await readAllPosts({ series: post.data.series.slug })).posts
+          .map((p) => ({
+            permalink: p.data.permalink,
+            title: p.data.title,
+          }))
+          .reverse(),
+      }
+    : null;
+
   return {
     ...contentObj,
     frontmatter: {
@@ -31,6 +44,7 @@ export const postToProps = async (
       title: post.data.title,
       index: post.data.index,
       date: post.data.date,
+      series,
       authors: authors
         .filter((author): author is AuthorJson => !!author)
         .map((author) => {
@@ -71,8 +85,9 @@ export const postToProps = async (
 export async function getMarkdownPostsFor({
   page = 1,
   category,
-}: { readonly page?: number; readonly category?: string } = {}) {
-  const { postsCount, posts } = await readAllPosts({ category, skip: (page - 1) * pageSize, limit: pageSize });
+  series,
+}: { readonly page?: number; readonly category?: string; readonly series?: string } = {}) {
+  const { postsCount, posts } = await readAllPosts({ category, series, skip: (page - 1) * pageSize, limit: pageSize });
 
   return { postsCount, posts, page };
 }

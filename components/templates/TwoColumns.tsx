@@ -11,23 +11,31 @@ export const TwoColumns = memo<
   PropsWithChildren<{
     readonly withSidebar: boolean;
     readonly pageKind: PageKind;
+    readonly series?: {
+      readonly name: string;
+      readonly slug: string;
+      readonly links: readonly {
+        readonly permalink: string;
+        readonly title: string;
+      }[];
+    } | null;
   }>
->(({ children, withSidebar, pageKind }) => {
+>(({ children, withSidebar, pageKind, series }) => {
   const { setUIState, uiState } = useUIState();
 
   return (
     <>
       <SiteHeader pageKind={pageKind} />
-      <div className="flex flex-row items-start justify-center">
+      <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-center">
         <main
           itemScope
           itemType="http://schema.org/Blog"
           id="main-content"
-          className="flex-1 mt-4 pb-20 px-2 w-full max-w-3xl lg:mt-0 lg:px-0"
+          className="flex-1 mt-4 pb-8 px-2 w-full max-w-3xl lg:mt-0 lg:pb-20 lg:px-0"
         >
           {children}
         </main>
-        {withSidebar && <Sidebar pageKind={pageKind} />}
+        {withSidebar && <Sidebar pageKind={pageKind} series={series} />}
       </div>
       <button
         id="main-menu-button"

@@ -8,21 +8,27 @@ const withTM = require('next-transpile-modules')([
 ]);
 const { withPlaiceholder } = require('@plaiceholder/next');
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 /**
  * @type import('next/dist/next-server/server/config-shared').NextConfig
  */
-const config = withPlaiceholder(
-  withTM({
-    webpack(config, { isServer }) {
-      config.module.rules.push({
-        test: /\.svg$/,
-        issuer: /\.(js|ts)x?$/,
-        use: ['@svgr/webpack'],
-      });
+const config = withBundleAnalyzer(
+  withPlaiceholder(
+    withTM({
+      webpack(config, { isServer }) {
+        config.module.rules.push({
+          test: /\.svg$/,
+          issuer: /\.(js|ts)x?$/,
+          use: ['@svgr/webpack'],
+        });
 
-      return config;
-    },
-  }),
+        return config;
+      },
+    }),
+  ),
 );
 
 config.images = {

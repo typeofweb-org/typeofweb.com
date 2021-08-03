@@ -35,11 +35,13 @@ export async function readFilesInDir(dir: string): Promise<readonly string[]> {
 
 export async function readAllPosts({
   category,
+  series,
   skip,
   limit,
   includePages,
 }: {
   readonly category?: string;
+  readonly series?: string;
   readonly skip?: number;
   readonly limit?: number;
   readonly includePages?: boolean;
@@ -55,6 +57,9 @@ export async function readAllPosts({
   }
   if (category) {
     postsWithFm = postsWithFm.filter((post) => categoriesToMainCategory(post.data.categories)?.slug === category);
+  }
+  if (series) {
+    postsWithFm = postsWithFm.filter((post) => post.data.series?.slug === series);
   }
   const postsCount = postsWithFm.length;
 
@@ -80,6 +85,12 @@ export async function readAllPosts({
 export async function getAllPermalinks() {
   const { posts } = await readAllPosts({ includePages: true });
   return [...navItems.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
+}
+
+export async function getSeriesPermalinks() {
+  const { posts } = await readAllPosts({ includePages: false });
+  const seriesSlugs = [...new Set(posts.map((fm) => fm.data.series?.slug).filter((slug): slug is string => !!slug))];
+  return seriesSlugs;
 }
 
 export async function getPostByPermalink(permalink: string) {
