@@ -82,10 +82,6 @@ export async function getAllPermalinks() {
   return [...navItems.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
 }
 
-export function permalinkIsCategory(permalink: string) {
-  return navItems.map((c) => c.slug).includes(permalink);
-}
-
 export async function getPostByPermalink(permalink: string) {
   const { posts } = await readAllPosts({ includePages: true });
   return posts.find((fm) => fm.data.permalink === permalink);

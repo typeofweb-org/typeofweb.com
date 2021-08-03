@@ -3,6 +3,7 @@ import { memo } from 'react';
 import FacebookIcon from '../../images/social/facebook.svg';
 import GithubIcon from '../../images/social/github.svg';
 import InstagramIcon from '../../images/social/instagram.svg';
+import JsonFeedIcon from '../../images/social/jsonfeed.svg';
 import LinkedinIcon from '../../images/social/linkedin.svg';
 import RssIcon from '../../images/social/rss.svg';
 import TwitterIcon from '../../images/social/twitter.svg';
@@ -41,7 +42,13 @@ export const SocialWidget = memo(() => {
           );
         })}
         <li className="mt-4 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
-          <a href="#" aria-label="RSS" title="RSS" className="block">
+          <a href="/feed.json" aria-label="JSON Feed" title="JSON Feed" className="block">
+            <JsonFeedIcon className="inline-block mr-2 w-8 fill-current" />
+            JSON Feed
+          </a>
+        </li>
+        <li className="mt-4 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
+          <a href="/feed" aria-label="RSS" title="RSS" className="block">
             <RssIcon className="inline-block mr-2 w-8 fill-current" />
             RSS
           </a>

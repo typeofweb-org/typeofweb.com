@@ -4,14 +4,16 @@ import { memo } from 'react';
 
 import { host } from '../constants';
 
+import { permalinkIsCategory } from './molecules/MainNav';
+
 interface RouterQuery {
   readonly page?: string;
   readonly permalink?: string;
 }
 
-const siteName = `Type of Web`;
-const shortDescription = `Blog o programowaniu`;
-const defaultDescription = `Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…`;
+export const siteName = `Type of Web`;
+export const shortDescription = `Blog o programowaniu`;
+export const defaultDescription = `Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…`;
 const SEP = ' • ';
 const MAX_TITLE_LEN = 50;
 const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
@@ -90,7 +92,11 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
   const next = query.page ? page + 1 : null;
   const prev = query.page ? page - 1 : null;
 
-  let fullTitle = (title ? [title, pageTitle, siteName] : [siteName, pageTitle])
+  const type = query.permalink ? 'article' : 'website';
+  const isCategory = query.permalink ? permalinkIsCategory(query.permalink) : false;
+  const relevantTitle = isCategory ? `Kategoria ${query.permalink}` : title;
+
+  let fullTitle = (relevantTitle ? [relevantTitle, pageTitle, siteName] : [siteName, pageTitle])
     .filter((x): x is string => !!x && !!x.trim())
     .map((x) => x.replace(/%%(title|page|sep|sitename)%%/gi, '').trim())
     .join(SEP)
@@ -99,9 +105,9 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
     fullTitle += ` ${SEP} ${shortDescription}`;
   }
 
-  const canonical = page === 1 ? `${host}${asPath}`.replace('/strona/1', '/') : `${host}${asPath}`;
-
-  const type = query.permalink ? 'article' : 'website';
+  const canonical = (page === 1 ? `${host}${asPath}`.replace(/\/strona\/1$/, '/') : `${host}${asPath}`)
+    .trim()
+    .replace(/\/$/, '');
 
   return (
     <Head>
@@ -133,12 +139,18 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* <link
+      <link
         rel="alternate"
         type="application/rss+xml"
         title="Type of Web &raquo; Kanał z wpisami"
-        href="https://${baseUrl}/feed/"
-      /> */}
+        href={`${host}/feed/`}
+      />
+      <link
+        rel="alternate"
+        type="application/json"
+        title="Type of Web &raquo; Kanał z wpisami"
+        href={`${host}/feed.json`}
+      />
     </Head>
   );
 });

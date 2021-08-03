@@ -9,6 +9,9 @@ const withTM = require('next-transpile-modules')([
 
 const { withPlaiceholder } = require('@plaiceholder/next');
 
+/**
+ * @type {import('next/dist/next-server/server/config-shared').NextConfig}
+ */
 const config = withPlaiceholder(
   withTM({
     webpack(config) {
@@ -28,5 +31,12 @@ config.images = {
   deviceSizes: [320, 640, 768, 828, 1080, 1200, 1920],
   imageSizes: [16, 32, 48, 64, 96, 128, 256, 320, 768],
 };
+
+config.rewrites = () => [
+  { source: '/feed', destination: '/api/feed' },
+  { source: '/feed.json', destination: '/api/feed.json' },
+];
+
+config.reactStrictMode = true;
 
 module.exports = config;

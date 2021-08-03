@@ -1,6 +1,7 @@
+import { permalinkIsCategory } from '../../../components/molecules/MainNav';
 import { pageSize } from '../../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
-import { getAllPermalinks, permalinkIsCategory, readAllPosts } from '../../../utils/wordpress';
+import { getAllPermalinks, readAllPosts } from '../../../utils/wordpress';
 import IndexPage from '../../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';

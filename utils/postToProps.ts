@@ -30,6 +30,7 @@ export const postToProps = async (
       id: post.data.id,
       title: post.data.title,
       index: post.data.index,
+      date: post.data.date,
       authors: authors
         .filter((author): author is AuthorJson => !!author)
         .map((author) => {

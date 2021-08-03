@@ -11,6 +11,10 @@ export const navItems = [
   { slug: 'praca-zdalna', label: 'Praca zdalna' },
 ];
 
+export function permalinkIsCategory(permalink: string) {
+  return navItems.map((c) => c.slug).includes(permalink);
+}
+
 export const MainNav = memo(() => {
   const { uiState } = useUIState();
   const router = useRouter();
