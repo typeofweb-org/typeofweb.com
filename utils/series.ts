@@ -33,4 +33,4 @@ export const getPrevSeriesLink = (
 };
 
 export const getSeriesLink = (seriesOrSlug: Series | string) =>
-  typeof seriesOrSlug === 'string' ? `kurs/${seriesOrSlug}` : `kurs/${seriesOrSlug.slug}`;
+  typeof seriesOrSlug === 'string' ? `/kurs/${seriesOrSlug}` : `/kurs/${seriesOrSlug.slug}`;

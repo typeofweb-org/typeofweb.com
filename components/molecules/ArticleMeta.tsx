@@ -92,7 +92,7 @@ export const ArticleMeta = memo<{
                   ', '
                 )}
               </Fragment>
-            ))}
+            ))}{' '}
             {mainCategory && (
               <span
                 className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${

@@ -75,14 +75,9 @@ export const RunningHeaderProvider = ({ children }: PropsWithChildren<{}>) => {
       }
       const rect = containerElRef.current.getBoundingClientRect();
 
-      const firstHalf = Math.min(rect.bottom / rect.height, 1);
-      const secondHalf = Math.max((rect.bottom - window.innerHeight) / rect.height, 0);
+      const p = Math.min(1, Math.max(0, -rect.y / (rect.height - window.innerHeight)));
 
-      if (firstHalf + secondHalf > 1) {
-        setProgress(1 - firstHalf);
-      } else {
-        setProgress(1 - secondHalf);
-      }
+      setProgress(p);
     });
   }, []);
 
