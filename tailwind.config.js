@@ -4,7 +4,16 @@ const plugin = require('tailwindcss/plugin');
  * @type {import('tailwindcss/tailwind-config').TailwindConfig}
  */
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './hooks/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.{js,ts,jsx,tsx}',
+    './images/**/*.{js,ts,jsx,tsx}',
+    './utils/**/*.{js,ts,jsx,tsx}',
+    './wordpress_posts/**/*.{js,ts,jsx,tsx}',
+    './*.{js,ts,jsx,tsx}',
+  ],
   mode: 'jit',
   darkMode: 'media',
   theme: {
