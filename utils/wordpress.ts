@@ -134,11 +134,11 @@ export async function getExcerptAndContent(
       ? [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')]
       : [null, post.content];
 
-  if (!excerpt || !content) {
+  if ((!excerpt && post.data.type === 'post') || !content) {
     throw new Error('????');
   }
 
-  const excerptString = toHtml(excerpt, { excerpt: true });
+  const excerptString = toHtml(excerpt ?? '', { excerpt: true });
   const excerptWords = excerptString.split(/\s+/);
   const ex = excerptWords.length > 50 ? excerptWords.slice(0, 50).join(' ') + '…' : excerptWords.join(' ');
 
@@ -156,7 +156,7 @@ export async function getExcerptAndContent(
       isMdx: true as const,
     };
   } catch (err) {
-    console.log(post.data.permalink, err);
+    // console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
       content: toHtml(content, { excerpt: false }).toString('utf-8'),
