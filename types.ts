@@ -9,3 +9,16 @@ export type InferGetStaticPropsType<T extends (...args: any) => any> = PromiseVa
     ? P
     : never
   : never;
+
+export interface Series {
+  readonly name: string;
+  readonly slug: string;
+  readonly currentIndex: number;
+  readonly count: number;
+}
+export interface SeriesWithToC extends Series {
+  readonly links: readonly {
+    readonly permalink: string;
+    readonly title: string;
+  }[];
+}

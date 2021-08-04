@@ -13,7 +13,7 @@ async function generateFeed() {
 
   const { posts: allPosts } = await readAllPosts({ includePages: false });
   const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default;
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
+  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: false })))).map(
     (p) => ({
       ...p,
       content: '',

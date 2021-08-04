@@ -22,7 +22,7 @@ export const SeriesTableOfContentsWidget = memo<SeriesTableOfContentsWidgetProps
     return null;
   }
 
-  const currentIndex = findCurrentSeriesIndex(permalink, series);
+  const currentIndex = findCurrentSeriesIndex(permalink, series.links);
   return (
     <Widget title={`Wpisy z serii ${series.name}:`}>
       <ol className="counter-reset pl-10">
@@ -37,6 +37,7 @@ export const SeriesTableOfContentsWidget = memo<SeriesTableOfContentsWidgetProps
                   className={`align-top hover:text-blue-500 text-gray-700 text-lg leading-snug transition-all ${
                     currentIndex === idx ? 'font-bold' : ''
                   }`}
+                  {...(currentIndex === idx && { rel: 'bookmark' })}
                   href={'/' + link.permalink}
                 >
                   {link.title}

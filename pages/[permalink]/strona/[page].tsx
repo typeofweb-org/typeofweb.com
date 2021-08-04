@@ -1,4 +1,5 @@
-import { pageSize, permalinkIsCategory } from '../../../constants';
+import { pageSize } from '../../../constants';
+import { permalinkIsCategory } from '../../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
 import { getAllPermalinks, readAllPosts } from '../../../utils/wordpress';
 import IndexPage from '../../index';

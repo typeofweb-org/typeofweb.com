@@ -43,12 +43,13 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
             key={post.frontmatter.id}
             title={post.frontmatter.title}
             mainCategory={post.frontmatter.mainCategory}
-            href={'/' + post.frontmatter.permalink}
+            permalink={post.frontmatter.permalink}
             authors={post.frontmatter.authors}
             cover={post.frontmatter.cover ? { ...post.frontmatter.cover, preload: i === 0 } : null}
             id={post.frontmatter.id}
             index={post.frontmatter.index}
             excerpt={post.excerpt}
+            series={post.frontmatter.series}
           />
         );
 

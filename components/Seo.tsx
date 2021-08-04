@@ -2,9 +2,12 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
 
-import { defaultDescription, host, permalinkIsCategory, shortDescription, siteName } from '../constants';
+import { defaultDescription, host, shortDescription, siteName } from '../constants';
 import { usePage, usePermalink } from '../hooks/usePermalink';
+import { permalinkIsCategory } from '../utils/categories';
 import { getNextSeriesLink, getPrevSeriesLink } from '../utils/series';
+
+import type { SeriesWithToC } from '../types';
 
 const SEP = ' • ';
 const MAX_TITLE_LEN = 50;
@@ -14,14 +17,7 @@ interface SeoProps {
   readonly title?: string | null;
   readonly description?: string | null;
   readonly author?: string | null;
-  readonly series?: {
-    readonly name: string;
-    readonly slug: string;
-    readonly links: readonly {
-      readonly permalink: string;
-      readonly title: string;
-    }[];
-  } | null;
+  readonly series?: SeriesWithToC | null;
 }
 
 const jsonLd = {
@@ -155,21 +151,7 @@ export const Seo = memo<SeoProps>(({ title = '', description = defaultDescriptio
 });
 Seo.displayName = 'Seo';
 
-function getNext(
-  permalink: string | null | undefined,
-  series:
-    | {
-        readonly name: string;
-        readonly slug: string;
-        readonly links: readonly {
-          readonly permalink: string;
-          readonly title: string;
-        }[];
-      }
-    | null
-    | undefined,
-  page?: number,
-) {
+function getNext(permalink: string | null | undefined, series: SeriesWithToC | null | undefined, page?: number) {
   if (permalink && series) {
     const nextSeries = getNextSeriesLink(permalink, series);
     if (nextSeries) {
@@ -183,21 +165,7 @@ function getNext(
 
   return null;
 }
-function getPrev(
-  permalink: string | null | undefined,
-  series:
-    | {
-        readonly name: string;
-        readonly slug: string;
-        readonly links: readonly {
-          readonly permalink: string;
-          readonly title: string;
-        }[];
-      }
-    | null
-    | undefined,
-  page?: number,
-) {
+function getPrev(permalink: string | null | undefined, series: SeriesWithToC | null | undefined, page?: number) {
   if (permalink && series) {
     const prevSeries = getPrevSeriesLink(permalink, series);
     if (prevSeries) {

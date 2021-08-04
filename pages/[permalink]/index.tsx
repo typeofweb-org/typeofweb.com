@@ -3,8 +3,8 @@ import { Seo } from '../../components/Seo';
 import { NewsletterForm } from '../../components/molecules/NewsletterForm';
 import { SingleArticle } from '../../components/organisms/SingleArticle';
 import { TwoColumns } from '../../components/templates/TwoColumns';
-import { permalinkIsCategory } from '../../constants';
 import { useRunningHeader } from '../../hooks/runningHeader';
+import { permalinkIsCategory } from '../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
 import { getAllPermalinks, getPostByPermalink } from '../../utils/wordpress';
 import IndexPage from '../index';
@@ -66,7 +66,7 @@ async function getStaticPropsForSingleArticle(permalink: string) {
   }
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
-  return { props: { ...(await postToProps(post, authorsJson)), pageKind: post.data.type } };
+  return { props: { ...(await postToProps(post, authorsJson, { onlyExcerpt: false })), pageKind: post.data.type } };
 }
 
 const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {

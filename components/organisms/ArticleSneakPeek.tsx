@@ -6,6 +6,7 @@ import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
+import type { Series } from '../../types';
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
 import type { Author } from '../molecules/ArticleMeta';
 
@@ -16,12 +17,14 @@ interface ArticleSneakPeekProps {
   readonly title: string;
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;
-  readonly href: string;
+  readonly permalink: string;
   readonly excerpt: string;
+  readonly series?: Series | null;
 }
 
 export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
-  ({ cover, id, index, title, authors, mainCategory, href, excerpt }) => {
+  ({ cover, id, index, title, authors, mainCategory, permalink, series, excerpt }) => {
+    const href = '/' + permalink;
     return (
       <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
         <header className="bg-gray-200">
@@ -34,7 +37,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
           )}
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
             <ArticleTitle title={title} id={id} index={index} href={href} level={2} />
-            <ArticleMeta authors={authors} mainCategory={mainCategory} size="small" />
+            <ArticleMeta series={series} authors={authors} mainCategory={mainCategory} size="small" />
           </div>
         </header>
         <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">

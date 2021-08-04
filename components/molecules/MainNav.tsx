@@ -2,8 +2,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
 
-import { navItems } from '../../constants';
 import { useUIState } from '../../hooks/useUiState';
+import { allCategories, getCategoryLink } from '../../utils/categories';
+import { getSeriesLink } from '../../utils/series';
+
+export const navItems = [
+  ...allCategories.map((c) => ({ slug: getCategoryLink(c), label: c.name })),
+  { slug: getSeriesLink('react-js'), label: 'Kurs React.js' },
+];
 
 export const MainNav = memo(() => {
   const { uiState } = useUIState();

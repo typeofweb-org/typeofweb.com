@@ -1,12 +1,12 @@
 import React, { forwardRef, memo } from 'react';
 
-import { findCurrentSeriesIndex } from '../../utils/series';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
 import { ArticleFooter } from '../molecules/ArticleFooter';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
+import type { SeriesWithToC } from '../../types';
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
 import type { Author } from '../molecules/ArticleMeta';
 
@@ -21,14 +21,7 @@ interface SingleArticleProps {
   readonly permalink: string;
   readonly excerpt: string | null;
   readonly content: JSX.Element;
-  readonly series?: {
-    readonly name: string;
-    readonly slug: string;
-    readonly links: readonly {
-      readonly permalink: string;
-      readonly title: string;
-    }[];
-  } | null;
+  readonly series?: SeriesWithToC | null;
 }
 
 export const SingleArticle = memo(
@@ -55,16 +48,7 @@ export const SingleArticle = memo(
                   <p className="lead">{excerpt}</p>
                 </div>
               )}
-              {series && (
-                <p className="mb-4 mt-3 text-center text-lg">
-                  Ten artykuł jest częścią{' '}
-                  <strong>
-                    {findCurrentSeriesIndex(permalink, series) + 1} z {series.links.length}
-                  </strong>{' '}
-                  serii {series.name}.
-                </p>
-              )}
-              <ArticleMeta rel={true} authors={authors} mainCategory={mainCategory} size="small" />
+              <ArticleMeta series={series} rel={true} authors={authors} mainCategory={mainCategory} size="small" />
             </div>
 
             {cover && <ArticleCoverImage cover={cover} wide={true} />}

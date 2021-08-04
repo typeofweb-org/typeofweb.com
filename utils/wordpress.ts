@@ -4,12 +4,11 @@ import Url from 'url';
 
 import GrayMatter from 'gray-matter';
 
-import { navItems } from '../constants';
-
-import { categoriesToMainCategory } from './mainCategory';
+import { allCategories, categoriesToMainCategory } from './categories';
 import { toHtml, toMdx } from './markdown';
 
 import type { PromiseValue } from '../types';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', 'wordpress_posts');
 
@@ -84,7 +83,7 @@ export async function readAllPosts({
 
 export async function getAllPermalinks() {
   const { posts } = await readAllPosts({ includePages: true });
-  return [...navItems.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
+  return [...allCategories.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
 }
 
 export async function getSeriesPermalinks() {
@@ -101,8 +100,23 @@ export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>
 
 export async function getExcerptAndContent(
   post: PostByPermalink,
-  { onlyExcerpt }: { readonly onlyExcerpt?: boolean } = {},
-) {
+  options: { readonly onlyExcerpt: true },
+): Promise<{ readonly excerpt: string; readonly isMdx: boolean }>;
+export async function getExcerptAndContent(
+  post: PostByPermalink,
+  options: { readonly onlyExcerpt: false },
+): Promise<
+  | { readonly excerpt: string; readonly isMdx: true; readonly content: MDXRemoteSerializeResult }
+  | { readonly excerpt: string; readonly isMdx: false; readonly content: string }
+>;
+export async function getExcerptAndContent(
+  post: PostByPermalink,
+  options: { readonly onlyExcerpt: boolean },
+): Promise<
+  | { readonly excerpt: string; readonly isMdx: boolean }
+  | { readonly excerpt: string; readonly isMdx: true; readonly content: MDXRemoteSerializeResult }
+  | { readonly excerpt: string; readonly isMdx: false; readonly content: string }
+> {
   if (!post) {
     throw new Error();
   }
@@ -120,24 +134,17 @@ export async function getExcerptAndContent(
       ? [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')]
       : [null, post.content];
 
-  /**
-   * @todo:
-   * - fix headings level (h1 -> h2 etc.)
-   * - if markdown – compile it
-   */
+  if (!excerpt || !content) {
+    throw new Error('????');
+  }
 
-  const excerptString = excerpt ? toHtml(excerpt, { excerpt: true }) : null;
-  const excerptWords = excerptString?.split(/\s+/);
-  const ex = excerptWords
-    ? excerptWords.length > 50
-      ? excerptWords.slice(0, 50).join(' ') + '…'
-      : excerptWords.join(' ')
-    : null;
+  const excerptString = toHtml(excerpt, { excerpt: true });
+  const excerptWords = excerptString.split(/\s+/);
+  const ex = excerptWords.length > 50 ? excerptWords.slice(0, 50).join(' ') + '…' : excerptWords.join(' ');
 
-  if (onlyExcerpt) {
+  if (options.onlyExcerpt) {
     return {
       excerpt: ex,
-      content: '',
       isMdx: false as const,
     };
   }

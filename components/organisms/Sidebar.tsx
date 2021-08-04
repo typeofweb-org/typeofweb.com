@@ -4,7 +4,7 @@ import { LatestPostsWidget } from '../molecules/LatestPostsWidget';
 import { SeriesTableOfContentsWidget } from '../molecules/SeriesTableOfContentsWidget';
 import { SocialWidget } from '../molecules/SocialWidget';
 
-import type { PageKind } from '../../types';
+import type { PageKind, SeriesWithToC } from '../../types';
 import type { ComponentType } from 'react';
 
 const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
@@ -38,14 +38,7 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
 
 interface SidebarProps {
   readonly pageKind: PageKind;
-  readonly series?: {
-    readonly name: string;
-    readonly slug: string;
-    readonly links: readonly {
-      readonly permalink: string;
-      readonly title: string;
-    }[];
-  } | null;
+  readonly series?: SeriesWithToC | null;
 }
 
 export const Sidebar = memo<SidebarProps>(({ pageKind, series }) => {

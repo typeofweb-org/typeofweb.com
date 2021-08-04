@@ -4,21 +4,14 @@ import { useUIState } from '../../hooks/useUiState';
 import { SiteHeader } from '../molecules/SiteHeader';
 import { Sidebar } from '../organisms/Sidebar';
 
-import type { PageKind } from '../../types';
+import type { PageKind, SeriesWithToC } from '../../types';
 import type { PropsWithChildren } from 'react';
 
 export const TwoColumns = memo<
   PropsWithChildren<{
     readonly withSidebar: boolean;
     readonly pageKind: PageKind;
-    readonly series?: {
-      readonly name: string;
-      readonly slug: string;
-      readonly links: readonly {
-        readonly permalink: string;
-        readonly title: string;
-      }[];
-    } | null;
+    readonly series?: SeriesWithToC | null;
   }>
 >(({ children, withSidebar, pageKind, series }) => {
   const { setUIState, uiState } = useUIState();
