@@ -6,8 +6,9 @@ import GrayMatter from 'gray-matter';
 
 import { allCategories, categoriesToMainCategory } from './categories';
 import { toHtml, toMdx } from './markdown';
+import { allSeries } from './series';
 
-import type { PromiseValue } from '../types';
+import type { PromiseValue, Series } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', 'wordpress_posts');
@@ -83,7 +84,11 @@ export async function readAllPosts({
 
 export async function getAllPermalinks() {
   const { posts } = await readAllPosts({ includePages: true });
-  return [...allCategories.map((n) => n.slug), ...posts.map((fm) => fm.data.permalink)];
+  return [
+    ...allCategories.map((n) => n.slug),
+    ...allSeries.map((s) => s.slug),
+    ...posts.map((fm) => fm.data.permalink),
+  ];
 }
 
 export async function getSeriesPermalinks() {

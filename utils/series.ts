@@ -32,5 +32,20 @@ export const getPrevSeriesLink = (
   }
 };
 
+export const allSeries = [
+  { slug: 'self-publishing', name: 'Self Publishing' },
+  { slug: 'react-js', name: 'React.js' },
+  { slug: 'piece-of-cake', name: 'Piece of cake' },
+  { slug: 'buddy-works', name: 'CI/CD z Buddy.works' },
+  { slug: 'vue-js', name: 'Vue.js' },
+  { slug: 'hapijs', name: 'HapiJS' },
+  { slug: 'typescript', name: 'TypeScript' },
+  { slug: 'angular-2', name: 'Angular 2' },
+];
+
 export const getSeriesLink = (seriesOrSlug: Series | string) =>
   typeof seriesOrSlug === 'string' ? `/kurs/${seriesOrSlug}` : `/kurs/${seriesOrSlug.slug}`;
+
+export function permalinkIsSeries(permalink: string) {
+  return allSeries.map((s) => s.slug).includes(permalink);
+}

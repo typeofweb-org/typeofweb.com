@@ -5,6 +5,7 @@ import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
 import { TwoColumns } from '../components/templates/TwoColumns';
 import { host } from '../constants';
+import { getUrlForPermalink } from '../utils/permalinks';
 import { getMarkdownPostsFor, postToProps } from '../utils/postToProps';
 
 import type { InferGetStaticPropsType } from '../types';
@@ -31,6 +32,7 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
 };
 
 const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const href = permalink ? getUrlForPermalink(permalink) : null;
   return (
     <TwoColumns withSidebar={true} pageKind="index">
       {posts.map((post, i) => {
@@ -63,7 +65,7 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
         }
         return sneakPeek;
       })}
-      <Pagination pages={Math.ceil(postsCount / 10)} prefix={permalink ? `${host}/${permalink}` : host} />
+      <Pagination pages={Math.ceil(postsCount / 10)} prefix={href ? `${host}${href}` : host} />
     </TwoColumns>
   );
 };

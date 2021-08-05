@@ -4,6 +4,9 @@ const plugin = require('tailwindcss/plugin');
  * @type {import('tailwindcss/tailwind-config').TailwindConfig}
  */
 module.exports = {
+  corePlugins: {
+    preflight: false,
+  },
   purge: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -106,7 +109,7 @@ module.exports = {
 
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
+    // require('@tailwindcss/typography'),
     plugin(function ({ config, addUtilities, addVariant, e, postcss, theme }) {
       {
         addUtilities({

@@ -24,7 +24,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
 
   return (
     <nav
-      className={`flex flex-row gap-2 items-stretch justify-center ${isLoading ? 'cursor-wait' : ''}`}
+      className={`flex py-2 flex-row gap-2 items-stretch justify-center ${isLoading ? 'cursor-wait' : ''}`}
       role="navigation"
       aria-label="Paginacja"
       aria-disabled={isLoading}
@@ -37,13 +37,13 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
         <Link href={`${prefix}/strona/${prev}`}>
           <a
             rel="prev"
-            className={`inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
+            className={`focus:no-underline inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
               isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-blue-500'
             }`}
             aria-label="Poprzednia strona"
             title="Poprzednia strona"
           >
-            <span className="rotate-180">➔</span>
+            <span className="transform rotate-180">➔</span>
           </a>
         </Link>
       )}
@@ -77,7 +77,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
         <Link href={`${prefix}/strona/${next}`}>
           <a
             rel="next"
-            className={`inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
+            className={`focus:no-underline inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
               isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-blue-500'
             }`}
             aria-label="Następna strona"

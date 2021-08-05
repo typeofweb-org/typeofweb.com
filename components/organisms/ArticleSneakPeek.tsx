@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { memo } from 'react';
 
+import { getUrlForPermalink } from '../../utils/permalinks';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
@@ -24,7 +25,7 @@ interface ArticleSneakPeekProps {
 
 export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
   ({ cover, id, index, title, authors, mainCategory, permalink, series, excerpt }) => {
-    const href = '/' + permalink;
+    const href = getUrlForPermalink(permalink);
     return (
       <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
         <header className="bg-gray-200">
