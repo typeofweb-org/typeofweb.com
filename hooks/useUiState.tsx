@@ -1,4 +1,6 @@
-import { useContext, createContext, useMemo, useState } from 'react';
+import { useContext, createContext, useMemo, useState, useEffect } from 'react';
+
+import { useBodyFix } from './useBodyFix';
 
 import type { SetStateAction, Dispatch, PropsWithChildren } from 'react';
 
@@ -16,10 +18,19 @@ UIStateContext.displayName = 'UIStateContext';
 
 export const UIStateProvider = ({ children }: PropsWithChildren<{}>) => {
   const [uiState, setUIState] = useState<UIStateValue>({ isMenuOpen: false });
+  const fixBodyService = useBodyFix();
 
   const value = useMemo(() => {
     return { setUIState, uiState };
   }, [setUIState, uiState]);
+
+  useEffect(() => {
+    if (uiState.isMenuOpen) {
+      fixBodyService.fixBody();
+    } else {
+      fixBodyService.unfixBody();
+    }
+  }, [fixBodyService, uiState.isMenuOpen]);
 
   return <UIStateContext.Provider value={value}>{children}</UIStateContext.Provider>;
 };

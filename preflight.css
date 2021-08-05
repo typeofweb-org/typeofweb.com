@@ -22,7 +22,7 @@ body {
   line-height: inherit;
 }
 
-hr {
+/* hr {
   height: 0;
   color: inherit;
   border-top-width: 1px;
@@ -31,7 +31,7 @@ hr {
 abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
-}
+} */
 
 b,
 strong {
@@ -99,9 +99,9 @@ button,
   box-shadow: none;
 }
 
-legend {
+/* legend {
   padding: 0;
-}
+} */
 
 progress {
   vertical-align: baseline;
@@ -126,9 +126,9 @@ progress {
   font: inherit;
 }
 
-summary {
+/* summary {
   display: list-item;
-}
+} */
 
 blockquote,
 dl,

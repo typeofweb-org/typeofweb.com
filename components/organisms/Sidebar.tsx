@@ -46,7 +46,7 @@ export const Sidebar = memo<SidebarProps>(({ pageKind, series }) => {
   return (
     <aside
       role="complementary"
-      className="flex flex-row flex-wrap gap-4 px-2 w-full lg:sticky lg:top-16 lg:flex-col lg:flex-nowrap lg:mx-4 lg:px-0 lg:max-w-xs"
+      className="flex flex-row flex-wrap gap-0 px-2 w-full sm:gap-4 lg:sticky lg:top-16 lg:flex-col lg:flex-nowrap lg:mx-4 lg:px-0 lg:max-w-xs"
     >
       <Widgets pageKind={pageKind} series={series} />
     </aside>

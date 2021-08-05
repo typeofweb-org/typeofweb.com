@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { memo } from 'react';
+import { useCallback, memo } from 'react';
 
 import { useUIState } from '../../hooks/useUiState';
 import ReactIcon from '../../images/react-icon.svg';
@@ -21,9 +21,10 @@ const navItems = [
 ];
 
 export const MainNav = memo(() => {
-  const { uiState } = useUIState();
+  const { uiState, setUIState } = useUIState();
   const router = useRouter();
   const permalink = router.query['permalink'] || router.query['seriesSlug'];
+  const closeMenu = useCallback(() => setUIState((state) => ({ ...state, isMenuOpen: false })), [setUIState]);
 
   return (
     <nav
@@ -40,6 +41,7 @@ export const MainNav = memo(() => {
             <li key={item.slug} className="flex items-stretch mt-0.5">
               <Link href={getUrlForPermalink(item.slug)}>
                 <a
+                  onClick={closeMenu}
                   className={`group inline-flex items-center transition-colors text-3xl lg:text-base whitespace-nowrap ${
                     isActive
                       ? 'text-green-500 font-semibold border-b-2 border-green-500 hover:border-green-700 hover:text-green-700'

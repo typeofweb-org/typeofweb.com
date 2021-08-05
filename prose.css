@@ -70,12 +70,12 @@
     top: calc(0.875em - 0.1875em);
     left: 0.25em;
   }
-  .prose hr {
+  /* .prose hr {
     border-color: #f0f0f0;
     border-top-width: 1px;
     margin-top: 3em;
     margin-bottom: 3em;
-  }
+  } */
   .prose blockquote {
     margin-top: 1.6em;
     margin-bottom: 1.6em;
@@ -285,7 +285,7 @@
   .prose h2 + *,
   .prose h3 + *,
   .prose h4 + *,
-  .prose hr + *,
+  /* .prose hr + *, */
   .prose > :first-child {
     margin-top: 0;
   }

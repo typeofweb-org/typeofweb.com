@@ -23,13 +23,15 @@ function ScriptOnce(props: NextScriptProps) {
 function ScriptAfterInteraction(props: Partial<HTMLScriptElement>) {
   useEffect(() => {
     const listener = () => {
-      const script = Object.entries(props).reduce((script, [key, value]) => {
-        // @ts-ignore
-        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions, @typescript-eslint/no-unsafe-member-access -- we know that value is a keyof script
-        script[key as any] = value;
-        return script;
-      }, document.createElement('script'));
-      document.body.appendChild(script);
+      (window.requestIdleCallback || window.requestAnimationFrame)(() => {
+        const script = Object.entries(props).reduce((script, [key, value]) => {
+          // @ts-ignore
+          // eslint-disable-next-line @typescript-eslint/consistent-type-assertions, @typescript-eslint/no-unsafe-member-access -- we know that value is a keyof script
+          script[key as any] = value;
+          return script;
+        }, document.createElement('script'));
+        document.body.appendChild(script);
+      });
     };
     window.addEventListener('scroll', listener, { passive: true, once: true });
     return () => {

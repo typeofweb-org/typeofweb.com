@@ -22,6 +22,12 @@ html,
   padding-bottom: 8rem;
 }
 
+body.not-scrollable {
+  overflow: hidden;
+  position: fixed;
+  touch-action: none;
+}
+
 .digits:nth-child(-n + 9):nth-child(n + 1)::before {
   margin-left: -1.9rem;
 }
