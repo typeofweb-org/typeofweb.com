@@ -54,7 +54,9 @@ Przykładowa aplikacja w Reakcie może wyglądać tak:
   document.getElementById('root')
 );</code></pre>
 
-<CodepenWidget height="265" themeId="0" slugHash="zEbygp" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React"><a href="http://codepen.io/mmiszy/pen/zEbygp/">Zobacz Codepen Wstęp do React</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="zEbygp" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/mmiszy/pen/zEbygp/">Zobacz Codepen Wstęp do React</a>.
+</CodepenWidget>
 
 Użyłem tutaj mieszanki JavaScript i <strong>JSX — czyli czegoś w rodzaju HTML-a wbudowanego w JS</strong>. Wygląda ciekawie? Później przestudiujemy to dogłębnie!
 

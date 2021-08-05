@@ -41,6 +41,7 @@ config.excludeDefaultMomentLocales = true;
 config.experimental = config.experimental || {};
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
+config.experimental.scrollRestoration = true;
 config.reactStrictMode = true;
 
 config.rewrites = () => {

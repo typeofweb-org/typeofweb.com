@@ -106,7 +106,9 @@ Ale **nie słuchaj mnie**. Sam(a) wyrób sobie opinię :) Poczytaj, potestuj, i
 
 ## Demo
 
-<CodepenWidget height="265" themeId="0" slugHash="YaWmXN" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com"><a href="http://codepen.io/mmiszy/pen/YaWmXN/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="YaWmXN" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com">
+<a href="http://codepen.io/mmiszy/pen/YaWmXN/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.
+</CodepenWidget>
 
 ## Podsumowanie
 

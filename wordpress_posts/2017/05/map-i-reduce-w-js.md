@@ -23,7 +23,9 @@ seo: {}
 Napisałem artykuł o obserwablach, ale czegoś mi w nim zabrakło: Objaśnienia tak podstawowych pojęć i funkcji jak <code>map</code> i <code>reduce</code>. Observable na blogu pojawią się wkrótce, a ten krótki wpis ma na celu tylko lekkie wprowadzenie. Bardzo krótko i pobieżnie.
 
 Jeśli oczekujesz zgłębiania programowania funkcyjnego w JS to natychmiast zamknij ten wpis. Nie jest dla Ciebie!
-<CodepenWidget height="450" themeId="0" slugHash="zwWNEV" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="map reduce"><a href="http://codepen.io/mmiszy/pen/zwWNEV/">Zobacz Codepen map reduce</a>.</CodepenWidget>
+<CodepenWidget height="450" themeId="0" slugHash="zwWNEV" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="map reduce">
+<a href="http://codepen.io/mmiszy/pen/zwWNEV/">Zobacz Codepen map reduce</a>.
+</CodepenWidget>
 
 <h1 id="podsumowanie">Podsumowanie</h1>
 Jaka jest zaleta tego rozwiązania? Na pewno zwięzłość. Dodatkowo, jak już wspomniałem, możliwe byłoby wykonanie tutaj wszystkich operacji całkowicie równolegle! I o ile prawdopodobnie żaden silnik JavaScript tego teraz nie robi, to jednak warto o tym pamiętać w kontekście innych technologii i języków programowania. <strong>Map reduce to koncept uniwersalny i powszechnie wykorzystywany.</strong>

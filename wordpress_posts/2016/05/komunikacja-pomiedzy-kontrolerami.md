@@ -121,4 +121,6 @@ DataService.addObserver(newData =&gt; {
 
 <p>Niezależnie czy implementujemy obserwator czy publish-subscribe, to rozwiązanie jest zdecydowanie najbardziej elastyczne i najbardziej wydajne ze wszystkich wcześniej wymienionych. Istotny jest tutaj również fakt, że <strong>zapoznanie się ze wzorcem projektowym obserwatora jest wiedzą uniwersalną, a nie tylko specyficzną dla danego frameworka</strong>. Dzięki temu jest to wiedza użyteczna niezależnie od środowiska, w którym się pracuje i przez to bardzo cenna. Przykładową implementację tego wzorca wraz z prostymi testami jednostkowymi udostępniam poniżej. Kod jest również na <a href="https://gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d">gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d</a>.</p>
 
-<CodepenWidget height="266" themeId="light" slugHash="vGvaEN" defaultTab="js,result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/vGvaEN/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="266" themeId="light" slugHash="vGvaEN" defaultTab="js,result" user="mmiszy" embedVersion="2">
+<a href="http://codepen.io/mmiszy/pen/vGvaEN/">Zobacz Codepen</a>.
+</CodepenWidget>

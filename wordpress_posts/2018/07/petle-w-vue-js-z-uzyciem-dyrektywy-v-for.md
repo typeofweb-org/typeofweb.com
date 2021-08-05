@@ -54,7 +54,9 @@ new Vue({
 </ul>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="odZvvE" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for"><a href="http://codepen.io/wojtiku/pen/odZvvE/">Zobacz Codepen v-for</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="odZvvE" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for">
+<a href="http://codepen.io/wojtiku/pen/odZvvE/">Zobacz Codepen v-for</a>.
+</CodepenWidget>
 
 ## Dostęp do indeksu elementu
 
@@ -77,7 +79,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="BxWajL" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for z indeksem"><a href="http://codepen.io/wojtiku/pen/BxWajL/">Zobacz Codepen v-for z indeksem</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="BxWajL" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for z indeksem">
+<a href="http://codepen.io/wojtiku/pen/BxWajL/">Zobacz Codepen v-for z indeksem</a>.
+</CodepenWidget>
 
 Zwróć też uwagę na fakt, że wewnątrz pętli `v-for`, oprócz nowych zmiennych, masz normalny **dostęp do wszystkich pól danych** znajdujących się na instancji Vue. W powyższym przykładzie w każdej iteracji odnoszę się do pola `prefix`. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>.
 
@@ -106,10 +110,14 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="vjxOeb" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for na obiekcie"><a href="http://codepen.io/wojtiku/pen/vjxOeb/">Zobacz Codepen v-for na obiekcie</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="vjxOeb" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-for na obiekcie">
+<a href="http://codepen.io/wojtiku/pen/vjxOeb/">Zobacz Codepen v-for na obiekcie</a>.
+</CodepenWidget>
 
 ## Ćwiczenie
 
 Świetnie - wiesz już jak działa pętla `v-for` w Vue.js! Użyj tej wiedzy aby wyświetlić zagnieżdżoną listę, albo inaczej mówiąc listę list. Możesz posłużyć się poniższym Code Penem. Zdefiniowałem tam listę kategorii, a w każdej z kategorii listę produktów. Po prostu kliknij "edit on CodePen" i do dzieła! Nie zapomnij zamieścić swojego rozwiązania w komentarzu.
 
-<CodepenWidget height="265" themeId="0" slugHash="ZoeGPa" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-for - zadanie"><a href="http://codepen.io/wojtiku/pen/ZoeGPa/">Zobacz Codepen v-for - zadanie</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="ZoeGPa" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-for - zadanie">
+<a href="http://codepen.io/wojtiku/pen/ZoeGPa/">Zobacz Codepen v-for - zadanie</a>.
+</CodepenWidget>

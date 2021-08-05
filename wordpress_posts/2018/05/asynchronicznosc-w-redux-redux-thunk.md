@@ -51,7 +51,9 @@ Tutaj od razu wysyłam pierwszą akcję (1) — to mniej więcej to samo co robi
 
 Skupmy się jednak na thunku! Następnie do <code>dispatch</code> przekazuję funkcję — to nie działałoby bez <code>redux-thunk</code>! W tej funkcji (2) natychmiast wywołuję kolejny <code>INCREMENT</code>, a następnie, asynchronicznie, jeszcze dwa kolejne (3). Zobacz to na żywo:
 
-<CodepenWidget height="265" themeId="0" slugHash="MGjJda" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React Redux Thunk Type of Web"><a href="http://codepen.io/mmiszy/pen/MGjJda/">Zobacz Codepen React Redux Thunk Type of Web</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="MGjJda" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React Redux Thunk Type of Web">
+<a href="http://codepen.io/mmiszy/pen/MGjJda/">Zobacz Codepen React Redux Thunk Type of Web</a>.
+</CodepenWidget>
 
 Jeśli w demie powyżej widzisz od razu "Licznik: 5" to otwórz je w nowej karcie. Licznik zacznie się od 2 (po dwóch synchronicznych akcjach), a następnie po sekundzie wskoczy 3, po kolejnej 4 i potem 5.
 

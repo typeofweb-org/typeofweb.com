@@ -33,7 +33,9 @@ seo:
 
 Czasami musisz zrobić coś więcej, niż tylko **wyświetlić pola komponentu** w szablonie. Np. mając pola `firstName` i `lastName` chcesz wyświetlić pełne imię i nazwisko osoby. Oczywiście możesz zrobić to za pomocą wyrażenia w szablonie `{{ firstName + ' ' + lastName }}`. Jest to jednak mało efektywne, i to z kilku powodów. Co, jeśli tę samą wartość musisz wyświetlić w innym miejscu? Co, jeśli potrzebujesz jej również w jednej z metod komponentu? Możesz rozwiązać ten problem używając metod, albo pól wyliczonych (ang. computed).
 
-<CodepenWidget height="265" themeId="0" slugHash="YvRbKV" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 1"><a href="http://codepen.io/wojtiku/pen/YvRbKV/">Zobacz Codepen Metody i computed - 1</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="YvRbKV" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 1">
+<a href="http://codepen.io/wojtiku/pen/YvRbKV/">Zobacz Codepen Metody i computed - 1</a>.
+</CodepenWidget>
 
 ## Metody komponentów
 
@@ -69,7 +71,9 @@ new Vue({
 
 Pewnie zauważyłeś, że do tego przykładu, pozornie bez potrzeby, dodałem pole `favouriteNumber` oraz input pozwalający na jego zmianę. W metodzie umieściłem też wywołanie `console.log` (4). Jeśli otworzysz konsolę i zaczniesz zmieniać wartość pola `favouriteNumber` to zauważysz, że metoda `fullName` jest wywoływana **przy każdej takiej zmianie** - oznacza to, że Vue chcąc zaktualizować widok za każdym razem ją wywołuje. I to zupełnie bez sensu. Oczywiście jest to tylko prosty przykład, ale możliwe, że w Twojej aplikacji będziesz chciała np. przefiltrować bardzo dużą tablicę. Wtedy obciążenie będzie już znaczne. Na szczęście jest na to rozwiązanie!
 
-<CodepenWidget height="265" themeId="0" slugHash="VdVOeW" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 2"><a href="http://codepen.io/wojtiku/pen/VdVOeW/">Zobacz Codepen Metody i computed - 2</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="VdVOeW" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 2">
+<a href="http://codepen.io/wojtiku/pen/VdVOeW/">Zobacz Codepen Metody i computed - 2</a>.
+</CodepenWidget>
 
 ## Pola wyliczone, czyli computed properties
 
@@ -106,7 +110,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="OEaYOB" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 3"><a href="http://codepen.io/wojtiku/pen/OEaYOB/">Zobacz Codepen Metody i computed - 3</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="OEaYOB" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="Metody i computed - 3">
+<a href="http://codepen.io/wojtiku/pen/OEaYOB/">Zobacz Codepen Metody i computed - 3</a>.
+</CodepenWidget>
 
 Kod jest również bardziej czytelny. Logika wyliczania `fullName` jest zamknięta w jednej, prostej funkcji, a na dodatek odnosimy się do niej nie jako do metody, ale jako do tego, czym rzeczywiście jest - pola danych, które w tym wypadku jest wyliczone.
 

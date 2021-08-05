@@ -35,7 +35,7 @@ export const ArticleCoverImage = memo<{
         itemType="http://schema.org/ImageObject"
         className="duration-[10s] motion-safe:hover:scale-110 bg-gray-200 transition-transform ease-in hover:ease-out"
         alt=""
-        sizes="(max-width: 768px) 95vw, 768px"
+        sizes="(max-width: 400px) 640px, 768px"
         {...layoutProps}
         placeholder="blur"
         blurDataURL={cover.blurDataURL}

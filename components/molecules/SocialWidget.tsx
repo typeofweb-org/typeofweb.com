@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import ClickIcon from '../../images/social/click.svg';
 import FacebookIcon from '../../images/social/facebook.svg';
 import GithubIcon from '../../images/social/github.svg';
 import InstagramIcon from '../../images/social/instagram.svg';
@@ -51,6 +52,11 @@ export const SocialWidget = memo(() => {
           <a href="/feed.xml" aria-label="RSS" title="RSS" className="block">
             <RssIcon className="inline-block mr-2 w-8 fill-current" />
             RSS
+          </a>
+        </li>
+        <li className="ml-0 pl-0 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors sm:mt-4">
+          <a href="/wspolpraca">
+            <ClickIcon className="inline-block mr-2 w-8 stroke-current" />O mnie i współpraca
           </a>
         </li>
       </ul>

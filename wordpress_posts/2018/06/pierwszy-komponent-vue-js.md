@@ -81,7 +81,9 @@ Zróbmy coś ciekawszego! :) W tym celu wykorzystamy dyrektywę `v-model`. Odpow
 
 Gratulacje! Teraz Twoja aplikacja jest dynamiczna! Oczywiście to dopiero początek tego, co potrafi Vue.js — **więcej w kolejnych częściach kursu** lub na szkoleniu: <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>.
 
-<CodepenWidget height="400" themeId="0" slugHash="RMJPoK" defaultTab="html,result" user="wojtiku" embedVersion="2"><a href="http://codepen.io/wojtiku/pen/RMJPoK/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="400" themeId="0" slugHash="RMJPoK" defaultTab="html,result" user="wojtiku" embedVersion="2">
+<a href="http://codepen.io/wojtiku/pen/RMJPoK/">Zobacz Codepen</a>.
+</CodepenWidget>
 
 **Aby być na bieżąco z kolejnymi wpisami, zapisz się na newsletter poniżej i śledź Type of Web na Facebooku! :)**
 

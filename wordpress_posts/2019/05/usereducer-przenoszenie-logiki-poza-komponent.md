@@ -79,7 +79,9 @@ function App() {
 
 Po kliknięciu w przyciski wysyłane są akcje: `increment` i `decrement`. Są one obsługiwane przez `countReducer`, który odpowiednio zwiększa lub zmniejsza licznik o 1.
 
-<CodepenWidget height="485" themeId="light" slugHash="QRbpPa" defaultTab="js,result" user="mmiszy" penTitle="React Hooks: useReducer"><a href="http://codepen.io/mmiszy/pen/QRbpPa/">Zobacz Codepen React Hooks: useReducer</a>.</CodepenWidget>
+<CodepenWidget height="485" themeId="light" slugHash="QRbpPa" defaultTab="js,result" user="mmiszy" penTitle="React Hooks: useReducer">
+<a href="http://codepen.io/mmiszy/pen/QRbpPa/">Zobacz Codepen React Hooks: useReducer</a>.
+</CodepenWidget>
 
 ## Pytania?
 

@@ -38,7 +38,9 @@ Z tego względu <strong>nie należy nigdy przeprowadzać obliczeń finansowych n
 
 <h2 id="zdarzeniachangeiinput">Zdarzenia <code>change</code> i <code>input</code></h2>
 Nasłuchiwanie na zdarzenie <code>change</code> na elemencie <code>&lt;input&gt;</code> albo <code>&lt;textarea&gt;</code> nie działa dokładnie tak, jak wiele osób by oczekiwało. Zdarzenie to jest wysyłane dopiero w momencie, gdy zmiany zostały zakończone – czyli np. po opuszczeniu inputa. Aby być informowanym o zmianie każdej literki lepiej podpiąć się pod zdarzenie <code>input</code>:
-<CodepenWidget height="250" themeId="light" slugHash="zBadLo" defaultTab="result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/zBadLo/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="250" themeId="light" slugHash="zBadLo" defaultTab="result" user="mmiszy" embedVersion="2">
+<a href="http://codepen.io/mmiszy/pen/zBadLo/">Zobacz Codepen</a>.
+</CodepenWidget>
 
 <h2 id="wzorceiantywzorce">Wzorce i antywzorce</h2>
 Pisałem już o zasadzie jednej odpowiedzialności w poprzednim podsumowaniu. Napisałem tam, że ważne jest, aby funkcje wykonywały jedno i tylko jedno zadanie. Słusznie. <strong>Jednak podążanie tylko za tą jedną zasadą nie czyni jeszcze kodu idealnym.</strong> Dobrych wzorców programowania jest co najmniej kilka, więcej można poczytać np. o <a title="programowanie_obiektowe" href="https://pl.wikipedia.org/wiki/SOLID_">SOLID</a> albo o <a href="https://blog.codinghorror.com/code-smells/"><em>code smells</em></a> wg. Jeffa Atwooda.

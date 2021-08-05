@@ -12,17 +12,17 @@ export const ArticleTitle = memo<{
 }>(({ title, index, href, level }) => {
   return (
     <Link href={href}>
-      <a className="block" itemProp="mainEntityOfPage" rel="bookmark">
+      <a className="relative block" itemProp="mainEntityOfPage" rel="bookmark">
         <SectionTitle size="large" level={level} itemProp="headline">
           {title}
-          <span
-            aria-label={`Artykuł numer ${index}`}
-            title={`Artykuł numer ${index}`}
-            className="text-stroke absolute -left-8 top-1 w-8 text-gray-500 font-sans text-xl font-semibold lg:-left-12 lg:w-12"
-          >
-            {index}
-          </span>
         </SectionTitle>
+        <span
+          aria-label={`Artykuł numer ${index}`}
+          title={`Artykuł numer ${index}`}
+          className="text-stroke absolute -left-8 top-1 w-8 text-gray-500 font-sans text-xl font-semibold lg:-left-12 lg:w-12"
+        >
+          {index}
+        </span>
       </a>
     </Link>
   );

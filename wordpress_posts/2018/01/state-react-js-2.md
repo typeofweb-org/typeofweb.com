@@ -64,7 +64,9 @@ Na szczęście <code>setState</code> jest mądrzejsze i automatycznie <strong>�
 
 A tutaj w pełni działające rozwiązanie:
 
-<CodepenWidget height="265" themeId="0" slugHash="eevevJ" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js"><a href="http://codepen.io/mmiszy/pen/eevevJ/">Zobacz Codepen Stan komponentów React.js</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="eevevJ" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/mmiszy/pen/eevevJ/">Zobacz Codepen Stan komponentów React.js</a>.
+</CodepenWidget>
 
 Jeśli to nie jest dla Ciebie jasne, nie ma w tym nic złego :) Możesz zadać nam pytanie w komentarzu! <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 
@@ -87,11 +89,15 @@ Jakie są zalety tego rozwiązania względem po prostu przekazania obiektu do <c
 
 Dokładnie tak jak w nagłówku. Co to oznacza? Najprościej mówiąc, że <strong>wywołanie <code>setState</code> nie zmienia stanu <em>od razu</em>, tylko dopiero <em>po jakimś czasie</em></strong>. Czyli, przykładowo, próba odczytania stanu od razu po jego zmianie przez <code>setState</code> pokaże nam nadal stary, nieaktualny stan. Otwórz konsolę i kliknij w przycisk w tym przykładzie:
 
-<CodepenWidget height="200" themeId="0" slugHash="KyWZby" defaultTab="result,js" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js"><a href="http://codepen.io/mmiszy/pen/KyWZby/">Zobacz Codepen Stan komponentów React.js</a>.</CodepenWidget>
+<CodepenWidget height="200" themeId="0" slugHash="KyWZby" defaultTab="result,js" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/mmiszy/pen/KyWZby/">Zobacz Codepen Stan komponentów React.js</a>.
+</CodepenWidget>
 
 Jak naprawić ten problem? Otóż <strong><code>setState</code> przyjmuje też drugi argument: callback</strong>. Jeśli jako drugi argument przekażesz funkcję to zostanie ona wywołana w momencie, gdy stan będzie już zaktualizowany. Spójrz po prostu na przykład (z widoczną konsolą):
 
-<CodepenWidget height="200" themeId="0" slugHash="ZaerWq" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js"><a href="http://codepen.io/mmiszy/pen/ZaerWq/">Zobacz Codepen Stan komponentów React.js</a>.</CodepenWidget>
+<CodepenWidget height="200" themeId="0" slugHash="ZaerWq" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/mmiszy/pen/ZaerWq/">Zobacz Codepen Stan komponentów React.js</a>.
+</CodepenWidget>
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 

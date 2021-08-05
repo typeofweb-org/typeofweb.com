@@ -228,7 +228,7 @@
     font-size: 1rem;
     line-height: 1.75;
   }
-  .prose p {
+  .prose :is(p, dl) {
     text-indent: 2rem;
     hyphens: auto;
     -ms-hyphens: auto;
@@ -310,7 +310,7 @@
     font-size: 1.25rem;
     line-height: 1.8;
   }
-  .prose-xl p {
+  .prose-xl :is(p, dl) {
     @apply my-0;
     text-indent: 3rem;
   }

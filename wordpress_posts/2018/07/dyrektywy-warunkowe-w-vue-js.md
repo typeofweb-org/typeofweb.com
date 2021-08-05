@@ -53,7 +53,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="MGYZyL" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-if"><a href="http://codepen.io/wojtiku/pen/MGYZyL/">Zobacz Codepen v-if</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="MGYZyL" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-if">
+<a href="http://codepen.io/wojtiku/pen/MGYZyL/">Zobacz Codepen v-if</a>.
+</CodepenWidget>
 
 Na powyższym przykładzie możesz zobaczyć jak proste jest używanie dyrektywy `v-if` - wpisz coś do pola tekstowego. Warunek `text === ''` jest spełniony wtedy, gdy pole `text` jest puste i to właśnie wtedy pokazywany jest tekst "Wpisz coś".
 
@@ -69,7 +71,9 @@ Jeśli na podstawie jednego warunku chcesz obrać jeden z dwóch scenariuszy, mo
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="pVvqGM" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-else"><a href="http://codepen.io/wojtiku/pen/pVvqGM/">Zobacz Codepen v-else</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="pVvqGM" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-else">
+<a href="http://codepen.io/wojtiku/pen/pVvqGM/">Zobacz Codepen v-else</a>.
+</CodepenWidget>
 
 Jeśli **alternatyw może być więcej**, użyj dyrektywy `v-else-if`, której wartością będzie kolejny warunek - zupełnie jak w normalnym JS.
 
@@ -88,7 +92,9 @@ Czasami napotkasz na sytuację, w której dodanie/usunięcie elementu przez `v-i
 
 Warto wspomnieć, że **dyrektywa `v-else` nie działa razem z `v-show`**. Mogę Ci wyjaśnić ze szczegółami, dlaczego tak jest na szkoleniu: <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>. Aby osiągnąć ten efekt musisz po prostu powtórzyć `v-show` z odwróconym warunkiem. Ilustruje to poniższy przykład.
 
-<CodepenWidget height="265" themeId="0" slugHash="wjBNGZ" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-show"><a href="http://codepen.io/wojtiku/pen/wjBNGZ/">Zobacz Codepen v-show</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="wjBNGZ" defaultTab="html,result" user="wojtiku" embedVersion="2" penTitle="v-show">
+<a href="http://codepen.io/wojtiku/pen/wjBNGZ/">Zobacz Codepen v-show</a>.
+</CodepenWidget>
 
 ## Ćwiczenie
 

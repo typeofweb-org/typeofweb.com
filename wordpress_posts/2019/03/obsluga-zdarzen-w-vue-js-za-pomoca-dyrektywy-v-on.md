@@ -68,7 +68,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="164" themeId="0" slugHash="PBZjWe" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="Zdarzenia z użyciem dyrektywy v-on"><a href="http://codepen.io/wojtiku/pen/PBZjWe/">Zobacz Codepen Zdarzenia z użyciem dyrektywy v-on</a>.</CodepenWidget>
+<CodepenWidget height="164" themeId="0" slugHash="PBZjWe" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="Zdarzenia z użyciem dyrektywy v-on">
+<a href="http://codepen.io/wojtiku/pen/PBZjWe/">Zobacz Codepen Zdarzenia z użyciem dyrektywy v-on</a>.
+</CodepenWidget>
 
 Dyrektywę `v-on`, podobnie jak `v-bind`, możesz zapisać też w **formie skróconej**. Wtedy nazwa zdarzenia poprzedzona jest znakiem małpy, np. `@click` (2). Ta bardzo wygodna forma zapisu jest tym, czego będziesz używać najczęściej do nasłuchiwania na zdarzenia.
 
@@ -105,7 +107,9 @@ new Vue({
 </ul>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="Mxoovp" defaultTab="result" user="wojtiku" penTitle="Modyfikatory zdarzeń w Vue.js"><a href="http://codepen.io/wojtiku/pen/Mxoovp/">Zobacz Codepen Modyfikatory zdarzeń w Vue.js</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="Mxoovp" defaultTab="result" user="wojtiku" penTitle="Modyfikatory zdarzeń w Vue.js">
+<a href="http://codepen.io/wojtiku/pen/Mxoovp/">Zobacz Codepen Modyfikatory zdarzeń w Vue.js</a>.
+</CodepenWidget>
 
 Vue udostępnia także modyfikatory takie jak:
 

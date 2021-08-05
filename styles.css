@@ -12,6 +12,7 @@ body,
 html,
 #__next {
   @apply w-full max-w-full min-h-full bg-gray-200;
+  scroll-behavior: smooth;
 }
 
 #__next {
@@ -67,6 +68,14 @@ main > * + * {
 
 [id] {
   scroll-margin: 4rem 0 0 0;
+}
+
+dl {
+  @apply my-4;
+
+  & dt {
+    @apply indent-0 first:mt-0 mt-4 font-bold;
+  }
 }
 
 @layer utilities {
@@ -142,7 +151,7 @@ progress {
   }
 
   &::-webkit-progress-value {
-    @apply bg-gradient-to-r from-blue-500 to-pink-500 transition-all ease-out;
+    @apply bg-gradient-to-r from-green-500 to-pink-500 via-blue-500 transition-all ease-out;
     background-size: 100vw;
   }
 }

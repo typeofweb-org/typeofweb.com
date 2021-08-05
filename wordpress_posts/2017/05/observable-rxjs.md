@@ -22,7 +22,9 @@ seo: {}
 
 To nie będzie wpis na temat teorii reaktywnego programowania funkcyjnego. Nie jest to też wyciąg z dokumentacji rxjs. Ten wpis jest krótkim praktycznym wprowadzeniem do Obserwabli na przykładzie. Zaczynajmy!
 
-<CodepenWidget height="265" themeId="0" slugHash="KmQyJL" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 1"><a href="http://codepen.io/mmiszy/pen/KmQyJL/">Zobacz Codepen Observables 1</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="KmQyJL" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 1">
+<a href="http://codepen.io/mmiszy/pen/KmQyJL/">Zobacz Codepen Observables 1</a>.
+</CodepenWidget>
 
 <img src="/content/images/2017/05/--51.png" alt="WOW" />
 
@@ -36,7 +38,9 @@ Wow, nasze pierwsze obserwable :) Szkoda tylko, że na razie nie widać absolut
     });
 </code></pre>
 
-<CodepenWidget height="265" themeId="0" slugHash="gWvoYj" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 2"><a href="http://codepen.io/mmiszy/pen/gWvoYj/">Zobacz Codepen Observables 2</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="gWvoYj" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 2">
+<a href="http://codepen.io/mmiszy/pen/gWvoYj/">Zobacz Codepen Observables 2</a>.
+</CodepenWidget>
 
 Jakby to wyglądało w czystym JS? Na pewno byłoby nieco dłuższe. <strong>Tutaj pojawia się cała moc Observabli: operatory</strong>. Jest ich mnóstwo i nie sposób wszystkie zapamiętać, jednak dają one przeogromne, właściwie nieskończone możliwości! W tym przypadku dzięki <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-bufferCount"><code>bufferCount</code></a> zbieramy (buforujemy) 3 zdarzenia i dopiero wtedy je emitujemy w postaci tablicy.
 
@@ -52,7 +56,9 @@ click$
     });
 </code></pre>
 
-<CodepenWidget height="265" themeId="0" slugHash="RVQxZe" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 3"><a href="http://codepen.io/mmiszy/pen/RVQxZe/">Zobacz Codepen Observables 3</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="RVQxZe" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 3">
+<a href="http://codepen.io/mmiszy/pen/RVQxZe/">Zobacz Codepen Observables 3</a>.
+</CodepenWidget>
 
 <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-bufferWhen"><code>bufferWhen</code></a> zbiera wszystkie kliknięcia aż do momentu gdy przekazana funkcja coś wyemituje. Ta robi to dopiero po 400ms po kliknięciu. A więc razem te dwa operatory powodują, że <strong>po upływie 400ms od pierwszego kliknięcia, zostanie wyemitowania tablica ze wszystkimi kliknięciami w tym czasie</strong>. Następnie używamy <code>filter</code> aby sprawdzić czy kliknięto 3 lub więcej razy. Czy teraz wydaje się to bardziej interesujące?
 
@@ -96,7 +102,9 @@ function getPosts() {
 
 Użyłem tutaj funkcji <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-mergeMap"><code>flatMap</code></a> (zwanej też <code>mergeMap</code>), która dla każdego zdarzenia (kliknięcia) wywoła funkcję <code>getPosts</code> i poczeka na jej rezultat.
 
-<CodepenWidget height="265" themeId="0" slugHash="YVeeKg" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 4"><a href="http://codepen.io/mmiszy/pen/YVeeKg/">Zobacz Codepen Observables 4</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="YVeeKg" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 4">
+<a href="http://codepen.io/mmiszy/pen/YVeeKg/">Zobacz Codepen Observables 4</a>.
+</CodepenWidget>
 
 Super! ;) Jednak występuje tutaj pewien problem: Wielokrotne kliknięcie na przycisk powoduje nieprzyjemny efekt wyrenderowania listy wielokrotnie. Do tego tak naprawdę nie mamy pewności, czy ostatnio pobrane dane zostaną wyrenderowane jako ostatnie… jeśli szybko klikniemy kilka razy, niemal jednocześnie zostanie wysłanych wiele żądań, a opóźnienia mogą sprawić, że żądanie wysłane wcześniej zwróci odpowiedź później… <strong>Jest to znany, częsty problem tzw. <em>race conditions</em></strong>.
 
@@ -104,7 +112,9 @@ Rozwiązanie go przy pomocy czystego JS nie jest takie trywialne. Musielibyśmy 
 
 <img src="/content/images/2017/05/Screenshot-2017-05-11-00.41.12.png" alt="canceled http request" />
 
-<CodepenWidget height="265" themeId="0" slugHash="bWvbGd" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 5"><a href="http://codepen.io/mmiszy/pen/bWvbGd/">Zobacz Codepen Observables 5</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="bWvbGd" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 5">
+<a href="http://codepen.io/mmiszy/pen/bWvbGd/">Zobacz Codepen Observables 5</a>.
+</CodepenWidget>
 
 <h1 id="observablezrnychrde">Observable z różnych źródeł</h1>
 
@@ -129,7 +139,9 @@ Od razu też mapujemy każde zdarzenie na wartość inputa/selecta. Następnie �
 
 Co istotne, funkcja <code>combineLatest</code> nie wyemituje niczego dopóki obie observable (<code>id$</code> i <code>resource$</code>) nie wyemitują przynajmniej jednej wartości. Innymi słowy, nic się nie stanie dopóki nie wybierzemy wartości w obu polach.
 
-<CodepenWidget height="265" themeId="0" slugHash="ZKxzvr" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 6"><a href="http://codepen.io/mmiszy/pen/ZKxzvr/">Zobacz Codepen Observables 6</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="ZKxzvr" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 6">
+<a href="http://codepen.io/mmiszy/pen/ZKxzvr/">Zobacz Codepen Observables 6</a>.
+</CodepenWidget>
 
 <h1 id="podsumowanie">Podsumowanie</h1>
 

@@ -190,7 +190,9 @@ const useApi = (path) => {
 
 Kod jest znacznie dłuższy, ale wydaje mi się też bardziej czytelny, bo oddzielone zostały od siebie elementy niezależnej logiki. Efekt:
 
-<CodepenWidget height="485" themeId="light" slugHash="LYpaaPN" defaultTab="js,result" user="mmiszy" penTitle="React Hooks: Własny hook useApi"><a href="http://codepen.io/mmiszy/pen/LYpaaPN/">Zobacz Codepen React Hooks: Własny hook useApi</a>.</CodepenWidget>
+<CodepenWidget height="485" themeId="light" slugHash="LYpaaPN" defaultTab="js,result" user="mmiszy" penTitle="React Hooks: Własny hook useApi">
+<a href="http://codepen.io/mmiszy/pen/LYpaaPN/">Zobacz Codepen React Hooks: Własny hook useApi</a>.
+</CodepenWidget>
 
 ## Podsumowanie
 

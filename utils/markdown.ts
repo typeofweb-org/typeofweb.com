@@ -203,6 +203,10 @@ function getOnlyFirstPara(): import('unified').Transformer {
 export function collapseParagraphs(): import('unified').Transformer {
   return function transformer(tree) {
     const run = (node: Node): HtmlNode | MdxNode | Node => {
+      console.log(node.type);
+      if (node.type === 'element') {
+        console.log(node);
+      }
       if (isPNode(node)) {
         if (
           node.children?.length === 1 &&

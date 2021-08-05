@@ -91,7 +91,9 @@ Wspominałem, że przy klasach pojawi nam się błąd związany z <code>this</co
 
 <strong>Woah, działa!</strong>
 
-<CodepenWidget height="265" themeId="0" slugHash="GOjvBM" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js"><a href="http://codepen.io/mmiszy/pen/GOjvBM/">Zobacz Codepen Stan komponentów React.js</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="GOjvBM" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/mmiszy/pen/GOjvBM/">Zobacz Codepen Stan komponentów React.js</a>.
+</CodepenWidget>
 
 <h2>Ćwiczenie</h2>
 

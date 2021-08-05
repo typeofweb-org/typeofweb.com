@@ -64,7 +64,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="mLWPZb" defaultTab="result" user="wojtiku" embedVersion="2"><a href="http://codepen.io/wojtiku/pen/mLWPZb/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="mLWPZb" defaultTab="result" user="wojtiku" embedVersion="2">
+<a href="http://codepen.io/wojtiku/pen/mLWPZb/">Zobacz Codepen</a>.
+</CodepenWidget>
 
 Oczywiście umieszczając w obiekcie więcej pól, możesz w ten sposób zarządzać dodawaniem/usuwaniem większej liczby klas.
 
@@ -140,7 +142,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="bMqwom" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-bind:style"><a href="http://codepen.io/wojtiku/pen/bMqwom/">Zobacz Codepen v-bind:style</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="bMqwom" defaultTab="result" user="wojtiku" embedVersion="2" penTitle="v-bind:style">
+<a href="http://codepen.io/wojtiku/pen/bMqwom/">Zobacz Codepen v-bind:style</a>.
+</CodepenWidget>
 
 Tutaj również możesz użyć notacji tablicowej, aby złączyć ze sobą kilka obiektów.
 

@@ -20,9 +20,25 @@ function ScriptOnce(props: NextScriptProps) {
   return render ? <Script {...props} /> : null;
 }
 
-function ScriptAfterInteraction(props: Partial<HTMLScriptElement>) {
+function ScriptAfterInteraction({
+  children,
+  ...props
+}: Partial<Omit<HTMLScriptElement, 'children'>> & { readonly children?: string }) {
   useEffect(() => {
-    const listener = () => {
+    // whichever is first wins
+    window.addEventListener('scroll', listener, { passive: true, once: true });
+    const timer = setTimeout(() => window.requestIdleCallback?.(() => listener()), 500);
+    const done = () => {
+      window.removeEventListener('scroll', listener);
+      clearTimeout(timer);
+    };
+
+    return () => {
+      done();
+    };
+
+    function listener() {
+      done();
       (window.requestIdleCallback || window.requestAnimationFrame)(() => {
         const script = Object.entries(props).reduce((script, [key, value]) => {
           // @ts-ignore
@@ -30,13 +46,12 @@ function ScriptAfterInteraction(props: Partial<HTMLScriptElement>) {
           script[key as any] = value;
           return script;
         }, document.createElement('script'));
+        if (children) {
+          script.textContent = children;
+        }
         document.body.appendChild(script);
       });
-    };
-    window.addEventListener('scroll', listener, { passive: true, once: true });
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- ignore
   }, []);
 
@@ -46,23 +61,26 @@ function ScriptAfterInteraction(props: Partial<HTMLScriptElement>) {
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
-      <ScriptOnce strategy="afterInteractive">
-        {`{const e=()=>o.className+=" fonts-loaded",o=document.documentElement,a="00 1em Merriweather",n="00 1em Fira Sans";sessionStorage.fonts?e():Promise.all(["4"+a,"7"+a,"italic 4"+a,"italic 7"+a,"4"+n,"6"+n,"400 1em Fira Mono"].map(e=>document.fonts.load(e))).then(()=>{sessionStorage.fonts=!0,e()})}`}
-      </ScriptOnce>
-      <ScriptOnce strategy="afterInteractive" key="gtag">
-        {`window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)}`}
-      </ScriptOnce>
       <Head>
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover" />
       </Head>
       <Seo />
+      <ScriptOnce strategy="afterInteractive">
+        {`const o=()=>e.className+=" fonts-loaded",e=document.documentElement,n="00 1em Merriweather",t="00 1em Fira Sans";sessionStorage.fonts?o():Promise.all(["4"+n,"7"+n,"italic 4"+n,"italic 7"+n,"4"+t,"6"+t,"400 1em Fira Mono"].map(o=>document.fonts.load(o))).then(()=>{sessionStorage.fonts=!0,o()})`}
+      </ScriptOnce>
+      <ScriptOnce strategy="afterInteractive">
+        {`window.dataLayer=window.dataLayer||[],window.gtag=function(){dataLayer.push(arguments)}`}
+      </ScriptOnce>
       <RunningHeaderProvider>
         <UIStateProvider>
           <Component {...pageProps} />
         </UIStateProvider>
       </RunningHeaderProvider>
-      <ScriptOnce strategy="lazyOnload">{`if (typeof CSS !== 'undefined' && typeof CSS.paintWorklet !== 'undefined') {CSS.paintWorklet.addModule('/fancyLinkUnderline.js');}`}</ScriptOnce>
-      <ScriptAfterInteraction src="/contentVisibility.js" defer async />
+      <ScriptAfterInteraction
+        defer
+        async
+      >{`window.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.js")`}</ScriptAfterInteraction>
+      <ScriptAfterInteraction src="/contentVisibility.min.js" defer async />
       <ScriptAfterInteraction
         src="https://www.googletagmanager.com/gtag/js?id=G-KNFC661M43"
         defer

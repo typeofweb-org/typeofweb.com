@@ -58,7 +58,9 @@ new Vue({
 </div>
 ```
 
-<CodepenWidget height="265" themeId="0" slugHash="JLBgpv" defaultTab="html,result" user="wojtiku" embedVersion="2"><a href="http://codepen.io/wojtiku/pen/JLBgpv/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="JLBgpv" defaultTab="html,result" user="wojtiku" embedVersion="2">
+<a href="http://codepen.io/wojtiku/pen/JLBgpv/">Zobacz Codepen</a>.
+</CodepenWidget>
 
 `v-bind` będziemy później używać również do dynamicznego przekazywania danych do zagnieżdżonych komponentów Vue. Opowiem Ci o tym więcej w jednej z kolejnych lekcji.
 

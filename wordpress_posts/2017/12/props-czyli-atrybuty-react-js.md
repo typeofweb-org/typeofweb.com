@@ -124,7 +124,9 @@ Teraz przy próbie wyrenderowania <code>&lt;MojKomponent /&gt;</code> zamiast ty
 
 <h2>Demo</h2>
 
-<CodepenWidget height="365" themeId="0" slugHash="BweVZB" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Props czyli atrybuty w React.js"><a href="http://codepen.io/mmiszy/pen/BweVZB/">Zobacz Codepen Props czyli atrybuty w React.js</a>.</CodepenWidget>
+<CodepenWidget height="365" themeId="0" slugHash="BweVZB" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
+<a href="http://codepen.io/mmiszy/pen/BweVZB/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
+</CodepenWidget>
 
 <h2>Co dalej?</h2>
 

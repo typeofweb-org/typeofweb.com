@@ -112,11 +112,17 @@ To naprawdę tak proste :) Tworzysz funkcję i w środku niej zwracasz JSX. Nast
   document.getElementById('app')
 );</code></pre>
 
-<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React"><a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
+</CodepenWidget>
 
-<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React"><a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
+</CodepenWidget>
 
-<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React"><a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
+</CodepenWidget>
 
 <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 

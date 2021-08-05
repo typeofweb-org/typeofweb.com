@@ -132,7 +132,9 @@ seo: {}
 
 <p>W poprzednim artykule wspomniałem już o nowym rodzaju <em>bindingu</em>: <strong>jednokierunkowym</strong>. Do uzyskania takiego <em>bindingu</em> używa się symbolu <code>&lt;</code>. Oznacza on, że <strong>zmiany w rodzicu będą widoczne w komponencie, natomiast zmiany w komponencie nie staną się widoczne dla rodzica</strong>. Nic nie oddaje tego lepiej niż interaktywny przykład. W trakcie edycji pierwszego pola wartość automatycznie kopiowana jest również do drugiego (wewnątrz komponentu). Natomiast zmiany dokonane w drugim polu nie są już widoczne w pierwszym:</p>
 
-<CodepenWidget height="265" themeId="light" slugHash="VaNVOZ" defaultTab="result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/VaNVOZ/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="light" slugHash="VaNVOZ" defaultTab="result" user="mmiszy" embedVersion="2">
+<a href="http://codepen.io/mmiszy/pen/VaNVOZ/">Zobacz Codepen</a>.
+</CodepenWidget>
 
 <p>Istotnym jest, aby pamiętać, że mowa tutaj o zmianach wartości prostej (jak powyżej) lub referencji. Jeśli do <em>bindingu</em> przekazany jest obiekt i w komponencie zmienione zostanie jakieś pole tego obiektu to <strong>taka zmiana będzie widoczna w rodzicu</strong>. Jeśli natomiast cały obiekt zostanie nadpisany to modyfikacja nie będzie propagowana. Jest to zachowanie znane każdemu programiście JavaScript:</p>
 
@@ -269,4 +271,6 @@ app.controller('MyGravatarCtrl', class MyGravatarCtrl {
 
 <p>Cały kod, łącznie z pominiętymi tutaj fragmentami dostępny jest na <a href="https://gist.github.com/mmiszy/3736f131fe7cb7a1d37be892dcc00bab">gist.github.com/mmiszy/3736f131fe7cb7a1d37be892dcc00bab</a></p>
 
-<CodepenWidget height="465" themeId="light" slugHash="zqXyOM" defaultTab="js,result" user="mmiszy" embedVersion="2"><a href="http://codepen.io/mmiszy/pen/zqXyOM/">Zobacz Codepen</a>.</CodepenWidget>
+<CodepenWidget height="465" themeId="light" slugHash="zqXyOM" defaultTab="js,result" user="mmiszy" embedVersion="2">
+<a href="http://codepen.io/mmiszy/pen/zqXyOM/">Zobacz Codepen</a>.
+</CodepenWidget>

@@ -110,7 +110,9 @@ Warto też zwrócić uwagę na sposób w jaki komponent <code>App</code> render
   {this.state.dateVisible &amp;&amp; &lt;DateComponent /&gt;}
 &lt;/div&gt;</code></pre>
 
-<CodepenWidget height="265" themeId="0" slugHash="yPqLpm" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Metody cyklu życia komponentu w React.js"><a href="http://codepen.io/mmiszy/pen/yPqLpm/">Zobacz Codepen Metody cyklu życia komponentu w React.js</a>.</CodepenWidget>
+<CodepenWidget height="265" themeId="0" slugHash="yPqLpm" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Metody cyklu życia komponentu w React.js">
+<a href="http://codepen.io/mmiszy/pen/yPqLpm/">Zobacz Codepen Metody cyklu życia komponentu w React.js</a>.
+</CodepenWidget>
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>polub mnie na Facebooku i zapisz się na newsletter.</strong>
 
