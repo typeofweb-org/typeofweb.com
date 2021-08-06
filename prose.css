@@ -107,7 +107,8 @@
   }
 
   .prose blockquote p,
-  .prose :is(ol, ul) p {
+  .prose ol p,
+  .prose ul p {
     @apply text-left;
     text-indent: 0;
     hyphens: none;
@@ -228,15 +229,20 @@
     font-size: 1rem;
     line-height: 1.75;
   }
-  .prose :is(p, dl) {
+  .prose p,
+  dl,
+  .prose dl {
     text-indent: 2rem;
     hyphens: auto;
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
-    @apply my-0 text-justify font-serif font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
+    @apply my-0 text-justify font-serif oldstyle-nums font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
   }
-  .prose p :is(h1, h2, h3, h4) {
+  .prose p h1,
+  .prose p h2,
+  .prose p h3,
+  .prose p h4 {
     @apply indent-0;
   }
   .prose figure,
@@ -261,7 +267,8 @@
   .prose h3 code {
     font-size: 0.9em;
   }
-  .prose :is(ol, ul) {
+  .prose ol,
+  .prose ul {
     margin-top: 1.25em;
     margin-bottom: 1.25em;
     @apply counter-reset mt-3;
@@ -269,16 +276,19 @@
   .prose li {
     @apply counter-increment pt-[0.5ex] my-0 font-serif leading-normal;
   }
-  .prose :is(ul, ol) p {
+  .prose ul p,
+  .prose ol p {
     @apply contents;
   }
-  .prose > :is(ol, ul) > li > :first-child {
+  .prose > ol > li > :first-child,
+  .prose > ul > li > :first-child {
     margin-top: 1.25em;
-  }
-  .prose > :is(ol, ul) > li > :last-child {
     margin-bottom: 1.25em;
   }
-  .prose :is(ol, ul) :is(ol, ul) {
+  .prose ol ol,
+  .prose ol ul,
+  .prose ul ol,
+  .prose ul ul {
     margin-top: 0.75em;
     margin-bottom: 0.75em;
   }
@@ -310,7 +320,8 @@
     font-size: 1.25rem;
     line-height: 1.8;
   }
-  .prose-xl :is(p, dl) {
+  .prose-xl dl,
+  .prose-xl p {
     @apply my-0;
     text-indent: 3rem;
   }
@@ -319,7 +330,8 @@
     @apply pl-8;
   }
 
-  .prose-xl :is(ol, ul) {
+  .prose-xl ol,
+  .prose-xl ul {
     @apply mt-3;
     @apply counter-reset;
   }
@@ -341,7 +353,8 @@
     line-height: 1.6;
   }
 
-  :is(.prose, .prose-xl) {
+  .prose,
+  .prose-xl {
     & figure {
       & img {
         @apply mb-0;

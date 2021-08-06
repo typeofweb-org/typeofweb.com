@@ -3,8 +3,8 @@
   "parserOptions": {
     "project": "tsconfig.json"
   },
-  "plugins": ["@typeofweb", "@next/next"],
-  "extends": ["next", "plugin:@typeofweb/recommended"],
+  "plugins": ["@typeofweb", "react-hooks", "@next/next"],
+  "extends": ["plugin:@next/next/recommended", "plugin:@typeofweb/recommended"],
   "overrides": [
     {
       "files": ["pages/**/*.tsx", "pages/**/*.ts"],

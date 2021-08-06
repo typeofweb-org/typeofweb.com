@@ -37,7 +37,7 @@ const withBundleAnalyzer = (
 });
 
 /**
- * @type import('next/dist/next-server/server/config-shared').NextConfig
+ * @type import('next/dist/server/config-shared').NextConfig
  */
 const config = withBundleAnalyzer(
   withPlaiceholder(
@@ -63,10 +63,13 @@ config.images = {
 
 config.excludeDefaultMomentLocales = true;
 config.experimental = config.experimental || {};
+config.optimizeFonts = true;
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
+config.experimental.workerThreads = true;
 config.experimental.scrollRestoration = true;
 config.reactStrictMode = true;
+config.compress = true;
 
 config.rewrites = () => {
   return Promise.resolve([{ source: '/feed', destination: '/feed.xml' }]);

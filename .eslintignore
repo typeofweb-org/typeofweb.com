@@ -1,3 +1,2 @@
-next.config.js
 public
-babel.config.js
+*.config.js

@@ -35,7 +35,8 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
-:is(pre, code)[class*='language-'] {
+pre[class*='language-'],
+code[class*='language-'] {
   &::selection,
   & ::selection,
   &::-moz-selection,

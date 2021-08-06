@@ -6,8 +6,8 @@ import { Seo } from '../components/Seo';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
 import { UIStateProvider } from '../hooks/useUiState';
 
-import type { AppType } from 'next/dist/next-server/lib/utils';
-import type { Props as NextScriptProps } from 'next/script';
+import type { AppType } from 'next/dist/shared/lib/utils';
+import type { ScriptProps as NextScriptProps } from 'next/script';
 
 import '../styles.css';
 import '../fonts.css';
@@ -53,12 +53,19 @@ function ScriptAfterInteraction({
 }
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call -- ok
+  const urlsToPreload: readonly string[] | undefined = pageProps?.posts
+    ?.map(
+      (p: undefined | { readonly frontmatter?: { readonly cover?: { readonly blurDataURL?: string } } }) =>
+        p?.frontmatter?.cover?.blurDataURL,
+    )
+    .filter(Boolean);
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover" />
       </Head>
-      <Seo />
       <ScriptOnce strategy="afterInteractive">
         {`let o=()=>e.className+=" fonts-loaded",e=document.documentElement,n="00 1em Merriweather",t="00 1em Fira Sans";sessionStorage.fonts?o():Promise.all(["4"+n,"7"+n,"italic 4"+n,"italic 7"+n,"4"+t,"6"+t,"400 1em Fira Mono"].map(o=>document.fonts.load(o))).then(()=>{sessionStorage.fonts=!0,o()})`}
       </ScriptOnce>
@@ -84,6 +91,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           gtag('config', 'G-KNFC661M43');
         }}
       />
+      {urlsToPreload?.map((url) => (
+        <link key={url} rel="preload" href={url} as="image" />
+      ))}
+      <Seo />
     </>
   );
 };
