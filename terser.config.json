@@ -1,0 +1,25 @@
+{
+  "toplevel": true,
+  "parse": { "ecma": 2021 },
+  "compress": {
+    "inline": true,
+    "unsafe": true,
+    "passes": 5,
+    "pure_getters": true,
+    "unsafe_arrows": true,
+    "unsafe_comps": true,
+    "unsafe_Function": true,
+    "unsafe_math": true,
+    "unsafe_symbols": true,
+    "unsafe_methods": true,
+    "unsafe_proto": true,
+    "unsafe_regexp": true,
+    "unsafe_undefined": true
+  },
+  "mangle": true,
+  "format": {
+    "comments": false,
+    "ascii_only": true,
+    "inline_script": true
+  }
+}

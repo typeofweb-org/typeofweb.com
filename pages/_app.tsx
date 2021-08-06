@@ -25,20 +25,14 @@ function ScriptAfterInteraction({
   ...props
 }: Partial<Omit<HTMLScriptElement, 'children'>> & { readonly children?: string }) {
   useEffect(() => {
-    // whichever is first wins
     window.addEventListener('scroll', listener, { passive: true, once: true });
-    const timer = setTimeout(() => window.requestIdleCallback?.(() => listener()), 2000);
-    const done = () => {
-      window.removeEventListener('scroll', listener);
-      clearTimeout(timer);
-    };
 
     return () => {
-      done();
+      window.removeEventListener('scroll', listener);
     };
 
     function listener() {
-      done();
+      window.removeEventListener('scroll', listener);
       (window.requestIdleCallback || window.requestAnimationFrame)(() => {
         const script = Object.entries(props).reduce((script, [key, value]) => {
           // @ts-ignore
@@ -66,10 +60,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       </Head>
       <Seo />
       <ScriptOnce strategy="afterInteractive">
-        {`const o=()=>e.className+=" fonts-loaded",e=document.documentElement,n="00 1em Merriweather",t="00 1em Fira Sans";sessionStorage.fonts?o():Promise.all(["4"+n,"7"+n,"italic 4"+n,"italic 7"+n,"4"+t,"6"+t,"400 1em Fira Mono"].map(o=>document.fonts.load(o))).then(()=>{sessionStorage.fonts=!0,o()})`}
+        {`let o=()=>e.className+=" fonts-loaded",e=document.documentElement,n="00 1em Merriweather",t="00 1em Fira Sans";sessionStorage.fonts?o():Promise.all(["4"+n,"7"+n,"italic 4"+n,"italic 7"+n,"4"+t,"6"+t,"400 1em Fira Mono"].map(o=>document.fonts.load(o))).then(()=>{sessionStorage.fonts=!0,o()})`}
       </ScriptOnce>
-      <ScriptOnce strategy="afterInteractive">
-        {`window.dataLayer=window.dataLayer||[],window.gtag=function(){dataLayer.push(arguments)}`}
+      <ScriptOnce strategy="afterInteractive" async defer>
+        {`var w=window;w.dataLayer=w.dataLayer||[],w.gtag=(...a)=>dataLayer.push(a)`}
       </ScriptOnce>
       <RunningHeaderProvider>
         <UIStateProvider>
@@ -79,7 +73,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <ScriptAfterInteraction
         defer
         async
-      >{`window.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.js")`}</ScriptAfterInteraction>
+      >{`w.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
       <ScriptAfterInteraction src="/contentVisibility.min.js" defer async />
       <ScriptAfterInteraction
         src="https://www.googletagmanager.com/gtag/js?id=G-KNFC661M43"

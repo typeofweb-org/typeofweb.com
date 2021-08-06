@@ -30,7 +30,7 @@ html:not(.fonts-loaded) {
   & .prose ol > li::before {
     font-family: 'typeofweb-fallback-sans', sans-serif !important;
     letter-spacing: 0.1px !important;
-    word-spacing: 0.05px !important;
+    word-spacing: 0.2px !important;
   }
 
   & .font-serif,
@@ -38,8 +38,9 @@ html:not(.fonts-loaded) {
   & .prose p,
   & .prose ol > li {
     font-family: 'typeofweb-fallback-serif', serif !important;
-    letter-spacing: 2.4px !important;
+    letter-spacing: 1.93px !important;
     word-spacing: -2px !important;
+    font-weight: 600;
   }
 
   & .font-mono {

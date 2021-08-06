@@ -21,6 +21,7 @@
 
 public/feed.xml
 public/feed.json
+public/*.min.js
 
 # debug
 npm-debug.log*
