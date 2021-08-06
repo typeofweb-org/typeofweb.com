@@ -27,7 +27,7 @@ function ScriptAfterInteraction({
   useEffect(() => {
     // whichever is first wins
     window.addEventListener('scroll', listener, { passive: true, once: true });
-    const timer = setTimeout(() => window.requestIdleCallback?.(() => listener()), 500);
+    const timer = setTimeout(() => window.requestIdleCallback?.(() => listener()), 2000);
     const done = () => {
       window.removeEventListener('scroll', listener);
       clearTimeout(timer);
