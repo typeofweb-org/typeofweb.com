@@ -1,4 +1,3 @@
-import 'preact/debug';
 import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';

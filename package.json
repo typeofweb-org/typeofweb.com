@@ -17,13 +17,9 @@
     "gray-matter": "4.0.3",
     "next": "11.0.1",
     "next-mdx-remote": "3.0.4",
-    "next-plugin-preact": "3.0.6",
     "plaiceholder": "2.0.1",
-    "preact": "10.5.14",
-    "preact-render-to-string": "5.1.19",
-    "react": "npm:@preact/compat",
-    "react-dom": "npm:@preact/compat",
-    "react-ssr-prepass": "npm:preact-ssr-prepass",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "sharp": "0.28.3"
   },
   "devDependencies": {
