@@ -17,9 +17,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
       <a href="#main-content" className="sr-only">
         Skocz do treści
       </a>
-      <header
-        className={`bg-gray-100 pb-1 flex flex-row h-12 items-stretch justify-center lg:mb-4 overflow-hidden ios:transcluent-white dark:ios:transcluent-black shadow sticky top-0 z-10`}
-      >
+      <header className="ios:transcluent-white dark:ios:transcluent-black fixed z-10 top-0 flex flex-row items-stretch justify-center pb-1 w-full h-12 bg-gray-100 shadow overflow-hidden">
         <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row pl-8 max-w-3xl">
           <Link href="/">
             <a>

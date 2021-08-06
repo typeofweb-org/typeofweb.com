@@ -7,7 +7,9 @@ import ReactIcon from '../../images/react-icon.svg';
 import { allCategories } from '../../utils/categories';
 import { getUrlForPermalink } from '../../utils/permalinks';
 
-const navItems = [
+import type { ReactNode } from 'react';
+
+const navItems: readonly { readonly slug: string; readonly label: ReactNode; readonly className?: string }[] = [
   ...allCategories.map((c) => ({ slug: c.slug, label: c.name })),
   {
     slug: 'react-js',
@@ -17,6 +19,11 @@ const navItems = [
         Kurs React.js
       </>
     ),
+  },
+  {
+    slug: 'wspolpraca',
+    label: 'O mnie i współpraca',
+    className: 'md:hidden',
   },
 ];
 
@@ -38,7 +45,7 @@ export const MainNav = memo(() => {
         {navItems.map((item) => {
           const isActive = permalink === item.slug;
           return (
-            <li key={item.slug} className="flex items-stretch mt-0.5">
+            <li key={item.slug} className={`flex items-stretch mt-0.5 ${item.className ?? ''}`}>
               <Link href={getUrlForPermalink(item.slug)}>
                 <a
                   onClick={closeMenu}
