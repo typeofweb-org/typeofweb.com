@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable functional/no-this-expression -- it's a class */
 /* eslint-disable functional/prefer-readonly-type -- it's a class */
 export const useBodyFix = () => {
@@ -27,7 +26,10 @@ class FixBodyService {
     document.body.style.top = `-${this.windowOffsetY}px`;
     document.body.style.paddingRight = `${this.scrollbarWidth}px`;
     document.body.style.marginLeft = `-${this.scrollbarWidth / 2}px`;
-    document.querySelector<HTMLDivElement>('#main-menu-button')!.style.marginRight = `${this.scrollbarWidth}px`;
+    const menu = document.querySelector<HTMLDivElement>('#main-menu-button');
+    if (menu) {
+      menu.style.marginRight = `${this.scrollbarWidth}px`;
+    }
   }
 
   unfixBody() {
@@ -39,7 +41,10 @@ class FixBodyService {
     document.body.style.top = '';
     document.body.style.paddingRight = '';
     document.body.style.marginLeft = '';
-    document.querySelector<HTMLDivElement>('#main-menu-button')!.style.marginRight = '';
+    const menu = document.querySelector<HTMLDivElement>('#main-menu-button');
+    if (menu) {
+      menu.style.marginRight = '';
+    }
 
     requestAnimationFrame(() => window.scrollTo(0, this.windowOffsetY));
   }
