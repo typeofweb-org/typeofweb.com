@@ -30,7 +30,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
       aria-disabled={isLoading}
       aria-busy={isLoading}
     >
-      <span className="inline-flex items-center mr-2 text-lg">
+      <span className="inline-flex items-center mr-2 text-gray-900 text-lg">
         Strona {currentPage} z {pages}
       </span>
       {prev > 0 && (
@@ -38,17 +38,30 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
           <a
             rel="prev"
             className={`focus:no-underline inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
-              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-blue-500'
+              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-700'
             }`}
             aria-label="Poprzednia strona"
             title="Poprzednia strona"
           >
-            <span className="transform rotate-180">➔</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 transform rotate-180"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
           </a>
         </Link>
       )}
       <select
-        className={`m-0 text-lg border-transparent rounded-sm hover:shadow-md shadow-sm transition-shadow ${
+        className={`m-0 bg-gray-100 text-gray-900 text-lg border-transparent rounded-sm hover:shadow-md shadow-sm transition-shadow ${
           isLoading ? 'cursor-wait pointer-events-none' : ''
         }`}
         disabled={isLoading}
@@ -78,12 +91,25 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
           <a
             rel="next"
             className={`focus:no-underline inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
-              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-blue-500'
+              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-700'
             }`}
             aria-label="Następna strona"
             title="Następna strona"
           >
-            ➔
+            <svg
+              className="w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
           </a>
         </Link>
       )}

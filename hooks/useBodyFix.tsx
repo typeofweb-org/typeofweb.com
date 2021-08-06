@@ -25,7 +25,7 @@ class FixBodyService {
     document.body.classList.add('not-scrollable');
     document.body.style.top = `-${this.windowOffsetY}px`;
     document.body.style.paddingRight = `${this.scrollbarWidth}px`;
-    document.body.style.marginLeft = `-${this.scrollbarWidth / 2}px`;
+    // document.body.style.marginLeft = `-${this.scrollbarWidth / 2}px`;
     const menu = document.querySelector<HTMLDivElement>('#main-menu-button');
     if (menu) {
       menu.style.marginRight = `${this.scrollbarWidth}px`;
@@ -40,13 +40,17 @@ class FixBodyService {
     document.body.classList.remove('not-scrollable');
     document.body.style.top = '';
     document.body.style.paddingRight = '';
-    document.body.style.marginLeft = '';
+    // document.body.style.marginLeft = '';
     const menu = document.querySelector<HTMLDivElement>('#main-menu-button');
     if (menu) {
       menu.style.marginRight = '';
     }
 
-    requestAnimationFrame(() => window.scrollTo(0, this.windowOffsetY));
+    document.documentElement.style.scrollBehavior = 'auto';
+    requestAnimationFrame(() => {
+      window.scrollTo(0, this.windowOffsetY);
+      document.documentElement.style.scrollBehavior = '';
+    });
   }
 
   private setScrollbarWidth() {
