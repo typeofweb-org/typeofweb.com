@@ -3,7 +3,7 @@
   "parserOptions": {
     "project": "tsconfig.json"
   },
-  "plugins": ["@typeofweb"],
+  "plugins": ["@typeofweb", "@next/next"],
   "extends": ["next", "plugin:@typeofweb/recommended"],
   "overrides": [
     {
