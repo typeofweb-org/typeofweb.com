@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { memo } from 'react';
 
 import { useRunningHeader } from '../../hooks/runningHeader';
-import { useUIState } from '../../hooks/useUiState';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
 import { MainNav } from '../molecules/MainNav';
 
@@ -10,7 +9,6 @@ import type { PageKind } from '../../types';
 
 export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
   const { text, progress } = useRunningHeader();
-  const { uiState } = useUIState();
 
   const HeaderEl = pageKind === 'index' ? 'h1' : 'div';
 
@@ -20,11 +18,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
         Skocz do treści
       </a>
       <header
-        className={`bg-gray-100 pb-1 flex flex-row h-12 items-stretch justify-center lg:mb-4 ${
-          uiState.isMenuOpen
-            ? 'lg:shadow lg:sticky'
-            : 'overflow-hidden ios:transcluent-white dark:ios:transcluent-black shadow sticky'
-        } top-0 z-10`}
+        className={`bg-gray-100 pb-1 flex flex-row h-12 items-stretch justify-center lg:mb-4 overflow-hidden ios:transcluent-white dark:ios:transcluent-black shadow sticky top-0 z-10`}
       >
         <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row pl-8 max-w-3xl">
           <Link href="/">

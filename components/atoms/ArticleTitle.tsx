@@ -19,7 +19,7 @@ export const ArticleTitle = memo<{
         <span
           aria-label={`Artykuł numer ${index}`}
           title={`Artykuł numer ${index}`}
-          className="text-stroke absolute -left-8 top-1 w-8 text-gray-500 font-sans text-xl font-semibold lg:-left-10 lg:top-4 lg:w-12 lg:text-3xl"
+          className="text-stroke absolute -left-7 top-1.5 w-8 text-gray-500 font-sans text-xl font-semibold lg:-left-10 lg:top-4 lg:w-12 lg:text-3xl"
         >
           {index}
         </span>
