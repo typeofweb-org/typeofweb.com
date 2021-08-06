@@ -23,8 +23,8 @@
     "sharp": "0.28.3"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.14.9",
-    "@babel/preset-typescript": "7.14.5",
+    "@babel/preset-env": "7.15.0",
+    "@babel/preset-typescript": "7.15.0",
     "@babel/register": "7.14.5",
     "@jsdevtools/rehype-toc": "3.0.2",
     "@mapbox/rehype-prism": "0.7.0",
@@ -35,7 +35,7 @@
     "@tailwindcss/typography": "0.4.1",
     "@typeofweb/eslint-plugin": "0.2.2",
     "@types/gtag.js": "0.0.7",
-    "@types/react": "17.0.15",
+    "@types/react": "17.0.16",
     "@types/react-dom": "17.0.9",
     "@types/tailwindcss": "2.2.1",
     "@types/w3c-css-typed-object-model-level-1": "20180410.0.3",
@@ -75,6 +75,6 @@
     "**/katex": "0.13.13"
   },
   "browserslist": [
-    "defaults"
+    "> 2% in my stats"
   ]
 }

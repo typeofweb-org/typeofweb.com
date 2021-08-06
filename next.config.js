@@ -8,7 +8,31 @@ const withTM = require('next-transpile-modules')([
 ]);
 const { withPlaiceholder } = require('@plaiceholder/next');
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+const withBundleAnalyzer = (
+  ({ enabled = true } = {}) =>
+  (nextConfig = {}) => {
+    return Object.assign({}, nextConfig, {
+      webpack(config, options) {
+        if (enabled && !options.isServer) {
+          const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+          config.plugins.push(
+            new BundleAnalyzerPlugin({
+              analyzerMode: 'static',
+              reportFilename: './analyze/client.html',
+              excludeAssets: /polyfills-.*\.js/,
+              defaultSizes: 'gzip',
+            }),
+          );
+        }
+
+        if (typeof nextConfig.webpack === 'function') {
+          return nextConfig.webpack(config, options);
+        }
+        return config;
+      },
+    });
+  }
+)({
   enabled: process.env.ANALYZE === 'true',
 });
 
