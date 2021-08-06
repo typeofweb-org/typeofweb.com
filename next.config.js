@@ -1,3 +1,4 @@
+const withPreact = require('next-plugin-preact');
 const withTM = require('next-transpile-modules')([
   'unified',
   'unist-util-visit',
@@ -15,19 +16,21 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /**
  * @type import('next/dist/next-server/server/config-shared').NextConfig
  */
-const config = withBundleAnalyzer(
-  withPlaiceholder(
-    withTM({
-      webpack(config, { isServer }) {
-        config.module.rules.push({
-          test: /\.svg$/,
-          issuer: /\.(js|ts)x?$/,
-          use: ['@svgr/webpack'],
-        });
+const config = withPreact(
+  withBundleAnalyzer(
+    withPlaiceholder(
+      withTM({
+        webpack(config, { isServer }) {
+          config.module.rules.push({
+            test: /\.svg$/,
+            issuer: /\.(js|ts)x?$/,
+            use: ['@svgr/webpack'],
+          });
 
-        return config;
-      },
-    }),
+          return config;
+        },
+      }),
+    ),
   ),
 );
 
