@@ -8,10 +8,11 @@ import { allCategories, categoriesToMainCategory } from './categories';
 import { toHtml, toMdx } from './markdown';
 import { allSeries } from './series';
 
-import type { PromiseValue, Series } from '../types';
+import type { PromiseValue } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', 'wordpress_posts');
+const pathToLegacyPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', '_wordpress_posts');
+const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', '_posts');
 
 export async function readFilesInDir(dir: string): Promise<readonly string[]> {
   const entries = await Fs.readdir(dir, { withFileTypes: true });
@@ -22,7 +23,7 @@ export async function readFilesInDir(dir: string): Promise<readonly string[]> {
         if (entry.isDirectory()) {
           return await readFilesInDir(fullPath);
         }
-        if (entry.isFile() && entry.name.endsWith('.md')) {
+        if (entry.isFile() && (entry.name.endsWith('.md') || entry.name.endsWith('.mdx'))) {
           return fullPath;
         }
         return;
@@ -46,20 +47,26 @@ export async function readAllPosts({
   readonly limit?: number;
   readonly includePages?: boolean;
 } = {}) {
-  const files = await readFilesInDir(pathToPosts);
+  const files = [...(await readFilesInDir(pathToLegacyPosts)), ...(await readFilesInDir(pathToPosts))];
 
   const posts = await Promise.all(files.map((file) => Fs.readFile(file, 'utf-8')));
 
   let postsWithFm = posts.map(readFrontMatter).sort((a, b) => Number(b.data.date) - Number(a.data.date));
 
   if (!includePages) {
-    postsWithFm = postsWithFm.filter((p) => p.data.type === 'post');
+    postsWithFm = postsWithFm.filter((p) => !p.data.type || p.data.type === 'post');
   }
   if (category) {
-    postsWithFm = postsWithFm.filter((post) => categoriesToMainCategory(post.data.categories)?.slug === category);
+    postsWithFm = postsWithFm.filter((post) =>
+      'category' in post.data
+        ? post.data.category === category
+        : categoriesToMainCategory(post.data.categories)?.slug === category,
+    );
   }
   if (series) {
-    postsWithFm = postsWithFm.filter((post) => post.data.series?.slug === series);
+    postsWithFm = postsWithFm.filter((post) =>
+      typeof post.data.series === 'string' ? post.data.series === series : post.data.series?.slug === series,
+    );
   }
   const postsCount = postsWithFm.length;
 
@@ -93,7 +100,13 @@ export async function getAllPermalinks() {
 
 export async function getSeriesPermalinks() {
   const { posts } = await readAllPosts({ includePages: false });
-  const seriesSlugs = [...new Set(posts.map((fm) => fm.data.series?.slug).filter((slug): slug is string => !!slug))];
+  const seriesSlugs = [
+    ...new Set(
+      posts
+        .map((fm) => (typeof fm.data.series === 'string' ? fm.data.series : fm.data.series?.slug))
+        .filter((slug): slug is string => !!slug),
+    ),
+  ];
   return seriesSlugs;
 }
 
@@ -170,7 +183,7 @@ export async function getExcerptAndContent(
   }
 }
 
-interface PostFrontmatter {
+interface LegacyPostFrontmatter {
   readonly id: number;
   readonly title: string;
   readonly index: number;
@@ -196,11 +209,33 @@ interface PostFrontmatter {
   };
 }
 
+interface NewPostFrontmatter {
+  readonly type: never;
+  readonly index: number;
+  readonly title: string;
+  readonly permalink: string;
+  readonly date: Date;
+  readonly authors: readonly string[];
+  readonly thumbnail: {
+    readonly url: string;
+    readonly width: number;
+    readonly height: number;
+  };
+  readonly category: string;
+  readonly series?: string;
+  readonly seo?: {
+    readonly focusKeywords?: readonly string[];
+    readonly focusKeywordSynonyms?: readonly string[];
+    readonly metadesc?: string;
+    readonly title?: string;
+  };
+}
+
 function readFrontMatter(post: string) {
   const fm = GrayMatter(post);
   return {
     ...fm,
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- PostFrontmatter
-    data: fm.data as PostFrontmatter,
+    data: fm.data as LegacyPostFrontmatter | NewPostFrontmatter,
   };
 }

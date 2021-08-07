@@ -1,4 +1,4 @@
-const categoryMappings = {
+export const categoryMappings = {
   'front-end+javascript': 'javascript',
   'inicjatywy+opinie': 'opinie',
   opinie: 'opinie',

@@ -270,7 +270,7 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
   };
 }
 
-const commonRemarkPlugins = [RemarkGfm, RemarkFrontmatter, RemarkMath];
+export const commonRemarkPlugins = [RemarkGfm, RemarkFrontmatter, RemarkMath];
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],

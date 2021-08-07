@@ -37,18 +37,17 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
     <TwoColumns withSidebar={true} pageKind="index">
       {posts.map((post, i) => {
         if (!post.excerpt) {
-          console.warn(`Missing excerpt for post ${post.frontmatter.id}!`);
+          console.warn(`Missing excerpt for post ${post.frontmatter.permalink}!`);
           return null;
         }
         const sneakPeek = (
           <ArticleSneakPeek
-            key={post.frontmatter.id}
+            key={post.frontmatter.permalink}
             title={post.frontmatter.title}
             mainCategory={post.frontmatter.mainCategory}
             permalink={post.frontmatter.permalink}
             authors={post.frontmatter.authors}
             cover={post.frontmatter.cover ? { ...post.frontmatter.cover, preload: i === 0 } : null}
-            id={post.frontmatter.id}
             index={post.frontmatter.index}
             excerpt={post.excerpt}
             series={post.frontmatter.series}
@@ -57,7 +56,7 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
 
         if (i === 0) {
           return (
-            <Fragment key={post.frontmatter.id}>
+            <Fragment key={post.frontmatter.permalink}>
               {sneakPeek}
               <NewsletterForm />
             </Fragment>

@@ -97,7 +97,6 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
             <div dangerouslySetInnerHTML={{ __html: contentObj.content }} />
           )
         }
-        id={frontmatter.id}
         index={frontmatter.index}
         title={frontmatter.title}
         authors={frontmatter.authors}

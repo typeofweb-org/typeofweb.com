@@ -2,8 +2,8 @@ import { getPlaiceholder } from 'plaiceholder';
 
 import { pageSize } from '../constants';
 
-import { categoriesToMainCategory } from './categories';
-import { findCurrentSeriesIndex } from './series';
+import { allCategories, categoriesToMainCategory } from './categories';
+import { allSeries, findCurrentSeriesIndex } from './series';
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
 import type { Series, SeriesWithToC } from '../types';
@@ -27,7 +27,6 @@ interface PostPropsOnlyExcerpt {
 }
 
 interface PostPropsFrontmatter {
-  readonly id: number;
   readonly title: string;
   readonly index: number;
   readonly date: string;
@@ -66,7 +65,6 @@ interface PostPropsFrontmatter {
 }
 
 interface PostPropsFrontmatterOnlyExcerpt {
-  readonly id: number;
   readonly title: string;
   readonly index: number;
   readonly date: string;
@@ -118,10 +116,15 @@ export async function postToProps(
     ? await getPlaiceholder(encodeURI(post.data.thumbnail.url))
     : {};
 
-  const mainCategory = categoriesToMainCategory(post.data.categories);
+  const mainCategory =
+    'category' in post.data
+      ? allCategories.find((c) => 'category' in post.data && c.slug === post.data.category)
+      : categoriesToMainCategory(post.data.categories);
 
   const seriesLinks = post.data.series
-    ? (await readAllPosts({ series: post.data.series?.slug })).posts
+    ? (
+        await readAllPosts({ series: typeof post.data.series === 'string' ? post.data.series : post.data.series?.slug })
+      ).posts
         .map((p) => ({
           permalink: p.data.permalink,
           title: p.data.title,
@@ -134,14 +137,20 @@ export async function postToProps(
       excerpt: contentObj.excerpt,
       isMdx: false,
       frontmatter: {
-        id: post.data.id,
         title: post.data.title,
         index: post.data.index,
         date: post.data.date,
         series: post.data.series
           ? {
-              name: post.data.series.name,
-              slug: post.data.series.slug,
+              ...(typeof post.data.series === 'string'
+                ? allSeries.find((s) => s.slug === post.data.series) || {
+                    name: post.data.series,
+                    slug: post.data.series,
+                  }
+                : {
+                    name: post.data.series.name,
+                    slug: post.data.series.slug,
+                  }),
               count: seriesLinks.length,
               currentIndex: findCurrentSeriesIndex(post.data.permalink, seriesLinks),
             }
@@ -157,7 +166,7 @@ export async function postToProps(
             };
           }),
         seo: post.data.seo,
-        mainCategory,
+        mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
         cover: img && blurDataURL ? { img, blurDataURL } : null,
       },
@@ -167,14 +176,20 @@ export async function postToProps(
     const result: PostProps = {
       ...contentObj,
       frontmatter: {
-        id: post.data.id,
         title: post.data.title,
         index: post.data.index,
         date: post.data.date,
         series: post.data.series
           ? {
-              name: post.data.series.name,
-              slug: post.data.series.slug,
+              ...(typeof post.data.series === 'string'
+                ? allSeries.find((s) => s.slug === post.data.series) || {
+                    name: post.data.series,
+                    slug: post.data.series,
+                  }
+                : {
+                    name: post.data.series.name,
+                    slug: post.data.series.slug,
+                  }),
               links: seriesLinks,
               count: seriesLinks.length,
               currentIndex: findCurrentSeriesIndex(post.data.permalink, seriesLinks),
@@ -202,7 +217,7 @@ export async function postToProps(
             };
           }),
         seo: post.data.seo,
-        mainCategory,
+        mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
         cover: img && blurDataURL ? { img, blurDataURL } : null,
       },

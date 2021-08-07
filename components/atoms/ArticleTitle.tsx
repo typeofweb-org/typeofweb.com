@@ -5,7 +5,6 @@ import { SectionTitle } from './SectionTitle';
 
 export const ArticleTitle = memo<{
   readonly title: string;
-  readonly id: number;
   readonly index: number;
   readonly href: string;
   readonly level: 1 | 2;

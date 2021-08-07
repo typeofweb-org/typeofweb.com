@@ -12,7 +12,6 @@ import type { Author } from '../molecules/ArticleMeta';
 
 interface SingleArticleProps {
   readonly cover: CoverPlaiceholder | null;
-  readonly id: number;
   readonly isMdx: boolean;
   readonly index: number;
   readonly title: string;
@@ -26,7 +25,7 @@ interface SingleArticleProps {
 
 export const SingleArticle = memo(
   forwardRef<HTMLElement, SingleArticleProps>(
-    ({ cover, id, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
+    ({ cover, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
       const href = '/' + permalink;
 
       return (
@@ -42,7 +41,7 @@ export const SingleArticle = memo(
         >
           <header className="bg-gray-200">
             <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-6 ${cover ? 'pt-0' : 'mb-6'}`}>
-              <ArticleTitle title={title} id={id} index={index} href={href} level={1} />
+              <ArticleTitle title={title} index={index} href={href} level={1} />
               {excerpt && (
                 <div className="prose mt-4 pb-2">
                   <p className="lead">{excerpt}</p>

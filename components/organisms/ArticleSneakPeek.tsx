@@ -13,7 +13,6 @@ import type { Author } from '../molecules/ArticleMeta';
 
 interface ArticleSneakPeekProps {
   readonly cover: CoverPlaiceholder | null;
-  readonly id: number;
   readonly index: number;
   readonly title: string;
   readonly authors: readonly Author[];
@@ -24,7 +23,7 @@ interface ArticleSneakPeekProps {
 }
 
 export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
-  ({ cover, id, index, title, authors, mainCategory, permalink, series, excerpt }) => {
+  ({ cover, index, title, authors, mainCategory, permalink, series, excerpt }) => {
     const href = getUrlForPermalink(permalink);
     return (
       <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
@@ -37,7 +36,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
             </Link>
           )}
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
-            <ArticleTitle title={title} id={id} index={index} href={href} level={2} />
+            <ArticleTitle title={title} index={index} href={href} level={2} />
             <ArticleMeta series={series} authors={authors} mainCategory={mainCategory} size="small" />
           </div>
         </header>
