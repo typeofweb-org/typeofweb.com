@@ -32,7 +32,7 @@ const myUrls = {
 export const SocialWidget = memo(() => {
   return (
     <Widget title="Śledź mnie na:">
-      <ul className="flex flex-row flex-wrap gap-3 justify-between">
+      <ul className="flex flex flex-row gap-3 justify-between">
         {social.map(({ icon: Icon, label, slug }) => {
           return (
             <li key={label} className="text-gray-700 hover:text-green-700 transition-colors">
@@ -42,19 +42,23 @@ export const SocialWidget = memo(() => {
             </li>
           );
         })}
-        <li className="text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors sm:mt-4">
+      </ul>
+      <ul className="flex flex-row flex-wrap gap-3 justify-between">
+        <li className="mt-7 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
           <a href="/feed.json" aria-label="JSON Feed" title="JSON Feed" className="block">
             <JsonFeedIcon className="inline-block mr-2 w-8 fill-current" />
             JSON Feed
           </a>
         </li>
-        <li className="text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors sm:mt-4">
+        <li className="mt-7 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
           <a href="/feed.xml" aria-label="RSS" title="RSS" className="block">
             <RssIcon className="inline-block mr-2 w-8 fill-current" />
             RSS
           </a>
         </li>
-        <li className="ml-0 pl-0 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors sm:mt-4">
+      </ul>
+      <ul className="flex flex-row flex-wrap gap-3 justify-between">
+        <li className="ml-0 mt-7 pl-0 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
           <a href="/wspolpraca">
             <ClickIcon className="inline-block mr-2 w-8 stroke-current" />O mnie i współpraca
           </a>

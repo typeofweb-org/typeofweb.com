@@ -168,7 +168,7 @@ export async function postToProps(
         seo: post.data.seo,
         mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
-        cover: img && blurDataURL ? { img, blurDataURL } : null,
+        cover: img && blurDataURL ? { img: { ...img, src: decodeURI(img.src) }, blurDataURL } : null,
       },
     };
     return result;
@@ -219,7 +219,7 @@ export async function postToProps(
         seo: post.data.seo,
         mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
-        cover: img && blurDataURL ? { img, blurDataURL } : null,
+        cover: img && blurDataURL ? { img: { ...img, src: decodeURI(img.src) }, blurDataURL } : null,
       },
     };
     return result;
