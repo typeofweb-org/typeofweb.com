@@ -115,6 +115,9 @@ module.exports = {
     plugin(function ({ config, addUtilities, addVariant, e, postcss, theme }) {
       {
         addUtilities({
+          '.w-fit': {
+            width: 'fit-content',
+          },
           '.text-stroke': {
             '-webkit-text-stroke': `1px ${theme('colors.gray.500')}`,
             '-webkit-text-fill-color': `${theme('colors.gray.100')}`,

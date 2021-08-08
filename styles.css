@@ -20,7 +20,6 @@ html,
   background-repeat: repeat;
   background-size: 106px;
   background-position: center -15px;
-  padding-bottom: 8rem;
 
   @apply pt-12 lg:pt-16;
 }
@@ -66,6 +65,16 @@ main > * + * {
 .main-menu-button {
   transform: translate3d(0, calc(0px - constant(safe-area-inset-bottom)), 0);
   transform: translate3d(0, calc(0px - env(safe-area-inset-bottom)), 0);
+}
+
+.app-footer {
+  padding-bottom: calc(2rem + constant(safe-area-inset-bottom));
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+
+  background-image: url('./images/bg-typeofweb.svg');
+  background-repeat: repeat;
+  background-size: 106px;
+  background-position: center center;
 }
 
 [id] {

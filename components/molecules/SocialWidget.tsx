@@ -20,7 +20,7 @@ export const social = [
   { icon: LinkedinIcon, label: 'LinkedIn', slug: 'linkedin' },
 ] as const;
 
-const myUrls = {
+export const myUrls = {
   twitter: 'https://twitter.com/typeofweb',
   facebook: 'https://facebook.com/typeofweb',
   github: 'https://github.com/typeofweb',
@@ -32,7 +32,7 @@ const myUrls = {
 export const SocialWidget = memo(() => {
   return (
     <Widget title="Śledź mnie na:">
-      <ul className="flex flex flex-row gap-3 justify-between">
+      <ul className="flex flex-row gap-3 justify-between">
         {social.map(({ icon: Icon, label, slug }) => {
           return (
             <li key={label} className="text-gray-700 hover:text-green-700 transition-colors">
