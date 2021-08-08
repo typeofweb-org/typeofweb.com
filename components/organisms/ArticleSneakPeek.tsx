@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { memo } from 'react';
+import React, { memo } from 'react';
 
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
+import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
 import type { Series } from '../../types';
@@ -40,14 +41,16 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
             <ArticleMeta series={series} authors={authors} mainCategory={mainCategory} size="small" />
           </div>
         </header>
-        <div className="prose prose-lg pb-2 px-7 sm:px-8 lg:px-12">
+        <div className="pb-2 px-7 text-gray-700 font-serif text-lg sm:px-8 lg:px-12">
           <p className="!indent-0">
             {excerpt}{' '}
-            <span className="inner-link ml-2">
-              <Link href={href}>
-                <a className="!tracking-wider">
-                  Czytaj dalej… <span className="sr-only">artykuł {title}</span>
-                </a>
+            <span className="ml-2">
+              <Link href={href} passHref>
+                <LinkUnderlineEffect>
+                  <a className="text-blue-500 font-bold tracking-wider">
+                    Czytaj dalej… <span className="sr-only">artykuł {title}</span>
+                  </a>
+                </LinkUnderlineEffect>
               </Link>
             </span>
           </p>

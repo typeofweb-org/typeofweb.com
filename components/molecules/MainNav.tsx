@@ -46,7 +46,7 @@ export const MainNav = memo(() => {
           const isActive = permalink === item.slug;
           return (
             <li key={item.slug} className={`flex items-stretch mt-0.5 ${item.className ?? ''}`}>
-              <Link href={getUrlForPermalink(item.slug)}>
+              <Link href={getUrlForPermalink(item.slug)} scroll={true}>
                 <a
                   onClick={closeMenu}
                   className={`group inline-flex items-center transition-colors text-3xl lg:text-base whitespace-nowrap ${
