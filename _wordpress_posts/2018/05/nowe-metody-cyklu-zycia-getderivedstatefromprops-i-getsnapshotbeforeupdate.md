@@ -1,6 +1,6 @@
 ---
 id: 1566
-index: 85
+index: 82
 title: 'Nowe metody cyklu życia: getDerivedStateFromProps i getSnapshotBeforeUpdate'
 date: 2018-05-29T10:18:46.000Z
 isMarkdown: true

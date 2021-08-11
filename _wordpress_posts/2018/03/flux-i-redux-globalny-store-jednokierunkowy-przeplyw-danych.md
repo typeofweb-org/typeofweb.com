@@ -1,6 +1,6 @@
 ---
 id: 18
-index: 73
+index: 71
 title: 'Flux i Redux: globalny store i jednokierunkowy przepływ danych'
 date: 2018-03-29T11:16:34.000Z
 isMarkdown: false

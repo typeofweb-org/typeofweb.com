@@ -1,6 +1,6 @@
 ---
 id: 1130
-index: 76
+index: 74
 title: 'Serwer HTTP lokalnie: Sposób na problemy z CORS i file:///'
 date: 2018-04-09T14:24:38.000Z
 isMarkdown: true

@@ -1,6 +1,6 @@
 ---
 id: 2278
-index: 117
+index: 114
 title: Continuous Integration na GitHub Pages w Buddy.works
 date: 2019-11-18T15:51:56.000Z
 isMarkdown: true

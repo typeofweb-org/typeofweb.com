@@ -1,6 +1,6 @@
 ---
 id: 2383
-index: 123
+index: 119
 title: Wady React Hooks
 date: 2020-02-13T09:26:57.000Z
 isMarkdown: true

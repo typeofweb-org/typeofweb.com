@@ -1,6 +1,6 @@
 ---
 id: 2518
-index: 131
+index: 124
 title: Licencje na oprogramowanie
 date: 2020-06-24T11:17:23.000Z
 isMarkdown: true

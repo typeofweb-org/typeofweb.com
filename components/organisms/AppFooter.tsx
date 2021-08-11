@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { memo } from 'react';
 
+import ReactIcon from '../../images/react-icon.svg';
 import BadgeCheckIcon from '../../images/social/badge-check.svg';
 import BriefcaseIcon from '../../images/social/briefcase.svg';
 import ChatAltIcon from '../../images/social/chat-alt.svg';
@@ -11,6 +12,7 @@ import GlobeIcon from '../../images/social/globe.svg';
 import JsIcon from '../../images/social/js.svg';
 import { allCategories, getCategoryLink } from '../../utils/categories';
 import { getUrlForPermalink } from '../../utils/permalinks';
+import { getSeriesLink } from '../../utils/series';
 import { myUrls, social } from '../molecules/SocialWidget';
 
 import type { ComponentType } from 'react';
@@ -47,12 +49,20 @@ const sections: ReadonlyArray<{
   },
   {
     title: 'Kategorie',
-    items: allCategories.map((c) => ({
-      slug: c.slug,
-      label: c.name,
-      url: getCategoryLink(c),
-      icon: categoryToIcon[c.slug],
-    })),
+    items: [
+      ...allCategories.map((c) => ({
+        slug: c.slug,
+        label: c.name,
+        url: getCategoryLink(c),
+        icon: categoryToIcon[c.slug],
+      })),
+      {
+        slug: 'react-js',
+        label: 'Kurs React.js',
+        url: getSeriesLink('react-js'),
+        icon: ReactIcon,
+      },
+    ],
   },
 ];
 

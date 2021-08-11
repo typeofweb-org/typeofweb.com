@@ -1,6 +1,6 @@
 ---
 id: 1075
-index: 64
+index: 62
 title: 'Odpowiadam na pytania: Babel, ECMAScript, destrukturyzacja, onClick, className'
 date: 2018-02-21T18:41:32.000Z
 isMarkdown: true

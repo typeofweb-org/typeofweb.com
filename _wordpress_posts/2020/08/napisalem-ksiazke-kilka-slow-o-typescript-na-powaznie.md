@@ -1,6 +1,6 @@
 ---
 id: 2567
-index: 133
+index: 126
 title: Napisałem książkę! Kilka słów o „TypeScript na poważnie”
 date: 2020-08-24T12:27:41.000Z
 isMarkdown: true

@@ -1,6 +1,6 @@
 ---
 id: 1814
-index: 102
+index: 99
 title: React Hooks — wprowadzenie i motywacja
 date: 2019-02-04T08:36:21.000Z
 isMarkdown: true

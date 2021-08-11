@@ -1,3 +1,4 @@
+import Dynamic from 'next/dynamic';
 import React, { forwardRef, memo } from 'react';
 
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
@@ -9,6 +10,10 @@ import { ArticleMeta } from '../molecules/ArticleMeta';
 import type { SeriesWithToC } from '../../types';
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
 import type { Author } from '../molecules/ArticleMeta';
+
+const RelatedArticles = Dynamic<{ readonly permalink: string }>(() =>
+  import(/* webpackChunkName: "RelatedArticles" */ '../molecules/RelatedArticles').then((m) => m.RelatedArticles),
+);
 
 interface SingleArticleProps {
   readonly cover: CoverPlaiceholder | null;
@@ -63,6 +68,7 @@ export const SingleArticle = memo(
           </span>
           <link itemProp="mainEntityOfPage" href={href} />
           <ArticleFooter authors={authors} />
+          <RelatedArticles permalink={permalink} />
         </Card>
       );
     },

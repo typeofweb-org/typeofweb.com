@@ -1,6 +1,6 @@
 ---
 id: 439
-index: 34
+index: 33
 title: meet.js Summit 2017 za kulisami
 date: 2017-09-17T15:17:00.000Z
 isMarkdown: false

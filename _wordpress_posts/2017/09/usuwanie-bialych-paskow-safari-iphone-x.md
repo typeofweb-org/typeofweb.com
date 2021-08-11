@@ -1,6 +1,6 @@
 ---
 id: 453
-index: 35
+index: 34
 title: Usuwanie białych pasków w Safari na iPhone X
 date: 2017-09-25T20:29:55.000Z
 isMarkdown: false

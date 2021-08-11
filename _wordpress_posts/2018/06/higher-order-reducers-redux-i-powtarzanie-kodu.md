@@ -1,6 +1,6 @@
 ---
 id: 1585
-index: 91
+index: 88
 title: Higher Order Reducers — Redux i powtarzanie kodu
 date: 2018-06-28T09:08:28.000Z
 isMarkdown: true

@@ -1,6 +1,6 @@
 ---
 id: 1026
-index: 63
+index: 61
 title: Poprawne bindowanie funkcji w React.js
 date: 2018-02-16T15:34:32.000Z
 isMarkdown: false

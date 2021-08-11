@@ -1,6 +1,6 @@
 ---
 id: 1551
-index: 83
+index: 80
 title: Kiedy używać state, a kiedy Redux?
 date: 2018-05-16T07:22:17.000Z
 isMarkdown: true

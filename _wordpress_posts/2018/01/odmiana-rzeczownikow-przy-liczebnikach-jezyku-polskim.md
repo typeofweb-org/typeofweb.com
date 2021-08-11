@@ -1,6 +1,6 @@
 ---
 id: 977
-index: 55
+index: 54
 title: Odmiana rzeczowników przy liczebnikach w języku polskim
 date: 2018-01-22T20:26:28.000Z
 isMarkdown: false

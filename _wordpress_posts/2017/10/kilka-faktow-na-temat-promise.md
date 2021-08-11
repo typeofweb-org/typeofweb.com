@@ -1,6 +1,6 @@
 ---
 id: 586
-index: 39
+index: 38
 title: 'Promise: 9 rzeczy, których nie wiesz na temat Promise'
 date: 2017-10-23T20:09:58.000Z
 isMarkdown: false

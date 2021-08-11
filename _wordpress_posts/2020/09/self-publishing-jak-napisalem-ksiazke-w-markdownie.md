@@ -1,6 +1,6 @@
 ---
 id: 2581
-index: 134
+index: 127
 title: 'Self-publishing: Jak napisałem książkę w markdownie?'
 date: 2020-09-30T14:24:58.000Z
 isMarkdown: true

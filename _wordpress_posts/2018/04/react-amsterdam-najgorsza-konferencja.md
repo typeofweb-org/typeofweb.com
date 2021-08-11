@@ -1,6 +1,6 @@
 ---
 id: 1425
-index: 78
+index: 76
 title: Czy React.Amsterdam to najgorsza konferencja na jakiej byłem?
 date: 2018-04-20T13:16:18.000Z
 isMarkdown: true

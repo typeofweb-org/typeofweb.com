@@ -1,6 +1,6 @@
 ---
 id: 2644
-index: 137
+index: 130
 title: 'TypeScript: `infer` i typy warunkowe'
 date: 2021-01-30T12:50:09.000Z
 isMarkdown: true

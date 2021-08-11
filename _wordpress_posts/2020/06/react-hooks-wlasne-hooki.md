@@ -1,6 +1,6 @@
 ---
 id: 2510
-index: 130
+index: 123
 title: 'React Hooks: Piszemy własne hooki!'
 date: 2020-06-10T11:07:22.000Z
 isMarkdown: true

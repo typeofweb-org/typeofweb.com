@@ -1,6 +1,6 @@
 ---
 id: 1463
-index: 86
+index: 83
 title: Leniwe ładowanie komponentów w React dzięki import
 date: 2018-06-04T11:05:42.000Z
 isMarkdown: true

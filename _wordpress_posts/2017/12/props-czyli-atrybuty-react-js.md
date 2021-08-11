@@ -1,6 +1,6 @@
 ---
 id: 714
-index: 45
+index: 44
 title: Props czyli atrybuty w React.js
 date: 2017-12-12T14:25:59.000Z
 isMarkdown: false

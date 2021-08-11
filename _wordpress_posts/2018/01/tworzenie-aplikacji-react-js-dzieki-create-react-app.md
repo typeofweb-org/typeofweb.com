@@ -1,6 +1,6 @@
 ---
 id: 938
-index: 59
+index: 57
 title: Tworzenie aplikacji React.js dzięki create-react-app
 date: 2018-01-29T15:19:49.000Z
 isMarkdown: false

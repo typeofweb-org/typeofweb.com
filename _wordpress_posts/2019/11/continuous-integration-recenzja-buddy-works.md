@@ -1,6 +1,6 @@
 ---
 id: 2242
-index: 115
+index: 112
 title: Continuous Integration — Recenzja Buddy.works
 date: 2019-11-04T13:55:01.000Z
 isMarkdown: true

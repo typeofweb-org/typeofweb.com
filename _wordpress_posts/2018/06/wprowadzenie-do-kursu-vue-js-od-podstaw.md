@@ -1,6 +1,6 @@
 ---
 id: 1318
-index: 87
+index: 84
 title: Wprowadzenie do kursu Vue.js od podstaw
 date: 2018-06-08T12:20:00.000Z
 isMarkdown: true

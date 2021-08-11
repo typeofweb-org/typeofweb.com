@@ -1,6 +1,6 @@
 ---
 id: 1468
-index: 82
+index: 79
 title: 'Asynchroniczność w Redux: redux-thunk'
 date: 2018-05-07T10:24:32.000Z
 isMarkdown: false

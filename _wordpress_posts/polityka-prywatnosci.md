@@ -1,6 +1,5 @@
 ---
 id: 2466
-index: 127
 title: Polityka prywatności Type of Web
 date: 2020-03-29T11:57:51.000Z
 isMarkdown: false

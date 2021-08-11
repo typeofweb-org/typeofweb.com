@@ -1,6 +1,6 @@
 ---
 id: 823
-index: 54
+index: 53
 title: Metody cyklu życia komponentu w React.js
 date: 2018-01-18T17:33:42.000Z
 isMarkdown: false

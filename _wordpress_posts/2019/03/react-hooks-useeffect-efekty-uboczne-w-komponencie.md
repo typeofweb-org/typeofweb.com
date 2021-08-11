@@ -1,6 +1,6 @@
 ---
 id: 1873
-index: 106
+index: 103
 title: 'React Hooks: useEffect — efekty uboczne w komponencie'
 date: 2019-03-05T11:28:36.000Z
 isMarkdown: true

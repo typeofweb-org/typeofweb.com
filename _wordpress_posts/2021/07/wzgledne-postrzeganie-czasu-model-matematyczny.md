@@ -1,6 +1,6 @@
 ---
 id: 2716
-index: 139
+index: 132
 title: 'Względne postrzeganie czasu: model matematyczny'
 date: 2021-07-07T14:47:50.000Z
 isMarkdown: true

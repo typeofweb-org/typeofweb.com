@@ -1,6 +1,6 @@
 ---
 id: 1496
-index: 94
+index: 91
 title: Pętle w Vue.js z użyciem dyrektywy v-for
 date: 2018-07-13T12:34:07.000Z
 isMarkdown: true

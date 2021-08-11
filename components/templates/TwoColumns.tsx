@@ -24,7 +24,7 @@ export const TwoColumns = memo<
           itemScope
           itemType="http://schema.org/Blog"
           id="main-content"
-          className="flex-1 mt-4 pb-8 px-2 w-full max-w-3xl lg:mt-0 lg:pb-20 lg:px-0"
+          className="flex-1 mt-4 px-2 w-full max-w-3xl lg:mt-0 lg:pb-20 lg:px-0"
         >
           {children}
         </main>
