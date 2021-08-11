@@ -9,8 +9,50 @@ pre[data-lang]:not(pre[data-lang='']) {
   position: relative;
   &::after {
     content: attr(data-lang);
-    @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs bg-gray-200 rounded-bl-md rounded-tr-md;
+    @apply absolute right-0 top-0 block px-1 py-0.5 font-mono text-xs font-bold rounded-bl-md rounded-tr-md;
   }
+}
+
+pre[data-lang='ts']::after {
+  background-color: #3178c6;
+  color: white;
+}
+
+pre[data-lang='bash']::after {
+  background-color: black;
+  color: white;
+}
+
+pre[data-lang='jsx']::after,
+pre[data-lang='tsx']::after {
+  background-color: #61dafb;
+  color: #20232a;
+}
+
+pre[data-lang='json']::after {
+  background-color: #f4f4f4;
+  color: #20232a;
+}
+
+pre[data-lang='javascript']::after,
+pre[data-lang='js']::after {
+  background-color: #f0db4f;
+  color: #323330;
+}
+
+pre[data-lang='html']::after {
+  background-color: #f06529;
+  color: white;
+}
+
+pre[data-lang='css']::after {
+  background-color: #2965f1;
+  color: white;
+}
+
+pre[data-lang='reason']::after {
+  background-color: #d74938;
+  color: white;
 }
 
 code[class*='language-'],

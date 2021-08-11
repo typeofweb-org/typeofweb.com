@@ -67,8 +67,8 @@ export const SingleArticle = memo(
             <meta itemProp="name" content="Type of Web" />
           </span>
           <link itemProp="mainEntityOfPage" href={href} />
-          <ArticleFooter authors={authors} />
-          <RelatedArticles permalink={permalink} />
+          {index && <ArticleFooter authors={authors} />}
+          {index && <RelatedArticles permalink={permalink} />}
         </Card>
       );
     },
