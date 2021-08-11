@@ -1,6 +1,6 @@
 ---
 id: 1711
-index: 98
+index: 95
 title: Byłem na ReactiveConf 2018
 date: 2018-11-15T19:30:12.000Z
 isMarkdown: true

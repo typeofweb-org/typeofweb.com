@@ -1,6 +1,6 @@
 ---
 id: 733
-index: 47
+index: 46
 title: Podział na komponenty w React.js
 date: 2017-12-17T10:48:35.000Z
 isMarkdown: false

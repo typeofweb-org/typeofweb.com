@@ -1,6 +1,6 @@
 ---
 id: 2263
-index: 116
+index: 113
 title: Reactive Conference 2019 – relacja
 date: 2019-11-07T16:50:44.000Z
 isMarkdown: true

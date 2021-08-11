@@ -1,6 +1,6 @@
 ---
 id: 1939
-index: 110
+index: 107
 title: "useReducer —\_przenoszenie logiki poza komponent"
 date: 2019-05-07T15:16:31.000Z
 isMarkdown: true

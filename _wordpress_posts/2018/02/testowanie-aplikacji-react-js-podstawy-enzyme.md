@@ -1,6 +1,6 @@
 ---
 id: 965
-index: 61
+index: 59
 title: Testowanie aplikacji React.js — podstawy Enzyme
 date: 2018-02-09T08:20:22.000Z
 isMarkdown: false

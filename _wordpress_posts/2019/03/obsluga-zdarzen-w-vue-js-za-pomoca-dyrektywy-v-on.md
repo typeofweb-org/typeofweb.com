@@ -1,6 +1,6 @@
 ---
 id: 1416
-index: 107
+index: 104
 title: Obsługa zdarzeń w Vue.js za pomocą dyrektywy v-on
 date: 2019-03-10T12:36:33.000Z
 isMarkdown: true

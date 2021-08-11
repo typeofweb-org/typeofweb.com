@@ -28,7 +28,7 @@ interface PostPropsOnlyExcerpt {
 
 interface PostPropsFrontmatter {
   readonly title: string;
-  readonly index: number;
+  readonly index: number | null;
   readonly date: string;
   readonly series: SeriesWithToC | null;
   readonly authors: readonly {
@@ -66,7 +66,7 @@ interface PostPropsFrontmatter {
 
 interface PostPropsFrontmatterOnlyExcerpt {
   readonly title: string;
-  readonly index: number;
+  readonly index: number | null;
   readonly date: string;
   readonly series: Series | null;
   readonly authors: readonly {
@@ -138,7 +138,7 @@ export async function postToProps(
       isMdx: false,
       frontmatter: {
         title: post.data.title,
-        index: post.data.index,
+        index: post.data.index ?? null,
         date: post.data.date,
         series: post.data.series
           ? {
@@ -177,7 +177,7 @@ export async function postToProps(
       ...contentObj,
       frontmatter: {
         title: post.data.title,
-        index: post.data.index,
+        index: post.data.index ?? null,
         date: post.data.date,
         series: post.data.series
           ? {

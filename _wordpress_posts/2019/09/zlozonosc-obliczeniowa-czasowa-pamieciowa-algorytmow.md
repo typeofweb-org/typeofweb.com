@@ -1,6 +1,6 @@
 ---
 id: 2076
-index: 114
+index: 111
 title: "Złożoność\_obliczeniowa, czasowa i pamięciowa algorytmów"
 date: 2019-09-16T16:45:25.000Z
 isMarkdown: true

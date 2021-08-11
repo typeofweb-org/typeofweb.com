@@ -5,7 +5,7 @@ import { SectionTitle } from './SectionTitle';
 
 export const ArticleTitle = memo<{
   readonly title: string;
-  readonly index: number;
+  readonly index?: number | null;
   readonly href: string;
   readonly level: 1 | 2;
 }>(({ title, index, href, level }) => {
@@ -15,13 +15,15 @@ export const ArticleTitle = memo<{
         <SectionTitle size="large" level={level} itemProp="headline">
           {title}
         </SectionTitle>
-        <span
-          aria-label={`Artykuł numer ${index}`}
-          title={`Artykuł numer ${index}`}
-          className="text-stroke absolute -left-7 top-1.5 w-8 text-gray-500 font-sans text-xl font-semibold lg:-left-10 lg:top-4 lg:w-12 lg:text-3xl"
-        >
-          {index}
-        </span>
+        {index && (
+          <span
+            aria-label={`Artykuł numer ${index}`}
+            title={`Artykuł numer ${index}`}
+            className="text-stroke absolute -left-7 top-1.5 w-8 text-gray-500 font-sans text-xl font-semibold lg:-left-10 lg:top-4 lg:w-12 lg:text-3xl"
+          >
+            {index}
+          </span>
+        )}
       </a>
     </Link>
   );

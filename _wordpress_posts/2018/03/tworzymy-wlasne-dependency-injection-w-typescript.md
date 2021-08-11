@@ -1,6 +1,6 @@
 ---
 id: 1062
-index: 70
+index: 68
 title: Tworzymy własne Dependency Injection w TypeScript
 date: 2018-03-15T00:14:33.000Z
 isMarkdown: false

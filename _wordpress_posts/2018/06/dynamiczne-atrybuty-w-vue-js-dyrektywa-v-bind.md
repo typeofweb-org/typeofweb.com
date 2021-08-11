@@ -1,6 +1,6 @@
 ---
 id: 1351
-index: 90
+index: 87
 title: Dynamiczne atrybuty w Vue.js - dyrektywa v-bind
 date: 2018-06-25T07:45:37.000Z
 isMarkdown: true

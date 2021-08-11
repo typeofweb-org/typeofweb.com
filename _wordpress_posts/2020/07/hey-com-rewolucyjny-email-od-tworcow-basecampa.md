@@ -1,6 +1,6 @@
 ---
 id: 2535
-index: 132
+index: 125
 title: Hey.com – rewolucyjny email od twórców Basecampa?
 date: 2020-07-03T08:40:02.000Z
 isMarkdown: true

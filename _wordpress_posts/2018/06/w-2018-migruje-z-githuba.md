@@ -1,6 +1,6 @@
 ---
 id: 1590
-index: 88
+index: 85
 title: "W 2018 migruję\_z GitHuba"
 date: 2018-06-11T08:39:26.000Z
 isMarkdown: true

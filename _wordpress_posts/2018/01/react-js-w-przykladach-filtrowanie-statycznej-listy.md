@@ -1,6 +1,6 @@
 ---
 id: 921
-index: 56
+index: 55
 title: 'React.js w przykładach: filtrowanie statycznej listy'
 date: 2018-01-24T09:19:30.000Z
 isMarkdown: false

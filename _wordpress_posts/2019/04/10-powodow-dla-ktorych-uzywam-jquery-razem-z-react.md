@@ -1,6 +1,6 @@
 ---
 id: 1896
-index: 108
+index: 105
 title: 10 powodów, dla których używam jQuery razem z React
 date: 2019-04-01T09:54:18.000Z
 isMarkdown: true

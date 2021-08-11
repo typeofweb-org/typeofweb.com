@@ -1,6 +1,6 @@
 ---
 id: 1622
-index: 92
+index: 89
 title: Poradnik dla organizatorów konferencji
 date: 2018-07-03T09:49:29.000Z
 isMarkdown: true

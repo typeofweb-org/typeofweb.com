@@ -1,6 +1,6 @@
 ---
 id: 567
-index: 38
+index: 37
 title: Symlink, zip i upload plików – łatwo padniesz łupem hackera
 date: 2017-10-17T11:45:29.000Z
 isMarkdown: false

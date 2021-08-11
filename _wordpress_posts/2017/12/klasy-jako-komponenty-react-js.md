@@ -1,6 +1,6 @@
 ---
 id: 751
-index: 48
+index: 47
 title: Klasy jako komponenty React.js
 date: 2017-12-19T12:26:57.000Z
 isMarkdown: false

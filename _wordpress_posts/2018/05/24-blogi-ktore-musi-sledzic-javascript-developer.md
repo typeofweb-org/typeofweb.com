@@ -1,6 +1,6 @@
 ---
 id: 1555
-index: 84
+index: 81
 title: 24 blogi, które musi śledzić każdy JavaScript developer
 date: 2018-05-22T09:49:31.000Z
 isMarkdown: true

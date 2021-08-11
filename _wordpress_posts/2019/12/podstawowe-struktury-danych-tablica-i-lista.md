@@ -1,6 +1,6 @@
 ---
 id: 2130
-index: 119
+index: 116
 title: Podstawowe struktury danych — tablica i lista
 date: 2019-12-10T18:57:12.000Z
 isMarkdown: true

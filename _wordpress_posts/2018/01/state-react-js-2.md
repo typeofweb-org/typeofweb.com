@@ -1,6 +1,6 @@
 ---
 id: 785
-index: 53
+index: 52
 title: State w React.js 2
 date: 2018-01-15T12:51:05.000Z
 isMarkdown: false

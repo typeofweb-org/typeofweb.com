@@ -1,6 +1,6 @@
 ---
 id: 695
-index: 42
+index: 41
 title: 'React.js: Wprowadzenie do kursu od podstaw'
 date: 2017-11-28T14:54:47.000Z
 isMarkdown: false

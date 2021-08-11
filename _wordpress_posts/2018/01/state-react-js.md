@@ -1,6 +1,6 @@
 ---
 id: 748
-index: 51
+index: 50
 title: Stan komponentów React.js
 date: 2018-01-11T14:34:52.000Z
 isMarkdown: false

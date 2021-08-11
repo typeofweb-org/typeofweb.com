@@ -1,6 +1,6 @@
 ---
 id: 1040
-index: 62
+index: 60
 title: Testowanie React.js w Enzyme — props, state i interakcje
 date: 2018-02-13T13:46:21.000Z
 isMarkdown: false

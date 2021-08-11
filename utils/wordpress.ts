@@ -11,8 +11,12 @@ import { allSeries } from './series';
 import type { PromiseValue } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-const pathToLegacyPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', '_wordpress_posts');
-const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', '_posts');
+export const pathToLegacyPosts = Path.resolve(
+  Path.dirname(Url.fileURLToPath(import.meta.url)),
+  '..',
+  '_wordpress_posts',
+);
+export const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', '_posts');
 
 export async function readFilesInDir(dir: string): Promise<readonly string[]> {
   const entries = await Fs.readdir(dir, { withFileTypes: true });
@@ -54,7 +58,7 @@ export async function readAllPosts({
   let postsWithFm = posts.map(readFrontMatter).sort((a, b) => Number(b.data.date) - Number(a.data.date));
 
   if (!includePages) {
-    postsWithFm = postsWithFm.filter((p) => !p.data.type || p.data.type === 'post');
+    postsWithFm = postsWithFm.filter((p) => p.data.type === 'post');
   }
   if (category) {
     postsWithFm = postsWithFm.filter((post) =>
@@ -231,7 +235,7 @@ interface NewPostFrontmatter {
   };
 }
 
-function readFrontMatter(post: string) {
+export function readFrontMatter(post: string) {
   const fm = GrayMatter(post);
   return {
     ...fm,

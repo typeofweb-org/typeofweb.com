@@ -1,6 +1,6 @@
 ---
 id: 799
-index: 41
+index: 40
 title: this w JS — czyli kilka słów o kontekście wywołania funkcji
 date: 2017-11-14T17:33:21.000Z
 isMarkdown: false

@@ -1,6 +1,6 @@
 ---
 id: 1092
-index: 66
+index: 64
 title: Komunikacja z API w React.js
 date: 2018-02-27T06:58:57.000Z
 isMarkdown: true

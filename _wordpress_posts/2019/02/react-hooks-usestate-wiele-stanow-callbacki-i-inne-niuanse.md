@@ -1,6 +1,6 @@
 ---
 id: 1863
-index: 104
+index: 101
 title: 'React Hooks: useState — wiele stanów, callbacki i inne niuanse'
 date: 2019-02-15T12:03:18.000Z
 isMarkdown: true

@@ -1,6 +1,6 @@
 ---
 id: 1457
-index: 80
+index: 78
 title: 'Projektowanie komponentów: Presentational & Container Components'
 date: 2018-04-30T19:53:07.000Z
 isMarkdown: true

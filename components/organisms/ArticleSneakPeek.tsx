@@ -14,7 +14,7 @@ import type { Author } from '../molecules/ArticleMeta';
 
 interface ArticleSneakPeekProps {
   readonly cover: CoverPlaiceholder | null;
-  readonly index: number;
+  readonly index?: number | null;
   readonly title: string;
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;

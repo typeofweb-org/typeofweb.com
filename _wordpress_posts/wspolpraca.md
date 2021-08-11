@@ -1,6 +1,5 @@
 ---
 id: 2
-index: 30
 title: O mnie i współpraca
 date: 2017-08-29T23:48:13.000Z
 isMarkdown: true

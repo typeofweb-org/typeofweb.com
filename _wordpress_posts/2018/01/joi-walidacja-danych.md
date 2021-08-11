@@ -1,6 +1,6 @@
 ---
 id: 901
-index: 50
+index: 49
 title: Joi — walidacja danych
 date: 2018-01-10T10:25:04.000Z
 isMarkdown: false

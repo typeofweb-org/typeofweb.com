@@ -1,6 +1,6 @@
 ---
 id: 1125
-index: 68
+index: 66
 title: Formularze w React.js — kontrolowane komponenty
 date: 2018-03-06T09:14:25.000Z
 isMarkdown: true

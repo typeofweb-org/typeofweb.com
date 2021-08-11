@@ -1,6 +1,6 @@
 ---
 id: 773
-index: 40
+index: 39
 title: Krótka relacja z ReactiveConf 2017
 date: 2017-11-07T19:16:05.000Z
 isMarkdown: false

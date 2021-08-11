@@ -1,6 +1,6 @@
 ---
 id: 1045
-index: 65
+index: 63
 title: Komunikacja pomiędzy komponentami w React.js
 date: 2018-02-24T09:15:02.000Z
 isMarkdown: false

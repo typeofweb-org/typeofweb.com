@@ -1,6 +1,6 @@
 ---
 id: 756
-index: 49
+index: 48
 title: Interakcja z komponentami React.js
 date: 2018-01-08T02:12:39.000Z
 isMarkdown: false

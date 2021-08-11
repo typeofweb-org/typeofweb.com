@@ -1,6 +1,6 @@
 ---
 id: 631
-index: 43
+index: 42
 title: Poznaj React.js
 date: 2017-12-05T14:00:54.000Z
 isMarkdown: false

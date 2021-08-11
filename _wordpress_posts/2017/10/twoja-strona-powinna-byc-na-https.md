@@ -1,6 +1,6 @@
 ---
 id: 527
-index: 37
+index: 36
 title: 'HTTPS: Dlaczego Twoja kolejna strona powinna to mieć?'
 date: 2017-10-10T10:28:14.000Z
 isMarkdown: false

@@ -1,6 +1,5 @@
 ---
 id: 1004
-index: 57
 title: Znajdź pracę zdalną z tymi serwisami
 date: 2018-01-28T00:59:33.000Z
 isMarkdown: false

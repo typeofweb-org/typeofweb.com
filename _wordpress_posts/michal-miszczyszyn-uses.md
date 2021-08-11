@@ -1,6 +1,5 @@
 ---
 id: 2356
-index: 121
 title: Michał Miszczyszyn Uses
 date: 2020-01-14T17:41:12.000Z
 isMarkdown: true

@@ -1,6 +1,6 @@
 ---
 id: 1700
-index: 97
+index: 94
 title: Call For Proposals na meet.js Summit 2018
 date: 2018-10-23T14:24:40.000Z
 isMarkdown: true

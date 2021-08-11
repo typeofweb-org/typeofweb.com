@@ -1,6 +1,6 @@
 ---
 id: 1734
-index: 99
+index: 96
 title: "Zasoby, z których ja nauczyłem się\_(prawie) wszystkiego o front-endzie"
 date: 2018-12-13T07:40:44.000Z
 isMarkdown: true

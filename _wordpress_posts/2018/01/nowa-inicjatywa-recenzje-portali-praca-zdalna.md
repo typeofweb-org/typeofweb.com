@@ -1,6 +1,6 @@
 ---
 id: 996
-index: 58
+index: 56
 title: 'Nowa inicjatywa: Recenzje portali z pracą zdalną'
 date: 2018-01-28T01:00:20.000Z
 isMarkdown: false

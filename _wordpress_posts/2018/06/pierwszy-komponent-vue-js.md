@@ -1,6 +1,6 @@
 ---
 id: 1331
-index: 89
+index: 86
 title: Pierwszy komponent Vue.js
 date: 2018-06-18T11:15:12.000Z
 isMarkdown: true

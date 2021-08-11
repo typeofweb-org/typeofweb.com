@@ -1,6 +1,6 @@
 ---
 id: 1143
-index: 69
+index: 67
 title: >-
   Jak kurs programowania ani bootcamp nie zrobi z Ciebie programisty w dwa
   miesiące

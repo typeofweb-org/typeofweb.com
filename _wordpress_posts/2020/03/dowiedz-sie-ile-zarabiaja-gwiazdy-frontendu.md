@@ -1,6 +1,6 @@
 ---
 id: 2405
-index: 124
+index: 120
 title: Dowiedz się ile zarabiają gwiazdy frontendu!
 date: 2020-03-04T14:58:19.000Z
 isMarkdown: true

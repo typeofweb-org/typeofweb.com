@@ -1,6 +1,6 @@
 ---
 id: 1231
-index: 75
+index: 73
 title: 'React + Redux — kurs: wprowadzenie i podstawy'
 date: 2018-04-06T11:54:56.000Z
 isMarkdown: true

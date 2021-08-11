@@ -1,6 +1,6 @@
 ---
 id: 2622
-index: 136
+index: 129
 title: 'Self-publishing: Podsumowanie sprzedaży TypeScript na poważnie'
 date: 2021-01-01T12:27:22.000Z
 isMarkdown: true
