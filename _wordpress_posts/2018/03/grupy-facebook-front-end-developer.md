@@ -1,5 +1,4 @@
 ---
-id: 1245
 index: 72
 title: "20 grup na Facebooku, które powinien śledzić\_każdy front-end developer"
 date: 2018-03-29T14:41:17.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: grupy-facebook-front-end-developer
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1245
 type: post
 thumbnail:
   url: >-

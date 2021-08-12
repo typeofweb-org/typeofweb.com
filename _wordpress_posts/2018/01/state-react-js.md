@@ -1,5 +1,4 @@
 ---
-id: 748
 index: 50
 title: Stan komponentów React.js
 date: 2018-01-11T14:34:52.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: state-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=748
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/pexels-photo-370799.jpeg

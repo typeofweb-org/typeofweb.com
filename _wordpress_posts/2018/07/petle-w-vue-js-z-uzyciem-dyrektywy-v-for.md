@@ -1,5 +1,4 @@
 ---
-id: 1496
 index: 91
 title: Pętle w Vue.js z użyciem dyrektywy v-for
 date: 2018-07-13T12:34:07.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: petle-w-vue-js-z-uzyciem-dyrektywy-v-for
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1496
 type: post
 thumbnail:
   url: >-

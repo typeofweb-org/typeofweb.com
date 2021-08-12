@@ -1,5 +1,4 @@
 ---
-id: 901
 index: 49
 title: Joi — walidacja danych
 date: 2018-01-10T10:25:04.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: joi-walidacja-danych
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=901
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo.jpg

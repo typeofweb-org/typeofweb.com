@@ -1,5 +1,4 @@
 ---
-id: 2076
 index: 111
 title: "Złożoność\_obliczeniowa, czasowa i pamięciowa algorytmów"
 date: 2019-09-16T16:45:25.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: zlozonosc-obliczeniowa-czasowa-pamieciowa-algorytmow
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2076
 type: post
 thumbnail:
   url: >-

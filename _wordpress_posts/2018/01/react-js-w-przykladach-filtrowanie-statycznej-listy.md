@@ -1,5 +1,4 @@
 ---
-id: 921
 index: 55
 title: 'React.js w przykładach: filtrowanie statycznej listy'
 date: 2018-01-24T09:19:30.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-js-w-przykladach-filtrowanie-statycznej-listy
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=921
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-417122.jpeg

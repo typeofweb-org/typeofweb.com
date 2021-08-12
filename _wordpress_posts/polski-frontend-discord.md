@@ -1,5 +1,4 @@
 ---
-id: 1510
 title: Polski front-end na Discordzie!
 date: 2018-05-01T16:29:35.000Z
 isMarkdown: true
@@ -7,7 +6,6 @@ status: publish
 permalink: polski-frontend-discord
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?page_id=1510
 type: page
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/05/Discord-Feature-Graphic.png

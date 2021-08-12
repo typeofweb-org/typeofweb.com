@@ -1,5 +1,4 @@
 ---
-id: 2383
 index: 119
 title: Wady React Hooks
 date: 2020-02-13T09:26:57.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: wady-react-hooks
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2383
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2020/02/cover_facebook.png

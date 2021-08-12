@@ -1,5 +1,4 @@
 ---
-id: 1802
 index: 102
 title: >-
   Fragmenty funkcyjnego kodu, które zmieniły moje spojrzenie na programowanie —
@@ -10,7 +9,6 @@ status: publish
 permalink: funkcyjny-kod-programowanie-listy
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1802
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/02/image.jpg

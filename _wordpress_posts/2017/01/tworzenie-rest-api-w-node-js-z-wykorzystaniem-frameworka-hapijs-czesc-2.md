@@ -1,5 +1,4 @@
 ---
-id: 34
 index: 23
 title: REST API w node.js z HapiJS – definicja route'ów i prosta walidacja
 date: 2017-01-28T21:24:08.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2017/01/28/tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2/
 type: post
 categories:
   - slug: javascript

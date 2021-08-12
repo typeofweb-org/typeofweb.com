@@ -1,5 +1,4 @@
 ---
-id: 2037
 index: 109
 title: Problem XY, czyli gdy nie wiemy, o co pytamy
 date: 2019-05-31T13:54:13.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2037
 type: post
 thumbnail:
   url: >-

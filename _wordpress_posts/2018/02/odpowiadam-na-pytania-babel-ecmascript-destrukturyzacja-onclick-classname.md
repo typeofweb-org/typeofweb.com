@@ -1,5 +1,4 @@
 ---
-id: 1075
 index: 62
 title: 'Odpowiadam na pytania: Babel, ECMAScript, destrukturyzacja, onClick, className'
 date: 2018-02-21T18:41:32.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: odpowiadam-na-pytania-babel-ecmascript-destrukturyzacja-onclick-classname
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1075
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/02/pexels-photo-332835.jpeg

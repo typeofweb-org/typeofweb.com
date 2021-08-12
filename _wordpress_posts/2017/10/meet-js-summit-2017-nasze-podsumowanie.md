@@ -1,5 +1,4 @@
 ---
-id: 489
 index: 35
 title: 'meet.js Summit 2017: Nasze podsumowanie'
 date: 2017-10-03T22:47:32.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: meet-js-summit-2017-nasze-podsumowanie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=489
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2016/04/0Y7A4865-copy-2.jpg

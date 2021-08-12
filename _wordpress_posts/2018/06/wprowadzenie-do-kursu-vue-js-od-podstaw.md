@@ -1,5 +1,4 @@
 ---
-id: 1318
 index: 84
 title: Wprowadzenie do kursu Vue.js od podstaw
 date: 2018-06-08T12:20:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: wprowadzenie-do-kursu-vue-js-od-podstaw
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1318
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/04/Vue_js-wprowadzenie.png

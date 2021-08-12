@@ -1,5 +1,4 @@
 ---
-id: 35
 index: 24
 title: Hapi.js – Wprowadzenie
 date: 2017-01-29T20:18:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: hapi-js-wprowadzenie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2017/01/29/hapi-js-wprowadzenie/
 type: post
 categories:
   - slug: javascript

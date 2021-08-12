@@ -1,5 +1,4 @@
 ---
-id: 2242
 index: 112
 title: Continuous Integration — Recenzja Buddy.works
 date: 2019-11-04T13:55:01.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: continuous-integration-recenzja-buddy-works
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2242
 type: post
 thumbnail:
   url: >-

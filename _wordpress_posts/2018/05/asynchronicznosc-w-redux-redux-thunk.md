@@ -1,5 +1,4 @@
 ---
-id: 1468
 index: 79
 title: 'Asynchroniczność w Redux: redux-thunk'
 date: 2018-05-07T10:24:32.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: asynchronicznosc-w-redux-redux-thunk
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1468
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/04/redux-thunk.jpeg

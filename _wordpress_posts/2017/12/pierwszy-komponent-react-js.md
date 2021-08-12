@@ -1,5 +1,4 @@
 ---
-id: 650
 index: 43
 title: Pierwszy komponent w React.js
 date: 2017-12-08T14:30:58.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: pierwszy-komponent-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=650
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/10/pexels-photo-175773.jpeg

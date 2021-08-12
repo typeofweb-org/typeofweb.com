@@ -1,5 +1,4 @@
 ---
-id: 2518
 index: 124
 title: Licencje na oprogramowanie
 date: 2020-06-24T11:17:23.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: licencje-oprogramowania
 authors:
   - paulina-piatek
-guid: https://typeofweb.com/?p=2518
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2020/06/licencje-oprogramowania.png

@@ -1,5 +1,4 @@
 ---
-id: 1863
 index: 101
 title: 'React Hooks: useState — wiele stanów, callbacki i inne niuanse'
 date: 2019-02-15T12:03:18.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1863
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/02/pexels-photo-911254.jpeg

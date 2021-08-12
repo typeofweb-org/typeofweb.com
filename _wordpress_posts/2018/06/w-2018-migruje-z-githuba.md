@@ -1,5 +1,4 @@
 ---
-id: 1590
 index: 85
 title: "W 2018 migruję\_z GitHuba"
 date: 2018-06-11T08:39:26.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: w-2018-migruje-z-githuba
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1590
 type: post
 thumbnail:
   url: >-

@@ -18,7 +18,7 @@ const getRelated = (permalink: string) => {
         readonly mainCategory: { readonly slug: string; readonly name: string };
       };
     }>;
-  }>(`/api/relatedPosts?permalink=${encodeURIComponent(permalink)}`, { method: 'GET' });
+  }>(`/api/relatedPosts2?permalink=${encodeURIComponent(permalink)}`, { method: 'GET' });
 };
 
 export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink }) => {
@@ -31,15 +31,15 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
 
   return (
     <section className="max-w-[75ch] mt-8 mx-auto pb-8 px-7 text-gray-900 sm:px-8 lg:px-12">
-      <h3 className="mb-2 text-xl font-bold">Może zainteresują Cię również…</h3>
+      <h3 className="mb-4 text-xl font-bold">Może zainteresują Cię również…</h3>
       <ol className="flex flex-col gap-4 justify-between sm:flex-row sm:gap-2">
         {value.related.map((p) => {
           return (
-            <li key={p.frontmatter.permalink} className="flex-1">
+            <li key={p.frontmatter.permalink} className="word-break-break-word flex-1 flex-shrink-0">
               <Link href={getUrlForPermalink(p.frontmatter.permalink)}>
                 <a className="group hover:text-blue-500 text-gray-900 transition-colors">
-                  {p.frontmatter.cover && (
-                    <div className="relative w-full h-32">
+                  <div className="relative w-full h-32 bg-gradient-to-br from-blue-100 to-gray-200">
+                    {p.frontmatter.cover && (
                       <Image
                         {...p.frontmatter.cover.img}
                         className="duration-[5s] motion-safe:group-hover:scale-110 bg-gray-200 transition-transform ease-in group-hover:ease-out"
@@ -48,8 +48,8 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
                         objectPosition="center center"
                         sizes="160px"
                       />
-                    </div>
-                  )}
+                    )}
+                  </div>
                   {p.frontmatter.title}
                   <span className="block group-hover:text-blue-500 text-gray-600 transition-colors">
                     ({p.frontmatter.mainCategory.name})

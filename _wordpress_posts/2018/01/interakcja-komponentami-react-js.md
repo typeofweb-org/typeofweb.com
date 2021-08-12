@@ -1,5 +1,4 @@
 ---
-id: 756
 index: 48
 title: Interakcja z komponentami React.js
 date: 2018-01-08T02:12:39.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: interakcja-komponentami-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=756
 type: post
 thumbnail:
   url: >-

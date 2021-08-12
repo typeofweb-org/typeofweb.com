@@ -1,5 +1,4 @@
 ---
-id: 30
 index: 19
 title: "Kurs TypeScript – część\_3"
 date: 2016-08-10T08:22:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: kurs-typescript-czesc-3
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/08/10/kurs-typescript-czesc-3/
 type: post
 categories:
   - slug: javascript

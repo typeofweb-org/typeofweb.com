@@ -1,5 +1,4 @@
 ---
-id: 695
 index: 41
 title: 'React.js: Wprowadzenie do kursu od podstaw'
 date: 2017-11-28T14:54:47.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: wprowadzenie-kurs-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=695
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/react-logo-1.png

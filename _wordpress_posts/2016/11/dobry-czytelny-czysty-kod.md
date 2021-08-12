@@ -1,5 +1,4 @@
 ---
-id: 32
 index: 21
 title: 'Dobry kod: Ty też możesz pisać czytelny kod!'
 date: 2016-11-25T11:43:24.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: dobry-czytelny-czysty-kod
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/11/25/czytelny-kod/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2016/11/pexels-photo-373465.jpeg

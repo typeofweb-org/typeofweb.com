@@ -1,5 +1,4 @@
 ---
-id: 856
 index: 45
 title: Hackowanie CSS
 date: 2017-12-15T12:36:18.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: hackowanie-css
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=856
 type: post
 thumbnail:
   url: >-

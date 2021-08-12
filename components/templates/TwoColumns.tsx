@@ -1,3 +1,4 @@
+import Dynamic from 'next/dynamic';
 import { memo } from 'react';
 
 import { useUIState } from '../../hooks/useUiState';
@@ -6,6 +7,11 @@ import { Sidebar } from '../organisms/Sidebar';
 
 import type { PageKind, SeriesWithToC } from '../../types';
 import type { PropsWithChildren } from 'react';
+
+const ShareWidget = Dynamic<{}>(
+  () => import(/* webpackChunkName: "ShareWidget" */ '../molecules/ShareWidget').then((m) => m.ShareWidget),
+  { ssr: false },
+);
 
 export const TwoColumns = memo<
   PropsWithChildren<{
@@ -24,8 +30,9 @@ export const TwoColumns = memo<
           itemScope
           itemType="http://schema.org/Blog"
           id="main-content"
-          className="flex-1 mt-4 px-2 w-full max-w-3xl lg:mt-0 lg:pb-20 lg:px-0"
+          className="relative flex-1 mt-4 px-2 w-full max-w-3xl lg:mt-0 lg:pb-20 lg:px-0"
         >
+          <ShareWidget />
           {children}
         </main>
         {withSidebar && <Sidebar pageKind={pageKind} series={series} />}

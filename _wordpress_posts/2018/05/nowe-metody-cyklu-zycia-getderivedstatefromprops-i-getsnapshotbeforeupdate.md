@@ -1,5 +1,4 @@
 ---
-id: 1566
 index: 82
 title: 'Nowe metody cyklu życia: getDerivedStateFromProps i getSnapshotBeforeUpdate'
 date: 2018-05-29T10:18:46.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1566
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/05/pexels-photo-920120.jpeg

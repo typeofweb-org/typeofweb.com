@@ -1,5 +1,4 @@
 ---
-id: 1231
 index: 73
 title: 'React + Redux — kurs: wprowadzenie i podstawy'
 date: 2018-04-06T11:54:56.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-redux-kurs-wprowadzenie-i-podstawy
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1231
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/03/redux-kurs-typeofweb.png

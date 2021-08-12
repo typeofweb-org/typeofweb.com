@@ -1,5 +1,4 @@
 ---
-id: 1040
 index: 60
 title: Testowanie React.js w Enzyme — props, state i interakcje
 date: 2018-02-13T13:46:21.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: testowanie-react-js-enzyme-props-state-interakcje
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1040
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/02/pexels-photo-300857.jpeg

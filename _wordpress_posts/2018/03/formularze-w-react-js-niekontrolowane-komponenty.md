@@ -1,5 +1,4 @@
 ---
-id: 1196
 index: 69
 title: Formularze w React.js — niekontrolowane komponenty
 date: 2018-03-20T12:13:30.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: formularze-w-react-js-niekontrolowane-komponenty
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1196
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-72161.jpeg

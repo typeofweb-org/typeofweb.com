@@ -73,7 +73,7 @@ async function run() {
     }),
   );
 
-  await Fs.writeFile(Path.resolve('flow.json'), JSON.stringify(sortedResult, null, 2), 'utf-8');
+  await Fs.writeFile(Path.resolve('relatedPosts.json'), JSON.stringify(sortedResult, null, 2), 'utf-8');
 }
 
 void run();

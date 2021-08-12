@@ -1,5 +1,4 @@
 ---
-id: 1062
 index: 68
 title: Tworzymy własne Dependency Injection w TypeScript
 date: 2018-03-15T00:14:33.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: tworzymy-wlasne-dependency-injection-w-typescript
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1062
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/02/pexels-photo-248921.jpeg

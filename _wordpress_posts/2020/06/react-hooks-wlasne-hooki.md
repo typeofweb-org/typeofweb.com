@@ -1,5 +1,4 @@
 ---
-id: 2510
 index: 123
 title: 'React Hooks: Piszemy własne hooki!'
 date: 2020-06-10T11:07:22.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-hooks-wlasne-hooki
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2510
 type: post
 thumbnail:
   url: >-

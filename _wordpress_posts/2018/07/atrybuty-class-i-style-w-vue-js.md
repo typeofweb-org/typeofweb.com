@@ -1,5 +1,4 @@
 ---
-id: 1505
 index: 92
 title: Atrybuty class i style w Vue.js
 date: 2018-07-25T17:36:46.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: atrybuty-class-i-style-w-vue-js
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1505
 type: post
 thumbnail:
   url: >-

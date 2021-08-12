@@ -1,5 +1,4 @@
 ---
-id: 996
 index: 56
 title: 'Nowa inicjatywa: Recenzje portali z pracą zdalną'
 date: 2018-01-28T01:00:20.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: nowa-inicjatywa-recenzje-portali-praca-zdalna
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=996
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-297755.jpeg

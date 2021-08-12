@@ -1,5 +1,4 @@
 ---
-id: 33
 index: 22
 title: REST API w node.js z HapiJS – pierwsza aplikacja
 date: 2017-01-24T18:36:47.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2017/01/24/tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1/
 type: post
 categories:
   - slug: javascript

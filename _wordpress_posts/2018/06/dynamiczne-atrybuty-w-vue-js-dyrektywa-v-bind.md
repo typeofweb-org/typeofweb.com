@@ -1,5 +1,4 @@
 ---
-id: 1351
 index: 87
 title: Dynamiczne atrybuty w Vue.js - dyrektywa v-bind
 date: 2018-06-25T07:45:37.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1351
 type: post
 thumbnail:
   url: >-

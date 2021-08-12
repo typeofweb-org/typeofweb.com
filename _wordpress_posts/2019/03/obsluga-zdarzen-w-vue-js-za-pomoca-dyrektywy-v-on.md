@@ -1,5 +1,4 @@
 ---
-id: 1416
 index: 104
 title: Obsługa zdarzeń w Vue.js za pomocą dyrektywy v-on
 date: 2019-03-10T12:36:33.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1416
 type: post
 thumbnail:
   url: >-

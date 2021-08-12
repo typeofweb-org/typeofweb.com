@@ -1,5 +1,4 @@
 ---
-id: 1873
 index: 103
 title: 'React Hooks: useEffect — efekty uboczne w komponencie'
 date: 2019-03-05T11:28:36.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-hooks-useeffect-efekty-uboczne-w-komponencie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1873
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/03/pexels-photo-1762851.jpeg

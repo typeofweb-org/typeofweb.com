@@ -1,5 +1,4 @@
 ---
-id: 40
 index: 28
 title: Praca zdalna – dla mnie rewelacja! Obalamy mity
 date: 2017-06-13T12:01:55.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: praca-zdalna-obalamy-mity
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2017/06/13/praca-zdalna-obalamy-mity/
 type: post
 thumbnail:
   url: >-

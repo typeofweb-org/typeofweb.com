@@ -1,5 +1,4 @@
 ---
-id: 1364
 index: 77
 title: React + Redux — filtrowanie listy, proste selektory
 date: 2018-04-23T13:37:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-redux-filtrowanie-listy-selektory
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1364
 type: post
 thumbnail:
   url: >-

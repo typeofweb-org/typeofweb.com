@@ -1,5 +1,4 @@
 ---
-id: 2122
 index: 118
 title: Kolejka FIFO, LIFO i priorytetowa – struktury danych
 date: 2020-01-31T11:49:10.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: struktury-danych-kolejka-fifo-lifo-priorytetowa
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2122
 type: post
 thumbnail:
   url: >-

@@ -1,5 +1,4 @@
 ---
-id: 2495
 index: 122
 title: Podsumowanie roku 2019
 date: 2020-04-27T14:49:48.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: podsumowanie-roku-2019
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2495
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2020/04/cover_facebook.png

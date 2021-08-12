@@ -1,5 +1,4 @@
 ---
-id: 714
 index: 44
 title: Props czyli atrybuty w React.js
 date: 2017-12-12T14:25:59.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: props-czyli-atrybuty-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=714
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/10/pexels-photo-340901.jpeg

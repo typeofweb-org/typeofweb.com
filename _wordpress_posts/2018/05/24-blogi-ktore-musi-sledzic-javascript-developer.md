@@ -1,5 +1,4 @@
 ---
-id: 1555
 index: 81
 title: 24 blogi, które musi śledzić każdy JavaScript developer
 date: 2018-05-22T09:49:31.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: 24-blogi-ktore-musi-sledzic-javascript-developer
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1555
 type: post
 thumbnail:
   url: >-

@@ -1,5 +1,4 @@
 ---
-id: 733
 index: 46
 title: Podział na komponenty w React.js
 date: 2017-12-17T10:48:35.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: podzial-komponenty-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=733
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/pexels-photo-268415.jpeg

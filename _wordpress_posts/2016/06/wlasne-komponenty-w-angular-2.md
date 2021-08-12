@@ -1,5 +1,4 @@
 ---
-id: 19
 index: 8
 title: Własne komponenty w Angular 2
 date: 2016-06-14T17:27:29.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: wlasne-komponenty-w-angular-2
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/06/14/wlasne-komponenty-w-angular-2/
 type: post
 categories:
   - slug: javascript

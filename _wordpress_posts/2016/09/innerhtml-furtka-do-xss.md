@@ -1,5 +1,4 @@
 ---
-id: 31
 index: 20
 title: innerHTML, czyli najbardziej banalna furtka do XSS
 date: 2016-09-11T06:41:07.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: innerhtml-furtka-do-xss
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/09/11/innerhtml-furtka-do-xss/
 type: post
 categories:
   - slug: javascript

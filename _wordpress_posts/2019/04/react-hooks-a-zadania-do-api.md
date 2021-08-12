@@ -1,5 +1,4 @@
 ---
-id: 1903
 index: 106
 title: React Hooks a żądania do API
 date: 2019-04-16T09:27:55.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-hooks-a-zadania-do-api
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1903
 type: post
 thumbnail:
   url: >-

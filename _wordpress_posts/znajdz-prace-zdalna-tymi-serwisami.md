@@ -1,5 +1,4 @@
 ---
-id: 1004
 title: Znajdź pracę zdalną z tymi serwisami
 date: 2018-01-28T00:59:33.000Z
 isMarkdown: false
@@ -7,7 +6,6 @@ status: publish
 permalink: znajdz-prace-zdalna-tymi-serwisami
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?page_id=1004
 type: page
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-297755.jpeg

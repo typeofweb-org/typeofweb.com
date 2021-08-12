@@ -1,5 +1,4 @@
 ---
-id: 13
 index: 3
 title: Single Page Applications a SEO
 date: 2016-04-19T19:08:14.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: angularjs-i-seo
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/04/18/angularjs-i-seo/
 type: post
 categories:
   - slug: javascript

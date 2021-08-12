@@ -1,5 +1,4 @@
 ---
-id: 1711
 index: 95
 title: Byłem na ReactiveConf 2018
 date: 2018-11-15T19:30:12.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: bylem-na-reactiveconf-2018
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1711
 type: post
 thumbnail:
   url: >-

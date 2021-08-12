@@ -1,5 +1,4 @@
 ---
-id: 2622
 index: 129
 title: 'Self-publishing: Podsumowanie sprzedaży TypeScript na poważnie'
 date: 2021-01-01T12:27:22.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2622
 type: post
 thumbnail:
   url: >-

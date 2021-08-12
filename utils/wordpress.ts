@@ -188,7 +188,6 @@ export async function getExcerptAndContent(
 }
 
 interface LegacyPostFrontmatter {
-  readonly id: number;
   readonly title: string;
   readonly index: number;
   readonly date: Date;
@@ -196,7 +195,6 @@ interface LegacyPostFrontmatter {
   readonly status: string;
   readonly permalink: string;
   readonly authors: readonly string[];
-  readonly guid: string;
   readonly type: 'post' | 'page';
   readonly thumbnail?: {
     readonly url: string;

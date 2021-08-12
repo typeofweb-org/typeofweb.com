@@ -1,5 +1,4 @@
 ---
-id: 2466
 title: Polityka prywatności Type of Web
 date: 2020-03-29T11:57:51.000Z
 isMarkdown: false
@@ -7,7 +6,6 @@ status: publish
 permalink: polityka-prywatnosci
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?page_id=2466
 type: page
 categories: []
 seo: {}

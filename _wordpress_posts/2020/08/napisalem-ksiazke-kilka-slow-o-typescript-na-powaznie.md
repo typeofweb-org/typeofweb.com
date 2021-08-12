@@ -1,5 +1,4 @@
 ---
-id: 2567
 index: 126
 title: Napisałem książkę! Kilka słów o „TypeScript na poważnie”
 date: 2020-08-24T12:27:41.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2567
 type: post
 thumbnail:
   url: >-

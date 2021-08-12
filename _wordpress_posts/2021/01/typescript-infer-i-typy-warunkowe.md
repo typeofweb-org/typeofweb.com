@@ -1,5 +1,4 @@
 ---
-id: 2644
 index: 130
 title: 'TypeScript: `infer` i typy warunkowe'
 date: 2021-01-30T12:50:09.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: typescript-infer-i-typy-warunkowe
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2644
 type: post
 thumbnail:
   url: >-

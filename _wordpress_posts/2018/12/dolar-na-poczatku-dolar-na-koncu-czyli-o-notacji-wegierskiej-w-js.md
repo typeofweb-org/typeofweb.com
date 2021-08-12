@@ -1,5 +1,4 @@
 ---
-id: 1777
 index: 97
 title: Dolar na początku, dolar na końcu, czyli o notacji węgierskiej w JS
 date: 2018-12-17T18:37:53.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: dolar-na-poczatku-dolar-na-koncu-czyli-o-notacji-wegierskiej-w-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1777
 type: post
 thumbnail:
   url: >-

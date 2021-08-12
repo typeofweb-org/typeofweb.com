@@ -118,6 +118,9 @@ module.exports = {
           '.w-fit': {
             width: 'fit-content',
           },
+          '.word-break-break-word': {
+            'word-break': 'break-word',
+          },
           '.text-stroke': {
             '-webkit-text-stroke': `1px ${theme('colors.gray.500')}`,
             '-webkit-text-fill-color': `${theme('colors.gray.100')}`,

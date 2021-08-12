@@ -1,5 +1,4 @@
 ---
-id: 1207
 index: 70
 title: 'Odpowiadam na pytania: props, nawiasy klamrowe, funkcje vs klasy, import react'
 date: 2018-03-26T15:12:56.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1207
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-433108.jpeg

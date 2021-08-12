@@ -1,5 +1,4 @@
 ---
-id: 2612
 index: 128
 title: Conditional types – TypeScript – typy warunkowe
 date: 2020-12-14T15:35:34.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: conditional-types-typescript-typy-warunkowe
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2612
 type: post
 thumbnail:
   url: >-

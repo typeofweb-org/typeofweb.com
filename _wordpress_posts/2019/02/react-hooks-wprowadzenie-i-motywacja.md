@@ -1,5 +1,4 @@
 ---
-id: 1814
 index: 99
 title: React Hooks — wprowadzenie i motywacja
 date: 2019-02-04T08:36:21.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-hooks-wprowadzenie-i-motywacja
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1814
 type: post
 thumbnail:
   url: >-

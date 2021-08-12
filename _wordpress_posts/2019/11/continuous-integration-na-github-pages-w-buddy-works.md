@@ -1,5 +1,4 @@
 ---
-id: 2278
 index: 114
 title: Continuous Integration na GitHub Pages w Buddy.works
 date: 2019-11-18T15:51:56.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: continuous-integration-na-github-pages-w-buddy-works
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2278
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/11/cover_facebook3.png

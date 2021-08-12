@@ -1,5 +1,4 @@
 ---
-id: 17
 index: 7
 title: Wstęp do Angular 2
 date: 2016-06-03T12:05:10.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: wstep-do-angular-2
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/06/03/wstep-do-angular-2/
 type: post
 categories:
   - slug: javascript

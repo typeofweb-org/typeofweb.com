@@ -1,5 +1,4 @@
 ---
-id: 2263
 index: 113
 title: Reactive Conference 2019 – relacja
 date: 2019-11-07T16:50:44.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: reactive-conference-2019-relacja
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2263
 type: post
 thumbnail:
   url: >-

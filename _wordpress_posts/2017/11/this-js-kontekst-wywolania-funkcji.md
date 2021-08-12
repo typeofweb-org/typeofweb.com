@@ -1,5 +1,4 @@
 ---
-id: 799
 index: 40
 title: this w JS — czyli kilka słów o kontekście wywołania funkcji
 date: 2017-11-14T17:33:21.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: this-js-kontekst-wywolania-funkcji
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=799
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/smilies-2912641_1920.jpg

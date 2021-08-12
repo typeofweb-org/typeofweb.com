@@ -1,5 +1,4 @@
 ---
-id: 1896
 index: 105
 title: 10 powodów, dla których używam jQuery razem z React
 date: 2019-04-01T09:54:18.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: 10-powodow-dla-ktorych-uzywam-jquery-razem-z-react
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1896
 type: post
 thumbnail:
   url: >-

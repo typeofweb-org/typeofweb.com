@@ -1,5 +1,4 @@
 ---
-id: 938
 index: 57
 title: Tworzenie aplikacji React.js dzięki create-react-app
 date: 2018-01-29T15:19:49.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: tworzenie-aplikacji-react-js-dzieki-create-react-app
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=938
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-281260.jpeg

@@ -1,5 +1,4 @@
 ---
-id: 1104
 index: 65
 title: X-Team — opis, rekrutacja, moja opinia
 date: 2018-02-28T11:41:09.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: x-team-opis-rekrutacja-opinia
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1104
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/02/x-team-logo-large.png

@@ -1,5 +1,4 @@
 ---
-id: 586
 index: 38
 title: 'Promise: 9 rzeczy, których nie wiesz na temat Promise'
 date: 2017-10-23T20:09:58.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: kilka-faktow-na-temat-promise
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=586
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/10/promises-cover.png

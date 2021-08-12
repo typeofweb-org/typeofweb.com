@@ -1,5 +1,4 @@
 ---
-id: 1585
 index: 88
 title: Higher Order Reducers — Redux i powtarzanie kodu
 date: 2018-06-28T09:08:28.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: higher-order-reducers-redux-i-powtarzanie-kodu
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1585
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/06/pexels-photo-446280.jpeg

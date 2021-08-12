@@ -1,5 +1,4 @@
 ---
-id: 25
 index: 13
 title: Nowy font na GitHubie – font systemowy
 date: 2016-07-12T12:44:19.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: nowy-font-na-githubie-font-systemowy
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2016/07/12/nowy-font-na-githubie-font-systemowy/
 type: post
 thumbnail:
   url: >-

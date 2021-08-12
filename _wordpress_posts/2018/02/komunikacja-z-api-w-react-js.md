@@ -1,5 +1,4 @@
 ---
-id: 1092
 index: 64
 title: Komunikacja z API w React.js
 date: 2018-02-27T06:58:57.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: komunikacja-z-api-w-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1092
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/02/pexels-photo-194094.jpeg

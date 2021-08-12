@@ -1,5 +1,4 @@
 ---
-id: 453
 index: 34
 title: Usuwanie białych pasków w Safari na iPhone X
 date: 2017-09-25T20:29:55.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: usuwanie-bialych-paskow-safari-iphone-x
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=453
 type: post
 thumbnail:
   url: >-

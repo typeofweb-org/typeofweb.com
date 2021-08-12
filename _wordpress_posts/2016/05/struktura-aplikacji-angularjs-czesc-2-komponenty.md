@@ -1,5 +1,4 @@
 ---
-id: 16
 index: 6
 title: "Struktura aplikacji AngularJS (część\_2\_‑\_komponenty)"
 date: 2016-05-15T15:46:17.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: struktura-aplikacji-angularjs-czesc-2-komponenty
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/
 type: post
 categories:
   - slug: javascript

@@ -1,5 +1,4 @@
 ---
-id: 1130
 index: 74
 title: 'Serwer HTTP lokalnie: Sposób na problemy z CORS i file:///'
 date: 2018-04-09T14:24:38.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: lokalny-serwer-http-proste-sposoby-na-problemy-z-file
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1130
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/04/pexels-photo-325229.jpeg

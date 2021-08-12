@@ -1,5 +1,4 @@
 ---
-id: 21
 index: 10
 title: Angular 2 i Redux
 date: 2016-07-04T06:35:51.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: angular-2-i-redux
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/07/04/angular-2-i-redux/
 type: post
 categories:
   - slug: javascript

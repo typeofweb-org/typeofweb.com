@@ -1,5 +1,4 @@
 ---
-id: 24
 index: 14
 title: Dependency Injection w Angular 2
 date: 2016-07-19T10:40:43.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: dependency-injection-w-angular-2
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/07/19/dependency-injection-w-angular-2/
 type: post
 categories:
   - slug: javascript

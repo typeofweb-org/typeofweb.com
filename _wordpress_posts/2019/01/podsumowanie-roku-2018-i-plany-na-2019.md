@@ -1,5 +1,4 @@
 ---
-id: 1786
 index: 98
 title: Podsumowanie roku 2018 i plany na 2019
 date: 2019-01-07T14:48:31.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: podsumowanie-roku-2018-i-plany-na-2019
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1786
 type: post
 thumbnail:
   url: >-

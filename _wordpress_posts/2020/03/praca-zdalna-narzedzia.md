@@ -1,5 +1,4 @@
 ---
-id: 2424
 index: 121
 title: 'Praca zdalna: Lista 20 przydatnych narzędzi'
 date: 2020-03-16T16:40:30.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: praca-zdalna-narzedzia
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2424
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2020/03/praca-zdalna-narzędzia.png

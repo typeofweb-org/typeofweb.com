@@ -72,12 +72,6 @@ function legacyWordpressCollection(): import('./_netlifySchema').CollectionItems
     },
     fields: [
       {
-        label: 'id',
-        name: 'id',
-        widget: 'number',
-        value_type: 'int',
-      },
-      {
         label: 'index',
         name: 'index',
         widget: 'number',
@@ -115,11 +109,6 @@ function legacyWordpressCollection(): import('./_netlifySchema').CollectionItems
         name: 'authors',
         widget: 'list',
         allow_add: false,
-      },
-      {
-        label: 'guid',
-        name: 'guid',
-        widget: 'string',
       },
       {
         label: 'type',

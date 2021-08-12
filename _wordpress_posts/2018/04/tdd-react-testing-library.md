@@ -1,5 +1,4 @@
 ---
-id: 1385
 index: 75
 title: TDD w React.js z pomocą react-testing-library
 date: 2018-04-13T09:28:29.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: tdd-react-testing-library
 authors:
   - michal-baranowski
-guid: https://typeofweb.com/?p=1385
 type: post
 thumbnail:
   url: >-

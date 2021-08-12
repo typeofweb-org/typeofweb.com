@@ -1,6 +1,6 @@
 /* eslint-disable functional/no-loop-statement -- useful */
 import AuthorsJson from '../../authors.json';
-import Data from '../../relatedPosts.json';
+import Data from '../../relatedPosts2.json';
 import { postToProps } from '../../utils/postToProps';
 import { getPostByPermalink } from '../../utils/wordpress';
 
@@ -23,23 +23,18 @@ const getRelatedPostsHandler: NextApiHandler = async (req, res) => {
     return res.status(400).json({ message: 'permalink is required' });
   }
 
-  const { relatedSneakPeeks, randomized } = await getRelatedPostsForPermalink(permalink);
+  const { relatedSneakPeeks, randomized } = await getRelatedPosts2ForPermalink(permalink);
 
   res.json({ related: relatedSneakPeeks, randomized });
 };
 
 export default getRelatedPostsHandler;
 
-export const getRelatedPostsForPermalink = async (permalink: string) => {
+export const getRelatedPosts2ForPermalink = async (permalink: string) => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- check is one line below
   const key = ('/' + permalink.replace(/\//g, '') + '/') as keyof typeof Data;
 
-  const related = Object.entries(Data[key] ?? {})
-    .sort(([, c1], [, c2]) => c2 - c1)
-    .filter(([currentKey]) => currentKey !== key)
-    .slice(0, NUM_RELATED)
-    .map(([path]) => path)
-    .filter(Boolean);
+  const related = (Data[key] ?? []).slice(0, NUM_RELATED).filter(Boolean);
 
   const randomized = NUM_RELATED - related.length;
 

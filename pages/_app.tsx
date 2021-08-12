@@ -1,3 +1,4 @@
+import Dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';

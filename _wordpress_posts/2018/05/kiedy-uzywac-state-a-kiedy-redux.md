@@ -1,5 +1,4 @@
 ---
-id: 1551
 index: 80
 title: Kiedy używać state, a kiedy Redux?
 date: 2018-05-16T07:22:17.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: kiedy-uzywac-state-a-kiedy-redux
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1551
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/05/redux-vs-setstate.jpeg

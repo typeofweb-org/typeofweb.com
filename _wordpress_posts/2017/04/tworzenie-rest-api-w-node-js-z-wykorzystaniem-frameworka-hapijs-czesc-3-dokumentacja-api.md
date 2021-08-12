@@ -1,5 +1,4 @@
 ---
-id: 37
 index: 25
 title: REST API w node.js z HapiJS – dokumentacja API
 date: 2017-04-14T08:50:23.000Z
@@ -9,8 +8,6 @@ permalink: >-
   tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2017/04/14/tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api/
 type: post
 categories:
   - slug: javascript

@@ -1,5 +1,4 @@
 ---
-id: 1425
 index: 76
 title: Czy React.Amsterdam to najgorsza konferencja na jakiej byłem?
 date: 2018-04-20T13:16:18.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-amsterdam-najgorsza-konferencja
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1425
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/04/og2018.jpg

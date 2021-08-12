@@ -1,5 +1,4 @@
 ---
-id: 2356
 title: Michał Miszczyszyn Uses
 date: 2020-01-14T17:41:12.000Z
 isMarkdown: true
@@ -7,7 +6,6 @@ status: publish
 permalink: michal-miszczyszyn-uses
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?page_id=2356
 type: page
 categories: []
 seo:

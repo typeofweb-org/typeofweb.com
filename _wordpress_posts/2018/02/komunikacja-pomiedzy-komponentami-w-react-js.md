@@ -1,5 +1,4 @@
 ---
-id: 1045
 index: 63
 title: Komunikacja pomiędzy komponentami w React.js
 date: 2018-02-24T09:15:02.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: komunikacja-pomiedzy-komponentami-w-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1045
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/02/pexels-photo-207135.jpeg

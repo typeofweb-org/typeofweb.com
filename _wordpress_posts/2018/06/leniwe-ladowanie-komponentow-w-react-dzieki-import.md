@@ -1,5 +1,4 @@
 ---
-id: 1463
 index: 83
 title: Leniwe ładowanie komponentów w React dzięki import
 date: 2018-06-04T11:05:42.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: leniwe-ladowanie-komponentow-w-react-dzieki-import
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1463
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/04/pexels-photo-417122.jpeg

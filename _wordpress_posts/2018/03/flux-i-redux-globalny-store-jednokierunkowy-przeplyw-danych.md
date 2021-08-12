@@ -1,5 +1,4 @@
 ---
-id: 18
 index: 71
 title: 'Flux i Redux: globalny store i jednokierunkowy przepływ danych'
 date: 2018-03-29T11:16:34.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/06/10/flux-i-redux/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2016/06/pexels-photo-239886.jpeg

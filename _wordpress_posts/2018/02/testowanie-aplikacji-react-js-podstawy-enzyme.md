@@ -1,5 +1,4 @@
 ---
-id: 965
 index: 59
 title: Testowanie aplikacji React.js — podstawy Enzyme
 date: 2018-02-09T08:20:22.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: testowanie-aplikacji-react-js-podstawy-enzyme
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=965
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-277590.jpeg

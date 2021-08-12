@@ -1,5 +1,4 @@
 ---
-id: 38
 index: 27
 title: Observable – rxjs 5
 date: 2017-05-19T18:57:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: observable-rxjs
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/2017/05/19/observable-rxjs/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/05/pexels-photo-237258.jpeg

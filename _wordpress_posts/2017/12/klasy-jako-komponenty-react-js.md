@@ -1,5 +1,4 @@
 ---
-id: 751
 index: 47
 title: Klasy jako komponenty React.js
 date: 2017-12-19T12:26:57.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: klasy-jako-komponenty-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=751
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/pexels-photo-80277.png

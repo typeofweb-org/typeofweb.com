@@ -1,5 +1,4 @@
 ---
-id: 28
 index: 17
 title: 3. Weekly JavaScript Challenge
 date: 2016-08-07T13:15:30.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: weekly-javascript-challenge-3
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/08/07/weekly-javascript-challenge-3/
 type: post
 categories:
   - slug: inicjatywy

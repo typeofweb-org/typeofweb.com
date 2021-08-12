@@ -1,5 +1,4 @@
 ---
-id: 23
 index: 12
 title: TypeScript – część 1
 date: 2016-07-11T06:19:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: typescript-czesc-1
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/07/11/typescript-czesc-1/
 type: post
 categories:
   - slug: javascript

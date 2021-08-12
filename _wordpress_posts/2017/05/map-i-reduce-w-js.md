@@ -1,5 +1,4 @@
 ---
-id: 39
 index: 26
 title: Map i Reduce w JS
 date: 2017-05-12T12:12:03.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: map-i-reduce-w-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2017/05/12/map-i-reduce-w-js/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/05/haskell-logo.png

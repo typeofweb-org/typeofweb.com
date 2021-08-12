@@ -1,5 +1,4 @@
 ---
-id: 22
 index: 11
 title: 'Wzorce Projektowe: Dependency Injection'
 date: 2016-07-07T13:43:00.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: wzorce-projektowe-dependency-injection
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2016/07/07/wzorce-projektowe-dependency-injection/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2016/07/pexels-photo-262367.jpeg

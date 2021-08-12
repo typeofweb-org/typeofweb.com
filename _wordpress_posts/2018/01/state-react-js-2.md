@@ -1,5 +1,4 @@
 ---
-id: 785
 index: 52
 title: State w React.js 2
 date: 2018-01-15T12:51:05.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: state-react-js-2
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=785
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/pexels-photo-137141.jpeg

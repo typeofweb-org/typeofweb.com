@@ -1,5 +1,4 @@
 ---
-id: 1420
 index: 93
 title: Metody oraz pola typu computed w Vue.js
 date: 2018-09-28T16:39:45.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: metody-oraz-pola-typu-computed-w-vue-js
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1420
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/09/computed.jpg

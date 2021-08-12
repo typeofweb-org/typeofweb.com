@@ -1,5 +1,4 @@
 ---
-id: 41
 index: 29
 title: Weekly JavaScript Challenge – Reaktywacja!
 date: 2017-08-24T08:13:59.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: weekly-javascript-challenge-reaktywacja
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2017/08/24/weekly-javascript-challenge-reaktywacja/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/08/pexels-photo-160107.jpg

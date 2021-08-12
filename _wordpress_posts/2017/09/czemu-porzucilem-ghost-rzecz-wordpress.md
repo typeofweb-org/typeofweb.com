@@ -1,5 +1,4 @@
 ---
-id: 325
 index: 31
 title: Dlaczego porzuciłem Ghost na rzecz WordPress, ale Ty nie powinieneś?
 date: 2017-09-11T18:28:43.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: czemu-porzucilem-ghost-rzecz-wordpress
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=325
 type: post
 thumbnail:
   url: >-

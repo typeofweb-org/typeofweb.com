@@ -1,5 +1,4 @@
 ---
-id: 1700
 index: 94
 title: Call For Proposals na meet.js Summit 2018
 date: 2018-10-23T14:24:40.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: call-for-proposals-na-meet-js-summit-2018
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1700
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/10/fb-og-2018-1.png

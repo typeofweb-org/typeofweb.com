@@ -1,5 +1,4 @@
 ---
-id: 977
 index: 54
 title: Odmiana rzeczowników przy liczebnikach w języku polskim
 date: 2018-01-22T20:26:28.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: odmiana-rzeczownikow-przy-liczebnikach-jezyku-polskim
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=977
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-1.jpg

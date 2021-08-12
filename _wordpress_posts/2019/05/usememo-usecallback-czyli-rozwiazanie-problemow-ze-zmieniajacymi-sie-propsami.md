@@ -1,5 +1,4 @@
 ---
-id: 2015
 index: 108
 title: >-
   useMemo, useCallback, czyli rozwiązanie problemów ze zmieniającymi się
@@ -10,7 +9,6 @@ status: publish
 permalink: usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2015
 type: post
 thumbnail:
   url: >-

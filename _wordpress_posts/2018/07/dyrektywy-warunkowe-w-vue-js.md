@@ -1,5 +1,4 @@
 ---
-id: 1429
 index: 90
 title: Dyrektywy warunkowe w Vue.js
 date: 2018-07-04T18:58:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: dyrektywy-warunkowe-w-vue-js
 authors:
   - wojtek-urbanski
-guid: https://typeofweb.com/?p=1429
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/07/pexels-photo-581669.jpeg

@@ -1,5 +1,4 @@
 ---
-id: 29
 index: 18
 title: Kurs TypeScript – część 2
 date: 2016-08-08T13:55:32.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: kurs-typescript-czesc-2
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/08/08/kurs-typescript-czesc-2/
 type: post
 categories:
   - slug: javascript

@@ -1,5 +1,4 @@
 ---
-id: 2405
 index: 120
 title: Dowiedz się ile zarabiają gwiazdy frontendu!
 date: 2020-03-04T14:58:19.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: dowiedz-sie-ile-zarabiaja-gwiazdy-frontendu
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2405
 type: post
 thumbnail:
   url: >-

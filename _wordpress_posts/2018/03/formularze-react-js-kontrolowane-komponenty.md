@@ -1,5 +1,4 @@
 ---
-id: 1125
 index: 66
 title: Formularze w React.js — kontrolowane komponenty
 date: 2018-03-06T09:14:25.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: formularze-react-js-kontrolowane-komponenty
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1125
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-97558.jpeg

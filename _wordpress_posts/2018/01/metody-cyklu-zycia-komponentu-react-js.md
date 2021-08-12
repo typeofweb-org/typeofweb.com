@@ -1,5 +1,4 @@
 ---
-id: 823
 index: 53
 title: Metody cyklu życia komponentu w React.js
 date: 2018-01-18T17:33:42.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: metody-cyklu-zycia-komponentu-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=823
 type: post
 thumbnail:
   url: >-

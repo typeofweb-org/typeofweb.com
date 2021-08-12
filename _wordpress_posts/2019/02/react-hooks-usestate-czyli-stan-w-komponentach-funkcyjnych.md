@@ -1,5 +1,4 @@
 ---
-id: 1847
 index: 100
 title: 'React Hooks: useState, czyli stan w komponentach funkcyjnych'
 date: 2019-02-11T16:55:10.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1847
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/02/pexels-photo-1520145.jpeg

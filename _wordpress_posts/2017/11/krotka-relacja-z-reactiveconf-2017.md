@@ -1,5 +1,4 @@
 ---
-id: 773
 index: 39
 title: Krótka relacja z ReactiveConf 2017
 date: 2017-11-07T19:16:05.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: krotka-relacja-z-reactiveconf-2017
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=773
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/11/reactive2017_2.jpg

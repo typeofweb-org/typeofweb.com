@@ -1,5 +1,4 @@
 ---
-id: 2581
 index: 127
 title: 'Self-publishing: Jak napisałem książkę w markdownie?'
 date: 2020-09-30T14:24:58.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: self-publishing-jak-napisalem-ksiazke-w-markdownie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2581
 type: post
 thumbnail:
   url: >-

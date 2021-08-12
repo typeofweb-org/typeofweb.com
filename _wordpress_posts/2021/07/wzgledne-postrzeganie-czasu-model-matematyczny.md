@@ -1,5 +1,4 @@
 ---
-id: 2716
 index: 132
 title: 'Względne postrzeganie czasu: model matematyczny'
 date: 2021-07-07T14:47:50.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: wzgledne-postrzeganie-czasu-model-matematyczny
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2716
 type: post
 thumbnail:
   url: >-

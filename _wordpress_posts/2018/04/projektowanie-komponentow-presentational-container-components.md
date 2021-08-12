@@ -1,5 +1,4 @@
 ---
-id: 1457
 index: 78
 title: 'Projektowanie komponentów: Presentational & Container Components'
 date: 2018-04-30T19:53:07.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: projektowanie-komponentow-presentational-container-components
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1457
 type: post
 thumbnail:
   url: >-

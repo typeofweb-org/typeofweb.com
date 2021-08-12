@@ -8,8 +8,6 @@ status: publish
 permalink: asi-czyli-automatyczne-wstawianie-srednikow
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2016/04/11/asi-czyli-automatyczne-wstawianie-srednikow/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2016/04/business-2717066_1280.jpg

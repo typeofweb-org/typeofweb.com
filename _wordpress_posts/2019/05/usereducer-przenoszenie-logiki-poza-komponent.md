@@ -1,5 +1,4 @@
 ---
-id: 1939
 index: 107
 title: "useReducer —\_przenoszenie logiki poza komponent"
 date: 2019-05-07T15:16:31.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: usereducer-przenoszenie-logiki-poza-komponent
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1939
 type: post
 thumbnail:
   url: >-

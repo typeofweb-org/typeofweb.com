@@ -1,5 +1,4 @@
 ---
-id: 14
 index: 4
 title: Komunikacja pomiędzy kontrolerami w AngularJS
 date: 2016-05-05T12:47:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: komunikacja-pomiedzy-kontrolerami
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/05/05/komunikacja-pomiedzy-kontrolerami/
 type: post
 categories:
   - slug: javascript

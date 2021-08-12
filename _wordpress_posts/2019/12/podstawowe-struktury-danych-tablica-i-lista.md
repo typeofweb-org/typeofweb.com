@@ -1,5 +1,4 @@
 ---
-id: 2130
 index: 116
 title: Podstawowe struktury danych — tablica i lista
 date: 2019-12-10T18:57:12.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: podstawowe-struktury-danych-tablica-i-lista
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2130
 type: post
 thumbnail:
   url: >-

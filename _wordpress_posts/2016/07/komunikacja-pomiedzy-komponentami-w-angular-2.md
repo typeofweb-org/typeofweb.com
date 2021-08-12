@@ -1,5 +1,4 @@
 ---
-id: 20
 index: 9
 title: Komunikacja pomiędzy komponentami w Angular 2
 date: 2016-07-02T13:29:16.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: komunikacja-pomiedzy-komponentami-w-angular-2
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2016/07/02/komunikacja-pomiedzy-komponentami-w-angular-2/
 type: post
 categories:
   - slug: javascript

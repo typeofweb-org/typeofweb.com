@@ -1,5 +1,4 @@
 ---
-id: 567
 index: 37
 title: Symlink, zip i upload plików – łatwo padniesz łupem hackera
 date: 2017-10-17T11:45:29.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: symlink-zip-upload-plikow-dla-hackera
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=567
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/10/hacking-1685092_1920.jpg

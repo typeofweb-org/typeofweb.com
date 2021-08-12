@@ -1,5 +1,4 @@
 ---
-id: 1622
 index: 89
 title: Poradnik dla organizatorów konferencji
 date: 2018-07-03T09:49:29.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: poradnik-dla-organizatorow-konferencji
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1622
 type: post
 thumbnail:
   url: >-

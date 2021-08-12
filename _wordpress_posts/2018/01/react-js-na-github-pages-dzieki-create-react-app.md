@@ -1,5 +1,4 @@
 ---
-id: 1022
 index: 58
 title: React.js na GitHub Pages dzięki create-react-app
 date: 2018-01-31T16:14:36.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: react-js-na-github-pages-dzieki-create-react-app
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1022
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-405031.jpeg

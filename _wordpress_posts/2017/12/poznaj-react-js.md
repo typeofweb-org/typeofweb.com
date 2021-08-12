@@ -1,5 +1,4 @@
 ---
-id: 631
 index: 42
 title: Poznaj React.js
 date: 2017-12-05T14:00:54.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: poznaj-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=631
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/10/pexels-photo-91413.jpeg

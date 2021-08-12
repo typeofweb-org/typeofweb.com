@@ -1,5 +1,4 @@
 ---
-id: 15
 index: 5
 title: "Struktura aplikacji AngularJS (część\_1\_‑\_trochę historii)"
 date: 2016-05-14T17:08:00.000Z
@@ -8,8 +7,6 @@ status: publish
 permalink: struktura-aplikacji-angularjs-czesc-1
 authors:
   - michal-miszczyszyn
-guid: >-
-  https://typeofweb.com/index.php/2016/05/14/struktura-aplikacji-angularjs-czesc-1/
 type: post
 categories:
   - slug: javascript

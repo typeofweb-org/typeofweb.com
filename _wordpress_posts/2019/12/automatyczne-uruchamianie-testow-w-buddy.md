@@ -1,5 +1,4 @@
 ---
-id: 2305
 index: 115
 title: Automatyczne uruchamianie testów w Buddy
 date: 2019-12-03T13:29:17.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: automatyczne-uruchamianie-testow-w-buddy
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2305
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/11/cover_facebook3-1.png

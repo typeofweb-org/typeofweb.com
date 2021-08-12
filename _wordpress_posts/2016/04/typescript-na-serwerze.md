@@ -1,5 +1,4 @@
 ---
-id: 11
 index: 1
 title: Po co TypeScript?
 date: 2016-04-06T18:06:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: typescript-na-serwerze
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/index.php/2016/04/05/typescript-na-serwerze/
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2016/04/pexels-photo-574073.jpeg

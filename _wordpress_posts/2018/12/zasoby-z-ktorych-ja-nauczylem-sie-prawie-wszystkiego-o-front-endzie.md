@@ -1,5 +1,4 @@
 ---
-id: 1734
 index: 96
 title: "Zasoby, z których ja nauczyłem się\_(prawie) wszystkiego o front-endzie"
 date: 2018-12-13T07:40:44.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1734
 type: post
 thumbnail:
   url: >-

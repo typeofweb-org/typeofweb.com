@@ -1,5 +1,4 @@
 ---
-id: 1026
 index: 61
 title: Poprawne bindowanie funkcji w React.js
 date: 2018-02-16T15:34:32.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: poprawne-bindowanie-funkcji-react-js
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=1026
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-70862.jpeg

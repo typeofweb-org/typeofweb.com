@@ -1,5 +1,4 @@
 ---
-id: 2708
 index: 131
 title: 'YouTube: Moje pierwsze kroki'
 date: 2021-04-06T09:26:57.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: youtube-moje-pierwsze-kroki
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=2708
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2021/04/typeofweb_youtube.png

@@ -1,5 +1,4 @@
 ---
-id: 2
 title: O mnie i współpraca
 date: 2017-08-29T23:48:13.000Z
 isMarkdown: true
@@ -7,7 +6,6 @@ status: publish
 permalink: wspolpraca
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?page_id=2
 type: page
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2019/09/Oferta-blog.png

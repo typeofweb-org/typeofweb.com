@@ -1,5 +1,4 @@
 ---
-id: 42
 index: 30
 title: Praca zdalna – rekrutacja do Toptal
 date: 2017-08-30T08:00:00.000Z
@@ -8,7 +7,6 @@ status: publish
 permalink: praca-zdalna-rekrutacja-do-toptal
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?p=42
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2017/08/pexels-photo-306533.jpeg

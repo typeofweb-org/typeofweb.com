@@ -1,5 +1,4 @@
 ---
-id: 2488
 title: Errata
 date: 2020-04-17T15:38:43.000Z
 isMarkdown: true
@@ -7,7 +6,6 @@ status: publish
 permalink: errata
 authors:
   - michal-miszczyszyn
-guid: https://typeofweb.com/?page_id=2488
 type: page
 categories: []
 seo: {}

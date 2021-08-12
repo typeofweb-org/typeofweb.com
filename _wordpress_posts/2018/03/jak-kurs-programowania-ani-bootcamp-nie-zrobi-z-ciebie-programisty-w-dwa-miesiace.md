@@ -1,5 +1,4 @@
 ---
-id: 1143
 index: 67
 title: >-
   Jak kurs programowania ani bootcamp nie zrobi z Ciebie programisty w dwa
@@ -11,7 +10,6 @@ permalink: >-
   jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiace
 authors:
   - karolina-kreft
-guid: https://typeofweb.com/?p=1143
 type: post
 thumbnail:
   url: https://typeofweb.com/wp-content/uploads/2018/03/pexels-photo-714701-2.jpeg
