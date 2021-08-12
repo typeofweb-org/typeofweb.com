@@ -11,7 +11,8 @@ import type { SeriesWithToC } from '../types';
 
 const SEP = ' • ';
 const MAX_TITLE_LEN = 50;
-const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
+// const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
+const robots = 'noindex, nofollow';
 
 interface SeoProps {
   readonly title?: string | null;

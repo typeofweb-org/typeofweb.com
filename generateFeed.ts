@@ -9,7 +9,7 @@ import { postToProps } from './utils/postToProps';
 import { readAllPosts } from './utils/wordpress';
 
 async function generateFeed() {
-  const publicUrl = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+  const publicUrl = `https://${process.env.NEXT_PUBLIC_HOST ?? process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
   const { posts: allPosts } = await readAllPosts({ includePages: false });
   const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default;
