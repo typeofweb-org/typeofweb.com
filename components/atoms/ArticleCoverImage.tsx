@@ -35,6 +35,7 @@ export const ArticleCoverImage = memo<{
         itemType="http://schema.org/ImageObject"
         className="duration-[10s] motion-safe:hover:scale-110 bg-gray-200 transition-transform ease-in hover:ease-out"
         alt=""
+        quality="100"
         sizes="320px, (min-width: 400px) 768px"
         {...layoutProps}
         placeholder="blur"
