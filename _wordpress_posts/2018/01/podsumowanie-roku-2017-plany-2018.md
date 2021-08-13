@@ -90,7 +90,7 @@ Dodatkowo przy zmianie wyglądu (i silnika) miałem też na uwadze fakt, że <st
 
 Efekty? Wzrost zaangażowania o kilkaset %. Znaczne przyśpieszenie wzrostu liczby użytkowników i lajków na Facebooku. Gdy patrzę na te liczby — serce się raduje ❤️
 
-<div style="text-align: center; margin-bottom: 20px;">[typeofweb-facebook-page]</div>
+<FacebookPageWidget />
 
 <strong>Przez cały ten czas Type of Web nadal pozostawał inicjatywą niekomercyjną</strong>. Nie ma tutaj reklam, programów partnerskich ani artykułów sponsorowanych. Cały ruch na blogu budowany jest w 100% organicznie, bez reklam ani natrętnego spamu na grupach na Facebooku. Tym bardziej cieszą mnie tak dobre rezultaty :)
 
