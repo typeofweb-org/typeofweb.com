@@ -19,7 +19,7 @@ series:
 seo: {}
 ---
 
-<p><a href="https://typeofweb.com/2016/06/03/wstep-do-angular-2/">W poprzedniej części kursu Angular 2</a> omówiłem założenia frameworka, tworzenie nowego projektu, podstawy bindingów oraz wreszcie kod pierwszego komponentu. Pominąłem jednak kilka kwestii takich jak <strong>bindingi na własnych komponentach</strong>, pełna składnia bindingu dwukierunkowego, czy możliwość odwoływania się do referencji do obiektów na poziomie szablonów (brzmi skomplikowanie, ale nie jest!). Chciałbym teraz do tych kwestii wrócić. W tym celu odtworzę projekt, który poprzednio <a href="https://typeofweb.com/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/">zaimplementowałem w AngularJS 1.5</a> gdy opisywałem koncept komponentów. Będzie to prosta lista kontaktów z gravatarami.</p>
+<p><a href="https://typeofweb.com/wstep-do-angular-2/">W poprzedniej części kursu Angular 2</a> omówiłem założenia frameworka, tworzenie nowego projektu, podstawy bindingów oraz wreszcie kod pierwszego komponentu. Pominąłem jednak kilka kwestii takich jak <strong>bindingi na własnych komponentach</strong>, pełna składnia bindingu dwukierunkowego, czy możliwość odwoływania się do referencji do obiektów na poziomie szablonów (brzmi skomplikowanie, ale nie jest!). Chciałbym teraz do tych kwestii wrócić. W tym celu odtworzę projekt, który poprzednio <a href="https://typeofweb.com/struktura-aplikacji-angularjs-czesc-2-komponenty/">zaimplementowałem w AngularJS 1.5</a> gdy opisywałem koncept komponentów. Będzie to prosta lista kontaktów z gravatarami.</p>
 
 <h1 id="koncepcyjnie">Koncepcyjnie</h1>
 
@@ -100,7 +100,7 @@ export class AppComponent {
 
 <h1 id="zdarzeniacykluycia">Zdarzenia cyklu życia</h1>
 
-<p><a href="https://typeofweb.com/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/">Opisywałem już</a> zdarzenia cyklu życia (<em>lifecycle hooks</em>) w AngularJS 1.5 i podobny koncept istnieje również w Angular 2. Krótko mówiąc, chodzi o takie metody w klasie komponentu, które są automatycznie wywoływane przez Angulara gdy komponent jest tworzony, zmieniany lub niszczony. Szczegóły można <a href="https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html">doczytać</a>, w tym przypadku interesuje nas jedno konkretne zdarzenie: tworzenie komponentu.</p>
+<p><a href="https://typeofweb.com/struktura-aplikacji-angularjs-czesc-2-komponenty/">Opisywałem już</a> zdarzenia cyklu życia (<em>lifecycle hooks</em>) w AngularJS 1.5 i podobny koncept istnieje również w Angular 2. Krótko mówiąc, chodzi o takie metody w klasie komponentu, które są automatycznie wywoływane przez Angulara gdy komponent jest tworzony, zmieniany lub niszczony. Szczegóły można <a href="https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html">doczytać</a>, w tym przypadku interesuje nas jedno konkretne zdarzenie: tworzenie komponentu.</p>
 
 <p class="important">Dobrą praktyką jest umieszczanie jak najmniej logiki w konstruktorze klasy. Dzięki temu instancjonowanie komponentu jest szybsze, łatwiej nim zarządzać i testować. Bardziej skomplikowane operacje zalecam przenieść do metody <code>ngOnInit</code> z interfejsu <code>OnInit</code>.</p>
 
@@ -214,4 +214,4 @@ export class AppComponent {
 
 <h1 id="podsumowanie">Podsumowanie</h1>
 
-<p>W tym artykule opisałem kilka istotnych elementów tworzenia aplikacji w Angular 2. Po pierwsze nowe komendy Angular CLI: <code>ng generate …</code>. Ponadto omówiłem sposoby implementacji wejścia i wyjścia do komponentów, wstrzykiwanie zależności oraz tworzenie pośredniczących serwisów. W kolejnej części dokończę projekt listy zadań w Angular 2 i omówię komunikację pomiędzy komponentami z wykorzystaniem Reduksa. Aby oswoić się z samymi konceptami Reduksa, polecam mój wpis <a href="https://typeofweb.com/2016/06/10/flux-i-redux/">Flux i Redux</a>. Zachęcam do komentowania!</p>
+<p>W tym artykule opisałem kilka istotnych elementów tworzenia aplikacji w Angular 2. Po pierwsze nowe komendy Angular CLI: <code>ng generate …</code>. Ponadto omówiłem sposoby implementacji wejścia i wyjścia do komponentów, wstrzykiwanie zależności oraz tworzenie pośredniczących serwisów. W kolejnej części dokończę projekt listy zadań w Angular 2 i omówię komunikację pomiędzy komponentami z wykorzystaniem Reduksa. Aby oswoić się z samymi konceptami Reduksa, polecam mój wpis <a href="https://typeofweb.com/flux-i-redux/">Flux i Redux</a>. Zachęcam do komentowania!</p>

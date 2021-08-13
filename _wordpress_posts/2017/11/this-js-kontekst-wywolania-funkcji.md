@@ -121,7 +121,7 @@ Powodem takiego zachowania jest fakt, że mimo przekazania referencji do metody 
 
 Więcej o Promise'ach możesz przeczytać w tym wpisie:
 
-https://typeofweb.com/2017/10/23/kilka-faktow-na-temat-promise/
+https://typeofweb.com/kilka-faktow-na-temat-promise/
 
 Innym, często budzącym zaskoczenie, przypadkiem jest sytuacja, w której <strong>funkcja, do której przekazałaś/eś callback celowo zmienia jego this</strong>. Idealnym przykładem jest przypięcie funkcji jako callbacka dla zdarzenia DOM, np. kliknięcia. W takim wypadku jako this ustawiany jest element DOM, na którym zaszło zdarzenie. Podobnie zachowuje się biblioteka jQuery.
 

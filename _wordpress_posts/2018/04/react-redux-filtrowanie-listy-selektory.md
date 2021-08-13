@@ -35,7 +35,7 @@ Jak dokładnie wygląda komunikacja pomiędzy komponentami przy użyciu Redux w 
 
 ## Komponenty a Redux
 
-Komunikowanie ze sobą komponentów, które leżą blisko siebie to bułka z masłem. Do tego bynajmniej nie jest potrzebny Redux ;) Jeśli nie pamiętasz to odśwież sobie pamięć na temat [komunikacji komponentów w React](https://typeofweb.com/2018/02/24/komunikacja-pomiedzy-komponentami-w-react-js/). Dlatego pozwolę sobie wydzielić zupełnie nowy komponent, który za zadanie będzie miał filtrowanie listy. Będzie to po prostu input ;)
+Komunikowanie ze sobą komponentów, które leżą blisko siebie to bułka z masłem. Do tego bynajmniej nie jest potrzebny Redux ;) Jeśli nie pamiętasz to odśwież sobie pamięć na temat [komunikacji komponentów w React](https://typeofweb.com/komunikacja-pomiedzy-komponentami-w-react-js/). Dlatego pozwolę sobie wydzielić zupełnie nowy komponent, który za zadanie będzie miał filtrowanie listy. Będzie to po prostu input ;)
 
 W naszej prostej aplikacji może wyglądać, że nie ma to za bardzo sensu, ale wyobraź sobie, że ten komponent leży daleko od samej listy i **inny sposób komunikacji pomiędzy nimi nie jest możliwy**.
 
@@ -98,7 +98,7 @@ handleSearchChange = (e) => {
 };
 ```
 
-Jak już pewnie wiesz z poprzedniego wpisu na temat [Redux i `connect`](https://typeofweb.com/2018/04/06/react-redux-kurs-wprowadzenie-i-podstawy/) zarówno action creator jak i sama wartość pochodzą z funkcji `mapStateToProps` i `mapDispatchToProps`:
+Jak już pewnie wiesz z poprzedniego wpisu na temat [Redux i `connect`](https://typeofweb.com/react-redux-kurs-wprowadzenie-i-podstawy/) zarówno action creator jak i sama wartość pochodzą z funkcji `mapStateToProps` i `mapDispatchToProps`:
 
 ```jsx
 import { connect } from 'react-redux';
@@ -173,7 +173,7 @@ Kod znajdziesz jak zwykle na moim GitHubie: [github.com/mmiszy/typeofweb-kurs-re
 
 Płynnie poruszasz się po Reduksie ;) Jak Ci się podoba do tej pory? <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React i Redux</a>.
 
-Jak filtrowanie listy w Reduksie wypada w porównaniu do zaimplementowanego wcześniej [filtrowania statycznej listy](https://typeofweb.com/2018/01/24/react-js-w-przykladach-filtrowanie-statycznej-listy/)? Pewnie wygląda Ci to na mnóstwo niepotrzebnego zachodu. Ale warto zauważyć, że teraz **input do wyszukiwania mógłby się znaleźć w dowolnym miejscu aplikacji**, a tekst do wyszukania nie musi przechodzić w górę i w dół przez kolejne komponenty, żeby trafić do listy. Dodatkowo zyskałaś/eś możliwość filtrowania listy na różne sposoby — np. teraz trywialne byłoby dodanie przycisku "Znajdź wszystkich o imieniu Magda".
+Jak filtrowanie listy w Reduksie wypada w porównaniu do zaimplementowanego wcześniej [filtrowania statycznej listy](https://typeofweb.com/react-js-w-przykladach-filtrowanie-statycznej-listy/)? Pewnie wygląda Ci to na mnóstwo niepotrzebnego zachodu. Ale warto zauważyć, że teraz **input do wyszukiwania mógłby się znaleźć w dowolnym miejscu aplikacji**, a tekst do wyszukania nie musi przechodzić w górę i w dół przez kolejne komponenty, żeby trafić do listy. Dodatkowo zyskałaś/eś możliwość filtrowania listy na różne sposoby — np. teraz trywialne byłoby dodanie przycisku "Znajdź wszystkich o imieniu Magda".
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 <NewsletterForm />

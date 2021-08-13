@@ -38,7 +38,7 @@ const [count, setCount] = useState(0);
 
 Więcej o tym doczytasz w artykule:
 
-https://typeofweb.com/2019/02/11/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/
+https://typeofweb.com/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/
 
 Dla odmiany, `useReducer` jako argument przyjmuje **reducer** i stan początkowy, a zwraca stan oraz funkcję `dispatch`:
 
@@ -46,7 +46,7 @@ Dla odmiany, `useReducer` jako argument przyjmuje **reducer** i stan początkowy
 const [count, dispatch] = useReducer(countReducer, 0);
 ```
 
-[Jeśli znasz Reduksa](https://typeofweb.com/2018/04/06/react-redux-kurs-wprowadzenie-i-podstawy/), to na pewno od razu kojarzysz ten koncept!
+[Jeśli znasz Reduksa](https://typeofweb.com/react-redux-kurs-wprowadzenie-i-podstawy/), to na pewno od razu kojarzysz ten koncept!
 
 ## Napiszmy reducer
 

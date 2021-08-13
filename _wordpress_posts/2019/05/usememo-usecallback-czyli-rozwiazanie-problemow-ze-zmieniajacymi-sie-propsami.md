@@ -70,7 +70,7 @@ Za każdym razem `options` tworzone jest na nowo, i jest nową referencją. Po 
 
 ## useCallback
 
-Jest taki React Hook, który rozwiązuje pierwszy problem! Nazywa się `useCallback`. Jako pierwszy argument przyjmuje funkcję, a jako drugi taką samą [tablicę zależności, jak `useEffect`](https://typeofweb.com/2019/03/05/react-hooks-useeffect-efekty-uboczne-w-komponencie/).
+Jest taki React Hook, który rozwiązuje pierwszy problem! Nazywa się `useCallback`. Jako pierwszy argument przyjmuje funkcję, a jako drugi taką samą [tablicę zależności, jak `useEffect`](https://typeofweb.com/react-hooks-useeffect-efekty-uboczne-w-komponencie/).
 
 ```jsx
 function MyComponent({ oneProp, anotherProp }) {

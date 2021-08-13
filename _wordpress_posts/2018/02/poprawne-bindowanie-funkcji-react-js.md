@@ -48,7 +48,7 @@ x(); // undefined</code></pre>
 
 Czemu tak się dzieje? Po przypisaniu do nowej zmiennej, funkcja <code>method</code> „nie pamięta” już, że była kiedyś częścią obiektu i wewnątrz niej jej <code>this</code> się zmienia — nie wskazuje już na obiekt. Więcej o tym możesz doczytać tutaj:
 
-https://typeofweb.com/2017/11/14/this-js-kontekst-wywolania-funkcji/
+https://typeofweb.com/this-js-kontekst-wywolania-funkcji/
 
 <h2>Jak to się ma do React.js</h2>
 

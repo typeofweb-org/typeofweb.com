@@ -28,7 +28,7 @@ Na pewno wiele osób kojarzy mnie z firmą Toptal – w szczególności ci, któ
 
 Na temat samej pracy zdalnej więcej możesz przeczytać w tym wpisie:
 
-https://typeofweb.com/2017/06/13/praca-zdalna-obalamy-mity/
+https://typeofweb.com/praca-zdalna-obalamy-mity/
 
 <h1 id="otoptalu">O Toptalu</h1>
 Tym, którzy nie znają – Toptal to firma z USA, prawdopodobnie największa tego typu, jest <strong>pośrednikiem pomiędzy programistami a klientami</strong> z różnych krajów (głównie USA). Toptal, jak sam chwali się na swojej stronie, zrzesza tylko top 3% najlepszych programistów na świecie, co bez wnikania w szczegóły można zrozumieć dość opacznie – ale o tym więcej za moment.

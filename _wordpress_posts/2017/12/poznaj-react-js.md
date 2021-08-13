@@ -39,7 +39,7 @@ seo:
 
 React nie jest kompletnym frameworkiem — jest raczej <strong>biblioteką.</strong> Choć w Internecie nadal trwa święty spór na ten temat, to my po prostu umówmy się, że tak jest, okej? Przykładowo, żeby stworzyć routing lub aby wykonać zapytanie AJAX, musisz skorzystać z zewnętrznej paczki. Nie jest to jednak żadną przeszkodą w tworzeniu rozbudowanych aplikacji! Istnieje szereg dobrych praktyk, a ogromne community Reacta na całym świecie na pewno pomoże wybrać Ci prawidłowe rozwiązania. Na przykład: React nie sugeruje żadnego rozwiązania dla przechowywania stanu aplikacji – ale jest kilka popularnych i sprawdzonych bibliotek, które świetnie współgrają z Reactem — np. flux czy redux, o których możesz przeczytać w jednym z moich wcześniejszych artykułów (na pewno jeszcze wrócę do tego tematu):
 
-https://typeofweb.com/2016/06/10/flux-i-redux/
+https://typeofweb.com/flux-i-redux/
 
 <h2>Przykładowy komponent</h2>
 

@@ -38,7 +38,7 @@ Rozpatrzę teraz popularny przypadek: W momencie załadowania aplikacji, potrzeb
 
 Wracam do kodu stąd:
 
-https://typeofweb.com/2017/12/17/podzial-komponenty-react-js/
+https://typeofweb.com/podzial-komponenty-react-js/
 
 Gotowa implementacja z tej części kursu dostępna jest tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)
 

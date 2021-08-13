@@ -45,7 +45,7 @@ Jakie to mogą być efekty uboczne? **Wszystko, co dzieje się asynchronicznie
 
 Skorzystamy tutaj z przykładu z poprzedniego wpisu:
 
-https://typeofweb.com/2019/02/11/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/
+https://typeofweb.com/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/
 
 Chcesz, aby `document.title` był aktualizowany za każdym razem, gdy wpisujesz coś w input i filtrujesz listę użytkowników. Użyjesz wtedy dwóch hooków: `useState` i `useEffect`:
 

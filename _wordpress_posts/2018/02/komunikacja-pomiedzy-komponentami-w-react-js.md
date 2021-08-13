@@ -28,7 +28,7 @@ Przyszedł ten moment, gdy Twoja aplikacja zaczyna się rozrastać i zmagasz si�
 
 {/_ more _/}
 
-<p class="important">Napisałem wcześniej podobne artykuły na temat <a href="https://typeofweb.com/2016/05/05/komunikacja-pomiedzy-kontrolerami/">AngularJS (link)</a> i <a href="https://typeofweb.com/2016/07/02/komunikacja-pomiedzy-komponentami-w-angular-2/">Angular2 (link)</a>. Wiedza tam zawarta jest w dużej części uniwersalna i możesz chcieć do nich zajrzeć.</p>
+<p class="important">Napisałem wcześniej podobne artykuły na temat <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami/">AngularJS (link)</a> i <a href="https://typeofweb.com/komunikacja-pomiedzy-komponentami-w-angular-2/">Angular2 (link)</a>. Wiedza tam zawarta jest w dużej części uniwersalna i możesz chcieć do nich zajrzeć.</p>
 
 <h2>Komunikacja w React.js</h2>
 
@@ -40,7 +40,7 @@ Rodzic przekazuje do swoich dzieci dane. Przykładowo: Aplikacja zawiera listę 
 
 React informuje nas, że propsy się zmieniły poprzez funkcję <code>componentWillReceiveProps(nextProps)</code> — dzięki czemu można zareagować na zmiany danego propsa. <strong>Ale raczej tego nie rób</strong><strong>. Bo naprawdę rzadko jest to potrzebne.</strong> Troszkę więcej o tym w jednym z poprzednich wpisów:
 
-https://typeofweb.com/2018/01/18/metody-cyklu-zycia-komponentu-react-js/
+https://typeofweb.com/metody-cyklu-zycia-komponentu-react-js/
 
 W zasadzie to cała filozofia.
 
@@ -101,7 +101,7 @@ Tutaj magia Reacta się kończy ;) No, prawie, ale na temat <code>context</code>
 <ul>
     <li>stwórz funkcję / klasę / obiekt — tzw. serwis, który posłuży Ci do komunikacji. Zaimportuj i użyj go w obu komponentach.</li>
     <li>Przechowuj w nim dane lub wywołuj funkcje — podobnie jak w przypadku komunikacji rodzic ⟺ dziecko</li>
-    <li>Przyda Ci się znajomość wzorców projektowych, np. wzorca obserwatora. Więcej na temat samej koncepcji pod koniec <a href="https://typeofweb.com/2016/05/05/komunikacja-pomiedzy-kontrolerami/#staredobrewzorceprojektowe">mojego innego wpisu (link)</a>. Może <a href="https://gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d">ten gist (link)</a> się nada?</li>
+    <li>Przyda Ci się znajomość wzorców projektowych, np. wzorca obserwatora. Więcej na temat samej koncepcji pod koniec <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami/#staredobrewzorceprojektowe">mojego innego wpisu (link)</a>. Może <a href="https://gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d">ten gist (link)</a> się nada?</li>
     <li>Możesz użyć gotowych paczek, typu <a href="https://www.npmjs.com/package/eventemitter3">EventEmitter3 (link)</a> lub podobnych.</li>
 </ul>
 
@@ -109,7 +109,7 @@ Tutaj magia Reacta się kończy ;) No, prawie, ale na temat <code>context</code>
 
 Są też pewne ciekawe, rozbudowane i popularne rozwiązania: Architektura <strong>Flux</strong> i wywodzący się z niej słynny <strong>Redux</strong>, a także <strong>MobX</strong>. No i inne podobne biblioteki. Popełniłem już wcześniej jeden wpis na temat Fluksa i Reduksa od strony architektury. Jeśli hasła <em>CQRS</em> albo <em>Event Sourcing</em> nie są Ci obce to śmiało czytaj:
 
-https://typeofweb.com/2016/06/10/flux-i-redux/
+https://typeofweb.com/flux-i-redux/
 
 Natomiast w kontekście Reacta — wrócę do tego, obiecuję ;) To temat pierwszy albo drugi wpis po tym! <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 

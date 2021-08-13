@@ -32,7 +32,7 @@ Tegoroczny meet.js <strong>Summit był organizowany przez Michała Miszczyszyna,
 
 Jeśli jeszcze nie wiesz czym w ogóle jest meet.js to zachęcam do zapoznania się z historią meet.js:
 
-https://typeofweb.com/2017/09/17/meet-js-summit-2017-kulisami/
+https://typeofweb.com/meet-js-summit-2017-kulisami/
 
 <h2>Miejsce</h2>
 

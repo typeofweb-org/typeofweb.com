@@ -33,7 +33,7 @@ Na codzień korzystam z <strong>Redux razem z React</strong>. Dawniej używałem
 
 {/_ more _/}
 
-Gdy opisywałem <a href="https://typeofweb.com/2016/05/05/komunikacja-pomiedzy-kontrolerami/">sposoby komunikacji pomiędzy kontrolerami</a> w AngularJS, poniekąd celowo pominąłem pewną alternatywę, która zyskuje ostatnio sporą popularność: Architekturę Flux. Nie wspominałem o Fluksie głównie ze względu na to, że to koncept trochę szerszy niż prosta komunikacja pomiędzy elementami aplikacji o jakiej traktował tamten wpis.
+Gdy opisywałem <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami/">sposoby komunikacji pomiędzy kontrolerami</a> w AngularJS, poniekąd celowo pominąłem pewną alternatywę, która zyskuje ostatnio sporą popularność: Architekturę Flux. Nie wspominałem o Fluksie głównie ze względu na to, że to koncept trochę szerszy niż prosta komunikacja pomiędzy elementami aplikacji o jakiej traktował tamten wpis.
 
 <h2 id="flux">Flux i Redux</h2>
 

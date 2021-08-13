@@ -102,7 +102,7 @@ Czy wystarczy, że jako <code>src</code> wstawimy tag <code>&lt;script&gt;</code
 <pre><code class="language-html">" &lt;script&gt; alert(1); &lt;/script&gt; "
 </code></pre>
 
-<strong>Niestety nie.</strong> A w zasadzie stety, bo to bardzo dobrze ;) Zgodnie ze specyfikacją HTML5, kod w tagu <code>&lt;script&gt;</code> umieszczonym na stronie przy pomocy innerHTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#Security_considerations">nie powinien zostać wykonany</a>. Wspominałem już o tym we wpisie podsumowującym <a href="https://typeofweb.com/2016/07/25/weekly-javascript-challenge-1/">1. Weekly JavaScript Challenge</a> i napisałem wtedy też, że <strong>istnieją inne metody wykonania arbitralnego kodu na stronie</strong>. Przykładowo możemy skorzystać z atrybutu <code>onerror</code> i w nim wywołać kod, który nas interesuje:
+<strong>Niestety nie.</strong> A w zasadzie stety, bo to bardzo dobrze ;) Zgodnie ze specyfikacją HTML5, kod w tagu <code>&lt;script&gt;</code> umieszczonym na stronie przy pomocy innerHTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#Security_considerations">nie powinien zostać wykonany</a>. Wspominałem już o tym we wpisie podsumowującym <a href="https://typeofweb.com/weekly-javascript-challenge-1/">1. Weekly JavaScript Challenge</a> i napisałem wtedy też, że <strong>istnieją inne metody wykonania arbitralnego kodu na stronie</strong>. Przykładowo możemy skorzystać z atrybutu <code>onerror</code> i w nim wywołać kod, który nas interesuje:
 
 <pre><code class="language-html">&lt;video src="nieistnieje" onerror="alert(1)"&gt;  
 </code></pre>

@@ -30,7 +30,7 @@ Jaka jest zaleta tego rozwiązania? Na pewno zwięzłość. Dodatkowo, jak już 
 
 Jeśli rozumiesz powyższe przykłady i czujesz się swobodnie z <code>map</code> i <code>reduce</code> to prawdopodobnie Observable będą dla Ciebie łatwe do zrozumienia. O tym mój kolejny wpis:
 
-https://typeofweb.com/2017/05/19/observable-rxjs/
+https://typeofweb.com/observable-rxjs/
 
 <h1 id="dladociekliwych">Dla dociekliwych</h1>
 Pomimo, że obiecałem, że będzie prosto i pobieżnie, to jednak warto zastanowić się nad tym jak bardzo uniwersalne koncepty zostały tutaj omówione… Przykładowo, jeśli w opisie funkcji map zamiast słowa „tablica” wstawimy „funktor” to prawdopodobnie nadal wszystko co napisałem będzie prawdą.

@@ -75,12 +75,12 @@ Ponadto, jak piszą Jaruwan Sakulku i James Alexander, osoby z impostorem obawi
 Czy to wszystko brzmi znajomo? Czujesz to u siebie? Widzisz to u innych? Spróbuj ustosunkować się do twierdzeń poniżej:
 
 1.  Czuję, że nie zasługuję na sukces, który osiągnęłam/osiągnąłem.
-2.             Nawet, gdy jestem chwalona/y przez innych, nie czuję, abym osiągnęła/osiągnął aż tak wiele, jak oni sądzą.
-3.             Może i jestem nagradzany za swoją pracę, ale nie czuję, abym na to zapracował/a.
-4.             Obawiam się, że ludzie wkrótce dostrzegą, że wcale nie jestem aż tak bystra/bystry, jak udawałam/em, że jestem.
-5.             Większość moich osiągnęć to szczęśliwy traf.
-6.             Trudno mi zaakceptować komplementy.
-7.             Bagatelizuję swoje osiągnięcia, bo nie sądzę, że są aż tak niesamowite, jak ludzie uważają.
+2.              Nawet, gdy jestem chwalona/y przez innych, nie czuję, abym osiągnęła/osiągnął aż tak wiele, jak oni sądzą.
+3.              Może i jestem nagradzany za swoją pracę, ale nie czuję, abym na to zapracował/a.
+4.              Obawiam się, że ludzie wkrótce dostrzegą, że wcale nie jestem aż tak bystra/bystry, jak udawałam/em, że jestem.
+5.              Większość moich osiągnęć to szczęśliwy traf.
+6.              Trudno mi zaakceptować komplementy.
+7.              Bagatelizuję swoje osiągnięcia, bo nie sądzę, że są aż tak niesamowite, jak ludzie uważają.
 
 Ponadto, z ust impostorów często padają takie charakterystyczne stwierdzenia, jak:
 
@@ -108,7 +108,7 @@ Ponadto, z ust impostorów często padają takie charakterystyczne stwierdzenia,
 
 **Skup się na motywacji pochodzącej od Ciebie, a nie z zewnątrz**. Hoang i Queena w artykule [The Impostor Phenomenon: Overcoming Internalized Barriers and Recognizing Achievements][6] opisują, że wewnętrzna motywacja jest kluczowa do zwalczania syndromu oszusta. Powiedz „chcę to zrobić, bo…”, albo „wiem, że mogę to zrobić”, albo „jeśli to zrobię, to osiągnę…”.
 
-**Stawiaj sobie małe, mierzalne cele.** Możesz spojrzeć, [jak ja stawiam sobie cele](https://typeofweb.com/2019/01/07/podsumowanie-roku-2018-i-plany-na-2019/) i się z nich rozliczam.
+**Stawiaj sobie małe, mierzalne cele.** Możesz spojrzeć, [jak ja stawiam sobie cele](https://typeofweb.com/podsumowanie-roku-2018-i-plany-na-2019/) i się z nich rozliczam.
 
 **Porozmawiaj z teraupetą lub terapeutką.** To prawdopodobnie najlepszy sposób na walkę z impostorem i rozwiązanie problemu.
 

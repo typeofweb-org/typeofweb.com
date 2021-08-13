@@ -23,7 +23,7 @@ seo: {}
 
 <p>Angular 2 aktywnie korzysta ze wzorca projektowego Dependency Injection. Ten wpis poświęciłem wyłącznie implementacji DI w tym frameworku. Jest ona bardzo rozbudowana i niezwykle ciekawa, a jej dokładne poznanie pozwoli na lepsze zrozumienie wstrzykiwania zależności w Angularze oraz sprawi, że będziemy tworzyć aplikacje bardziej świadomie i łatwiej.</p>
 
-<p class="important">Samemu <a href=https://typeofweb.com/2016/07/07/wzorce-projektowe-dependency-injection/>tematowi Dependency Injection przeznaczyłem osobny wpis</a>. Piszę tam o wzorcu projektowym, niezależnie od implementacji.</p>
+<p class="important">Samemu <a href=https://typeofweb.com/wzorce-projektowe-dependency-injection/>tematowi Dependency Injection przeznaczyłem osobny wpis</a>. Piszę tam o wzorcu projektowym, niezależnie od implementacji.</p>
 
 <p>Zacznijmy może od tego, że Dependency Injection jest bardzo ważną częścią Angular 2. <strong>Bez korzystania z DI nie możemy budować nawet prostych aplikacji</strong>. Angular 2 ma własny framework DI (który ma być udostępniony jako moduł niezależny od Angulara, do wykorzystania w dowolnej aplikacji). Co takiego robi dla nas DI w Angular 2? Spójrzmy na prosty przykład. Podobny kod widzieliśmy już wielokrotnie:</p>
 
@@ -49,7 +49,7 @@ export class DataService { … }
 class MyAppComponent { … }  
 </code></pre>
 
-<p>To autentyczny kod z wpisu <a href="https://typeofweb.com/2016/07/02/komunikacja-pomiedzy-komponentami-w-angular-2/">Komunikacja pomiędzy komponentami w Angular 2</a>. Widzimy tutaj komponent <code>MyChildComponent</code>, który do konstruktora ma wstrzykniętą instancję serwisu <code>DataService</code>. Aby wstrzykiwanie w ogóle było możliwe, klasa <code>DataService</code> jest dodatkowo dodana do tablicy <code>providers</code> w komponencie <code>AppComponent</code>. Wcześniej założyliśmy, że to po prostu działa – Angular 2 magicznie wie, że powinien tę zalożność wstrzyknąć i <em>voilà</em> – tak się stawało! Teraz jednak zastanówmy się jak to się dzieje pod maską.</p>
+<p>To autentyczny kod z wpisu <a href="https://typeofweb.com/komunikacja-pomiedzy-komponentami-w-angular-2/">Komunikacja pomiędzy komponentami w Angular 2</a>. Widzimy tutaj komponent <code>MyChildComponent</code>, który do konstruktora ma wstrzykniętą instancję serwisu <code>DataService</code>. Aby wstrzykiwanie w ogóle było możliwe, klasa <code>DataService</code> jest dodatkowo dodana do tablicy <code>providers</code> w komponencie <code>AppComponent</code>. Wcześniej założyliśmy, że to po prostu działa – Angular 2 magicznie wie, że powinien tę zalożność wstrzyknąć i <em>voilà</em> – tak się stawało! Teraz jednak zastanówmy się jak to się dzieje pod maską.</p>
 
 <h1 id="rejestracjazalenoci">Rejestracja zależności</h1>
 
@@ -283,7 +283,7 @@ abstract class ReadonlyDataService {
 
 <h3 id="usefactoryvsusevalue"><code>useFactory</code> vs <code>useValue</code></h3>
 
-<p>Uważne osoby dostrzegły pewnie, że we wpisie <a href="https://typeofweb.com/2016/07/04/angular-2-i-redux/">Angular 2 i Redux</a> wykorzystałem <code>useFactory</code>, podczas gdy mógłbym to zrobić prościej i skorzystać z <code>useValue</code>. Przypomnijmy sobie fragment kodu:</p>
+<p>Uważne osoby dostrzegły pewnie, że we wpisie <a href="https://typeofweb.com/angular-2-i-redux/">Angular 2 i Redux</a> wykorzystałem <code>useFactory</code>, podczas gdy mógłbym to zrobić prościej i skorzystać z <code>useValue</code>. Przypomnijmy sobie fragment kodu:</p>
 
 <pre><code class="language-typescript">const appStoreFactory = () =&gt; {  
   const appStore = createStore(rootReducer, undefined, window.devToolsExtension &amp;&amp; window.devToolsExtension());

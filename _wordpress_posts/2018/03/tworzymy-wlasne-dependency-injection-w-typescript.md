@@ -44,7 +44,7 @@ Następnie tworzę dwa pliki: <code>index.ts</code> i <code>injector.ts</code>. 
 
 Zasada działania dependency injection nie jest trudna i opisałem ją niegdyś w artykule:
 
-https://typeofweb.com/2016/07/07/wzorce-projektowe-dependency-injection/
+https://typeofweb.com/wzorce-projektowe-dependency-injection/
 
 Zanim jednak zacznę cokolwiek programować, warto byłoby mieć jakiś plan ;) Oto moje potrzeby i wymagania:
 

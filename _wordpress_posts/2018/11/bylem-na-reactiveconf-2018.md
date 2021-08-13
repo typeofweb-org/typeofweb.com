@@ -29,7 +29,7 @@ Tegoroczna konferencja ReactiveConf odbywała się w czeskiej Pradze. Po pozyty
 
 Moją relację z ubiegłego roku znajdziesz tutaj:
 
-https://typeofweb.com/2017/11/07/krotka-relacja-z-reactiveconf-2017/
+https://typeofweb.com/krotka-relacja-z-reactiveconf-2017/
 
 ReactiveConf to już marka. Bardzo dobra. Ale po kolei…
 
@@ -86,7 +86,7 @@ Warto dodać, że ten sponsor przywiózł ze sobą **śliwowicę** i częstował
 
 Ponownie, w czasie konferencji praktycznie cały czas pracowałem. W ten sposób łączę przyjemne z pożytecznym — zamiast włóczyć się w trakcie **nudnych prezentacji, których zawsze jest zdecydowanie więcej niż tych ciekawych**, można zająć się czymś co płaci. Poza tym, hej, cały wyjazd sponsoruje firma 😉 Jeśli dla Ciebie też brzmi to jak niezły pomysł, zajrzyj tutaj:
 
-https://typeofweb.com/2018/02/28/x-team-opis-rekrutacja-opinia/
+https://typeofweb.com/x-team-opis-rekrutacja-opinia/
 
 ## Podsumowanie
 

@@ -107,7 +107,7 @@ Jakieś 3 miesiące później dostałem pierwszą stałą pracę dla zagraniczne
 
 W miarę możliwości czytaj wszystko co Ci wpadnie w ręce. Szukaj różnych opinii na te same tematy. **Wchłaniaj wiedzę cały czas, stale się rozwijaj**. Taka branża. Możesz zacząć tutaj:
 
-https://typeofweb.com/2018/05/22/24-blogi-ktore-musi-sledzic-javascript-developer/
+https://typeofweb.com/24-blogi-ktore-musi-sledzic-javascript-developer/
 
 Rób swoje i nie bój się krytyki. Wrzucaj nawet proste projekty na GitHuba i **proś innnych o _code review_** (np. na [`#code-review` na Discordzie](https://discord.gg/RjvgJ7T)). To bardzo przyśpieszy Twój rozwój.
 
@@ -124,7 +124,7 @@ Jeździj na konferencje. To nie musi wcale dużo kosztować. Pokój w hostelu, b
 Dobrym pomysłem może być też **zapisanie się na szkolenie z jakiejś technologii, w której chcesz się specjalizować**. Skondensowana wiedza i doświadczeni trenerzy = zaoszczędzone mnóstwo czasu. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie w Type of Web</a>.
 
 Sporo dobrych porad znajdziesz też we wpisie Karoliny Kreft na temat Bootcampów:
-https://typeofweb.com/2018/03/12/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiace/
+https://typeofweb.com/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiace/
 
 ## Podsumowanie
 

@@ -21,7 +21,7 @@ series:
 seo: {}
 ---
 
-<p><a href="https://typeofweb.com/2016/07/11/typescript-czesc-1/">Poprzedni wpis na temat TypeScript</a> cieszył się niemałym zainteresowaniem i wiele osób pisało do mnie z pytaniem, kiedy pojawi się kontynuacja. I oto ona! <strong>W tym artykule nauczymy się korzystać z klas, klas abstrakcyjnych i dziedziczenia. Dodatkowo będziemy implementować interfejsy i zobaczymy czym różnią się od klas abstrakcyjnych</strong>. Zapraszam do czytania!</p>
+<p><a href="https://typeofweb.com/typescript-czesc-1/">Poprzedni wpis na temat TypeScript</a> cieszył się niemałym zainteresowaniem i wiele osób pisało do mnie z pytaniem, kiedy pojawi się kontynuacja. I oto ona! <strong>W tym artykule nauczymy się korzystać z klas, klas abstrakcyjnych i dziedziczenia. Dodatkowo będziemy implementować interfejsy i zobaczymy czym różnią się od klas abstrakcyjnych</strong>. Zapraszam do czytania!</p>
 
 <p class="important">Zakładam, że czytelnicy są zaznajomieni z JavaScriptem, a w szczególności z konceptami dodanymi w ECMAScript 2015 takimi jak <code>class</code> oraz <code>let</code> i <code>const</code>. Jeśli jednak coś jest niejasne to chętnie odpowiem na pytania w komentarzach.</p>
 

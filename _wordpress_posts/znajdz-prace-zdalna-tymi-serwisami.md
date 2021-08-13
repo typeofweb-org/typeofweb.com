@@ -29,7 +29,7 @@ Ta podstrona będzie istniała na zasadzie „żyjącej dokumentacji” — nowe
 
 Jeśli jeszcze nie znasz moich doświadczeń z pracą zdalną to zachęcam do przeczytania tego wpisu:
 
-https://typeofweb.com/2017/06/13/praca-zdalna-obalamy-mity/
+https://typeofweb.com/praca-zdalna-obalamy-mity/
 
 <h2>Serwisy z pracą zdalną</h2>
 
@@ -49,7 +49,7 @@ Toptal — bardzo popularna platforma — Pośredniczy pomiędzy programistami i
 
 Na pewno zaletą Toptala w stosunku do innych podobnych tablic ogłoszeń jest to, że <strong>Toptal gwarantuje Ci zapłatę</strong> — niezależnie od tego czy klient rzeczywiście zapłaci Toptalowi czy nie. Na pewno dla freelancerów będzie to ogromny plus. Jeśli szukasz <strong>tylko pośrednika</strong> to na pewno dobry serwis. Więcej we wpisie:
 
-https://typeofweb.com/2017/08/30/praca-zdalna-rekrutacja-do-toptal/
+https://typeofweb.com/praca-zdalna-rekrutacja-do-toptal/
 
 <h2><a href="https://pilot.co/">pilot.co</a></h2>
 

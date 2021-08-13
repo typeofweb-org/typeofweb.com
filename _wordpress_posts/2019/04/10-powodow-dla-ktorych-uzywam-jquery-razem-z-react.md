@@ -211,7 +211,7 @@ $.parseJSON(json);
 
 ## 10. Zmiana kontekstu funkcji
 
-["This" w funkcjach w JavaScripcie to skomplikowana sprawa](https://typeofweb.com/2017/11/14/this-js-kontekst-wywolania-funkcji/)! Na szczęście jQuery sprawia, że bindowanie, czyli zmiana kontekstu, staje się banalne:
+["This" w funkcjach w JavaScripcie to skomplikowana sprawa](https://typeofweb.com/this-js-kontekst-wywolania-funkcji/)! Na szczęście jQuery sprawia, że bindowanie, czyli zmiana kontekstu, staje się banalne:
 
 ### Bez jQuery:
 

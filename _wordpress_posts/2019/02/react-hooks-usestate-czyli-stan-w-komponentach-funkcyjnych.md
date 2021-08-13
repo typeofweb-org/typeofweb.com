@@ -77,7 +77,7 @@ Jak to działa pod podszewką? W telegraficznych skrócie: React wywołuje Twoj�
 
 Wróćmy do przykładu, który był implementowany w tym kursie już 2 razy:
 
-https://typeofweb.com/2018/01/24/react-js-w-przykladach-filtrowanie-statycznej-listy/
+https://typeofweb.com/react-js-w-przykladach-filtrowanie-statycznej-listy/
 
 Zamiast używać klasy, `setState` i `this.state`, użyj Hooka `useState`. Pomijam fragmenty, które się powtarzają w stosunku do starego kodu:
 

@@ -23,7 +23,7 @@ seo: {}
 
 W tym kursie korzystam z TypeScript, więc jeśli jeszcze nie znasz tego języka to zapraszam do mojego kursu TypeScript:
 
-https://typeofweb.com/2016/07/11/typescript-czesc-1/
+https://typeofweb.com/typescript-czesc-1/
 
 <h1 id="angular2rc">Angular 2 RC</h1>
 
@@ -33,7 +33,7 @@ https://typeofweb.com/2016/07/11/typescript-czesc-1/
 
 <h1 id="angular2pierwszestarcie">Angular 2: Pierwsze starcie</h1>
 
-<p>Powszechnym problemem przy pracy z AngularJS, szczególnie na początku cyklu życia tego frameworka, był brak dobrych wskazówek i powszechnych praktyk. Pisałem już o tym w innym wpisie: <a href="https://typeofweb.com/2016/05/14/struktura-aplikacji-angularjs-czesc-1/">Struktura aplikacji AngularJS (część 1 ‑ trochę historii)</a>. Zespół Angulara 2 najwyraźniej wziął sobie do serca ten problem, gdyż od samego początku istnieją <strong>oficjalne dobre praktyki</strong> pisania aplikacji opartych o ten framework. Opisane jest w nich w zasadzie wszystko, od struktury folderów, przez nazewnictwo plików aż po formowatowanie. Zasady te zostały podzielone w 10 grup i ponumerowane, dzięki czemu łatwo się do nich odwołać na przykład w trakcie <em>code review</em>. Całość do przeczytania pod <a href="https://angular.io/styleguide">angular.io/styleguide</a>.</p>
+<p>Powszechnym problemem przy pracy z AngularJS, szczególnie na początku cyklu życia tego frameworka, był brak dobrych wskazówek i powszechnych praktyk. Pisałem już o tym w innym wpisie: <a href="https://typeofweb.com/struktura-aplikacji-angularjs-czesc-1/">Struktura aplikacji AngularJS (część 1 ‑ trochę historii)</a>. Zespół Angulara 2 najwyraźniej wziął sobie do serca ten problem, gdyż od samego początku istnieją <strong>oficjalne dobre praktyki</strong> pisania aplikacji opartych o ten framework. Opisane jest w nich w zasadzie wszystko, od struktury folderów, przez nazewnictwo plików aż po formowatowanie. Zasady te zostały podzielone w 10 grup i ponumerowane, dzięki czemu łatwo się do nich odwołać na przykład w trakcie <em>code review</em>. Całość do przeczytania pod <a href="https://angular.io/styleguide">angular.io/styleguide</a>.</p>
 
 <p><strong>Można zadać sobie pytanie dlaczego by nie pójść o krok dalej i całego procesu nie zautomatyzować?</strong> Istnieją przecież narzędzia, które pomagają generować pliki i foldery w odpowiedniej strukturze, testować kod pod kątem zgodności z pewnymi ustaleniami itd. Przykładem mogą być generatory do Yeomana lub bardzo specjalistyczne narzędzie do frameworka Ember: Ember CLI. Zespół Angulara również wpadł na podobnym pomysł i to właśnie na Ember CLI bazuje analogiczny „przybornik” dla Angulara: <a href="https://cli.angular.io">Angular CLI</a>. Przy tworzeniu tej prostej aplikacji będę z niego korzystał.</p>
 
@@ -109,7 +109,7 @@ export class TodoListAppComponent {
 
 <h1 id="listazada">Lista zadań</h1>
 
-<p>Przejdźmy więc do konkretów: Lista zadań w Angular 2. Na potrzeby tego wpisu pełną implementację umieszczę w jednym komponencie. To jest prawdopodobnie coś, czego nie chcesz robić w prawdziwych aplikacjach i pisałem już o tym we wpisie <a href="https://typeofweb.com/2016/05/15/struktura-aplikacji-angularjs-czesc-2-komponenty/">Struktura aplikacji AngularJS (część 2 ‑ komponenty)</a>. Więcej o podziale na komponenty oraz o komunikacji pomiędzy nimi z użyciem Redux w Angular 2 napiszę w kolejnym wpisie.</p>
+<p>Przejdźmy więc do konkretów: Lista zadań w Angular 2. Na potrzeby tego wpisu pełną implementację umieszczę w jednym komponencie. To jest prawdopodobnie coś, czego nie chcesz robić w prawdziwych aplikacjach i pisałem już o tym we wpisie <a href="https://typeofweb.com/struktura-aplikacji-angularjs-czesc-2-komponenty/">Struktura aplikacji AngularJS (część 2 ‑ komponenty)</a>. Więcej o podziale na komponenty oraz o komunikacji pomiędzy nimi z użyciem Redux w Angular 2 napiszę w kolejnym wpisie.</p>
 
 <p>Prosta lista zadań powinna zawierać input oraz listę z zadaniami. Do tego powinna być możliwość oznaczenia każdego z zadań jako wykonane - wystarczy prosty checkbox. HTML może wyglądać w następujący sposób:</p>
 

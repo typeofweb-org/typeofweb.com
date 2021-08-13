@@ -61,7 +61,7 @@ Jeśli nie byłaś/eś nigdy na podobnej konferencji to muszę nadmienić, że c
 
 Dla porównania warto spojrzeć jak to wyglądało na Reactive Conf w Bratysławie:
 
-https://typeofweb.com/2017/11/07/krotka-relacja-z-reactiveconf-2017/
+https://typeofweb.com/krotka-relacja-z-reactiveconf-2017/
 
 **Jedzenie: 1/10**
 

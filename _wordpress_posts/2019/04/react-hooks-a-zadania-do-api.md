@@ -53,7 +53,7 @@ export class App extends React.Component {
 
 Co tu się dokładnie dzieje? Najpierw deklaruję state, następnie w `componentDidMount` wykonuję zapytanie do API, czekam na wynik i rezultat zapisuję do stanu. Ten kod pochodzi ze starszego wpisu, tam też znajdziesz więcej wyjaśnień:
 
-https://typeofweb.com/2018/02/27/komunikacja-z-api-w-react-js/
+https://typeofweb.com/komunikacja-z-api-w-react-js/
 
 Nie wygląda skomplikowanie, ale czy może być jeszcze prostsze?
 

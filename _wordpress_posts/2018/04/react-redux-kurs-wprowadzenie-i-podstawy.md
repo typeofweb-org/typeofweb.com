@@ -42,13 +42,13 @@ Redux: Oto wpis, na który wszyscy czekali! :) Nie będzie teorii. Od razu zaczn
 
 Jeśli jednak interesuje Cię teoria stojąca za Flux i Redux znajdziesz ją w innym moim wpisie:
 
-https://typeofweb.com/2016/06/10/flux-i-redux/
+https://typeofweb.com/flux-i-redux/
 
 Na pewno warto przeczytać o wzorcach projektowych stojących za Reduksem! Warto też zajrzeć do <a href="https://redux.js.org">dokumentacji Redux</a>.
 
 ## Redux w praktyce
 
-Do aplikacji z listą kontaktów (źródło tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)) dodasz Reduksa. Kontakty będą <strong>zapisywane w storze</strong>. Jeśli chcesz sobie odświeżyć wątek to zajrzyj do wpisu na temat <a href="https://typeofweb.com/2018/02/27/komunikacja-z-api-w-react-js/">łączenia Reacta z API</a>.
+Do aplikacji z listą kontaktów (źródło tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)) dodasz Reduksa. Kontakty będą <strong>zapisywane w storze</strong>. Jeśli chcesz sobie odświeżyć wątek to zajrzyj do wpisu na temat <a href="https://typeofweb.com/komunikacja-z-api-w-react-js/">łączenia Reacta z API</a>.
 
 Zacznij od zainstalowania paczek `redux` i `react-redux`:
 

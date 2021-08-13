@@ -27,7 +27,7 @@ seo: {}
 
 <h1 id="interakcjapomidzykomponentami">Interakcja pomiędzy komponentami</h1>
 
-<p>W poprzednich artykułach wspominałem o tym, że jest wiele sposobów na zrealizowanie komunikacji pomiędzy komponentami. Pokazałem również prosty przykład przekazywania danych od rodzica do dziecka przy pomocy <a href="https://typeofweb.com/2016/06/14/wlasne-komponenty-w-angular-2/">dekoratora <code>@Input</code></a>. Jednak tak minimalistyczny przypadek  rzadko zdarza się w rzeczywistości i te metody zdecydowanie nie są wystarczające do tworzenia rozbudowanych aplikacji internetowych! Na szczęście sam Angular 2 daje nam co najmniej kilka opcji, z których możemy skorzystać w celu przesyłania informacji pomiędzy komponentami. Możliwości jest wiele i każdą z nich opiszę po krótce.</p>
+<p>W poprzednich artykułach wspominałem o tym, że jest wiele sposobów na zrealizowanie komunikacji pomiędzy komponentami. Pokazałem również prosty przykład przekazywania danych od rodzica do dziecka przy pomocy <a href="https://typeofweb.com/wlasne-komponenty-w-angular-2/">dekoratora <code>@Input</code></a>. Jednak tak minimalistyczny przypadek  rzadko zdarza się w rzeczywistości i te metody zdecydowanie nie są wystarczające do tworzenia rozbudowanych aplikacji internetowych! Na szczęście sam Angular 2 daje nam co najmniej kilka opcji, z których możemy skorzystać w celu przesyłania informacji pomiędzy komponentami. Możliwości jest wiele i każdą z nich opiszę po krótce.</p>
 
 <h1 id="inputczylikomunikacjarodzicazdzieckiem"><code>@Input</code> czyli komunikacja rodzica z dzieckiem</h1>
 
@@ -193,4 +193,4 @@ export class DataService {
 
 <h1 id="podsumowanie">Podsumowanie</h1>
 
-<p>Opisałem kilka różnych sposobów komunikacji pomiędzy komponentami sugerowanych przez twórców Angular 2. <strong>Są to metody, które znajdą zastosowanie głównie w prostych przypadkach i raczej nie sprawdzą się do komunikowania się wielu komponentów</strong>. W celu zarządzania stanem całej aplikacji oraz przesyłania danych pomiędzy odległymi komponentami zastosowałbym raczej bibliotekę Redux. <a href="https://typeofweb.com/2016/06/10/flux-i-redux/">Koncept Reduksa już opisywałem</a>, a jego konkretne zastosowanie w aplikacji Angular 2 znajdzie się w kolejnym wpisie, który już jest w trakcie powstawania :)</p>
+<p>Opisałem kilka różnych sposobów komunikacji pomiędzy komponentami sugerowanych przez twórców Angular 2. <strong>Są to metody, które znajdą zastosowanie głównie w prostych przypadkach i raczej nie sprawdzą się do komunikowania się wielu komponentów</strong>. W celu zarządzania stanem całej aplikacji oraz przesyłania danych pomiędzy odległymi komponentami zastosowałbym raczej bibliotekę Redux. <a href="https://typeofweb.com/flux-i-redux/">Koncept Reduksa już opisywałem</a>, a jego konkretne zastosowanie w aplikacji Angular 2 znajdzie się w kolejnym wpisie, który już jest w trakcie powstawania :)</p>

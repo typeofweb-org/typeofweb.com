@@ -130,7 +130,7 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
 
 <strong>Aktualizacja 11.02.2019 r.</strong>: Przekreśliłem zadania powyżej. Miały one wyłącznie charakter dydaktyczny w celu poznania metody cyklu życia <code>componentWillReceiveProps</code>, ale wiele osób bardzo je sobie zapamiętało i stosowało podobny wzorzec w swoich aplikacjach. Poza tym React oznaczył tę metodę jako przestarzałą i niezalecaną. Zajrzyj do tego wpisu:
 
-https://typeofweb.com/2018/05/29/nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate/
+https://typeofweb.com/nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate/
 
 <strong>Sugerowane tutaj przeze mnie rozwiązanie było błędne</strong>. Prawidłowym rozwiązaniem problemu powyżej jest przeniesienie stanu dziecka wyżej — do rodzica (tzw. <em>lifting state up</em>). W ten sposób rodzic kontroluje stan obu inputów, a dziecko informuje go o zmianach, które chce wprowadzić. Dzięki temu unika się kilku częstych problemów: z rerenderem (który mógłby prowadzić do skasowania się wartości z inputów), z koniecznością wykrywania zmian (przez niezalecany componentWillReceiveProps), czy choćby z niejasnym przepływem danych (dane do dziecka od rodzica spływają w dół, ale tylko czasem… a dziecko nigdy nie informuje rodzica o zmianach — to niedobrze!). Oto zaktualizowana treść ćwiczenia:
 

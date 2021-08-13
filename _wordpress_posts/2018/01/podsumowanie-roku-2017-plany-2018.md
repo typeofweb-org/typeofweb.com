@@ -72,7 +72,7 @@ Mnóstwo energii, czasu, siły i nerwów poświęciłem w tym roku organizacji m
 
 W tym roku meet.js Summit organizowaliśmy razem z Wojtkiem Urbańskim, Arkiem Putko i Łukaszem Nowackim. Wszyscy się mocno przykładaliśmy do jej organizacji, ale był moment gdzie zapał spadł — wtedy naturalnie przejąłem inicjatywę i dzięki temu udało nam się wszystko dopiąć na ostatni guzik. Efekt? Świetna konferencja, wspaniali ludzie i ponadprzeciętne prezentacje!
 
-https://typeofweb.com/2017/10/04/meet-js-summit-2017-nasze-podsumowanie/
+https://typeofweb.com/meet-js-summit-2017-nasze-podsumowanie/
 
 Trudno nawet oszacować ile godzin, ile maili i ile telefonów zainwestowałem w organizację tego wydarzenia. Wystarczy chyba, że powiem, iż <strong>pierwsze kroki w kierunku zorganizowania meet.js Summit 2017 podjęliśmy prawie rok przed terminem konferencji</strong>!
 
@@ -84,9 +84,9 @@ Na pierwsze pytanie odpowiedziałem: <strong>Chcę dalej rozwijać Type of Web 
 
 Efektem była przede wszystkim <strong>całkowita zmiana wyglądu</strong> — z prostego, domyślnego szablonu z jedną kolumną i tylko treścią, przeszedłem na layout z wieloma dodatkowymi elementami (sidebar, nagłówek, gruba stopka) jednak bez utraty czytelności tekstu. Zmiany testowałem i wdrażałem przez kilka tygodni, aby ostatecznie opublikować nową wersję 5. września. Celowo przed meet.js Summit — liczyłem, że uda mi się trochę wypromować bloga w kuluarach.
 
-https://typeofweb.com/2017/09/11/czemu-porzucilem-ghost-rzecz-wordpress/
+https://typeofweb.com/czemu-porzucilem-ghost-rzecz-wordpress/
 
-Dodatkowo przy zmianie wyglądu (i silnika) miałem też na uwadze fakt, że <strong>chciałbym zaprosić inne osoby do współpracy</strong> nad blogiem. Początkowo w postaci wpisów gościnnych (jak na przykład ten od Wojtka: „<a href="https://typeofweb.com/2017/11/14/this-js-kontekst-wywolania-funkcji/">this w JS — czyli kilka słów o kontekście wywołania funkcji</a>”), ale docelowo na zasadach współpracy długofalowej. Zdecydowałem się też zintensyfikować własne pisanie i <strong>zwiększyć częstotliwość nowych postów</strong>.
+Dodatkowo przy zmianie wyglądu (i silnika) miałem też na uwadze fakt, że <strong>chciałbym zaprosić inne osoby do współpracy</strong> nad blogiem. Początkowo w postaci wpisów gościnnych (jak na przykład ten od Wojtka: „<a href="https://typeofweb.com/this-js-kontekst-wywolania-funkcji/">this w JS — czyli kilka słów o kontekście wywołania funkcji</a>”), ale docelowo na zasadach współpracy długofalowej. Zdecydowałem się też zintensyfikować własne pisanie i <strong>zwiększyć częstotliwość nowych postów</strong>.
 
 Efekty? Wzrost zaangażowania o kilkaset %. Znaczne przyśpieszenie wzrostu liczby użytkowników i lajków na Facebooku. Gdy patrzę na te liczby — serce się raduje ❤️
 

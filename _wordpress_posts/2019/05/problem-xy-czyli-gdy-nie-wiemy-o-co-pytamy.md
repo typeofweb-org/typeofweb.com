@@ -84,7 +84,7 @@ Inną przyczyną bywa [**chęć zrobienia rzeczy dobrze**][4]. Tak, nie żartuj�
 
 Ponadto, czasem osoby zadające pytania mają **wyrzuty sumienia**. Nie chcą pytać o coś tak ogólnego jak X, więc wybierają rozwiązanie Y i pytają o nie. Instynktownie **wydaje im się, że w ten sposób nie marnują tak bardzo czasu osób, które będą im pomagać**. Przychodzą z _konkretnym_ problemem i chcą _konkretnego_ rozwiązania, a nie analizy — z grzeczności, albo poczucia winy.
 
-Oczywiście, Problem XY nie dotyczy wyłącznie świata IT. Dotyczy każdego, zawodowo i prywatnie, a najbardziej dotkliwy jest prawdopodobnie dla lekarzy i terapeutów. Jak wiele osób przychodzi do lekarza z gotową diagnozą i pyta tylko o nią, zamiast opisać prawdziwy problem? Przykłady dobrze zadanych pytań znajdziesz choćby w dziale [pytania i odpowiedzi React](https://typeofweb.com/2018/03/26/odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react/).
+Oczywiście, Problem XY nie dotyczy wyłącznie świata IT. Dotyczy każdego, zawodowo i prywatnie, a najbardziej dotkliwy jest prawdopodobnie dla lekarzy i terapeutów. Jak wiele osób przychodzi do lekarza z gotową diagnozą i pyta tylko o nią, zamiast opisać prawdziwy problem? Przykłady dobrze zadanych pytań znajdziesz choćby w dziale [pytania i odpowiedzi React](https://typeofweb.com/odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react/).
 
 ## Problem narcyzmu i empatii odpowiadających
 

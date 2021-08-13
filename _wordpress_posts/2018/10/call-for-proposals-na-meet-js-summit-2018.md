@@ -32,7 +32,7 @@ meet.js Summit 2018 już za nami. Łącznie wystąpiło 11 prelegentów i preleg
 
 Na wstępnie muszę to powiedzieć: Wydarzenie było, przynajmniej z mojej perspektywy, dużym sukcesem organizacyjnym :) Brawo Poznań! Brawo my. Przy okazji możesz zechcieć poczytać jak wyglądał Summit w roku 2017:
 
-https://typeofweb.com/2017/09/17/meet-js-summit-2017-kulisami/
+https://typeofweb.com/meet-js-summit-2017-kulisami/
 
 Kilka liczb:
 

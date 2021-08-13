@@ -104,7 +104,7 @@ inneGetA.bind({a: 3})() // 3
 
 Więcej na ten temat można doczytać w tym wpisie:
 
-https://typeofweb.com/2017/11/14/this-js-kontekst-wywolania-funkcji/
+https://typeofweb.com/this-js-kontekst-wywolania-funkcji/
 
 <h3 id="thisiaddeventlistener"><code>this</code> i <code>addEventListener</code></h3>
 I teraz sedno tego akapitu. Co zrobi poniższy kod?

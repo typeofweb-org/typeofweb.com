@@ -150,7 +150,7 @@ function groupRecords(groupBy:GroupBy) {
 
 <h1 id="inferencjatypw">Inferencja typów</h1>
 
-<p>O inferencji typów wspominałem już w swoim innym wpisie na temat TypeScripta: <a href="https://typeofweb.com/2016/04/05/typescript-na-serwerze/">TypeScript z node.js?</a>. Ponownie wykorzystam przykład z tamtego wpisu:</p>
+<p>O inferencji typów wspominałem już w swoim innym wpisie na temat TypeScripta: <a href="https://typeofweb.com/typescript-na-serwerze/">TypeScript z node.js?</a>. Ponownie wykorzystam przykład z tamtego wpisu:</p>
 
 <pre><code class="language-typescript">function fn(b:boolean) {  
     if (b === true) {

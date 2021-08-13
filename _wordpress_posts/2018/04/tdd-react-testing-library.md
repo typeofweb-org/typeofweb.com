@@ -42,7 +42,7 @@ Z moich obserwacji dużo osób tworzy cały działający komponent i dopiero wte
 
 ## Dostępne rozwiązania
 
-Na nasze szczęście istnieje wiele bibliotek, które rozwiązują nam problem renderowania komponentu (np. [Enzyme](https://typeofweb.com/2018/02/09/testowanie-aplikacji-react-js-podstawy-enzyme/)), mockowania odpowiedzi z servera (np. [MockAxios](https://github.com/ctimmerm/axios-mock-adapter)), ale często mają nie do końca jasne API jak w przypadku tego pierwszego — czym do cholery różni się od siebie _Shallow_, _Mount_ i _Render_ i którego powinienem użyć?!?
+Na nasze szczęście istnieje wiele bibliotek, które rozwiązują nam problem renderowania komponentu (np. [Enzyme](https://typeofweb.com/testowanie-aplikacji-react-js-podstawy-enzyme/)), mockowania odpowiedzi z servera (np. [MockAxios](https://github.com/ctimmerm/axios-mock-adapter)), ale często mają nie do końca jasne API jak w przypadku tego pierwszego — czym do cholery różni się od siebie _Shallow_, _Mount_ i _Render_ i którego powinienem użyć?!?
 
 ## O projekcie
 
@@ -54,7 +54,7 @@ https://twitter.com/kentcdodds/status/977018512689455106
 
 ## Zaczynamy
 
-Projekt stworzymy z boilerplate [create-react-app](https://typeofweb.com/2018/01/29/tworzenie-aplikacji-react-js-dzieki-create-react-app/), [Axios](https://github.com/axios/axios) użyjemy do pobierania danych z zewnętrznego API, do uruchamiania testów [Jest](https://facebook.github.io/jest/)'a, do mockowania zewnętrznego API [MockAxios](https://github.com/ctimmerm/axios-mock-adapter), a do renderowania komponentów, triggerowania akcji i obsługi asynchronicznych metod [react-testing-library](https://github.com/kentcdodds/react-testing-library) — świetnej i ultra lekkiej biblioteki stworzonej przez cytowanego już wcześniej [_Kent C. Dodds_](https://twitter.com/kentcdodds).
+Projekt stworzymy z boilerplate [create-react-app](https://typeofweb.com/tworzenie-aplikacji-react-js-dzieki-create-react-app/), [Axios](https://github.com/axios/axios) użyjemy do pobierania danych z zewnętrznego API, do uruchamiania testów [Jest](https://facebook.github.io/jest/)'a, do mockowania zewnętrznego API [MockAxios](https://github.com/ctimmerm/axios-mock-adapter), a do renderowania komponentów, triggerowania akcji i obsługi asynchronicznych metod [react-testing-library](https://github.com/kentcdodds/react-testing-library) — świetnej i ultra lekkiej biblioteki stworzonej przez cytowanego już wcześniej [_Kent C. Dodds_](https://twitter.com/kentcdodds).
 
 Generujemy projekt z create-react-app wg. instrukcji, a następnie instalujemy dodatkowe zależności (_do stworzenia projektu możemy użyć także_ [_CodeSandbox_](https://codesandbox.io/s/new)):
 

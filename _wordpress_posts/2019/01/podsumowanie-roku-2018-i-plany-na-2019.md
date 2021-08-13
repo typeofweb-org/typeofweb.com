@@ -29,7 +29,7 @@ Niedługo wyjeżdżam na zasłużony urlop. Zanim to jednak zrobię, chciałbym 
 
 We wpisie z ubiegłego roku możesz sprawdzić jak zakończył się dla mnie rok 2017 i co planowałem :)
 
-https://typeofweb.com/2018/01/13/podsumowanie-roku-2017-plany-2018/
+https://typeofweb.com/podsumowanie-roku-2017-plany-2018/
 
 ### Rozwój bloga
 
@@ -38,8 +38,8 @@ Nadal blog pozostaje projektem niekomercyjnym sam w sobie. Jest natomiast świet
 Udało mi się zaprosić kilka osób do napisania wpisów gościnnych. Nawiązałem też współpracę z Wojtkiem Urbańskim. Koniecznie sprawdź ich materiały:
 
 - [Wojciech Urbański — Kurs Vue.js od podstaw](https://typeofweb.com/kurs/vue-js/)
-- [Karolina Kreft — Jak nie zrobimy z Ciebie programisty w dwa miesiące](https://typeofweb.com/2018/03/12/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiace/)
-- [Michał Baranowski — TDD w React.js z pomocą react-testing-library](https://typeofweb.com/2018/04/13/tdd-react-testing-library/)
+- [Karolina Kreft — Jak nie zrobimy z Ciebie programisty w dwa miesiące](https://typeofweb.com/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiace/)
+- [Michał Baranowski — TDD w React.js z pomocą react-testing-library](https://typeofweb.com/tdd-react-testing-library/)
 
 Ja sam stworzyłem kilkadziesiąt odcinków [kursu React.js i Redux od podstaw](https://typeofweb.com/kurs/react-js/). Kurs ten jest już niemal kompletny. Pozostaje mi tylko dopisać kilka części na temat Routera oraz omówić nowości, które pojawiły się w Reakcie przez ten czas!
 
@@ -51,20 +51,20 @@ Było ich kilka! Ale chyba najważniejszy projekt poboczny to **[fefaq.pl](https
 
 Udało mi się zaliczyć kilka konferencji:
 
-- [React.Amsterdam](https://typeofweb.com/2018/04/20/react-amsterdam-najgorsza-konferencja/)
+- [React.Amsterdam](https://typeofweb.com/react-amsterdam-najgorsza-konferencja/)
 - Monadic Party
-- [ReactiveConf](https://typeofweb.com/2018/11/15/bylem-na-reactiveconf-2018/)
+- [ReactiveConf](https://typeofweb.com/bylem-na-reactiveconf-2018/)
 - Frontend-con.io
 
 Wystąpiłem też z prezentacjami na meet.js Szczecin i meet.js Gdańsk :)
 
-No i przede wszystkim byłem jednym z organizatorów meet.js Summit 2018 w Poznaniu — największej konferencji w historii meet.js :) Wydarzenie było ogromnym sukcesem, a dochód z biletów szedł na cele charytatywne. **Łącznie udało nam się przekazać Stowarzyszeniu Wiosna aż 45269.03zł!** Co nieco o konferencji przeczytasz tutaj: [Call for Proposals na meet.js Summit 2018](https://typeofweb.com/2018/10/23/call-for-proposals-na-meet-js-summit-2018/).
+No i przede wszystkim byłem jednym z organizatorów meet.js Summit 2018 w Poznaniu — największej konferencji w historii meet.js :) Wydarzenie było ogromnym sukcesem, a dochód z biletów szedł na cele charytatywne. **Łącznie udało nam się przekazać Stowarzyszeniu Wiosna aż 45269.03zł!** Co nieco o konferencji przeczytasz tutaj: [Call for Proposals na meet.js Summit 2018](https://typeofweb.com/call-for-proposals-na-meet-js-summit-2018/).
 
 ### Praca
 
 Nadal współpracuję z X-Teamem :) Więcej o moich wrażeniach możesz przeczytać tutaj:
 
-https://typeofweb.com/2018/02/28/x-team-opis-rekrutacja-opinia/
+https://typeofweb.com/x-team-opis-rekrutacja-opinia/
 
 Dodatkowo, od kilku miesięcy po godzinach prowadzę jeden z projektów wewnętrznych — zostałem leadem zespołu :)
 

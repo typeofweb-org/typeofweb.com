@@ -151,7 +151,7 @@ Tutaj zwracamy <code>promiseWithThree</code>, a wtedy <strong>zewnętrzny <code>
 
 Dlatego właśnie często mówi się, że <code>resolve</code> czy <code>then</code> to jednocześnie <code>map</code> i <code>flatMap</code> w nomenklaturze Haskellowej. Aby trochę lepiej poznać te pojęcia polecam mój inny wpis:
 
-https://typeofweb.com/2017/05/12/map-i-reduce-w-js/
+https://typeofweb.com/map-i-reduce-w-js/
 
 &nbsp;
 

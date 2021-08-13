@@ -34,7 +34,7 @@ Od wersji React 16.3 funkcje `componentWillMount`, `componentWillReceiveProps` i
 
 Informacje o pozostałych _lifecycle methods_ w React znajdziesz tutaj:
 
-https://typeofweb.com/2018/01/18/metody-cyklu-zycia-komponentu-react-js/
+https://typeofweb.com/metody-cyklu-zycia-komponentu-react-js/
 
 ## Co złego w starych metodach?
 

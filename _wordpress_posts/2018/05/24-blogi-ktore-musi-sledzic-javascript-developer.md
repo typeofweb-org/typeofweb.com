@@ -34,7 +34,7 @@ Wciąż pytacie jakie blogi polecam śledzić. A ja nigdy nie pamiętam! No, ale
 
 Na drugi ogień idą blogi, po grupach na Facebooku. Dla przypomnienia:
 
-https://typeofweb.com/2018/03/29/grupy-facebook-front-end-developer/
+https://typeofweb.com/grupy-facebook-front-end-developer/
 
 Warto przeczytać oba wpisy i znaleźć tam coś dla siebie. **A skąd na to wszystko czas?** Naprawdę nie wiem ;)
 
