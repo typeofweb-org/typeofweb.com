@@ -1,3 +1,5 @@
+// @ts-expect-error
+import Cloudinary from 'netlify-cms-media-library-cloudinary';
 import { useEffect, useState, useRef } from 'react';
 
 import type { PreviewTemplateComponentProps } from 'netlify-cms-core';
@@ -27,6 +29,7 @@ export function AdminNetlify() {
       return;
     }
     const { GithubSlugger, CMS } = deps.current;
+    CMS.registerMediaLibrary(Cloudinary);
     CMS.registerPreviewTemplate('legacy_posts', PreviewComponent);
     CMS.registerPreviewTemplate('posts', PreviewComponent);
 

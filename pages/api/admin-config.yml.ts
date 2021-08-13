@@ -49,6 +49,14 @@ const config = async (): Promise<NetlifyConfigSchema> => {
     summary: '{{title}} ({{commit_author}} @ {{commit_date}})',
     media_folder: 'public/media/',
     public_folder: '/media/',
+    // @todo: How to make it public?
+    // media_library: {
+    //   name: 'cloudinary',
+    //   config: {
+    //     cloud_name: 'type-of-web',
+    //     api_key: '936784498493233',
+    //   },
+    // },
     collections: [await posts(), legacyWordpressCollection(), pages()],
   };
 };
