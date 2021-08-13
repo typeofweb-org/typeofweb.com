@@ -14,6 +14,7 @@ export const categoryMappings = {
   'dobry-kod+inicjatywy': 'dobry-kod',
   'dobry-kod+opinie': 'dobry-kod',
   javascript: 'javascript',
+  typescript: 'typescript',
   'front-end': 'javascript',
   'praca-zdalna': 'praca-zdalna',
   inicjatywy: 'opinie',
@@ -27,6 +28,7 @@ export const categoryMappings = {
 
 export const allCategories = [
   { slug: 'javascript', name: 'JavaScript' },
+  { slug: 'typescript', name: 'TypeScript' },
   { slug: 'opinie', name: 'Opinie' },
   { slug: 'dobry-kod', name: 'Dobry Kod' },
   { slug: 'praca-zdalna', name: 'Praca Zdalna' },

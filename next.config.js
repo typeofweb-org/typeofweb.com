@@ -56,7 +56,7 @@ const config = withBundleAnalyzer(
 );
 
 config.images = {
-  domains: ['typeofweb.com', 'secure.gravatar.com'],
+  domains: ['v2.typeofweb.com', 'typeofweb.com', 'secure.gravatar.com'],
   deviceSizes: [320, 375, 640, 750, 768, 1024, 1280, 1920],
   imageSizes: [320, 640, 768, 1200, 1536],
 };
@@ -76,6 +76,10 @@ config.rewrites = () => {
     { source: '/feed', destination: '/feed.xml' },
     { source: '/config.yml', destination: '/api/admin-config.yml' },
   ]);
+};
+
+config.redirects = () => {
+  return Promise.resolve(require('./redirects.js').map((r) => ({ ...r, permanent: false })));
 };
 
 module.exports = config;

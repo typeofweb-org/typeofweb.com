@@ -14,8 +14,8 @@ thumbnail:
   width: 1200
   height: 630
 categories:
-  - slug: javascript
-    name: JavaScript
+  - slug: typescript
+    name: TypeScript
 seo: {}
 ---
 

@@ -14,12 +14,8 @@ thumbnail:
   width: 1200
   height: 630
 categories:
-  - slug: javascript
-    name: JavaScript
-  - slug: front-end
-    name: Front-end
-  - slug: back-end
-    name: Back-end
+  - slug: typescript
+    name: TypeScript
 seo:
   focusKeywords:
     - conditional types
