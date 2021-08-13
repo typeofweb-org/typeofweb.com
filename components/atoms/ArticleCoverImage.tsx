@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
+import { cloudinaryLoader } from '../../utils/imageLoader';
+
 import type { IGetPlaiceholderReturn } from 'plaiceholder';
 
 export type CoverPlaiceholder = {
@@ -29,13 +31,13 @@ export const ArticleCoverImage = memo<{
       }`}
     >
       <Image
+        loader={cloudinaryLoader}
         src={src}
         itemProp="image"
         itemScope
         itemType="http://schema.org/ImageObject"
         className="duration-[10s] motion-safe:hover:scale-110 bg-gray-200 transition-transform ease-in hover:ease-out"
         alt=""
-        quality="100"
         sizes="320px, (min-width: 400px) 768px"
         {...layoutProps}
         placeholder="blur"

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Fragment, memo } from 'react';
 
 import { getCategoryLink } from '../../utils/categories';
+import { cloudinaryLoader } from '../../utils/imageLoader';
 import { getSeriesLink } from '../../utils/series';
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 
@@ -66,12 +67,14 @@ export const ArticleMeta = memo<{
                 style={{ zIndex: authors.length - idx }}
               >
                 <Image
+                  loader={cloudinaryLoader}
                   src={author.avatarUrl + (isSmall ? `?s=${S * 2}` : `?s=${L * 2}`)}
                   width={isSmall ? S : L}
                   height={isSmall ? S : L}
                   layout="fixed"
                   alt={`Zdjęcie ${author.displayName}`}
                   className={`rounded-full`}
+                  unoptimized
                 />
               </span>
             ))}
