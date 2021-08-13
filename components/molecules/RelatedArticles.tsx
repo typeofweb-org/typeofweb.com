@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useCallback, memo } from 'react';
 
 import { fetcher, useFetch } from '../../hooks/useFetch';
-import { cloudinaryLoader } from '../../utils/imageLoader';
+import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { getUrlForPermalink } from '../../utils/permalinks';
 
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
@@ -42,7 +42,7 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
                   <div className="relative w-full h-32 bg-gradient-to-br from-blue-100 to-gray-200">
                     {p.frontmatter.cover && (
                       <Image
-                        loader={cloudinaryLoader}
+                        loader={typeofwebImageLoader}
                         {...p.frontmatter.cover.img}
                         className="duration-[5s] motion-safe:group-hover:scale-110 bg-gray-200 transition-transform ease-in group-hover:ease-out"
                         layout="fill"

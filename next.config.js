@@ -65,12 +65,18 @@ config.images = {
 config.excludeDefaultMomentLocales = true;
 config.experimental = config.experimental || {};
 config.optimizeFonts = true;
+config.webpack5 = true;
+config.httpAgentOptions = { keepAlive: true };
+config.reactStrictMode = true;
+config.compress = true;
+config.productionBrowserSourceMaps = true;
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
 config.experimental.workerThreads = true;
 config.experimental.scrollRestoration = true;
-config.reactStrictMode = true;
-config.compress = true;
+config.experimental.esmExternals = true;
+config.experimental.gzipSize = true;
+// config.experimental.concurrentFeatures = true;
 
 config.rewrites = () => {
   return Promise.resolve([

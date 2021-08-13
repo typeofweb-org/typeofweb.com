@@ -24,7 +24,7 @@ const config = async (): Promise<NetlifyConfigSchema> => {
     locale: 'pl',
     backend: {
       name: 'github',
-      repo: 'typeofweb/design-tailwind',
+      repo: 'typeofweb/typeofweb.com',
       branch: 'main',
       base_url: host,
       site_url: host,

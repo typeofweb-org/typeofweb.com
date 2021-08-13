@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
-import { cloudinaryLoader } from '../../utils/imageLoader';
+import { typeofwebImageLoader } from '../../utils/imageLoader';
 
 import type { IGetPlaiceholderReturn } from 'plaiceholder';
 
@@ -31,7 +31,7 @@ export const ArticleCoverImage = memo<{
       }`}
     >
       <Image
-        loader={cloudinaryLoader}
+        loader={typeofwebImageLoader}
         src={src}
         itemProp="image"
         itemScope
