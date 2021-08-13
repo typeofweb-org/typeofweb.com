@@ -4,45 +4,50 @@ import TwitterIcon from '../../images/social/twitter.svg';
 
 export const ShareWidget = () => {
   return (
-    <ul className="fixed z-30 flex flex-col gap-8 px-3 py-4 w-12 text-pink-500 bg-gray-100 rounded-full shadow-md 2xl:-translate-x-24 animate-appear sm:hidden md:flex md:-translate-x-8 lg:px-4 lg:py-8 lg:w-16 lg:-translate-x-6 xl:-translate-x-20">
-      <li>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(window.location.href)}`}
-          className="block w-full hover:text-green-500 transition-colors"
-          title="Udostępnij na Facebooku"
-          aria-label="Udostępnij na Facebooku"
-        >
-          <FacebookIcon className="fill-current" />
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://twitter.com/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(
-            document.title,
-          )}&hashtags=typeofweb`}
-          className="block w-full hover:text-green-500 transition-colors"
-          title="Udostępnij na Twitterze"
-          aria-label="Udostępnij na Twitterze"
-        >
-          <TwitterIcon className="fill-current" />
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`}
-          className="block w-full hover:text-green-500 transition-colors"
-          title="Udostępnij na Linkedinie"
-          aria-label="Udostępnij na Linkedinie"
-        >
-          <LinkedinIcon className="fill-current" />
-        </a>
-      </li>
-    </ul>
+    <div className="fixed z-30 left-0 py-3 w-8 bg-gray-100 rounded-2xl rounded-bl-none rounded-tl-none shadow-md animate-appear lg:py-4 lg:w-11 xl:left-auto xl:py-4 xl:w-12 xl:rounded-3xl xl:-translate-x-full">
+      <small className="block text-center text-gray-900 text-xs -translate-y-1/4 lg:text-sm" aria-hidden>
+        Share
+      </small>
+      <ul className="flex flex-col gap-8 pl-1 pr-1.5 text-pink-500 lg:pl-2 lg:pr-3 xl:pl-3 xl:pr-3">
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+            className="block w-full hover:text-green-500 transition-colors"
+            title="Udostępnij na Facebooku"
+            aria-label="Udostępnij na Facebooku"
+          >
+            <FacebookIcon className="fill-current" />
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://twitter.com/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(
+              document.title,
+            )}&hashtags=typeofweb`}
+            className="block w-full hover:text-green-500 transition-colors"
+            title="Udostępnij na Twitterze"
+            aria-label="Udostępnij na Twitterze"
+          >
+            <TwitterIcon className="fill-current" />
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`}
+            className="block w-full hover:text-green-500 transition-colors"
+            title="Udostępnij na Linkedinie"
+            aria-label="Udostępnij na Linkedinie"
+          >
+            <LinkedinIcon className="fill-current" />
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };

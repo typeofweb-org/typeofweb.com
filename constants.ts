@@ -6,3 +6,11 @@ export const pageSize = 10 as const;
 export const siteName = `Type of Web`;
 export const shortDescription = `Blog o programowaniu`;
 export const defaultDescription = `Blog o programowaniu. Dla front-end i back-end developerów. Trochę o urokach pracy zdalnej, ale przede wszystkim o: JavaScript, React, Vue, Angular, node.js, TypeScript, HapiJS…`;
+
+export const defaultCover = {
+  img: {
+    width: 1200,
+    height: 628,
+    src: `${host}/typeofweb-facebook-image-sharer.png`,
+  },
+};

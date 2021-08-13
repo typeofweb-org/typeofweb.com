@@ -85,6 +85,7 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
         description={frontmatter.seo?.metadesc || excerpt}
         author={frontmatter.authors[0]?.facebook}
         series={frontmatter.series}
+        cover={frontmatter.cover}
       />
       <SingleArticle
         ref={setRunningHeader}
