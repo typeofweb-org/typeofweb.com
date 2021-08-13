@@ -70,20 +70,58 @@ config.httpAgentOptions = { keepAlive: true };
 config.reactStrictMode = true;
 config.compress = true;
 config.productionBrowserSourceMaps = true;
+config.generateEtags = true;
+config.poweredByHeader = false;
+
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
 config.experimental.workerThreads = true;
 config.experimental.scrollRestoration = true;
 config.experimental.esmExternals = true;
 config.experimental.gzipSize = true;
+// config.experimental.swcMinify = true;
+// config.experimental.swcLoader = true;
 // config.experimental.concurrentFeatures = true;
 
-config.rewrites = () => {
+(config.headers = () => {
   return Promise.resolve([
-    { source: '/feed', destination: '/feed.xml' },
-    { source: '/config.yml', destination: '/api/admin-config.yml' },
+    {
+      source: '/(.*)',
+      headers: [
+        {
+          key: 'X-DNS-Prefetch-Control',
+          value: 'on',
+        },
+        {
+          key: 'X-XSS-Protection',
+          value: '1; mode=block',
+        },
+        {
+          key: 'X-Frame-Options',
+          value: 'SAMEORIGIN',
+        },
+        {
+          key: 'X-Content-Type-Options',
+          value: 'nosniff',
+        },
+        {
+          key: 'Permissions-Policy',
+          value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+        },
+        {
+          key: 'Referrer-Policy',
+          value: 'strict-origin-when-cross-origin',
+        },
+      ],
+    },
   ]);
-};
+}),
+  (config.rewrites = () => {
+    return Promise.resolve([
+      { source: '/feed', destination: '/feed.xml' },
+      { source: '/config.yml', destination: '/api/admin-config.yml' },
+    ]);
+  });
 
 config.redirects = () => {
   return Promise.resolve(require('./redirects.js').map((r) => ({ ...r, permanent: false })));
