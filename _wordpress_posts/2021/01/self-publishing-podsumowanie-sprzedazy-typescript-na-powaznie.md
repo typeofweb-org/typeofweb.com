@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2020/12/typescript_na_powaznie_sprzedaz.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/typescript_na_powaznie_sprzedaz.png
   width: 1200
   height: 630
 categories:
@@ -38,7 +38,7 @@ Jakiś czas temu na moim [instagramie](https://www.instagram.com/michal_typeofwe
 
 Zacznijmy może od początku. W tym celu musimy się cofnąć aż do sierpnia, gdyż to właśnie wtedy otworzyłem przedsprzedaż w moim sklepie. Było to dokładnie 19.08.2020. Ceny wtedy były niskie specjalnie dla osób, które chciały mi zaufać i kupić „kota w worku”: za książkę trzeba było zapłacić tylko 59,99zł, a wiele osób korzystało też jeszcze z kodów rabatowych dostępnych np. w moim newsletterze.
 
-<p style="text-align: center;"><a href="https://sklep.typeofweb.com/" class="aligncenter"><img src="https://typeofweb.com/wp-content/uploads/2020/04/Book-Cover-Mockup-2-300x227.jpg" alt="Okładki książki „TypeScript na poważnie” w wersjach drukowanej, Kindle i iPad w self-publishing" width="300" height="227" class="aligncenter size-medium wp-image-2501" /></a></p>
+<p style="text-align: center;"><a href="https://sklep.typeofweb.com/" class="aligncenter"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/04/Book-Cover-Mockup-2-300x227.jpg" alt="Okładki książki „TypeScript na poważnie” w wersjach drukowanej, Kindle i iPad w self-publishing" width="300" height="227" class="aligncenter size-medium wp-image-2501" /></a></p>
 
 ## Fakap
 
@@ -47,7 +47,7 @@ Nie obyło się bez **fakapów** – standardowo – uroki self-publishing. Pier
 Bug leżał gdzieś w czeluściach modyfikacji, które wprowadziłem do WooCommerce. Nie miałem pojęcia nawet gdzie zacząć szukać, więc zrobiłem to, co każdy porządny programista zrobiłby na moim miejscu: **zahardkodowałem ceny produktów w kodzie** 😅
 
 <figure id="attachment_2624" align="aligncenter" width="639">
-  <a href="https://typeofweb.com/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-20.05.46.png"><img src="https://typeofweb.com/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-20.05.46-889x1024.png" alt="" width="639" height="736" class="size-large wp-image-2624" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-20.05.46.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-20.05.46-889x1024.png" alt="" width="639" height="736" class="size-large wp-image-2624" /></a>
   <figcaption>
     Zahardkowane ceny produktów w sklepie. Tak, używam jasnego motywu w edytorze.
   </figcaption>
@@ -61,7 +61,7 @@ Przedsprzedaż książki [„TypeScript na poważnie”](https://typescriptnapow
 
 Jak się można spodziewać, największe obroty przypadły na **ostatni dzień przedsprzedaży**. To raczej standard i absolutnie mnie nie dziwi, gdyż sam często też zwlekam z zakupami do ostatniej chwili.
 
-<a href="https://typeofweb.com/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-12.44.46.png"><img src="https://typeofweb.com/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-12.44.46-1024x258.png" alt="Wykres przedsprzedaży TypeScript na poważnie w self-publishing" width="639" height="161" class="aligncenter size-large wp-image-2625" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-12.44.46.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-12.44.46-1024x258.png" alt="Wykres przedsprzedaży TypeScript na poważnie w self-publishing" width="639" height="161" class="aligncenter size-large wp-image-2625" /></a>
 
 ## Zasadność przedsprzedaży a self-publishing
 
@@ -73,7 +73,7 @@ Książka do sprzedaży wróciła dopiero w listopadzie tuż przed Black Friday.
 
 Dziesiątego grudnia był też Dzień Darmowej Dostawy, w którym wziąłem udział. Cena książki była taka sama, ale wysyłka była za darmo. W okolicach tych dwóch promocji widoczne jest znacznie większe zainteresowanie książką. Od Black Friday do dzisiaj klienci złożyli **496 zamówień**.
 
-<a href="https://typeofweb.com/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-19.02.16.png"><img src="https://typeofweb.com/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-19.02.16-1024x269.png" alt="" width="639" height="168" class="aligncenter size-large wp-image-2626" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-19.02.16.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/Screenshot-2020-12-31-at-19.02.16-1024x269.png" alt="" width="639" height="168" class="aligncenter size-large wp-image-2626" /></a>
 
 ## Dochody w self-publishing
 

@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2021/01/typescript-infer-conditional-types.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2021/01/typescript-infer-conditional-types.png
   width: 1200
   height: 630
 categories:

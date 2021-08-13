@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/12/black-and-white-blur-book-164821.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/black-and-white-blur-book-164821.jpg
   width: 3887
   height: 2186
 categories:

@@ -43,7 +43,7 @@ const jsonLd = {
         '@type': 'ImageObject',
         '@id': 'https://typeofweb.com/#logo',
         inLanguage: 'pl-PL',
-        url: 'https://typeofweb.com/wp-content/uploads/2018/12/typeofweb-facebook-image-sharer.png',
+        url: '/wp-content/uploads/2018/12/typeofweb-facebook-image-sharer.png',
         width: 1200,
         height: 627,
         caption: 'Type of Web',

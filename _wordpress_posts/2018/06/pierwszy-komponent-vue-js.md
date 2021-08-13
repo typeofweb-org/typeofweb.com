@@ -9,7 +9,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/04/vue-js-puzzle.jpg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/vue-js-puzzle.jpg
   width: 5988
   height: 4000
 categories:

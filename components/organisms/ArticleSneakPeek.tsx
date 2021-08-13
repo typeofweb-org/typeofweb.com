@@ -57,7 +57,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
         </div>
         <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
           <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-            <meta itemProp="url" content="https://typeofweb.com/wp-content/uploads/2020/04/logo_kwadrat11.png" />
+            <meta itemProp="url" content="/wp-content/uploads/2020/04/logo_kwadrat11.png" />
           </span>
           <meta itemProp="name" content="Type of Web" />
         </span>

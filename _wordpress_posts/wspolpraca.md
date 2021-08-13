@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: page
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2019/09/Oferta-blog.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/09/Oferta-blog.png
   width: 960
   height: 540
 categories: []
@@ -31,7 +31,7 @@ Na co dzień buduję aplikacje internetowe (Full-Stack JavaScript). Współpracu
 
 Prowadzę <strong>szkolenia autorskie</strong> z zakresu <strong>czytelności kodu, pisania testów jednostkowych</strong> (TDD/BDD) i <em>Code Kata</em>, a także <strong>JavaScript, Node.js, TypeScript, React i HapiJS</strong>. Więcej informacji na temat szkoleń znajdziesz na stronie [https://typeofweb.com/szkolenia](typeofweb.com/szkolenia).
 
-## Inicjatywy społeczne <a href="https://typeofweb.com/wp-content/uploads/2018/03/21686839_1666666120073907_3679910495411732745_o.jpg"><img src="https://typeofweb.com/wp-content/uploads/2018/03/21686839_1666666120073907_3679910495411732745_o-200x300.jpg" alt="" width="200" height="300" class="alignright size-medium wp-image-1211" /></a>
+## Inicjatywy społeczne <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/03/21686839_1666666120073907_3679910495411732745_o.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/03/21686839_1666666120073907_3679910495411732745_o-200x300.jpg" alt="" width="200" height="300" class="alignright size-medium wp-image-1211" /></a>
 
 <p style="hyphens: none; -ms-hyphens: none; -moz-hyphens: none; word-break: normal; -webkit-hyphens: none; word-wrap: normal;">Jedną z moich ambicji jest <strong>pomóc innym w nauce programowania</strong>. Dlatego też, współorganizowałem konferencje <a href="https://typeofweb.com/call-for-proposals-na-meet-js-summit-2018/">meet.js Summit 2018</a>, <a href="https://typeofweb.com/meet-js-summit-2017-kulisami/">meet.js Summit 2017</a> i <a href="http://summit.meetjs.pl/2013/">meet.js Summit 2013</a>. Regularnie prowadzę też darmowe meetupy <a href="https://facebook.com/meetjspl">meet.js Gdańsk</a>. W 2016 roku w Warszawie odebrałem nagrodę <em>Curly Braces</em> dla meet.js Gdańsk za <strong>najlepiej zorganizowane spotkania</strong> w Polsce.</p>
 

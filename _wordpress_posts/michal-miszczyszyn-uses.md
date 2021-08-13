@@ -29,7 +29,7 @@ Całkiem często dostaję pytania o to, czego używam, jak pracuję i na czym. J
 - Używam [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) z motywem "af-magic" i wtyczkami `osx gitfast npm nvm history-substring-search`
 - Praktycznie wszędzie, gdzie to możliwe, do kodu ustawiłem font [Fira Code](https://github.com/tonsky/FiraCode) z włączonymi ligaturami. Co to takiego? Połączenie niektórych znaków wygląda u mnie lepiej, np. <code style="font-variant-ligatures: none">=></code> albo <code style="font-variant-ligatures: none">===</code> może wyglądać tak:
 
-<a href="https://typeofweb.com/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56.png"><img src="https://typeofweb.com/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56-300x115.png" alt="" width="300" height="115" class="aligncenter size-medium wp-image-2359" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56-300x115.png" alt="" width="300" height="115" class="aligncenter size-medium wp-image-2359" /></a>
 
 ## Inne aplikacje
 
@@ -84,7 +84,7 @@ Every day I get these questions: What computer do you use? Which editor? What pl
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) with "af-magic" theme and following plugins: `osx gitfast npm nvm history-substring-search`
 - I use the [Fira Code](https://github.com/tonsky/FiraCode) font with ligatures virtually everywhere. What are ligatures? They make combinations of certain characters look better eg. <code style="font-variant-ligatures: none">=></code> or <code style="font-variant-ligatures: none">===</code> looks like this:
 
-<a href="https://typeofweb.com/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56.png"><img src="https://typeofweb.com/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56-300x115.png" alt="" width="300" height="115" class="aligncenter size-medium wp-image-2359" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/01/Screenshot-2020-01-14-at-17.08.56-300x115.png" alt="" width="300" height="115" class="aligncenter size-medium wp-image-2359" /></a>
 
 ## Other apps
 

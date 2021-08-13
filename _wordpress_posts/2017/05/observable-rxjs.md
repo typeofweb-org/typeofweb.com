@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2017/05/pexels-photo-237258.jpeg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/05/pexels-photo-237258.jpeg
   width: 887
   height: 400
 categories:
@@ -24,7 +24,7 @@ To nie będzie wpis na temat teorii reaktywnego programowania funkcyjnego. Nie j
 <a href="http://codepen.io/mmiszy/pen/KmQyJL/">Zobacz Codepen Observables 1</a>.
 </CodepenWidget>
 
-<img src="/content/images/2017/05/--51.png" alt="WOW" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/05/--51.png" alt="WOW" />
 
 Wow, nasze pierwsze obserwable :) Szkoda tylko, że na razie nie widać absolutnie żadnych zalet w stosunku do czystego JS. A skoro nie widać różnicy… i tak dalej. Dodajmy więc kolejne wymagania do naszego projektu: tylko co trzecie kliknięcie ma zmieniać wyświetlaną liczbę.
 
@@ -108,7 +108,7 @@ Super! ;) Jednak występuje tutaj pewien problem: Wielokrotne kliknięcie na prz
 
 Rozwiązanie go przy pomocy czystego JS nie jest takie trywialne. Musielibyśmy przechowywać ostatnio wykonane żądanie, a od poprzednich się odsubskrybować. Do tego przydałoby się poprzednie żądania anulować… tu przydaje się kolejny operator z rxjs: <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-switchMap"><code>switchMap</code></a>. Dzięki niemu <strong>nie tylko automatycznie zostanie wyrenderowany tylko ostatnio pobrany zestaw danych, ale także poprzednie żądania będą anulowane</strong>:
 
-<img src="/content/images/2017/05/Screenshot-2017-05-11-00.41.12.png" alt="canceled http request" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/05/Screenshot-2017-05-11-00.41.12.png" alt="canceled http request" />
 
 <CodepenWidget height="265" themeId="0" slugHash="bWvbGd" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Observables 5">
 <a href="http://codepen.io/mmiszy/pen/bWvbGd/">Zobacz Codepen Observables 5</a>.

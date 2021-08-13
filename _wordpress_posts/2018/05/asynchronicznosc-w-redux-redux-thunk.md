@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/04/redux-thunk.jpeg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/redux-thunk.jpeg
   width: 1280
   height: 579
 categories:

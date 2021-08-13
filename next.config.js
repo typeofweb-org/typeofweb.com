@@ -83,7 +83,7 @@ config.experimental.gzipSize = true;
 // config.experimental.swcLoader = true;
 // config.experimental.concurrentFeatures = true;
 
-(config.headers = () => {
+config.headers = () => {
   return Promise.resolve([
     {
       source: '/(.*)',
@@ -115,13 +115,22 @@ config.experimental.gzipSize = true;
       ],
     },
   ]);
-}),
-  (config.rewrites = () => {
-    return Promise.resolve([
-      { source: '/feed', destination: '/feed.xml' },
-      { source: '/config.yml', destination: '/api/admin-config.yml' },
-    ]);
-  });
+};
+
+config.rewrites = () => {
+  return Promise.resolve([
+    { source: '/feed', destination: '/feed.xml' },
+    { source: '/config.yml', destination: '/api/admin-config.yml' },
+    {
+      source: '/wp-content/uploads/:slug(.+)',
+      destination: 'https://res.cloudinary.com/type-of-web/wp-content/uploads/:slug',
+    },
+    {
+      source: '/content/images/:slug(.+)',
+      destination: 'https://res.cloudinary.com/type-of-web/content/images/:slug',
+    },
+  ]);
+};
 
 config.redirects = () => {
   return Promise.resolve(require('./redirects.js').map((r) => ({ ...r, permanent: false })));

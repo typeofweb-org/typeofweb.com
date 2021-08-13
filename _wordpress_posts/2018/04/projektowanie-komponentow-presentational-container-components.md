@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/04/presentational-container-components2.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/presentational-container-components2.jpg
   width: 1280
   height: 853
 categories:

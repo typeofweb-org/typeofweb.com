@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2021/04/typeofweb_youtube.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2021/04/typeofweb_youtube.png
   width: 1200
   height: 630
 categories:

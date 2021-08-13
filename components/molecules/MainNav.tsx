@@ -4,21 +4,29 @@ import { useCallback, memo } from 'react';
 
 import { useUIState } from '../../hooks/useUiState';
 import ReactIcon from '../../images/react-icon.svg';
+import JsIcon from '../../images/social/js.svg';
+import TsIcon from '../../images/social/ts.svg';
 import { allCategories } from '../../utils/categories';
 import { getUrlForPermalink } from '../../utils/permalinks';
 
 import type { ReactNode } from 'react';
 
+const iconClasses = 'mr-1.5 w-6 h-6 lg:hidden xl:inline';
+const iconForItem: Record<string, () => JSX.Element> = {
+  'react-js': () => (
+    <ReactIcon
+      className={`${iconClasses} fill-current text-[color:#61DAFB] transform-gpu rotate-0 group-hover:rotate-180 transition-transform`}
+    />
+  ),
+  typescript: () => <TsIcon className={`${iconClasses} text-[color:#007acc]`} />,
+  javascript: () => <JsIcon className={`${iconClasses} w-7 h-7 bg-[color:#f0db4f] text-white`} />,
+};
+
 const navItems: readonly { readonly slug: string; readonly label: ReactNode; readonly className?: string }[] = [
   ...allCategories.map((c) => ({ slug: c.slug, label: c.name })),
   {
     slug: 'react-js',
-    label: (
-      <>
-        <ReactIcon className="text-[color:#61DAFB] mr-1 w-6 h-6 fill-current transform-gpu rotate-0 group-hover:rotate-180 transition-transform" />{' '}
-        Kurs React.js
-      </>
-    ),
+    label: 'Kurs React',
   },
   {
     slug: 'wspolpraca',
@@ -31,7 +39,9 @@ export const MainNav = memo(() => {
   const { uiState, setUIState } = useUIState();
   const router = useRouter();
   const permalink = router.query['permalink'] || router.query['seriesSlug'];
-  const closeMenu = useCallback(() => setUIState((state) => ({ ...state, isMenuOpen: false })), [setUIState]);
+  const closeMenu = useCallback(() => {
+    setUIState((state) => ({ ...state, isMenuOpen: false }));
+  }, [setUIState]);
 
   return (
     <nav
@@ -49,13 +59,14 @@ export const MainNav = memo(() => {
               <Link href={getUrlForPermalink(item.slug)} scroll={true}>
                 <a
                   onClick={closeMenu}
-                  className={`group inline-flex items-center transition-colors text-3xl lg:text-base whitespace-nowrap ${
+                  className={`group inline-flex items-center border-b-2 transition-colors text-3xl lg:text-base whitespace-nowrap ${
                     isActive
-                      ? 'text-green-500 font-semibold border-b-2 border-green-500 hover:border-green-700 hover:text-green-700'
-                      : 'text-gray-800 hover:text-green-500 border-b-2 border-transparent hover:border-green-500'
+                      ? 'text-green-500 font-semibold  border-green-500 hover:border-green-700 hover:text-green-700'
+                      : 'text-gray-800 hover:text-green-500 border-transparent hover:border-green-500'
                   }`}
                   aria-current={isActive}
                 >
+                  {iconForItem[item.slug]?.()}
                   {item.label}
                 </a>
               </Link>

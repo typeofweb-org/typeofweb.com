@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2017/06/tumblr_oke7b6hmHq1qz4jlco1_1280-2.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/06/tumblr_oke7b6hmHq1qz4jlco1_1280-2.jpg
   width: 1280
   height: 745
 categories:
@@ -27,7 +27,7 @@ seo:
 Od dłuższego czasu pracuję zdalnie. W poprzedniej firmie miałem biuro, do którego nie musiałem przychodzić, więc w praktyce sporo pracowałem z domu. Od ponad roku pracuję już wyłącznie zdalnie. Jakie są moje dotychczasowe doświadczenia związane z pracą zdalną? Czy praca zdalna jest rozwiązaniem wszystkich moich problemów?
 
 <figure id="attachment_363" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2017/10/tumblr_oke7b6hmHq1qz4jlco1_1280-2_biuqfc.jpg"><img class="size-large wp-image-363" src="https://typeofweb.com/wp-content/uploads/2017/10/tumblr_oke7b6hmHq1qz4jlco1_1280-2_biuqfc-1024x768.jpg" alt="Praca zdalna w Tajlandii" width="1024" height="768" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/tumblr_oke7b6hmHq1qz4jlco1_1280-2_biuqfc.jpg"><img class="size-large wp-image-363" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/tumblr_oke7b6hmHq1qz4jlco1_1280-2_biuqfc-1024x768.jpg" alt="Praca zdalna w Tajlandii" width="1024" height="768" /></a>
   <figcaption>
     Nie chcesz, aby Twoje biuro wyglądało tak? foto: <a href="http://blog.wojtekzajac.com/post/156400904442" target="_blank" rel="noopener nofollow">Wojtek Zając</a>
   </figcaption>

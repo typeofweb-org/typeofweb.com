@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/10/fb-og-2018-1.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/10/fb-og-2018-1.png
   width: 1200
   height: 579
 categories:

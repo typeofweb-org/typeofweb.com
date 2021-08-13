@@ -10,6 +10,7 @@ import CubeTransparentIcon from '../../images/social/cube-transparent.svg';
 import DiscordIcon from '../../images/social/discord.svg';
 import GlobeIcon from '../../images/social/globe.svg';
 import JsIcon from '../../images/social/js.svg';
+import TsIcon from '../../images/social/ts.svg';
 import { allCategories, getCategoryLink } from '../../utils/categories';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { getSeriesLink } from '../../utils/series';
@@ -19,6 +20,7 @@ import type { ComponentType } from 'react';
 
 const categoryToIcon: Record<string, ComponentType<React.SVGProps<SVGSVGElement>>> = {
   javascript: JsIcon,
+  typescript: TsIcon,
   opinie: CubeTransparentIcon,
   'dobry-kod': BadgeCheckIcon,
   'praca-zdalna': BriefcaseIcon,

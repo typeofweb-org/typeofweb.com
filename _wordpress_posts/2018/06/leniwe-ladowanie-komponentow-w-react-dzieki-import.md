@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/04/pexels-photo-417122.jpeg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/pexels-photo-417122.jpeg
   width: 1280
   height: 568
 categories:
@@ -129,7 +129,7 @@ render() {
 
 Jeśli teraz zajrzysz do zakładki Network to zobaczysz tam dodatkowe żądanie — np. o nazwie `1.chunk.js`. To właśnie to!
 
-<a href="https://typeofweb.com/wp-content/uploads/2018/04/Screen-Shot-2018-04-23-at-8.46.42-PM.png"><img src="https://typeofweb.com/wp-content/uploads/2018/04/Screen-Shot-2018-04-23-at-8.46.42-PM.png" alt="Lazy load komponentów React" title="Leniwe ładowanie komponentu w React" width="832" height="118" class="aligncenter size-full wp-image-1465" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/Screen-Shot-2018-04-23-at-8.46.42-PM.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/Screen-Shot-2018-04-23-at-8.46.42-PM.png" alt="Lazy load komponentów React" title="Leniwe ładowanie komponentu w React" width="832" height="118" class="aligncenter size-full wp-image-1465" /></a>
 
 Cały kod znajdziesz na GitHubie: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-5-async](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-5-async)
 

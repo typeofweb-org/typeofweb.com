@@ -3,6 +3,7 @@ import { memo } from 'react';
 
 import { useUIState } from '../../hooks/useUiState';
 import { SiteHeader } from '../molecules/SiteHeader';
+import { AppFooter } from '../organisms/AppFooter';
 import { Sidebar } from '../organisms/Sidebar';
 
 import type { PageKind, SeriesWithToC } from '../../types';
@@ -53,6 +54,7 @@ export const TwoColumns = memo<
           }`}
         />
       </button>
+      <AppFooter />
     </>
   );
 });

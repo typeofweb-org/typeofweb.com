@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2019/11/Screenshot-2019-11-06-at-23.32.46.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/Screenshot-2019-11-06-at-23.32.46.png
   width: 3326
   height: 1626
 categories:
@@ -70,7 +70,7 @@ Tegoroczne wydarzenie jest wyjątkowe też z jeszcze jednego powodu: **Trzeciego
 
 https://twitter.com/ReactiveConf/status/1190279565513568258
 
-<a href="https://typeofweb.com/wp-content/uploads/2019/11/MZET3111-20191101.jpg"><img src="https://typeofweb.com/wp-content/uploads/2019/11/MZET3111-20191101-1024x683.jpg" alt="Zdjęcie sali pełnej ludzi na warsztacie Michała Miszczyszyna z ReasonML" width="1024" height="683" class="aligncenter size-large wp-image-2275" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/MZET3111-20191101.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/MZET3111-20191101-1024x683.jpg" alt="Zdjęcie sali pełnej ludzi na warsztacie Michała Miszczyszyna z ReasonML" width="1024" height="683" class="aligncenter size-large wp-image-2275" /></a>
 
 Pomimo problemów technicznych (#wififail), uczestnicy/czki zadawali/ły wiele pytań. Wspólnie zbudowaliśmy grę snake korzystając z programowania funkcyjnego!
 

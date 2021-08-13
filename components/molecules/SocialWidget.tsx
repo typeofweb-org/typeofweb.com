@@ -12,12 +12,12 @@ import YoutubeIcon from '../../images/social/youtube.svg';
 import { Widget } from '../atoms/Widget';
 
 export const social = [
-  { icon: FacebookIcon, label: 'Facebook', slug: 'facebook' },
-  { icon: YoutubeIcon, label: 'YouTube', slug: 'youtube' },
-  { icon: GithubIcon, label: 'GitHub', slug: 'github' },
-  { icon: InstagramIcon, label: 'Instagram', slug: 'instagram' },
-  { icon: TwitterIcon, label: 'Twitter', slug: 'twitter' },
-  { icon: LinkedinIcon, label: 'LinkedIn', slug: 'linkedin' },
+  { icon: FacebookIcon, label: 'Facebook', slug: 'facebook', className: 'text-[#4267B2]' },
+  { icon: YoutubeIcon, label: 'YouTube', slug: 'youtube', className: 'text-[#FF0000]' },
+  { icon: GithubIcon, label: 'GitHub', slug: 'github', className: 'text-[#24292e]' },
+  { icon: InstagramIcon, label: 'Instagram', slug: 'instagram', className: 'text-[#bc2a8d]' },
+  { icon: TwitterIcon, label: 'Twitter', slug: 'twitter', className: 'text-[#1DA1F2]' },
+  { icon: LinkedinIcon, label: 'LinkedIn', slug: 'linkedin', className: 'text-[#0077b5]' },
 ] as const;
 
 export const myUrls = {
@@ -33,9 +33,12 @@ export const SocialWidget = memo(() => {
   return (
     <Widget title="Śledź mnie na:">
       <ul className="flex flex-row gap-3 justify-between">
-        {social.map(({ icon: Icon, label, slug }) => {
+        {social.map(({ icon: Icon, label, slug, className }) => {
           return (
-            <li key={label} className="text-gray-700 hover:text-green-700 transition-colors">
+            <li
+              key={label}
+              className={`${className ? className : 'text-gray-700'} hover:text-green-700 transition-colors`}
+            >
               <a href={myUrls[slug]} aria-label={label} title={label} className="block">
                 <Icon className="w-8 fill-current" />
               </a>

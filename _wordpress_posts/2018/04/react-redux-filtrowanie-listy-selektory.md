@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/04/redux-filtrowanie-listy-selektory2.jpeg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/redux-filtrowanie-listy-selektory2.jpeg
   width: 1280
   height: 854
 categories:

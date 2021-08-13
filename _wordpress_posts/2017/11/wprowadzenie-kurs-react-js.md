@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2017/11/react-logo-1.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/react-logo-1.png
   width: 887
   height: 400
 categories:

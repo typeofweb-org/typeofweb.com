@@ -24,7 +24,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
 
   return (
     <nav
-      className={`flex py-2 flex-row gap-2 items-stretch justify-center ${isLoading ? 'cursor-wait' : ''}`}
+      className={`flex py-2 flex-row gap-2 items-stretch justify-center mb-4 ${isLoading ? 'cursor-wait' : ''}`}
       role="navigation"
       aria-label="Paginacja"
       aria-disabled={isLoading}

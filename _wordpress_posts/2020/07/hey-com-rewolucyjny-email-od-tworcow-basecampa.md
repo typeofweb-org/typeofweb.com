@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2020/07/hey.com-recenzja-typeofweb.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/hey.com-recenzja-typeofweb.png
   width: 1200
   height: 633
 categories:
@@ -41,7 +41,7 @@ Nie martw się jednak – w tym momencie **serwis jest już otwarty na rejestrac
 Po utworzeniu konta, szybko ustawiłem przekierowania z Gmaila na Hey, żeby zacząć otrzymywać maile w nowej appce. Co ciekawe, zanim mail wpadnie do skrzynki odbiorczej (przekornie nazwanej Imbox zamiast Inbox), musi przejść naszą weryfikację, czyli tzw. _screener_. Czy to jest coś, co nas interesuje? Czy nigdy nie chcemy więcej widzieć wiadomości od tego nadawcy? A może jest to faktura od klienta albo newsletter? Tak, Hey pozwala nam na kategoryzowanie maili, o czym jeszcze za moment opowiem.
 
 <figure id="attachment_2543" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2020/07/screener-65df6c1eaa0642311904e4dc6fb578254d537c38500e7400c1d92b50c46b7b24.png"><img src="https://typeofweb.com/wp-content/uploads/2020/07/screener-65df6c1eaa0642311904e4dc6fb578254d537c38500e7400c1d92b50c46b7b24-1024x499.png" alt="Screener w Hey.com." width="1024" height="499" class="size-large wp-image-2543" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/screener-65df6c1eaa0642311904e4dc6fb578254d537c38500e7400c1d92b50c46b7b24.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/screener-65df6c1eaa0642311904e4dc6fb578254d537c38500e7400c1d92b50c46b7b24-1024x499.png" alt="Screener w Hey.com." width="1024" height="499" class="size-large wp-image-2543" /></a>
   <figcaption>
     Screener w Hey.com.<br /><small>Obrazek pochodzi ze strony hey.com</small>
   </figcaption>
@@ -56,7 +56,7 @@ Hey pozwala na przypisanie maili do 3 grup: Imbox, Feed albo Paper Trail.
 **Imbox** to tak naprawdę zwykła skrzynka odbiorcza, nic specjalnego.
 
 <figure id="attachment_2539" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2020/07/imbox-cf98a8e4e60c2074df5bd9fd4164ed307c1c004887bd9321295f9ef2401a3f5e.jpg"><img src="https://typeofweb.com/wp-content/uploads/2020/07/imbox-cf98a8e4e60c2074df5bd9fd4164ed307c1c004887bd9321295f9ef2401a3f5e-1024x775.jpg" alt="Imbox w Hey.com." width="1024" height="775" class="size-large wp-image-2539" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/imbox-cf98a8e4e60c2074df5bd9fd4164ed307c1c004887bd9321295f9ef2401a3f5e.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/imbox-cf98a8e4e60c2074df5bd9fd4164ed307c1c004887bd9321295f9ef2401a3f5e-1024x775.jpg" alt="Imbox w Hey.com." width="1024" height="775" class="size-large wp-image-2539" /></a>
   <figcaption>
     Imbox w Hey.com.<br />Obrazek pochodzi ze strony hey.com
   </figcaption>
@@ -65,7 +65,7 @@ Hey pozwala na przypisanie maili do 3 grup: Imbox, Feed albo Paper Trail.
 **Paper Trail** służy do zbierania potwierdzeń płatności i faktur, czyli coś, co w teorii powinno mi się bardzo przydać.
 
 <figure id="attachment_2540" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2020/07/paper-trail-2e07e297d5caab43b2302a1571bb582d194b6350a22db0081366fcf990859f51.jpg"><img src="https://typeofweb.com/wp-content/uploads/2020/07/paper-trail-2e07e297d5caab43b2302a1571bb582d194b6350a22db0081366fcf990859f51-1024x775.jpg" alt="Paper Trail w Hey.com." width="1024" height="775" class="size-large wp-image-2540" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/paper-trail-2e07e297d5caab43b2302a1571bb582d194b6350a22db0081366fcf990859f51.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/paper-trail-2e07e297d5caab43b2302a1571bb582d194b6350a22db0081366fcf990859f51-1024x775.jpg" alt="Paper Trail w Hey.com." width="1024" height="775" class="size-large wp-image-2540" /></a>
   <figcaption>
     Paper Trail w Hey.com.<br />Obrazek pochodzi ze strony hey.com
   </figcaption>
@@ -74,7 +74,7 @@ Hey pozwala na przypisanie maili do 3 grup: Imbox, Feed albo Paper Trail.
 Natomiast **Feed** to funkcja, na którą najbardziej liczyłem! Zadaniem tej części aplikacji jest zbieranie newsletterów i zamienianie ich w _feed_, czyli taką ścianę wiadomości, którą mogę w dowolnym momencie przewijać i czytać.
 
 <figure id="attachment_2541" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2020/07/feed-df5f2439ed63b36641f7bb260408f4c32db1190d3062e12bcf456f8b626a2f53.jpg"><img src="https://typeofweb.com/wp-content/uploads/2020/07/feed-df5f2439ed63b36641f7bb260408f4c32db1190d3062e12bcf456f8b626a2f53-1024x775.jpg" alt="Feed w Hey.com." width="1024" height="775" class="size-large wp-image-2541" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/feed-df5f2439ed63b36641f7bb260408f4c32db1190d3062e12bcf456f8b626a2f53.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/07/feed-df5f2439ed63b36641f7bb260408f4c32db1190d3062e12bcf456f8b626a2f53-1024x775.jpg" alt="Feed w Hey.com." width="1024" height="775" class="size-large wp-image-2541" /></a>
   <figcaption>
     Feed w Hey.com.<br />Obrazek pochodzi ze strony hey.com
   </figcaption>

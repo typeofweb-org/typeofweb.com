@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/04/testing-react-testing-library2.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/testing-react-testing-library2.jpg
   width: 1200
   height: 800
 categories:

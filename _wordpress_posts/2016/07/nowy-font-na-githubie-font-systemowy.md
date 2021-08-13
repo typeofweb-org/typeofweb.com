@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2016/07/red-hands-woman-creative2.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2016/07/red-hands-woman-creative2.jpg
   width: 1920
   height: 1280
 categories:

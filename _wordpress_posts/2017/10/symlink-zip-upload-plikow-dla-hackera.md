@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2017/10/hacking-1685092_1920.jpg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/hacking-1685092_1920.jpg
   width: 1920
   height: 1439
 categories:
@@ -83,7 +83,7 @@ Omówię z grubsza co się tu dzieje:
 </ul>
 Należy zwrócić uwagę, że argumenty są raczej poprawnie sanityzowane (<code>escapeshellarg</code>, <code>htmlentities</code>). Tak wygląda skrypt po uruchomieniu:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.15.23.png"><img class="aligncenter size-large wp-image-571" src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.15.23-1024x545.png" alt="Skrypt upload.php" width="1024" height="545" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.15.23.png"><img class="aligncenter size-large wp-image-571" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.15.23-1024x545.png" alt="Skrypt upload.php" width="1024" height="545" /></a>
 
 <h2>Błąd</h2>
 Na czym polega błąd? Częściowo na bezmyślnym skopiowaniu kodu ze StackOverflow („Jak rozpakować ZIP w PHP?”), częściowo na użyciu funkcji system, <strong>ale głównie na braku weryfikacji czy archiwum nie zawiera symlinków</strong>.
@@ -94,7 +94,7 @@ Co to jest symlink? Skrót od <em>symbolic link</em> – jest to wskazanie na in
 
 Na początek poprawne archiwum zawierające dwa pliki tekstowe. W drugim pliku umieściłem dodatkowo fragment HTML-a, aby pokazać, że znaczniki są poprawnie ignorowane:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.19.12.png"><img class="aligncenter size-full wp-image-672" src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.19.12.png" alt="Skrypt upload.php po wrzuceniu pliku" width="846" height="756" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.19.12.png"><img class="aligncenter size-full wp-image-672" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.19.12.png" alt="Skrypt upload.php po wrzuceniu pliku" width="846" height="756" /></a>
 
 Teraz preparuję złośliwe archiwum z symlinkiem do <code>/etc/passwd</code>:
 
@@ -105,7 +105,7 @@ Teraz preparuję złośliwe archiwum z symlinkiem do <code>/etc/passwd</code>:
 </ul>
 Następnie taki plik wrzucam na stronie. Oto efekt:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.27.55.png"><img class="aligncenter size-large wp-image-674" src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.27.55-1024x851.png" alt="Atak ujawnia zawartość pliku /etc/passwd " width="1024" height="851" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.27.55.png"><img class="aligncenter size-large wp-image-674" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.27.55-1024x851.png" alt="Atak ujawnia zawartość pliku /etc/passwd " width="1024" height="851" /></a>
 
 Widoczna jest treść plik <code>/etc/passwd</code>, a w nim – nawet konto roota oraz wiele innych ciekawych rzeczy…
 
@@ -114,7 +114,7 @@ Właściwie <strong>możliwe jest teraz odczytanie dowolnego pliku z dysku</stro
 
 Przykładowo, jeśli wiesz, że ten aplikacja na hostingu od <a href="http://www.mydevil.net/pp/9UVOSJRZIV" target="_blank" rel="noopener nofollow">MyDevil.net</a> to <em>najprawdopodobniej</em> ścieżka do głównego folderu to <code>/home/moj-login/domains/moja-domena.com/public_html</code> – łatwo można się o tym dowiedzieć jeśli po prostu założy się tam konto lub poczyta dokumentację. A wtedy spreparowanie odpowiedniego symlinka nie jest trudne i po wgraniu archiwum odczytujemy np. kod źródłowy pliku <code>upload.php</code>:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.29.21.png"><img class="aligncenter size-large wp-image-683" src="https://typeofweb.com/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.29.21-1024x769.png" alt="Ujawniony kod źródłowy" width="1024" height="769" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.29.21.png"><img class="aligncenter size-large wp-image-683" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-11-16.29.21-1024x769.png" alt="Ujawniony kod źródłowy" width="1024" height="769" /></a>
 
 <h2>Jak naprawić błąd?</h2>
 Zrezygnować z wywołań funkcji <code>system</code> na rzecz innych, wbudowanych. Wpuszczenie niepowołanego kodu do funkcji <code>system</code> może mieć katastrofalne skutki. W tym przypadku do rozpakowania archiwum można skorzystać z klasy <code>ZipArchive</code>:

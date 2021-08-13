@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { AppFooter } from '../components/organisms/AppFooter';
+
 export default function Custom404() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function Custom404() {
           </a>
         </Link>
       </div>
+      <AppFooter />
       <style
         dangerouslySetInnerHTML={{
           __html: /* css */ `

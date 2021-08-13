@@ -9,7 +9,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/09/computed.jpg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/09/computed.jpg
   width: 887
   height: 400
 categories:

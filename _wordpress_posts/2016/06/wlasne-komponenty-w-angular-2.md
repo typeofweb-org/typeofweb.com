@@ -25,7 +25,7 @@ seo: {}
 
 <p>Powróćmy do projektu aplikacji z tamtego wpisu. Jest to lista kontaktów podzielona na komponenty:</p>
 
-<p><img src="/content/images/2016/05/komponenty-angularjs-projekt-aplikacji-2.png" alt="Koncept aplikacji" /></p>
+<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/komponenty-angularjs-projekt-aplikacji-2.png" alt="Koncept aplikacji" /></p>
 
 <p>Zacznijmy budowanie aplikacji od stworzenia potrzebnych komponentów przy pomocy Angular CLI. Główny komponent aplikacji już istnieje (domyślnie stworzony przez <code>ng new {NAZWA PROJEKTU}</code>), wystarczy więc dodać <code>contacts-list</code>, <code>contact-item</code> i <code>gravatar</code>. Do tego również można wykorzystać Angular CLI:</p>
 

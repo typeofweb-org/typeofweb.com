@@ -1,10 +1,8 @@
-import Dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
 import { Seo } from '../components/Seo';
-import { AppFooter } from '../components/organisms/AppFooter';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
 import { UIStateProvider } from '../hooks/useUiState';
 
@@ -79,7 +77,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </UIStateProvider>
       </RunningHeaderProvider>
-      <AppFooter />
       <ScriptAfterInteraction
         defer
         async

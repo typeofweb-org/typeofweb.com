@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2016/04/0Y7A4865-copy-2.jpg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2016/04/0Y7A4865-copy-2.jpg
   width: 1600
   height: 1600
 categories:
@@ -38,7 +38,7 @@ https://typeofweb.com/meet-js-summit-2017-kulisami/
 
 meet.js Summit 2017 odbył się w Gdańsku, w <a href="http://www.ecs.gda.pl/" target="_blank" rel="noopener">Europejskim Centrum Solidarności</a>. Jest to miejsce o wielkim znaczeniu historycznym i sentymentalnym na pewno dla wszystkich Polaków, a być może i dla całego świata. Poza tym, że ECS jest muzeum, posiada także bardzo dobrze wyposażoną i nowoczesną salę audytoryjną, którą wypożyczyliśmy na potrzeby meet.js Summit. Wiele osób zwracało uwagę na wyjątkowy wystrój i klimat tego miejsca:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A4972.jpg"><img class="aligncenter size-large wp-image-493" src="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A4972-1024x683.jpg" alt="ECS Europejskie Centrum Solidarności sala główna" width="1024" height="683" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A4972.jpg"><img class="aligncenter size-large wp-image-493" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A4972-1024x683.jpg" alt="ECS Europejskie Centrum Solidarności sala główna" width="1024" height="683" /></a>
 
 Nasze ogromne obawy budził fakt, że <strong>wystawa w ECS pozostała otwarta dla wszystkich gości z zewnątrz na czas odbywania się konferencji</strong> – jednak na szczęście były to obawy w dużej mierze na wyrost :) Z samego rana przemaszerowały obok stoisk naszych sponsorów grupy dzieci, później jednak już tylko kilka razy odwiedził nas jakiś zbłąkany turysta – poza tym mieliśmy praktycznie całą przestrzeń tylko dla siebie. Ogromnym plusem była profesjonalna realizacja obrazu i dźwięku od strony pracowników ECS – zupełnie nie musieliśmy się tym martwić.
 
@@ -48,7 +48,7 @@ Stoiska sponsorów ustawiliśmy tuż pod samym audytorium, wzdłuż ściany pomi
 
 Sponsorzy zaskoczyli nas swoją kreatywnością, atrakcjami, gadżetami, konkursami i nagrodami :)
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A5459.jpg"><img class="aligncenter size-large wp-image-494" src="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A5459-683x1024.jpg" alt="Sponsorzy meet.js Summit stanowisko Schibsted" width="683" height="1024" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A5459.jpg"><img class="aligncenter size-large wp-image-494" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A5459-683x1024.jpg" alt="Sponsorzy meet.js Summit stanowisko Schibsted" width="683" height="1024" /></a>
 
 <h2>Uczestnicy</h2>
 
@@ -60,7 +60,7 @@ Jeszcze jedna ciekawa statystyka: Patrząc tylko na sprzedane bilety i wpisane i
 
 <strong>Wszystkie prelekcje na meet.js Summit 2017 odbywają się po angielsku</strong>. Jest to jedno z głównych założeń tej konferencji, które rokrocznie spotyka się z niezrozumieniem jednej lub dwóch osób (pozdrawiamy). Dlaczego meet.js Summit jest po angielsku, mimo że uczestnikami oraz prelegentami są przede wszystkim Polacy? Głównym powodem jest fakt, że celem meet.js Summit jest <strong>chęć wsparcia polskich prelegentów w aplikowaniu na konferencje za granicą</strong>. Nagrania video z wystąpień po angielsku z meet.js Summit są ogromną pomocą w zgłaszaniu się do Call For Papers na dużych, międzynarodowych wydarzeniach.
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A5269.jpg"><img class="aligncenter size-large wp-image-495" src="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A5269-1024x683.jpg" alt="Prezentacja meet.js Summit Kasia Jastrzębska" width="1024" height="683" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A5269.jpg"><img class="aligncenter size-large wp-image-495" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A5269-1024x683.jpg" alt="Prezentacja meet.js Summit Kasia Jastrzębska" width="1024" height="683" /></a>
 
 Ciekawostka: Ktoś w ankiecie dał nam sugestię, że <strong>mogliśmy gdzieś napisać, że prezentacje będą po angielsku</strong>. Powiem szczerze, że podniosłem trochę brew po przeczytaniu tego :) Wszak nasza strona www jest wyłącznie po angielsku, a wszystkie materiały są w języku angielskim, włączając w to tytuły i opisy prezentacji. Nigdzie nie ma słowa po polsku, oprócz oferty sponsorskiej, która jest przygotowana w dwóch językach. Dotąd sądziliśmy, że nie pozostawia to wątpliwości, iż konferencja będzie po polsku – ale jak widać, myliliśmy się! W kolejnych latach na pewno jeszcze jaśniej i bardziej wprost to zaznaczymy :)
 
@@ -72,7 +72,7 @@ Imprezę po konferencji postanowiliśmy zorganizować w niedawno otwartym browar
 
 Według naszych szacunków na imprezie było około 100-120 osób. Liczyliśmy na to, że dzięki takiej lokalizacji więcej osób będzie mogło wziąć udział w imprezie - w końcu aby złapać pociąg wystarczyło wyjść z after party 10 minut wcześniej! <strong>Komentarze na temat after party były nad wyraz pozytywne</strong>. Myślę, że nie trzeba już nic dodawać, wystarczy spojrzeć na przykład na to zdjęcie:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A6124.jpg"><img class="aligncenter size-large wp-image-513" src="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A6124-1024x683.jpg" alt="" width="1024" height="683" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A6124.jpg"><img class="aligncenter size-large wp-image-513" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A6124-1024x683.jpg" alt="" width="1024" height="683" /></a>
 
 &nbsp;
 
@@ -108,7 +108,7 @@ Inne moje uwagi i pomysły:
     <li>Zaprosić chociaż jednego speakera-gwiazdę</li>
 </ul>
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A4874.jpg"><img class="aligncenter size-large wp-image-509" src="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A4874-1024x683.jpg" alt="Organizatorzy meet.js Summit 2017" width="1024" height="683" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A4874.jpg"><img class="aligncenter size-large wp-image-509" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A4874-1024x683.jpg" alt="Organizatorzy meet.js Summit 2017" width="1024" height="683" /></a>
 
 <h3>Arek o meet.js Summit</h3>
 
@@ -143,7 +143,7 @@ Co będę jeszcze pamiętał:
 
 Niestety na co dzień każdy z nas ma swoje obowiązki i wiadomo, że nie da poświęcić się tyle czasu ile by się chciało na organizację takiego dużego wydarzenia. Ba, wiele spraw zgłaszałem spóźniony, nawet ten tekst pisze o dzień za późno niż obiecałem. Nie mogę pochwalić się szalenie wielodniowymi przygotowaniami, bo zadania, które wziąłem na siebie przychodzą mi dość łatwo. W każdym razie dzięki chłopaki (Arek, Wojtek, Michał) za współpracę i mam nadzieję, że kiedyś coś jeszcze zorganizujemy!
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A5772.jpg"><img class="aligncenter size-large wp-image-511" src="https://typeofweb.com/wp-content/uploads/2017/10/0Y7A5772-1024x576.jpg" alt="Organizatorzy meet.js Summit 2017" width="1024" height="576" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A5772.jpg"><img class="aligncenter size-large wp-image-511" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/0Y7A5772-1024x576.jpg" alt="Organizatorzy meet.js Summit 2017" width="1024" height="576" /></a>
 
 <h2>Kolejny meet.js Summit</h2>
 

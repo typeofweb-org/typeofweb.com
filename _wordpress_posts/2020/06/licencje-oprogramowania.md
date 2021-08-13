@@ -9,7 +9,7 @@ authors:
   - paulina-piatek
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2020/06/licencje-oprogramowania.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/06/licencje-oprogramowania.png
   width: 1688
   height: 780
 categories:

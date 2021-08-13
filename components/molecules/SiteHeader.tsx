@@ -18,12 +18,12 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
         Skocz do treści
       </a>
       <header className="ios:transcluent-white dark:ios:transcluent-black fixed z-10 top-0 flex flex-row items-stretch justify-center pb-1 w-full h-12 bg-gray-100 shadow overflow-hidden">
-        <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row pl-8 max-w-3xl">
+        <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row pl-4 max-w-3xl xl:pl-0">
           <Link href="/">
             <a>
               <HeaderEl itemProp="headline" className="-ml-2 p-2">
                 <span className="sr-only">Type of Web</span>
-                <TypeOfWebLogo className="w-40 max-w-full" />
+                <TypeOfWebLogo className="mt-0.5 w-36 max-w-full" />
               </HeaderEl>
             </a>
           </Link>

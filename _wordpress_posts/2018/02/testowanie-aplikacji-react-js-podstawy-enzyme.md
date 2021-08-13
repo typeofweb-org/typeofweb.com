@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/01/pexels-photo-277590.jpeg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-277590.jpeg
   width: 1280
   height: 1006
 categories:
@@ -158,7 +158,7 @@ describe('list of users', () =&gt; {
 
 Wszystkie napisane wyżej testy powinny bez problemu przechodzić :)
 
-<a href="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-17-at-6.20.50-PM.png"><img class="aligncenter size-full wp-image-975" src="https://typeofweb.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-17-at-6.20.50-PM.png" alt="Testy React.js w Enzyme" width="834" height="430" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-17-at-6.20.50-PM.png"><img class="aligncenter size-full wp-image-975" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-17-at-6.20.50-PM.png" alt="Testy React.js w Enzyme" width="834" height="430" /></a>
 
 <h2>Podsumowanie</h2>
 

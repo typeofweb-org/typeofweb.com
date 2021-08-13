@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: page
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/05/Discord-Feature-Graphic.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/05/Discord-Feature-Graphic.png
   width: 1024
   height: 500
 categories: []
@@ -19,7 +19,7 @@ Serwer **Polski front-end i back-end: JavaScript, React, Vue, Angular, node.js, 
 
 Połączmy początkujących z ekspertami, grafików z programistami, a UX-ów ze scrum masterami! Po prostu **chcemy sobie pomagać i swobodnie dyskutować**. Dołącz klikając w ten przycisk:
 
-<a href="https://discord.gg/va2NhBv" style="display: block; margin: 0 auto; width: 250px; height: 80px;"><img src="https://typeofweb.com/wp-content/uploads/2018/05/discord-join-button-300x96.png" alt="Dołącz do Discorda Type of Web!" title="Dołącz do Discorda Type of Web!" width="300" height="96" style="border-radius: 10px;" /></a>
+<a href="https://discord.gg/va2NhBv" style="display: block; margin: 0 auto; width: 250px; height: 80px;"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/05/discord-join-button-300x96.png" alt="Dołącz do Discorda Type of Web!" title="Dołącz do Discorda Type of Web!" width="300" height="96" style="border-radius: 10px;" /></a>
 
 ## Kilka podpowiedzi
 

@@ -45,7 +45,7 @@ aplikacja
 
 <p>Ta prosta struktura nie sprawdza się nawet przy małych aplikacjach jeśli tylko mamy więcej niż kilka kontrolerów. Trudno zarządzać tak ułożonymi plikami, a wdrożenie nowych funkcji sprawia wiele kłopotów. Ten układ folderów pokazywał również inny, poważniejszy problem: W zasadzie <strong>nikt nie wiedział jak zaprojektować architekturę aplikacji</strong> opartej o AngularJS. Na fali mody wszyscy zdawali się zapomnieć o podziale odpowiedzialności i MVC na rzecz MVW<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> oraz o dobrych praktykach i wzorcach na rzecz szybkiego tworzenia imponujących aplikacji internetowych. Polecane było używanie <code>ng‑include</code> do zagnieżdżania podwidoków oraz <code>ng‑controller</code> do dodawania do nich logiki biznesowej, a komunikacja pomiędzy kontrolerami była często rozwiązywana np. poprzez odwoływanie się do <code>$parent</code> – czyli bezpośredniego rodzica zależnego od ułożenia html. W skrócie oznaczało to, że <strong>widok musiał być świadomy dokładnie gdzie w hierarchi się znajduje i praktycznie niemożliwe było jego ponowne wykorzystanie w innym miejscu</strong>. Kontrolery były pozornie niezwiązane z widokiem, ale w rzeczywistości nie dało się użyć jednego bez drugiego.</p>
 
-<p><img src="/content/images/2016/05/stara-architektura-angularjs-2.png" alt="Dawna architektura aplikacji w AngularJS" /></p>
+<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/stara-architektura-angularjs-2.png" alt="Dawna architektura aplikacji w AngularJS" /></p>
 
 <p>U nas kontrolerów na początek miało być kilkadziesiąt, do tego co najmniej tuzin różnych własnych dyrektyw i przynajmniej drugie tyle serwisów, dlatego niedługo później zdecydowaliśmy się na generalne porządki… Autentyczny fragment kodu z tamtego okresu zamieszczam poniżej. Trudno się w tym połapać, ale gdy już się dokładnie przyjrzeć to widać, że np. <code>ConferenceListCtrl</code> niepotrzebnie używany jest dwukrotnie w jednym widoku, a przepływ danych jest całkowicie niejasny. Patrząc na ten fragment HTML nie wiem nawet teraz gdzie miałbym zacząć, aby móc np. <code>details.html</code> wykorzystać ponownie w innym miejscu aplikacji.</p>
 
@@ -81,7 +81,7 @@ aplikacja
 
 <p>Rezygnujemy z <code>ng-controller</code> i <code>ng-include</code> na rzecz zagnieżdżonych komponentów. Jest to rozwiązanie lepsze bo tworzone są <strong>małe fragmenty kodu, które łatwo jest testować, a przepływ danych pomiędzy nimi jest jasny i przejrzysty</strong>. Do tego automatycznie każdy taki komponent może być użyty w dowolnym miejscu gdyż nie zależy od otaczających go elementów – tylko od swoich atrybutów. Przykładowa implementacja jednego komponentu <code>&lt;app‑conference‑details&gt;</code> znajduje się nieco dalej. Więcej można przeczytaj na blogu <a href="https://toddmotto.com/exploring-the-angular-1-5-component-method/">Todd Motto</a>, serdecznie polecam cały jego wpis.</p>
 
-<p><img src="/content/images/2016/05/architektura-komponentowa-angularjs.png" alt="Architektura komponentowa w AngularJS" /></p>
+<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/architektura-komponentowa-angularjs.png" alt="Architektura komponentowa w AngularJS" /></p>
 
 <p>Poprzedni kod HTML mógłby zostać przepisany na przykład na coś podobnego do tego:</p>
 

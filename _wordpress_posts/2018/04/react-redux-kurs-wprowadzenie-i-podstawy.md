@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/03/redux-kurs-typeofweb.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/03/redux-kurs-typeofweb.png
   width: 887
   height: 400
 categories:

@@ -93,7 +93,7 @@ Aplikację możemy uruchomić wpisując w terminalu <code>node index.js</code>.
 <h2 id="endpointy">Endpointy</h2>
 Jeśli teraz spróbujemy otworzyć adres widoczny na ekranie, czyli <a href="http://localhost:3000">http://localhost:3000</a> to zobaczymy błąd wygenerowany przez Hapi:
 
-<img src="/content/images/2017/01/Screenshot-2017-01-24-20.26.34.png" alt="Błąd Hapi" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/01/Screenshot-2017-01-24-20.26.34.png" alt="Błąd Hapi" />
 
 <strong>Oznacza to, że serwer działa</strong>, jednak Hapi nie wie jeszcze co ma zrobić, gdy otwarta zostanie ścieżka <code>/</code>. Musimy zadeklarować endpoint! Wspomnę tylko, że w polskiej literaturze nazywa się to końcówka, ale nikt tak nie mówi. Naprawdę!
 
@@ -110,7 +110,7 @@ Endpoint definiujemy poprzez funkcję <code>server.route</code>. Wymagane są tr
 
 Funkcja <code>handler</code> zostanie wywołana przez Hapi gdy użytkownik odwiedzi podaną ścieżkę. Do handlera przekazywane są dwa argumenty – pierwszy z nich jest obiektem z informacjami o żądaniu, natomiast drugi to specjalna funkcja, dzięki której możemy coś łatwo i szybko zwrócić.
 
-<img src="/content/images/2017/01/Screenshot-2017-01-24-20.34.19.png" alt="Hello, world w przeglądarce" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/01/Screenshot-2017-01-24-20.34.19.png" alt="Hello, world w przeglądarce" />
 <p class="important">Po każdej zmianie w pliku <code>index.js</code> musimy ponownie uruchomić serwer, aby zmiany były widoczne w przeglądarce.</p>
 
 <h1 id="podsumowanie">Podsumowanie</h1>

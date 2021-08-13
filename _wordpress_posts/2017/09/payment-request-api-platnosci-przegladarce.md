@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2017/09/platnosc-karta-przez-internet.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/platnosc-karta-przez-internet.jpg
   width: 1620
   height: 1080
 categories:
@@ -46,10 +46,10 @@ Dodatkowo, aby wpisywanie danych było maksymalnie uproszczone, programiści mus
 Zależnie od urządzenia i przeglądarki, ale w danym środowisku zawsze tak samo :) To jest ogromny plus tego standardu! Spójrzmy na kilka screenów z różnych urządzeń:
 
 <Gallery columns="2" link="file" size="medium">
-  <img src="https://typeofweb.com/wp-content/uploads/2017/09/payment-request-api-chrome.png" loading="lazy" alt="Payment Request Api w Chrome" title="Payment Request Api w Chrome" width="1366" height="1086" />
-<img src="https://typeofweb.com/wp-content/uploads/2017/09/payment-request-api-edge.png" loading="lazy" alt="Payment Request Api w Edge" title="Payment Request Api w Edge. Screen z https://blogs.windows.com" width="1021" height="1000" />
-<img src="https://typeofweb.com/wp-content/uploads/2017/09/payment-request-api-mobile-chrome.png" loading="lazy" alt="Payment Request Api w Chrome Mobile" title="Payment Request Api w Chrome Mobile. Screen z https://developers.google.com" width="1080" height="1920" />
-<img src="https://typeofweb.com/wp-content/uploads/2017/09/payment-request-api-samsung.png" loading="lazy" alt="Payment Request Api na Samsungu" title="Payment Request Api na Samsungu. Screen z https://medium.com/samsung-internet-dev/" width="450" height="800" />
+  <img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/payment-request-api-chrome.png" loading="lazy" alt="Payment Request Api w Chrome" title="Payment Request Api w Chrome" width="1366" height="1086" />
+<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/payment-request-api-edge.png" loading="lazy" alt="Payment Request Api w Edge" title="Payment Request Api w Edge. Screen z https://blogs.windows.com" width="1021" height="1000" />
+<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/payment-request-api-mobile-chrome.png" loading="lazy" alt="Payment Request Api w Chrome Mobile" title="Payment Request Api w Chrome Mobile. Screen z https://developers.google.com" width="1080" height="1920" />
+<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/payment-request-api-samsung.png" loading="lazy" alt="Payment Request Api na Samsungu" title="Payment Request Api na Samsungu. Screen z https://medium.com/samsung-internet-dev/" width="450" height="800" />
 </Gallery>
 
 Niezależnie od sklepu, w którym chcesz dokonać płatności – Payment Request API będzie dla Ciebie wyglądał identycznie. Oczywiście, standard jest dość elastyczny, <strong>na podsumowaniu może się wyświetlać wiele produktów, a także osobno podatek czy rabat</strong>, możliwe jest także sprecyzowanie <strong>które karty kredytowe są akceptowane</strong>. Ale to nie wszystko! Google zaprezentował piękny przykład dodania zupełnie własnościowej bramki płatności, np. <a href="https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/android-pay" target="_blank" rel="noopener nofollow">Android Pay poprzez Stripe</a>. Wszystko jest możliwe! Czytaj dalej, aby dowiedzieć się jak :)
@@ -87,7 +87,7 @@ W powyższym przykładzie robimy 3 rzeczy: Deklarujemy jakie metody płatności 
 <h4>Karty płatnicze</h4>
 Zauważ jednak, że aktualnie informujemy użytkownika, że obsługujemy dowolnych dostawców kart:
 
-<img class="aligncenter size-full wp-image-377" src="https://typeofweb.com/wp-content/uploads/2017/09/Screenshot-2017-09-13-20.25.46.png" alt="" width="662" height="122" />
+<img class="aligncenter size-full wp-image-377" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/Screenshot-2017-09-13-20.25.46.png" alt="" width="662" height="122" />
 
 Możliwe jest sprecyzowanie, że obsługujemy wyłącznie np. <strong>Visa i Mastercard</strong>. Nic prostszego:
 
@@ -102,7 +102,7 @@ Możliwe jest sprecyzowanie, że obsługujemy wyłącznie np. <strong>Visa i Ma
 
 Zmieniamy fragment konfiguracji i widzimy już tylko dwóch dostawców na liście:
 
-<img class="aligncenter size-full wp-image-380" src="https://typeofweb.com/wp-content/uploads/2017/09/Screenshot-2017-09-13-20.30.44-e1505327567627.png" alt="" width="201" height="99" />
+<img class="aligncenter size-full wp-image-380" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/Screenshot-2017-09-13-20.30.44-e1505327567627.png" alt="" width="201" height="99" />
 <h4>Lista produktów i podatki</h4>
 Bardzo często w zamówieniach musimy wylistować więcej niż jeden produkt, a do tego osobno wyświetlić naliczony podatek VAT. Znowu, Payment Request API przychodzi z pomocą. Dodamy sobie te rzeczy jako tablicę w <code>details.displayItems</code>:
 <pre><code class="language-javascript">const details = {
@@ -123,7 +123,7 @@ Bardzo często w zamówieniach musimy wylistować więcej niż jeden produkt, a 
 };</code></pre>
 Tak przygotowana lista wyświetla się w następujący sposób. Zwróć uwagę, że w <code>displayItems</code> mogłem podać zupełnie dowolne wartości i opisy i nie ma to wpływu na sumę w <code>total</code>. <strong>Przeglądarka niczego za nas sama nie liczy i to my musimy poprawnie wykonać wszystkie obliczenia!</strong>
 
-<img class="aligncenter size-full wp-image-382" src="https://typeofweb.com/wp-content/uploads/2017/09/Screenshot-2017-09-13-20.43.05.png" alt="" width="996" height="318" />
+<img class="aligncenter size-full wp-image-382" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/Screenshot-2017-09-13-20.43.05.png" alt="" width="996" height="318" />
 
 Jako dodatkową opcję, Payment Request API umożliwia nam oznaczenie niektórych pozycji na liście zakupów jako „oczekujące” – tzn. takie, których ceny nie są finalne. Przykładem podawanym w dokumentacji jest właśnie podatek lub koszt wysyłki, który może zależeć od wagi przesyłki albo kraju. W tym celu wystarczy dodać do odpowiedniego obiektu pole <code>pending</code>, a przeglądarka <em>może</em> (ale nie musi) wyświetlić je nieco inaczej niż pozostałe:
 
@@ -155,7 +155,7 @@ Jak wspomniałem, po wywołaniu funkcji show, dostajesz Promise, w którym nast�
 Co dokładnie zawiera w sobie result? Przynajmniej dane karty i adres, a opcjonalnie kilka innych informacji (czytaj dalej). Więcej o konkretnych polach można przeczytać w <a href="https://www.w3.org/TR/payment-request/#paymentresponse-interface" target="_blank" rel="noopener nofollow">specyfikacji Payment Request API</a>.
 
 <figure id="attachment_393" align="aligncenter" width="1024">
-  <img class="wp-image-393 size-large" src="https://typeofweb.com/wp-content/uploads/2017/09/Screenshot-2017-09-13-21.31.11-1024x146.png" alt="" width="1024" height="146" />
+  <img class="wp-image-393 size-large" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/Screenshot-2017-09-13-21.31.11-1024x146.png" alt="" width="1024" height="146" />
   <figcaption>
     Błąd wyświetlony w przeglądarce po wywołaniu <code>result.complete('fail')</code>
   </figcaption>

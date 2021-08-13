@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2019/05/Screenshot-2019-05-31-at-3.51.58-PM.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/05/Screenshot-2019-05-31-at-3.51.58-PM.png
   width: 2742
   height: 1266
 categories:

@@ -9,7 +9,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: https://typeofweb.com/wp-content/uploads/2018/07/pexels-photo-581669.jpeg
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/07/pexels-photo-581669.jpeg
   width: 1280
   height: 860
 categories:

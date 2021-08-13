@@ -99,7 +99,7 @@ class MyAppComponent { … }
 
 <p>Wynika z tego bezpośrednio, że <strong>Dependency Injection w Angular 2 jest hierarchiczne</strong>. Jednak co to oznacza? Kiedy komponent żąda wstrzyknięcia jakiegoś serwisu, Angular próbuje tę zależność spełnić. Sprawdza najpierw injector na poziomie komponentu – jeśli ten nie ma zarejestrowanego serwisu, Angular przechodzi o poziom wyżej i sprawdza injector rodzica. Jeśli ten również go nie posiada – sprawdzany jest kolejny komponent i kolejny, coraz wyżej, aż serwis zostanie odnaleziony. W przeciwnym wypadku – Angular rzuca wyjątek. Na prostym przykładzie. Wyobraźmy sobie takie drzewo komponentów:</p>
 
-<p><img src="/content/images/2016/07/Screenshot-2016-07-11-15-59-13.png" alt="Drzewo komponentów" /></p>
+<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/07/Screenshot-2016-07-11-15-59-13.png" alt="Drzewo komponentów" /></p>
 
 <p>Oraz tak zarejestrowane zależności:</p>
 
@@ -111,7 +111,7 @@ class MyAppComponent { … }
 
 <p>Jeśli <code>ListItemComponent</code> proprosi o wstrzyknięcie zależności <code>ServiceA, ServiceB, ServiceC</code> to otrzyma on te zależności <strong>od najbliższych komponentów w górę</strong>, w których zostały one zarejestrowane, czyli w tym przypadku każdy z serwisów otrzyma od innego komponentu. Wynika z tego, że np. <code>ServiceB</code> i <code>ServiceC</code> zarejestrowane w <code>ListComponent</code> przysłaniają <code>ServiceB</code> i <code>ServiceC</code> zarejestrowane w <code>AppComponent</code>. Wykropkowane linie określają rejestrację zależności, a strzałki wstrzykiwanie:</p>
 
-<p><img src="/content/images/2016/07/Screenshot-2016-07-11-16-20-17.png" alt="Hierarchiczne DI" /></p>
+<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/07/Screenshot-2016-07-11-16-20-17.png" alt="Hierarchiczne DI" /></p>
 
 <h2 id="optional"><code>@Optional</code></h2>
 

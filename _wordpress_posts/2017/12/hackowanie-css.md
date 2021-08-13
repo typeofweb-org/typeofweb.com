@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2017/11/mouse-trap-cheese-device-trap-633881.jpeg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/mouse-trap-cheese-device-trap-633881.jpeg
   width: 887
   height: 400
 categories:
@@ -96,7 +96,7 @@ A co się stanie jeśli zdefiniujemy po jednym <code>font-face</code> z osobnym
 I tak dalej, dla każdej litery alfabetu. <strong>Następnie używamy tego fonta do ostylowania jednego konkretnego elementu na stronie ofiary i wstrzykujemy jej ten CSS.</strong> Efekt widoczny na zrzucie ekranu poniżej:
 
 <figure id="attachment_857" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM.png"><img class="size-large wp-image-857" src="https://typeofweb.com/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM-1024x690.png" alt="Dzięki unicode-range poznałeś wszystkie znaki w tokenie. W tym przypadku deadbeef01." width="1024" height="690" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM.png"><img class="size-large wp-image-857" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/12/Screen-Shot-2017-12-14-at-6.35.40-PM-1024x690.png" alt="Dzięki unicode-range poznałeś wszystkie znaki w tokenie. W tym przypadku deadbeef01." width="1024" height="690" /></a>
   <figcaption>
     Dzięki unicode-range poznałaś/eś wszystkie znaki w tokenie. W tym przypadku deadbeef01.
   </figcaption>
@@ -158,7 +158,7 @@ No, jeśli masz buga, która pozwala na wstrzykiwanie CSS to po prostu go napraw
 
 Wiesz co to jest ligatura? To czcionka (lub glif) w której zamiast dwóch sąsiadujących osobnych liter używa się nowego specjalnego znaku, który powstał z połączenia tych liter. Przykładowo, za wikipedią, możemy wymienić takie kombinacje liter i odpowiednie dla nich ligatury:
 
-<a href="https://typeofweb.com/wp-content/uploads/2017/12/Ligatures.png"><img class="aligncenter size-full wp-image-862" src="https://typeofweb.com/wp-content/uploads/2017/12/Ligatures.png" alt="Popularne ligatury" width="555" height="514" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/12/Ligatures.png"><img class="aligncenter size-full wp-image-862" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/12/Ligatures.png" alt="Popularne ligatury" width="555" height="514" /></a>
 
 Dzięki nim tekst ma być bardziej czytelny i piękny :) <strong>Ja też używam na tym blogu specjalnych ligatur do formatowania kodu.</strong> Przykładowo: <code>=&gt;</code> zamiast <code>=</code> i <code>&gt;</code> albo <code>!==</code> zamiast <code>!</code> <code>=</code> <code>=</code>. Wykorzystuję do tego fonta <a href="https://github.com/tonsky/FiraCode">FiraCode</a>.
 

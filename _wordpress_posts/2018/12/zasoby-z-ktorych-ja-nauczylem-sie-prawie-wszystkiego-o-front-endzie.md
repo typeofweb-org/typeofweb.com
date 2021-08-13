@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/12/books-chair-clock-707196.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/books-chair-clock-707196.jpg
   width: 6000
   height: 3165
 categories:
@@ -25,7 +25,7 @@ Nie tak dawno temu, nie umiałem zupełnie nic. Nie miałem pojęcia na temat In
 
 ## Delphi
 
-Moja przygoda z programowaniem zaczęła się, gdy <img src="https://typeofweb.com/wp-content/uploads/2018/12/UudKgzU-201x300.jpg" alt="Programowanie w Delphi" width="201" height="300" class="alignleft size-medium wp-image-1749" style="margin-top: 10px;" /> jeszcze nie miałem komputera. Jako dzieciak w wakacje 2002 wchłonąłem „Programowanie w Delphi” z serii Biblioteczka Komputer Świat. Bez dostępu do edytora, bez możliwości przetestowania czegokolwiek, przeczytałem każdy listing kodu, każdą linijkę, starając się jak najwięcej zrozumieć i zapamiętać. Tak to się zaczęło.
+Moja przygoda z programowaniem zaczęła się, gdy <img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/UudKgzU-201x300.jpg" alt="Programowanie w Delphi" width="201" height="300" class="alignleft size-medium wp-image-1749" style="margin-top: 10px;" /> jeszcze nie miałem komputera. Jako dzieciak w wakacje 2002 wchłonąłem „Programowanie w Delphi” z serii Biblioteczka Komputer Świat. Bez dostępu do edytora, bez możliwości przetestowania czegokolwiek, przeczytałem każdy listing kodu, każdą linijkę, starając się jak najwięcej zrozumieć i zapamiętać. Tak to się zaczęło.
 
 Ta historia brzmi jak niezła ściema, ale zaręczam, że jest prawdziwa. Byłem tam, widziałem na własne oczy. Tak rodzi się prawdziwa pasja.
 
@@ -33,7 +33,7 @@ Ta historia brzmi jak niezła ściema, ale zaręczam, że jest prawdziwa. Byłem
 
 Krótko po tym, w domu pojawił się komputer. A potem Komputer Świat, później Komputer Świat Ekspert, a w międzyczasie CD-Action. Ten ostatni magazyn, na dołączonej płycie CD, obok patcha do Colin McRae Rally 3, **zawierał e-zin „Strefa WWW”**. To było coś!
 
-<img src="https://typeofweb.com/wp-content/uploads/2018/12/200309max-215x300.jpg" alt="" width="215" height="300" class="alignright size-medium wp-image-1750" />
+<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/200309max-215x300.jpg" alt="" width="215" height="300" class="alignright size-medium wp-image-1750" />
 
 Poradniki, kursy, informacje z sieci. W czasach gdy **płaciło się za każdą minutę spędzoną w Internecie**, a najlepszą wyszukiwarką była ta na onet.pl, taki zbiór zredagowanych i bardzo wartościowych informacji był prawdziwym skarbem! Co miesiąc w kiosku, na wyciągnięcie ręki. Wystarczyło poprosić rodziców :)
 
@@ -52,7 +52,7 @@ Przewińmy kilka lat do przodu. Gdy tylko poznałem słowo "freelancer", to od r
 Wtedy postanowiłem poszukać pierwszej „prawdziwej” pracy. Zaaplikowałem do pewnej znanej polskiej firmy zajmującej się wykonywaniem stron internetowych. Współpracował z nimi mój znajomy, poszukiwali freelancerów, dobrze płacili. **No i mnie nie chcieli.** Moje umiejętności z CD-Action okazały się niewystarczające!
 
 <figure id="attachment_1758" align="aligncenter" width="1024">
-  <a href="https://typeofweb.com/wp-content/uploads/2018/12/odrzucenie-rekrutacja.png"><img src="https://typeofweb.com/wp-content/uploads/2018/12/odrzucenie-rekrutacja-1024x281.png" alt="Część feedbacku, który dostałem po nieudanej rekrutacji." width="1024" height="281" class="size-large wp-image-1758" /></a>
+  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/odrzucenie-rekrutacja.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/odrzucenie-rekrutacja-1024x281.png" alt="Część feedbacku, który dostałem po nieudanej rekrutacji." width="1024" height="281" class="size-large wp-image-1758" /></a>
   <figcaption>
     Część feedbacku, który dostałem po nieudanej rekrutacji.
   </figcaption>
@@ -89,7 +89,7 @@ Niedługo później postanowiłem wyjechać na pierwszą konferencję w życiu
 Jake Archibald, Bruce Lawson, Christian Heilmann, Syd Lawrence, i wiele innych fantastycznych osób. **Font-face, multimedia w HTML5, Adaptive Web Design, Responsive Web Design, Accessibility, WAI ARIA, nowoczesny, semantyczny kod**.
 Piękne idee — tutaj w całkowicie praktycznym zastosowaniu, ze strony profesjonalistów z całego świata. To było wow!
 
-<a href="https://typeofweb.com/wp-content/uploads/2018/12/Screenshot-2018-12-13-at-8.28.10-AM.png"><img src="https://typeofweb.com/wp-content/uploads/2018/12/Screenshot-2018-12-13-at-8.28.10-AM-742x1024.png" alt="" width="742" height="1024" class="aligncenter size-large wp-image-1770" /></a>
+<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/Screenshot-2018-12-13-at-8.28.10-AM.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/12/Screenshot-2018-12-13-at-8.28.10-AM-742x1024.png" alt="" width="742" height="1024" class="aligncenter size-large wp-image-1770" /></a>
 
 **Wyjazd na tę pierwszą konferencję sprawił, że poczułem, że naprawdę rosnę**. W dwa dni nauczyłem się tak wiele, a ponadto wróciłem do domu z garścią nowych tematów i zajawek do sprawdzenia.
 

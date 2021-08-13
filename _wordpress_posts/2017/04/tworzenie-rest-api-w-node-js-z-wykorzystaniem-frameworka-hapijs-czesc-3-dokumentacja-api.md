@@ -106,7 +106,7 @@ Zwróć też uwagę, że wywołanie <code>server.start</code> przeniosłem do ś
 
 To wystarczy, aby nasza dokumentacja była automatycznie generowana. Uruchom serwer i otwórz adres <a href="http://localhost:3000/documentation">http://localhost:3000/documentation</a> Twoim oczom powinien się ukazać widok podobny do tego:
 
-<img src="/content/images/2017/04/Screenshot-2017-04-14-12.35.54.png" alt="" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/04/Screenshot-2017-04-14-12.35.54.png" alt="" />
 
 <strong>Jednak nie ma tutaj jeszcze żadnego endpointa!</strong> Dlaczego? Aplikacje napisane w HapiJS mogą być mieszanką choćby statycznych stron i REST API. Dokumentować chcemy tylko REST API, dlatego musimy dodatkowo powiedzieć Hapi, które końcówki są naszym API, a które nie. <strong>Musimy otagować</strong> odpowiednie route'y poprzez dodanie do nich właściwości <code>tags: ['api']</code>:
 
@@ -123,11 +123,11 @@ To wystarczy, aby nasza dokumentacja była automatycznie generowana. Uruchom ser
 
 Gdy to zrobisz, wreszcie dokumentacja będzie generowana prawidłowo dla wybranych endpointów:
 
-<img src="/content/images/2017/04/Screenshot-2017-04-14-12.40.35.png" alt="" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/04/Screenshot-2017-04-14-12.40.35.png" alt="" />
 <h1 id="dodatkoweinformacje">Dodatkowe informacje</h1>
 Weźmy pod lupę przykładową dokumentację dwóch endpointów:
 
-<img src="/content/images/2017/04/Screenshot-2017-04-14-12.43.49.png" alt="" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/04/Screenshot-2017-04-14-12.43.49.png" alt="" />
 
 Z prawej strony w polu <em>Data Type</em> widzimy informacje, które podaliśmy do walidatora Joi. W pola <em>body</em> oraz w <em>Parameters</em> poniżej <strong>można wpisać dowolne wartości i przetestować działanie API. To świetna możliwość!</strong>
 Zauważcie, że pole, w którym jasno zdefiniowaliśmy tylko 3 poprawne wartości (pl, gb, de) nie jest inputem, lecz selectem: <code>hapi-swagger</code> dobrze sobie z tym poradził :)
@@ -148,7 +148,7 @@ Opis oraz dodatkowe notatki możesz podać w jako pola <code>description</code>
   …
 });
 </code></pre>
-<img src="/content/images/2017/04/Screenshot-2017-04-14-12.50.32.png" alt="screenshot" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/04/Screenshot-2017-04-14-12.50.32.png" alt="screenshot" />
 <h2 id="zwracanedane">Zwracane dane</h2>
 Aby opisać dane zwracane przez endpoint, również możemy skorzystać z Joi. Dodaj pole <code>response.schema</code> w konfiguracji route'a:
 <pre><code class="language-javascript">server.route({  
@@ -170,7 +170,7 @@ Aby opisać dane zwracane przez endpoint, również możemy skorzystać z Joi. D
 </code></pre>
 Korzystamy tutaj z dwóch nowych funkcji, których nazwy raczej mówią już wszystko: <code>example</code> oraz <code>label</code>. <code>example</code> sprawia, że w dokumentacji pojawi się konkretny przykład wartości. Jest to przydatne, gdy chcemy opisać coś precyzyjnie i jasno. <code>label</code> zaś umożliwia nadanie unikatowej nazwy tej strukturze danych w celach łatwiejszej identyfikacji.
 
-<img src="/content/images/2017/04/Screenshot-2017-04-14-13.05.50.png" alt="" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/04/Screenshot-2017-04-14-13.05.50.png" alt="" />
 <h3 id="duplikacjakodu">Duplikacja kodu</h3>
 Na pewno zauważyłeś, że dane przyjmowane przez ten endpoint i dane przez niego zwracane mają dokłądnie tę samą strukturę – przyjmujemy kontakt i zwracamy kontakt. Można by się pokusić o przeniesienie schemy'y Joi do osobnej stałej i użycie jej dwukrotnie:
 <pre><code class="language-javascript">const ContactSchema = Joi.object({  
@@ -211,7 +211,7 @@ W prawdziwej aplikacjie niektóre endpointy będą zwracały wiele różnych kod
   …
 });
 </code></pre>
-<img src="/content/images/2017/04/Screenshot-2017-04-14-13.36.01.png" alt="" />
+<img src="https://res.cloudinary.com/type-of-web/content/images/2017/04/Screenshot-2017-04-14-13.36.01.png" alt="" />
 <h2 id="testowaniebezporedniowswaggerze">Testowanie bezpośrednio w Swaggerze</h2>
 W wygenerowanej dokumentacji na pewno Twoją uwagę przykuł formularz oraz przycisk "Try it out". Wspominałem już, że <strong>Swagger UI pozwala na testowanie API bezpośrednio na stronie z dokumentacją.</strong> Dopiszemy teraz brakującą funkcję (sprawdzanie czy kontakt już istnieje) i zwrócimy odpowiedni kod błędu, a następnie przetestujemy to zachowanie bezpośrednio w Swaggerze.
 <h3 id="kod">Kod</h3>

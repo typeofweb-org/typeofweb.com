@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/06/2018-gitlab-bitbucket-gitea-gogs.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/06/2018-gitlab-bitbucket-gitea-gogs.png
   width: 1200
   height: 567
 categories:

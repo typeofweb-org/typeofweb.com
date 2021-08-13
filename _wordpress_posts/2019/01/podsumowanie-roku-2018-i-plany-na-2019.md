@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2019/01/agenda-blank-checklist-3299.jpg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/01/agenda-blank-checklist-3299.jpg
   width: 1600
   height: 940
 categories:

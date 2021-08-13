@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2021/07/relatywny_wzgledny_subiektywny_czas_postrzeganie.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2021/07/relatywny_wzgledny_subiektywny_czas_postrzeganie.png
   width: 1200
   height: 633
 categories:

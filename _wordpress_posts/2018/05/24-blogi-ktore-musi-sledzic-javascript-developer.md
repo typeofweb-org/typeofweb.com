@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2018/05/blog-dla-front-end-developerow.jpeg
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/05/blog-dla-front-end-developerow.jpeg
   width: 1589
   height: 833
 categories:

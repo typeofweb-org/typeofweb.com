@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2020/01/kolejki_lifo_fifo_priorytetowa.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/01/kolejki_lifo_fifo_priorytetowa.png
   width: 1688
   height: 780
 categories:

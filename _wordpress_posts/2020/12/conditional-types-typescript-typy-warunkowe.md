@@ -10,7 +10,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://typeofweb.com/wp-content/uploads/2020/12/typescript-conditional-types-typy-warunkowe.png
+    https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/12/typescript-conditional-types-typy-warunkowe.png
   width: 1200
   height: 630
 categories:
