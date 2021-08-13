@@ -9,7 +9,7 @@ const AdminNetlify = Dynamic<{}>(
 
 export default function AdminPage() {
   return (
-    <div>
+    <div className="min-h-screen">
       <AdminNetlify />
     </div>
   );
