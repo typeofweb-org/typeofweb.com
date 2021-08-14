@@ -38,6 +38,11 @@ export function permalinkIsCategory(permalink: string) {
   return allCategories.map((c) => c.slug).includes(permalink);
 }
 
+export function categorySlugToCategory(categorySlug?: string | null) {
+  const mainCategory = allCategories.find((c) => c.slug === categorySlug) ?? null;
+  return mainCategory;
+}
+
 export function categoriesToMainCategory(categories?: readonly { readonly name: string; readonly slug: string }[]) {
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- ok, because we know the type
   const categoryMappingKey = categories
@@ -45,8 +50,7 @@ export function categoriesToMainCategory(categories?: readonly { readonly name: 
     .sort()
     .join('+') as keyof typeof categoryMappings | undefined;
   const mainCategorySlug = categoryMappingKey ? categoryMappings[categoryMappingKey] : null;
-  const mainCategory = allCategories.find((c) => c.slug === mainCategorySlug) ?? null;
-  return mainCategory;
+  return categorySlugToCategory(mainCategorySlug);
 }
 
 export const getCategoryLink = (categoryOrSlug: typeof allCategories[number] | string) =>

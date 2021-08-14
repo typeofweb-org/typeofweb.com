@@ -43,6 +43,10 @@ export const allSeries = [
   { slug: 'angular-2', name: 'Angular 2' },
 ];
 
+export function seriesSlugToSeries(seriesSlug?: string | null) {
+  return allSeries.find((series) => series.slug === seriesSlug) ?? null;
+}
+
 export const getSeriesLink = (seriesOrSlug: Series | string) =>
   typeof seriesOrSlug === 'string' ? `/kurs/${seriesOrSlug}` : `/kurs/${seriesOrSlug.slug}`;
 
