@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 export const Input = forwardRef<HTMLInputElement, JSX.IntrinsicElements['input']>(({ children, ...props }, ref) => {
   return (
-    <label className="inline-flex flex-row w-full font-sans text-sm">
+    <label className="w-full font-sans text-sm">
       {children}
       <input
         ref={ref}
@@ -14,3 +14,4 @@ export const Input = forwardRef<HTMLInputElement, JSX.IntrinsicElements['input']
     </label>
   );
 });
+Input.displayName = 'Input';

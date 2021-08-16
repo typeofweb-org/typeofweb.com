@@ -1,27 +1,28 @@
 import Algoliasearch from 'algoliasearch/lite';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import { useEffect, memo, useState, useCallback, forwardRef, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { InstantSearch, connectSearchBox, connectHits } from 'react-instantsearch-dom';
 
+import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { Input } from '../atoms/Input';
+
+import type { KeyboardEventHandler } from 'react';
+import type { HitsProvided, SearchBoxProvided } from 'react-instantsearch-core';
 
 const searchClient = Algoliasearch('QB2FWHH99M', '25fc15b3e367b7a46c1f3617b39aa749');
 
 export const SearchWidget = memo(() => {
   const IS_MAC = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform);
 
-  const { route } = useRouter();
-  useEffect(() => {
-    closeSearch();
-  }, [route]);
+  const { events } = useRouter();
 
-  const searchModalRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
-
+  const toggleSearch = useCallback(() => {
+    setIsOpen((v) => !v);
+  }, []);
   const openSearch = useCallback(() => {
     setIsOpen(true);
   }, []);
@@ -29,7 +30,12 @@ export const SearchWidget = memo(() => {
     setIsOpen(false);
   }, []);
 
-  useOnClickOutside(searchModalRef, closeSearch);
+  useEffect(() => {
+    events.on('routeChangeStart', closeSearch);
+    return () => events.off('routeChangeStart', closeSearch);
+  }, [events, closeSearch]);
+
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
@@ -37,7 +43,7 @@ export const SearchWidget = memo(() => {
       const isK = event.key === 'k';
       const isMeta = IS_MAC ? event.metaKey : event.ctrlKey;
       if (isK && isMeta && !event.altKey && !event.shiftKey) {
-        openSearch();
+        toggleSearch();
       } else if (isEsc) {
         closeSearch();
       }
@@ -47,11 +53,11 @@ export const SearchWidget = memo(() => {
     return () => {
       document.removeEventListener('keydown', handler);
     };
-  }, []);
+  }, [IS_MAC, closeSearch, toggleSearch]);
 
   return (
     <div className="block mb-8">
-      {isOpen && <SearchModal ref={searchModalRef} onCancel={closeSearch} />}
+      {isOpen && <SearchModal onCancel={closeSearch} />}
       <button
         aria-label="Szukaj na stronie…"
         className="flex flex-row items-center justify-between px-5 w-full h-12 bg-gradient-to-b focus:border-blue-200 border-gray-300 rounded-lg hover:shadow-lg focus:shadow-lg shadow-md from-white to-gray-100 transition-shadow focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2"
@@ -95,12 +101,27 @@ interface SearchModalProps {
   readonly onCancel: () => void;
 }
 
-const CustomSearchBox = connectSearchBox(({ refine, currentRefinement }) => {
+interface CustomSearchBoxProps extends SearchBoxProvided {
+  readonly currentObjectID?: string | null;
+}
+
+const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(({ refine, currentRefinement, currentObjectID }) => {
+  const handleCustomSearchBoxKeyDown = useCallback<KeyboardEventHandler<HTMLInputElement>>(
+    (e) => {
+      if (currentRefinement && e.key === 'Escape') {
+        e.stopPropagation();
+        refine('');
+      }
+    },
+    [currentRefinement, refine],
+  );
+
   return (
-    <form className="flex items-center w-full h-full" noValidate role="search">
+    <form className="relative flex items-center w-full max-h-screen" noValidate role="search">
       <Input
-        className="flex-1 mt-0 pl-16 w-full h-20 text-lg border-transparent shadow-none sm:text-3xl"
-        aria-autocomplete="both"
+        onKeyDown={handleCustomSearchBoxKeyDown}
+        className="flex-1 mt-0 pl-8 w-full h-14 text-lg border-transparent shadow-none sm:text-3xl lg:pl-16 lg:h-20"
+        aria-autocomplete="list"
         autoComplete="off"
         autoCorrect="off"
         autoCapitalize="off"
@@ -112,11 +133,13 @@ const CustomSearchBox = connectSearchBox(({ refine, currentRefinement }) => {
         value={currentRefinement}
         onChange={(e) => refine(e.currentTarget.value)}
         autoFocus
+        aria-controls="search-hits-list"
+        {...(currentObjectID && { 'aria-activedescendant': 'id' + currentObjectID })}
       >
         <svg
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="z-10 inline flex-none -ml-6 mt-5 py-1 h-8 text-gray-700 translate-x-12"
+          className="absolute z-10 left-3 top-1/2 py-1 h-6 text-gray-700 -translate-y-1/2 lg:left-6 lg:h-8"
         >
           <path d="M19.71,18.29,16,14.61A9,9,0,1,0,14.61,16l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,19.71,18.29ZM2,9a7,7,0,1,1,12,4.93h0s0,0,0,0A7,7,0,0,1,2,9Z"></path>
         </svg>
@@ -213,21 +236,71 @@ interface TypeOfWebHit {
   readonly __position: number;
 }
 
-export const CustomHits = connectHits<TypeOfWebHit>(({ hits }) => {
-  const [currentObjectID, setObjectId] = useState('');
+interface CustomHitsProps extends HitsProvided<TypeOfWebHit> {
+  readonly currentObjectID: string | null;
+  readonly setObjectId: (objectId: string) => void;
+}
+
+export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, currentObjectID, setObjectId }) => {
+  const { push } = useRouter();
+
+  const selectNextHit = useCallback(() => {
+    const currentHitIndex = hits.findIndex((h) => h.objectID === currentObjectID);
+    const nextHitIndex = (currentHitIndex + 1) % hits.length;
+    const nextHit = hits[nextHitIndex];
+    setObjectId(nextHit.objectID);
+  }, [currentObjectID, hits, setObjectId]);
+
+  const selectPrevHit = useCallback(() => {
+    const currentHitIndex = hits.findIndex((h) => h.objectID === currentObjectID);
+    const prevHitIndex = (currentHitIndex - 1 + hits.length) % hits.length;
+    const prevHit = hits[prevHitIndex];
+    setObjectId(prevHit.objectID);
+  }, [currentObjectID, hits, setObjectId]);
+
+  useEffect(() => {
+    const handler = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        selectPrevHit();
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        selectNextHit();
+      } else if (event.key === 'Enter' && currentObjectID) {
+        event.preventDefault();
+        void push(getUrlForPermalink(currentObjectID));
+      }
+    };
+
+    document.addEventListener('keydown', handler);
+    return () => {
+      document.removeEventListener('keydown', handler);
+    };
+  }, [selectNextHit, selectPrevHit, currentObjectID, push]);
+
   const currentHit = hits.find((h) => h.objectID === currentObjectID);
 
   return (
-    <div className="max-h-[50vh] flex flex-row">
-      <ol className="overflow-scrolling-touch mt-1 w-1/2 overflow-y-auto" aria-controls="search-details">
+    <div className="lg:h-[50vh] flex flex-row max-h-screen">
+      <ol
+        id="search-hits-list"
+        className="overflow-scrolling-touch mt-1 pb-32 w-full overflow-y-auto lg:w-1/2"
+        aria-controls="search-details"
+      >
         {hits.map((hit) => (
-          <li aria-describedby="search-details" key={hit.objectID}>
+          <li
+            key={hit.objectID}
+            role="option"
+            aria-describedby="search-details"
+            aria-selected={currentObjectID === hit.objectID ? 'true' : 'false'}
+            id={'id' + hit.objectID}
+          >
             <CustomHit hit={hit} onItemHover={setObjectId} currentObjectID={currentObjectID} />
           </li>
         ))}
       </ol>
       <div
-        className="overflow-scrolling-touch mt-1 px-8 py-6 w-1/2 overflow-y-auto"
+        className="lg:overflow-scrolling-touch hidden lg:block lg:mt-1 lg:px-8 lg:py-6 lg:w-1/2 lg:overflow-y-auto"
         aria-atomic
         aria-live="polite"
         role="region"
@@ -259,19 +332,30 @@ const HitDetails = memo<{ readonly currentHit: TypeOfWebHit }>(
   },
   (prev, next) => prev.currentHit.objectID === next.currentHit.objectID,
 );
+HitDetails.displayName = 'HitDetails';
 
 interface CustomHitProps {
   readonly hit: TypeOfWebHit;
   readonly onItemHover: (objectID: string) => void;
-  readonly currentObjectID?: string;
+  readonly currentObjectID?: string | null;
 }
 
 export const CustomHit = memo<CustomHitProps>(
   ({ hit, onItemHover, currentObjectID }) => {
     const isActive = currentObjectID === hit.objectID;
+
+    const currentElRef = useRef<HTMLAnchorElement>(null);
+
+    useEffect(() => {
+      if (isActive) {
+        currentElRef.current?.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
+      }
+    }, [isActive]);
+
     return (
       <Link href={getUrlForPermalink(hit.objectID)}>
         <a
+          ref={currentElRef}
           onMouseOver={() => onItemHover(hit.objectID)}
           onFocus={() => onItemHover(hit.objectID)}
           onPointerEnter={() => onItemHover(hit.objectID)}
@@ -284,9 +368,9 @@ export const CustomHit = memo<CustomHitProps>(
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className={`absolute right-4 top-1/2 block w-6 h-auto -translate-y-1/2 ${
               isActive ? 'block text-gray-100' : 'hidden'
             }`}
@@ -316,34 +400,48 @@ export const CustomHit = memo<CustomHitProps>(
 );
 CustomHit.displayName = 'AlogliaHit';
 
-const SearchModal = forwardRef<HTMLDivElement, SearchModalProps>(({ onCancel }, ref) => {
+const SearchModal = ({ onCancel }: SearchModalProps) => {
+  const [currentObjectID, setObjectId] = useState<string | null>(null);
+  const searchModalRef = useRef<HTMLDivElement>(null);
+  const bodyFix = useBodyFix();
+  useOnClickOutside(searchModalRef, onCancel);
+
+  useEffect(() => {
+    bodyFix.fixBody();
+    return () => {
+      bodyFix.unfixBody();
+    };
+  }, [bodyFix]);
+
   return (
     <InBody>
       <InstantSearch searchClient={searchClient} indexName="typeofweb_prod">
-        <div className="fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden xl:pb-32 xl:pt-40 xl:px-40">
+        <div className="lg:pt-[30vh] fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden">
           <div
-            ref={ref}
-            className="flex flex-col items-stretch justify-between w-full bg-white shadow-md xl:max-w-5xl xl:rounded-md"
+            ref={searchModalRef}
+            className="flex flex-col items-stretch justify-between w-full max-h-screen bg-white shadow-md xl:max-w-5xl xl:rounded-md"
+            // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- https://www.w3.org/TR/wai-aria-practices-1.1/examples/combobox/aria1.1pattern/listbox-combo.html
             role="combobox"
+            aria-owns="search-hits-list"
             aria-expanded="true"
             aria-haspopup="listbox"
           >
             <div className="flex flex-row rounded-lg shadow-md">
-              <CustomSearchBox />
+              <CustomSearchBox currentObjectID={currentObjectID} />
               <div className="w-0.5 bg-gray-200" />
               <button
                 onClick={onCancel}
                 type="button"
-                className="flex flex-row items-center px-16 text-gray-600 hover:text-gray-800 focus:border-blue-200 border-gray-300 rounded-md transition-shadow focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2"
+                className="flex flex-row items-center px-4 text-gray-600 hover:text-gray-800 focus:border-blue-200 border-gray-300 rounded-md transition-shadow focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2 lg:px-16"
               >
                 Anuluj
               </button>
             </div>
-            <CustomHits />
+            <CustomHits currentObjectID={currentObjectID} setObjectId={setObjectId} />
           </div>
         </div>
       </InstantSearch>
     </InBody>
   );
-});
+};
 SearchModal.displayName = 'SearchModal';

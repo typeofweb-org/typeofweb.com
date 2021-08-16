@@ -1,7 +1,6 @@
 import Dynamic from 'next/dynamic';
 import { memo } from 'react';
 
-import { Widget } from '../atoms/Widget';
 import { LatestPostsWidget } from '../molecules/LatestPostsWidget';
 import { SeriesTableOfContentsWidget } from '../molecules/SeriesTableOfContentsWidget';
 import { SocialWidget } from '../molecules/SocialWidget';
@@ -13,11 +12,9 @@ const SearchWidget = Dynamic<{}>(
   () => import(/* webpackChunkName: "SearchWidget" */ '../molecules/SearchWidget').then((m) => m.SearchWidget),
   {
     ssr: false,
-    loading: () => (
-      <Widget>
-        <div style={{ height: '35.59px' }} />
-      </Widget>
-    ),
+    loading() {
+      return <div className="mb-8 h-12 bg-white rounded-lg shadow-md" />;
+    },
   },
 );
 

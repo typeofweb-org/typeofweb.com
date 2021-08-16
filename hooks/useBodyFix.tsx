@@ -21,6 +21,10 @@ class FixBodyService {
       return;
     }
 
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      return;
+    }
+
     this.windowOffsetY = window.pageYOffset;
     document.body.classList.add('not-scrollable');
     document.body.style.top = `-${this.windowOffsetY}px`;
@@ -34,6 +38,10 @@ class FixBodyService {
 
   unfixBody() {
     if (typeof window === 'undefined') {
+      return;
+    }
+
+    if (window.matchMedia('(min-width: 1024px)').matches) {
       return;
     }
 
