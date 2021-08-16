@@ -49,6 +49,7 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
                         objectFit="cover"
                         objectPosition="center center"
                         sizes="160px"
+                        alt=""
                       />
                     )}
                   </div>

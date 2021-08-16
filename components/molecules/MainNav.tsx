@@ -13,13 +13,19 @@ import type { ReactNode } from 'react';
 
 const iconClasses = 'mr-1.5 w-6 h-6 lg:hidden xl:inline';
 const iconForItem: Record<string, () => JSX.Element> = {
-  'react-js': () => (
-    <ReactIcon
-      className={`${iconClasses} fill-current text-[color:#61DAFB] transform-gpu rotate-0 group-hover:rotate-180 transition-transform`}
-    />
-  ),
-  typescript: () => <TsIcon className={`${iconClasses} text-[color:#007acc]`} />,
-  javascript: () => <JsIcon className={`${iconClasses} w-7 h-7 bg-[color:#f0db4f] text-white`} />,
+  'react-js'() {
+    return (
+      <ReactIcon
+        className={`${iconClasses} fill-current text-[color:#61DAFB] transform-gpu rotate-0 group-hover:rotate-180 transition-transform`}
+      />
+    );
+  },
+  typescript() {
+    return <TsIcon className={`${iconClasses} text-[color:#007acc]`} />;
+  },
+  javascript() {
+    return <JsIcon className={`${iconClasses} w-7 h-7 bg-[color:#f0db4f] text-white`} />;
+  },
 };
 
 const navItems: readonly { readonly slug: string; readonly label: ReactNode; readonly className?: string }[] = [

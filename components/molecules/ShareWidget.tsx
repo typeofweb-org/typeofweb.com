@@ -4,9 +4,10 @@ import TwitterIcon from '../../images/social/twitter.svg';
 
 export const ShareWidget = () => {
   return (
-    <div className="fixed z-30 left-0 py-3 w-8 bg-gray-100 rounded-2xl rounded-bl-none rounded-tl-none shadow-md animate-appear lg:py-4 lg:w-11 xl:left-auto xl:py-4 xl:w-12 xl:rounded-3xl xl:-translate-x-full">
+    <div className="fixed z-30 left-0 top-28 py-3 w-8 bg-gray-100 rounded-2xl rounded-bl-none rounded-tl-none shadow-md animate-appear lg:py-4 lg:w-11 xl:left-auto xl:py-4 xl:w-12 xl:rounded-3xl xl:-translate-x-full">
       <small
-        className="block text-center text-gray-800 text-xs tracking-tighter -translate-y-1/4 uppercase lg:text-sm"
+        lang="en_GB"
+        className="block text-center text-gray-600 text-xs tracking-tighter -translate-y-1/4 uppercase lg:text-sm"
         aria-hidden
       >
         Share

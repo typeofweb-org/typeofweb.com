@@ -35,7 +35,7 @@ export function AdminNetlify() {
 
     CMS.registerEventListener({
       name: 'preSave',
-      handler: ({ author, entry }) => {
+      handler: ({ entry }) => {
         const title = entry.getIn(['data', 'title']);
         // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call -- ImmutableJS
         return entry.get('data').set('permalink', GithubSlugger.slug(title));
@@ -52,10 +52,6 @@ export function AdminNetlify() {
 }
 
 function PreviewComponent({ collection, fields, widgetFor }: PreviewTemplateComponentProps) {
-  if (!collection || !fields) {
-    return null;
-  }
-
   useEffect(() => {
     const iframe = document.querySelector<HTMLIFrameElement>('#preview-pane');
     if (!iframe || !iframe.contentDocument) {
@@ -72,6 +68,10 @@ function PreviewComponent({ collection, fields, widgetFor }: PreviewTemplateComp
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call -- ok
     Katex(iframe.contentDocument.body, { strict: false });
   }, []);
+
+  if (!collection || !fields) {
+    return null;
+  }
 
   const isVisible = (
     f: undefined | import('immutable').Map<string, unknown>,

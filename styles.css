@@ -24,10 +24,12 @@ html,
   @apply pt-12 lg:pt-16;
 }
 
-body.not-scrollable {
-  overflow: hidden;
-  position: fixed;
-  touch-action: none;
+@media screen and (max-width: 1023.9999px) {
+  body.not-scrollable {
+    overflow: hidden;
+    position: fixed;
+    touch-action: none;
+  }
 }
 
 .digits:nth-child(-n + 9):nth-child(n + 1)::before {

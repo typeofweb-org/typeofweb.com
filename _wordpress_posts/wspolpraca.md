@@ -62,7 +62,7 @@ Chętnie pojawię się na Twoim **meetupie**, **konferencji**, albo w **biurze f
 
 Skontaktuj się ze mną za pośrednictwem Facebooka. Odpisuję na wszystkie wiadomości :) Chętnie dzielę się swoją wiedzą i doświadczeniami, więc nie bój się o coś zapytać!
 
-<div style="text-align: center;">[typeofweb-facebook-page width="640" small-header="false" tabs="messages"]</div>
+<FacebookPageWidget tabs="messages" />
 
 ## Michał Miszczyszyn
 

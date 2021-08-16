@@ -118,6 +118,9 @@ module.exports = {
           '.w-fit': {
             width: 'fit-content',
           },
+          '.overflow-scrolling-touch': {
+            '-webkit-overflow-scrolling': 'touch',
+          },
           '.word-break-break-word': {
             'word-break': 'break-word',
           },
