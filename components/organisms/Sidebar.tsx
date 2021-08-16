@@ -13,22 +13,25 @@ const SearchWidget = Dynamic<{}>(
   {
     ssr: false,
     loading() {
-      return <div className="mb-8 h-12 bg-white rounded-lg shadow-md" />;
+      return <div className="h-12 bg-white rounded-lg shadow-md lg:mb-8" />;
     },
   },
 );
+
+const searchClasses = `lg:min-w-[294px] fixed z-50 right-0 top-0 pl-5 w-1/2 lg:static lg:z-auto lg:flex-1 lg:flex-shrink-0 lg:pl-0 lg:w-auto`;
+const widgetClasses = `min-w-[294px] flex-1 flex-shrink-0`;
 
 const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
   index() {
     return (
       <>
-        <div className="min-w-[294px] flex-1 flex-shrink-0">
+        <div className={searchClasses}>
           <SearchWidget />
         </div>
-        <div className="min-w-[294px] flex-1 flex-shrink-0">
+        <div className={widgetClasses}>
           <SocialWidget />
         </div>
-        <div className="min-w-[294px] flex-1 flex-shrink-0">
+        <div className={widgetClasses}>
           <LatestPostsWidget />
         </div>
       </>
@@ -37,11 +40,11 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
   post({ series }) {
     return (
       <>
-        <div className="min-w-[294px] flex-1 flex-shrink-0">
+        <div className={searchClasses}>
           <SearchWidget />
         </div>
         {series && (
-          <div className="min-w-[294px] flex-1 flex-shrink-0">
+          <div className={widgetClasses}>
             <SeriesTableOfContentsWidget series={series} />
           </div>
         )}
@@ -51,7 +54,7 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
   page() {
     return (
       <>
-        <div className="min-w-[294px] flex-1 flex-shrink-0">
+        <div className={searchClasses}>
           <SearchWidget />
         </div>
       </>

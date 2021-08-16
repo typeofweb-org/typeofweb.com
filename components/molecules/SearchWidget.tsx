@@ -1,7 +1,7 @@
 import Algoliasearch from 'algoliasearch/lite';
 import Link from 'next/link';
-import Router, { useRouter } from 'next/router';
-import { useEffect, memo, useState, useCallback, forwardRef, useRef } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, memo, useState, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { InstantSearch, connectSearchBox, connectHits } from 'react-instantsearch-dom';
 
@@ -56,20 +56,22 @@ export const SearchWidget = memo(() => {
   }, [IS_MAC, closeSearch, toggleSearch]);
 
   return (
-    <div className="block mb-8">
+    <div className="block lg:mb-8">
       {isOpen && <SearchModal onCancel={closeSearch} />}
       <button
         aria-label="Szukaj na stronie…"
-        className="flex flex-row items-center justify-between px-5 w-full h-12 bg-gradient-to-b focus:border-blue-200 border-gray-300 rounded-lg hover:shadow-lg focus:shadow-lg shadow-md from-white to-gray-100 transition-shadow focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2"
+        className="flex flex-row items-center justify-between px-5 w-full h-11 bg-gradient-to-b focus:border-blue-200 border-gray-300 rounded-lg hover:shadow-lg focus:shadow-lg shadow-md from-white to-gray-100 transition-shadow focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2 lg:h-12"
         title="Szukaj…"
         type="button"
         onClick={openSearch}
       >
-        <div className="flex flex-row gap-3 items-baseline mt-1 text-gray-600">
+        <div className="flex flex-row gap-3 items-baseline mt-1 w-full text-gray-600">
           <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 fill-current opacity-75">
             <path d="M19.71,18.29,16,14.61A9,9,0,1,0,14.61,16l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,19.71,18.29ZM2,9a7,7,0,1,1,12,4.93h0s0,0,0,0A7,7,0,0,1,2,9Z" />
           </svg>
-          Szukaj na stronie…
+          <span>
+            Szukaj<span className="hidden md:inline"> na stronie</span>…
+          </span>
         </div>
         <div className="hidden md:flex md:flex-grow-0 md:gap-2 md:items-center">
           <kbd className="shadow-darker block text-gray-600 bg-gradient-to-tl border-b-2 border-gray-300 rounded from-gray-100 to-gray-200">
