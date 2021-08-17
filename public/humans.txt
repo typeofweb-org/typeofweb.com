@@ -1,0 +1,20 @@
+/* PODZIĘKOWANIA */
+Ogromne podziękowania dla społeczności Type of Web na Discordzie za pierwszy feedback i sugestie odnośnie zmian na stronie. Dzięki! 👋
+
+____________
+
+/* TECH */
+- Next.js
+- TailwindCSS
+- Markdown
+- NetlifyCMS
+
+____________
+
+/* DOSTĘPNOŚĆ (ACCESSIBILITY) */
+Starałem się sprawić, aby strona była maksymalnie dostępna dla wszystkich użytkowniczek i użytkowników Internetu. Jeśli jednak znajdziesz jakieś błędy lub masz sugestie, to koniecznie odezwij się do mnie!
+
+____________
+
+/* AUTOR */
+Michał Miszczyszyn

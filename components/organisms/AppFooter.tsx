@@ -92,15 +92,33 @@ export const AppFooter = memo(() => {
       </nav>
       <address className="text-center leading-7">
         Type of Web - Michał Miszczyszyn
-        <div>
+        <p className="not-italic">
           <Link href="/polityka-prywatnosci">
-            <a className="hover:text-green-700 transition-colors">Polityka prywatności</a>
+            <a className="hover:text-green-700 underline transition-colors">Polityka prywatności</a>
           </Link>
           {' | '}
           <Link href="/regulamin">
-            <a className="hover:text-green-700 transition-colors">Regulamin</a>
+            <a className="hover:text-green-700 underline transition-colors">Regulamin</a>
           </Link>
-        </div>
+        </p>
+        <p className="mt-3 font-mono not-italic">
+          <a href="/humans.txt" className="hover:text-green-700 underline transition-colors">
+            humans.txt
+          </a>{' '}
+          <a href="/lawyers.txt" className="hover:text-green-700 underline transition-colors">
+            lawyers.txt
+          </a>
+        </p>
+        <p className="mt-3 text-lg not-italic font-bold">
+          Znalazłeś/aś błąd na stronie?{' '}
+          <a
+            className="hover:text-green-700 underline transition-colors"
+            href="https://github.com/typeofweb/typeofweb.com/issues/new"
+          >
+            Otwórz issue na GitHubie
+          </a>
+          !
+        </p>
       </address>
     </footer>
   );

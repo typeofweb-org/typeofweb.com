@@ -1,11 +1,13 @@
 import Link from 'next/link';
 
+import { SiteHeader } from '../components/molecules/SiteHeader';
 import { AppFooter } from '../components/organisms/AppFooter';
 
 export default function Custom404() {
   return (
     <>
-      <div className="h-[80vh] flex flex-col items-center justify-center">
+      <SiteHeader pageKind="page" />
+      <div className="h-[80vh] pb-[20vh] flex flex-col items-center justify-center">
         <h1 className="glitch" data-text="404 - Page Not Found">
           404 - Page Not Found
         </h1>
@@ -25,7 +27,7 @@ export default function Custom404() {
   background-clip: text;
   white-space: nowrap;
   font-size: max(1rem, 3vw);
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
   animation: move-bg 1000s infinite linear;
 }
 

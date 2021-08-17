@@ -435,7 +435,7 @@ const SearchModal = ({ onCancel }: SearchModalProps) => {
   return (
     <InBody>
       <InstantSearch searchClient={searchClient} indexName="typeofweb_prod">
-        <div className="animate-delay-0 animate-duration-100 lg:pt-[30vh] fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden animate-appear">
+        <div className="animate-delay-0 animate-duration-100 lg:pt-[20vh] fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden animate-appear">
           <div
             ref={searchModalRef}
             className="flex flex-col items-stretch justify-between w-full max-h-screen bg-white shadow-md xl:max-w-5xl xl:rounded-md"

@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pl-PL" dir="ltr">
         <Head>
+          <link rel="author" href="humans.txt" />
           <link
             rel="preload"
             as="font"

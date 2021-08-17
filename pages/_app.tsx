@@ -22,16 +22,23 @@ function ScriptOnce(props: NextScriptProps) {
 
 function ScriptAfterInteraction({
   children,
+  id,
   ...props
-}: Partial<Omit<HTMLScriptElement, 'children'>> & { readonly children?: string }) {
+}: Partial<Omit<HTMLScriptElement, 'children'>> & { readonly children?: string; readonly id: string }) {
   useEffect(() => {
     window.addEventListener('scroll', listener, { passive: true, once: true });
+
+    if (sessionStorage['s' + id]) {
+      // hopefully the script is cached at this point
+      listener();
+    }
 
     return () => {
       window.removeEventListener('scroll', listener);
     };
 
     function listener() {
+      sessionStorage['s' + id] = true;
       window.removeEventListener('scroll', listener);
       (window.requestIdleCallback || window.requestAnimationFrame)(() => {
         const script = Object.entries(props).reduce((script, [key, value]) => {
@@ -78,11 +85,13 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         </UIStateProvider>
       </RunningHeaderProvider>
       <ScriptAfterInteraction
+        id="fancyLinkUnderline"
         defer
         async
       >{`w.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
-      <ScriptAfterInteraction src="/contentVisibility.min.js" defer async />
+      <ScriptAfterInteraction id="contentVisibility" src="/contentVisibility.min.js" defer async />
       <ScriptAfterInteraction
+        id="gtag"
         src="https://www.googletagmanager.com/gtag/js?id=G-KNFC661M43"
         defer
         async
