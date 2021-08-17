@@ -24,6 +24,28 @@ html,
   @apply pt-12 lg:pt-16;
 }
 
+.size-full {
+  width: 100%;
+  max-width: 100%;
+}
+.size-large {
+  width: 768px;
+  max-width: 100%;
+}
+.size-medium {
+  width: 300px;
+  max-width: 100%;
+}
+.aligncenter {
+  @apply mx-auto;
+}
+.alignleft {
+  @apply float-left mr-5;
+}
+.alignright {
+  @apply float-right ml-5;
+}
+
 @media screen and (max-width: 1023.9999px) {
   body.not-scrollable {
     overflow: hidden;
@@ -184,10 +206,6 @@ progress {
   & .katex-html {
     white-space: normal;
   }
-}
-
-.aligncenter {
-  @apply mx-auto;
 }
 
 .regulations {

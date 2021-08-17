@@ -1,13 +1,8 @@
 ---
 title: Polityka prywatności Type of Web
 date: 2020-03-29T11:57:51.000Z
-isMarkdown: false
-status: publish
 permalink: polityka-prywatnosci
-authors:
-  - michal-miszczyszyn
 type: page
-categories: []
 seo: {}
 ---
 

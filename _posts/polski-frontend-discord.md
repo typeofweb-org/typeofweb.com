@@ -1,17 +1,12 @@
 ---
 title: Polski front-end na Discordzie!
 date: 2018-05-01T16:29:35.000Z
-isMarkdown: true
-status: publish
 permalink: polski-frontend-discord
-authors:
-  - michal-miszczyszyn
 type: page
 thumbnail:
   url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/05/Discord-Feature-Graphic.png
   width: 1024
   height: 500
-categories: []
 seo: {}
 ---
 

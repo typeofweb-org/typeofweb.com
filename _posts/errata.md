@@ -1,14 +1,9 @@
 ---
 title: Errata
 date: 2020-04-17T15:38:43.000Z
-isMarkdown: true
-status: publish
 permalink: errata
-authors:
-  - michal-miszczyszyn
-type: page
-categories: []
 seo: {}
+type: page
 ---
 
 ## Książka „TypeScript na poważnie”

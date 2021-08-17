@@ -1,13 +1,8 @@
 ---
 title: Regulamin Newslettera Type of Web
 date: 2020-03-29T11:18:49.000Z
-isMarkdown: false
-status: publish
 permalink: regulamin
-authors:
-  - michal-miszczyszyn
 type: page
-categories: []
 seo: {}
 ---
 

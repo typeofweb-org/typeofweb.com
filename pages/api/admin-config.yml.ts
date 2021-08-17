@@ -57,11 +57,11 @@ const config = async (): Promise<NetlifyConfigSchema> => {
     //     api_key: '936784498493233',
     //   },
     // },
-    collections: [await posts(), legacyWordpressCollection(), pages()],
+    collections: [await posts(), legacyWordpressCollection(), await pages()],
   };
 };
 
-function legacyWordpressCollection(): import('./_netlifySchema').CollectionItems {
+function legacyWordpressCollection() {
   return {
     name: 'legacy_posts',
     label: 'Posty z wordpressa',
@@ -218,7 +218,7 @@ function legacyWordpressCollection(): import('./_netlifySchema').CollectionItems
   };
 }
 
-async function posts(): Promise<import('./_netlifySchema').CollectionItems> {
+async function posts() {
   const authors = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
   return {
     name: 'posts',
@@ -252,6 +252,12 @@ async function posts(): Promise<import('./_netlifySchema').CollectionItems> {
         label: 'permalink',
         name: 'permalink',
         widget: 'hidden',
+      },
+      {
+        label: 'type',
+        name: 'type',
+        widget: 'hidden',
+        default: 'post',
       },
       {
         label: 'Data',
@@ -352,15 +358,27 @@ async function posts(): Promise<import('./_netlifySchema').CollectionItems> {
   };
 }
 
-function pages(): import('./_netlifySchema').CollectionItems {
+async function pages(): Promise<import('./_netlifySchema').CollectionItems> {
+  const props = await posts();
+
   return {
-    ...legacyWordpressCollection(),
+    ...props,
     summary: '{{title}} – {{fields.authors}}',
     name: 'pages',
     label: 'Strony',
     label_singular: 'Strona',
     description: '',
-    path: '',
     sortable_fields: [],
+    path: '{{slug}}',
+    folder: '_posts',
+    fields: [
+      ...props.fields.filter((f) => !['index', 'authors', 'categories', 'series', 'type'].includes(f.name)),
+      {
+        label: 'type',
+        name: 'type',
+        widget: 'hidden',
+        default: 'page',
+      },
+    ],
   };
 }

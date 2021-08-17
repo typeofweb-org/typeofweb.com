@@ -1,17 +1,12 @@
 ---
 title: Znajdź pracę zdalną z tymi serwisami
 date: 2018-01-28T00:59:33.000Z
-isMarkdown: false
-status: publish
 permalink: znajdz-prace-zdalna-tymi-serwisami
-authors:
-  - michal-miszczyszyn
 type: page
 thumbnail:
   url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-297755.jpeg
   width: 1280
   height: 835
-categories: []
 seo:
   metadesc: >-
     Praca zdalna to marzenie wielu osób!. Ja sam pracuję zdalnie od długiego

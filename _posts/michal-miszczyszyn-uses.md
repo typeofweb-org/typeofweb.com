@@ -1,13 +1,8 @@
 ---
 title: Michał Miszczyszyn Uses
 date: 2020-01-14T17:41:12.000Z
-isMarkdown: true
-status: publish
 permalink: michal-miszczyszyn-uses
-authors:
-  - michal-miszczyszyn
 type: page
-categories: []
 seo:
   title: Moje biurko, sprzęt i oprogramowanie %%page%% %%sep%% %%sitename%%
   metadesc: >-

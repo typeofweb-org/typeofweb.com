@@ -44,17 +44,23 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
   if (width && height && src) {
+    // const isFull = props.className?.includes('size-full') ?? false;
+    // const isLarge = props.className?.includes('size-large') ?? false;
+    // const isMedium = props.className?.includes('size-medium') ?? false;
+
     return (
-      <Image
-        {...props}
-        width={width}
-        height={height}
-        src={src}
-        alt={alt}
-        loading="lazy"
-        layout="responsive"
-        loader={typeofwebImageLoader}
-      />
+      <div className={props.className}>
+        <Image
+          {...props}
+          width={width}
+          height={height}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          layout="responsive"
+          loader={typeofwebImageLoader}
+        />
+      </div>
     );
   }
   return <img {...props} width={width} height={height} src={src} alt={alt} loading="lazy" />;

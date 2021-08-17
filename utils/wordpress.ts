@@ -87,6 +87,7 @@ export async function readAllPosts({
           ...fm.data,
           date: fm.data.date?.toISOString(),
           permalink: fm.data.permalink,
+          authors: fm.data.authors || ['michal-miszczyszyn'],
         },
       };
     }),
@@ -178,7 +179,9 @@ export async function getExcerptAndContent(
       isMdx: true as const,
     };
   } catch (err) {
-    // console.log(post.data.permalink, err);
+    if (post.data.type === 'page') {
+      console.log(post.data.permalink, err);
+    }
     return {
       excerpt: excerptString,
       content: toHtml(content, { excerpt: false }).toString('utf-8'),
