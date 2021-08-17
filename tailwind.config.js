@@ -95,16 +95,13 @@ module.exports = {
           '0%': {
             opacity: 0,
           },
-          '50%': {
-            opacity: 0,
-          },
           '100%': {
             opacity: 1,
           },
         },
       },
       animation: {
-        appear: 'appear 2s',
+        appear: 'appear 1s',
       },
     },
   },
@@ -206,6 +203,25 @@ module.exports = {
             content: `counter(${counterName})`,
           },
         });
+      }
+
+      {
+        // animations
+        const animDelays = [0, 75, 100, 150, 200, 300, 500, 700, 1000];
+        addUtilities(
+          animDelays.map((val) => {
+            return {
+              [`.${e(`animate-delay-${val}`)}`]: {
+                'animation-delay': `${val}ms`,
+                'animation-fill-mode': 'both',
+              },
+              [`.${e(`animate-duration-${val}`)}`]: {
+                'animation-duration': `${val}ms`,
+              },
+            };
+          }),
+          [],
+        );
       }
     }),
   ],

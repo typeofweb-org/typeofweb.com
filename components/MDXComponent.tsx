@@ -1,9 +1,11 @@
 import { MDXRemote } from 'next-mdx-remote';
 import Dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Link from 'next/link';
 import { memo } from 'react';
 
 import { origin, host } from '../constants';
+import { typeofwebImageLoader } from '../utils/imageLoader';
 
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
 
@@ -40,6 +42,24 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
   );
 };
 
+const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
+  if (width && height && src) {
+    return (
+      <Image
+        {...props}
+        width={width}
+        height={height}
+        src={src}
+        alt={alt}
+        loading="lazy"
+        layout="responsive"
+        loader={typeofwebImageLoader}
+      />
+    );
+  }
+  return <img {...props} width={width} height={height} src={src} alt={alt} loading="lazy" />;
+};
+
 const NewsletterForm = Dynamic<{}>(() =>
   import(/* webpackChunkName: "NewsletterForm" */ './molecules/NewsletterForm').then((m) => m.NewsletterForm),
 );
@@ -71,6 +91,7 @@ const Gallery = (_props: {
 
 const components = {
   a: A,
+  img: Img,
   NewsletterForm,
   FacebookPageWidget,
   CodepenWidget,

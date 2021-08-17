@@ -153,8 +153,7 @@ a:focus {
 }
 
 progress {
-  position: relative;
-  @apply animate-appear;
+  @apply animate-delay-1000 relative animate-appear;
 
   &::-webkit-progress-bar {
     @apply bg-gray-200;

@@ -33,7 +33,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           {pageKind === 'post' && (
             <span
               aria-live="off"
-              className="text-gray-600 font-serif text-xs animate-appear lg:whitespace-nowrap lg:text-sm"
+              className="animate-delay-1000 text-gray-600 font-serif text-xs animate-appear lg:whitespace-nowrap lg:text-sm"
             >
               {text}
             </span>

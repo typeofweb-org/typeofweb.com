@@ -10,7 +10,7 @@ import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { Input } from '../atoms/Input';
 
-import type { KeyboardEventHandler } from 'react';
+import type { KeyboardEventHandler, ChangeEventHandler } from 'react';
 import type { HitsProvided, SearchBoxProvided } from 'react-instantsearch-core';
 
 const searchClient = Algoliasearch('QB2FWHH99M', '25fc15b3e367b7a46c1f3617b39aa749');
@@ -65,15 +65,15 @@ export const SearchWidget = memo(() => {
         type="button"
         onClick={openSearch}
       >
-        <div className="flex flex-row gap-3 items-baseline mt-1 w-full text-gray-600">
+        <div className="animate-delay-0 flex flex-row gap-3 items-baseline mt-1 w-full text-gray-600 animate-appear">
           <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 fill-current opacity-75">
             <path d="M19.71,18.29,16,14.61A9,9,0,1,0,14.61,16l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,19.71,18.29ZM2,9a7,7,0,1,1,12,4.93h0s0,0,0,0A7,7,0,0,1,2,9Z" />
           </svg>
           <span>
-            Szukaj<span className="hidden md:inline"> na stronie</span>…
+            Szukaj<span className="sr-only md:not-sr-only"> na stronie</span>…
           </span>
         </div>
-        <div className="hidden md:flex md:flex-grow-0 md:gap-2 md:items-center">
+        <div className="animate-delay-0 hidden animate-appear md:flex md:flex-grow-0 md:gap-2 md:items-center">
           <kbd className="shadow-darker block text-gray-600 bg-gradient-to-tl border-b-2 border-gray-300 rounded from-gray-100 to-gray-200">
             <span
               className={`inline-flex items-center justify-center p-2 h-7  leading-none border-l border-r border-t border-white rounded ${
@@ -105,50 +105,63 @@ interface SearchModalProps {
 
 interface CustomSearchBoxProps extends SearchBoxProvided {
   readonly currentObjectID?: string | null;
+  readonly onChange: (refinement: string) => void;
 }
 
-const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(({ refine, currentRefinement, currentObjectID }) => {
-  const handleCustomSearchBoxKeyDown = useCallback<KeyboardEventHandler<HTMLInputElement>>(
-    (e) => {
-      if (currentRefinement && e.key === 'Escape') {
-        e.stopPropagation();
-        refine('');
-      }
-    },
-    [currentRefinement, refine],
-  );
+const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(
+  ({ refine, currentRefinement, currentObjectID, onChange }) => {
+    const handleCustomSearchBoxKeyDown = useCallback<KeyboardEventHandler<HTMLInputElement>>(
+      (e) => {
+        if (currentRefinement && e.key === 'Escape') {
+          e.stopPropagation();
+          refine('');
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+        }
+      },
+      [currentRefinement, refine],
+    );
 
-  return (
-    <form className="relative flex items-center w-full max-h-screen" noValidate role="search">
-      <Input
-        onKeyDown={handleCustomSearchBoxKeyDown}
-        className="flex-1 mt-0 pl-8 w-full h-14 text-lg border-transparent shadow-none sm:text-3xl lg:pl-16 lg:h-20"
-        aria-autocomplete="list"
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck={false}
-        placeholder="Szukaj na stronie…"
-        maxLength={512}
-        type="search"
-        enterKeyHint="go"
-        value={currentRefinement}
-        onChange={(e) => refine(e.currentTarget.value)}
-        autoFocus
-        aria-controls="search-hits-list"
-        {...(currentObjectID && { 'aria-activedescendant': 'id' + currentObjectID })}
-      >
-        <svg
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="absolute z-10 left-3 top-1/2 py-1 h-6 text-gray-700 -translate-y-1/2 lg:left-6 lg:h-8"
+    const handleChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
+      (e) => {
+        refine(e.currentTarget.value);
+        onChange(e.currentTarget.value);
+      },
+      [onChange, refine],
+    );
+
+    return (
+      <form className="relative flex items-center w-full max-h-screen" noValidate role="search">
+        <Input
+          onKeyDown={handleCustomSearchBoxKeyDown}
+          className="flex-1 mt-0 pl-8 w-full h-14 text-lg border-transparent shadow-none sm:text-3xl lg:pl-16 lg:h-20"
+          aria-autocomplete="list"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck={false}
+          placeholder="Szukaj na stronie…"
+          maxLength={512}
+          type="search"
+          enterKeyHint="go"
+          value={currentRefinement}
+          onChange={handleChange}
+          autoFocus
+          aria-controls="search-hits-list"
+          {...(currentObjectID && { 'aria-activedescendant': 'id' + currentObjectID })}
         >
-          <path d="M19.71,18.29,16,14.61A9,9,0,1,0,14.61,16l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,19.71,18.29ZM2,9a7,7,0,1,1,12,4.93h0s0,0,0,0A7,7,0,0,1,2,9Z"></path>
-        </svg>
-      </Input>
-    </form>
-  );
-});
+          <svg
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="absolute z-10 left-3 top-1/2 py-1 h-6 text-gray-700 -translate-y-1/2 lg:left-6 lg:h-8"
+          >
+            <path d="M19.71,18.29,16,14.61A9,9,0,1,0,14.61,16l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,19.71,18.29ZM2,9a7,7,0,1,1,12,4.93h0s0,0,0,0A7,7,0,0,1,2,9Z"></path>
+          </svg>
+        </Input>
+      </form>
+    );
+  },
+);
 CustomSearchBox.displayName = 'CustomSearchBox';
 
 interface TypeOfWebHit {
@@ -246,19 +259,19 @@ interface CustomHitsProps extends HitsProvided<TypeOfWebHit> {
 export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, currentObjectID, setObjectId }) => {
   const { push } = useRouter();
 
+  const currentHitIndex = hits.findIndex((h) => h.objectID === currentObjectID);
+
   const selectNextHit = useCallback(() => {
-    const currentHitIndex = hits.findIndex((h) => h.objectID === currentObjectID);
     const nextHitIndex = (currentHitIndex + 1) % hits.length;
     const nextHit = hits[nextHitIndex];
     setObjectId(nextHit.objectID);
-  }, [currentObjectID, hits, setObjectId]);
+  }, [currentHitIndex, hits, setObjectId]);
 
   const selectPrevHit = useCallback(() => {
-    const currentHitIndex = hits.findIndex((h) => h.objectID === currentObjectID);
     const prevHitIndex = (currentHitIndex - 1 + hits.length) % hits.length;
     const prevHit = hits[prevHitIndex];
     setObjectId(prevHit.objectID);
-  }, [currentObjectID, hits, setObjectId]);
+  }, [currentHitIndex, hits, setObjectId]);
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
@@ -358,7 +371,7 @@ export const CustomHit = memo<CustomHitProps>(
       <Link href={getUrlForPermalink(hit.objectID)}>
         <a
           ref={currentElRef}
-          onMouseOver={() => onItemHover(hit.objectID)}
+          onMouseEnter={() => onItemHover(hit.objectID)}
           onFocus={() => onItemHover(hit.objectID)}
           onPointerEnter={() => onItemHover(hit.objectID)}
           className={`relative flex flex-col pl-4 pr-12 py-1 border-b last:border-b-0 focus:no-underline ${
@@ -415,10 +428,14 @@ const SearchModal = ({ onCancel }: SearchModalProps) => {
     };
   }, [bodyFix]);
 
+  const handleInputChange = useCallback(() => {
+    setTimeout(() => setObjectId(null), 0);
+  }, []);
+
   return (
     <InBody>
       <InstantSearch searchClient={searchClient} indexName="typeofweb_prod">
-        <div className="lg:pt-[30vh] fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden">
+        <div className="animate-delay-0 animate-duration-100 lg:pt-[30vh] fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden animate-appear">
           <div
             ref={searchModalRef}
             className="flex flex-col items-stretch justify-between w-full max-h-screen bg-white shadow-md xl:max-w-5xl xl:rounded-md"
@@ -429,7 +446,7 @@ const SearchModal = ({ onCancel }: SearchModalProps) => {
             aria-haspopup="listbox"
           >
             <div className="flex flex-row rounded-lg shadow-md">
-              <CustomSearchBox currentObjectID={currentObjectID} />
+              <CustomSearchBox currentObjectID={currentObjectID} onChange={handleInputChange} />
               <div className="w-0.5 bg-gray-200" />
               <button
                 onClick={onCancel}
