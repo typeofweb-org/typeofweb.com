@@ -22,6 +22,8 @@ const legacyCategories = Object.keys(categoryMappings)
 const config = async (): Promise<NetlifyConfigSchema> => {
   return {
     locale: 'pl',
+    display_url: host,
+    logo_url: `${host}/logo-typeofweb-black.svg`,
     backend: {
       name: 'github',
       repo: 'typeofweb/typeofweb.com',
@@ -42,6 +44,7 @@ const config = async (): Promise<NetlifyConfigSchema> => {
     },
     publish_mode: 'editorial_workflow',
     show_preview_links: true,
+    search: false,
     slug: {
       encoding: 'ascii',
       clean_accents: true,
@@ -283,7 +286,7 @@ async function posts() {
         widget: 'object',
         summary: '{{fields.url}}',
         collapsed: false,
-        required: true,
+        required: false,
         fields: [
           {
             label: 'url',
@@ -291,6 +294,8 @@ async function posts() {
             widget: 'image',
             choose_url: false,
             required: true,
+            allow_multiple: false,
+            media_folder: '/public/media',
           },
           {
             label: 'width',
@@ -370,7 +375,7 @@ async function pages(): Promise<import('./_netlifySchema').CollectionItems> {
     description: '',
     sortable_fields: [],
     path: '{{slug}}',
-    folder: '_posts',
+    folder: '_pages',
     fields: [
       ...props.fields.filter((f) => !['index', 'authors', 'categories', 'series', 'type'].includes(f.name)),
       {
