@@ -68,6 +68,14 @@ export default class MyDocument extends Document {
         <body itemScope itemType="http://schema.org/WebPage">
           <Main />
           <NextScript />
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-NTFGFPB"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
         </body>
       </Html>
     );

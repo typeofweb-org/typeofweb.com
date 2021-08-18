@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, memo, useState, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { InstantSearch, connectSearchBox, connectHits } from 'react-instantsearch-dom';
+import { connectHitInsights, InstantSearch, Configure, connectSearchBox, connectHits } from 'react-instantsearch-dom';
 
 import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
@@ -249,6 +249,7 @@ interface TypeOfWebHit {
     };
   };
   readonly __position: number;
+  readonly __queryID: string;
 }
 
 interface CustomHitsProps extends HitsProvided<TypeOfWebHit> {
@@ -304,6 +305,9 @@ export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, cu
       >
         {hits.map((hit) => (
           <li
+            data-insights-object-id={hit.objectID}
+            data-insights-position={hit.__position}
+            data-insights-query-id={hit.__queryID}
             key={hit.objectID}
             role="option"
             aria-describedby="search-details"
@@ -435,6 +439,7 @@ const SearchModal = ({ onCancel }: SearchModalProps) => {
   return (
     <InBody>
       <InstantSearch searchClient={searchClient} indexName="typeofweb_prod">
+        <Configure clickAnalytics />
         <div className="animate-delay-0 animate-duration-100 lg:pt-[20vh] fixed z-50 inset-0 flex items-start justify-center text-base bg-gray-400 bg-opacity-50 overflow-hidden animate-appear">
           <div
             ref={searchModalRef}

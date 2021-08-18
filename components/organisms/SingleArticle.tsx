@@ -1,5 +1,5 @@
 import Dynamic from 'next/dynamic';
-import React, { forwardRef, memo } from 'react';
+import React, { forwardRef, memo, useEffect } from 'react';
 
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
@@ -32,6 +32,12 @@ export const SingleArticle = memo(
   forwardRef<HTMLElement, SingleArticleProps>(
     ({ cover, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
       const href = '/' + permalink;
+
+      useEffect(() => {
+        window.dataLayer.push({
+          algoliaDisplayedObjectIDs: permalink,
+        });
+      }, [permalink]);
 
       return (
         <Card

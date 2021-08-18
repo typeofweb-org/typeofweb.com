@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Seo } from '../components/Seo';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
 import { UIStateProvider } from '../hooks/useUiState';
+import { identifyUser } from '../utils/fingerprint';
 
 import type { AppType } from 'next/dist/shared/lib/utils';
 import type { ScriptProps as NextScriptProps } from 'next/script';
@@ -60,6 +61,10 @@ function ScriptAfterInteraction({
 }
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+useEffect(() => {
+  identifyUser()
+}, []);
+
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call -- ok
   const urlsToPreload: readonly string[] | undefined = pageProps?.posts
     ?.map(
@@ -77,7 +82,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         {`let o=()=>e.className+=" fonts-loaded",e=document.documentElement,n="00 1em Merriweather",t="00 1em Fira Sans";sessionStorage.fonts?o():Promise.all(["4"+n,"7"+n,"italic 4"+n,"italic 7"+n,"4"+t,"6"+t,"400 1em Fira Mono"].map(o=>document.fonts.load(o))).then(()=>{sessionStorage.fonts=!0,o()})`}
       </ScriptOnce>
       <ScriptOnce strategy="afterInteractive" async defer>
-        {`var w=window;w.dataLayer=w.dataLayer||[],w.gtag=(...a)=>dataLayer.push(a)`}
+        {`a=window,t=a.dataLayer=a.dataLayer||[];a.gtag=(...a)=>t.push(a),t.push({"gtm.start":Date.now(),event:"gtm.js"})`}
       </ScriptOnce>
       <RunningHeaderProvider>
         <UIStateProvider>
@@ -88,7 +93,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         id="fancyLinkUnderline"
         defer
         async
-      >{`w.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
+      >{`a.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
       <ScriptAfterInteraction id="contentVisibility" src="/contentVisibility.min.js" defer async />
       <ScriptAfterInteraction
         id="gtag"
@@ -100,6 +105,17 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           gtag('config', 'G-KNFC661M43');
         }}
       />
+      <ScriptAfterInteraction
+        id="gtm"
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-NTFGFPB"
+        defer
+        async
+        onload={() => {
+          gtag('js', new Date());
+          gtag('config', 'G-KNFC661M43');
+        }}
+      />
+
       {urlsToPreload?.map((url) => (
         <link key={url} rel="preload" href={url} as="image" />
       ))}

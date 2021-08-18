@@ -12,7 +12,7 @@
   },
   "type": "commonjs",
   "dependencies": {
-    "@openlab/vercel-netlify-cms-github": "1.1.0",
+    "@openlab/vercel-netlify-cms-github": "1.1.1",
     "@plaiceholder/next": "2.1.0",
     "algoliasearch": "4.10.3",
     "critters": "0.0.10",
@@ -22,7 +22,7 @@
     "invariant": "2.2.4",
     "js-yaml": "4.1.0",
     "memoizee": "0.4.15",
-    "netlify-cms-app": "2.15.36",
+    "netlify-cms-app": "2.15.38",
     "netlify-cms-media-library-cloudinary": "1.3.10",
     "next": "11.1.1-canary.6",
     "next-mdx-remote": "3.0.4",
@@ -31,7 +31,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-instantsearch-dom": "6.12.1",
-    "sharp": "0.28.3"
+    "sharp": "0.29.0"
   },
   "devDependencies": {
     "@babel/preset-env": "7.15.0",
@@ -52,7 +52,7 @@
     "@types/license-checker": "25.0.3",
     "@types/memoizee": "0.4.6",
     "@types/proxyquire": "1.3.28",
-    "@types/react": "17.0.17",
+    "@types/react": "17.0.18",
     "@types/react-dom": "17.0.9",
     "@types/react-instantsearch-dom": "6.12.0",
     "@types/tailwindcss": "2.2.1",
@@ -82,7 +82,7 @@
     "remark-parse": "9.0.0",
     "remark-rehype": "8.1.0",
     "remark-stringify": "9.0.1",
-    "svgo": "2.3.1",
+    "svgo": "2.4.0",
     "tailwindcss": "2.2.7",
     "terser": "5.7.1",
     "ts-node": "10.2.0",
