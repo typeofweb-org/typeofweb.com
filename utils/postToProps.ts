@@ -2,7 +2,7 @@ import { getPlaiceholder } from 'plaiceholder';
 
 import { pageSize } from '../constants';
 
-import { allCategories, categoriesToMainCategory } from './categories';
+import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { allSeries, findCurrentSeriesIndex } from './series';
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
@@ -118,8 +118,10 @@ export async function postToProps(
 
   const mainCategory =
     'category' in post.data
-      ? allCategories.find((c) => 'category' in post.data && c.slug === post.data.category)
-      : categoriesToMainCategory(post.data.categories);
+      ? categorySlugToCategory(post.data.category)
+      : 'categories' in post.data
+      ? categoriesToMainCategory(post.data.categories)
+      : null;
 
   const seriesLinks = post.data.series
     ? (
