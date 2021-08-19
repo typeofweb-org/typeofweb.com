@@ -4,7 +4,7 @@ import Url from 'url';
 
 import GrayMatter from 'gray-matter';
 
-import { allCategories, categoriesToMainCategory } from './categories';
+import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { toHtml, toMdx } from './markdown';
 import { allSeries } from './series';
 
@@ -63,8 +63,10 @@ export async function readAllPosts({
   if (category) {
     postsWithFm = postsWithFm.filter((post) =>
       'category' in post.data
-        ? post.data.category === category
-        : categoriesToMainCategory(post.data.categories)?.slug === category,
+        ? categorySlugToCategory(post.data.category)?.slug === category
+        : 'categories' in post.data
+        ? categoriesToMainCategory(post.data.categories)?.slug === category
+        : null,
     );
   }
   if (series) {
