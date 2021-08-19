@@ -317,7 +317,7 @@ async function posts() {
       },
       {
         label: 'Kategorie',
-        name: 'categories',
+        name: 'category',
         widget: 'select',
         options: allCategories.map((c) => c.slug),
         multiple: false,

@@ -226,7 +226,7 @@ interface NewPostFrontmatter {
     readonly width: number;
     readonly height: number;
   };
-  readonly category: string;
+  readonly category?: string;
   readonly series?: string;
   readonly seo?: {
     readonly focusKeywords?: readonly string[];
