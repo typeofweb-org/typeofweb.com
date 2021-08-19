@@ -157,9 +157,10 @@ export async function getExcerptAndContent(
       ? [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')]
       : [null, post.content];
 
-  if ((!excerpt && post.data.type === 'post') || !content) {
-    throw new Error('????');
-  }
+  // This check won't pass in preview (when posts has no content yet)
+  // if ((!excerpt && post.data.type === 'post') || !content) {
+  //   throw new Error('????');
+  // }
 
   const excerptString = toHtml(excerpt ?? '', { excerpt: true });
   const excerptWords = excerptString.split(/\s+/);
