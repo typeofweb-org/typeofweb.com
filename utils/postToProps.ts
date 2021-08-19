@@ -167,7 +167,7 @@ export async function postToProps(
               facebook: author.meta.facebook ?? null,
             };
           }),
-        seo: post.data.seo,
+        seo: post.data.seo ?? null,
         mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
         cover: img && blurDataURL ? { img: { ...img, src: decodeURI(img.src) }, blurDataURL } : null,
@@ -218,7 +218,7 @@ export async function postToProps(
               github: author.meta.github ?? null,
             };
           }),
-        seo: post.data.seo,
+        seo: post.data.seo ?? null,
         mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
         cover: img && blurDataURL ? { img: { ...img, src: decodeURI(img.src) }, blurDataURL } : null,
