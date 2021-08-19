@@ -4,7 +4,7 @@ import Url from 'url';
 
 import GrayMatter from 'gray-matter';
 
-import { allCategories, categoriesToMainCategory } from './categories';
+import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { toHtml, toMdx } from './markdown';
 import { allSeries } from './series';
 
@@ -63,8 +63,10 @@ export async function readAllPosts({
   if (category) {
     postsWithFm = postsWithFm.filter((post) =>
       'category' in post.data
-        ? post.data.category === category
-        : categoriesToMainCategory(post.data.categories)?.slug === category,
+        ? categorySlugToCategory(post.data.category)?.slug === category
+        : 'categories' in post.data
+        ? categoriesToMainCategory(post.data.categories)?.slug === category
+        : null,
     );
   }
   if (series) {
@@ -157,9 +159,10 @@ export async function getExcerptAndContent(
       ? [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')]
       : [null, post.content];
 
-  if ((!excerpt && post.data.type === 'post') || !content) {
-    throw new Error('????');
-  }
+  // This check won't pass in preview (when posts has no content yet)
+  // if ((!excerpt && post.data.type === 'post') || !content) {
+  //   throw new Error('????');
+  // }
 
   const excerptString = toHtml(excerpt ?? '', { excerpt: true });
   const excerptWords = excerptString.split(/\s+/);
@@ -226,7 +229,7 @@ interface NewPostFrontmatter {
     readonly width: number;
     readonly height: number;
   };
-  readonly category: string;
+  readonly category?: string;
   readonly series?: string;
   readonly seo?: {
     readonly focusKeywords?: readonly string[];
