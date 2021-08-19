@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import { MDXComponent } from '../../components/MDXComponent';
 import { Seo } from '../../components/Seo';
 import { NewsletterForm } from '../../components/molecules/NewsletterForm';

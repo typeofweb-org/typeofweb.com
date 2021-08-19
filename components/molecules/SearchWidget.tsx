@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, memo, useState, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { connectHitInsights, InstantSearch, Configure, connectSearchBox, connectHits } from 'react-instantsearch-dom';
+import { InstantSearch, Configure, connectSearchBox, connectHits } from 'react-instantsearch-dom';
 
 import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
