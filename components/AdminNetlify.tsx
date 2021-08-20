@@ -2,7 +2,6 @@
 import Cloudinary from 'netlify-cms-media-library-cloudinary';
 import { useEffect, useState, useRef } from 'react';
 
-import type { List, Map as ImMap } from 'immutable';
 import type { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
 export function AdminNetlify() {
