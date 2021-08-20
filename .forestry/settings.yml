@@ -10,6 +10,8 @@ sections:
   create: none
   match: "**/*.md"
   new_doc_ext: md
+  templates:
+  - post
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
