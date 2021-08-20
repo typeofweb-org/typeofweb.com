@@ -76,7 +76,7 @@ function legacyWordpressCollection() {
     folder: '_wordpress_posts',
     create: false,
     slug: '{{slug}}',
-    preview_path: '{{slug}}',
+    preview_path: '{{fields.permalink}}',
     sortable_fields: ['date'],
     extension: 'md',
     editor: {
@@ -235,7 +235,7 @@ async function posts() {
     folder: '_posts',
     slug: '{{slug}}',
     create: true,
-    preview_path: '{{fields.slug}}',
+    preview_path: '{{fields.permalink}}',
     sortable_fields: ['date'],
     format: 'yaml-frontmatter',
     extension: 'mdx',
