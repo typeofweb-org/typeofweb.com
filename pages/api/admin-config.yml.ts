@@ -31,6 +31,7 @@ const config = async (): Promise<NetlifyConfigSchema> => {
       base_url: host,
       site_url: host,
       auth_endpoint: 'api/auth',
+      preview_context: 'Deployment has completed',
       squash_merges: true,
       open_authoring: true,
       commit_messages: {
@@ -234,7 +235,7 @@ async function posts() {
     folder: '_posts',
     slug: '{{slug}}',
     create: true,
-    preview_path: '{{slug}}',
+    preview_path: '{{fields.slug}}',
     sortable_fields: ['date'],
     format: 'yaml-frontmatter',
     extension: 'mdx',
