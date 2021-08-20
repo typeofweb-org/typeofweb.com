@@ -2,7 +2,7 @@ import { getPlaiceholder } from 'plaiceholder';
 
 import { pageSize } from '../constants';
 
-import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
+import { categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { allSeries, findCurrentSeriesIndex } from './series';
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
@@ -10,7 +10,7 @@ import type { Series, SeriesWithToC } from '../types';
 import type { PostByPermalink } from './wordpress';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-type AuthorJson = typeof import('../authors.json')[number];
+type AuthorJson = typeof import('../authors.json')['authors'][number];
 
 type Content =
   | { readonly content: string; readonly isMdx: false }

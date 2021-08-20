@@ -1,5 +1,6 @@
 /* eslint-disable functional/no-loop-statement -- useful */
-import AuthorsJson from '../../authors.json';
+import A from '../../authors.json';
+const AuthorsJson = A.authors;
 import Data from '../../relatedPosts2.json';
 import { postToProps } from '../../utils/postToProps';
 import { getPostByPermalink } from '../../utils/wordpress';

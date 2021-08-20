@@ -12,7 +12,7 @@ async function generateFeed() {
   const publicUrl = `https://${process.env.NEXT_PUBLIC_HOST ?? process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
   const { posts: allPosts } = await readAllPosts({ includePages: false });
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default;
+  const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default.authors;
   const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: false })))).map(
     (p) => ({
       ...p,

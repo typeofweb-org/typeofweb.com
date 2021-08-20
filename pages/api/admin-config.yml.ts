@@ -15,12 +15,15 @@ const adminConfigYmlHandler: NextApiHandler = async (req, res) => {
 
 export default adminConfigYmlHandler;
 
+const urlPattern = ['https?://.*', 'Podaj pełny adres'];
+
 const legacyCategories = Object.keys(categoryMappings)
   .flatMap((x) => x.split('+'))
   .filter((x, idx, arr) => arr.indexOf(x) === idx);
 
 const config = async (): Promise<NetlifyConfigSchema> => {
   return {
+    local_backend: process.env.NODE_ENV === 'development',
     locale: 'pl',
     display_url: host,
     logo_url: `${host}/logo-typeofweb-black.svg`,
@@ -61,9 +64,61 @@ const config = async (): Promise<NetlifyConfigSchema> => {
     //     api_key: '936784498493233',
     //   },
     // },
-    collections: [await posts(), legacyWordpressCollection(), await pages()],
+    collections: [await posts(), legacyWordpressCollection(), await pages(), settings()],
   };
 };
+
+function settings() {
+  return {
+    name: 'settings',
+    label: 'Ustawienia',
+    files: [
+      {
+        name: 'authors',
+        label: 'Autorzy i autorki',
+        file: 'authors.json',
+        fields: [
+          {
+            name: 'authors',
+            label: 'Autorzy i autorki',
+            summary: '{{displayName}}',
+            widget: 'list',
+            fields: [
+              { label: 'Nazwa uproszczona', hint: 'do adresu strony', name: 'slug', widget: 'string' },
+              {
+                label: 'Dane',
+                name: 'meta',
+                widget: 'object',
+                collapsed: false,
+                fields: [
+                  { label: 'Imię', name: 'first_name', widget: 'string', required: true },
+                  { label: 'Nazwisko', name: 'last_name', widget: 'string', required: true },
+                  {
+                    label: 'Forma zwrotów',
+                    name: 'gender',
+                    widget: 'select',
+                    hint: 'on / ona',
+                    options: [
+                      { label: 'męska', value: 'm' },
+                      { label: 'żeńska', value: 'f' },
+                    ],
+                  },
+                  { label: 'Opis', name: 'description', widget: 'text', required: false },
+                  { label: 'Twitter', name: 'twitter', widget: 'string', pattern: urlPattern, required: false },
+                  { label: 'Facebook', name: 'facebook', widget: 'string', pattern: urlPattern, required: false },
+                  { label: 'GitHub', name: 'github', widget: 'string', pattern: urlPattern, required: false },
+                  { label: 'Strona WWW', name: 'website', widget: 'string', pattern: urlPattern, required: false },
+                ],
+              },
+              { label: 'Nazwa', name: 'displayName', widget: 'hidden' },
+              { label: 'Avatar', name: 'avatarUrl', widget: 'image', choose_url: true, required: false },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+}
 
 function legacyWordpressCollection() {
   return {
@@ -225,7 +280,7 @@ function legacyWordpressCollection() {
 }
 
 async function posts() {
-  const authors = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default;
+  const authors = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
   return {
     name: 'posts',
     label: 'Artykuły',

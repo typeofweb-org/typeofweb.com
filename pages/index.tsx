@@ -18,7 +18,7 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default;
+  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default.authors;
 
   const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
     (p) => ({

@@ -2,6 +2,7 @@
 import Cloudinary from 'netlify-cms-media-library-cloudinary';
 import { useEffect, useState, useRef } from 'react';
 
+import type { List, Map as ImMap } from 'immutable';
 import type { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
 export function AdminNetlify() {
@@ -29,16 +30,34 @@ export function AdminNetlify() {
       return;
     }
     const { GithubSlugger, CMS } = deps.current;
+
     CMS.registerMediaLibrary(Cloudinary);
     CMS.registerPreviewTemplate('legacy_posts', PreviewComponent);
     CMS.registerPreviewTemplate('posts', PreviewComponent);
+    CMS.registerPreviewTemplate('pages', PreviewComponent);
+    CMS.registerPreviewTemplate('authors', HidePreview);
 
     CMS.registerEventListener({
       name: 'preSave',
       handler: ({ entry }) => {
-        const title = entry.getIn(['data', 'title']);
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call -- ImmutableJS
-        return entry.get('data').set('permalink', GithubSlugger.slug(title));
+        const collectionsWithPermalink = ['posts', 'pages', 'legacy_posts'];
+        const collection = entry.get('collection');
+        if (collectionsWithPermalink.includes(collection)) {
+          const title = entry.getIn(['data', 'title']);
+          return entry.setIn(['data', 'permalink'], GithubSlugger.slug(title));
+        }
+        if (collection === 'settings' && entry.get('slug') === 'authors') {
+          /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access -- kill me */
+          return entry.updateIn(['data', 'authors'], (value: any) =>
+            value.map((v: any) =>
+              v.set(
+                'displayName',
+                [v.getIn(['meta', 'first_name'], ''), v.getIn(['meta', 'last_name'], '')].filter(Boolean).join(' '),
+              ),
+            ),
+          );
+          /* eslint-enable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
+        }
       },
     });
 
@@ -91,4 +110,15 @@ function PreviewComponent({ collection, fields, widgetFor }: PreviewTemplateComp
       })}
     </div>
   );
+}
+
+function HidePreview() {
+  useEffect(() => {
+    const preview = document.querySelector('.Pane.vertical.Pane2');
+    const hideBtn = document.querySelector<HTMLButtonElement>('[title="Toggle preview"]');
+    if (preview && hideBtn) {
+      hideBtn.click();
+    }
+  }, []);
+  return null;
 }
