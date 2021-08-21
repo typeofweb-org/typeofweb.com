@@ -1,0 +1,25 @@
+---
+label: Artykuł
+hide_body: false
+fields:
+- type: number
+  name: index
+  label: index
+- type: text
+  name: title
+  label: title
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: type
+  label: type
+- type: datetime
+  name: date
+  label: date
+- type: list
+  name: authors
+  label: authors
+- type: text
+  name: category
+  label: category
