@@ -5,18 +5,24 @@ fields:
 - type: number
   name: index
   label: index
+  config:
+    step: 1
 - type: text
   name: title
-  label: title
+  label: Tytuł
 - type: text
   name: permalink
   label: permalink
+  hidden: true
 - type: text
   name: type
   label: type
+  default: post
+  hidden: true
 - type: datetime
   name: date
   label: date
+  default: now
 - type: list
   name: authors
   label: authors
