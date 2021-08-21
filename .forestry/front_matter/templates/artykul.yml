@@ -17,8 +17,9 @@ fields:
     min: 
     max: 
     source:
-      type: pages
+      type: documents
       section: authors
+      file: authors.json
   label: Autorzy
 - type: text
   name: permalink
