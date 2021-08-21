@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
-- type: document
-  path: authors.json
-  label: Autorzy
-  read_only: true
 - type: directory
   path: _posts
   label: Blog Posts
