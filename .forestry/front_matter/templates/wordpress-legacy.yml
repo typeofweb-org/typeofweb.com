@@ -1,0 +1,64 @@
+---
+label: WordPress Legacy
+hide_body: false
+fields:
+- type: number
+  name: index
+  label: index
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: boolean
+  name: isMarkdown
+  label: isMarkdown
+- type: text
+  name: status
+  label: status
+- type: text
+  name: permalink
+  label: permalink
+- type: list
+  name: authors
+  label: authors
+- type: text
+  name: type
+  label: type
+- type: field_group
+  name: thumbnail
+  label: thumbnail
+  fields:
+  - type: file
+    name: url
+    label: url
+  - type: number
+    name: width
+    label: width
+  - type: number
+    name: height
+    label: height
+- type: field_group_list
+  name: categories
+  label: categories
+  fields:
+  - type: text
+    name: slug
+    label: slug
+  - type: text
+    name: name
+    label: name
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: list
+    name: focusKeywords
+    label: focusKeywords
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: metadesc
+    label: metadesc
