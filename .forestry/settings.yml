@@ -9,13 +9,13 @@ sections:
   label: Artykuły
   create: all
   match: "**/*.mdx"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
 - type: directory
   path: _pages
   label: Strony
   create: documents
   match: "**/*.mdx"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
 - type: directory
   path: _wordpress_posts
   label: WordPress (legacy)
