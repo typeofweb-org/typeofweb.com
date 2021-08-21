@@ -1,6 +1,7 @@
 ---
 label: WordPress Legacy
 hide_body: false
+display_field: title
 fields:
 - type: number
   name: index
