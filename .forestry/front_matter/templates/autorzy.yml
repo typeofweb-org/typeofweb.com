@@ -12,25 +12,36 @@ fields:
   - type: text
     name: displayName
     label: displayName
-  - type: text
-    name: avatarUrl
-    label: avatarUrl
+    hidden: true
   - type: field_group
     name: meta
-    label: meta
+    label: Dane
     fields:
     - type: text
-      name: gender
-      label: gender
-    - type: text
       name: first_name
-      label: first_name
+      label: Imię
     - type: text
       name: last_name
-      label: last_name
+      label: Nazwisko
+    - name: gender
+      type: select
+      default: ''
+      config:
+        required: false
+        options:
+        - f
+        - m
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Format zwrotów
+      description: Feminatywy vs Maskulinatywy
     - type: textarea
       name: description
-      label: description
+      label: Opis
+      default: ''
     - type: text
       name: twitter
       label: twitter
@@ -45,4 +56,7 @@ fields:
       label: youtube
     - type: text
       name: website
-      label: website
+      label: Strona www
+  - type: text
+    name: avatarUrl
+    label: avatarUrl
