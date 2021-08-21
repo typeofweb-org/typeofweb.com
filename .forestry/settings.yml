@@ -4,9 +4,13 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
+- type: document
+  path: authors.json
+  label: Authors
+  match: "**/*"
 - type: directory
   path: _posts
-  label: Artykuły
+  label: Blog Posts
   create: all
   match: "**/*.mdx"
   new_doc_ext: mdx
