@@ -11,12 +11,14 @@ import { allSeries } from './series';
 import type { PromiseValue } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-export const pathToLegacyPosts = Path.resolve(
-  Path.dirname(Url.fileURLToPath(import.meta.url)),
-  '..',
-  '_wordpress_posts',
-);
-export const pathToPosts = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..', '_posts');
+export const wordpressFolderName = '_wordpress_posts';
+export const postsFolderName = '_posts';
+export const pagesFolderName = '_pages';
+const basePath = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..');
+
+export const pathToLegacyPosts = Path.resolve(basePath, wordpressFolderName);
+export const pathToPosts = Path.resolve(basePath, postsFolderName);
+export const pathToPages = Path.resolve(basePath, pagesFolderName);
 
 export async function readFilesInDir(dir: string): Promise<readonly string[]> {
   const entries = await Fs.readdir(dir, { withFileTypes: true });
@@ -51,11 +53,26 @@ export async function readAllPosts({
   readonly limit?: number;
   readonly includePages?: boolean;
 } = {}) {
-  const files = [...(await readFilesInDir(pathToLegacyPosts)), ...(await readFilesInDir(pathToPosts))];
+  const filePaths = (
+    await Promise.all([readFilesInDir(pathToLegacyPosts), readFilesInDir(pathToPosts), readFilesInDir(pathToPages)])
+  ).flat();
 
-  const posts = await Promise.all(files.map((file) => Fs.readFile(file, 'utf-8')));
+  const postsAndPaths = await Promise.all(
+    filePaths.map(async (filePath) => {
+      const post = await Fs.readFile(filePath, 'utf-8');
+      const relativePath = Path.relative(basePath, filePath);
+      return { filePath: relativePath, post };
+    }),
+  );
 
-  let postsWithFm = posts.map(readFrontMatter).sort((a, b) => Number(b.data.date) - Number(a.data.date));
+  let postsWithFm = postsAndPaths
+    .map(({ filePath, post }) => {
+      return {
+        ...readFrontMatter(post),
+        filePath,
+      };
+    })
+    .sort((a, b) => Number(b.data.date) - Number(a.data.date));
 
   if (!includePages) {
     postsWithFm = postsWithFm.filter((p) => p.data.type === 'post');
@@ -84,6 +101,7 @@ export async function readAllPosts({
     postsCount,
     posts: postsWithFm.map((fm) => {
       return {
+        filePath: fm.filePath,
         content: fm.content,
         data: {
           ...fm.data,
@@ -236,7 +254,8 @@ interface NewPostFrontmatter {
 }
 
 export function readFrontMatter(post: string) {
-  const fm = GrayMatter(post);
+  // eslint-disable-next-line @typescript-eslint/unbound-method -- this function is ignored
+  const { stringify: _, ...fm } = GrayMatter(post);
   return {
     ...fm,
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- PostFrontmatter

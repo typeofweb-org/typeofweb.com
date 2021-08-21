@@ -76,7 +76,7 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
     return <IndexPage {...props} />;
   }
 
-  const { pageKind, excerpt, frontmatter, ...contentObj } = props;
+  const { pageKind, excerpt, frontmatter, filePath, ...contentObj } = props;
 
   return (
     <TwoColumns withSidebar={true} pageKind={pageKind} series={frontmatter.series}>
@@ -88,6 +88,7 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
         cover={frontmatter.cover}
       />
       <SingleArticle
+        filePath={filePath}
         ref={setRunningHeader}
         excerpt={excerpt}
         isMdx={contentObj.isMdx}

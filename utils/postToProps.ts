@@ -17,10 +17,12 @@ type Content =
   | { readonly content: MDXRemoteSerializeResult; readonly isMdx: true };
 
 type PostProps = {
+  readonly filePath: string;
   readonly frontmatter: PostPropsFrontmatter;
   readonly excerpt: string;
 } & Content;
 interface PostPropsOnlyExcerpt {
+  readonly filePath: string;
   readonly frontmatter: PostPropsFrontmatterOnlyExcerpt;
   readonly excerpt: string;
   readonly isMdx: false;
@@ -136,6 +138,7 @@ export async function postToProps(
 
   if (options.onlyExcerpt) {
     const result: PostPropsOnlyExcerpt = {
+      filePath: post.filePath,
       excerpt: contentObj.excerpt,
       isMdx: false,
       frontmatter: {
@@ -176,6 +179,7 @@ export async function postToProps(
     return result;
   } else {
     const result: PostProps = {
+      filePath: post.filePath,
       ...contentObj,
       frontmatter: {
         title: post.data.title,

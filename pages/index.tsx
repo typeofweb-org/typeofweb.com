@@ -38,7 +38,6 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
       {posts.map((post, i) => {
         if (!post.excerpt) {
           console.warn(`Missing excerpt for post ${post.frontmatter.permalink}!`);
-          return null;
         }
         const sneakPeek = (
           <ArticleSneakPeek

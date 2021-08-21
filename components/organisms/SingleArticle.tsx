@@ -4,6 +4,7 @@ import React, { forwardRef, memo, useEffect } from 'react';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { ArticleTitle } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
+import { GitHubEditLink } from '../atoms/GitHubEditLink';
 import { ArticleFooter } from '../molecules/ArticleFooter';
 import { ArticleMeta } from '../molecules/ArticleMeta';
 
@@ -16,6 +17,7 @@ const RelatedArticles = Dynamic<{ readonly permalink: string }>(() =>
 );
 
 interface SingleArticleProps {
+  readonly filePath: string;
   readonly cover: CoverPlaiceholder | null;
   readonly isMdx: boolean;
   readonly index?: number | null;
@@ -30,7 +32,7 @@ interface SingleArticleProps {
 
 export const SingleArticle = memo(
   forwardRef<HTMLElement, SingleArticleProps>(
-    ({ cover, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
+    ({ filePath, cover, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
       const href = '/' + permalink;
 
       useEffect(() => {
@@ -66,6 +68,7 @@ export const SingleArticle = memo(
           <div itemProp="articleBody" className="prose lg:prose-xl mx-auto pb-2 px-7 sm:px-8 lg:px-12">
             {content}
           </div>
+          <GitHubEditLink filePath={filePath} />
           <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
             <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
               <meta itemProp="url" content="/wp-content/uploads/2020/04/logo_kwadrat11.png" />
