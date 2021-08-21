@@ -4,33 +4,51 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Tytuł
 - type: datetime
   name: date
-  label: date
+  label: Data
+  default: now
 - type: text
   name: permalink
   label: permalink
+  hidden: true
 - type: text
   name: type
   label: type
+  hidden: true
+  default: page
 - type: field_group
   name: thumbnail
-  label: thumbnail
+  label: Zdjęcie
   fields:
   - type: file
     name: url
-    label: url
+    label: Zdjęcie
   - type: number
     name: width
-    label: width
+    label: Szerokość
+    config:
+      step: 1
+    default: 1200
   - type: number
     name: height
-    label: height
+    label: Wysokość
+    default: 800
+    config:
+      step: 1
 - type: field_group
   name: seo
-  label: seo
+  label: SEO
   fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Tytuł SEO
   - type: textarea
     name: metadesc
-    label: metadesc
+    label: Opis SEO
+    config:
+      max: 158
+      min: 70
