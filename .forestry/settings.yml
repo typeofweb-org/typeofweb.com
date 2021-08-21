@@ -7,7 +7,7 @@ sections:
 - type: document
   path: authors.json
   label: Autorzy
-  match: "**/*"
+  read_only: true
 - type: directory
   path: _posts
   label: Blog Posts
