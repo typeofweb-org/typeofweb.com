@@ -5,8 +5,20 @@ admin_path: "/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: _posts
+  label: Artykuły
+  create: all
+  match: "**/*.mdx"
+  new_doc_ext: ".mdx"
+- type: directory
+  path: _pages
+  label: Strony
+  create: documents
+  match: "**/*.mdx"
+  new_doc_ext: ".mdx"
+- type: directory
   path: _wordpress_posts
-  label: Posts
+  label: WordPress (legacy)
   create: none
   match: "**/*.md"
   new_doc_ext: md
