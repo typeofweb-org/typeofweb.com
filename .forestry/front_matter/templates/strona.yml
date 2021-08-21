@@ -52,3 +52,7 @@ fields:
     config:
       max: 158
       min: 70
+  - name: focusKeywords
+    type: tag_list
+    default: []
+    label: Słowa kluczowe
