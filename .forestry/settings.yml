@@ -7,7 +7,6 @@ sections:
 - type: document
   path: authors.json
   label: Authors
-  match: "**/*"
 - type: directory
   path: _posts
   label: Blog Posts

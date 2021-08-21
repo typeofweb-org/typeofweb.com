@@ -1,0 +1,48 @@
+---
+label: Autorzy
+hide_body: true
+fields:
+- type: field_group_list
+  name: Authors
+  label: Authors
+  fields:
+  - type: text
+    name: slug
+    label: slug
+  - type: text
+    name: displayName
+    label: displayName
+  - type: text
+    name: avatarUrl
+    label: avatarUrl
+  - type: field_group
+    name: meta
+    label: meta
+    fields:
+    - type: text
+      name: gender
+      label: gender
+    - type: text
+      name: first_name
+      label: first_name
+    - type: text
+      name: last_name
+      label: last_name
+    - type: textarea
+      name: description
+      label: description
+    - type: text
+      name: twitter
+      label: twitter
+    - type: text
+      name: facebook
+      label: facebook
+    - type: text
+      name: github
+      label: github
+    - type: text
+      name: youtube
+      label: youtube
+    - type: text
+      name: website
+      label: website
