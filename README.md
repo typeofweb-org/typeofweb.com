@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# typeofweb.com
 
-## Getting Started
+<a href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss"><img src="public/powered-by-vercel.svg" height="30" alt="Powered by Vercel"/></a>
 
-First, run the development server:
+## Type of Web jest teraz Open Source!
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Siemanko, witam ~~w mojej kuchni~~ na moim blogu! Tak, typeofweb.com jest teraz Open Source i dostępny na GitHubie.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Jeśli znajdziesz jakiekolwiek błędy lub chcesz coś zmienić na stronie, śmiało otwórz PR na GitHubie.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Jeśli chcesz napisać artykuł na bloga, również możesz to zrobić poprzez GitHuba lub korzystając z panelu dostępnego na [https://v2.typeofweb.com/admin](https://v2.typeofweb.com/admin).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Stack technologiczny
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Next.js
+- TypeScript
+- Markdown (Remark, MDX)
+- Tailwind CSS
+- Algolia
+- Netlify CMS
 
-## Learn More
+## O mnie
 
-To learn more about Next.js, take a look at the following resources:
+![](https://github-readme-stats.vercel.app/api?username=mmiszy&show_icons=true&count_private=true&title_color=5CB784&text_color=222222&icon_color=341BDB&border_color=5CB784&bg_color=FAFAFA&locale=pl&border_radius=8)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![](https://suchary-romana.vercel.app/api)

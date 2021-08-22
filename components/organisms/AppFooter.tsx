@@ -11,7 +11,9 @@ import DiscordIcon from '../../images/social/discord.svg';
 import GlobeIcon from '../../images/social/globe.svg';
 import JsIcon from '../../images/social/js.svg';
 import TsIcon from '../../images/social/ts.svg';
+import VercelIcon from '../../public/powered-by-vercel.svg';
 import { allCategories, getCategoryLink } from '../../utils/categories';
+import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { getSeriesLink } from '../../utils/series';
 import { myUrls, social } from '../molecules/SocialWidget';
@@ -118,6 +120,13 @@ export const AppFooter = memo(() => {
             Otwórz issue na GitHubie
           </a>
           !
+        </p>
+        <p className="mt-3 text-lg not-italic font-bold">
+          <Link href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss">
+            <a target="_blank" rel="noopener noreferrer" className="inline-block mt-10">
+              <VercelIcon className="mx-auto" width={209} height={40} />
+            </a>
+          </Link>
         </p>
       </address>
     </footer>
