@@ -26,7 +26,7 @@ seo:
     - React.js
   focusKeywordSynonyms:
     - react-js, react
-    - kurs React, kurs Reacta, kurs Reakta
+    - kurs React, kurs Reacta
   metadesc: >-
     Oto kurs React.js! Moje gratulacje za podjęcie tego tematu! React.js to
     aktualnie najpopularniejsza biblioteka na front-endzie i warto ją poznać!
@@ -38,7 +38,7 @@ Oto kurs React.js od podstaw. Moje gratulacje za podjęcie tego tematu! To pierw
 
 Skąd u mnie w ogóle pomysł opracowania tego tematu? Odpowiedź jest prosta: <strong>nie chcę, abyś musiał(a) po omacku przechodzić przez gąszcz dokumentacji i tutoriali React.js — jak robiłem to ja.</strong>
 
-Przy okazji muszę też napisać, że każdy programista i każda programistka musi stale powiększać swoją wiedzę. Przykładowo, <a href="https://typeofweb.com/jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiace/">sam bootcamp na pewno nie wystarczy</a>, więc taki kurs React jest idealnym sposobem, aby poznać nową technologię!
+Przy okazji muszę też napisać, że każdy programista i każda programistka musi stale powiększać swoją wiedzę. Przykładowo, <a href="https://typeofweb.com/jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiące/">sam bootcamp na pewno nie wystarczy</a>, więc taki kurs React jest idealnym sposobem, aby poznać nową technologię!
 
 Motywacją do nauki nowej technologii dla wielu osób są zarobki. Tego, że <a href="https://nofluffjobs.com/blog/javascript-developer-zarobki-w-najwiekszych-polskich-miastach-infografika/">programiści JavaScript zarabiają sporo</a> chyba nikomu nie trzeba mówić. React jest najpopularniejszym frameworkiem i na pewno łatwiej znaleźć pracę z jego znajomością.
 

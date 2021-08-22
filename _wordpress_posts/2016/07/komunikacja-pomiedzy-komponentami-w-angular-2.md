@@ -31,7 +31,7 @@ seo: {}
 
 <h1 id="inputczylikomunikacjarodzicazdzieckiem"><code>@Input</code> czyli komunikacja rodzica z dzieckiem</h1>
 
-<p>Działanie dekoratora <code>@Input</code> pokazywałem już w poprzednim artykule. Pozwala on na przesyłanie danych do komponentu. Jednak co w przypadku gdy chcemy <strong>dowiedzieć sie kiedy dokładnie przekazywane dane się zmieniają</strong>? Osobom znającym AngularJS nasuwa się pewnie <code>$watch</code>, jednak w Angularze 2 nie musimy już kombinować w ten sposób!</p>
+<p>Działanie dekoratora <code>@Input</code> pokazywałem już w poprzednim artykule. Pozwala on na przesyłanie danych do komponentu. Jednak co w przypadku gdy chcemy <strong>dowiedzieć się kiedy dokładnie przekazywane dane się zmieniają</strong>? Osobom znającym AngularJS nasuwa się pewnie <code>$watch</code>, jednak w Angularze 2 nie musimy już kombinować w ten sposób!</p>
 
 <p>Zacznijmy od podstawowego kodu. Tworzymy komponent mający jedno pole z adnotacją <code>@Input</code>. W ten sposób z poziomu rodzica możemy przekazać dane do dziecka, jak to już opisywałem:</p>
 

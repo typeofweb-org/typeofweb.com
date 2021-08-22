@@ -56,7 +56,7 @@ seo: {}
     constructor(protected name:string) {}
 
     giveVoice() {
-        console.log(`Nazywam sie ${this.name}!`);
+        console.log(`Nazywam się ${this.name}!`);
     }
 }
 </code></pre>
@@ -85,7 +85,7 @@ seo: {}
 pies.giveVoice();
 
 // Szczek, szczek!
-// Nazywam sie reksio!
+// Nazywam się reksio!
 </code></pre>
 
 <p>Klasę <code>Dog</code> nazywa się klasą pochodną. Dodatkowo warto zauważyć, że klasa <code>Dog</code> nie tylko dziedziczy po klasie <code>Animal</code>, ale również dodaje nową metodę <code>eat</code>. Oczywiście <strong>klasy pochodne mogą rozszerzać klasy bazowe</strong> – taki jest ich główny cel.</p>
@@ -209,7 +209,7 @@ class User implements Serializable, Drawable {
     constructor(protected name:string) {}
 
     giveVoice() {
-        console.log(`Nazywam sie ${this.name}!`);
+        console.log(`Nazywam się ${this.name}!`);
     }
 
     abstract eat():void;

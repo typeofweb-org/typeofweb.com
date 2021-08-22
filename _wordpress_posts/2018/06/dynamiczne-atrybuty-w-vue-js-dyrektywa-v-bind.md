@@ -72,11 +72,11 @@ Vue.js w wielu miejscach robi odstępstwa od reguły aby ułatwić użytkownikom
 </div>
 ```
 
-Powyższy kod jest równoważny temu, czego użyliśmy wcześniej - wystarczy, że nazwę atrybutu poprzedzisz znakiem dwukropka, a zostanie on dynamicznie zbindowany. Zapis taki jest bardzo zwięzły i czytelny, przez co to głównie ta wersja jest wykorzystywana na codzień.
+Powyższy kod jest równoważny temu, czego użyliśmy wcześniej - wystarczy, że nazwę atrybutu poprzedzisz znakiem dwukropka, a zostanie on dynamicznie zbindowany. Zapis taki jest bardzo zwięzły i czytelny, przez co to głównie ta wersja jest wykorzystywana na co dzień.
 
 ## Bindowanie wielu atrybutów jednocześnie
 
-Czasami będziesz chciał(a) zbindować kilka atrybutów naraz. Możesz w tym celu przekazać dyrektiwie `v-bind` obiekt. Jego klucze zostaną użyte jako nazwy atrybutów, a wartości zostaną odpowiednio zbindowane.
+Czasami będziesz chciał(a) zbindować kilka atrybutów naraz. Możesz w tym celu przekazać dyrektywie `v-bind` obiekt. Jego klucze zostaną użyte jako nazwy atrybutów, a wartości zostaną odpowiednio zbindowane.
 
 ```js
 new Vue({

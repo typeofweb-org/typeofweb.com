@@ -171,7 +171,7 @@ Dalej `mapDispatchToProps` definiuję jako obiekt z jednym action creatorem (2)
 
 I ostatecznie eksportuję nowy komponent `AppContainer`, który powstaje w wyniku wywołania funkcji `connect` (3).
 
-Pozostaje tylko użyć już nowopowstałego komponentu. W index.js zamiast `<App />` używam `<AppContainer />`.
+Pozostaje tylko użyć już nowo powstałego komponentu. W index.js zamiast `<App />` używam `<AppContainer />`.
 
 ## Nic się nie zmieniło
 
@@ -201,7 +201,7 @@ class App extends React.Component {
 Jak widzisz, zamiast `setState` używam `this.props.contactsFetched` (1). A do komponentu `ContactsList` przekazuję `this.props.contacts` (2).
 Cały kod źródłowy tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-2-redux](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-2-redux)
 
-<p class="important">Przedstawiony tutaj sposób na pracę z asynchronicznymi funkcjami i Reduksem jest najprotszym z możliwych. W kolejnych wpisach przedstawię inne metody obsługi *asynchroniczności w Redux*.</p>
+<p class="important">Przedstawiony tutaj sposób na pracę z asynchronicznymi funkcjami i Reduksem jest najprostszym z możliwych. W kolejnych wpisach przedstawię inne metody obsługi *asynchroniczności w Redux*.</p>
 
 ## Podsumowanie
 

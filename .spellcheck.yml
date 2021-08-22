@@ -1,0 +1,58 @@
+matrix:
+  - name: Markdown
+    aspell:
+      lang: pl
+      ignore-case: true
+    dictionary:
+      encoding: utf-8
+      wordlists:
+        - .wordlist.txt
+    pipeline:
+      - pyspelling.filters.url:
+          urls: true
+          emails: true
+      - pyspelling.filters.context:
+          context_visible_first: true
+          escapes: '\\[\\`~]'
+          delimiters:
+            # Ignore multiline content between fences (fences can have 3 or more back ticks)
+            - open: '(?s)^(?P<open>`{3})\S*$'
+              close: '^(?P=open)$'
+            # Ignore text between inline back ticks
+            - open: '(?P<open>(`|``))+'
+              close: '(?P=open)'
+            # Ignore latex
+            - open: '(?s)^(?P<open>\${2})$'
+              close: '^(?P=open)$'
+            # Ignore inline latex
+            - open: '(?P<open>\$)+'
+              close: '(?P=open)'
+            # Ignore links
+            - open: 'http?s://'
+              close: '\s|$'
+            # Ignore permalink
+            - open: '^permalink:'
+              close: '$'
+
+      - pyspelling.filters.markdown:
+          markdown_extensions:
+            - pymdownx.striphtml:
+
+      - pyspelling.filters.html:
+          comments: false
+          attributes:
+            - title
+            - alt
+          ignores:
+            - code
+            - pre
+            - a
+            - img
+            - script
+            - style
+    sources:
+      - '_pages/*.md'
+      - '_pages/*.mdx'
+      - '_posts/*.md'
+      - '_posts/*.mdx'
+    default_encoding: utf-8

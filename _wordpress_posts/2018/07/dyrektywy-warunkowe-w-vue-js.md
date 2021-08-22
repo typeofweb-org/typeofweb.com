@@ -59,7 +59,7 @@ Na powyższym przykładzie możesz zobaczyć jak proste jest używanie dyrektywy
 
 ## Scenariusz alternatywny z `v-else`
 
-Jeśli na podstawie jednego warunku chcesz obrać jeden z dwóch scenariuszy, możesz użyć dyrektywy `v-else`. Nie przyjmuje onadnej wartości, a element zawierający `v-else` **musi następować bezpośrednio po** elemencie zawierającym `v-if` (lub po ` v-else-if`, o której za chwilę). Inaczej Vue nie będzie w stanie stwierdzić do czego odnosi się dany `v-else`.
+Jeśli na podstawie jednego warunku chcesz obrać jeden z dwóch scenariuszy, możesz użyć dyrektywy `v-else`. Nie przyjmuje ona żadnej wartości, a element zawierający `v-else` **musi następować bezpośrednio po** elemencie zawierającym `v-if` (lub po ` v-else-if`, o której za chwilę). Inaczej Vue nie będzie w stanie stwierdzić do czego odnosi się dany `v-else`.
 
 ```html
 <div id="app">

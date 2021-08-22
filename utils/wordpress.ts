@@ -165,7 +165,7 @@ export async function getExcerptAndContent(
   }
 
   const more = /<!--\s*more\s*-->|{\s*\/_\s*more\s*_\/\s*}|{\s*\/\*\s*more\s*\*\/\s*}/;
-  const other = /$##\s*|\n\n|\r\n\r\n|\<h\d/;
+  const other = /^##\s*|\n\n|\r\n\r\n|\<h\d/;
   const match = more.exec(post.content) || other.exec(post.content) || { index: 0 };
 
   const [excerpt, content] =

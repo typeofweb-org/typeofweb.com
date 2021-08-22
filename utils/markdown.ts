@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions, functional/prefer-readonly-type -- ok */
 // import RehypeToc from '@jsdevtools/rehype-toc';
 import RehypePrism from '@mapbox/rehype-prism';
-import HastUtilToString from 'hast-util-to-string';
+import * as HastUtilToString from 'hast-util-to-string';
 import { serialize } from 'next-mdx-remote/serialize';
 import RehypeAutolinkHeadings from 'rehype-autolink-headings';
 import RehypeKatex from 'rehype-katex';
@@ -16,6 +16,7 @@ import RemarkRehype from 'remark-rehype';
 import * as Unified from 'unified';
 import { visit } from 'unist-util-visit';
 
+import type { Root } from 'hast-util-to-string';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { Node, Parent } from 'unist';
 
@@ -252,7 +253,7 @@ export function normalizeHeaders(): import('unified').Transformer {
 
 export function addDataToCodeBlocks(): import('unified').Transformer {
   return (tree) => {
-    visit(tree, 'element', (node) => {
+    visit(tree, 'element', (node: Node) => {
       if (!isPreNode(node) && !isCodeNode(node)) {
         return;
       }
@@ -320,7 +321,7 @@ export function toHtml(
   source: string,
   options: { excerpt: boolean } = { excerpt: false },
 ): string | import('vfile').VFile {
-  let processor = Unified.unified().use(RemarkParse);
+  let processor: Unified.Processor = Unified.unified().use(RemarkParse);
   commonRemarkPlugins.forEach((plugin) => (processor = processor.use(plugin)));
   processor = processor.use(RemarkRehype, { allowDangerousHtml: true }).use(RehypeRaw);
 
@@ -336,10 +337,10 @@ export function toHtml(
   if (options.excerpt) {
     const parsed = processor.parse(source);
     const result = processor.runSync(parsed);
-    return HastUtilToString(result);
+    return HastUtilToString.toString(result as Root);
   }
 
-  return processor.use(RehypeStringify).processSync(source) as any;
+  return processor.use(RehypeStringify).processSync(source);
 }
 // snake case to camel case
 function toCamelCase(str: string): any {

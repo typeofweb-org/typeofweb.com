@@ -124,7 +124,7 @@ Jeździj na konferencje. To nie musi wcale dużo kosztować. Pokój w hostelu, b
 Dobrym pomysłem może być też **zapisanie się na szkolenie z jakiejś technologii, w której chcesz się specjalizować**. Skondensowana wiedza i doświadczeni trenerzy = zaoszczędzone mnóstwo czasu. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie w Type of Web</a>.
 
 Sporo dobrych porad znajdziesz też we wpisie Karoliny Kreft na temat Bootcampów:
-https://typeofweb.com/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiace/
+https://typeofweb.com/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiące/
 
 ## Podsumowanie
 

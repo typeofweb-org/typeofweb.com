@@ -24,11 +24,11 @@ seo:
   metadesc: >-
     Przyszedł czas na poznanie tajemniczego "state" w React.js. Udało nam się
     tworzyć komponenty, które pięknie wyświetlały przekazane propsy, ale trzeba
-    przyznać szczerze: Bez wewnątrznego stanu nie da się zbudować funkcjonalnej
+    przyznać szczerze: Bez wewnętrznego stanu nie da się zbudować funkcjonalnej
     aplikacji. Dzisiaj nauczysz się taki stan dodawać i wykorzystywać :)
 ---
 
-Przyszedł czas na poznanie tajemniczego <code>state</code> w React.js. Udało nam się tworzyć komponenty, które pięknie wyświetlały przekazane propsy, ale trzeba przyznać szczerze: <strong>Bez wewnątrznego stanu nie da się zbudować funkcjonalnej aplikacji</strong>. Dzisiaj nauczysz się taki stan dodawać i wykorzystywać :)
+Przyszedł czas na poznanie tajemniczego <code>state</code> w React.js. Udało nam się tworzyć komponenty, które pięknie wyświetlały przekazane propsy, ale trzeba przyznać szczerze: <strong>Bez wewnętrznego stanu nie da się zbudować funkcjonalnej aplikacji</strong>. Dzisiaj nauczysz się taki stan dodawać i wykorzystywać :)
 
 {/_ more _/}
 

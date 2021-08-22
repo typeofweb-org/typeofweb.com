@@ -1,0 +1,17 @@
+name: Spellcheck
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Spellcheck
+        uses: typeofweb/spellcheck-github-actions@c82dd868ff12da0290e83f0e10c54d2ac0430fc2

@@ -43,7 +43,7 @@ Weźmy sobie jako przykład operowanie na API. Pobieranie danych z endpointa. Mu
 - pobieranie zakończone sukcesem (dane)
 - błąd pobierania (błąd)
 
-W podstawowej werji wygląda to tak jak poniżej. Action Creatory:
+W podstawowej wersji wygląda to tak jak poniżej. Action Creatory:
 
 ```js
 const dataFetchStarted = () => ({

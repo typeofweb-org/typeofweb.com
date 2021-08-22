@@ -48,7 +48,7 @@ I zaczęło się! GitLab zanotował 100 większy ruch niż zwykle i to jeszcze p
 
 https://twitter.com/gitlab/status/1003409836170547200
 
-Wkrótce kolejka projektów importowanych na GitLaba zrobiła sie tak wielka, że na przeniesienie kodu trzeba było czekać kilka godzin. W komentarzach na Facebooku przeczytałem, że pierwszego dnia przeniesione zostało **250000 repozytoriów, co daje aż 0,3% wszystkich repo na GitHubie**! To nie mało.
+Wkrótce kolejka projektów importowanych na GitLaba zrobiła się tak wielka, że na przeniesienie kodu trzeba było czekać kilka godzin. W komentarzach na Facebooku przeczytałem, że pierwszego dnia przeniesione zostało **250000 repozytoriów, co daje aż 0,3% wszystkich repo na GitHubie**! To nie mało.
 
 Ironiczne w tym wszystkim jest to, że GitLab migruje na inne serwer od kwietnia, ale nadal gro serwerów jest utrzymywanych w Microsoft Azure. Na wzmożonym ruchu zarobi więc… Microsoft.
 
@@ -94,7 +94,7 @@ Microsoft ma też zdolność do przyciągania gigantów — jest po po prostu at
 
 ## Druga strona medalu
 
-Oczywiście sytuacja ma też aspekt, którego można się obawiać. Łańcuch decyzyjny Microsoftu jest znacznie dłuższy i bardziej skomplikowany niż GitHuba do tej pory. Choćby z tego względu jego rozwój może spowolnić. Warto też zauważyć spore zamieszanie, które to przejęcie wywołało — prawdopodobnie kilka kolejnych dni, tygodni, a może nawet miesiący zajmie porządkowanie wszystkiego, aby GitHub (jako zespół) mógł znowu sprawnie funkcjonować. A może nie. To wszystko tylko gdybanie.
+Oczywiście sytuacja ma też aspekt, którego można się obawiać. Łańcuch decyzyjny Microsoftu jest znacznie dłuższy i bardziej skomplikowany niż GitHuba do tej pory. Choćby z tego względu jego rozwój może spowolnić. Warto też zauważyć spore zamieszanie, które to przejęcie wywołało — prawdopodobnie kilka kolejnych dni, tygodni, a może nawet miesięcy zajmie porządkowanie wszystkiego, aby GitHub (jako zespół) mógł znowu sprawnie funkcjonować. A może nie. To wszystko tylko gdybanie.
 
 **Nikt nie płakał gdy LinkedIn został przejęty przez Microsoft**. Nie wiedziałaś o tym? Ja szybko zapomniałem, bo funkcjonowanie serwisu się prawie nie zmieniło, a jeśli już, to **tylko systematycznie poprawia**. Czy z GitHubem będzie podobnie? Oby.
 

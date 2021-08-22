@@ -124,7 +124,7 @@ export function AdminNetlify() {
           .map((p) => `<span>${p}</span>`)
           .join('');
 
-        el.innerHTML = parts.length === 1 ? `<div style="width: max-content;">${row}</div>` : row;
+        el.innerHTML = parts.length === 1 ? `<div style="width: max-content;">${row}</div>` : row; // lgtm [js/xss-through-dom]
       });
     });
 

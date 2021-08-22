@@ -28,7 +28,7 @@ seo:
     v-for.
 ---
 
-Pisząc aplikacje w Vue.js bardzo często bedziesz chciał(a) wyświetlić **listę elementów w pętli** na podstawie tablicy. Właśnie w tym celu "język szablonów" wbudowany w Vue.js udostępnia dyrektywę `v-for`. W najprostszej postaci odpowiada ona pętli `for` znanej z JavaScriptu.
+Pisząc aplikacje w Vue.js bardzo często będziesz chciał(a) wyświetlić **listę elementów w pętli** na podstawie tablicy. Właśnie w tym celu "język szablonów" wbudowany w Vue.js udostępnia dyrektywę `v-for`. W najprostszej postaci odpowiada ona pętli `for` znanej z JavaScriptu.
 
 {/_ more _/}
 
@@ -58,7 +58,7 @@ new Vue({
 
 ## Dostęp do indeksu elementu
 
-Wewnąątrz pętli `v-for` możesz też korzystać z **indeksu elementu**, który właśnie jest iterowany. Składnia zmienia wtedy formę na `(element, index) in tablica`. Oto przykład:
+Wewnątrz pętli `v-for` możesz też korzystać z **indeksu elementu**, który właśnie jest iterowany. Składnia zmienia wtedy formę na `(element, index) in tablica`. Oto przykład:
 
 ```javascript
 new Vue({

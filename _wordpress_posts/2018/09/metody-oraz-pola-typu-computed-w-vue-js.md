@@ -37,7 +37,7 @@ Czasami musisz zrobić coś więcej, niż tylko **wyświetlić pola komponentu**
 
 ## Metody komponentów
 
-Vue.js pozwala definiować **metody**, które potem możesz zawołać nie tylko z **szablonu komponentu**, ale również z innych metod. Aby dodać metodę do komponetu, musisz zdefiniować w nim obiekt `methods` (1). Pola tego obiektu będą metodami dostępnymi w komponencie (2). Aby odnieść się do takiej metody w szablonie, musisz ująć jej nazwę w wąsy i umieścić po niej nawiasy - `{{ nazwaMetody() }}` (3)- zupełnie tak jakbyś wołał/a funkcję. Powyższy przykład z użyciem metody wyglądałby następująco:
+Vue.js pozwala definiować **metody**, które potem możesz zawołać nie tylko z **szablonu komponentu**, ale również z innych metod. Aby dodać metodę do komponentu, musisz zdefiniować w nim obiekt `methods` (1). Pola tego obiektu będą metodami dostępnymi w komponencie (2). Aby odnieść się do takiej metody w szablonie, musisz ująć jej nazwę w wąsy i umieścić po niej nawiasy - `{{ nazwaMetody() }}` (3)- zupełnie tak jakbyś wołał/a funkcję. Powyższy przykład z użyciem metody wyglądałby następująco:
 
 ```javascript
 new Vue({
@@ -77,7 +77,7 @@ Pewnie zauważyłeś, że do tego przykładu, pozornie bez potrzeby, dodałem po
 
 Najważniejszą cechą pól computed jest fakt, że **wyniki tych wyliczeń zostaną zachowane** (cache) przez Vue i przeliczone ponownie dopiero wtedy, gdy będzie to potrzebne. Pozwoli Ci to uniknąć sytuacji z powyższego przykładu.
 
-Pola wyliczone definiujemy w sekcji `computed` (1) komponentu Vue. W najprostrzej postaći wyglądają one dokładnie tak samo jak metody (2). Różnią się jednak sposobem odnoszenia w szablonach, który jest bliźniaczy do zwykłych pól danych - `{{ fullName }}` (3). Zwracane przez nie wartości są zapamiętywane przez framework i przeliczane tylko, jeśli jedno z pól potrzebnych do obliczenia wartości się zmieni. Do tak zdefiniowanego pola wyliczonego nie możesz nic przypisać. Jego wartość jest **tylko do odczytu**.
+Pola wyliczone definiujemy w sekcji `computed` (1) komponentu Vue. W najprostszej postaci wyglądają one dokładnie tak samo jak metody (2). Różnią się jednak sposobem odnoszenia w szablonach, który jest bliźniaczy do zwykłych pól danych - `{{ fullName }}` (3). Zwracane przez nie wartości są zapamiętywane przez framework i przeliczane tylko, jeśli jedno z pól potrzebnych do obliczenia wartości się zmieni. Do tak zdefiniowanego pola wyliczonego nie możesz nic przypisać. Jego wartość jest **tylko do odczytu**.
 
 ```javascript
 new Vue({

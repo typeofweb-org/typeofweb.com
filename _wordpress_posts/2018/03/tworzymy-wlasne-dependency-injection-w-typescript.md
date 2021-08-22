@@ -190,7 +190,7 @@ I'm NoDeps!</code></pre>
 
 <h2>Podsumowanie</h2>
 
-Jak widzisz, wszystki zależności zostały automatycznie wstrzyknięte na podstawie typów klas przekazanych do konstruktora! Great success! 😎
+Jak widzisz, wszystkie zależności zostały automatycznie wstrzyknięte na podstawie typów klas przekazanych do konstruktora! Great success! 😎
 
 Cały kod znajdziesz tutaj: <a href="https://github.com/mmiszy/typeofweb-dependency-injection-typescript">github.com/mmiszy/typeofweb-dependency-injection-typescript</a>
 

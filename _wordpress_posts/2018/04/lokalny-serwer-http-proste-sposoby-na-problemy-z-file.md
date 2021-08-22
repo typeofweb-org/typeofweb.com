@@ -32,7 +32,7 @@ Po co Ci lokalny serwer HTTP? Bardzo wiele osób skarży się mi na dziwne probl
 
 {/_ more _/}
 
-## Błędy CORS a protokoł `file://`
+## Błędy CORS a protokół `file://`
 
 Przykładem błędu, na który często skarżą się czytelnicy jest:
 
