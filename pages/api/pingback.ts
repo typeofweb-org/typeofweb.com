@@ -30,7 +30,12 @@ class PingbackError extends Error {
   }
 }
 
+const notImplemented: boolean = true;
 const PingbackApiRouter: NextApiHandler = (req, res) => {
+  if (notImplemented) {
+    return res.status(501).end();
+  }
+
   if (!req.body) {
     return res.status(400).end();
   }
