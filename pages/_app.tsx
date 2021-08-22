@@ -61,9 +61,9 @@ function ScriptAfterInteraction({
 }
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-useEffect(() => {
-  identifyUser()
-}, []);
+  useEffect(() => {
+    identifyUser();
+  }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call -- ok
   const urlsToPreload: readonly string[] | undefined = pageProps?.posts

@@ -68,39 +68,6 @@ export function AdminNetlify() {
     CMS.init();
   }, [isLoading]);
 
-  const DATE_PATTERN = /^"(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"$/;
-  const IMG_PATTERN = /^(https?:\/\/.*?(?:jpg|jpeg|png))$/;
-
-  function parsePart(part: string): string {
-    const p = part.trim();
-    if (!p) {
-      return '';
-    }
-    if (DATE_PATTERN.test(p)) {
-      const [_, date] = DATE_PATTERN.exec(p) ?? [];
-      if (date) {
-        return new Date(date).toLocaleString('pl');
-      }
-    }
-    if (IMG_PATTERN.test(p)) {
-      const [src] = IMG_PATTERN.exec(p) ?? [];
-      if (src) {
-        return `<img class=${Style.coverThumb} src="${encodeURI(src)}" alt="" />`;
-      }
-    }
-    try {
-      const data = JSON.parse(p);
-      if (Array.isArray(data)) {
-        return data.join(', ');
-      } else if (typeof data === 'object') {
-        return JSON.stringify(data, null, 2);
-      } else {
-        return data;
-      }
-    } catch (err) {}
-    return p;
-  }
-
   const containerRef = useCallback<RefCallback<HTMLDivElement>>((el) => {
     if (!el) {
       return;
@@ -189,4 +156,37 @@ function HidePreview() {
     }
   }, []);
   return null;
+}
+
+const DATE_PATTERN = /^"(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"$/;
+const IMG_PATTERN = /^(https?:\/\/.*?(?:jpg|jpeg|png))$/;
+
+function parsePart(part: string): string {
+  const p = part.trim();
+  if (!p) {
+    return '';
+  }
+  if (DATE_PATTERN.test(p)) {
+    const [_, date] = DATE_PATTERN.exec(p) ?? [];
+    if (date) {
+      return new Date(date).toLocaleString('pl');
+    }
+  }
+  if (IMG_PATTERN.test(p)) {
+    const [src] = IMG_PATTERN.exec(p) ?? [];
+    if (src) {
+      return `<img class=${Style.coverThumb} src="${encodeURI(src)}" alt="" />`;
+    }
+  }
+  try {
+    const data = JSON.parse(p);
+    if (Array.isArray(data)) {
+      return data.join(', ');
+    } else if (typeof data === 'object') {
+      return JSON.stringify(data, null, 2);
+    } else {
+      return data;
+    }
+  } catch (err) {}
+  return p;
 }

@@ -13,7 +13,6 @@ import JsIcon from '../../images/social/js.svg';
 import TsIcon from '../../images/social/ts.svg';
 import VercelIcon from '../../public/powered-by-vercel.svg';
 import { allCategories, getCategoryLink } from '../../utils/categories';
-import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { getSeriesLink } from '../../utils/series';
 import { myUrls, social } from '../molecules/SocialWidget';
