@@ -86,6 +86,7 @@
     "remark-parse": "9.0.0",
     "remark-rehype": "8.1.0",
     "remark-stringify": "9.0.1",
+    "sass": "1.38.0",
     "svgo": "2.4.0",
     "tailwindcss": "2.2.7",
     "terser": "5.7.1",

@@ -14,3 +14,5 @@ export const defaultCover = {
     src: `${host}/typeofweb-facebook-image-sharer.png`,
   },
 };
+
+export const DELIMITER = ' │ ';

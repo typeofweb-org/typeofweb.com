@@ -1,6 +1,6 @@
 import Yaml from 'js-yaml';
 
-import { host } from '../../constants';
+import { DELIMITER, host } from '../../constants';
 import { allCategories, categoryMappings } from '../../utils/categories';
 import { allSeries } from '../../utils/series';
 
@@ -124,7 +124,14 @@ function legacyWordpressCollection() {
   return {
     name: 'legacy_posts',
     label: 'Posty z wordpressa',
-    summary: '{{title}} – {{fields.authors}}',
+    summary: [
+      '{{fields.index}}',
+      '{{fields.thumbnail.url}}',
+      '{{fields.title}}',
+      '{{fields.categories[0].name}}',
+      '{{fields.date}}',
+      '{{fields.authors}}',
+    ].join(DELIMITER),
     description:
       'Stare posty zaimportowane z WordPressa. Nie wszystkie są napisane w poprawnym Markdownie, niektóre używają HTML.',
     path: '{{year}}/{{month}}/{{slug}}',
@@ -285,7 +292,14 @@ async function posts() {
     name: 'posts',
     label: 'Artykuły',
     label_singular: 'Artykuł',
-    summary: '{{title}} – {{fields.authors}}',
+    summary: [
+      '{{fields.index}}',
+      '{{fields.thumbnail.url}}',
+      '{{fields.title}}',
+      '{{fields.category}}',
+      '{{fields.date}}',
+      '{{fields.authors}}',
+    ].join(DELIMITER),
     path: '{{year}}/{{month}}/{{slug}}',
     folder: '_posts',
     slug: '{{slug}}',
@@ -428,7 +442,7 @@ async function pages(): Promise<import('./_netlifySchema').CollectionItems> {
 
   return {
     ...props,
-    summary: '{{title}} – {{fields.authors}}',
+    summary: ['', '{{fields.thumbnail.url}}', '{{fields.title}}', '', '{{fields.date}}', ''].join(DELIMITER),
     name: 'pages',
     label: 'Strony',
     label_singular: 'Strona',

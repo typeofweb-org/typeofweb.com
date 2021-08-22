@@ -1,0 +1,166 @@
+.ncRoot {
+  margin-top: -4rem;
+  :global(*) {
+    content-visibility: unset;
+    contain-intrinsic-size: unset;
+    font-family: 'Fira Sans', 'Arial', 'Helvetica', 'sans-serif';
+  }
+
+  :global {
+    [class*='IconWrapper-PageLogoIcon'] {
+      margin-top: -30vh;
+    }
+
+    [class*='CollectionTopContainer'],
+    [class*='CollectionControlsContainer'],
+    [class*='ListCard-'],
+    [class*='PaginationMessage'] {
+      width: 100%;
+    }
+
+    [class*='CollectionTopContainer'] {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-direction: row;
+      padding-bottom: 3rem;
+      margin-bottom: 0;
+    }
+
+    [class*='CollectionTopRow'] {
+      flex-shrink: 0;
+    }
+
+    [class*='CollectionTopHeading'] {
+      font-size: 3rem;
+    }
+
+    [class*='CollectionTopDescription'] {
+      margin: 0;
+      max-width: 100%;
+      font-size: 1rem;
+    }
+
+    [class*='ListCard-'] {
+      border-radius: 0;
+      margin-bottom: 0;
+      border-bottom: 1px solid lightgray;
+      position: relative;
+    }
+
+    [class*='ListCardLink'] {
+      transition: background-color 0.1s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    [class*='ListCard-']:first-of-type {
+      padding-top: 2.5rem;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: lightgray;
+      }
+
+      [class*='ListCardTitle'] {
+        > span:nth-child(1):not(:empty)::before {
+          content: 'id';
+        }
+        > span:nth-child(2):not(:empty)::before {
+          content: '';
+        }
+        > span:nth-child(3):not(:empty)::before {
+          content: 'Tytuł';
+        }
+        > span:nth-child(4):not(:empty)::before {
+          content: 'Kategoria';
+        }
+        > span:nth-child(5):not(:empty)::before {
+          content: 'Data dodania';
+        }
+        > span:nth-child(6):not(:empty)::before {
+          content: 'Autor';
+        }
+
+        > span::before {
+          pointer-events: none;
+          display: block;
+          position: absolute;
+          font-size: 1.1rem;
+          transform: translateY(-3rem);
+        }
+      }
+    }
+
+    [class*='ListCardTitle'] {
+      min-height: 3rem;
+      display: grid;
+      grid-template-columns: 1rem 4.5rem 3fr 1fr 9rem 2fr;
+      gap: 1rem;
+    }
+
+    [class*='CollectionControlsContainer'] {
+      padding-right: 1rem;
+      margin-top: -2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    [class*='CollectionContainer'] {
+      margin-top: 0;
+    }
+
+    [class*='CollectionMain'] {
+      padding-top: 1.5rem;
+    }
+
+    [class*='SidebarContainer'] {
+      border-radius: 0;
+      max-height: unset;
+      height: 100vh;
+      padding: 0 1rem;
+    }
+
+    [class*='SidebarHeading'] {
+      display: none;
+    }
+
+    [class*='StyledDropdownButton'],
+    [class*='dropdownItem'] {
+      font-size: 1rem;
+    }
+
+    [class*='SidebarNavLink'] {
+      font-size: 1rem;
+      border-left: 0;
+      margin-bottom: 0.25rem;
+      transition: background-color 0.1s;
+    }
+
+    [class*='ViewControlsSection'] {
+    }
+
+    [class*='SidebarNavLink'] {
+      &:hover,
+      &.sidebar-active {
+        background-color: rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+        color: rgb(50, 50, 50);
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+.coverThumb {
+  border-radius: 0.5rem;
+  width: 4.5rem;
+  height: 3rem;
+  object-fit: cover;
+  object-position: top;
+}

@@ -1,8 +1,13 @@
 // @ts-expect-error
 import Cloudinary from 'netlify-cms-media-library-cloudinary';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
+
+import { DELIMITER } from '../constants';
+
+import Style from './adminNetlify.module.scss';
 
 import type { PreviewTemplateComponentProps } from 'netlify-cms-core';
+import type { RefCallback } from 'react';
 
 export function AdminNetlify() {
   const deps = useRef<{
@@ -30,7 +35,7 @@ export function AdminNetlify() {
     }
     const { GithubSlugger, CMS } = deps.current;
 
-    CMS.registerMediaLibrary(Cloudinary);
+    // CMS.registerMediaLibrary(Cloudinary);
     CMS.registerPreviewTemplate('legacy_posts', PreviewComponent);
     CMS.registerPreviewTemplate('posts', PreviewComponent);
     CMS.registerPreviewTemplate('pages', PreviewComponent);
@@ -62,9 +67,73 @@ export function AdminNetlify() {
 
     CMS.init();
   }, [isLoading]);
+
+  const DATE_PATTERN = /^"(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"$/;
+  const IMG_PATTERN = /^(https?:\/\/.*?(?:jpg|jpeg|png))$/;
+
+  function parsePart(part: string): string {
+    const p = part.trim();
+    if (!p) {
+      return '';
+    }
+    if (DATE_PATTERN.test(p)) {
+      const [_, date] = DATE_PATTERN.exec(p) ?? [];
+      if (date) {
+        return new Date(date).toLocaleString('pl');
+      }
+    }
+    if (IMG_PATTERN.test(p)) {
+      const [src] = IMG_PATTERN.exec(p) ?? [];
+      if (src) {
+        return `<img class=${Style.coverThumb} src="${encodeURI(src)}" alt="" />`;
+      }
+    }
+    try {
+      const data = JSON.parse(p);
+      if (Array.isArray(data)) {
+        return data.join(', ');
+      } else if (typeof data === 'object') {
+        return JSON.stringify(data, null, 2);
+      } else {
+        return data;
+      }
+    } catch (err) {}
+    return p;
+  }
+
+  const containerRef = useCallback<RefCallback<HTMLDivElement>>((el) => {
+    if (!el) {
+      return;
+    }
+
+    const observer = new MutationObserver((mutationsList) => {
+      const l = mutationsList
+        .flatMap((m) => Array.from(m.addedNodes))
+        .filter((n): n is HTMLElement => n instanceof HTMLElement)
+        .flatMap((el) => Array.from(el.querySelectorAll('[class*="CardsGrid"] [class*="ListCardTitle"]')));
+
+      l.forEach((el) => {
+        const textToParse = el.textContent;
+        if (!textToParse) {
+          return;
+        }
+
+        const parts = textToParse.split(DELIMITER);
+        const row = parts
+          .map(parsePart)
+          .map((p) => `<span>${p}</span>`)
+          .join('');
+
+        el.innerHTML = parts.length === 1 ? `<div style="width: max-content;">${row}</div>` : row;
+      });
+    });
+
+    observer.observe(el, { characterDataOldValue: true, childList: true, subtree: true });
+  }, []);
+
   return (
-    <div>
-      <div id="nc-root" style={{ marginTop: '-4rem' }} />
+    <div ref={containerRef}>
+      <div id="nc-root" className={Style.ncRoot} />
     </div>
   );
 }
