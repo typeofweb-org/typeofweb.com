@@ -51,6 +51,8 @@ matrix:
             - script
             - style
     sources:
-      - '**/*.md'
-      - '**/*.mdx'
+      - '_pages/*.md'
+      - '_pages/*.mdx'
+      - '_posts/*.md'
+      - '_posts/*.mdx'
     default_encoding: utf-8
