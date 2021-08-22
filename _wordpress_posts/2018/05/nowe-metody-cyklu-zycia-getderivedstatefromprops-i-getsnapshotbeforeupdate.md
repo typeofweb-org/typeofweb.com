@@ -181,7 +181,7 @@ class MyComponent extends React.Component {
 
 ### Zmiana state po zmianie propsów
 
-To właściwie wszystko co robi funkcja `getDerivedStateFromProps`. Wyobraź sobie komponent, który dostaje listę userów jako props, a wewnątrznie może je jakoś filtrować (na podstawie słowa wpisanego w input — `state.search`). Po zmianie propsów chcemy zapisać w `state` przefiltrowanych użytkowników na podstawie obecnie wpisanego filtra:
+To właściwie wszystko co robi funkcja `getDerivedStateFromProps`. Wyobraź sobie komponent, który dostaje listę userów jako props, a wewnętrznie może je jakoś filtrować (na podstawie słowa wpisanego w input — `state.search`). Po zmianie propsów chcemy zapisać w `state` przefiltrowanych użytkowników na podstawie obecnie wpisanego filtra:
 
 ```jsx
 class MyComponent extends React.Component {

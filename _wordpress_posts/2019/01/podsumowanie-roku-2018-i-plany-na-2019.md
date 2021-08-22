@@ -38,7 +38,7 @@ Nadal blog pozostaje projektem niekomercyjnym sam w sobie. Jest natomiast świet
 Udało mi się zaprosić kilka osób do napisania wpisów gościnnych. Nawiązałem też współpracę z Wojtkiem Urbańskim. Koniecznie sprawdź ich materiały:
 
 - [Wojciech Urbański — Kurs Vue.js od podstaw](https://typeofweb.com/kurs/vue-js/)
-- [Karolina Kreft — Jak nie zrobimy z Ciebie programisty w dwa miesiące](https://typeofweb.com/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiace/)
+- [Karolina Kreft — Jak nie zrobimy z Ciebie programisty w dwa miesiące](https://typeofweb.com/jak-nie-zrobimy-z-ciebie-programisty-w-dwa-miesiące/)
 - [Michał Baranowski — TDD w React.js z pomocą react-testing-library](https://typeofweb.com/tdd-react-testing-library/)
 
 Ja sam stworzyłem kilkadziesiąt odcinków [kursu React.js i Redux od podstaw](https://typeofweb.com/kurs/react-js/). Kurs ten jest już niemal kompletny. Pozostaje mi tylko dopisać kilka części na temat Routera oraz omówić nowości, które pojawiły się w Reakcie przez ten czas!

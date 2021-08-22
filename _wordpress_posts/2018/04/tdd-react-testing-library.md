@@ -65,7 +65,7 @@ npm install --save-dev axios-mock-adapter react-testing-library
 
 ### Struktura
 
-Tworzymy podobną sktrukture plików jak poniżej:
+Tworzymy podobną sktrukturę plików jak poniżej:
 
 ```
  - src
@@ -119,7 +119,7 @@ Po przeładowaniu testów jeśli zrobiłaś wszystko tak jak ja, test powinien p
 
 ### Drugi komponent
 
-Zadaniem drugiego komponentu będzie pobranie losowego kawału z [API](https://api.icndb.com/jokes/random) po kliknięciu w przycisk, zapisanie go w _state_ komponenetu i wyrenderowanie dzięki znanemu już nam `Joke`.
+Zadaniem drugiego komponentu będzie pobranie losowego kawału z [API](https://api.icndb.com/jokes/random) po kliknięciu w przycisk, zapisanie go w _state_ komponentu i wyrenderowanie dzięki znanemu już nam `Joke`.
 
 Startujemy oczywiście od napisania testu. Jest to większy komponent, zatem test będziemy pisać stopniowo i będziemy starali się żeby jak najczęściej był „zielony”.
 
@@ -296,7 +296,7 @@ Test powinien ponownie zrobić się zielony, a my mamy pewność, że wszystko d
 
 <p class="important">Zauważcie, że jeszcze ani razu nie otworzyliśmy przeglądarki i nie przetestowaliśmy tego ręcznie, ale dzięki temu w jak pisaliśmy testy (w sposób w jaki użytkownik normalnie korzysta z aplikacji) mamy 100% pewność, że nasza mała aplikacja po prostu działa.</p>
 
-Dodajmy na koniec `JokeGenerator` do `index.js` i odpalmy przeglądarke:
+Dodajmy na koniec `JokeGenerator` do `index.js` i odpalmy przeglądarkę:
 
 ```jsx
 const App = () => (

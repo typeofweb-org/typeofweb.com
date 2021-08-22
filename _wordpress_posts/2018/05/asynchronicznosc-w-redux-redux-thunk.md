@@ -28,7 +28,7 @@ seo:
     asynchronicznych akcji!
 ---
 
-Do tej pory dane z API pobierałem po prostu w komponencie <code>App</code>, a po przyjściu odpowiedzi wysysyłałem odpowiednią akcję (<code>contactsFetched</code>). To działało. Ale wymyśliłem sobie nową funkcję w aplikacji: Możliwość parametryzowania zapytań do API. Posłuży mi do tego nowy komponent. Jak teraz mam wykonywać zapytania do API? Przekazywać coś do store, a to coś wpłynie na <code>App</code>, który wykona zapytanie i zwróci dane znowu do store? Nie brzmi za dobrze. Ale jest lepszy sposób: Poznaj <code>redux-thunk</code>!
+Do tej pory dane z API pobierałem po prostu w komponencie <code>App</code>, a po przyjściu odpowiedzi wysyłałem odpowiednią akcję (<code>contactsFetched</code>). To działało. Ale wymyśliłem sobie nową funkcję w aplikacji: Możliwość parametryzowania zapytań do API. Posłuży mi do tego nowy komponent. Jak teraz mam wykonywać zapytania do API? Przekazywać coś do store, a to coś wpłynie na <code>App</code>, który wykona zapytanie i zwróci dane znowu do store? Nie brzmi za dobrze. Ale jest lepszy sposób: Poznaj <code>redux-thunk</code>!
 
 {/_ more _/}
 
@@ -154,7 +154,7 @@ export const SeedPickerContainer = connect(mapStateToProps, mapDispatchToProps)(
 );
 </code></pre>
 
-Standardowe nazewnictwo funkcji i obiektów: w <code>mapStateToProps</code> tworzysz potrzebny props <code>seed</code> (8). Do <code>mapDispatchToProps</code> przekazujesz akcję, którą za chwilę stworzysz (9). Gotowy komponent <code>SeedPickerContainer</code> to wynik wowyołania funkcji <code>connect</code> (10).
+Standardowe nazewnictwo funkcji i obiektów: w <code>mapStateToProps</code> tworzysz potrzebny props <code>seed</code> (8). Do <code>mapDispatchToProps</code> przekazujesz akcję, którą za chwilę stworzysz (9). Gotowy komponent <code>SeedPickerContainer</code> to wynik wywołania funkcji <code>connect</code> (10).
 
 <h2>Nowe akcje</h2>
 

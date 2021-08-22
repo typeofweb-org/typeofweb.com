@@ -7,7 +7,7 @@ date: 2018-03-12T10:30:55.000Z
 isMarkdown: false
 status: publish
 permalink: >-
-  jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiace
+  jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiące
 authors:
   - karolina-kreft
 type: post

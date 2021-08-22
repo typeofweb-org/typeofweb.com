@@ -29,7 +29,7 @@ seo:
     dispatcher, action creator, reducer… to wszystko w tym wpisie :)
 ---
 
-Na codzień korzystam z <strong>Redux razem z React</strong>. Dawniej używałem też własnej implementacji architektury Flux razem z AngularJS. Postanowiłem napisać o tym koncepcie coś więcej — bo jest to bez wątpienia bardzo ciekawe! <strong>Jednokierunkowy przepływ danych, akcje, dispatcher, action creator, reducer</strong>… to wszystko w tym wpisie :) A do tego klarowne, praktyczne przykłady!
+Na co dzień korzystam z <strong>Redux razem z React</strong>. Dawniej używałem też własnej implementacji architektury Flux razem z AngularJS. Postanowiłem napisać o tym koncepcie coś więcej — bo jest to bez wątpienia bardzo ciekawe! <strong>Jednokierunkowy przepływ danych, akcje, dispatcher, action creator, reducer</strong>… to wszystko w tym wpisie :) A do tego klarowne, praktyczne przykłady!
 
 {/_ more _/}
 
@@ -37,7 +37,7 @@ Gdy opisywałem <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami
 
 <h2 id="flux">Flux i Redux</h2>
 
-Flux to angielskie słowo oznaczające strumień lub przepływ. Jest to też nazwa <del>biblioteki</del> architektury aplikacji zaproponowanej przez Facebooka. Gigant twierdzi zresztą, że używa Fluksa do budowania swoich aplikacji, a sam koncept stał się ostatnio niezwykle popularny. Podstawą Fluksa jest jeden wzorzec projektowy i jedno proste założenie, dlatego można zacząc z niego korzystać z niezwykłą wręcz łatwością, bez konieczności instalowania dodatkowych bibliotek czy frameworków. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Flux i Redux</a>.
+Flux to angielskie słowo oznaczające strumień lub przepływ. Jest to też nazwa <del>biblioteki</del> architektury aplikacji zaproponowanej przez Facebooka. Gigant twierdzi zresztą, że używa Fluksa do budowania swoich aplikacji, a sam koncept stał się ostatnio niezwykle popularny. Podstawą Fluksa jest jeden wzorzec projektowy i jedno proste założenie, dlatego można zacząć z niego korzystać z niezwykłą wręcz łatwością, bez konieczności instalowania dodatkowych bibliotek czy frameworków. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Flux i Redux</a>.
 
 <h3 id="cqrs">CQRS</h3>
 
@@ -84,7 +84,7 @@ To założenie sprawia, że rozumowanie na temat stanu aplikacji staje się jesz
 
 <h3 id="abyzdefiniowajakakcjawpywanastannaleynapisa_purefunction_supidfnref3ahreffn3relfootnote3asup">Aby zdefiniować jak akcja wpływa na stan, należy napisać <strong>reducer</strong>, który jest <em>pure function</em><sup id="fnref-3"><a href="#fn-3" rel="footnote">3</a></sup></h3>
 
-<strong>Reducer to funkcja, które przyjmuje poprzedni stan oraz akcję i zwraca zupełnie nowy stan</strong>, nie zmieniając przy okazji obiektu reprezentującego stanu poprzedni (<strong>nie mutują go</strong>). Najczęściej rozpoczyna się od stworzenia jednego reducera, a później, gdy aplikacja się rozrasta, dodaje się kolejne reducery, znajmujące się konkretnymi <strong>fragmentami stanu</strong>.
+<strong>Reducer to funkcja, które przyjmuje poprzedni stan oraz akcję i zwraca zupełnie nowy stan</strong>, nie zmieniając przy okazji obiektu reprezentującego stanu poprzedni (<strong>nie mutują go</strong>). Najczęściej rozpoczyna się od stworzenia jednego reducera, a później, gdy aplikacja się rozrasta, dodaje się kolejne reducery, zajmujące się konkretnymi <strong>fragmentami stanu</strong>.
 
 Wydaje się proste? No i jest bardzo proste. To w zasadzie wszystko co trzeba wiedzieć o Reduksie! Trzy zasady wraz z przykładami kody można znaleźć <a href="http://redux.js.org/docs/introduction/ThreePrinciples.html">w dokumentacji Reduksa</a>. Przejdźmy teraz do konkretów…
 
@@ -111,7 +111,7 @@ store.subscribe(render);
 render();  
 </code></pre>
 
-Następnie tworzę nowy store oraz wywołuję funkcję <code>store.subscribe(render)</code>, dzięki której <code>render</code> zostanie automatycznie wywołany zawsze, gdzy store się zmieni. Wewnątrz funkcji <code>render</code> pobieram zaś zawartość store’a i wyświetlam w najprotszy możliwy sposób:
+Następnie tworzę nowy store oraz wywołuję funkcję <code>store.subscribe(render)</code>, dzięki której <code>render</code> zostanie automatycznie wywołany zawsze, gdy store się zmieni. Wewnątrz funkcji <code>render</code> pobieram zaś zawartość store’a i wyświetlam w najprostszy możliwy sposób:
 
 <pre><code class="language-javascript">function render() {  
     $$('#result').textContent = store.getState();

@@ -20,7 +20,7 @@ categories:
 seo: {}
 ---
 
-Właśnie wracam z ponad dwutygodniowego urlopu. Była to dla mnie całkowita przerwa od wszystkiego co robię na codzień — przerwa od pracy, od bloga, <strong>bez internetu</strong>, z dala od domu. Życzyłem Wam chwili wytchnienia od projektów, dedlajnów i fakapów — i sam się do swoich zaleceń zastosowałem. W tym wpisie chciałbym, po krótkim odpoczynku i zdystansowaniu się, <strong>podsumować rok 2017</strong>. Dalej opiszę swoje <strong>plany na 2018</strong>, aby za kolejne 12 miesięcy móc się z nich rozliczyć. Do dzieła!
+Właśnie wracam z ponad dwutygodniowego urlopu. Była to dla mnie całkowita przerwa od wszystkiego co robię na co dzień — przerwa od pracy, od bloga, <strong>bez internetu</strong>, z dala od domu. Życzyłem Wam chwili wytchnienia od projektów, dedlajnów i fakapów — i sam się do swoich zaleceń zastosowałem. W tym wpisie chciałbym, po krótkim odpoczynku i zdystansowaniu się, <strong>podsumować rok 2017</strong>. Dalej opiszę swoje <strong>plany na 2018</strong>, aby za kolejne 12 miesięcy móc się z nich rozliczyć. Do dzieła!
 
 {/_ more _/}
 

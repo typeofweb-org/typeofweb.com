@@ -97,7 +97,7 @@ WordPress pozwala na instalowanie motywów – a jest ich <strong>niezliczenie w
 
 Jak? Otóż <strong>WordPress ma koncept tzw. motywów potomnych</strong>, które zmieniają zachowanie motywu-rodzica bez konieczności modyfikowania jego plików! Dzięki temu zmieniłem niektóre zachowania i wygląd pewnych elementów, a także dodałem kilka potrzebnych mi funkcji – a wszystko to we własnym motywie potomnym.
 
-To wszystko sprawia, że WordPressa często określa się też mianem nie tyle CMS co CMF – czyli C<em>ontent Management Framework</em>. To pojęcie szersze i oznaczające system, który daje programiście bazę do stworzenia własnej zaawansowanej aplikacji do zarządzania treścią. Dokładnie taki WordPress jest!
+To wszystko sprawia, że WordPressa często określa się też mianem nie tyle CMS co CMF – czyli <em>Content Management Framework</em>. To pojęcie szersze i oznaczające system, który daje programiście bazę do stworzenia własnej zaawansowanej aplikacji do zarządzania treścią. Dokładnie taki WordPress jest!
 
 <h2>„Przeciwko” WordPress</h2>
 Pod wpisem nafrontendzie.pl „<a href="https://nafrontendzie.pl/dosc-wordpressa-migruje-bloga-jekylla/" target="_blank" rel="noopener nofollow">Dość WordPressa! Migruję bloga do Jekylla!</a>” wiele osób zarzucało WordPressowi głównie dwie rzeczy: że to ciężka kobyła oraz, że wtyczki są kiepskiej jakości. Idealnie wpisałem się tutaj w ramy czasowe z moją migracją <strong>na WordPressa</strong> i chciałbym się do tamtego wpisu odnieść.

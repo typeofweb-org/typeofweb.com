@@ -143,10 +143,10 @@ W tym wpisie zebraliśmy podsumowanie naszych doświadczeń z ostatnich 5-lat. W
 
 ## Sprzedaż biletów
 
-- **W Polsce nia ma dobrego systemu do sprzedaży biletów**. Ten wiodący ma mnóstwo bugów, a ich obsługa techniczna jest po prostu okropna. Musisz to przeżyć, albo próbować z innymi pośrednikami.
+- **W Polsce nie ma dobrego systemu do sprzedaży biletów**. Ten wiodący ma mnóstwo bugów, a ich obsługa techniczna jest po prostu okropna. Musisz to przeżyć, albo próbować z innymi pośrednikami.
 - Wiodący polski pośrednik sprzedaży biletów jest o tyle wygodny, że obsługuje wszystkie polskie sposoby płatności, a do tego nie trzeba się samemu bawić w jakieś szczególne formalności.
 - Jeśli rozważasz alternatywne systemy, to weź pod uwagę polskie systemy płatności. Ponad **40% polskich uczestników płaci przy pomocy mTransfer**!
-- Aktywacja konta u pośredników płatności (szybkich przelewów) może zająć… bardzo dużo czasu. Najlepiej tego uniknąć. Będziesz musiał(a) przygotować umowy, regulaminy, politykę prywatności i niewiadomo co jeszcze. To wymaga sporo cierpliwości.
+- Aktywacja konta u pośredników płatności (szybkich przelewów) może zająć… bardzo dużo czasu. Najlepiej tego uniknąć. Będziesz musiał(a) przygotować umowy, regulaminy, politykę prywatności i nie wiadomo co jeszcze. To wymaga sporo cierpliwości.
 - Pamiętaj, że ostatecznie na Twoje konto trafi **cena biletu minus 3% różnych prowizji**.
 
 ## Inne

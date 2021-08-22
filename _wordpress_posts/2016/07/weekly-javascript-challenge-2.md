@@ -124,4 +124,4 @@ Oczywiście rzuci błąd <code>Uncaught TypeError: this.displayMessage is not a 
 <pre><code class="language-javascript">input.addEventListener('change', App.handleInputChange.bind(App));  
 </code></pre>
 <h1 id="nakoniec">Na koniec</h1>
-Zachęcam do wzięcia udziału w kolejnym Weekly JavaScript Challenge! Ja też się całkiem sporo teraz uczę dzięki uczestnikom i myślę, że każdy może wynieść coś dla siebie nawet z najprotszych zadań.
+Zachęcam do wzięcia udziału w kolejnym Weekly JavaScript Challenge! Ja też się całkiem sporo teraz uczę dzięki uczestnikom i myślę, że każdy może wynieść coś dla siebie nawet z najprostszych zadań.

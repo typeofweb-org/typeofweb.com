@@ -6,7 +6,6 @@ on:
 
 jobs:
   spellcheck:
-    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
     runs-on: ubuntu-latest
 
     steps:
@@ -15,4 +14,4 @@ jobs:
           fetch-depth: 0
 
       - name: Spellcheck
-        uses: rojopolis/spellcheck-github-actions@0.16.0
+        uses: typeofweb/spellcheck-github-actions@c82dd868ff12da0290e83f0e10c54d2ac0430fc2

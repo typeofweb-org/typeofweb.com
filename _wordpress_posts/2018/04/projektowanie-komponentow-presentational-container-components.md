@@ -22,7 +22,7 @@ series:
   slug: react-js
   name: React.js
 seo:
-  metadesc: "Często w React i Redux pojawiają się\_takie określenia: Presentational and Container Components albo Skinny and Fat Components albo Dumb and Smart Components… co to w ogóle jest? Jak powinna wyglądać architektura aplikacji opertej o React i Redux?"
+  metadesc: "Często w React i Redux pojawiają się\_takie określenia: Presentational and Container Components albo Skinny and Fat Components albo Dumb and Smart Components… co to w ogóle jest? Jak powinna wyglądać architektura aplikacji opartej o React i Redux?"
 ---
 
 Często w różnych artykułach poświęconych Reactowi i Reduksowi napotkasz takie sformułowania jak _Presentational and Container Components_ albo _Skinny and Fat Components_ albo _Dumb and Smart Components_ i być może jeszcze kilka innych podobnych ;) Wszystkie te określenia oznaczają to samo: Podział komponentów na 2 rodzaje: Służące prezentacji oraz zawierające logikę.

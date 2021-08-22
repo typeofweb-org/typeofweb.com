@@ -135,11 +135,11 @@ useEffect(() => {
 }, [props.status$]); // 5
 ```
 
-Mówisz tutaj Reaktowi: „usuń tę subskrypcję i stwórz ją na nowo tylko wtedy, gdy zmieni się `props.status$`”. To genialne ułatwienie i prosta optymalizacja!
+Mówisz tutaj Reactowi: „usuń tę subskrypcję i stwórz ją na nowo tylko wtedy, gdy zmieni się `props.status$`”. To genialne ułatwienie i prosta optymalizacja!
 
 ## A jakby tak klasą?
 
-Porównaj teraz powyższy kod z analogicznym kodem w Reaktowej klasie:
+Porównaj teraz powyższy kod z analogicznym kodem w Reactowej klasie:
 
 ```js
   componentDidMount() {

@@ -54,7 +54,7 @@ Ale X-Team to nie tylko zwykła agencja. To znacznie więcej. Buduje silną i za
 
 Muszę wspomnieć też o aspekcie finansowym: Każde przedsięwzięcie jest w jakiś sposób dofinansowywane przez firmę. Przykładowo, możliwe jest **kupowanie za firmowe pieniądze gier komputerowych** (w ramach _game-club_) albo karnetu na siłownię (w ramach _sport-club_).
 
-Dodatkowo **każdy X-Teamer otrzymuje budżet szkoleniowo-wyjazdowy: $2500 rocznie**. Biorąc pod uwagę, że albo wydam te pieniądze na jakąś edukację (kursy, konferencje, loty, hotele, książki…), albo je stracę — to dla mnie osobiście bardzo motywujące 😂 Częśc funduszu można też przeznaczyć na szerokopojęty odpoczynek.
+Dodatkowo **każdy X-Teamer otrzymuje budżet szkoleniowo-wyjazdowy: $2500 rocznie**. Biorąc pod uwagę, że albo wydam te pieniądze na jakąś edukację (kursy, konferencje, loty, hotele, książki…), albo je stracę — to dla mnie osobiście bardzo motywujące 😂 Częśc funduszu można też przeznaczyć na szeroko pojęty odpoczynek.
 
 ## X-Outpost
 
