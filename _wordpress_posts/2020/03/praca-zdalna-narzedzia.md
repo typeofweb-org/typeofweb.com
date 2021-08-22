@@ -1,5 +1,4 @@
 ---
-index: 121
 title: 'Praca zdalna: Lista 20 przydatnych narzędzi'
 date: 2020-03-16T16:40:30.000Z
 isMarkdown: true
@@ -26,7 +25,7 @@ seo:
 
 Jakie narzędzia sprawiają, że praca zdalna z domu staje się prostsza? Ostatnie zagrożenie epidemiologiczne, z którym przychodzi nam się mierzyć sprawiło, że pracodawcy szukało rozwiązań pozwalających na omijanie do biura, w związku z czym pracownicy i pracowniczki wielu firm przeszli w tryb _Home Office_. Jednak, dla niektórych praca zdalna jest zupełnie nową sytuacją – nie mają dostosowanych do tego procesów, ani nie znają potrzebnych narzędzi! Ruszam więc na pomoc.
 
-{/_ more _/}
+---
 
 ## Praca zdalna: zalety i wady
 

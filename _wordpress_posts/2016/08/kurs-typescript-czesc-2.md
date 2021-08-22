@@ -1,5 +1,4 @@
 ---
-index: 18
 title: Kurs TypeScript – część 2
 date: 2016-08-08T13:55:32.000Z
 isMarkdown: false

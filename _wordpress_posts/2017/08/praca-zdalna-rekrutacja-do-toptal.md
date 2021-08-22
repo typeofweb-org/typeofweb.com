@@ -1,5 +1,4 @@
 ---
-index: 30
 title: Praca zdalna – rekrutacja do Toptal
 date: 2017-08-30T08:00:00.000Z
 isMarkdown: false

@@ -1,5 +1,4 @@
 ---
-index: 75
 title: TDD w React.js z pomocą react-testing-library
 date: 2018-04-13T09:28:29.000Z
 isMarkdown: true
@@ -28,7 +27,7 @@ seo:
 
 Jak tworzyć komponenty w React.js zgodnie z TDD dzięki **react-testing-library**? Jak zamockować `axios`? Jak napisać testy odporne na refactoring? To i kilka innych sztuczek w artykule poniżej :)
 
-{/_ more _/}
+---
 
 Trzymanie się zasad **TDD** (_Test-Driven Development_) pisząc aplikacje po stronie **front-endu** w React.js może wydawać się trudniejsze niż testowanie kodu po stronie **back-endu**.
 

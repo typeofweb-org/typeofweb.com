@@ -1,5 +1,4 @@
 ---
-index: 98
 title: Podsumowanie roku 2018 i plany na 2019
 date: 2019-01-07T14:48:31.000Z
 isMarkdown: true
@@ -23,7 +22,7 @@ seo: {}
 
 Niedługo wyjeżdżam na zasłużony urlop. Zanim to jednak zrobię, chciałbym podsumować rok 2018 i przybliżyć moje plany na 2019. Zacznijmy od rozliczenia się z obietnic za 2018. Chciałbym, aby nowy rok był nieco inny niż wszystkie poprzednie.
 
-{/_ more _/}
+---
 
 ## Rozliczenie 2018
 

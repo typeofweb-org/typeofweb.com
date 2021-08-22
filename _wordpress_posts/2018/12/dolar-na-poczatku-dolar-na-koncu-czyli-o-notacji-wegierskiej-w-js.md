@@ -1,5 +1,4 @@
 ---
-index: 97
 title: Dolar na początku, dolar na końcu, czyli o notacji węgierskiej w JS
 date: 2018-12-17T18:37:53.000Z
 isMarkdown: true
@@ -23,7 +22,7 @@ seo: {}
 
 Na pewno często spotykasz kod, w którym nazwy zmiennych mają znak dolara na początku. Albo na końcu. Taki sposób oznaczania _szczególnych_ zmiennych nazywa się **Notacja węgierska**. Czy to dobra praktyka?
 
-{/_ more _/}
+---
 
 ## Historia notacji węgierskiej
 

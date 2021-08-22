@@ -1,5 +1,4 @@
 ---
-index: 46
 title: Podział na komponenty w React.js
 date: 2017-12-17T10:48:35.000Z
 isMarkdown: false
@@ -25,7 +24,7 @@ seo: {}
 
 W tej części skupisz się na teorii i praktyce dzielenia zaprojektowanych aplikacji na poszczególne komponenty. Zaczniesz też tworzyć prostą appkę — menedżer kontaktów. W planach wyświetlanie, dodawanie i edycja kontaktów. Ale najpierw — musimy przecież zaprojektować HTML i CSS dla tej aplikacji.
 
-{/_ more _/}
+---
 
 <h2>Projekt</h2>
 

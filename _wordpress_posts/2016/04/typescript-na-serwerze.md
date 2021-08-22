@@ -1,5 +1,4 @@
 ---
-index: 1
 title: Po co TypeScript?
 date: 2016-04-06T18:06:00.000Z
 isMarkdown: false

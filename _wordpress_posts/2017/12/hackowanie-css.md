@@ -1,5 +1,4 @@
 ---
-index: 45
 title: Hackowanie CSS
 date: 2017-12-15T12:36:18.000Z
 isMarkdown: false
@@ -23,7 +22,7 @@ seo: {}
 
 Numerem 1 podatności aplikacji internetowych wg. OWASP jest szerokopojęte „Injection”. Zazwyczaj kiedy o tym mówimy gdzieś z tyłu głowy mamy wyłącznie JavaScript i tylko XSS. A to przecież błąd 😲 W tym wpisie pokażę Ci <strong>jak można wykorzystać ciekawe elementy języka CSS do kradzieży wrażliwych danych</strong> z aplikacji ofiary.
 
-{/_ more _/}
+---
 
 <p class="important">Wpis powstał na podstawie mojej prezentacji z UnleashConf 2017 w Krakowie (występowałem z nią również na meet.js Gdańsk). <strong>Slajdy oraz kod znajdziesz na samym końcu wpisu, w podsumowaniu.</strong></p>
 

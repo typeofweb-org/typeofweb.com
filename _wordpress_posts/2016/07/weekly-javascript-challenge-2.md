@@ -1,5 +1,4 @@
 ---
-index: 16
 title: 2. Weekly JavaScript Challenge
 date: 2016-07-27T09:34:00.000Z
 isMarkdown: false

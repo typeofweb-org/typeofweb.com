@@ -1,5 +1,4 @@
 ---
-index: 84
 title: Wprowadzenie do kursu Vue.js od podstaw
 date: 2018-06-08T12:20:00.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Witaj w kursie **Vue.js od podstaw**. Bardzo się cieszę, że chcesz się nauczyć tego wspaniałego **frameworka JavaScript**. Niezależnie od tego, czy chcesz szukać pracy, w której będziesz wykorzystywać Vue.js, napisać w nim hobbystyczny projekt, czy po prostu poszerzyć swoje horyzonty jako programist(k)a JavaScript ten kurs jest dla Ciebie.
 
-{/_ more _/}
+---
 
 ## Vue.js
 

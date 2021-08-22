@@ -1,5 +1,4 @@
 ---
-index: 59
 title: Testowanie aplikacji React.js — podstawy Enzyme
 date: 2018-02-09T08:20:22.000Z
 isMarkdown: false
@@ -32,7 +31,7 @@ seo:
 
 Testowanie aplikacji to rzecz ważna. Do tej pory jednak nie wspomniałem ani słowem o testowaniu React.js. Czas najwyższy to zrobić! I <strong>od razu wrzucam Cię na głęboką wodę — użyjesz React.js i Enzyme</strong> — przemiłej biblioteki do testowania komponentów.
 
-{/_ more _/}
+---
 
 O zaletach samego testowania nie muszę chyba pisać. <strong>Utrzymanie kodu, łatwiejsze dodawanie nowych funkcji, testy służące jako dokumentacja</strong>… bajka ;) Dlatego teraz po prostu weźmiesz poprzedni przykład (filtrowanie listy) i napiszesz do niego testy jednostkowe. Zacznij od zainstalowania enzyme.
 

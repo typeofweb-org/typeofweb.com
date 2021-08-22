@@ -1,5 +1,4 @@
 ---
-index: 27
 title: Observable – rxjs 5
 date: 2017-05-19T18:57:00.000Z
 isMarkdown: false

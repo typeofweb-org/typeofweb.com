@@ -1,5 +1,4 @@
 ---
-index: 114
 title: Continuous Integration na GitHub Pages w Buddy.works
 date: 2019-11-18T15:51:56.000Z
 isMarkdown: true
@@ -27,7 +26,7 @@ seo:
 
 Ustawienie narzędzi do Continuous Integration i Continuous Delivery nierzadko odstrasza nawet zaawansowane osoby. Nie dziwię się! Pisanie plików konfiguracyjnych w YML do najprzyjemniejszych nie należy. W tym wpisie pokazuję ciekawą alternatywę: jak łatwo wyklikać Continuous Integration w <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_tutorial&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy.works</a> na przykładzie aplikacji React.js i GitHub Pages!
 
-{/_ more _/}
+---
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 

@@ -1,5 +1,4 @@
 ---
-index: 96
 title: "Zasoby, z których ja nauczyłem się\_(prawie) wszystkiego o front-endzie"
 date: 2018-12-13T07:40:44.000Z
 isMarkdown: true
@@ -21,7 +20,7 @@ seo: {}
 
 Nie tak dawno temu, nie umiałem zupełnie nic. Nie miałem pojęcia na temat Internetu, front-endu czy programowania w ogóle. Dziś, umiem już nieco więcej. W tym nieco biograficznym artykule opisuję, skąd się nauczyłem prawie wszystkiego, co potrafię dzisiaj.
 
-{/_ more _/}
+---
 
 ## Delphi
 

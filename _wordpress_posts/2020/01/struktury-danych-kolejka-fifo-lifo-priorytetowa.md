@@ -1,5 +1,4 @@
 ---
-index: 118
 title: Kolejka FIFO, LIFO i priorytetowa – struktury danych
 date: 2020-01-31T11:49:10.000Z
 isMarkdown: true
@@ -28,7 +27,7 @@ seo:
 
 Kolejka (FIFO), stos (LIFO) i kolejka priorytetowa. Przechodzimy do nieco bardziej abstrakcyjnych struktur danych. Omówimy ich właściwości i złożoności, krótko porozmawiamy o możliwych implementacjach, a także spróbujemy sami napisać!
 
-{/_ more _/}
+---
 
 ## Kolejka FIFO
 

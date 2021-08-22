@@ -1,5 +1,4 @@
 ---
-index: 25
 title: REST API w node.js z HapiJS – dokumentacja API
 date: 2017-04-14T08:50:23.000Z
 isMarkdown: false

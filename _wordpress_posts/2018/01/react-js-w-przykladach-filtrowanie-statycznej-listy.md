@@ -1,5 +1,4 @@
 ---
-index: 55
 title: 'React.js w przykładach: filtrowanie statycznej listy'
 date: 2018-01-24T09:19:30.000Z
 isMarkdown: false
@@ -26,7 +25,7 @@ seo:
 
 W jednym z komentarzy ktoś zasugerował mi, abym pokazywał jak najwięcej praktycznych przykładów. Inna osoba pytała konkretnie o przykład filtrowania listy na podstawie tekstu wpisywanego w input. Stwierdziłem, że warto skorzystać z tych sugestii. Oto powstaje seria wpisów, które będą się przeplatały z kursem Reacta jako takim. Tutaj będę pokazywał <strong>konkretne przykłady i implementacje</strong>, bez tłumaczenia teorii. Pierwszym przykładem będzie właśnie taka lista — na razie wersja prosta, ze statycznymi danymi i synchronicznym wyszukiwaniem. Do dzieła!
 
-{/_ more _/}
+---
 
 <h2>Plan działania</h2>
 

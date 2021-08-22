@@ -1,5 +1,4 @@
 ---
-index: 60
 title: Testowanie React.js w Enzyme — props, state i interakcje
 date: 2018-02-13T13:46:21.000Z
 isMarkdown: false
@@ -31,7 +30,7 @@ seo:
 
 Pokazałem już jak pisać proste testy do aplikacji React.js z użyciem Enzyme. Sprawdzanie czy coś się renderuje, czy zawiera tekst, czy dobrze pokazuje elementy… W tym wpisie idę o krok dalej. Pokazuję jak w Enzyme testować interakcje z komponentami, odczytywać i zmieniać propsy a także state.
 
-{/_ more _/}
+---
 
 <h2>Pobieranie i ustawianie propsów oraz state</h2>
 

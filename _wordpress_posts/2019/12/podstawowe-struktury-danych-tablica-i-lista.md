@@ -1,5 +1,4 @@
 ---
-index: 116
 title: Podstawowe struktury danych — tablica i lista
 date: 2019-12-10T18:57:12.000Z
 isMarkdown: true
@@ -36,7 +35,7 @@ seo:
 
 Znajomość podstawowych struktur danych takich, jak tablica czy lista, jest w środowisku akademickim uważana za wiedzę podstawową w programowaniu. Czy tak jest naprawdę? Moim zdaniem **nie jest to absolutnie niezbędne** do codziennego klepania kodu. Mimo to, warto jednak poznać różnorodne struktury danych, gdyż ta wiedza może mieć wpływ na nasze decyzje odnośnie implementacji i postrzegania problemów algorytmicznych.
 
-{/_ more _/}
+---
 
 ## Co to jest struktura danych?
 

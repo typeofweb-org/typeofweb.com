@@ -1,5 +1,4 @@
 ---
-index: 65
 title: X-Team — opis, rekrutacja, moja opinia
 date: 2018-02-28T11:41:09.000Z
 isMarkdown: true

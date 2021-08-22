@@ -1,5 +1,4 @@
 ---
-index: 128
 title: Conditional types – TypeScript – typy warunkowe
 date: 2020-12-14T15:35:34.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Typy warunkowe (_conditional types_) to prawdopodobnie najtrudniejsza część TypeScripta. Jednocześnie, jak to zwykle bywa, jest to element najpotężniejszy i dający ogromne możliwości tworzenia rozbudowanych i zaawansowanych typów, dzięki którym Twoje aplikacje staną się jeszcze bardziej bezpieczne.
 
-{/_ more _/}
+---
 
 <p class="important">Tekst jest fragmentem <a href="https://typescriptnapowaznie.pl/" target="_blank" rel="noopener">książki „TypeScript na poważnie”</a> mojego autorstwa. Jeśli artykuł Ci się podoba, to zachęcam Cię do kupienia tej pozycji – znajdziesz tam więcej praktycznych przykładów wraz z wyjaśnieniem teorii. <a href="https://typescriptnapowaznie.pl/" target="_blank" rel="noopener"><img src="https://sklep.typeofweb.com/content/uploads/2020/08/Group-1.png" alt="Książka i e-book TypeScript na poważnie" title="Książka i e-book TypeScript na poważnie" /></a></p>
 

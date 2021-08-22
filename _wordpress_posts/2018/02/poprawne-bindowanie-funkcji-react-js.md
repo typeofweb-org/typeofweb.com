@@ -1,5 +1,4 @@
 ---
-index: 61
 title: Poprawne bindowanie funkcji w React.js
 date: 2018-02-16T15:34:32.000Z
 isMarkdown: false
@@ -31,7 +30,7 @@ seo:
 
 Jak pewnie zauważyłaś/eś — wywołanie metody klasy w React.js z poziomu funkcji <code>render</code> kończy się źle, o ile nie użyjesz <code>bind</code>. Wspominałem też o tym w kursie i sam używałem po prostu <code>bind</code> w czasie renderowania. Ale czy to dobre rozwiązanie? Co z wydajnością i czytelnością takiego kodu?
 
-{/_ more _/}
+---
 
 <h2><code>bind</code> w ogóle</h2>
 

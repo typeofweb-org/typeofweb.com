@@ -1,5 +1,4 @@
 ---
-index: 91
 title: Pętle w Vue.js z użyciem dyrektywy v-for
 date: 2018-07-13T12:34:07.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Pisząc aplikacje w Vue.js bardzo często będziesz chciał(a) wyświetlić **listę elementów w pętli** na podstawie tablicy. Właśnie w tym celu "język szablonów" wbudowany w Vue.js udostępnia dyrektywę `v-for`. W najprostszej postaci odpowiada ona pętli `for` znanej z JavaScriptu.
 
-{/_ more _/}
+---
 
 ## Wyświetlanie listy przy użyciu dyrektywy `v-for`
 

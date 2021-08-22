@@ -1,5 +1,4 @@
 ---
-index: 130
 title: 'TypeScript: `infer` i typy warunkowe'
 date: 2021-01-30T12:50:09.000Z
 isMarkdown: true
@@ -21,7 +20,7 @@ seo: {}
 
 [Poprzedni wpis](https://typeofweb.com/conditional-types-typescript-typy-warunkowe/) na temat typów warunkowych (_Conditional Types_) omawiał dokładnie teorię oraz podstawowe zastosowania. W tym artykule skupimy się na niuansach, kompatybilności oraz słowie kluczowym `infer`, które daje nam nieograniczone możliwości instruowania kompilatora!
 
-{/_ more _/}
+---
 
 <p class="important">Tekst jest fragmentem <a href="https://typescriptnapowaznie.pl/" target="_blank" rel="noopener">książki „TypeScript na poważnie”</a> mojego autorstwa. Jeśli artykuł Ci się podoba, to zachęcam Cię do kupienia tej pozycji – znajdziesz tam więcej praktycznych przykładów wraz z omówionymi mechanizmami działania. <a href="https://typescriptnapowaznie.pl/" target="_blank" rel="noopener"><img src="https://sklep.typeofweb.com/content/uploads/2020/08/Group-1.png" /></a></p>
 

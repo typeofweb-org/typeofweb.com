@@ -1,5 +1,4 @@
 ---
-index: 88
 title: Higher Order Reducers — Redux i powtarzanie kodu
 date: 2018-06-28T09:08:28.000Z
 isMarkdown: true
@@ -27,7 +26,7 @@ seo:
 
 Higher Order Reducers — co to takiego? Gdy popracujesz dłużej z Reduksem to na pewno zauważysz pewne powtarzalne wzorce. Napisanie akcji i reducerów do obsługi API to konieczność powtórzenia bardzo podobnego kodu kilka, kilkanaście razy! Czy na pewno jest to konieczne? Z pomocą przychodzą właśnie _Higher Order Reducers_ i kompozycja.
 
-{/_ more _/}
+---
 
 ## Definicja Higher Order Reducer
 

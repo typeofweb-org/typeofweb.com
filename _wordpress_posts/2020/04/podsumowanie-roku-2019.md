@@ -1,5 +1,4 @@
 ---
-index: 122
 title: Podsumowanie roku 2019
 date: 2020-04-27T14:49:48.000Z
 isMarkdown: true
@@ -19,7 +18,8 @@ seo: {}
 ---
 
 Nieco spóźnione, ale oto i ono: Podsumowanie mojego roku 2019. Długo zwlekałem z napisaniem tego posta głównie ze względu na sytuację panującą na świecie… wiele moich planów uległo zmianie; musiałem też przeprioretyzować pewne sprawy. Ale jest też kilka bardzo dobrych wiadomości!
-{/_ more _/}
+
+---
 
 ## Rok 2019
 

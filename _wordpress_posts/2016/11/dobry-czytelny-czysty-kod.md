@@ -1,5 +1,4 @@
 ---
-index: 21
 title: 'Dobry kod: Ty też możesz pisać czytelny kod!'
 date: 2016-11-25T11:43:24.000Z
 isMarkdown: false
@@ -32,7 +31,7 @@ seo:
 
 Pisanie czytelnego kodu sprawia wielu programistom ogromne kłopoty. Ta uwaga bynajmniej nie dotyczy wyłącznie osób początkujących, ale niestety także tych z latami doświadczenia. Z czego wynika problem? Jak sprawić, aby pisany kod był bardziej czytelny i przystępny? Co to jest czysty kod?
 
-{/_ more _/}
+---
 
 Ostatnio mam okazję prowadzić webinary, warsztaty i szkolenia. Dodatkowo od dłuższego czasu staram się kontynuować inicjatywę <a href="https://www.facebook.com/groups/1131907053499522/">Weekly JavaScript Challenge</a>. Dzięki temu mam kontakt z wieloma programistami o różnym poziomie doświadczenia i z nieudawanym przerażeniem stwierdzam, że <strong>czytelność kodu nadal traktowana jest jako coś mało istotnego</strong>. Nic bardziej błędnego!
 

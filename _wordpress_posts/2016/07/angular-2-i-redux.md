@@ -1,5 +1,4 @@
 ---
-index: 10
 title: Angular 2 i Redux
 date: 2016-07-04T06:35:51.000Z
 isMarkdown: false

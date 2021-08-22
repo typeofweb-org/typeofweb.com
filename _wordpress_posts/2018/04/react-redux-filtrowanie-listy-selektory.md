@@ -1,5 +1,4 @@
 ---
-index: 77
 title: React + Redux — filtrowanie listy, proste selektory
 date: 2018-04-23T13:37:00.000Z
 isMarkdown: true
@@ -31,7 +30,7 @@ seo:
 
 Jak dokładnie wygląda komunikacja pomiędzy komponentami przy użyciu Redux w React? W tym wpisie pokazuję jak zaimplementować filtrowanie listy przy użyciu Reduksa. Na dokładkę — poznasz pojęcie „selektor” i pewien ważny koncept w Reduksie. Do kodu!
 
-{/_ more _/}
+---
 
 ## Komponenty a Redux
 

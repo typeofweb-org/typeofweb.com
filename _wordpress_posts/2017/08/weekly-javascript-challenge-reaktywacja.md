@@ -1,5 +1,4 @@
 ---
-index: 29
 title: Weekly JavaScript Challenge – Reaktywacja!
 date: 2017-08-24T08:13:59.000Z
 isMarkdown: false

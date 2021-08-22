@@ -1,5 +1,4 @@
 ---
-index: 20
 title: innerHTML, czyli najbardziej banalna furtka do XSS
 date: 2016-09-11T06:41:07.000Z
 isMarkdown: false
@@ -26,7 +25,7 @@ seo:
 
 Bardzo często popełnianym błędem, na który zwracam uwagę praktycznie w każdym kolejnym Weekly JavaScript Challenge, jest niewłaściwe wykorzystywanie innerHTML. Bardzo łatwo może to doprowadzić do wystąpienia podatności typu <strong>XSS</strong>! Ten wpis chciałem poświęcić tej właściwości oraz zagrożeniom, które płyną z jej nieprawidłowego wykorzystania. Będę analizował konkretny przykład kodu z nadesłanego rozwiązania i pokażę jak przeprowadzić prosty atak na ten kod. Zapraszam!</p>
 
-{/_ more _/}
+---
 
 <h2 id="xss">XSS przez innerHTML</h2>
 

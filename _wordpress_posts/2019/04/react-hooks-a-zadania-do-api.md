@@ -1,5 +1,4 @@
 ---
-index: 106
 title: React Hooks a żądania do API
 date: 2019-04-16T09:27:55.000Z
 isMarkdown: true
@@ -27,7 +26,7 @@ seo:
 
 React Hooks mocno upraszczają właściwie wszystko, co do tej pory robiłaś. W jednym z pierwszych odcinków kursu pokazywałem, jak można w szybki sposób pobierać dane z API używając `fetch` w Reakcie. Czy Hooki coś tutaj zmieniają? Ależ tak!
 
-{/_ more _/}
+---
 
 ## Fetch do tej pory
 

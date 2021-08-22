@@ -1,5 +1,4 @@
 ---
-index: 67
 title: >-
   Jak kurs programowania ani bootcamp nie zrobi z Ciebie programisty w dwa
   miesiące
@@ -38,7 +37,7 @@ Jestem <strong>absolwentką</strong> dwóch <strong>kursów programowania</stron
 
 Po kilku latach spędzonych za granicą i odłożeniu odpowiedniej ilości pieniędzy, postanowiłam świadomie dokonać w swoim życiu przewrotu. Ze specjalistki ds. marketingu internetowego chciałam <strong>przebranżowić się w programistkę</strong>.
 
-{/_ more _/}
+---
 
 Uczestnictwo w pierwszym kursie programowania planowałam przez kilka miesięcy i opłaciłam z własnych środków. Decyzja o skorzystaniu z drugiego kursu programowania zapadła spontanicznie. Głównie ze względu na to, że koszty pokrywał Urząd Pracy. Czułam też, że nie jestem jeszcze wystarczająco przygotowana do podjęcia zatrudnienia. Jak się później okazało, <strong>nawet po drugim kursie i trzymiesięcznym stażu</strong> moja wiedza programistyczna wciąż była bardzo podstawowa. A przecież miałam <strong>zostać programistką w dwa miesiące</strong> :)
 

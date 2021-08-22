@@ -1,5 +1,4 @@
 ---
-index: 95
 title: Byłem na ReactiveConf 2018
 date: 2018-11-15T19:30:12.000Z
 isMarkdown: true
@@ -23,7 +22,7 @@ seo: {}
 
 Tegoroczna konferencja ReactiveConf odbywała się w czeskiej Pradze. Po pozytywnych doświadczeniach w ubiegłym roku, nie myślałem długo, nie przeglądałem nawet agendy, po prostu kupiłem bilet i pojechałem. Spodziewałem się dużo JS, React, Elm, FRP… i w zasadzie się nie zawiodłem. W zasadzie, bo przecież nie o to w tym wszystkim chodzi!
 
-{/_ more _/}
+---
 
 ## ReactiveConf
 

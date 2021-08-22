@@ -1,5 +1,4 @@
 ---
-index: 109
 title: Problem XY, czyli gdy nie wiemy, o co pytamy
 date: 2019-05-31T13:54:13.000Z
 isMarkdown: true
@@ -29,7 +28,7 @@ seo:
 
 Na pewno każda i każdy z Was napotkał kiedyś w swoim życiu Problem XY, być może nawet o tym nie wiedząc. Część z was pewnie go „popełnia”. **Problem XY występuje wtedy, gdy pytamy o rozwiązanie problemu, zamiast o sam problem**. Dlaczego to źle? Jak zadawać pytania?
 
-{/_ more _/}
+---
 
 ## Problem XY: Scenka
 

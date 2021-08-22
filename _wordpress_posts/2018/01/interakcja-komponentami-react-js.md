@@ -1,5 +1,4 @@
 ---
-index: 48
 title: Interakcja z komponentami React.js
 date: 2018-01-08T02:12:39.000Z
 isMarkdown: false
@@ -32,7 +31,7 @@ seo:
 
 Tworzenie aplikacji nie miałoby sensu, gdyby użytkownik nie mógł wchodzić z nią w interakcje :) Dzisiaj nauczysz się obsługiwać zdarzenia wywoływane przez użytkowników: Kliknięcia, najechania kursorem, zmiany tekstu w polu tekstowym… oczywiście w React.js.
 
-{/_ more _/}
+---
 
 <h2>Zdarzenia w JS</h2>
 

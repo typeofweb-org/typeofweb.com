@@ -1,5 +1,4 @@
 ---
-index: 57
 title: Tworzenie aplikacji React.js dzięki create-react-app
 date: 2018-01-29T15:19:49.000Z
 isMarkdown: false
@@ -26,7 +25,7 @@ seo:
 
 Do tej pory pokazałem kilka przykładów z React.js, a wszystkie wrzuciłem na codepen. Jak się pewnie domyślasz, <strong>tworzenie rozbudowanych aplikacji wygląda nieco inaczej</strong>. Dzielisz je na wiele plików, chcesz odpalać testy jednostkowe, a ostatecznie chciałabyś kod zminifikować.  <code>create-react-app</code> to paczka pozwalająca na łatwe stworzenie projektu opartego o React.js. Tworzy dla Ciebie strukturę katalogów i plików, zawiera wszystkie potrzebne na początek narzędzia i pozwala na odpalanie, testowanie i budowanie aplikacji. <strong>Czego chcieć więcej?</strong>
 
-{/_ more _/}
+---
 
 <h2>Początek z <code>create-react-app</code></h2>
 

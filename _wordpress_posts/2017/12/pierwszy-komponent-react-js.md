@@ -1,5 +1,4 @@
 ---
-index: 43
 title: Pierwszy komponent w React.js
 date: 2017-12-08T14:30:58.000Z
 isMarkdown: false
@@ -25,7 +24,7 @@ seo: {}
 
 W tym wpisie pokażę prosty <strong>komponent React.js</strong>, opiszę jego budowę i podstawowe elementy. Napiszemy też (razem) pierwszą pełnoprawną aplikację w React, którą będziesz mogła/mógł uruchomić u siebie na dysku. Będzie to baza do dalszych części <strong>kursu React.js</strong>.
 
-{/_ more _/}
+---
 
 Wróćmy do poprzedniego przykładu, tak zwanego Hello World, w React.js. Oto on, tym razem w pełnej okazałości:
 

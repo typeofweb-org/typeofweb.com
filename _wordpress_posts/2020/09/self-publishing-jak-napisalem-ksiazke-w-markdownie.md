@@ -1,5 +1,4 @@
 ---
-index: 127
 title: 'Self-publishing: Jak napisałem książkę w markdownie?'
 date: 2020-09-30T14:24:58.000Z
 isMarkdown: true
@@ -32,7 +31,7 @@ seo:
 
 Wciąż dopytujecie się o proces _self-publishing_ [mojej książki „TypeScript na poważnie”](https://typescriptnapowaznie.pl/) od strony technicznej. W czym ją pisałem? Jak tworzyłem e-booki? Dlaczego zdecydowałem się na markdown? Jakich narzędzi używałem? Śpieszę odpowiedzieć – to wszystko w tym wpisie :)
 
-{/_ more _/}
+---
 
 <p class="important">Przedsprzedaż książki zakończyła się ogromnym sukcesem! Teraz poświęcam całą energię na realizację złożonych zamówień. <strong>Sklep powróci 1. listopada.</strong> Jeśli chcesz, mogę Ci o tym przypomnieć – wystarczy, że zostawisz swojego maila poniżej.</p>
 

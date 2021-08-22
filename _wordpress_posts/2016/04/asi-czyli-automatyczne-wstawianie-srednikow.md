@@ -1,6 +1,5 @@
 ---
 id: 12
-index: 2
 title: ASI czyli automatyczne wstawianie średników
 date: 2016-04-12T19:19:06.000Z
 isMarkdown: false

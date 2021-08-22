@@ -1,5 +1,4 @@
 ---
-index: 14
 title: Dependency Injection w Angular 2
 date: 2016-07-19T10:40:43.000Z
 isMarkdown: false

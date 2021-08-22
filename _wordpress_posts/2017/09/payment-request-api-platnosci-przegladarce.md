@@ -1,5 +1,4 @@
 ---
-index: 32
 title: 'Payment Request API: bezpieczne płatności w przeglądarce'
 date: 2017-09-14T20:42:06.000Z
 isMarkdown: false

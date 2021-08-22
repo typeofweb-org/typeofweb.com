@@ -1,5 +1,4 @@
 ---
-index: 3
 title: Single Page Applications a SEO
 date: 2016-04-19T19:08:14.000Z
 isMarkdown: false

@@ -1,5 +1,4 @@
 ---
-index: 94
 title: Call For Proposals na meet.js Summit 2018
 date: 2018-10-23T14:24:40.000Z
 isMarkdown: true
@@ -26,7 +25,7 @@ seo:
 
 meet.js Summit 2018 już za nami. Łącznie wystąpiło 11 prelegentów i prelegentek. Jak dokładnie wyglądał proces ich wyboru? Jak starać się, aby Call For Papers było obiektywne? O poprawie procesów organizacji konferencji.
 
-{/_ more _/}
+---
 
 ## meet.js Summit 2018
 

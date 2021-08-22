@@ -1,5 +1,4 @@
 ---
-index: 7
 title: Wstęp do Angular 2
 date: 2016-06-03T12:05:10.000Z
 isMarkdown: false

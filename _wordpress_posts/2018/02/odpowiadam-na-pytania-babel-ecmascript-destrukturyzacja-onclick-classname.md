@@ -1,5 +1,4 @@
 ---
-index: 62
 title: 'Odpowiadam na pytania: Babel, ECMAScript, destrukturyzacja, onClick, className'
 date: 2018-02-21T18:41:32.000Z
 isMarkdown: true
@@ -30,7 +29,8 @@ seo:
 ---
 
 W komentarzach na blogu i na Facebooku pojawiło się całe mnóstwo różnych pytań do mnie. Super! Staram się odpowiadać na nie na biężąco. Ale teraz postanowiłem też zebrać je w jednym miejscu wraz z odpowiedziami — i stworzyć swego rodzaju kompendium wiedzy ;) **Jeśli masz jakieś pytania to pisz!** Odpowiem na nie w jednym z kolejnych wpisów.
-{/_ more _/}
+
+---
 
 ## Wasze pytania i odpowiedzi
 

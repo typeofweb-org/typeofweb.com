@@ -1,5 +1,4 @@
 ---
-index: 19
 title: "Kurs TypeScript – część\_3"
 date: 2016-08-10T08:22:00.000Z
 isMarkdown: false

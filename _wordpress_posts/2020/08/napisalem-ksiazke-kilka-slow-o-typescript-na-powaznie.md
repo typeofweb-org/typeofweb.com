@@ -1,5 +1,4 @@
 ---
-index: 126
 title: Napisałem książkę! Kilka słów o „TypeScript na poważnie”
 date: 2020-08-24T12:27:41.000Z
 isMarkdown: true
@@ -26,7 +25,7 @@ seo: {}
 
 Książka mojego autorstwa „TypeScript na poważnie” została ukończona i jest możliwość zakupu po [niższej cenie w przedsprzedaży](https://sklep.typeofweb.com/). Kilka osób prosiło mnie o opisanie tego, jak proces twórczy i wydawniczy wygląda od podszewki – wszak zdecydowałem się _self-publishing_! Zapraszam więc do serii wpisów :)
 
-{/_ more _/}
+---
 
 <p class="important"><a href="https://sklep.typeofweb.com/">Książkę „TypeScript na poważnie” w przedsprzedaży</a> w niższej cenie można kupić tylko do 15. września! Po tym terminie cena rośnie i już nigdy nie będzie tak atrakcyjna, jak teraz.</p>
 

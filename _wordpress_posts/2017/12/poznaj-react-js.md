@@ -1,5 +1,4 @@
 ---
-index: 42
 title: Poznaj React.js
 date: 2017-12-05T14:00:54.000Z
 isMarkdown: false
@@ -31,7 +30,7 @@ seo:
 
 <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> jest biblioteką do budowania interfejsów w JavaScript, stworzoną przez Facebooka. React zdobył ogromną popularność wśród programistów i jest jedną z tych bibliotek, w których pisze się całkiem przyjemnie. Koncept Reacta opiera się o znane od dawna wzorce, które zostały tutaj odświeżone i zunifikowane: Jednokierunkowy przepływ danych i budowanie aplikacji w oparciu o <strong>komponenty</strong>.
 
-{/_ more _/}
+---
 
 <h2>Co to jest React.js?</h2>
 

@@ -1,5 +1,4 @@
 ---
-index: 120
 title: Dowiedz się ile zarabiają gwiazdy frontendu!
 date: 2020-03-04T14:58:19.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Ostatnio na Twitterze pojawił się ciekawa moda polegająca na ujawnianiu swojego doświadczenia i zarobków przez programistów i programistki w celu uświadamiania i zmniejszenia nierówności płac. Udział w zabawie wzięły także znane gwiazdy takie, jak Dan Abramov albo Sara Vieira. Ile zarabiają?
 
-{/_ more _/}
+---
 
 ## #KnowYourWorth
 

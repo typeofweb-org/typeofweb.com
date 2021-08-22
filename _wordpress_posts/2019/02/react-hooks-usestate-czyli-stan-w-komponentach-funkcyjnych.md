@@ -1,5 +1,4 @@
 ---
-index: 100
 title: 'React Hooks: useState, czyli stan w komponentach funkcyjnych'
 date: 2019-02-11T16:55:10.000Z
 isMarkdown: true
@@ -25,7 +24,7 @@ seo: {}
 
 Wbudowanych Hooków w React jest kilka, a jeszcze więcej możesz tworzyć sam(a). Zaczniemy jednak od podstawowego wbudowanego Hooka `useState`. Dodamy stan do komponentu funkcyjnego!
 
-{/_ more _/}
+---
 
 ## Komponenty funkcyjne
 

@@ -1,5 +1,4 @@
 ---
-index: 125
 title: Hey.com – rewolucyjny email od twórców Basecampa?
 date: 2020-07-03T08:40:02.000Z
 isMarkdown: true
@@ -28,7 +27,7 @@ seo:
 
 Od chwili, gdy pierwszy raz usłyszałem o Hey byłem niesamowicie podekscytowany. Zarządzanie mailami to coś, co wiecznie sprawia mi problem, a _Inbox zero_ jest dla mnie praktycznie nieosiągalne. Dlatego ucieszyłem się, że ktoś próbuje coś w tym temacie zmienić i zbudować konkurencję dla Gmaila: Hey.com od twórców Basecampa!
 
-{/_ more _/}
+---
 
 ## Rejestracja
 

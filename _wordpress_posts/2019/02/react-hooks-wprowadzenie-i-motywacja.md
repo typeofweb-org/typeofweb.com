@@ -1,5 +1,4 @@
 ---
-index: 99
 title: React Hooks — wprowadzenie i motywacja
 date: 2019-02-04T08:36:21.000Z
 isMarkdown: true
@@ -33,7 +32,7 @@ seo:
 
 Jakiś czas temu zrobiło się głośno na temat React Hooks. Co to jest i po co Ci to? Przez dłuższy czas celowo nie pisałem o tym na blogu, gdyż była to ledwie propozycja i to do tego mocno niestabilna. Teraz jednak sytuacja się zmieniła i wszystko wskazuje na to, że React Hooks wkrótce trafią do wersji stabilnej. Czas się zaprzyjaźnić! Dlatego powstał **kurs React Hooks**.
 
-{/_ more _/}
+---
 
 ## Stan w komponentach funkcyjnych
 

@@ -1,5 +1,4 @@
 ---
-index: 119
 title: Wady React Hooks
 date: 2020-02-13T09:26:57.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Od wielu tygodni nie opada kurz po zamieszaniu związanym z React Hooks. Poziom _hype_ przebił wszelki hajpometry, a rozsądna debata na temat kodu została zastąpiona prześciganiem się w pisaniu co raz to sprytniejszych i czystszych (w sensie _pure_) reReact Hooków. Zastanówmy się jednak nad wadami tego rozwiązania.
 
-{/_ more _/}
+---
 
 Dlaczego tak działamy i po raz n-ty dajemy się ponieść emocjom, mimo tego, że przecież na podstawie wielu doświadczeń mamy świadomość, że to zgubne? Tego nie wiem i na to pytanie nie będę w stanie udzielić odpowiedzi. Uznałem jednak, że radosnemu uniesieniu na temat Hooków przyda się zdroworozsądkowe podejście i szczypta krytyki. A może bardziej pięść w brzuch.
 

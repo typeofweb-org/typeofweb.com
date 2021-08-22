@@ -1,5 +1,4 @@
 ---
-index: 52
 title: State w React.js 2
 date: 2018-01-15T12:51:05.000Z
 isMarkdown: false
@@ -31,7 +30,7 @@ seo:
 
 Pod koniec poprzedniego wpisu zadałem podchwytliwe ćwiczenie dotyczące <code>state</code> w React.js. Jeśli jeszcze go nie wykonałaś/eś to teraz jest ten moment, aby wrócić i spróbować ;) W tym wpisie rozwijam temat <code>state</code>, opisuję dokładniej jak działa <code>setState</code> i jakie argumenty przyjmuje.
 
-{/_ more _/}
+---
 
 Zacznijmy może od wykonania ćwiczenia z poprzedniego wpisu. Zadanie brzmiało tak:
 

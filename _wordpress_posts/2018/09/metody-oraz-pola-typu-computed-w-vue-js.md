@@ -1,5 +1,4 @@
 ---
-index: 93
 title: Metody oraz pola typu computed w Vue.js
 date: 2018-09-28T16:39:45.000Z
 isMarkdown: true

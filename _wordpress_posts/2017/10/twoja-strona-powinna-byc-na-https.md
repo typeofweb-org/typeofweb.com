@@ -1,5 +1,4 @@
 ---
-index: 36
 title: 'HTTPS: Dlaczego Twoja kolejna strona powinna to mieć?'
 date: 2017-10-10T10:28:14.000Z
 isMarkdown: false
@@ -29,7 +28,7 @@ seo:
 
 Niemal cała Twoja aktywność w Internecie odbywa się za pośrednictwem protokołu HTTP (Hypertext Transfer Protocol). Właściwie niezależnie co robisz, z czym albo skąd się łączysz – prawdopodobnie robisz to przez HTTP. Wraz z tym jak Twoja zależność od Internetu rośnie, jesteś narażona/y na coraz więcej różnego rodzaju zagrożeń. <strong>Każde nieszyfrowane połączenie HTTP upublicznia informacje o tym co robisz, jakie strony odwiedzasz oraz jakie akcje na nich wykonujesz.</strong> Dlatego tak ważne jest, abyś już dzisiaj zaczęła/zaczął używać HTTPS (SSL) – niezależnie, czy jesteś twórcą, czy konsumentem treści! Teraz to możliwe, zupełnie za darmo, dzięki Let's encrypt!
 
-{/_ more _/}
+---
 
 <h2>HTTPS</h2>
 

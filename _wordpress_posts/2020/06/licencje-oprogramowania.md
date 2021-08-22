@@ -1,5 +1,4 @@
 ---
-index: 124
 title: Licencje na oprogramowanie
 date: 2020-06-24T11:17:23.000Z
 isMarkdown: true
@@ -22,7 +21,7 @@ Każdy szanujący się programista korzysta z oprogramowania open source. Warto 
 
 Wpis gościnny [radczyni prawnej Pauliny Piątek](https://paulinapiatek.pl/).
 
-{/_ more _/}
+---
 
 ## Licencja MIT (X11)
 

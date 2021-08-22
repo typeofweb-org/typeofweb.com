@@ -1,5 +1,4 @@
 ---
-index: 105
 title: 10 powodów, dla których używam jQuery razem z React
 date: 2019-04-01T09:54:18.000Z
 isMarkdown: true
@@ -29,7 +28,7 @@ seo:
 
 W dobie frameworków takich jak React i bibliotek takich jak Angular, można by pomyśleć, że jQuery nie ma już prawa bytu. **Nic bardziej mylnego**! Ten najpopularniejszy dawniej framework nadal jest niezwykle przydatny w codziennej pracy!
 
-{/_ more _/}
+---
 
 <p class="important">Wpis powstał z okazji 1. kwietnia 2019 r.</p>
 

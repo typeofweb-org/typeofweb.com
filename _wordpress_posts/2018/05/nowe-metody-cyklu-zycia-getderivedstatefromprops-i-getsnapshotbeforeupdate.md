@@ -1,5 +1,4 @@
 ---
-index: 82
 title: 'Nowe metody cyklu życia: getDerivedStateFromProps i getSnapshotBeforeUpdate'
 date: 2018-05-29T10:18:46.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Od wersji React 16.3 funkcje `componentWillMount`, `componentWillReceiveProps` i `componentWillUpdate` zostają oznaczone jako _deprecated_. Pojawiają się też dwie nowe metody cyklu życia: `getDerivedStateFromProps` i `getSnapshotBeforeUpdate`. Co to dla nas oznacza? Do czego one służą? Jak ich używać?
 
-{/_ more _/}
+---
 
 Informacje o pozostałych _lifecycle methods_ w React znajdziesz tutaj:
 

@@ -1,5 +1,4 @@
 ---
-index: 107
 title: "useReducer —\_przenoszenie logiki poza komponent"
 date: 2019-05-07T15:16:31.000Z
 isMarkdown: true
@@ -26,7 +25,7 @@ seo: {}
 
 `useReducer` to alternatywa dla `useState`. Ale po co i kiedy jej używać? W skrócie: Gdy logika komponentu się rozrasta i chcemy oddzielić ją całkowicie od widoku. Zgodnie z dobrymi praktykami!
 
-{/_ more _/}
+---
 
 ## Użycie `useReducer`
 

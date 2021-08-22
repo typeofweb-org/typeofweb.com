@@ -1,5 +1,4 @@
 ---
-index: 87
 title: Dynamiczne atrybuty w Vue.js - dyrektywa v-bind
 date: 2018-06-25T07:45:37.000Z
 isMarkdown: true
@@ -29,7 +28,7 @@ seo:
 
 W poprzednim wpisie pokazałem Ci jak wyświetlić **dynamiczne dane w Vue.js** za pomocą wąsów, czyli podwójnych nawiasów klamrowych (`{{ nazwaZmiennej }}`). Dziś dowiesz się jak przekazać je do atrybutów elementu HTML za pomocą dyrektywy `v-bind`.
 
-{/_ more _/}
+---
 
 ## Dyrektywa `v-bind`
 

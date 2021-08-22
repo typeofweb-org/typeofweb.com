@@ -1,5 +1,4 @@
 ---
-index: 23
 title: REST API w node.js z HapiJS – definicja route'ów i prosta walidacja
 date: 2017-01-28T21:24:08.000Z
 isMarkdown: false

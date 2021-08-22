@@ -1,5 +1,4 @@
 ---
-index: 38
 title: 'Promise: 9 rzeczy, których nie wiesz na temat Promise'
 date: 2017-10-23T20:09:58.000Z
 isMarkdown: false
@@ -25,7 +24,7 @@ seo:
 
 Każdy programista wcześniej czy później ściera się z problemem asynchroniczności. Jest to temat bardzo złożony, nawet w języku jednowątkowym jakim jest JavaScript. Promise jest abstrakcją, która stara się asynchroniczność ukryć oraz sprawić, aby korzystanie z niej było dla nas przyjemniejsze i bardziej przewidywalne.
 
-{/_ more _/}
+---
 
 Podstawy działania Promise nie są trudne, jednak wiele osób ma problemy ze zrozumieniem ich na samym początku i z załapaniem podstawowych idei. <strong>W tym wpisie przedstawiam kilka faktów i ciekawostek, które wpłynęły na sposób w jaki postrzegam Promise</strong>. Mam nadzieję, że pomogą one Tobie lepiej zrozumieć mechanizmy jego działania :)
 

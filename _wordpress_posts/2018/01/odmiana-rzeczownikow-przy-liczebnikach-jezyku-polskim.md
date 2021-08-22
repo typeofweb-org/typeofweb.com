@@ -1,5 +1,4 @@
 ---
-index: 54
 title: Odmiana rzeczowników przy liczebnikach w języku polskim
 date: 2018-01-22T20:26:28.000Z
 isMarkdown: false
@@ -27,7 +26,7 @@ seo:
 
 A to Ci nietypowe temat na tym blogu :D Ale spokojnie, <strong>będzie o programowaniu</strong> ;) Ostatnio szlifuję pierwszą publiczną wersję pewnej aplikacji, nad którą pracuję hobbystycznie. Gryzła mnie tylko jedna rzecz: Odmiana słów przy liczbach. Temat powszechnie znany i irytujący. <strong>Jak ładnie i prosto zapisać w kodzie „1 komentarz”, „2 komentarze” ale „5 komentarzy”?</strong> Czy da się to jakoś zautomatyzować?
 
-{/_ more _/}
+---
 
 Podany przykład muszę zapisać w postaci kodu. Czy prosty warunek
 

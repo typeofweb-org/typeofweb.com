@@ -1,5 +1,4 @@
 ---
-index: 5
 title: "Struktura aplikacji AngularJS (część\_1\_‑\_trochę historii)"
 date: 2016-05-14T17:08:00.000Z
 isMarkdown: false

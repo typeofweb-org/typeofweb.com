@@ -1,5 +1,4 @@
 ---
-index: 22
 title: REST API w node.js z HapiJS – pierwsza aplikacja
 date: 2017-01-24T18:36:47.000Z
 isMarkdown: false

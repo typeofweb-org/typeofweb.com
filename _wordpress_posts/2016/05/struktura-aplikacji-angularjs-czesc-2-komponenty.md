@@ -1,5 +1,4 @@
 ---
-index: 6
 title: "Struktura aplikacji AngularJS (część\_2\_‑\_komponenty)"
 date: 2016-05-15T15:46:17.000Z
 isMarkdown: false

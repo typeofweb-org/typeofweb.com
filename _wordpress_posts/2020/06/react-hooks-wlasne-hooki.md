@@ -1,5 +1,4 @@
 ---
-index: 123
 title: 'React Hooks: Piszemy własne hooki!'
 date: 2020-06-10T11:07:22.000Z
 isMarkdown: true
@@ -29,7 +28,7 @@ seo:
 
 Niewątpliwą zaletą React Hooks jest to, jak łatwo możemy wydzielać fragmenty logiki do własnych hooków. W tym artykule pokazuję Ci, jak napisać swoje hooki, jakie obowiązują zasady i jak sprawić, aby Twój kod był lepszy!
 
-{/_ more _/}
+---
 
 ## Własny React Hook
 

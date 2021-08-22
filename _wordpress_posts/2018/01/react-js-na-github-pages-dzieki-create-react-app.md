@@ -1,5 +1,4 @@
 ---
-index: 58
 title: React.js na GitHub Pages dzięki create-react-app
 date: 2018-01-31T16:14:36.000Z
 isMarkdown: false

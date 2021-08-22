@@ -1,5 +1,4 @@
 ---
-index: 11
 title: 'Wzorce Projektowe: Dependency Injection'
 date: 2016-07-07T13:43:00.000Z
 isMarkdown: false

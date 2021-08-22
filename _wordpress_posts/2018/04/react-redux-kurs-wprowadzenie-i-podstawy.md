@@ -1,5 +1,4 @@
 ---
-index: 73
 title: 'React + Redux — kurs: wprowadzenie i podstawy'
 date: 2018-04-06T11:54:56.000Z
 isMarkdown: true
@@ -34,7 +33,7 @@ Redux! Kurs Reacta dorobił się odcinka o Reduksie! Powoli wprowadzę Cię św
 
 Redux: Oto wpis, na który wszyscy czekali! :) Nie będzie teorii. Od razu zaczniemy używać Reduksa. Bo on jest tak naprawdę niesamowicie łatwy w obsłudze. Brzmi dobrze? Zaczynajmy!
 
-{/_ more _/}
+---
 
 <p class="important">Układ folderów przedstawiony w tym wpisie jest maksymalnie prosty. O strukturze większej aplikacji będę pisał jeszcze później.</p>
 

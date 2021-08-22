@@ -1,5 +1,4 @@
 ---
-index: 26
 title: Map i Reduce w JS
 date: 2017-05-12T12:12:03.000Z
 isMarkdown: false

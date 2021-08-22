@@ -1,5 +1,4 @@
 ---
-index: 44
 title: Props czyli atrybuty w React.js
 date: 2017-12-12T14:25:59.000Z
 isMarkdown: false
@@ -30,7 +29,7 @@ W tej części nauczysz się <strong>parametryzować komponenty w React.js</stro
 
 To co zrobiliśmy do tej pory było spoko, ale przecież nie będziesz tworzyć nowego komponentu zawsze gdy będziesz chciał(a) wyświetlić inny tekst w aplikacji, prawda? Wyobraź sobie, że masz do zaprojektowania popup, w którym będzie wyświetlony tytuł oraz tekst. Za moment to zaimplementujemy!
 
-{/_ more _/}
+---
 
 <h2>Projekt</h2>
 

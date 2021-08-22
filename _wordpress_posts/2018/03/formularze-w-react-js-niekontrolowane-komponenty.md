@@ -1,5 +1,4 @@
 ---
-index: 69
 title: Formularze w React.js — niekontrolowane komponenty
 date: 2018-03-20T12:13:30.000Z
 isMarkdown: true

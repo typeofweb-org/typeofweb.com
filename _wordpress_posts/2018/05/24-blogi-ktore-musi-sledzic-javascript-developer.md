@@ -1,5 +1,4 @@
 ---
-index: 81
 title: 24 blogi, które musi śledzić każdy JavaScript developer
 date: 2018-05-22T09:49:31.000Z
 isMarkdown: true
@@ -28,7 +27,7 @@ seo:
 
 Wciąż pytacie jakie blogi polecam śledzić. A ja nigdy nie pamiętam! No, ale teraz jest już cała lista! Moja **lista polecanych linków dla front-end developerów**! To drugi wpis z serii.
 
-{/_ more _/}
+---
 
 ## Blogi
 

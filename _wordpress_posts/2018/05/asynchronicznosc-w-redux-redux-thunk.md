@@ -1,5 +1,4 @@
 ---
-index: 79
 title: 'Asynchroniczność w Redux: redux-thunk'
 date: 2018-05-07T10:24:32.000Z
 isMarkdown: false
@@ -30,7 +29,7 @@ seo:
 
 Do tej pory dane z API pobierałem po prostu w komponencie <code>App</code>, a po przyjściu odpowiedzi wysyłałem odpowiednią akcję (<code>contactsFetched</code>). To działało. Ale wymyśliłem sobie nową funkcję w aplikacji: Możliwość parametryzowania zapytań do API. Posłuży mi do tego nowy komponent. Jak teraz mam wykonywać zapytania do API? Przekazywać coś do store, a to coś wpłynie na <code>App</code>, który wykona zapytanie i zwróci dane znowu do store? Nie brzmi za dobrze. Ale jest lepszy sposób: Poznaj <code>redux-thunk</code>!
 
-{/_ more _/}
+---
 
 <h2>redux-thunk</h2>
 

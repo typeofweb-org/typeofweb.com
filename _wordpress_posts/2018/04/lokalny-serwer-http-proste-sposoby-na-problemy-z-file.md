@@ -1,5 +1,4 @@
 ---
-index: 74
 title: 'Serwer HTTP lokalnie: Sposób na problemy z CORS i file:///'
 date: 2018-04-09T14:24:38.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 Po co Ci lokalny serwer HTTP? Bardzo wiele osób skarży się mi na dziwne problemy z aplikacjami. Błędy są przeróżne np. nawiązujące do magicznego „CORS”, a często mają wspólne źródło: Próba otwarcia pliku `.html` w przeglądarce przez `file://` i brak serwera HTTP.
 
-{/_ more _/}
+---
 
 ## Błędy CORS a protokół `file://`
 

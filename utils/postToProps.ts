@@ -6,7 +6,7 @@ import { categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { allSeries, findCurrentSeriesIndex } from './series';
 import { getExcerptAndContent, readAllPosts } from './wordpress';
 
-import type { Series, SeriesWithToC } from '../types';
+import type { PromiseValue, Series, SeriesWithToC } from '../types';
 import type { PostByPermalink } from './wordpress';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
@@ -94,6 +94,18 @@ interface PostPropsFrontmatterOnlyExcerpt {
   } | null;
 }
 
+function findCurrentPostIndex(
+  permalink: string,
+  { posts, postsCount }: PromiseValue<ReturnType<typeof readAllPosts>>,
+): number | null {
+  const index = posts.findIndex((p) => p.data.permalink === permalink);
+  if (index === -1) {
+    return null;
+  }
+  // counting from 1
+  return postsCount - index;
+}
+
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
@@ -111,6 +123,8 @@ export async function postToProps(
 ): Promise<PostPropsOnlyExcerpt | PostProps> {
   // @ts-expect-error seriously, TypeScript, stop doing this
   const contentObj = await getExcerptAndContent(post, options);
+
+  const allPosts = await readAllPosts({ includePages: false });
 
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
@@ -143,7 +157,7 @@ export async function postToProps(
       isMdx: false,
       frontmatter: {
         title: post.data.title,
-        index: post.data.index ?? null,
+        index: findCurrentPostIndex(post.data.permalink, allPosts),
         date: post.data.date,
         series: post.data.series
           ? {
@@ -183,7 +197,7 @@ export async function postToProps(
       ...contentObj,
       frontmatter: {
         title: post.data.title,
-        index: post.data.index ?? null,
+        index: findCurrentPostIndex(post.data.permalink, allPosts),
         date: post.data.date,
         series: post.data.series
           ? {

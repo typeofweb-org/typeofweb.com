@@ -1,5 +1,4 @@
 ---
-index: 115
 title: Automatyczne uruchamianie testów w Buddy
 date: 2019-12-03T13:29:17.000Z
 isMarkdown: true
@@ -33,7 +32,7 @@ seo:
 
 Jednym z najbardziej potrzebnych elementów tworzenia niezawodnych aplikacji jest pisanie testów i ich **automatyczne uruchamianie po stworzeniu Pull Requesta**. W tym artykule pokazuję, jak łatwo skonfigurować w tym celu <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs1&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy.works</a> tak, aby automatycznie uruchamiał testy jednostkowe i testy integracyjne.
 
-{/_ more _/}
+---
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 

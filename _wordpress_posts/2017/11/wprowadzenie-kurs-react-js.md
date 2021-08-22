@@ -1,5 +1,4 @@
 ---
-index: 41
 title: 'React.js: Wprowadzenie do kursu od podstaw'
 date: 2017-11-28T14:54:47.000Z
 isMarkdown: false
@@ -34,7 +33,7 @@ seo:
 
 Oto kurs React.js od podstaw. Moje gratulacje za podjęcie tego tematu! To pierwszy krok w kierunku realizacji Twoich ambicji i poznania tego niezwykle przydatnego narzędzia. Ten <strong>kurs React.js</strong> sprawi, że będziesz umiał(a) tworzyć <strong>rozbudowane i profesjonalne aplikacje internetowe</strong> oraz przybliży Cię do celu jakim zapewne jest znalezienie pracy w tej technologii. Na pewno warto!
 
-{/_ more _/}
+---
 
 Skąd u mnie w ogóle pomysł opracowania tego tematu? Odpowiedź jest prosta: <strong>nie chcę, abyś musiał(a) po omacku przechodzić przez gąszcz dokumentacji i tutoriali React.js — jak robiłem to ja.</strong>
 

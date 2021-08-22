@@ -1,5 +1,4 @@
 ---
-index: 90
 title: Dyrektywy warunkowe w Vue.js
 date: 2018-07-04T18:58:00.000Z
 isMarkdown: true

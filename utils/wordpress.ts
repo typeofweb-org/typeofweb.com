@@ -5,6 +5,7 @@ import Url from 'url';
 import GrayMatter from 'gray-matter';
 
 import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
+import { splitContent, trimExcerpt } from './excerpt';
 import { toHtml, toMdx } from './markdown';
 import { allSeries } from './series';
 
@@ -54,15 +55,21 @@ export async function readAllPosts({
   readonly includePages?: boolean;
 } = {}) {
   const filePaths = (
-    await Promise.all([readFilesInDir(pathToLegacyPosts), readFilesInDir(pathToPosts), readFilesInDir(pathToPages)])
+    await Promise.all([
+      readFilesInDir(pathToLegacyPosts),
+      readFilesInDir(pathToPosts),
+      includePages ? readFilesInDir(pathToPages) : null,
+    ])
   ).flat();
 
   const postsAndPaths = await Promise.all(
-    filePaths.map(async (filePath) => {
-      const post = await Fs.readFile(filePath, 'utf-8');
-      const relativePath = Path.relative(basePath, filePath);
-      return { filePath: relativePath, post };
-    }),
+    filePaths
+      .filter((filePath): filePath is Exclude<typeof filePath, null> => !!filePath)
+      .map(async (filePath) => {
+        const post = await Fs.readFile(filePath, 'utf-8');
+        const relativePath = Path.relative(basePath, filePath);
+        return { filePath: relativePath, post };
+      }),
   );
 
   let postsWithFm = postsAndPaths
@@ -74,9 +81,6 @@ export async function readAllPosts({
     })
     .sort((a, b) => Number(b.data.date) - Number(a.data.date));
 
-  if (!includePages) {
-    postsWithFm = postsWithFm.filter((p) => p.data.type === 'post');
-  }
   if (category) {
     postsWithFm = postsWithFm.filter((post) =>
       'category' in post.data
@@ -164,14 +168,8 @@ export async function getExcerptAndContent(
     throw new Error();
   }
 
-  const more = /<!--\s*more\s*-->|{\s*\/_\s*more\s*_\/\s*}|{\s*\/\*\s*more\s*\*\/\s*}/;
-  const other = /^##\s*|\n\n|\r\n\r\n|\<h\d/;
-  const match = more.exec(post.content) || other.exec(post.content) || { index: 0 };
-
-  const [excerpt, content] =
-    post.data.type === 'post'
-      ? [post.content.slice(0, match.index), post.content.slice(match.index).replace(more, '')]
-      : [null, post.content];
+  const splittedContent = splitContent(post.content);
+  const [excerpt, content] = post.data.type === 'post' ? splittedContent : [null, splittedContent.join('\n')];
 
   // This check won't pass in preview (when posts has no content yet)
   // if ((!excerpt && post.data.type === 'post') || !content) {
@@ -179,8 +177,7 @@ export async function getExcerptAndContent(
   // }
 
   const excerptString = toHtml(excerpt ?? '', { excerpt: true });
-  const excerptWords = excerptString.split(/\s+/);
-  const ex = excerptWords.length > 50 ? excerptWords.slice(0, 50).join(' ') + '…' : excerptWords.join(' ');
+  const ex = trimExcerpt(excerptString);
 
   if (options.onlyExcerpt) {
     return {
@@ -209,7 +206,6 @@ export async function getExcerptAndContent(
 
 interface LegacyPostFrontmatter {
   readonly title: string;
-  readonly index: number;
   readonly date: Date;
   readonly isMarkdown: boolean;
   readonly status: string;
@@ -233,7 +229,6 @@ interface LegacyPostFrontmatter {
 
 interface NewPostFrontmatter {
   readonly type: never;
-  readonly index: number;
   readonly title: string;
   readonly permalink: string;
   readonly date: Date;

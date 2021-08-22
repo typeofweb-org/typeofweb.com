@@ -1,5 +1,4 @@
 ---
-index: 4
 title: Komunikacja pomiędzy kontrolerami w AngularJS
 date: 2016-05-05T12:47:00.000Z
 isMarkdown: false

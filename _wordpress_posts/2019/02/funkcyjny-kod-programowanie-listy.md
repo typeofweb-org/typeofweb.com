@@ -1,5 +1,4 @@
 ---
-index: 102
 title: >-
   Fragmenty funkcyjnego kodu, które zmieniły moje spojrzenie na programowanie —
   listy
@@ -24,7 +23,7 @@ seo: {}
 
 Jakiś czas temu zacząłem się mocniej interesować programowaniem funkcyjnym. O ile wydawało mi się, że rozumiem `rxjs`, `lodash/fp` i inne podobne biblioteki, to jednak tak naprawdę nigdy nie próbowałem pisać w 100% funkcyjnie. I uwierz mi, to niesamowite doświadczenie! W tym krótkim wpisie pokazuję jeden przykład kodu, który mocno poszerzył mi horyzont myślowy.
 
-{/_ more _/}
+---
 
 ## OCaml / Reason
 

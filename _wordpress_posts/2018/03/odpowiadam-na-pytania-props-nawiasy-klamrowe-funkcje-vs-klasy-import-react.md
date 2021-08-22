@@ -1,5 +1,4 @@
 ---
-index: 70
 title: 'Odpowiadam na pytania: props, nawiasy klamrowe, funkcje vs klasy, import react'
 date: 2018-03-26T15:12:56.000Z
 isMarkdown: true

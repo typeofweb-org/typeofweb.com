@@ -1,5 +1,4 @@
 ---
-index: 53
 title: Metody cyklu życia komponentu w React.js
 date: 2018-01-18T17:33:42.000Z
 isMarkdown: false
@@ -31,7 +30,7 @@ seo:
 
 Przy okazji omawiania komponentów będących klasami w React.js, wspomniałem też o możliwości korzystania z metod cyklu życia (<em>lifecycle methods</em>). Chciałbym do tego tematu teraz powrócić. Pokażę jakie metody cyklu życia definiuje React.js, do czego one służą i kiedy mogą się przydać.
 
-{/_ more _/}
+---
 
 <h2>Cykl życia komponentu</h2>
 

@@ -1,5 +1,4 @@
 ---
-index: 49
 title: Joi — walidacja danych
 date: 2018-01-10T10:25:04.000Z
 isMarkdown: false
@@ -33,7 +32,7 @@ seo:
 
 Walidacja danych to bardzo ciekawy i rozbudowany temat, a ja znalazłem swoją ulubioną paczkę do tego :) Ten wpis poświęcam w 100% bibliotece Joi. Wbrew pozorom, nie jest to wcale tak banalna sprawa, jakby się mogło wydawać! <strong>Joi służy do walidacji danych w Node.js</strong>. Można jej używać z dowolnym frameworkiem, ale, co dla mnie istotne, jest mocno zintegrowana z HapiJS!
 
-{/_ more _/}
+---
 
 <h2>O Joi…</h2>
 

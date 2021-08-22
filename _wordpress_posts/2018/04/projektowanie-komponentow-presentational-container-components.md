@@ -1,5 +1,4 @@
 ---
-index: 78
 title: 'Projektowanie komponentów: Presentational & Container Components'
 date: 2018-04-30T19:53:07.000Z
 isMarkdown: true
@@ -27,7 +26,7 @@ seo:
 
 Często w różnych artykułach poświęconych Reactowi i Reduksowi napotkasz takie sformułowania jak _Presentational and Container Components_ albo _Skinny and Fat Components_ albo _Dumb and Smart Components_ i być może jeszcze kilka innych podobnych ;) Wszystkie te określenia oznaczają to samo: Podział komponentów na 2 rodzaje: Służące prezentacji oraz zawierające logikę.
 
-{/_ more _/}
+---
 
 ## Presentational Components
 

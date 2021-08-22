@@ -1,5 +1,4 @@
 ---
-index: 28
 title: Praca zdalna – dla mnie rewelacja! Obalamy mity
 date: 2017-06-13T12:01:55.000Z
 isMarkdown: false

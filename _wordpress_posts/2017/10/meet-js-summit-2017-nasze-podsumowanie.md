@@ -1,5 +1,4 @@
 ---
-index: 35
 title: 'meet.js Summit 2017: Nasze podsumowanie'
 date: 2017-10-03T22:47:32.000Z
 isMarkdown: false

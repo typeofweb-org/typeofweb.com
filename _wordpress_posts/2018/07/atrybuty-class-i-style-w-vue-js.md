@@ -1,5 +1,4 @@
 ---
-index: 92
 title: Atrybuty class i style w Vue.js
 date: 2018-07-25T17:36:46.000Z
 isMarkdown: true

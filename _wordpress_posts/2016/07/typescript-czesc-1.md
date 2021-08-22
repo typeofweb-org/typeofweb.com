@@ -1,5 +1,4 @@
 ---
-index: 12
 title: TypeScript – część 1
 date: 2016-07-11T06:19:00.000Z
 isMarkdown: false

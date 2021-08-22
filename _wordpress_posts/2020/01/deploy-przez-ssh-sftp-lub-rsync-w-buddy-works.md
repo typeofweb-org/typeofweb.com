@@ -1,5 +1,4 @@
 ---
-index: 117
 title: Deploy przez SSH, SFTP lub rsync w Buddy.works
 date: 2020-01-09T09:31:28.000Z
 isMarkdown: true
@@ -36,7 +35,7 @@ seo:
 
 Po poprzednich wpisach wiele osób pytało mnie, w jaki sposób automatycznie wrzucać ich aplikacje z repozytorium GitHub na hosting używając SSH (SFTP) w <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs2&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy.works</a>. Czy w ogóle jest to możliwe? Oczywiście! A Buddy znacznie to ułatwia dzięki predefiniowanej akcji.
 
-{/_ more _/}
+---
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 

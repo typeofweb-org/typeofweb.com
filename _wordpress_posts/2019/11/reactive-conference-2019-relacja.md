@@ -1,5 +1,4 @@
 ---
-index: 113
 title: Reactive Conference 2019 – relacja
 date: 2019-11-07T16:50:44.000Z
 isMarkdown: true
@@ -30,7 +29,7 @@ seo:
 
 ReactiveConf 2019 ponownie w czeskiej Pradze. Jak obiecałem, tak zrobiłem i pojechałem na tę konferencję poświęconą tematom takim, jak: JavaScript, React, Vue, Angular, Programowanie Reaktywne, TypeScript i innym. Czy było warto?
 
-{/_ more _/}
+---
 
 ## ReactiveConf
 

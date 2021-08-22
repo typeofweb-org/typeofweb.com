@@ -1,5 +1,4 @@
 ---
-index: 13
 title: Nowy font na GitHubie – font systemowy
 date: 2016-07-12T12:44:19.000Z
 isMarkdown: false

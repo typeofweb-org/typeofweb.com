@@ -1,5 +1,4 @@
 ---
-index: 86
 title: Pierwszy komponent Vue.js
 date: 2018-06-18T11:15:12.000Z
 isMarkdown: true
@@ -28,7 +27,7 @@ seo:
 
 Vue.js jest reaktywnym frameworkiem JavaScript. Znaczy to, że dowolna zmiana danych używanych do wyświetlania strony sprawia, że widok automatycznie jest aktualizowany tak, aby odzwierciedlić tę zmianę.
 
-{/_ more _/}
+---
 
 ## Dodanie Vue.js do strony
 

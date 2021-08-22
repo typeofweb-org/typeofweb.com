@@ -1,5 +1,4 @@
 ---
-index: 71
 title: 'Flux i Redux: globalny store i jednokierunkowy przepływ danych'
 date: 2018-03-29T11:16:34.000Z
 isMarkdown: false
@@ -31,7 +30,7 @@ seo:
 
 Na co dzień korzystam z <strong>Redux razem z React</strong>. Dawniej używałem też własnej implementacji architektury Flux razem z AngularJS. Postanowiłem napisać o tym koncepcie coś więcej — bo jest to bez wątpienia bardzo ciekawe! <strong>Jednokierunkowy przepływ danych, akcje, dispatcher, action creator, reducer</strong>… to wszystko w tym wpisie :) A do tego klarowne, praktyczne przykłady!
 
-{/_ more _/}
+---
 
 Gdy opisywałem <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami/">sposoby komunikacji pomiędzy kontrolerami</a> w AngularJS, poniekąd celowo pominąłem pewną alternatywę, która zyskuje ostatnio sporą popularność: Architekturę Flux. Nie wspominałem o Fluksie głównie ze względu na to, że to koncept trochę szerszy niż prosta komunikacja pomiędzy elementami aplikacji o jakiej traktował tamten wpis.
 

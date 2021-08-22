@@ -1,5 +1,4 @@
 ---
-index: 9
 title: Komunikacja pomiędzy komponentami w Angular 2
 date: 2016-07-02T13:29:16.000Z
 isMarkdown: false

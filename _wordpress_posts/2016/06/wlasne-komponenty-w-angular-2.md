@@ -1,5 +1,4 @@
 ---
-index: 8
 title: Własne komponenty w Angular 2
 date: 2016-06-14T17:27:29.000Z
 isMarkdown: false

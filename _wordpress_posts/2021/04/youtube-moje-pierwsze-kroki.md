@@ -1,5 +1,4 @@
 ---
-index: 131
 title: 'YouTube: Moje pierwsze kroki'
 date: 2021-04-06T09:26:57.000Z
 isMarkdown: true
@@ -20,7 +19,7 @@ seo: {}
 
 Jak za pewne zauważyliście, na blogu Type of Web ostatnio dzieje się mniej. Przyczyna jest prosta: poświęcam sporo czasu przygotowaniu materiałów [wideo na YouTube](https://youtube.com/typeofweb)!
 
-{/_ more _/}
+---
 
 ## Type of Web na YouTube
 

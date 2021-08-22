@@ -1,5 +1,4 @@
 ---
-index: 24
 title: Hapi.js – Wprowadzenie
 date: 2017-01-29T20:18:00.000Z
 isMarkdown: false

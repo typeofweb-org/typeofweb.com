@@ -1,5 +1,4 @@
 ---
-index: 132
 title: 'Względne postrzeganie czasu: model matematyczny'
 date: 2021-07-07T14:47:50.000Z
 isMarkdown: true
@@ -21,7 +20,7 @@ seo: {}
 
 Wielu osobom wydaje się, że im stajemy się starsi, tym czas szybciej płynie. Mamy tysiące wspomnień ze wczesnej młodości, a później trudno nam odróżnić rok od roku. Ale czy aby na pewno tylko nam się *wydaje*? Czy to zjawisko jest jakoś opisane i uzasadnione?
 
-{/_ more _/}
+---
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML"></script>
 

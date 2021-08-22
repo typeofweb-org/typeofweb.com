@@ -1,5 +1,4 @@
 ---
-index: 108
 title: >-
   useMemo, useCallback, czyli rozwiązanie problemów ze zmieniającymi się
   propsami
@@ -28,7 +27,7 @@ seo: {}
 
 Powszechnym zmartwieniem osób poznających komponenty funkcyjne jest tworzenie funkcji-callbacków przekazywanych dalej jako props. Wszak przy każdym renderze funkcja tworzona jest na nowo! Czy to aby nie marnotrastwo? Czy nie powoduje to problemów? React Hooks `useMemo` i `useCallback` przychodzą na ratunek!
 
-{/_ more _/}
+---
 
 ## Problem z funkcjami
 
