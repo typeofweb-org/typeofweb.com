@@ -45,8 +45,12 @@ export const SearchWidget = memo(() => {
       const isMeta = IS_MAC ? event.metaKey : event.ctrlKey;
       if (isK && isMeta && !event.altKey && !event.shiftKey) {
         toggleSearch();
+        event.preventDefault();
       } else if (isEsc) {
-        closeSearch();
+        if (isOpen) {
+          event.preventDefault();
+          closeSearch();
+        }
       }
     };
     document.addEventListener('keydown', handler);
@@ -54,7 +58,7 @@ export const SearchWidget = memo(() => {
     return () => {
       document.removeEventListener('keydown', handler);
     };
-  }, [IS_MAC, closeSearch, toggleSearch]);
+  }, [IS_MAC, closeSearch, toggleSearch, isOpen]);
 
   return (
     <div className="block lg:mb-8">
