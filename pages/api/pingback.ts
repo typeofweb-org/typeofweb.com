@@ -1,3 +1,5 @@
+import { withSentry } from '@sentry/nextjs';
+
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 
 const faultToMessage = {
@@ -206,4 +208,4 @@ async function handlePingback(req: NextApiRequest, res: NextApiResponse) {
   return;
 }
 
-export default PingbackApiRouter;
+export default withSentry(PingbackApiRouter);

@@ -5,6 +5,8 @@ import Data from '../../relatedPosts.json';
 import { postToProps } from '../../utils/postToProps';
 import { getPostByPermalink } from '../../utils/wordpress';
 
+import { withSentry } from '@sentry/nextjs';
+
 import type { NextApiHandler } from 'next';
 
 const NUM_RELATED = 3;
@@ -29,7 +31,7 @@ const getRelatedPostsHandler: NextApiHandler = async (req, res) => {
   res.json({ related: relatedSneakPeeks, randomized });
 };
 
-export default getRelatedPostsHandler;
+export default withSentry(getRelatedPostsHandler);
 
 export const getRelatedPostsForPermalink = async (permalink: string) => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- check is one line below
