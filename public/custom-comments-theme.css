@@ -107,3 +107,20 @@ main *:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+.gsc-header {
+  order: 1;
+}
+
+.gsc-comment-box {
+  order: 2;
+}
+
+.gsc-comment-box-separator {
+  order: 3;
+  margin-top: 2rem;
+}
+
+.gsc-timeline {
+  order: 4;
+}
