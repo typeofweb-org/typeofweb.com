@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
+import { ErrorBoundary } from '../components/ErrorBoundary';
 import { Seo } from '../components/Seo';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
 import { UIStateProvider } from '../hooks/useUiState';
@@ -74,7 +75,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     .filter(Boolean);
 
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover" />
       </Head>
@@ -120,7 +121,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <link key={url} rel="preload" href={url} as="image" />
       ))}
       <Seo />
-    </>
+    </ErrorBoundary>
   );
 };
 
