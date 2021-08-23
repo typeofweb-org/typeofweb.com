@@ -42,8 +42,9 @@ export const SearchWidget = memo(() => {
     const handler = (event: KeyboardEvent) => {
       const isEsc = event.key === 'Escape';
       const isK = event.key === 'k';
+      const isSlash = event.key === '/';
       const isMeta = IS_MAC ? event.metaKey : event.ctrlKey;
-      if (isK && isMeta && !event.altKey && !event.shiftKey) {
+      if (((isK && isMeta) || isSlash) && !event.altKey && !event.shiftKey) {
         toggleSearch();
         event.preventDefault();
       } else if (isEsc) {
