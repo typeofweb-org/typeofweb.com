@@ -1,4 +1,4 @@
-# typeofweb.com
+# typeofweb.com (beta)
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCR4qSQa8JFh6zeR5Idvnewg?label=YouTube&style=social)](https://youtube.com/c/typeofweb)
 
