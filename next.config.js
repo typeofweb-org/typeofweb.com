@@ -83,8 +83,9 @@ config.experimental.gzipSize = true;
 // config.experimental.swcLoader = true;
 // config.experimental.concurrentFeatures = true;
 
-// const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
-const protocol = 'http';
+const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com';
+const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+export const host = `${protocol}://${origin}`;
 
 config.headers = () => {
   return Promise.resolve([
@@ -93,13 +94,13 @@ config.headers = () => {
       has: [
         {
           type: 'host',
-          value: process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com',
+          value: host,
         },
       ],
       headers: [
         {
           key: 'Access-Control-Allow-Origin',
-          value: process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com',
+          value: host,
         },
       ],
     },
@@ -108,13 +109,13 @@ config.headers = () => {
       has: [
         {
           type: 'host',
-          value: 'giscus.app',
+          value: 'https://giscus.typeofweb.com',
         },
       ],
       headers: [
         {
           key: 'Access-Control-Allow-Origin',
-          value: 'giscus.app',
+          value: 'https://giscus.typeofweb.com',
         },
       ],
     },
