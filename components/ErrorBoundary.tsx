@@ -29,6 +29,7 @@ export class ErrorBoundary extends Component<{}, State> {
           <p>
             Zgłoś ten błąd na GitHubie: <a href={errorToGitHubIssue(this.state.error, this.state.data)}>Stwórz issue</a>
           </p>
+          <pre>{errorToText(this.state.error, this.state.data)}</pre>
         </div>
       );
     }
@@ -42,7 +43,14 @@ function errorToGitHubIssue(error: any, filename?: string) {
   const params = new URLSearchParams({
     labels: 'bug',
     title: error?.message,
-    body: `
+    body: errorToText(error, filename),
+  });
+
+  return url + params.toString();
+}
+
+const errorToText = (error: any, filename?: string) => {
+  return `
 ## Environment
 - **URL**: ${window.location.href}
 - **Browser**: ${window.navigator.userAgent}
@@ -56,8 +64,5 @@ ${error?.message}
 
 ${error?.stack}
 \`\`\`
-`.trim(),
-  });
-
-  return url + params.toString();
-}
+`.trim();
+};

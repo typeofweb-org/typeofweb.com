@@ -1,11 +1,11 @@
 /* eslint-disable functional/no-loop-statement -- useful */
+import { withSentry } from '@sentry/nextjs';
+
 import A from '../../authors.json';
 const AuthorsJson = A.authors;
 import Data from '../../relatedPosts.json';
 import { postToProps } from '../../utils/postToProps';
 import { getPostByPermalink } from '../../utils/wordpress';
-
-import { withSentry } from '@sentry/nextjs';
 
 import type { NextApiHandler } from 'next';
 
