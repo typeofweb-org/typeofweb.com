@@ -13,6 +13,7 @@
   },
   "type": "commonjs",
   "dependencies": {
+    "@giscus/react": "1.0.0",
     "@openlab/vercel-netlify-cms-github": "github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
     "@plaiceholder/next": "2.1.0",
     "algoliasearch": "4.10.3",

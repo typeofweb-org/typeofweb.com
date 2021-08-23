@@ -15,6 +15,9 @@ import type { Author } from '../molecules/ArticleMeta';
 const RelatedArticles = Dynamic<{ readonly permalink: string }>(() =>
   import(/* webpackChunkName: "RelatedArticles" */ '../molecules/RelatedArticles').then((m) => m.RelatedArticles),
 );
+const Comments = Dynamic<{}>(() => import(/* webpackChunkName: "Comments" */ '../Comments').then((m) => m.Comments), {
+  ssr: false,
+});
 
 interface SingleArticleProps {
   readonly filePath: string;
@@ -78,6 +81,7 @@ export const SingleArticle = memo(
           <link itemProp="mainEntityOfPage" href={href} />
           {index && <ArticleFooter authors={authors} />}
           {index && <RelatedArticles permalink={permalink} />}
+          <Comments />
         </Card>
       );
     },

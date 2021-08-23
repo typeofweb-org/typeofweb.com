@@ -90,11 +90,37 @@ config.headers = () => {
   return Promise.resolve([
     {
       source: '/(.*)',
+      has: [
+        {
+          type: 'host',
+          value: process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com',
+        },
+      ],
       headers: [
         {
           key: 'Access-Control-Allow-Origin',
           value: process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com',
         },
+      ],
+    },
+    {
+      source: '/(.*)',
+      has: [
+        {
+          type: 'host',
+          value: 'giscus.app',
+        },
+      ],
+      headers: [
+        {
+          key: 'Access-Control-Allow-Origin',
+          value: 'giscus.app',
+        },
+      ],
+    },
+    {
+      source: '/(.*)',
+      headers: [
         {
           key: 'X-DNS-Prefetch-Control',
           value: 'on',

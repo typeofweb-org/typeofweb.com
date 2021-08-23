@@ -1,0 +1,109 @@
+:root {
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-green-100: #ccffe2;
+  --color-green-200: #9df0c1;
+  --color-green-300: #5ae295;
+  --color-green-400: #38dc7f;
+  --color-green-500: #5cb784;
+  --color-green-600: #34b26a;
+  --color-green-700: #1ca056;
+  --color-green-800: #0b8942;
+  --color-green-900: #00662c;
+  --color-blue-100: #b5cdff;
+  --color-blue-200: #80a2fe;
+  --color-blue-300: #255ffe;
+  --color-blue-400: #2c3ce8;
+  --color-blue-500: #341bdb;
+  --color-blue-600: #301fa3;
+  --color-blue-700: #200ca1;
+  --color-blue-800: #0f0070;
+  --color-blue-900: #130a52;
+  --color-pink-100: #fed7ef;
+  --color-pink-200: #fbade3;
+  --color-pink-300: #ff70d4;
+  --color-pink-400: #f551b5;
+  --color-pink-500: #e12899;
+  --color-pink-600: #c60a7d;
+  --color-pink-700: #ab0369;
+  --color-pink-800: #850051;
+  --color-pink-900: #4e0431;
+  --color-gray-100: #fafafa;
+  --color-gray-200: #f0f0f0;
+  --color-gray-300: #bababa;
+  --color-gray-400: #a1a1a1;
+  --color-gray-500: #8a8a8a;
+  --color-gray-600: #6e6e6e;
+  --color-gray-700: #545454;
+  --color-gray-800: #3b3b3b;
+  --color-gray-900: #222222;
+}
+
+main {
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-tertiary: var(--color-gray-600);
+  --color-text-link: var(--color-blue-500);
+  --color-text-danger: #cf222e;
+  --color-text-success: var(--color-green-600);
+  --color-border-primary: var(--color-gray-300);
+  --color-box-border-info: var(--color-gray-300);
+  --color-border-secondary: var(--color-gray-400);
+  --color-border-tertiary: rgba(175, 184, 193, 0.4);
+  --color-border-info: var(--color-blue-300);
+  --color-bg-canvas: var(--color-gray-100);
+  --color-bg-canvas-inset: var(--color-gray-200);
+  --color-bg-primary: var(--color-gray-100);
+  --color-bg-secondary: var(--color-gray-200);
+  --color-bg-tertiary: var(--color-gray-200);
+  --color-bg-overlay: var(--color-gray-100);
+  --color-bg-info: var(--color-gray-100);
+  --color-state-focus-border: rgb(128, 162, 254);
+  --color-state-focus-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 2px, rgba(181, 205, 255, 0.5) 0px 0px 0px 5px,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  --color-alert-error-text: var(--color-gray-900);
+  --color-alert-error-bg: #ffebe9;
+  --color-alert-error-border: rgba(255, 129, 130, 0.4);
+  --color-counter-secondary-text: #57606a;
+  --color-counter-secondary-bg: rgba(234, 238, 242, 0.5);
+  --color-markdown-code-bg: rgba(175, 184, 193, 0.4);
+  --color-hidden-text-expander-bg: rgba(175, 184, 193, 0.4);
+  --color-label-border: #d0d7de;
+  --color-social-reaction-bg-reacted-hover: var(--color-gray-200);
+  --color-input-bg: var(--color-gray-100);
+  --color-input-contrast-bg: var(--color-gray-100);
+  --color-input-border: #d0d7de;
+  --color-diff-blob-num-text: #57606a;
+  --color-diff-blob-num-hover-text: var(--color-gray-900);
+  --color-btn-text: var(--color-gray-900);
+  --color-btn-bg: var(--color-gray-200);
+  --color-btn-border: rgba(27, 31, 36, 0.15);
+  --color-btn-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --color-btn-hover-bg: #f3f4f6;
+  --color-btn-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-active-bg: #ebecf0;
+  --color-btn-active-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-text: var(--color-gray-100);
+  --color-btn-primary-bg: var(--color-green-600);
+  --color-btn-primary-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --color-btn-primary-hover-bg: var(--color-green-700);
+  --color-btn-primary-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-selected-bg: var(--color-green-800);
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgba(0, 45, 17, 0.2);
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.8);
+  --color-btn-primary-disabled-bg: var(--color-gray-300);
+  --color-btn-primary-disabled-border: rgba(27, 31, 36, 0.15);
+  --color-scale-gray-0: var(--color-gray-200);
+}
+
+main *:focus {
+  outline: none;
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 2px, rgba(181, 205, 255, 0.5) 0px 0px 0px 5px;
+
+  transition-property: box-shadow, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

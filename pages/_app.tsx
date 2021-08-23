@@ -85,6 +85,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <ScriptOnce strategy="afterInteractive" async defer>
         {`a=window,t=a.dataLayer=a.dataLayer||[];a.gtag=(...a)=>t.push(a),t.push({"gtm.start":Date.now(),event:"gtm.js"})`}
       </ScriptOnce>
+      <Seo />
       <RunningHeaderProvider>
         <UIStateProvider>
           <Component {...pageProps} />
@@ -120,7 +121,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       {urlsToPreload?.map((url) => (
         <link key={url} rel="preload" href={url} as="image" />
       ))}
-      <Seo />
     </ErrorBoundary>
   );
 };
