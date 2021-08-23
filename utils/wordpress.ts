@@ -15,7 +15,7 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 export const wordpressFolderName = '_wordpress_posts';
 export const postsFolderName = '_posts';
 export const pagesFolderName = '_pages';
-const basePath = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..');
+const basePath = Path.resolve(__dirname, '..');
 
 export const pathToLegacyPosts = Path.resolve(basePath, wordpressFolderName);
 export const pathToPosts = Path.resolve(basePath, postsFolderName);

@@ -5,6 +5,9 @@
   },
   "plugins": ["@typeofweb"],
   "extends": ["plugin:@typeofweb/recommended", "next/core-web-vitals"],
+  "rules": {
+    "unicorn/prefer-module": 0
+  },
   "overrides": [
     {
       "files": ["pages/**/*.tsx", "pages/**/*.ts"],
