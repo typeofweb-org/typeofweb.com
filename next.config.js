@@ -123,10 +123,6 @@ config.headers = () => {
           key: 'Expect-CT',
           value: `max-age=0, report-uri="https://typeofweb.report-uri.com/r/d/ct/reportOnly"`,
         },
-        {
-          key: 'Content-Security-Policy-Report-Only',
-          value: `default-src ${protocol}:; script-src 'self'; script-src-elem 'self' https://www.googletagmanager.com https://cdn.jsdelivr.net 'sha256-febGD3VexJiz6Ye35RFjJ2rvmFwIiJG7n7fwggQoZNI=' 'sha256-ozu8nOUjjKvdqbZExe7VXe1CBhjTzC6jkpjsx+iwDk8=' 'sha256-pphEDUJ47PnT23iMFBEWLh7QnVVib7Al7ZagHbkQix4='; style-src 'self' 'unsafe-inline'; img-src 'self' data: ${protocol}:; report-uri https://typeofweb.report-uri.com/r/d/csp/reportOnly`,
-        },
       ],
     },
   ]);
