@@ -1291,10 +1291,9 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@giscus/react@1.0.0":
+"@giscus/react@github:typeofweb/giscus-component#c51eb0b0deba1bec6d0fa75f5d03a94da3e36802":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-1.0.0.tgz#1c77347372af2d54bdd711dd5445a338f45bfcaa"
-  integrity sha512-KPTGG106meUCRH18IXCZbu4Fdwz3NDnNoesCItIkcYv6wu1ZiWbfeSkuiC8z6sEw+I+JSlXqseRXtjygBy7GJA==
+  resolved "https://codeload.github.com/typeofweb/giscus-component/tar.gz/c51eb0b0deba1bec6d0fa75f5d03a94da3e36802"
   dependencies:
     iframe-resizer-react "^1.1.0"
 
