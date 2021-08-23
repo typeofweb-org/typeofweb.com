@@ -5,23 +5,31 @@ import type { ErrorInfo } from 'react';
 
 interface State {
   readonly hasError: boolean;
+  readonly isRedirecting: boolean;
 }
 
 export class ErrorBoundary extends Component<{}, State> {
-  readonly state: State = { hasError: false };
+  readonly state: State = { hasError: false, isRedirecting: false };
 
   static getDerivedStateFromError() {
-    return { hasError: true };
+    return { hasError: true, isRedirecting: false };
   }
 
   componentDidMount() {
     window.addEventListener('error', (event) => {
+      if (this.state.isRedirecting) {
+        return;
+      }
+      this.setState({ isRedirecting: true });
       const url = errorToGitHubIssue(event.error, event.filename);
       window.location.href = url;
     });
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    if (this.state.isRedirecting) {
+      return;
+    }
     const url = errorToGitHubIssue(error, errorInfo.componentStack);
     window.location.href = url;
   }
