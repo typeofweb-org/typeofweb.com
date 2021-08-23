@@ -125,7 +125,7 @@ function legacyWordpressCollection() {
     name: 'legacy_posts',
     label: 'Posty z wordpressa',
     summary: [
-      '{{fields.index}}',
+      '',
       '{{fields.thumbnail.url}}',
       '{{fields.title}}',
       '{{fields.categories[0].name}}',
@@ -145,12 +145,6 @@ function legacyWordpressCollection() {
       preview: true,
     },
     fields: [
-      {
-        label: 'index',
-        name: 'index',
-        widget: 'number',
-        value_type: 'int',
-      },
       {
         label: 'title',
         name: 'title',
@@ -293,7 +287,7 @@ async function posts() {
     label: 'Artykuły',
     label_singular: 'Artykuł',
     summary: [
-      '{{fields.index}}',
+      '',
       '{{fields.thumbnail.url}}',
       '{{fields.title}}',
       '{{fields.category}}',
@@ -312,12 +306,6 @@ async function posts() {
       preview: true,
     },
     fields: [
-      {
-        label: 'index',
-        name: 'index',
-        widget: 'number',
-        value_type: 'int',
-      },
       {
         label: 'Tytuł',
         name: 'title',
@@ -451,7 +439,7 @@ async function pages(): Promise<import('./_netlifySchema').CollectionItems> {
     path: '{{slug}}',
     folder: '_pages',
     fields: [
-      ...props.fields.filter((f) => !['index', 'authors', 'categories', 'series', 'type'].includes(f.name)),
+      ...props.fields.filter((f) => !['authors', 'categories', 'series', 'type'].includes(f.name)),
       {
         label: 'type',
         name: 'type',

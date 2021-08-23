@@ -1,5 +1,11 @@
 # typeofweb.com
 
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCR4qSQa8JFh6zeR5Idvnewg?label=YouTube&style=social)](https://youtube.com/c/typeofweb)
+
+[![Discord](https://img.shields.io/discord/440163731704643589?color=5CB784&label=Discord&logo=discord&logoColor=white)](https://discord.typeofweb.com)
+
+[![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fv2.typeofweb.com)](https://securityheaders.com/?q=https%3A%2F%2Fv2.typeofweb.com)
+
 <a href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss"><img src="public/powered-by-vercel.svg" height="30" alt="Powered by Vercel"/></a>
 
 ## Type of Web jest teraz Open Source!
