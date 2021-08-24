@@ -18,35 +18,9 @@ function getFingerprint() {
 }
 
 function generate() {
-  const {
-    availHeight: ah,
-    availWidth: aw,
-    colorDepth: cd,
-    height: h,
-    pixelDepth: pd,
-    width: w,
-    orientation: { type: ot },
-  } = window.screen;
-
-  const screen = JSON.stringify({
-    ah,
-    aw,
-    cd,
-    h,
-    pd,
-    w,
-    ot,
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (char) => {
+    const random = (Math.random() * 16) | 0;
+    const value = char === 'x' ? random : (random & 0b0011) | 0b1000;
+    return value.toString(16);
   });
-
-  const fingerprint = Object.entries({
-    userAgent: navigator.userAgent,
-    languages: navigator.languages.join(','),
-    screen,
-  })
-    .map(([key, value]) => `${key}:${value}`)
-    .sort()
-    .join(';')
-    .replace(/\s/g, '');
-
-  return btoa(fingerprint);
 }
