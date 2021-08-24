@@ -1,0 +1,113 @@
+---
+title: Który hosting jest najszybszy? 9 rzeczy, które mają największe znaczenie
+permalink: który-hosting-jest-najszybszy-9-rzeczy-które-mają-największe-znaczenie
+type: post
+date: 2021-08-24T12:29:44.745Z
+authors:
+  - mateusz-mazurek
+category: opinie
+---
+**Hosting to jeden z najważniejszych filarów strony internetowej. To w dużej mierze od niego właśnie zależy, czy będzie ona szybka, stabilna i bezpieczna. A jak wybrać serwer, który faktycznie pozwoli Twojej witrynie “wrzucić wyższy bieg”? Zobacz, jakie elementy wpływają na szybkość serwera.**
+
+Hosting to miejsce, na którym przechowywane są pliki strony internetowej. Jednak czy jego szybkość jest faktycznie tak istotnym parametrem? A może to wyłącznie jeden z elementów czegoś na kształt “obsesji prędkości”?
+
+No cóż - jeżeli wątpisz, czy hosting powinien być szybki, to mam dla Ciebie kilka informacji. Wiedz, że:
+
+* **wolna strona przekłada się na mniej konwersji** - ponad połowa użytkowników [opuści stronę, która ładuje się dłużej niż 3 sekundy](https://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds/), a wskaźnik konwersji [spada o prawie 4,5% z każdą sekundą ładowania](https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm);
+
+![Czas ładowania się strony a współczynnik konwersji](cloudflare-konwersja.png "fot. cloudflare.com")
+
+* **szybkość ma wpływ na Core Web Vitals** - czyli na czynniki brane pod uwagę przez Google podczas ratingu strony (szybki serwer może poprawić wyniki w LCP czyli czasie ładowania największego elementu na stronie oraz FID - czyli czasie potrzebnym do uzyskania pełnej interaktywności przez stronę);
+
+![Core Web Vitals](core-web-vitals.png "fot. webspec.com")
+
+* **szybko działająca strona może mieć wpływ na mniejsze koszty marketingowe** - nie tylko dzięki wysokim wynikom organicznym w indeksach Google, ale także dzięki wyższej jakości reklam, przekładającej się na wyższą klikalność w Google Ads.
+
+Mam nadzieję, że już nie muszę Cię przekonywać. :) Żeby nie przedłużać - przejdźmy teraz do elementów, które mają największe znaczenie, gdy mowa o szybkim hostingu.
+
+## 1. Dysk SSD
+
+Gdy chcesz uruchomić jakikolwiek plik na swoim komputerze, rodzaj dysku twardego ma bardzo istotne znaczenie. To właśnie od tego nośnika zależy prędkość odczytu oraz zapisu plików. Gdy dysk jest wolny - cały komputer chodzi wolno, a wyszukiwanie i otwieranie plików trwa znacznie dłużej.
+
+Tak samo jest z serwerem. Hosting to miejsce, na którym przechowywane są pliki strony internetowej. W związku z tym **rodzaj dysku wykorzystywanego przez hosting ma ogromny wpływ na to, jak szybko uruchomią się pliki potrzebne do wyświetlenia Twojej witryny**. 
+
+Wiele hostingów opiera się na dyskach talerzowych HDD. To już nieco archaiczne rozwiązanie. Wprawdzie za stosunkowo niewielkie pieniądze możesz wykupić sporo przestrzeni serwerowej - jednak jej szybkość jest naprawdę niezadowalająca.
+
+**Jeżeli zdecydujesz się na hosting oparty na dyskach SSD, możesz liczyć nawet na kilkakrotnie szybszy odczyt i zapis plików**. Natomiast [nośniki typu SSD NVMe są nawet 10-11 razy szybsze od standardowych dysków talerzowych](https://jakwybrachosting.pl/hosting-ssd/).
+
+![Szybkość dysków HDD, SSD i SSD NVMe](hdd-ssd-nvme-speed.png "fot. reddit.com")
+
+Szukasz dobrego i szybkiego hostingu? Zamiast patrzeć na jego pojemność, sprawdź z jakich dysków korzysta. 
+
+## 2. Wersja PHP
+
+PHP jest wykorzystywany przez zdecydowaną większość stron internetowych. Ten język odpowiada za komunikację z bazą danych MySQL - wysyła do niej zapytania o poszczególne elementy potrzebne do wyświetlenia strony internetowej. 
+
+Po stronie serwera działa interpreter PHP, który na bieżąco odczytuje polecenia zapisane w skryptach PHP i wciela je w życie. To właśnie dzięki temu przeglądarka otrzymuje gotowy plik HTML, który może wyświetlić na komputerze odwiedzającego.
+
+Nawet po tak skrótowym przedstawieniu roli PHP, nietrudno zauważyć, że jest to kluczowy element dla poprawnego działania strony. **Jeżeli interpreter PHP działa szybko i wydajnie - to minimalizuje to opóźnienia w wyświetlaniu witryny**.
+
+![PHP Benchmark](php-benchmark.png "fot. openbenchmarking.org")
+
+Dlatego też tak ważne jest, aby na serwerze była zainstalowana najnowsza wersja PHP. Każda aktualizacja tego języka niesie ze sobą liczne poprawki w zakresie bezpieczeństwa - ale także właśnie szybkości i wydajności. Porównując benchmarki poszczególnych wersji PHP doskonale widać różnice - na korzyść każdej z nowszej wersji. 
+
+[PHP ma swój cykl życia](https://www.php.net/supported-versions.php) - po wypuszczeniu nowej generacji, jest ona wspierana przez 2 lata. Potem zaledwie przez rok są do niej wypuszczane wyłącznie łatki bezpieczeństwa. Po upływie tego okresu - wersja jest nieaktualna i nie ma wsparcia. 
+
+**Jeżeli liczysz na szybki hosting - wybierz taki, na którym możesz włączyć najnowszą wersję PHP.**
+
+## 3. Wersja HTTP
+
+Podobnie jak w przypadku PHP, także HTTP ewoluuje na przestrzeni lat. Realia korzystania z sieci są dzisiaj zupełnie inne niż kilka czy kilkanaście lat temu. **Protokół HTTP - Hypertext Transfer Protocol - jest wykorzystywany do nawiązywania połączenia pomiędzy serwerem a przeglądarką użytkownika**. W związku z tym można śmiało powiedzieć, że jest to jeden z fundamentów Internetu.
+
+Najnowsza generacja [HTTP/3](https://jakwybrachosting.pl/http3/) jest dopiero wdrażana. Jednak naprawdę warto się nią zainteresować jak najwcześniej. Korzystanie z tego protokołu sprawia, że strona może ładować się znacznie szybciej. Jak to możliwe?
+
+HTTP/3 chroni przed blokowaniem nagłówków - zabezpieczając przed zatorami w połączeniu internetowym. W związku z tym zagubienie jakiegokolwiek pakietu danych nie prowadzi do konieczności nawiązywania połączenia na nowo. W HTTP/3 możliwa jest także migracja połączenia między LTE a WiFi - dzięki czemu nawet zmiana adresu IP nie musi zrywać połączenia. 
+
+Wszystko to sprawia, że **HTTP/3 przekłada się po prostu na szybsze działanie stron internetowych**. Co zrobić, żeby Twoja witryna wykorzystywała taką technologię? Konieczne są do tego dwie kwestie. Pierwsza - odwiedzający musi korzystać z przeglądarki, która wspiera ten protokół. Druga - HTTP/3 musi być obsługiwany przez Twój serwer. Jeżeli zatem zależy Ci na szybkim hostingu - sprawdź, jaką generację HTTP obsługuje.
+
+## 4. Limity
+
+Hosting współdzielony musi nakładać limity na swoich klientów. W przeciwnym wypadku jedna strona lub aplikacja mogłaby “zaanektować” zasoby serwera dla siebie, utrudniając innym witrynom prawidłowe funkcjonowanie.
+
+Jednak niektóre serwery nakładają zbyt daleko idące ograniczenia, które sprawiają, że strona ma naprawdę utrudnione zadanie. Jeżeli chcesz znaleźć dobry i szybki serwer - koniecznie zwróć uwagę na następujące limity:
+
+* **jednoczesnych procesów PHP** - interpreter PHP stale przetwarza skrypty PHP w celu wyświetlania stron. Jeżeli limit takich procesów jest zbyt niski, to podczas przebywania dużej liczby użytkowników na stronie, poszczególne procesy muszą oczekiwać w kolejce - zamiast być realizowane od razu. Jak się zapewne domyślasz - ma to spory wpływ na ładowanie się witryny. Jeżeli chcesz szybkiego hostingu, niech limit jednoczesnych procesów PHP będzie wyższy niż 10 (a najlepiej bez limitu);
+* **jednoczesnych połączeń HTTP** - jeżeli jest on na zbyt niskim poziomie (np. poniżej 100), to przy dużym zainteresowaniu stroną, odwiedzającym może zrywać się połączenie. Lepiej jest wybrać serwer, w którym ograniczenie to jest na znacznie wyższym poziomie - przynajmniej 1000.
+
+## 5. Przydział procesora i pamięci RAM
+
+Wiesz już, że na działanie hostingu duży wpływ mają stosowane limity. Jednak ogromnie istotny jest także przydział procesora i pamięci RAM. Podobnie jak w przypadku osobistego komputera, także na serwerach wszystkie operacje wykonywane na hostingu przechodzą właśnie przez te podzespoły.
+
+Moc obliczeniowa maszyn serwerowych nie jest podawana do wiadomości klientów. Możesz jednak zdecydować się na ofertę, w której będziesz mieć gwarancję przydziału pewnych zasobów na przynajmniej podstawowych poziomie. **Gdy zależy Ci na szybkim działaniu serwera, dobrze jest mieć do dyspozycji przynajmniej 1 GHz (lub 1 rdzeń) procesora oraz przynajmniej 1 GB pamięci RAM.**
+
+## 6. LiteSpeed
+
+Oprogramowanie serwerowe służy do tego, aby pliki umieszczane na hostingu były dostępne przez Internet. Najczęściej takim programem jest Apache. Oprogramowanie tego typu jest popularne na całym świecie, m.in. ze względu na rozbudowaną dokumentację techniczną czy szerokie możliwości instalacji modułów dodatkowych.
+
+Jednak prawda jest taka, że w przypadku dynamicznych stron internetowych - a w szczególności takich, które oparte są na WordPressie - inne oprogramowanie może oferować znacznie lepsze osiągi. 
+
+[LiteSpeed jest nawet 84 razy bardziej wydajny od Apache](https://jakwybrachosting.pl/hosting-litespeed/). **Dzięki zmniejszeniu obciążenia PHP strona może działa szybciej, być bardziej stabilna oraz cechować się znacznie większą odpornością na ataki typu DDoS** (skutkujące paraliżem strony podczas nagłego zwiększenia wykorzystania zasobów serwera). Gdy priorytetem jest szybkość - zdecydowanie warto wybrać hosting, który obsługuje LiteSpeed.
+
+![LiteSpeed Benchmark](litespeed-benchmark.png "fot. litespeedtech.com")
+
+## 7. Redis/Memcached
+
+Na pewno widzisz, że PHP odgrywa ogromną rolę w funkcjonowaniu stron internetowych. Silniki pamięci podręcznej mogą jednak nieco odciążyć interpreter po stronie serwera. **Dzięki technologiom takim jak Redis czy Memcached dane pobierane z bazy danych przechowywane są w tzw. pamięci szybkiego dostępu**. 
+
+W ten sposób wiele danych potrzebnych do wyświetlenia strony jest “pod ręką” i dostęp do nich nie musi wiązać się z angażowaniem PHP, dysku czy bazy danych. Wszystko to sprawia, że strona ładuje się znacznie szybciej. Jednak - żeby była taka możliwość - konieczny jest hosting, na którym możesz włączyć obsługę takiej technologii.
+
+## 8. Lokalizacja serwera
+
+Gdy mowa o szybkości hostingu, znaczenie ma także położenie serwera. **Jeżeli odległość pomiędzy przeglądarką użytkownika, a serwerem jest zbyt duża - czas reakcji DNS może wzrosnąć nawet kilkakrotnie**. Gdy osoba z Polski odwiedza stronę umieszczoną na polskim hostingu - to czas reakcji może wynieść kilkanaście milisekund. Jeżeli jednak hosting mieści się np. w Azji czy Ameryce Południowej - to potrzeba na to przynajmniej kilkadziesiąt milisekund więcej. I dotyczy to nie tylko DNS-ów, ale każdego zapytania do serwera.
+
+Jeżeli Twoi odwiedzający są głównie z Polski, a Tobie zależy na jak najszybszym działaniu strony - to [wybierz serwer zlokalizowany w Polsce lub krajach ościennych](https://jakwybrachosting.pl/hosting-w-polsce-czy-za-granica/). Natomiast, gdy odwiedzający witrynę pochodzą z różnych miejsc na świecie - dobrze jest wybrać serwer z funkcją [CDN](https://jakwybrachosting.pl/cdn/) (Content Delivery Network). Taki hosting wykorzystuje sieć serwerów rozproszoną po całym świecie - dane zapytanie jest zawsze obsługiwane przez urządzenie, które znajduje się najbliżej.
+
+## 9. Przepustowość łącza
+
+Żeby strony, streaming czy pobieranie plików było jak najszybsze - potrzebne jest szybkie połączenie z Internetem. Także serwery powinny mieć szybkie łącze o dużej przepustowości. Jeżeli będzie ono na zbyt niskim poziomie  - to w przypadku intensywnego użytkowania zasobów serwera, może się to odbić na szybkości ładowania stron.
+
+Hosting nie zawsze chwali się, jaką przepustowość połączenia gwarantuje. Jednak, jeżeli nie chcesz mieć problemów z wydajnością serwera  - naprawdę warto dopytać o ten parametr. **Dobrze, aby było to przynajmniej 500 Mb/s**.
+
+Wybierając serwer musisz przeanalizować cały szereg czynników. Jednak, gdy zależy Ci na szybkości, przyjrzyj się przede wszystkim powyższym elementom. Pamiętaj - **lepiej jest zajrzeć nieco głębiej do parametrów serwera - a nawet dopytać mailowo czy telefonicznie - niż żałować, że wybrało się zbyt powolny hosting**. Mam nadzieję, że dzięki uwagom z tego artykułu, uda Ci się wybrać wydajny serwer dla swojej strony. 
+
+Przygotował **[Mateusz Mazurek](https://mateuszmazurek.pl/)**. Od ponad 14 lat klient i użytkownik dziesiątek różnych firm hostingowych. Twórca serwisu [Jak Wybrać Hosting](https://jakwybrachosting.pl/), w ramach którego testuje, recenzuje i sprawdza firmy hostingowe oraz radzi jak wybrać najlepszą usługę pod konkretny projekt.
