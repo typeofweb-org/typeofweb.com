@@ -177,6 +177,8 @@ interface TypeOfWebHit {
   readonly title: string;
   readonly date: string;
   readonly permalink: string;
+  readonly type: 'post' | 'page';
+  readonly excerpt: string;
   readonly series?: {
     readonly slug: string;
     readonly name: string;
@@ -340,14 +342,13 @@ CustomHits.displayName = 'CustomHits';
 
 const HitDetails = memo<{ readonly currentHit: TypeOfWebHit }>(
   ({ currentHit }) => {
-    const excerpt = trimExcerpt(splitContent(currentHit.content)[0]);
     return (
       <>
         <p className="text-gray-900 text-xl font-bold">{currentHit.title || ''}</p>
         <p className="mt-1 text-gray-600 text-sm">
           {currentHit.category?.name || ''} {currentHit.series ? `> ${currentHit.series.name}` : ''}
         </p>
-        <p className="mt-3 text-gray-900">{excerpt}</p>
+        <p className="mt-3 text-gray-900">{currentHit.excerpt}</p>
         <Link href={getUrlForPermalink(currentHit.objectID)}>
           <a className="inline-block mt-5 px-4 py-2 text-gray-100 text-2xl focus:bg-green-600 bg-green-700 rounded-md outline-none cursor-pointer transition-all focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2">
             Idź do artykułu
