@@ -16,7 +16,7 @@ query searchDiscussions($q: String!) {
 `.trim();
 
 interface SearchDiscussionsQueryResult {
-  readonly searchDiscussions: { readonly nodes: readonly { readonly comments: { readonly totalCount: number } }[] };
+  readonly searchDiscussions?: { readonly nodes?: readonly { readonly comments?: { readonly totalCount?: number } }[] };
 }
 
 export const getCommentsCount = async (title: string) => {
@@ -42,5 +42,5 @@ export const getCommentsCount = async (title: string) => {
     q,
     fetch: global.fetch,
   });
-  return response.searchDiscussions.nodes[0]?.comments.totalCount ?? 0;
+  return response?.searchDiscussions?.nodes?.[0]?.comments?.totalCount ?? 0;
 };
