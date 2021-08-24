@@ -50,6 +50,7 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
             index={post.frontmatter.index}
             excerpt={post.excerpt}
             series={post.frontmatter.series}
+            commentsCount={post.frontmatter.commentsCount}
           />
         );
 

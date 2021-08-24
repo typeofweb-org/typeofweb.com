@@ -33,6 +33,7 @@ interface PostPropsFrontmatter {
   readonly index: number | null;
   readonly date: string;
   readonly series: SeriesWithToC | null;
+  readonly commentsCount: number;
   readonly authors: readonly {
     readonly avatarUrl: string;
     readonly displayName: string;
@@ -71,6 +72,7 @@ interface PostPropsFrontmatterOnlyExcerpt {
   readonly index: number | null;
   readonly date: string;
   readonly series: Series | null;
+  readonly commentsCount: number;
   readonly authors: readonly {
     readonly avatarUrl: string;
     readonly displayName: string;
@@ -159,6 +161,7 @@ export async function postToProps(
         title: post.data.title,
         index: findCurrentPostIndex(post.data.permalink, allPosts),
         date: post.data.date,
+        commentsCount: post.data.commentsCount,
         series: post.data.series
           ? {
               ...(typeof post.data.series === 'string'
@@ -199,6 +202,7 @@ export async function postToProps(
         title: post.data.title,
         index: findCurrentPostIndex(post.data.permalink, allPosts),
         date: post.data.date,
+        commentsCount: post.data.commentsCount,
         series: post.data.series
           ? {
               ...(typeof post.data.series === 'string'

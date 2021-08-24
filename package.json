@@ -14,6 +14,7 @@
   "type": "commonjs",
   "dependencies": {
     "@giscus/react": "github:typeofweb/giscus-component#c51eb0b0deba1bec6d0fa75f5d03a94da3e36802",
+    "@octokit/auth-app": "3.6.0",
     "@openlab/vercel-netlify-cms-github": "github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
     "@plaiceholder/next": "2.1.0",
     "@sentry/nextjs": "6.11.0",
@@ -31,7 +32,9 @@
     "next": "11.1.0",
     "next-mdx-remote": "3.0.4",
     "next-sitemap": "1.6.164",
+    "octokit": "1.4.0",
     "plaiceholder": "2.0.1",
+    "polish-plurals": "1.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-instantsearch-dom": "6.12.1",

@@ -6,6 +6,7 @@ import GrayMatter from 'gray-matter';
 
 import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { splitContent, trimExcerpt } from './excerpt';
+import { getCommentsCount } from './getCommentsCount';
 import { toHtml, toMdx } from './markdown';
 import { allSeries } from './series';
 
@@ -103,18 +104,21 @@ export async function readAllPosts({
 
   return {
     postsCount,
-    posts: postsWithFm.map((fm) => {
-      return {
-        filePath: fm.filePath,
-        content: fm.content,
-        data: {
-          ...fm.data,
-          date: fm.data.date?.toISOString(),
-          permalink: fm.data.permalink,
-          authors: fm.data.authors || ['michal-miszczyszyn'],
-        },
-      };
-    }),
+    posts: await Promise.all(
+      postsWithFm.map(async (fm) => {
+        return {
+          filePath: fm.filePath,
+          content: fm.content,
+          data: {
+            ...fm.data,
+            date: fm.data.date?.toISOString(),
+            permalink: fm.data.permalink,
+            authors: fm.data.authors || ['michal-miszczyszyn'],
+            commentsCount: await getCommentsCount(fm.data.title),
+          },
+        };
+      }),
+    ),
   };
 }
 

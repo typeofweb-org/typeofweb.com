@@ -31,11 +31,28 @@ interface SingleArticleProps {
   readonly excerpt: string | null;
   readonly content: JSX.Element;
   readonly series?: SeriesWithToC | null;
+  readonly commentsCount: number;
 }
 
 export const SingleArticle = memo(
   forwardRef<HTMLElement, SingleArticleProps>(
-    ({ filePath, cover, index, title, authors, mainCategory, permalink, excerpt, content, isMdx, series }, ref) => {
+    (
+      {
+        filePath,
+        cover,
+        index,
+        title,
+        authors,
+        mainCategory,
+        permalink,
+        excerpt,
+        content,
+        isMdx,
+        series,
+        commentsCount,
+      },
+      ref,
+    ) => {
       const href = '/' + permalink;
 
       useEffect(() => {
@@ -63,7 +80,15 @@ export const SingleArticle = memo(
                   <p className="lead">{excerpt}</p>
                 </div>
               )}
-              <ArticleMeta series={series} rel={true} authors={authors} mainCategory={mainCategory} size="small" />
+              <ArticleMeta
+                commentsCount={commentsCount}
+                series={series}
+                rel={true}
+                authors={authors}
+                mainCategory={mainCategory}
+                permalink={permalink}
+                size="small"
+              />
             </div>
 
             {cover && <ArticleCoverImage cover={cover} wide={true} />}
