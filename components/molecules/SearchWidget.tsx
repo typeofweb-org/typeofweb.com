@@ -7,7 +7,6 @@ import { InstantSearch, Configure, connectSearchBox, connectHits, PoweredBy } fr
 
 import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
-import { splitContent, trimExcerpt } from '../../utils/excerpt';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { Input } from '../atoms/Input';
 
