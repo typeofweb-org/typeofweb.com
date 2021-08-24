@@ -48,18 +48,20 @@ export function AdminNetlify() {
         const collection = entry.get('collection');
         if (collectionsWithPermalink.includes(collection)) {
           const title = entry.getIn(['data', 'title']);
-          return entry.setIn(['data', 'permalink'], GithubSlugger.slug(title));
+          return entry.setIn(['data', 'permalink'], GithubSlugger.slug(title)).get('data');
         }
         if (collection === 'settings' && entry.get('slug') === 'authors') {
           /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access -- kill me */
-          return entry.updateIn(['data', 'authors'], (value: any) =>
-            value.map((v: any) =>
-              v.set(
-                'displayName',
-                [v.getIn(['meta', 'first_name'], ''), v.getIn(['meta', 'last_name'], '')].filter(Boolean).join(' '),
+          return entry
+            .updateIn(['data', 'authors'], (value: any) =>
+              value.map((v: any) =>
+                v.set(
+                  'displayName',
+                  [v.getIn(['meta', 'first_name'], ''), v.getIn(['meta', 'last_name'], '')].filter(Boolean).join(' '),
+                ),
               ),
-            ),
-          );
+            )
+            .get('data');
           /* eslint-enable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
         }
       },
@@ -78,19 +80,16 @@ export function AdminNetlify() {
         .flatMap((m) => Array.from(m.addedNodes))
         .filter((n): n is HTMLElement => n instanceof HTMLElement)
         .flatMap((el) => Array.from(el.querySelectorAll('[class*="CardsGrid"] [class*="ListCardTitle"]')));
-
       l.forEach((el) => {
         const textToParse = el.textContent;
         if (!textToParse) {
           return;
         }
-
         const parts = textToParse.split(DELIMITER);
         const row = parts
           .map(parsePart)
           .map((p) => `<span>${p}</span>`)
           .join('');
-
         el.innerHTML = parts.length === 1 ? `<div style="width: max-content;">${row}</div>` : row; // lgtm [js/xss-through-dom]
       });
     });

@@ -24,7 +24,7 @@ const legacyCategories = Object.keys(categoryMappings)
 
 const config = async (): Promise<NetlifyConfigSchema> => {
   return {
-    local_backend: process.env.NODE_ENV === 'development',
+    // local_backend: process.env.NODE_ENV === 'development',
     locale: 'pl',
     display_url: host,
     logo_url: `${host}/logo-typeofweb-black.svg`,
@@ -139,7 +139,6 @@ function legacyWordpressCollection() {
     folder: '_wordpress_posts',
     create: false,
     slug: '{{slug}}',
-    identifier_field: 'permalink',
     preview_path: '{{fields.permalink}}',
     sortable_fields: ['date'],
     extension: 'md',
@@ -299,11 +298,11 @@ async function posts() {
     path: '{{year}}/{{month}}/{{slug}}',
     folder: '_posts',
     slug: '{{slug}}',
-    identifier_field: 'permalink',
     create: true,
     preview_path: '{{fields.permalink}}',
     sortable_fields: ['date'],
     format: 'yaml-frontmatter',
+    identifier_field: 'permalink',
     extension: 'mdx',
     editor: {
       preview: true,
