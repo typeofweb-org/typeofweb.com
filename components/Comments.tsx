@@ -9,7 +9,7 @@ const theme = `${host}/custom-comments-theme.css` as Theme;
 
 export const Comments = () => {
   return (
-    <div className="px-7 bg-gray-100 sm:px-8 lg:px-12">
+    <div className="px-7 bg-gray-100 sm:px-8 lg:px-12" id="comments">
       <h3 className="mb-4 text-xl font-bold">Komentarze</h3>
       <div className="-mt-10">
         <Giscus

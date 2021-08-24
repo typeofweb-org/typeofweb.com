@@ -21,10 +21,11 @@ interface ArticleSneakPeekProps {
   readonly permalink: string;
   readonly excerpt: string;
   readonly series?: Series | null;
+  readonly commentsCount: number;
 }
 
 export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
-  ({ cover, index, title, authors, mainCategory, permalink, series, excerpt }) => {
+  ({ cover, index, title, authors, mainCategory, permalink, series, excerpt, commentsCount }) => {
     const href = getUrlForPermalink(permalink);
     return (
       <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
@@ -38,7 +39,14 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
           )}
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
             <ArticleTitle title={title} index={index} href={href} level={2} />
-            <ArticleMeta series={series} authors={authors} mainCategory={mainCategory} size="small" />
+            <ArticleMeta
+              series={series}
+              authors={authors}
+              mainCategory={mainCategory}
+              commentsCount={commentsCount}
+              permalink={permalink}
+              size="small"
+            />
           </div>
         </header>
         <div className="pb-2 px-7 text-gray-700 font-serif text-lg sm:px-8 lg:px-12">

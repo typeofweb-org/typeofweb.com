@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { polishPlurals } from 'polish-plurals';
 import { Fragment, memo } from 'react';
 
 import { getCategoryLink } from '../../utils/categories';
@@ -29,14 +30,19 @@ export interface Author {
 const S = 32;
 const L = 48;
 
+const komentarzy = polishPlurals.bind(null, 'komentarz', 'komentarze', 'komentarzy');
+
 export const ArticleMeta = memo<{
   readonly authors: readonly Author[];
   readonly mainCategory: { readonly slug: string; readonly name: string } | null;
   readonly rel?: boolean;
   readonly size: 'small' | 'large';
   readonly series?: Series | null;
-}>(({ authors, mainCategory, rel, series, size = 'small' }) => {
+  readonly commentsCount: number;
+  readonly permalink: string;
+}>(({ authors, mainCategory, rel, series, permalink, commentsCount, size = 'small' }) => {
   const isSmall = size === 'small';
+  const href = '/' + permalink;
 
   return (
     <>
@@ -108,7 +114,20 @@ export const ArticleMeta = memo<{
                   </Link>
                 </LinkUnderlineEffect>
               </span>
-            )}
+            )}{' '}
+            <span
+              className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
+                isSmall ? 'text-base' : 'text-lg'
+              }`}
+            >
+              <LinkUnderlineEffect>
+                <Link href={href + '#comments'}>
+                  <a>
+                    {commentsCount} {komentarzy(commentsCount)}
+                  </a>
+                </Link>
+              </LinkUnderlineEffect>
+            </span>
           </div>
         </div>
       </div>

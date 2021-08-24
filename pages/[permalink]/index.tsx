@@ -106,6 +106,7 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
         permalink={frontmatter.permalink}
         series={frontmatter.series}
         cover={frontmatter.cover ? { ...frontmatter.cover, preload: true } : null}
+        commentsCount={frontmatter.commentsCount}
       />
       <NewsletterForm />
     </TwoColumns>
