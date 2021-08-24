@@ -139,6 +139,7 @@ function legacyWordpressCollection() {
     folder: '_wordpress_posts',
     create: false,
     slug: '{{slug}}',
+    identifier_field: 'permalink',
     preview_path: '{{fields.permalink}}',
     sortable_fields: ['date'],
     extension: 'md',
@@ -298,6 +299,7 @@ async function posts() {
     path: '{{year}}/{{month}}/{{slug}}',
     folder: '_posts',
     slug: '{{slug}}',
+    identifier_field: 'permalink',
     create: true,
     preview_path: '{{fields.permalink}}',
     sortable_fields: ['date'],
@@ -438,6 +440,7 @@ async function pages(): Promise<import('./_netlifySchema').CollectionItems> {
     description: '',
     sortable_fields: [],
     path: '{{slug}}',
+    identifier_field: 'permalink',
     folder: '_pages',
     fields: [
       ...props.fields.filter((f) => !['authors', 'categories', 'series', 'type'].includes(f.name)),

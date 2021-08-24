@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, memo, useState, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { InstantSearch, Configure, connectSearchBox, connectHits } from 'react-instantsearch-dom';
+import { InstantSearch, Configure, connectSearchBox, connectHits, PoweredBy } from 'react-instantsearch-dom';
 
 import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
@@ -96,6 +96,7 @@ export const SearchWidget = memo(() => {
           </kbd>
         </div>
       </button>
+      <PoweredBy />
     </div>
   );
 });
@@ -311,9 +312,6 @@ export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, cu
       >
         {hits.map((hit) => (
           <li
-            data-insights-object-id={hit.objectID}
-            data-insights-position={hit.__position}
-            data-insights-query-id={hit.__queryID}
             key={hit.objectID}
             role="option"
             aria-describedby="search-details"
@@ -382,6 +380,9 @@ export const CustomHit = memo<CustomHitProps>(
       <Link href={getUrlForPermalink(hit.objectID)}>
         <a
           ref={currentElRef}
+          data-insights-object-id={hit.objectID}
+          data-insights-position={hit.__position}
+          data-insights-query-id={hit.__queryID}
           onMouseEnter={() => onItemHover(hit.objectID)}
           onFocus={() => onItemHover(hit.objectID)}
           onPointerEnter={() => onItemHover(hit.objectID)}
