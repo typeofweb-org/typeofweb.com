@@ -11,18 +11,18 @@ import type { RefCallback } from 'react';
 
 export function AdminNetlify() {
   const deps = useRef<{
-    readonly GithubSlugger: typeof import('github-slugger');
+    readonly Slugify: typeof import('slugify');
     readonly CMS: typeof import('netlify-cms-app').default;
   } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const GithubSlugger = import(/* webpackChunkName: "GithubSlugger" */ 'github-slugger');
+    const Slugify = import(/* webpackChunkName: "Slugify" */ 'slugify');
     const Katex = import(/* webpackChunkName: "Katex" */ 'katex/dist/contrib/auto-render');
     const CMS = import(/* webpackChunkName: "CMS" */ 'netlify-cms-app');
 
-    void Promise.all([GithubSlugger, Katex, CMS]).then(([GithubSlugger, Katex, CMS]) => {
-      deps.current = { GithubSlugger: GithubSlugger.default, CMS: CMS.default };
+    void Promise.all([Slugify, Katex, CMS]).then(([Slugify, Katex, CMS]) => {
+      deps.current = { Slugify, CMS: CMS.default };
       // @ts-expect-error
       window.Katex = Katex.default;
       setIsLoading(false);
@@ -33,7 +33,7 @@ export function AdminNetlify() {
     if (!deps.current || isLoading) {
       return;
     }
-    const { GithubSlugger, CMS } = deps.current;
+    const { Slugify, CMS } = deps.current;
 
     // CMS.registerMediaLibrary(Cloudinary);
     CMS.registerPreviewTemplate('legacy_posts', PreviewComponent);
@@ -48,7 +48,9 @@ export function AdminNetlify() {
         const collection = entry.get('collection');
         if (collectionsWithPermalink.includes(collection)) {
           const title = entry.getIn(['data', 'title']);
-          return entry.setIn(['data', 'permalink'], GithubSlugger.slug(title)).get('data');
+          return entry
+            .setIn(['data', 'permalink'], Slugify.default(title, { lower: true, trim: true, locale: 'pl' }))
+            .get('data');
         }
         if (collection === 'settings' && entry.get('slug') === 'authors') {
           /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access -- kill me */
