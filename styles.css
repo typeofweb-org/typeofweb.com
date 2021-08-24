@@ -269,3 +269,11 @@ progress {
     width: 320px !important;
   }
 }
+
+.ais-PoweredBy-text {
+  font-size: 0.8rem;
+}
+.ais-PoweredBy-logo {
+  height: 1.25rem;
+  width: auto;
+}
