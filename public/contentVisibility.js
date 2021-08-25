@@ -1,8 +1,16 @@
 // @ts-check
 // https://web.dev/content-visibility/
 // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
+(() => {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  const test = document.createElement('div');
+  const isSupported = 'attributeStyleMap' in test && test.attributeStyleMap instanceof StylePropertyMap;
+  if (!isSupported) {
+    return;
+  }
 
-if (typeof window !== 'undefined') {
   /**
    * @param {number} a
    * @param {number} b
@@ -85,4 +93,4 @@ if (typeof window !== 'undefined') {
       }
     });
   });
-}
+})();
