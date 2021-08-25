@@ -14,9 +14,9 @@
   /**
    * @param {number} a
    * @param {number} b
-   * @param {number} fuzz
+   * @param {number} eps
    */
-  const eqIsh = (a, b, fuzz = 2) => Math.abs(a - b) <= fuzz;
+  const eqIsh = (a, b, eps = 2) => Math.abs(a - b) <= eps;
 
   /**
    * @param {DOMRectReadOnly} a
