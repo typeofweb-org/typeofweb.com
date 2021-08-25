@@ -19,9 +19,14 @@ interface SearchDiscussionsQueryResult {
   readonly searchDiscussions?: { readonly nodes?: readonly { readonly comments?: { readonly totalCount?: number } }[] };
 }
 
+global.getCommentsCountCache = {};
 export const getCommentsCount = async (title: string) => {
   if (process.env.NODE_ENV === 'development') {
     return (Math.random() * 100) | 0;
+  }
+
+  if (global.getCommentsCountCache[title] !== undefined) {
+    return global.getCommentsCountCache[title];
   }
 
   const octokit = new Octokit({
@@ -42,5 +47,5 @@ export const getCommentsCount = async (title: string) => {
     q,
     fetch: global.fetch,
   });
-  return response?.searchDiscussions?.nodes?.[0]?.comments?.totalCount ?? 0;
+  return (global.getCommentsCountCache[title] = response?.searchDiscussions?.nodes?.[0]?.comments?.totalCount ?? 0);
 };
