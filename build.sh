@@ -10,6 +10,7 @@ if [[ ${ARGS[*]} =~ 'feed' ]]; then
   # Fuck node.js seriously
   sedi 's/  "type": "commonjs",/  "type": "module",/' package.json
   yarn feed
+  yarn comments-count
   sedi 's/  "type": "module",/  "type": "commonjs",/' package.json
 fi
 
