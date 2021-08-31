@@ -74,10 +74,10 @@ main > * + * {
   display: inline-block;
   opacity: 0;
   transition: opacity 0.3s ease-in;
+}
 
-  @nest h1:hover &, @nest h2:hover &, @nest h3:hover &, @nest h4:hover & {
-    opacity: 1;
-  }
+:is(h1, h2, h3, h4):hover .icon.icon-link {
+  opacity: 1;
 }
 
 * {

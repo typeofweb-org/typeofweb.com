@@ -59,6 +59,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           loading="lazy"
           layout="responsive"
           loader={typeofwebImageLoader}
+          className="img"
         />
       </div>
     );
