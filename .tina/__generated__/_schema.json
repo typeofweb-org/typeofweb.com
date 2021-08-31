@@ -1,0 +1,199 @@
+{
+  "collections": [
+    {
+      "label": "Artykuły",
+      "name": "posts",
+      "path": "_posts",
+      "fields": [
+        {
+          "label": "Tytuł",
+          "name": "title",
+          "type": "string",
+          "namespace": [
+            "posts",
+            "title"
+          ]
+        },
+        {
+          "label": "permalink",
+          "name": "permalink",
+          "type": "string",
+          "namespace": [
+            "posts",
+            "permalink"
+          ]
+        },
+        {
+          "label": "type",
+          "name": "type",
+          "type": "string",
+          "namespace": [
+            "posts",
+            "type"
+          ]
+        },
+        {
+          "label": "Data",
+          "name": "date",
+          "type": "datetime",
+          "namespace": [
+            "posts",
+            "date"
+          ]
+        },
+        {
+          "label": "Treść",
+          "name": "body",
+          "type": "string",
+          "isBody": true,
+          "namespace": [
+            "posts",
+            "body"
+          ]
+        },
+        {
+          "label": "Zdjęcie",
+          "name": "thumbnail",
+          "type": "object",
+          "required": false,
+          "fields": [
+            {
+              "label": "url",
+              "name": "url",
+              "type": "image",
+              "namespace": [
+                "posts",
+                "thumbnail",
+                "url"
+              ]
+            },
+            {
+              "label": "width",
+              "name": "width",
+              "type": "number",
+              "namespace": [
+                "posts",
+                "thumbnail",
+                "width"
+              ]
+            },
+            {
+              "label": "height",
+              "name": "height",
+              "type": "number",
+              "namespace": [
+                "posts",
+                "thumbnail",
+                "height"
+              ]
+            }
+          ],
+          "namespace": [
+            "posts",
+            "thumbnail"
+          ]
+        },
+        {
+          "label": "Kategorie",
+          "name": "category",
+          "type": "string",
+          "options": [
+            "javascript",
+            "typescript",
+            "opinie",
+            "dobry-kod",
+            "praca-zdalna"
+          ],
+          "namespace": [
+            "posts",
+            "category"
+          ]
+        },
+        {
+          "label": "Seria",
+          "name": "series",
+          "type": "string",
+          "options": [
+            "self-publishing",
+            "react-js",
+            "piece-of-cake",
+            "buddy-works",
+            "vue-js",
+            "hapijs",
+            "typescript",
+            "angular-2"
+          ],
+          "required": false,
+          "namespace": [
+            "posts",
+            "series"
+          ]
+        },
+        {
+          "label": "SEO",
+          "name": "seo",
+          "type": "object",
+          "fields": [
+            {
+              "label": "focusKeywords",
+              "name": "focusKeywords",
+              "type": "string",
+              "list": true,
+              "required": false,
+              "namespace": [
+                "posts",
+                "seo",
+                "focusKeywords"
+              ]
+            },
+            {
+              "label": "focusKeywordSynonyms",
+              "name": "focusKeywordSynonyms",
+              "type": "string",
+              "list": true,
+              "required": false,
+              "namespace": [
+                "posts",
+                "seo",
+                "focusKeywordSynonyms"
+              ]
+            },
+            {
+              "label": "metadesc",
+              "name": "metadesc",
+              "type": "string",
+              "ui": {
+                "component": "textarea"
+              },
+              "required": false,
+              "namespace": [
+                "posts",
+                "seo",
+                "metadesc"
+              ]
+            },
+            {
+              "label": "title",
+              "name": "title",
+              "type": "string",
+              "required": false,
+              "namespace": [
+                "posts",
+                "seo",
+                "title"
+              ]
+            }
+          ],
+          "namespace": [
+            "posts",
+            "seo"
+          ]
+        }
+      ],
+      "namespace": [
+        "posts"
+      ]
+    }
+  ],
+  "namespace": []
+}

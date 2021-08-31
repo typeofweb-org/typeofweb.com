@@ -1,0 +1,124 @@
+{
+  "collections": [
+    {
+      "label": "Artykuły",
+      "name": "posts",
+      "path": "_posts",
+      "fields": [
+        {
+          "label": "Tytuł",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "label": "permalink",
+          "name": "permalink",
+          "type": "string"
+        },
+        {
+          "label": "type",
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "label": "Data",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "label": "Treść",
+          "name": "body",
+          "type": "string",
+          "isBody": true
+        },
+        {
+          "label": "Zdjęcie",
+          "name": "thumbnail",
+          "type": "object",
+          "required": false,
+          "fields": [
+            {
+              "label": "url",
+              "name": "url",
+              "type": "image"
+            },
+            {
+              "label": "width",
+              "name": "width",
+              "type": "number"
+            },
+            {
+              "label": "height",
+              "name": "height",
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "label": "Kategorie",
+          "name": "category",
+          "type": "string",
+          "options": [
+            "javascript",
+            "typescript",
+            "opinie",
+            "dobry-kod",
+            "praca-zdalna"
+          ]
+        },
+        {
+          "label": "Seria",
+          "name": "series",
+          "type": "string",
+          "options": [
+            "self-publishing",
+            "react-js",
+            "piece-of-cake",
+            "buddy-works",
+            "vue-js",
+            "hapijs",
+            "typescript",
+            "angular-2"
+          ],
+          "required": false
+        },
+        {
+          "label": "SEO",
+          "name": "seo",
+          "type": "object",
+          "fields": [
+            {
+              "label": "focusKeywords",
+              "name": "focusKeywords",
+              "type": "string",
+              "list": true,
+              "required": false
+            },
+            {
+              "label": "focusKeywordSynonyms",
+              "name": "focusKeywordSynonyms",
+              "type": "string",
+              "list": true,
+              "required": false
+            },
+            {
+              "label": "metadesc",
+              "name": "metadesc",
+              "type": "string",
+              "ui": {
+                "component": "textarea"
+              },
+              "required": false
+            },
+            {
+              "label": "title",
+              "name": "title",
+              "type": "string",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

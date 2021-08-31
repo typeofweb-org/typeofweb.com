@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "./build.sh public && concurrently 'next dev' 'netlify-cms-proxy-server' --kill-others-on-fail",
+    "dev": "./build.sh public && next dev",
     "build": "./build.sh feed public next",
     "postbuild": "next-sitemap",
     "start": "next start",
@@ -11,7 +11,10 @@
     "ts-node-esm": "node --loader ts-node/esm --experimental-specifier-resolution=node",
     "feed": "yarn ts-node-esm generateFeed.ts",
     "comments-count": "yarn ts-node-esm generateCommentsCount.ts",
-    "svg": "svgo --precision 1 -r -f {images,public}"
+    "svg": "svgo --precision 1 -r -f {images,public}",
+    "tina-dev": "yarn tinacms server:start -c \"yarn dev\"",
+    "tina-build": "yarn tinacms server:start -c \"yarn build\"",
+    "tina-start": "yarn tinacms server:start -c \"yarn start\""
   },
   "type": "commonjs",
   "dependencies": {
@@ -42,7 +45,9 @@
     "react-dom": "17.0.2",
     "react-instantsearch-dom": "6.12.1",
     "sharp": "0.29.0",
-    "slugify": "1.6.0"
+    "slugify": "1.6.0",
+    "styled-components": "5.3.1",
+    "tinacms": "0.55.1"
   },
   "devDependencies": {
     "@babel/preset-env": "7.15.0",
@@ -55,6 +60,7 @@
     "@svgr/webpack": "5.5.0",
     "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/typography": "0.4.1",
+    "@tinacms/cli": "0.55.2",
     "@typeofweb/eslint-plugin": "0.2.2",
     "@types/bluebird": "3.5.36",
     "@types/gtag.js": "0.0.7",

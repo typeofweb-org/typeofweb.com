@@ -1,6 +1,9 @@
+import Dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
+import { TinaEditProvider } from 'tinacms/dist/edit-state';
+const TinaCMS = Dynamic(() => import('tinacms'), { ssr: false });
 
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { Seo } from '../components/Seo';
@@ -86,9 +89,24 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         {`a=window,t=a.dataLayer=a.dataLayer||[];a.gtag=(...a)=>t.push(a),t.push({"gtm.start":Date.now(),event:"gtm.js"})`}
       </ScriptOnce>
       <Seo />
+
       <RunningHeaderProvider>
         <UIStateProvider>
-          <Component {...pageProps} />
+          <TinaEditProvider
+            editMode={
+              <TinaCMS
+                clientId={process.env.NEXT_PUBLIC_TINA_CLIENT_ID}
+                branch={process.env.NEXT_PUBLIC_EDIT_BRANCH}
+                organization={process.env.NEXT_PUBLIC_ORGANIZATION_NAME}
+                isLocalClient={Boolean(Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT ?? true))}
+                {...pageProps}
+              >
+                {(livePageProps: any) => <Component {...livePageProps} />}
+              </TinaCMS>
+            }
+          >
+            <Component {...pageProps} />
+          </TinaEditProvider>
         </UIStateProvider>
       </RunningHeaderProvider>
       <ScriptAfterInteraction
