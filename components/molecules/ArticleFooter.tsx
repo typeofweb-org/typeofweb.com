@@ -64,7 +64,7 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
                         title={`${a.displayName} ${label}`}
                         className="text-gray-700 hover:text-green-500 transition-colors"
                       >
-                        <Icon className="mx-2 w-5 fill-current" />
+                        <Icon className={`mx-2 w-5 ${slug === 'website' ? 'stroke-current' : 'fill-current'}`} />
                       </a>
                     ))}
                 </span>

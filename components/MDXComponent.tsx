@@ -98,6 +98,7 @@ const Gallery = (_props: {
 const components = {
   a: A,
   img: Img,
+  Img,
   NewsletterForm,
   FacebookPageWidget,
   CodepenWidget,

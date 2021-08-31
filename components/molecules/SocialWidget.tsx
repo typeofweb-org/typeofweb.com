@@ -5,6 +5,7 @@ import FacebookIcon from '../../images/social/facebook.svg';
 import GithubIcon from '../../images/social/github.svg';
 import InstagramIcon from '../../images/social/instagram.svg';
 import JsonFeedIcon from '../../images/social/jsonfeed.svg';
+import LinkIcon from '../../images/social/link.svg';
 import LinkedinIcon from '../../images/social/linkedin.svg';
 import RssIcon from '../../images/social/rss.svg';
 import TwitterIcon from '../../images/social/twitter.svg';
@@ -18,6 +19,7 @@ export const social = [
   { icon: InstagramIcon, label: 'Instagram', slug: 'instagram', className: 'text-[#bc2a8d]' },
   { icon: TwitterIcon, label: 'Twitter', slug: 'twitter', className: 'text-[#1DA1F2]' },
   { icon: LinkedinIcon, label: 'LinkedIn', slug: 'linkedin', className: 'text-[#0077b5]' },
+  { icon: LinkIcon, label: 'Strona WWW', slug: 'website', className: 'hidden' },
 ] as const;
 
 export const myUrls = {
@@ -27,6 +29,7 @@ export const myUrls = {
   youtube: 'https://www.youtube.com/c/typeofweb',
   instagram: 'https://instagram.com/michal_typeofweb',
   linkedin: 'https://linkedin.com/in/mmiszczyszyn',
+  website: 'https://typeofweb.com',
 };
 
 export const SocialWidget = memo(() => {
