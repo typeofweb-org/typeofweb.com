@@ -46,6 +46,9 @@ interface AnchorNode extends HtmlNode {
 interface PNode extends HtmlNode {
   tagName: 'p';
 }
+interface ImgNode extends HtmlNode {
+  tagName: 'img';
+}
 interface MdxPNode extends MdxNode {
   name: 'p';
 }
@@ -84,6 +87,9 @@ function isAnchorNode(node: Node): node is AnchorNode {
 
 function isPNode(node: Node): node is PNode {
   return node && node.type === 'element' && (node as PNode).tagName === 'p';
+}
+function isImgNode(node: Node): node is ImgNode {
+  return node && node.type === 'element' && (node as ImgNode).tagName === 'img';
 }
 function isMdxPNode(node: Node): node is MdxPNode {
   return node && node.type === 'mdxJsxTextElement' && (node as MdxPNode).name === 'p';
@@ -137,6 +143,26 @@ function fixSvgPaths(): import('unified').Transformer {
     };
 
     return run(tree);
+  };
+}
+
+function imageAttributes(): import('unified').Transformer {
+  return function transformer(tree) {
+    visit(tree, isImgNode, (node: ImgNode) => {
+      const title = node.properties?.title;
+      if (typeof title === 'string' && title.startsWith('#')) {
+        const properties = Object.fromEntries(
+          title
+            .slice(1)
+            .split(';')
+            .map((p) => p.split('='))
+            .map(([key, val]) => [key.trim(), val.trim()])
+            .filter(([key]) => key),
+        );
+        node.properties = { ...node.properties, ...properties };
+        console.log(properties);
+      }
+    });
   };
 }
 
@@ -244,6 +270,9 @@ export function normalizeHeaders(): import('unified').Transformer {
     visit(tree, 'element', (node: HtmlNode) => {
       if (node.tagName.length === 2 && node.tagName.toLowerCase().startsWith('h')) {
         const level = parseInt(node.tagName.substr(1), 10);
+        if (isNaN(level)) {
+          return;
+        }
         const newLevel = desiredHeading - mostImportantHeading + level;
         node.tagName = `h${newLevel}`;
       }
@@ -281,6 +310,7 @@ const commonRehypePlugins = [
   RehypePrism,
   addDataToCodeBlocks,
   collapseParagraphs,
+  imageAttributes,
 ];
 
 export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {

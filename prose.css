@@ -3,6 +3,9 @@
     max-width: 75ch;
     color: theme('colors.gray.700');
   }
+  .prose > div:first-child > hr:first-child {
+    display: none;
+  }
   .prose [class~='lead'] {
     margin-top: 1.2em;
     margin-bottom: 1.2em;
@@ -295,8 +298,8 @@
   .prose h2 + *,
   .prose h3 + *,
   .prose h4 + *,
-  /* .prose hr + *, */
-  .prose > :first-child {
+  .prose > :first-child,
+  .prose > div:first-child > :first-of-type {
     margin-top: 0;
   }
   .prose thead th:first-child,

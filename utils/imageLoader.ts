@@ -17,38 +17,39 @@ const defaultLoader: ImageLoader = ({ src, width, quality }) => {
   return `${root}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
 };
 
-const CLOUDINARY_BASE = 'https://res.cloudinary.com/type-of-web/';
-
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/type-of-web/image/upload/';
 const cloudinaryLoader: ImageLoader = ({ src, width, quality }) => {
   /* #region(collapsed) legacy WordPress thumbnails */
-  const RESIZED_PATTERN = /(wp-content\/[^"']*)-(\d+)x(\d+)\.(png|jpg|jpeg|gif|webp)$/i;
-  const resizedMatches = RESIZED_PATTERN.exec(src);
-  if (resizedMatches) {
-    const [, path, thumbWidthStr, thumbHeightStr, extension] = resizedMatches;
-    const thumbWidthInt = parseInt(thumbWidthStr, 10);
-    const thumbHeightInt = parseInt(thumbHeightStr, 10);
-    const ratio = thumbWidthInt / thumbHeightInt;
+  {
+    const RESIZED_PATTERN = /(wp-content\/[^"']*)-(\d+)x(\d+)\.(png|jpg|jpeg|gif|webp)$/i;
+    const resizedMatches = RESIZED_PATTERN.exec(src);
+    if (resizedMatches) {
+      const [, path, thumbWidthStr, thumbHeightStr, extension] = resizedMatches;
+      const thumbWidthInt = parseInt(thumbWidthStr, 10);
+      const thumbHeightInt = parseInt(thumbHeightStr, 10);
+      const ratio = thumbWidthInt / thumbHeightInt;
 
-    // actual height and width differ from the thumbnail dimensions
-    // so we use the actual dimensions and apply the ratio
-    const calculatedWidth = width;
-    const calculatedHeight = Math.round(width / ratio);
+      // actual height and width differ from the thumbnail dimensions
+      // so we use the actual dimensions and apply the ratio
+      const calculatedWidth = width;
+      const calculatedHeight = Math.round(width / ratio);
 
-    const useThumbSize = calculatedWidth > thumbWidthInt || calculatedHeight > thumbHeightInt;
+      const useThumbSize = calculatedWidth > thumbWidthInt || calculatedHeight > thumbHeightInt;
 
-    const finalWidth = useThumbSize ? thumbWidthInt : calculatedWidth;
-    const finalHeight = useThumbSize ? thumbHeightInt : calculatedHeight;
+      const finalWidth = useThumbSize ? thumbWidthInt : calculatedWidth;
+      const finalHeight = useThumbSize ? thumbHeightInt : calculatedHeight;
 
-    const params =
-      [
-        'f_auto',
-        'g_auto',
-        'c_thumb',
-        'w_' + String(finalWidth),
-        'h_' + String(finalHeight),
-        'q_' + (quality ? quality.toString() : 'auto'),
-      ].join(',') + '/';
-    return `${CLOUDINARY_BASE}${params}${normalizeSrc(path + '.' + extension)}`;
+      const params =
+        [
+          'f_auto',
+          'g_auto',
+          'c_thumb',
+          'w_' + String(finalWidth),
+          'h_' + String(finalHeight),
+          'q_' + (quality ? quality.toString() : 'auto'),
+        ].join(',') + '/';
+      return `${CLOUDINARY_BASE}${params}${normalizeSrc(path + '.' + extension)}`;
+    }
   }
   /* #endregion */
 
