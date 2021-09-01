@@ -70,7 +70,7 @@ export const fetchCommentsCount = async (title: string) => {
     },
   });
 
-  const q = `repo:typeofweb/typeofweb.com category:"General" in:title ${title}`;
+  const q = `repo:typeofweb/typeofweb.com category:"Komentarze" in:title ${title}`;
 
   const response = await octokit.graphql<SearchDiscussionsQueryResult>(SEARCH_DISCUSSIONS_QUERY, {
     q,
