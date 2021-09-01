@@ -22,8 +22,6 @@ Wielu osobom wydaje się, że im stajemy się starsi, tym czas szybciej płynie
 
 ---
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML"></script>
-
 ## Gęstość zdarzeń a postrzeganie czasu
 
 Gdy rozmawiałem o tym z kilkoma osobami, twierdziły one po prostu, że jako dziecko miały znacznie więcej ciekawych i nowych doświadczeń, a dziś powiewa nudą. Wydaje się to intuicyjne, jednak nie do końca tłumaczy dlaczego wydarzenia z dzieciństwa miałyby wpływać na nasze postrzeganie upływu czasu w późniejszym wieku.

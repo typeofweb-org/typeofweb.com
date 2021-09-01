@@ -36,9 +36,6 @@ Często w algorytmicznych zadaniach rekrutacyjnych można natrafić na wymagania
 
 ---
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/extensions/TeX/mediawiki-texvc.js"></script>
-
 ## Przykład zadania ze złożonością obliczeniową
 
 Na pytanie o złożoność obliczeniową i złożoność pamięciową algorytmów można natrafić na portalach typu Codility. Zadają je też czasem na rozmowach rekrutacyjnych. „Proszę opisać, jaką złożoność obliczeniową ma Twój kod”, albo „Wykorzystany algorytm powinien mieć złożoność obliczeniową &Omicron;(n) i złożoność pamięciową &Omicron;(1)”. Co to znaczy?!
