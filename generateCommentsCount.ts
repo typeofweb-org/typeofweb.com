@@ -18,7 +18,7 @@ const run = async () => {
       const result: readonly [title: string, count: number] = [post.data.title, count];
       return result;
     },
-    { concurrency: 5 },
+    { concurrency: 1 },
   );
 
   const map = Object.fromEntries(results);
@@ -54,7 +54,7 @@ query searchDiscussions($q: String!) {
 `.trim();
 
 interface SearchDiscussionsQueryResult {
-  readonly searchDiscussions?: { readonly nodes?: readonly { readonly comments?: { readonly totalCount?: number } }[] };
+  readonly search?: { readonly nodes?: readonly { readonly comments?: { readonly totalCount?: number } }[] };
 }
 
 export const fetchCommentsCount = async (title: string) => {
@@ -76,5 +76,5 @@ export const fetchCommentsCount = async (title: string) => {
     q,
     fetch: global.fetch,
   });
-  return response?.searchDiscussions?.nodes?.[0]?.comments?.totalCount ?? 0;
+  return response?.search?.nodes?.[0]?.comments?.totalCount ?? 0;
 };
