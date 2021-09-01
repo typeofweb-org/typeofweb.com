@@ -26,7 +26,7 @@ async function generateFeed() {
     id: publicUrl,
     link: publicUrl,
     language: 'pl',
-    image: `${publicUrl}/logo.png`,
+    image: `${publicUrl}/apple-touch-icon.png`,
     favicon: `${publicUrl}/favicon.ico`,
     copyright: 'Type of Web',
     updated: new Date(posts[0]?.frontmatter.date ?? 0),

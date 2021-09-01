@@ -120,6 +120,9 @@ export const AppFooter = memo(() => {
           </a>
           !
         </p>
+        <p aria-hidden={true} className="mt-3 text-sm not-italic font-extralight">
+          {process.env.NEXT_PUBLIC_VERSION || ''}
+        </p>
         <p className="mt-3 text-lg not-italic font-bold">
           <Link href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss">
             <a target="_blank" rel="noopener noreferrer" className="inline-block mt-10">
