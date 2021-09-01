@@ -14,7 +14,7 @@ Siemanko, witam ~~w mojej kuchni~~ na moim blogu! Tak, typeofweb.com jest teraz 
 
 Jeśli znajdziesz jakiekolwiek błędy lub chcesz coś zmienić na stronie, śmiało otwórz PR na GitHubie.
 
-Jeśli chcesz napisać artykuł na bloga, również możesz to zrobić poprzez GitHuba lub korzystając z panelu dostępnego na [https://v2.typeofweb.com/admin](https://v2.typeofweb.com/admin).
+Jeśli chcesz napisać artykuł na bloga, również możesz to zrobić poprzez GitHuba lub korzystając z panelu dostępnego na [https://typeofweb.com/admin](https://typeofweb.com/admin).
 
 ## Stack technologiczny
 
