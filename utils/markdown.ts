@@ -8,6 +8,7 @@ import RehypeKatex from 'rehype-katex';
 import RehypeRaw from 'rehype-raw';
 import RehypeSlug from 'rehype-slug';
 import RehypeStringify from 'rehype-stringify';
+import RemarkFootnotes from 'remark-footnotes';
 import RemarkFrontmatter from 'remark-frontmatter';
 import RemarkGfm from 'remark-gfm';
 import RemarkMath from 'remark-math';
@@ -300,7 +301,7 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
   };
 }
 
-export const commonRemarkPlugins = [RemarkGfm, RemarkFrontmatter, RemarkMath];
+export const commonRemarkPlugins = [RemarkFrontmatter, RemarkMath, RemarkGfm, RemarkFootnotes];
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],
@@ -370,6 +371,7 @@ export function toHtml(
     return HastUtilToString.toString(result as Root);
   }
 
+  // @ts-ignore
   return processor.use(RehypeStringify).processSync(source);
 }
 // snake case to camel case

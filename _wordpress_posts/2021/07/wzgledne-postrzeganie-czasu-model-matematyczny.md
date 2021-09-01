@@ -34,7 +34,7 @@ Wiele osób sugeruje też, że czas, który postrzegamy jest relatywny w stosunk
 
 Lekko przeformułuję powyższe twierdzenie, aby było nam łatwiej spróbować zapisać je równaniem: **Postrzegana prędkość upływu okresu czasu maleje z wiekiem.**
 
-W publikacjach naukowych znalazłem sugestię, jakoby ta zależność była proporcją w stosunku do bezwzględnego upływu czasu (obiektywnie mierzonych np. lat)[1]. Jednakże, zgodnie z przyjętymi przez nas założeniami, **odczuwamy czas względny**, a nie obiektywny! Spróbujmy zapisać to przy pomocy matematyki.
+W publikacjach naukowych znalazłem sugestię, jakoby ta zależność była proporcją w stosunku do bezwzględnego upływu czasu (obiektywnie mierzonych np. lat)[^1]. Jednakże, zgodnie z przyjętymi przez nas założeniami, **odczuwamy czas względny**, a nie obiektywny! Spróbujmy zapisać to przy pomocy matematyki.
 
 Przyjmijmy, że czas obiektywny oznaczymy $O$, a czas subiektywny (postrzegany przez nas, relatywny) jako $S$.
 
@@ -187,10 +187,9 @@ Co potwierdza poprzednie twierdzenie.
 
 ## Podsumowanie
 
-Co ciekawe, powyższe teorie i wyliczenia wstępnie potwierdzono również eksperymentalnie[2]. A Wy ile swojego życia macie już za sobą w jednostkach relatywnych?
+Co ciekawe, powyższe teorie i wyliczenia wstępnie potwierdzono również eksperymentalnie[^2]. A Wy ile swojego życia macie już za sobą w jednostkach relatywnych?
 
 Czy podobał Wam się ten wpis? Dajcie znać w komentarzach.
 
-Źródła:
-1: Doob (1971), Janet (1877)
-2: Robert Lemlich – Subjective acceleration of time with aging, 1975
+[^1]: Doob (1971), Janet (1877)
+[^2]: Robert Lemlich – Subjective acceleration of time with aging, 1975

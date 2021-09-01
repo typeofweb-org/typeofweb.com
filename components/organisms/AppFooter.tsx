@@ -39,7 +39,7 @@ const sections: ReadonlyArray<{
 }> = [
   {
     title: 'Social',
-    items: social.map((s) => ({ ...s, url: myUrls[s.slug], fill: true })),
+    items: social.map((s) => ({ ...s, url: myUrls[s.slug], fill: s.slug !== 'website' })),
   },
   {
     title: 'Strony',

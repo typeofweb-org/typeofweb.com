@@ -11,12 +11,14 @@
     "ts-node-esm": "node --loader ts-node/esm --experimental-specifier-resolution=node",
     "feed": "yarn ts-node-esm generateFeed.ts",
     "comments-count": "yarn ts-node-esm generateCommentsCount.ts",
+    "migrate-wordpress-comments": "yarn ts-node-esm migrateCommentsToGitHubDiscussions.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
   "type": "commonjs",
   "dependencies": {
-    "@giscus/react": "github:typeofweb/giscus-component#c51eb0b0deba1bec6d0fa75f5d03a94da3e36802",
+    "@giscus/react": "github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
     "@octokit/auth-app": "3.6.0",
+    "@octokit/auth-token": "2.4.5",
     "@openlab/vercel-netlify-cms-github": "github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
     "@plaiceholder/next": "2.1.0",
     "@sentry/nextjs": "6.11.0",
@@ -41,6 +43,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-instantsearch-dom": "6.12.1",
+    "remark-footnotes": "4.0.1",
     "sharp": "0.29.0",
     "slugify": "1.6.0"
   },

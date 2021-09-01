@@ -124,3 +124,7 @@ main *:focus {
 .gsc-timeline {
   order: 4;
 }
+
+.gsc-reactions-button {
+  line-height: 1;
+}
