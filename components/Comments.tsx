@@ -15,7 +15,7 @@ export const Comments = ({ postTitle }: { readonly postTitle: string }) => {
         <Giscus
           repo="typeofweb/typeofweb.com"
           repoId="MDEwOlJlcG9zaXRvcnkzODkwOTc4NjI="
-          category="General"
+          category="Komentarze"
           categoryId="DIC_kwDOFzEphs4B-pdu"
           mapping="specific"
           term={postTitle}
