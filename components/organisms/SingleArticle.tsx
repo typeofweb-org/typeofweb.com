@@ -102,7 +102,7 @@ export const SingleArticle = memo(
           <GitHubEditLink filePath={filePath} />
           <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
             <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-              <meta itemProp="url" content="/wp-content/uploads/2020/04/logo_kwadrat11.png" />
+              <meta itemProp="url" content="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/04/logo_kwadrat11.png" />
             </span>
             <meta itemProp="name" content="Type of Web" />
           </span>

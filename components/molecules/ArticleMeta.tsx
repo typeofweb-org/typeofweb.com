@@ -101,7 +101,7 @@ export const ArticleMeta = memo<{
                   ', '
                 )}
               </Fragment>
-            ))}{' '}
+            ))}
             {mainCategory && (
               <span
                 className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
@@ -114,7 +114,7 @@ export const ArticleMeta = memo<{
                   </Link>
                 </LinkUnderlineEffect>
               </span>
-            )}{' '}
+            )}
             <span
               className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
                 isSmall ? 'text-base' : 'text-lg'
@@ -123,7 +123,7 @@ export const ArticleMeta = memo<{
               <LinkUnderlineEffect>
                 <Link href={href + '#comments'}>
                   <a>
-                    {commentsCount} {komentarzy(commentsCount)}
+                    {commentsCount || 'Brak'} {komentarzy(commentsCount)}
                   </a>
                 </Link>
               </LinkUnderlineEffect>

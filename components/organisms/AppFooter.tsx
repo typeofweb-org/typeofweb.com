@@ -80,10 +80,12 @@ export const AppFooter = memo(() => {
               {s.items.map(({ icon: Icon, label, slug, url, fill }) => {
                 return (
                   <li className="inline-flex items-center h-11" key={slug}>
-                    <a href={url} className="inline-flex flex-row items-center hover:text-green-700 transition-colors">
-                      {Icon && <Icon className={`mr-4 w-8 ${fill ? 'fill-current' : 'stroke-current'} `} />}
-                      {label}
-                    </a>
+                    <Link href={url}>
+                      <a className="inline-flex flex-row items-center hover:text-green-700 transition-colors">
+                        {Icon && <Icon className={`mr-4 w-8 ${fill ? 'fill-current' : 'stroke-current'} `} />}
+                        {label}
+                      </a>
+                    </Link>
                   </li>
                 );
               })}
@@ -120,7 +122,7 @@ export const AppFooter = memo(() => {
           </a>
           !
         </p>
-        <p aria-hidden={true} className="mt-3 text-sm not-italic font-extralight">
+        <p aria-hidden={true} className="mt-3 text-xs not-italic font-extralight">
           {process.env.NEXT_PUBLIC_VERSION || ''}
         </p>
         <p className="mt-3 text-lg not-italic font-bold">
