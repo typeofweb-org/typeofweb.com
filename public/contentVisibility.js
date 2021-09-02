@@ -5,8 +5,16 @@
   if (typeof window === 'undefined') {
     return;
   }
-  const test = document.createElement('div');
-  const isSupported = 'attributeStyleMap' in test && test.attributeStyleMap instanceof StylePropertyMap;
+  const isSupported = (() => {
+    try {
+      const test = document.createElement('div');
+      test.attributeStyleMap.set('contain-intrinsic-size', `10px 10px`);
+      return true;
+    } catch {
+      return false;
+    }
+  })();
+
   if (!isSupported) {
     return;
   }
