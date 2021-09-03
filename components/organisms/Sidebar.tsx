@@ -18,7 +18,7 @@ const SearchWidget = Dynamic<{}>(
   },
 );
 
-const searchClasses = `lg:min-w-[294px] fixed z-50 right-2 top-0 pl-5 lg:w-1/2 lg:static lg:z-auto lg:flex-1 lg:flex-shrink-0 lg:pl-0 lg:w-auto`;
+const searchClasses = `lg:min-w-[294px] lg:w-full fixed z-50 right-2 top-0 pl-5 lg:static lg:z-auto lg:flex-1 lg:flex-shrink-0 lg:pl-0`;
 const widgetClasses = `min-w-[294px] flex-1 flex-shrink-0`;
 
 const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
