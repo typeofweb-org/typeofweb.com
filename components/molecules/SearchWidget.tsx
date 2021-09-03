@@ -139,7 +139,7 @@ const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(
       <form className="relative flex items-center w-full max-h-screen" noValidate role="search">
         <Input
           onKeyDown={handleCustomSearchBoxKeyDown}
-          className="flex-1 mt-0 pl-8 w-full h-10 text-base border-transparent shadow-none sm:h-14 sm:text-3xl sm:text-lg lg:pl-16 lg:h-20"
+          className="flex-1 mt-0 pl-8 w-full h-10 text-base border-transparent shadow-none sm:h-14 sm:text-3xl lg:pl-16 lg:h-20"
           aria-autocomplete="list"
           autoComplete="off"
           autoCorrect="off"
