@@ -122,13 +122,13 @@ export const AppFooter = memo(() => {
           </a>
           !
         </p>
-        <p aria-hidden={true} className="mt-3 whitespace-nowrap text-xs not-italic font-extralight">
+        <p aria-hidden={true} className="mt-3 text-xs not-italic font-extralight">
           {(process.env.NEXT_PUBLIC_VERSION || 'VERCEL-ENV_VERCEL-GIT-COMMIT-REF_VERCEL-GIT-COMMIT-SHA')
             .split('_')
             .map((w) => (
-              <Fragment key={w}>
-                {w} <wbr />
-              </Fragment>
+              <span className="whitespace-nowrap" key={w}>
+                {w}
+              </span>
             ))}
         </p>
         <p className="mt-3 text-lg not-italic font-bold">
