@@ -97,6 +97,8 @@ main {
   --color-btn-primary-disabled-bg: var(--color-gray-300);
   --color-btn-primary-disabled-border: rgba(27, 31, 36, 0.15);
   --color-scale-gray-0: var(--color-gray-200);
+
+  padding-bottom: 5rem;
 }
 
 main *:focus {

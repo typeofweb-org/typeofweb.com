@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { memo } from 'react';
+import { memo, Fragment } from 'react';
 
 import ReactIcon from '../../images/react-icon.svg';
 import BadgeCheckIcon from '../../images/social/badge-check.svg';
@@ -112,8 +112,8 @@ export const AppFooter = memo(() => {
             lawyers.txt
           </a>
         </p>
-        <p className="mt-3 text-lg not-italic font-bold">
-          Znalazłeś/aś błąd na stronie?{' '}
+        <p className="mt-3 whitespace-nowrap text-lg not-italic font-bold">
+          Znalazłeś/aś błąd na stronie? <wbr />
           <a
             className="hover:text-green-700 underline transition-colors"
             href="https://github.com/typeofweb/typeofweb.com/issues/new"
@@ -122,8 +122,14 @@ export const AppFooter = memo(() => {
           </a>
           !
         </p>
-        <p aria-hidden={true} className="mt-3 text-xs not-italic font-extralight">
-          {process.env.NEXT_PUBLIC_VERSION || ''}
+        <p aria-hidden={true} className="mt-3 whitespace-nowrap text-xs not-italic font-extralight">
+          {(process.env.NEXT_PUBLIC_VERSION || 'VERCEL-ENV_VERCEL-GIT-COMMIT-REF_VERCEL-GIT-COMMIT-SHA')
+            .split('_')
+            .map((w) => (
+              <Fragment key={w}>
+                {w} <wbr />
+              </Fragment>
+            ))}
         </p>
         <p className="mt-3 text-lg not-italic font-bold">
           <Link href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss">

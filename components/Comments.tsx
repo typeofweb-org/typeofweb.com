@@ -9,7 +9,7 @@ const theme = `${host}/custom-comments-theme.css` as Theme;
 
 export const Comments = ({ postTitle }: { readonly postTitle: string }) => {
   return (
-    <div className="mt-10 px-7 bg-gray-100 sm:px-8 lg:px-12" id="comments">
+    <div className="mt-5 px-3 bg-gray-100 sm:mt-10 sm:px-8 lg:px-12" id="comments">
       <Giscus
         repo="typeofweb/typeofweb.com"
         repoId="MDEwOlJlcG9zaXRvcnkzODkwOTc4NjI="
