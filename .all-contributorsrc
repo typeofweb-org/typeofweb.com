@@ -32,6 +32,15 @@
       ]
     },
     {
+      "login": "mbaranovski",
+      "name": "Michal Baranowski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29602306?v=4",
+      "profile": "https://twitter.com/baranovskim",
+      "contributions": [
+        "blog"
+      ]
+    },
+    {
       "login": "wojtiku",
       "name": "Wojciech Urbański",
       "avatar_url": "https://avatars.githubusercontent.com/u/650828?v=4",
@@ -45,15 +54,6 @@
       "name": "matt08",
       "avatar_url": "https://avatars.githubusercontent.com/u/19648926?v=4",
       "profile": "https://github.com/matt08",
-      "contributions": [
-        "blog"
-      ]
-    },
-    {
-      "login": "mbaranovski",
-      "name": "Michal Baranowski",
-      "avatar_url": "https://avatars.githubusercontent.com/u/29602306?v=4",
-      "profile": "https://twitter.com/baranovskim",
       "contributions": [
         "blog"
       ]

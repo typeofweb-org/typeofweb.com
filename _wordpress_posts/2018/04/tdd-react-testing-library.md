@@ -315,8 +315,6 @@ Wystarczy, że zakomentujemy fragmenty kodu odpowiedzialne za mockowanie Axios'a
 
 W razie problemów kod całego projektu dostępny jest na [CodeSandbox](https://codesandbox.io/s/6yq6v1xk3).
 
-Zachęcam do zapoznania się z pełną dokumentacją `react-testing-library`. Mamy do dyspozycji więcej metod do znajdywania elementów w naszym wirtualnym DOM-ie, zwracania wartości tekstu z elementu itd. <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React Testing Library</a>.
+Zachęcam do zapoznania się z pełną dokumentacją `react-testing-library`. Mamy do dyspozycji więcej metod do znajdywania elementów w naszym wirtualnym DOM-ie, zwracania wartości tekstu z elementu itd.
 
 Mam nadzieję, że dzięki mnie czegoś się dzisiaj nauczyliście i wykorzystacie parę technik w Waszych projektach.
-
-_[Michał Baranowski](https://github.com/mbaranovski)_

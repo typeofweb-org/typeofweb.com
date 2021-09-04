@@ -46,11 +46,11 @@ Ogromne podziękowania dla ([emoji key](https://allcontributors.org/docs/en/emoj
   <tr>
     <td align="center"><a href="https://typeofweb.com/"><img src="https://avatars.githubusercontent.com/u/1338731?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michał Miszczyszyn</b></sub></a><br /><a href="#blog-mmiszy" title="Blogposts">📝</a> <a href="#business-mmiszy" title="Business development">💼</a> <a href="#design-mmiszy" title="Design">🎨</a> <a href="#maintenance-mmiszy" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/stefanova"><img src="https://avatars.githubusercontent.com/u/15745134?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Karolina Kreft</b></sub></a><br /><a href="#blog-stefanova" title="Blogposts">📝</a></td>
-    <td align="center"><a href="https://github.com/wojtiku"><img src="https://avatars.githubusercontent.com/u/650828?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Wojciech Urbański</b></sub></a><br /><a href="#blog-wojtiku" title="Blogposts">📝</a></td>
+    <td align="center"><a href="https://twitter.com/baranovskim"><img src="https://avatars.githubusercontent.com/u/29602306?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michal Baranowski</b></sub></a><br /><a href="#blog-mbaranovski" title="Blogposts">📝</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/wojtiku"><img src="https://avatars.githubusercontent.com/u/650828?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Wojciech Urbański</b></sub></a><br /><a href="#blog-wojtiku" title="Blogposts">📝</a></td>
     <td align="center"><a href="https://github.com/matt08"><img src="https://avatars.githubusercontent.com/u/19648926?v=4?s=60" width="60px;" alt=""/><br /><sub><b>matt08</b></sub></a><br /><a href="#blog-matt08" title="Blogposts">📝</a></td>
-    <td align="center"><a href="https://twitter.com/baranovskim"><img src="https://avatars.githubusercontent.com/u/29602306?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michal Baranowski</b></sub></a><br /><a href="#blog-mbaranovski" title="Blogposts">📝</a></td>
   </tr>
 </table>
 
