@@ -16,33 +16,22 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/1338731?v=4",
       "profile": "https://typeofweb.com/",
       "contributions": [
-        "question",
         "blog",
         "business",
-        "code",
-        "content",
         "design",
-        "eventOrganizing",
-        "example",
-        "financial",
-        "ideas",
-        "infra",
-        "maintenance",
-        "mentoring",
-        "talk",
-        "tutorial"
+        "maintenance"
       ]
     },
     {
-      "login": "matt08",
-      "name": "matt08",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19648926?v=4",
-      "profile": "https://github.com/matt08",
+      "login": "stefanova",
+      "name": "Karolina Kreft",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15745134?v=4",
+      "profile": "https://github.com/stefanova",
       "contributions": [
         "blog"
       ]
     }
   ],
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 3,
   "skipCi": true
 }
