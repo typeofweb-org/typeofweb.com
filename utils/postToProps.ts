@@ -92,7 +92,7 @@ interface PostPropsFrontmatterOnlyExcerpt {
   readonly permalink: string;
   readonly cover: {
     readonly img: { readonly height: number; readonly width: number; readonly src: string };
-    readonly blurDataURL: string;
+    readonly blurDataURL: string | null;
   } | null;
 }
 
@@ -131,7 +131,7 @@ export async function postToProps(
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
   const { base64: blurDataURL = null, img = null } = post.data.thumbnail
-    ? await getPlaiceholder(encodeURI(post.data.thumbnail.url))
+    ? await getPlaiceholder(post.data.thumbnail.url)
     : {};
 
   const mainCategory =
@@ -190,7 +190,7 @@ export async function postToProps(
         seo: post.data.seo ?? null,
         mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
-        cover: img && blurDataURL ? { img: { ...img, src: decodeURI(img.src) }, blurDataURL } : null,
+        cover: img ? { img: { ...img, src: img.src }, blurDataURL } : null,
       },
     };
     return result;
@@ -243,7 +243,7 @@ export async function postToProps(
         seo: post.data.seo ?? null,
         mainCategory: mainCategory ?? null,
         permalink: post.data.permalink,
-        cover: img && blurDataURL ? { img: { ...img, src: decodeURI(img.src) }, blurDataURL } : null,
+        cover: img && blurDataURL ? { img: { ...img, src: img.src }, blurDataURL } : null,
       },
     };
     return result;

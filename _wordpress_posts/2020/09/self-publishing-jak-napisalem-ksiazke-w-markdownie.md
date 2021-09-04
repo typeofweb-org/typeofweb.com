@@ -8,10 +8,9 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/09/self-publishing-typescript-na-powaznie.png
-  width: 1200
-  height: 630
+  url: https://res.cloudinary.com/type-of-web/image/upload/v1630769699/api_ovqzbd.png
+  width: 1920
+  height: 1005
 categories:
   - slug: inicjatywy
     name: Inicjatywy

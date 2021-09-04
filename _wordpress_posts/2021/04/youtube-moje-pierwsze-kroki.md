@@ -8,9 +8,9 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2021/04/typeofweb_youtube.png
-  width: 1200
-  height: 630
+  url: https://res.cloudinary.com/type-of-web/image/upload/v1630769075/api_se7dpn.png
+  width: 1920
+  height: 1005
 categories:
   - slug: inicjatywy
     name: Inicjatywy

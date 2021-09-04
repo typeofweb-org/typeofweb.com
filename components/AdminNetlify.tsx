@@ -176,7 +176,7 @@ function parsePart(part: string): string {
   if (IMG_PATTERN.test(p)) {
     const [src] = IMG_PATTERN.exec(p) ?? [];
     if (src) {
-      return `<img class=${Style.coverThumb} src="${encodeURI(src)}" alt="" />`;
+      return `<img class=${Style.coverThumb} src="${src}" alt="" />`;
     }
   }
   try {
