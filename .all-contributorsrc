@@ -32,7 +32,17 @@
         "talk",
         "tutorial"
       ]
+    },
+    {
+      "login": "matt08",
+      "name": "matt08",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19648926?v=4",
+      "profile": "https://github.com/matt08",
+      "contributions": [
+        "blog"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
