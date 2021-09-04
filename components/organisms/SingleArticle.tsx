@@ -15,9 +15,12 @@ import type { Author } from '../molecules/ArticleMeta';
 const RelatedArticles = Dynamic<{ readonly permalink: string }>(() =>
   import(/* webpackChunkName: "RelatedArticles" */ '../molecules/RelatedArticles').then((m) => m.RelatedArticles),
 );
-const Comments = Dynamic<{}>(() => import(/* webpackChunkName: "Comments" */ '../Comments').then((m) => m.Comments), {
-  ssr: false,
-});
+const Comments = Dynamic<{ readonly postTitle: string }>(
+  () => import(/* webpackChunkName: "Comments" */ '../Comments').then((m) => m.Comments),
+  {
+    ssr: false,
+  },
+);
 
 interface SingleArticleProps {
   readonly filePath: string;
@@ -99,14 +102,14 @@ export const SingleArticle = memo(
           <GitHubEditLink filePath={filePath} />
           <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
             <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-              <meta itemProp="url" content="/wp-content/uploads/2020/04/logo_kwadrat11.png" />
+              <meta itemProp="url" content="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/04/logo_kwadrat11.png" />
             </span>
             <meta itemProp="name" content="Type of Web" />
           </span>
           <link itemProp="mainEntityOfPage" href={href} />
           {index && <ArticleFooter authors={authors} />}
           {index && <RelatedArticles permalink={permalink} />}
-          <Comments />
+          <Comments postTitle={title} />
         </Card>
       );
     },

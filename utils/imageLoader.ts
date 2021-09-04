@@ -18,46 +18,50 @@ const defaultLoader: ImageLoader = ({ src, width, quality }) => {
 };
 
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/type-of-web/image/upload/';
-const cloudinaryLoader: ImageLoader = ({ src, width, quality }) => {
-  /* #region(collapsed) legacy WordPress thumbnails */
-  {
-    const RESIZED_PATTERN = /(wp-content\/[^"']*)-(\d+)x(\d+)\.(png|jpg|jpeg|gif|webp)$/i;
-    const resizedMatches = RESIZED_PATTERN.exec(src);
-    if (resizedMatches) {
-      const [, path, thumbWidthStr, thumbHeightStr, extension] = resizedMatches;
-      const thumbWidthInt = parseInt(thumbWidthStr, 10);
-      const thumbHeightInt = parseInt(thumbHeightStr, 10);
-      const ratio = thumbWidthInt / thumbHeightInt;
+const CLOUDINARY_BASE_FETCH = 'https://res.cloudinary.com/type-of-web/image/fetch/';
+const CLOUDINARY_BASE2 = 'https://res.cloudinary.com/type-of-web/';
+const cloudinaryLoader =
+  (base: string): ImageLoader =>
+  ({ src, width, quality }) => {
+    /* #region(collapsed) legacy WordPress thumbnails */
+    {
+      const RESIZED_PATTERN = /(wp-content\/[^"']*)-(\d+)x(\d+)\.(png|jpg|jpeg|gif|webp)$/i;
+      const resizedMatches = RESIZED_PATTERN.exec(src);
+      if (resizedMatches) {
+        const [, path, thumbWidthStr, thumbHeightStr, extension] = resizedMatches;
+        const thumbWidthInt = parseInt(thumbWidthStr, 10);
+        const thumbHeightInt = parseInt(thumbHeightStr, 10);
+        const ratio = thumbWidthInt / thumbHeightInt;
 
-      // actual height and width differ from the thumbnail dimensions
-      // so we use the actual dimensions and apply the ratio
-      const calculatedWidth = width;
-      const calculatedHeight = Math.round(width / ratio);
+        // actual height and width differ from the thumbnail dimensions
+        // so we use the actual dimensions and apply the ratio
+        const calculatedWidth = width;
+        const calculatedHeight = Math.round(width / ratio);
 
-      const useThumbSize = calculatedWidth > thumbWidthInt || calculatedHeight > thumbHeightInt;
+        const useThumbSize = calculatedWidth > thumbWidthInt || calculatedHeight > thumbHeightInt;
 
-      const finalWidth = useThumbSize ? thumbWidthInt : calculatedWidth;
-      const finalHeight = useThumbSize ? thumbHeightInt : calculatedHeight;
+        const finalWidth = useThumbSize ? thumbWidthInt : calculatedWidth;
+        const finalHeight = useThumbSize ? thumbHeightInt : calculatedHeight;
 
-      const params =
-        [
-          'f_auto',
-          'g_auto',
-          'c_thumb',
-          'w_' + String(finalWidth),
-          'h_' + String(finalHeight),
-          'q_' + (quality ? quality.toString() : 'auto'),
-        ].join(',') + '/';
-      return `${CLOUDINARY_BASE}${params}${normalizeSrc(path + '.' + extension)}`;
+        const params =
+          [
+            'f_auto',
+            'g_auto',
+            'c_thumb',
+            'w_' + String(finalWidth),
+            'h_' + String(finalHeight),
+            'q_' + (quality ? quality.toString() : 'auto'),
+          ].join(',') + '/';
+        return `${base}${params}${normalizeSrc(path + '.' + extension)}`;
+      }
     }
-  }
-  /* #endregion */
+    /* #endregion */
 
-  // Demo: https://res.cloudinary.com/demo/image/upload/w_300,c_limit,q_auto/turtles.jpg
-  const params =
-    ['f_auto', 'c_limit', 'w_' + String(width), 'q_' + (quality ? quality.toString() : 'auto')].join(',') + '/';
-  return `${CLOUDINARY_BASE}${params}${normalizeSrc(src)}`;
-};
+    // Demo: https://res.cloudinary.com/demo/image/upload/w_300,c_limit,q_auto/turtles.jpg
+    const params =
+      ['f_auto', 'c_limit', 'w_' + String(width), 'q_' + (quality ? quality.toString() : 'auto')].join(',') + '/';
+    return `${base}${params}${normalizeSrc(src)}`;
+  };
 
 export const typeofwebImageLoader: ImageLoader = ({ src, width, quality }) => {
   /**
@@ -105,22 +109,26 @@ export const typeofwebImageLoader: ImageLoader = ({ src, width, quality }) => {
     }
   }
 
-  if (src.startsWith(CLOUDINARY_BASE)) {
-    return cloudinaryLoader({
-      src: src.replace(CLOUDINARY_BASE, '/'),
+  const cloudinaryBase = [CLOUDINARY_BASE, CLOUDINARY_BASE2, CLOUDINARY_BASE_FETCH].find((base) =>
+    src.startsWith(base),
+  );
+
+  if (cloudinaryBase) {
+    return cloudinaryLoader(cloudinaryBase)({
+      src: src.replace(cloudinaryBase, '/'),
       width,
       quality,
     });
   } else if (src.startsWith('https://res.cloudinary.com/')) {
     return src;
   } else if (src.startsWith('https://typeofweb.com/wp-content/uploads/')) {
-    return cloudinaryLoader({
+    return cloudinaryLoader(CLOUDINARY_BASE)({
       src: src.replace('https://typeofweb.com/wp-content/uploads/', '/wp-content/uploads/'),
       width,
       quality,
     });
   } else if (src.startsWith('https://typeofweb.com/content/')) {
-    return cloudinaryLoader({
+    return cloudinaryLoader(CLOUDINARY_BASE)({
       src: src.replace('https://typeofweb.com/content/', '/content/'),
       width,
       quality,

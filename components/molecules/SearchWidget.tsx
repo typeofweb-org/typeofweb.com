@@ -139,7 +139,7 @@ const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(
       <form className="relative flex items-center w-full max-h-screen" noValidate role="search">
         <Input
           onKeyDown={handleCustomSearchBoxKeyDown}
-          className="flex-1 mt-0 pl-8 w-full h-14 text-lg border-transparent shadow-none sm:text-3xl lg:pl-16 lg:h-20"
+          className="flex-1 mt-0 pl-8 w-full h-10 text-base border-transparent shadow-none sm:h-14 sm:text-3xl lg:pl-16 lg:h-20"
           aria-autocomplete="list"
           autoComplete="off"
           autoCorrect="off"
@@ -162,7 +162,7 @@ const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(
           >
             <path d="M19.71,18.29,16,14.61A9,9,0,1,0,14.61,16l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,19.71,18.29ZM2,9a7,7,0,1,1,12,4.93h0s0,0,0,0A7,7,0,0,1,2,9Z"></path>
           </svg>
-          <div className="absolute z-10 right-3 top-1/2 -translate-y-1/2 lg:right-6">
+          <div className="sm:rigth-3 absolute z-10 right-1 top-1/2 -translate-y-1/2 lg:right-6">
             <PoweredBy />
           </div>
         </Input>
@@ -460,7 +460,7 @@ const SearchModal = ({ onCancel }: SearchModalProps) => {
             aria-expanded="true"
             aria-haspopup="listbox"
           >
-            <div className="flex flex-row rounded-lg shadow-md">
+            <div className="flex flex-row shadow-md sm:rounded-lg">
               <CustomSearchBox currentObjectID={currentObjectID} onChange={handleInputChange} />
               <div className="w-0.5 bg-gray-200" />
               <button

@@ -31,7 +31,7 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
   }
 
   return (
-    <section className="max-w-[75ch] mt-8 mx-auto pb-8 px-7 text-gray-900 sm:px-8 lg:px-12">
+    <section className="max-w-[75ch] mt-8 mx-auto px-7 text-gray-900 sm:px-8 lg:px-12">
       <h3 className="mb-4 text-xl font-bold">Może zainteresują Cię również…</h3>
       <ol className="flex flex-col gap-4 justify-between sm:flex-row sm:gap-2">
         {value.related.map((p) => {

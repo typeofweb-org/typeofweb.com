@@ -32,7 +32,7 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
         {authors.map((a) => {
           return (
             <div key={a.slug} itemScope itemType="http://schema.org/Person" itemProp="author">
-              <span className="flex items-center my-2">
+              <span className="flex flex-wrap items-center my-2 sm:flex-nowrap">
                 <span className={`inline-flex border-2 rounded-full border-gray-100 mr-4`}>
                   <Image
                     loader={typeofwebImageLoader}
@@ -52,7 +52,8 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
                 >
                   {a.displayName}
                 </span>
-                <span className="inline-flex -mt-2 ml-3">
+                <wbr />
+                <span className="inline-flex mb-2 ml-3 mt-3 sm:-mt-2 sm:mb-0">
                   {social
                     .filter((s) => s.slug in a && !!a[s.slug])
                     .map(({ icon: Icon, slug, label }) => (

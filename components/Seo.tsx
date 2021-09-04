@@ -11,8 +11,7 @@ import type { SeriesWithToC } from '../types';
 
 const SEP = ' • ';
 const MAX_TITLE_LEN = 50;
-// const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
-const robots = 'noindex, nofollow';
+const robots = `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`;
 
 interface SeoProps {
   readonly title?: string | null;
@@ -43,9 +42,9 @@ const jsonLd = {
         '@type': 'ImageObject',
         '@id': 'https://typeofweb.com/#logo',
         inLanguage: 'pl-PL',
-        url: '/wp-content/uploads/2018/12/typeofweb-facebook-image-sharer.png',
-        width: 1200,
-        height: 627,
+        url: defaultCover.img.src,
+        width: defaultCover.img.width,
+        height: defaultCover.img.height,
         caption: 'Type of Web',
       },
       image: { '@id': 'https://typeofweb.com/#logo' },
@@ -136,9 +135,9 @@ export const Seo = memo<SeoProps>(
 
         {cover && (
           <>
-            <meta property="og:image" content={cover.img.src} />
-            <meta property="og:image:width" content={cover.img.width.toString()} />
-            <meta property="og:image:height" content={cover.img.height.toString()} />
+            <meta key="og:image" property="og:image" content={cover.img.src} />
+            <meta key="og:image:width" property="og:image:width" content={cover.img.width.toString()} />
+            <meta key="og:image:height" property="og:image:height" content={cover.img.height.toString()} />
           </>
         )}
 

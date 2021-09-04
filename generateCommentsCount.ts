@@ -18,7 +18,7 @@ const run = async () => {
       const result: readonly [title: string, count: number] = [post.data.title, count];
       return result;
     },
-    { concurrency: 5 },
+    { concurrency: 1 },
   );
 
   const map = Object.fromEntries(results);
@@ -54,7 +54,7 @@ query searchDiscussions($q: String!) {
 `.trim();
 
 interface SearchDiscussionsQueryResult {
-  readonly searchDiscussions?: { readonly nodes?: readonly { readonly comments?: { readonly totalCount?: number } }[] };
+  readonly search?: { readonly nodes?: readonly { readonly comments?: { readonly totalCount?: number } }[] };
 }
 
 export const fetchCommentsCount = async (title: string) => {
@@ -70,11 +70,11 @@ export const fetchCommentsCount = async (title: string) => {
     },
   });
 
-  const q = `repo:typeofweb/typeofweb.com category:"General" in:title ${title}`;
+  const q = `repo:typeofweb/typeofweb.com category:"Komentarze" in:title ${title}`;
 
   const response = await octokit.graphql<SearchDiscussionsQueryResult>(SEARCH_DISCUSSIONS_QUERY, {
     q,
     fetch: global.fetch,
   });
-  return response?.searchDiscussions?.nodes?.[0]?.comments?.totalCount ?? 0;
+  return response?.search?.nodes?.[0]?.comments?.totalCount ?? 0;
 };
