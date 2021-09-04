@@ -18,6 +18,7 @@ const defaultLoader: ImageLoader = ({ src, width, quality }) => {
 };
 
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/type-of-web/image/upload/';
+const CLOUDINARY_BASE_FETCH = 'https://res.cloudinary.com/type-of-web/image/fetch/';
 const CLOUDINARY_BASE2 = 'https://res.cloudinary.com/type-of-web/';
 const cloudinaryLoader =
   (base: string): ImageLoader =>
@@ -108,15 +109,13 @@ export const typeofwebImageLoader: ImageLoader = ({ src, width, quality }) => {
     }
   }
 
-  if (src.startsWith(CLOUDINARY_BASE)) {
-    return cloudinaryLoader(CLOUDINARY_BASE)({
-      src: src.replace(CLOUDINARY_BASE, '/'),
-      width,
-      quality,
-    });
-  } else if (src.startsWith(CLOUDINARY_BASE2)) {
-    return cloudinaryLoader(CLOUDINARY_BASE2)({
-      src: src.replace(CLOUDINARY_BASE2, '/'),
+  const cloudinaryBase = [CLOUDINARY_BASE, CLOUDINARY_BASE2, CLOUDINARY_BASE_FETCH].find((base) =>
+    src.startsWith(base),
+  );
+
+  if (cloudinaryBase) {
+    return cloudinaryLoader(cloudinaryBase)({
+      src: src.replace(cloudinaryBase, '/'),
       width,
       quality,
     });
