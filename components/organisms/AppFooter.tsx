@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { memo, Fragment } from 'react';
+import { memo } from 'react';
 
 import ReactIcon from '../../images/react-icon.svg';
 import BadgeCheckIcon from '../../images/social/badge-check.svg';
