@@ -161,7 +161,6 @@ function imageAttributes(): import('unified').Transformer {
             .filter(([key]) => key),
         );
         node.properties = { ...node.properties, ...properties };
-        console.log(properties);
       }
     });
   };
