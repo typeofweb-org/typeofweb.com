@@ -126,8 +126,8 @@ export const AppFooter = memo(() => {
           {(process.env.NEXT_PUBLIC_VERSION || 'VERCEL-ENV_VERCEL-GIT-COMMIT-REF_VERCEL-GIT-COMMIT-SHA')
             .split('_')
             .map((w) => (
-              <span className="whitespace-nowrap" key={w}>
-                {w}
+              <span className="inline-block" key={w}>
+                {w}{' '}
               </span>
             ))}
         </p>
