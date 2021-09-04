@@ -30,6 +30,15 @@
       "contributions": [
         "blog"
       ]
+    },
+    {
+      "login": "wojtiku",
+      "name": "Wojciech Urbański",
+      "avatar_url": "https://avatars.githubusercontent.com/u/650828?v=4",
+      "profile": "https://github.com/wojtiku",
+      "contributions": [
+        "blog"
+      ]
     }
   ],
   "contributorsPerLine": 3,
