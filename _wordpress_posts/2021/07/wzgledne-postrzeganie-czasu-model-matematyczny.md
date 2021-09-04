@@ -8,10 +8,9 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2021/07/relatywny_wzgledny_subiektywny_czas_postrzeganie.png
-  width: 1200
-  height: 633
+  url: https://res.cloudinary.com/type-of-web/image/fetch/https%3A%2F%2Fog.typeofweb.com%2Fapi%3FoverlayColor%3D291B4A%26overlayOpacity%3D0.60%26text%3D**Dlaczego%2Bim%2Bjeste%25C5%259Bmy%2Bstarsi%2Btym%2Bszybciej%250Ap%25C5%2582ynie%2Bczas%253F**%2B%25F0%259F%2595%25B0%26fontSize%3D125%26gap%3D125
+  width: 1920
+  height: 1005
 categories:
   - slug: opinie
     name: Opinie

@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/03/praca-zdalna-narzędzia.png
+  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/03/praca-zdalna-narzedzia.png
   width: 1688
   height: 780
 categories:

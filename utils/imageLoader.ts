@@ -17,9 +17,9 @@ const defaultLoader: ImageLoader = ({ src, width, quality }) => {
   return `${root}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
 };
 
-const CLOUDINARY_BASE = 'https://res.cloudinary.com/type-of-web/image/upload/';
+const CLOUDINARY_BASE_UPLOAD = 'https://res.cloudinary.com/type-of-web/image/upload/';
 const CLOUDINARY_BASE_FETCH = 'https://res.cloudinary.com/type-of-web/image/fetch/';
-const CLOUDINARY_BASE2 = 'https://res.cloudinary.com/type-of-web/';
+const CLOUDINARY_BASE_FALLBACK = 'https://res.cloudinary.com/type-of-web/';
 const cloudinaryLoader =
   (base: string): ImageLoader =>
   ({ src, width, quality }) => {
@@ -109,7 +109,7 @@ export const typeofwebImageLoader: ImageLoader = ({ src, width, quality }) => {
     }
   }
 
-  const cloudinaryBase = [CLOUDINARY_BASE, CLOUDINARY_BASE2, CLOUDINARY_BASE_FETCH].find((base) =>
+  const cloudinaryBase = [CLOUDINARY_BASE_UPLOAD, CLOUDINARY_BASE_FETCH, CLOUDINARY_BASE_FALLBACK].find((base) =>
     src.startsWith(base),
   );
 
@@ -122,13 +122,13 @@ export const typeofwebImageLoader: ImageLoader = ({ src, width, quality }) => {
   } else if (src.startsWith('https://res.cloudinary.com/')) {
     return src;
   } else if (src.startsWith('https://typeofweb.com/wp-content/uploads/')) {
-    return cloudinaryLoader(CLOUDINARY_BASE)({
+    return cloudinaryLoader(CLOUDINARY_BASE_UPLOAD)({
       src: src.replace('https://typeofweb.com/wp-content/uploads/', '/wp-content/uploads/'),
       width,
       quality,
     });
   } else if (src.startsWith('https://typeofweb.com/content/')) {
-    return cloudinaryLoader(CLOUDINARY_BASE)({
+    return cloudinaryLoader(CLOUDINARY_BASE_UPLOAD)({
       src: src.replace('https://typeofweb.com/content/', '/content/'),
       width,
       quality,

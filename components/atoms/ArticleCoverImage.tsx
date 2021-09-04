@@ -6,7 +6,7 @@ import { typeofwebImageLoader } from '../../utils/imageLoader';
 import type { IGetPlaiceholderReturn } from 'plaiceholder';
 
 export type CoverPlaiceholder = {
-  readonly blurDataURL: string;
+  readonly blurDataURL: string | null;
   readonly img: IGetPlaiceholderReturn['img'];
   readonly preload: boolean;
 };
@@ -38,10 +38,10 @@ export const ArticleCoverImage = memo<{
         itemType="http://schema.org/ImageObject"
         className="duration-[10s] motion-safe:hover:scale-110 bg-gray-200 transition-transform ease-in hover:ease-out"
         alt=""
-        sizes="320px, (min-width: 320px) 640px, (min-width: 640px) 1280px, (min-width: 768px) 1536px, (min-width: 960px) 1920px"
+        sizes="320px, (min-width: 320px) 640px, (min-width: 640px) 1280px, (min-width: 844px) 1688px, (min-width: 768px) 1536px, (min-width: 960px) 1920px"
         {...layoutProps}
         placeholder="blur"
-        blurDataURL={cover.blurDataURL}
+        blurDataURL={cover.blurDataURL ?? undefined}
         {...(cover.preload ? { loading: 'eager', priority: true } : { loading: 'lazy', priority: false })}
       />
       <meta itemProp="width" content={String(cover.img.width)} />
