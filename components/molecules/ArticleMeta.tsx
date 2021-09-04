@@ -102,7 +102,7 @@ export const ArticleMeta = memo<{
                 )}
               </Fragment>
             ))}
-            <wbr />
+            &#8203;
             {mainCategory && (
               <span
                 className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
@@ -116,7 +116,7 @@ export const ArticleMeta = memo<{
                 </LinkUnderlineEffect>
               </span>
             )}
-            <wbr />
+            &#8203;
             <span
               className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
                 isSmall ? 'text-base' : 'text-lg'

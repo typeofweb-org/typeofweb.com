@@ -45,14 +45,13 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
                     unoptimized
                   />
                 </span>
-
                 <span
                   className={` text-gray-800 inline-block text-lg font-sans font-bold leading-none`}
                   itemProp="name"
                 >
                   {a.displayName}
                 </span>
-                <wbr />
+                &#8203;
                 <span className="inline-flex mb-2 ml-3 mt-3 sm:-mt-2 sm:mb-0">
                   {social
                     .filter((s) => s.slug in a && !!a[s.slug])

@@ -112,22 +112,24 @@ export const AppFooter = memo(() => {
             lawyers.txt
           </a>
         </p>
-        <p className="mt-3 whitespace-nowrap text-lg not-italic font-bold">
-          Znalazłeś/aś błąd na stronie? <wbr />
-          <a
-            className="hover:text-green-700 underline transition-colors"
-            href="https://github.com/typeofweb/typeofweb.com/issues/new"
-          >
-            Otwórz issue na GitHubie
-          </a>
-          !
+        <p className="mt-3 text-lg not-italic font-bold">
+          <span className="inline-block">Znalazłeś/aś błąd na stronie?</span>{' '}
+          <span className="inline-block">
+            <a
+              className="hover:text-green-700 underline transition-colors"
+              href="https://github.com/typeofweb/typeofweb.com/issues/new"
+            >
+              Otwórz issue na GitHubie
+            </a>
+            !
+          </span>
         </p>
         <p aria-hidden={true} className="mt-3 text-xs not-italic font-extralight">
           {(process.env.NEXT_PUBLIC_VERSION || 'VERCEL-ENV_VERCEL-GIT-COMMIT-REF_VERCEL-GIT-COMMIT-SHA')
             .split('_')
             .map((w) => (
-              <span className="whitespace-nowrap" key={w}>
-                {w}
+              <span className="inline-block" key={w}>
+                {w}{' '}
               </span>
             ))}
         </p>

@@ -59,8 +59,8 @@ const config = withBundleAnalyzer(
 config.images = {
   loader: 'custom',
   domains: ['v2.typeofweb.com', 'typeofweb.com', 'secure.gravatar.com', 'res.cloudinary.com'],
-  deviceSizes: [320, 375, 640, 750, 768, 1024, 1280, 1688, 1536, 1920],
-  imageSizes: [320, 375, 640, 750, 768, 1200, 1280, 1688, 1536, 1920],
+  deviceSizes: [320, 768, 1024, 1280, 1536],
+  imageSizes: [640, 1280, 1536],
 };
 
 config.excludeDefaultMomentLocales = true;

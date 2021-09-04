@@ -11,7 +11,7 @@ export const trimExcerpt = (excerpt: string) => {
  * For legacy reasons, WordPress tags are also included.
  * @todo remove this when legacy support is removed
  */
-const more = /^---$|<!--\s*more\s*-->|\{\s*\/_\s*more\s*_\/\s*\}|\{\s*\/\*\s*more\s*\*\/\s*\}/m;
+const more = /^\*{3,}$|^---$|^\<hr\s*\/?\>$|<!--\s*more\s*-->|\{\s*\/_\s*more\s*_\/\s*\}|\{\s*\/\*\s*more\s*\*\/\s*\}/m;
 
 /**
  * Alternatively, split content when either one is first met:

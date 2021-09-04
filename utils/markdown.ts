@@ -345,12 +345,15 @@ export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSer
   );
 }
 
-export function toHtml(source: string, options: { excerpt: false }): import('vfile').VFile;
+export function toHtml(
+  source: string,
+  options: { excerpt: false },
+): ReturnType<import('unified').Processor['processSync']>;
 export function toHtml(source: string, options: { excerpt: true }): string;
 export function toHtml(
   source: string,
   options: { excerpt: boolean } = { excerpt: false },
-): string | import('vfile').VFile {
+): string | ReturnType<import('unified').Processor['processSync']> {
   let processor: Unified.Processor = Unified.unified().use(RemarkParse);
   commonRemarkPlugins.forEach((plugin) => (processor = processor.use(plugin)));
   processor = processor.use(RemarkRehype, { allowDangerousHtml: true }).use(RehypeRaw);

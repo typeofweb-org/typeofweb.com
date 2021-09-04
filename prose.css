@@ -250,11 +250,13 @@
   }
   .prose figure,
   .prose img,
+  .prose .img,
   .prose video {
     margin-top: 2em;
     margin-bottom: 2em;
   }
-  .prose img {
+  .prose img,
+  .prose .img {
     @apply hover:shadow-md shadow-sm transition-shadow;
   }
   .prose .newsletter-form {
@@ -359,7 +361,8 @@
   .prose,
   .prose-xl {
     & figure {
-      & img {
+      & img,
+      & .img {
         @apply mb-0;
       }
       & figcaption p {
