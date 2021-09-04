@@ -1,0 +1,38 @@
+{
+  "projectName": "typeofweb.com",
+  "projectOwner": "typeofweb",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 60,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "mmiszy",
+      "name": "Michał Miszczyszyn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1338731?v=4",
+      "profile": "https://typeofweb.com/",
+      "contributions": [
+        "question",
+        "blog",
+        "business",
+        "code",
+        "content",
+        "design",
+        "eventOrganizing",
+        "example",
+        "financial",
+        "ideas",
+        "infra",
+        "maintenance",
+        "mentoring",
+        "talk",
+        "tutorial"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
