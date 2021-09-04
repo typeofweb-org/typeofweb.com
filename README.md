@@ -1,7 +1,7 @@
 # typeofweb.com (beta)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCR4qSQa8JFh6zeR5Idvnewg?label=YouTube&style=social)](https://youtube.com/c/typeofweb)
@@ -45,6 +45,7 @@ Ogromne podziękowania dla ([emoji key](https://allcontributors.org/docs/en/emoj
 <table>
   <tr>
     <td align="center"><a href="https://typeofweb.com/"><img src="https://avatars.githubusercontent.com/u/1338731?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michał Miszczyszyn</b></sub></a><br /><a href="#question-mmiszy" title="Answering Questions">💬</a> <a href="#blog-mmiszy" title="Blogposts">📝</a> <a href="#business-mmiszy" title="Business development">💼</a> <a href="https://github.com/typeofweb/typeofweb.com/commits?author=mmiszy" title="Code">💻</a> <a href="#content-mmiszy" title="Content">🖋</a> <a href="#design-mmiszy" title="Design">🎨</a> <a href="#eventOrganizing-mmiszy" title="Event Organizing">📋</a> <a href="#example-mmiszy" title="Examples">💡</a> <a href="#financial-mmiszy" title="Financial">💵</a> <a href="#ideas-mmiszy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-mmiszy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-mmiszy" title="Maintenance">🚧</a> <a href="#mentoring-mmiszy" title="Mentoring">🧑‍🏫</a> <a href="#talk-mmiszy" title="Talks">📢</a> <a href="#tutorial-mmiszy" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://github.com/matt08"><img src="https://avatars.githubusercontent.com/u/19648926?v=4?s=60" width="60px;" alt=""/><br /><sub><b>matt08</b></sub></a><br /><a href="#blog-matt08" title="Blogposts">📝</a></td>
   </tr>
 </table>
 
