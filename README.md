@@ -1,7 +1,7 @@
 # typeofweb.com (beta)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCR4qSQa8JFh6zeR5Idvnewg?label=YouTube&style=social)](https://youtube.com/c/typeofweb)
@@ -51,6 +51,7 @@ Ogromne podziękowania dla ([emoji key](https://allcontributors.org/docs/en/emoj
   <tr>
     <td align="center"><a href="https://github.com/wojtiku"><img src="https://avatars.githubusercontent.com/u/650828?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Wojciech Urbański</b></sub></a><br /><a href="#blog-wojtiku" title="Blogposts">📝</a></td>
     <td align="center"><a href="https://github.com/matt08"><img src="https://avatars.githubusercontent.com/u/19648926?v=4?s=60" width="60px;" alt=""/><br /><sub><b>matt08</b></sub></a><br /><a href="#blog-matt08" title="Blogposts">📝</a></td>
+    <td align="center"><a href="http://codewars.com/users/mstosio"><img src="https://avatars.githubusercontent.com/u/10117225?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michal</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3Amstosio" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
