@@ -299,12 +299,7 @@ const items: readonly Item[] = [
       { kind: 'event', value: `https://www.facebook.com/events/471484796247910/` },
     ],
   },
-].sort((a, b) => {
-  if (a.stillOn === b.stillOn) {
-    return b.date.localeCompare(a.date);
-  }
-  return Number(a.stillOn) - Number(b.stillOn);
-});
+];
 
 const kindToLabelIcon: Record<
   Kind,
@@ -353,66 +348,74 @@ interface Link {
 export const Timeline = () => {
   return (
     <ul className="m-0 p-2 bg-gray-100 rounded-xl sm:p-5 xl:p-6">
-      {items.map((item) => (
-        <li key={item.date + item.title} className="group">
-          <article className="relative grid items-start px-3 py-4 hover:bg-white rounded-xl overflow-hidden transition-colors sm:px-5 md:grid-cols-12 xl:grid-cols-10 xl:px-6">
-            <h3 className="mb-1 ml-9 text-gray-900 font-bold md:col-span-8 md:col-start-5 md:ml-0 xl:col-span-6 xl:col-start-5">
-              {item.title}
-            </h3>
-            <time
-              dateTime="2021-06-17T19:00:00.000Z"
-              className="flex row-start-1 items-center mb-1 font-medium md:col-span-4 md:col-start-1 md:row-end-3 md:mb-0"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="mr-6 w-5 h-5 text-gray-300 group-hover:text-pink-500 overflow-visible transition-colors"
+      {items
+        .slice()
+        .sort((a, b) => {
+          if (a.stillOn === b.stillOn) {
+            return b.date.localeCompare(a.date);
+          }
+          return Number(a.stillOn) - Number(b.stillOn);
+        })
+        .map((item) => (
+          <li key={item.date + item.title} className="group">
+            <article className="relative grid items-start px-3 py-4 hover:bg-white rounded-xl overflow-hidden transition-colors sm:px-5 md:grid-cols-12 xl:grid-cols-10 xl:px-6">
+              <h3 className="mb-1 ml-9 text-gray-900 font-bold md:col-span-8 md:col-start-5 md:ml-0 xl:col-span-6 xl:col-start-5">
+                {item.title}
+              </h3>
+              <time
+                dateTime="2021-06-17T19:00:00.000Z"
+                className="flex row-start-1 items-center mb-1 font-medium md:col-span-4 md:col-start-1 md:row-end-3 md:mb-0"
               >
-                <circle cx="12" cy="12" r="6" fill="currentColor" />
-                <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="2" />
-                <path
-                  d="M 12 -6 V -64"
-                  fill="none"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  className="group-first:hidden text-gray-200"
-                />
-                <path
-                  d="M 12 30 V 500"
-                  fill="none"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  className="group-last:hidden text-gray-200"
-                />
-              </svg>
-              {formatDate(item.date)}
-              {item.stillOn ? ` –${NBSP}dziś` : ''}
-            </time>
-            {item.subtitle && (
-              <p className="ml-9 text-gray-900 font-serif text-base md:col-span-8 md:col-start-5 md:ml-0 xl:col-span-6">
-                {item.subtitle}
-              </p>
-            )}
-            {item.links.length > 0 && (
-              <ul className="flex flex-row gap-4 ml-9 md:col-span-8 md:col-start-5 md:ml-0 xl:col-span-6 xl:col-start-5">
-                {item.links.map((link) => {
-                  const Icon = kindToLabelIcon[link.kind].icon;
-                  return (
-                    <li key={link.value}>
-                      <a
-                        href={link.value}
-                        className="inline-flex gap-1 items-center mt-1 hover:text-blue-500 text-gray-900 font-sans text-base transition-colors"
-                      >
-                        <Icon className="-ml-0.5 w-5" />
-                        <span className="mt-1">{kindToLabelIcon[link.kind].label}</span>
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </article>
-        </li>
-      ))}
+                <svg
+                  viewBox="0 0 24 24"
+                  className="mr-6 w-5 h-5 text-gray-300 group-hover:text-pink-500 overflow-visible transition-colors"
+                >
+                  <circle cx="12" cy="12" r="6" fill="currentColor" />
+                  <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="2" />
+                  <path
+                    d="M 12 -6 V -64"
+                    fill="none"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="group-first:hidden text-gray-200"
+                  />
+                  <path
+                    d="M 12 30 V 500"
+                    fill="none"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="group-last:hidden text-gray-200"
+                  />
+                </svg>
+                {formatDate(item.date)}
+                {item.stillOn ? ` –${NBSP}dziś` : ''}
+              </time>
+              {item.subtitle && (
+                <p className="ml-9 text-gray-900 font-serif text-base md:col-span-8 md:col-start-5 md:ml-0 xl:col-span-6">
+                  {item.subtitle}
+                </p>
+              )}
+              {item.links.length > 0 && (
+                <ul className="flex flex-row gap-4 ml-9 md:col-span-8 md:col-start-5 md:ml-0 xl:col-span-6 xl:col-start-5">
+                  {item.links.map((link) => {
+                    const Icon = kindToLabelIcon[link.kind].icon;
+                    return (
+                      <li key={link.value}>
+                        <a
+                          href={link.value}
+                          className="inline-flex gap-1 items-center mt-1 hover:text-blue-500 text-gray-900 font-sans text-base transition-colors"
+                        >
+                          <Icon className="-ml-0.5 w-5" />
+                          <span className="mt-1">{kindToLabelIcon[link.kind].label}</span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </article>
+          </li>
+        ))}
     </ul>
   );
 };
