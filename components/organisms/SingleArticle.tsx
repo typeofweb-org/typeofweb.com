@@ -7,6 +7,7 @@ import { Card } from '../atoms/Card';
 import { GitHubEditLink } from '../atoms/GitHubEditLink';
 import { ArticleFooter } from '../molecules/ArticleFooter';
 import { ArticleMeta } from '../molecules/ArticleMeta';
+import { Timeline } from '../molecules/Timeline';
 
 import type { SeriesWithToC } from '../../types';
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
@@ -99,10 +100,14 @@ export const SingleArticle = memo(
           <div itemProp="articleBody" className="prose lg:prose-xl mx-auto pb-2 px-7 sm:px-8 lg:px-12">
             {content}
           </div>
+          {permalink === 'wspolpraca' && <Timeline />}
           <GitHubEditLink filePath={filePath} />
           <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
             <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-              <meta itemProp="url" content="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/04/logo_kwadrat11.png" />
+              <meta
+                itemProp="url"
+                content="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/04/logo_kwadrat11.png"
+              />
             </span>
             <meta itemProp="name" content="Type of Web" />
           </span>

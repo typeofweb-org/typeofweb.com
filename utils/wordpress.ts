@@ -197,7 +197,7 @@ export async function getExcerptAndContent(
       isMdx: true as const,
     };
   } catch (err) {
-    // console.log(post.data.permalink, err);
+    console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
       content: toHtml(content, { excerpt: false }).toString('utf-8'),

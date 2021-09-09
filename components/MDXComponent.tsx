@@ -8,6 +8,7 @@ import { origin, host } from '../constants';
 import { typeofwebImageLoader } from '../utils/imageLoader';
 
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
+import { Timeline } from './molecules/Timeline';
 
 import type { CodepenWidgetProps } from './molecules/CodepenWidget';
 
@@ -104,4 +105,5 @@ const components = {
   FacebookPageWidget,
   CodepenWidget,
   Gallery,
+  Timeline,
 };
