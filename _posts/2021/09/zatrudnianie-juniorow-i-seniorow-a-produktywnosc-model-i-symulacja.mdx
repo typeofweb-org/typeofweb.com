@@ -1,0 +1,110 @@
+---
+title: Zatrudnianie juniorów i seniorów a produktywność – model i symulacja
+permalink: zatrudnianie-juniorow-i-seniorow-a-produktywnosc-model-i-symulacja
+type: post
+date: 2021-09-19T15:57:42.569Z
+authors:
+  - michal-miszczyszyn
+category: opinie
+thumbnail:
+  url: https://res.cloudinary.com/type-of-web/image/fetch/https%3A%2F%2Fog.typeofweb.com%2Fapi%3FoverlayColor%3D4e2d53%26overlayOpacity%3D0.6%26text%3D**Kt%25C3%25B3ry%2Bhosting%2Bjest%2Bnajszybszy%253F**%250A%25F0%259F%258F%258E%25F0%259F%2592%25A8%2B%2B9%2Brzeczy%252C%2Bkt%25C3%25B3re%2Bmaj%25C4%2585%250Anajwi%25C4%2599ksze%2Bznaczenie%26fontSize%3D110%26gap%3D110&
+  width: 1920
+  height: 1005
+---
+
+Jakiś czas temu w czeluściach Internetu wpadłem na niezwykle ciekawy artykuł, który mówił o zatrudnianiu juniorów do zespołu i ich wpływie na wydajność pracy. Przedstawiał kilka prostych symulacji, z których wprost wynikało… no właśnie, co z nich wynikało? Czy „opłaca się” zatrudniać osoby bez doświadczenia? Na końcu artykułu interaktywna symulacja!
+
+---
+
+Artykuł, o którym wspominam to [Productivity in the age of hypergrowth](https://lethain.com/productivity-in-the-age-of-hypergrowth/) i gorąco go polecam! **Tldr: zatrudnianie zbyt wielu mało doświadczonych osób prowadzi do spadku wydajności całej firmy.** To w zasadzie intuicyjne, jeśli się nad tym zastanowić: juniorzy nie tylko nie przynoszą wiele wartości, ale jeszcze zabierają czas bardziej doświadczonym osobom.
+
+## Zatrudnianie juniorów
+
+Nie zrozumcie mnie źle – absolutnie nie postuluję, aby nie zatrudniać osób bez doświadczenia. To przynosi inne, często znacznie ważniejsze benefity, które odczuwalne są długofalowo, np. lojalność. Ale to temat na inny artykuł! Tutaj chciałem pomówić _stricte_ na temat mojej próby rozwinięcia treści powyższego artykułu o kolejne wyliczenia i bardziej rozbudowaną symulację. Zaczynajmy!
+
+## Sami seniorzy
+
+Zacznijmy od prostego przypadku, w którym nasza firma składa się wyłącznie z seniorów:
+
+1. Świat składa się wyłącznie z Seniorów.
+2. Senior pracuje z wydajnością `B`.
+3. Seniorzy sobie nie przeszkadzają, a więc `n` seniorów daje nam wydajność `nB`.
+
+Oczywiście, to jest ogromne uproszczenie, ale już z niego płynie ciekawy wniosek. Otóż **zatrudnienie każdej nowej osoby podnosi ogólną wydajność firmy o co raz mniejszy procent.** Spójrzmy na dane w tabelce:
+
+| liczba seniorów | suma wydajności | przyrost wydajności |
+| --------------- | --------------- | ------------------- |
+| 1               | 1B              | –                   |
+| 2               | 2B              | +100%               |
+| 3               | 3B              | +50%                |
+| 4               | 4B              | +33%                |
+| 5               | 5B              | +25%                |
+| 6               | 6B              | +20%                |
+| 7               | 7B              | +17%                |
+| 8               | 8B              | +14%                |
+| 9               | 9B              | +13%                |
+| 10              | 10B             | +11%                |
+
+**wykres**
+
+Wynika z tego wprost, że **zatrudniając dwudziestą osobę do pracy mamy znacznie mniejszą motywację, niż zatrudniając drugą**.
+
+## Komunikacja zawodzi
+
+Gdyby było tak, jak opisałem w akapicie wyżej, to byłoby _cacy_. Niestety w rzeczywistości bezwzględny przyrost wydajności nie pozostaje stały z każdą nowo zatrudnioną osobą, ale wręcz maleje! Jest to doskonale opisane przez [prawo malejących przychodów](https://en.wikipedia.org/wiki/Diminishing_returns) znane wszystkim osobom zajmującym się ekonomią.
+
+Czemu tak się dzieje? Można wysnuć tezę, że komunikacja i dzielenie się wiedzą pomiędzy członkami zespołu po prostu kosztuje. Jeśli mam przekazać informacje jednej osobie, to zajmie mi to mniej czasu, niż rozmowa z trzema osobami. Warto też zwrócić uwagę, że potrzeba komunikowania się rośnie wykładniczo[^1]!
+
+Spróbujmy uwzględnić ten fakt w naszych wyliczeniach. Załóżmy, że komunikacja pomiędzy dwoma seniorami kosztuje jakiś ułamek `d` z wydajności `B`. Oto nasze nowe założenia:
+
+1. Świat składa się wyłącznie z Seniorów.
+2. Senior pracuje z wydajnością `B`.
+3. Seniorzy sobie przeszkadzają, a więc `n` seniorów daje nam wydajność `nB - (n - 1)^2*dB`.
+
+| liczba seniorów | suma wydajności |
+| --------------- | --------------- |
+| 1               | 1B              |
+| 2               | 2B - dB         |
+| 3               | 3B - 4dB        |
+| 4               | 4B - 9dB        |
+| 5               | 5B - 16dB       |
+| 6               | 6B - 25dB       |
+| 7               | 7B - 36dB       |
+| 8               | 8B - 49dB       |
+| 9               | 9B - 64dB       |
+| 10              | 10B - 81dB      |
+
+Teraz wszystko zależy od obranej stałej `d`. Myślę, że optymistycznie będzie przyjąć, że każda nowa osoba spowalnia naszą pracę o ok. 10%
+
+**wykres**
+
+Kształt krzywej w zasadzie się nie zmienia, ale możemy wyciągnąć już wniosek na temat maksymalnej liczby osób w zespole: **Przy tych założeniach, w zespole nie powinno się znaleźć nigdy więcej niż 6 osób.**
+
+## Wchodzą juniorzy
+
+Załóżmy teraz, że oprócz seniorów, w naszym teamie pojawiają się również juniorzy. To na pewno krzywdzący stereotyp, ale na potrzeby uproszczeń przyjmijmy, że juniorzy absolutnie nic nie potrafią 😢 Założenia:
+
+1. Świat składa się z Seniorów i Juniorów.
+2. Senior pracuje z wydajnością `B`.
+3. Junior pracuje z jakąś wydajnością, ale też zabiera czas seniorom, którzy muszą go szkolić, a więc efektywnie jego wydajności to `-jB`.
+4. Seniorzy sobie przeszkadzają, a juniorzy sobie nie przeszkadzają, a więc `n` seniorów i `x` juniorów w zespole daje nam wydajność `nB - (n - 1)^2*dB - xjB`.
+
+A więc zmienia się w zasadzie niewiele, tylko sumaryczna wydajność maleje proporcjonalnie do liczby juniorów w zespole.
+
+## Juniorzy awansują, ludzie odchodzą, przychodzą nowi…
+
+Idąc dalej, możemy się pokusić o przyjęcie kolejnych założeń:
+
+1. Świat składa się z Seniorów i Juniorów.
+2. Senior pracuje z wydajnością `B`.
+3. Junior pracuje z jakąś wydajnością, ale też zabiera czas seniorom, którzy muszą go szkolić, a więc efektywnie jego wydajności to `-jB`.
+4. Seniorzy sobie przeszkadzają ze współczynnikiem `d`, a juniorzy sobie nie przeszkadzają, a więc `n` seniorów i `x` juniorów w zespole daje nam wydajność `nB - (n - 1)^2*dB - xjB`.
+5. Juniorzy stają się seniorami po czasie `ta` z prawdopodobieństwem `Pa`.
+6. Nowy junior przybywa do firmy po czasie `tx` z prawdopodobieństwem `Px`.
+7. Senior odchodzi z firmy po czasie `tl` z prawdopodobieństwem `Pl`.
+
+Wszystkie te parametry możecie wprowadzić w poniższej symulacji:
+
+<DemoSimulation />
+
+[^1]: Przynajmniej do pewnego poziomu. Przy większych organizacjach. mamy takie koncepcje jak osoby na różnych szczeblach i delegowanie zadań.

@@ -7,6 +7,7 @@ import { memo } from 'react';
 import { origin, host } from '../constants';
 import { typeofwebImageLoader } from '../utils/imageLoader';
 
+import { DemoSimulation } from './SeniorsJuniorsDemoSimulationAsync';
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
 import { Timeline } from './molecules/Timeline';
 
@@ -106,4 +107,5 @@ const components = {
   CodepenWidget,
   Gallery,
   Timeline,
+  DemoSimulation,
 };
