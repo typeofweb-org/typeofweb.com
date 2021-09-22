@@ -329,6 +329,7 @@ details
 dev
 development
 developmentu
+devfaq
 devopsem
 didn
 digitalnomad
@@ -494,6 +495,7 @@ frontendów
 frontendowa
 frontendowców
 frontendowcy
+frontendowych
 frontendu
 frontendzie
 frontrow
@@ -949,6 +951,7 @@ plurals
 pluralsight
 podwidoków
 polish
+polskifrontend
 pomocniczną
 ponce
 popełniamymi

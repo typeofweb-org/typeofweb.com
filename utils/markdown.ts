@@ -10,7 +10,7 @@ import RehypeSlug from 'rehype-slug';
 import RehypeStringify from 'rehype-stringify';
 import RemarkFootnotes from 'remark-footnotes';
 import RemarkFrontmatter from 'remark-frontmatter';
-// import RemarkGfm from 'remark-gfm';
+import RemarkGfm from 'remark-gfm';
 import RemarkMath from 'remark-math';
 import RemarkParse from 'remark-parse';
 import RemarkRehype from 'remark-rehype';
@@ -300,12 +300,7 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
   };
 }
 
-export const commonRemarkPlugins = [
-  RemarkFrontmatter,
-  RemarkMath,
-  // RemarkGfm,
-  RemarkFootnotes,
-];
+export const commonRemarkPlugins = [RemarkFrontmatter, RemarkMath, RemarkGfm, RemarkFootnotes];
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],

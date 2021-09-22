@@ -5,6 +5,7 @@ const withTM = require('next-transpile-modules')([
   'bail',
   'is-plain-obj',
   'trough',
+  'd3-shape',
 ]);
 const { withSentryConfig } = require('@sentry/nextjs');
 const { withPlaiceholder } = require('@plaiceholder/next');
