@@ -7,7 +7,7 @@ authors:
   - michal-miszczyszyn
 category: opinie
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/image/fetch/https%3A%2F%2Fog.typeofweb.com%2Fapi%3FoverlayColor%3D4e2d53%26overlayOpacity%3D0.6%26text%3D**Kt%25C3%25B3ry%2Bhosting%2Bjest%2Bnajszybszy%253F**%250A%25F0%259F%258F%258E%25F0%259F%2592%25A8%2B%2B9%2Brzeczy%252C%2Bkt%25C3%25B3re%2Bmaj%25C4%2585%250Anajwi%25C4%2599ksze%2Bznaczenie%26fontSize%3D110%26gap%3D110&
+  url: https://res.cloudinary.com/type-of-web/image/fetch/https%3A%2F%2Fog.typeofweb.com%2Fapi%3Ftext%3D**Czy%2Bwarto%2Bzatrudnia%25C4%2587%2Bjunior%25C3%25B3w%253F**%250A%25F0%259F%25A4%2593%2BModel%2Bi%2Bsymulacja%2Bproduktywno%25C5%259Bci%2Bzespo%25C5%2582%25C3%25B3w%2B%25F0%259F%2593%2588%26overlayColor%3D4b271b%26overlayOpacity%3D0.60
   width: 1920
   height: 1005
 ---
@@ -27,25 +27,25 @@ Nie zrozumcie mnie źle – absolutnie nie postuluję, aby nie zatrudniać osób
 Zacznijmy od prostego przypadku, w którym nasza firma składa się wyłącznie z seniorów:
 
 1. Świat składa się wyłącznie z Seniorów.
-2. Senior pracuje z wydajnością `B`.
-3. Seniorzy sobie nie przeszkadzają, a więc `n` seniorów daje nam wydajność `nB`.
+2. Senior pracuje z wydajnością $ B $.
+3. Seniorzy sobie nie przeszkadzają, a więc $ n $ seniorów daje nam wydajność $ nB $.
 
 Oczywiście, to jest ogromne uproszczenie, ale już z niego płynie ciekawy wniosek. Otóż **zatrudnienie każdej nowej osoby podnosi ogólną wydajność firmy o co raz mniejszy procent.** Spójrzmy na dane w tabelce:
 
 | liczba seniorów | suma wydajności | przyrost wydajności |
-| --------------- | --------------- | ------------------- |
-| 1               | 1B              | –                   |
-| 2               | 2B              | +100%               |
-| 3               | 3B              | +50%                |
-| 4               | 4B              | +33%                |
-| 5               | 5B              | +25%                |
-| 6               | 6B              | +20%                |
-| 7               | 7B              | +17%                |
-| 8               | 8B              | +14%                |
-| 9               | 9B              | +13%                |
-| 10              | 10B             | +11%                |
+| :-------------: | :-------------: | :-----------------: |
+|        1        |       1B        |          –          |
+|        2        |       2B        |        +100%        |
+|        3        |       3B        |        +50%         |
+|        4        |       4B        |        +33%         |
+|        5        |       5B        |        +25%         |
+|        6        |       6B        |        +20%         |
+|        7        |       7B        |        +17%         |
+|        8        |       8B        |        +14%         |
+|        9        |       9B        |        +13%         |
+|       10        |       10B       |        +11%         |
 
-**wykres**
+![](https://res.cloudinary.com/type-of-web/image/upload/v1632301578/Screenshot_2021-09-22_at_11.05.27_bbjg7x.png '#width=600;height=370;title=')
 
 Wynika z tego wprost, że **zatrudniając dwudziestą osobę do pracy mamy znacznie mniejszą motywację, niż zatrudniając drugą**.
 
@@ -55,28 +55,28 @@ Gdyby było tak, jak opisałem w akapicie wyżej, to byłoby _cacy_. Niestety w 
 
 Czemu tak się dzieje? Można wysnuć tezę, że komunikacja i dzielenie się wiedzą pomiędzy członkami zespołu po prostu kosztuje. Jeśli mam przekazać informacje jednej osobie, to zajmie mi to mniej czasu, niż rozmowa z trzema osobami. Warto też zwrócić uwagę, że potrzeba komunikowania się rośnie wykładniczo[^1]!
 
-Spróbujmy uwzględnić ten fakt w naszych wyliczeniach. Załóżmy, że komunikacja pomiędzy dwoma seniorami kosztuje jakiś ułamek `d` z wydajności `B`. Oto nasze nowe założenia:
+Spróbujmy uwzględnić ten fakt w naszych wyliczeniach. Załóżmy, że komunikacja pomiędzy dwoma seniorami kosztuje jakiś ułamek $ d $ z wydajności $ B $. Oto nasze nowe założenia:
 
 1. Świat składa się wyłącznie z Seniorów.
-2. Senior pracuje z wydajnością `B`.
-3. Seniorzy sobie przeszkadzają, a więc `n` seniorów daje nam wydajność `nB - (n - 1)^2*dB`.
+2. Senior pracuje z wydajnością $ B $.
+3. Seniorzy sobie przeszkadzają, a więc $ n $ seniorów daje nam wydajność $$ nB-(n-1)^2\cdot dB $$.
 
 | liczba seniorów | suma wydajności |
-| --------------- | --------------- |
-| 1               | 1B              |
-| 2               | 2B - dB         |
-| 3               | 3B - 4dB        |
-| 4               | 4B - 9dB        |
-| 5               | 5B - 16dB       |
-| 6               | 6B - 25dB       |
-| 7               | 7B - 36dB       |
-| 8               | 8B - 49dB       |
-| 9               | 9B - 64dB       |
-| 10              | 10B - 81dB      |
+| :-------------: | :-------------: |
+|        1        |       1B        |
+|        2        |     2B - dB     |
+|        3        |    3B - 4dB     |
+|        4        |    4B - 9dB     |
+|        5        |    5B - 16dB    |
+|        6        |    6B - 25dB    |
+|        7        |    7B - 36dB    |
+|        8        |    8B - 49dB    |
+|        9        |    9B - 64dB    |
+|       10        |   10B - 81dB    |
 
-Teraz wszystko zależy od obranej stałej `d`. Myślę, że optymistycznie będzie przyjąć, że każda nowa osoba spowalnia naszą pracę o ok. 10%
+Teraz wszystko zależy od obranej stałej $ d $. Myślę, że optymistycznie będzie przyjąć, że każda nowa osoba spowalnia naszą pracę o ok. 10%
 
-**wykres**
+![](https://res.cloudinary.com/type-of-web/image/upload/v1632301732/Screenshot_2021-09-22_at_11.08.41_fdwc8a.png '#width=600;height=370;title=')
 
 Kształt krzywej w zasadzie się nie zmienia, ale możemy wyciągnąć już wniosek na temat maksymalnej liczby osób w zespole: **Przy tych założeniach, w zespole nie powinno się znaleźć nigdy więcej niż 6 osób.**
 
@@ -85,9 +85,9 @@ Kształt krzywej w zasadzie się nie zmienia, ale możemy wyciągnąć już wnio
 Załóżmy teraz, że oprócz seniorów, w naszym teamie pojawiają się również juniorzy. To na pewno krzywdzący stereotyp, ale na potrzeby uproszczeń przyjmijmy, że juniorzy absolutnie nic nie potrafią 😢 Założenia:
 
 1. Świat składa się z Seniorów i Juniorów.
-2. Senior pracuje z wydajnością `B`.
-3. Junior pracuje z jakąś wydajnością, ale też zabiera czas seniorom, którzy muszą go szkolić, a więc efektywnie jego wydajności to `-jB`.
-4. Seniorzy sobie przeszkadzają, a juniorzy sobie nie przeszkadzają, a więc `n` seniorów i `x` juniorów w zespole daje nam wydajność `nB - (n - 1)^2*dB - xjB`.
+2. Senior pracuje z wydajnością $ B $.
+3. Junior pracuje z jakąś wydajnością, ale też zabiera czas seniorom, którzy muszą go szkolić, a więc efektywnie jego wydajności to $ -jB $.
+4. Seniorzy sobie przeszkadzają, a juniorzy sobie nie przeszkadzają, a więc $ n $ seniorów i $ x $ juniorów w zespole daje nam wydajność $$ nB-(n-1)^2\cdot dB-xjB $$.
 
 A więc zmienia się w zasadzie niewiele, tylko sumaryczna wydajność maleje proporcjonalnie do liczby juniorów w zespole.
 
@@ -96,12 +96,12 @@ A więc zmienia się w zasadzie niewiele, tylko sumaryczna wydajność maleje pr
 Idąc dalej, możemy się pokusić o przyjęcie kolejnych założeń:
 
 1. Świat składa się z Seniorów i Juniorów.
-2. Senior pracuje z wydajnością `B`.
-3. Junior pracuje z jakąś wydajnością, ale też zabiera czas seniorom, którzy muszą go szkolić, a więc efektywnie jego wydajności to `-jB`.
-4. Seniorzy sobie przeszkadzają ze współczynnikiem `d`, a juniorzy sobie nie przeszkadzają, a więc `n` seniorów i `x` juniorów w zespole daje nam wydajność `nB - (n - 1)^2*dB - xjB`.
-5. Juniorzy stają się seniorami po czasie `ta` z prawdopodobieństwem `Pa`.
-6. Nowy junior przybywa do firmy po czasie `tx` z prawdopodobieństwem `Px`.
-7. Senior odchodzi z firmy po czasie `tl` z prawdopodobieństwem `Pl`.
+2. Senior pracuje z wydajnością $ B $.
+3. Junior pracuje z jakąś wydajnością, ale też zabiera czas seniorom, którzy muszą go szkolić, a więc efektywnie jego wydajności to $ -jB $.
+4. Seniorzy sobie przeszkadzają ze współczynnikiem $ d $, a juniorzy sobie nie przeszkadzają, a więc $ n $ seniorów i $ x $ juniorów w zespole daje nam wydajność $$ nB-(n-1)^2\cdot dB-xjB $$.
+5. Juniorzy stają się seniorami po czasie $ t_a $ z prawdopodobieństwem $ P_a $.
+6. Nowy junior przybywa do firmy po czasie $ t_x $ z prawdopodobieństwem $ P_x $.
+7. Senior odchodzi z firmy po czasie $ t_l $ z prawdopodobieństwem $ P_l $.
 
 Wszystkie te parametry możecie wprowadzić w poniższej symulacji:
 

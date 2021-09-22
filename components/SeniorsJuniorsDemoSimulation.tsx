@@ -36,61 +36,98 @@ export const DemoSimulation = () => {
   const simulationRef = useRef<{ toggle(): void } | null>(null);
 
   return (
-    <div>
-      <h1>Demo Simulation</h1>
-      <div className="grid gap-4 grid-cols-2 items-end">
-        <div className="col-span-1">
-          <Input type="number" onInput={(e) => setn(e.currentTarget.valueAsNumber)} value={n}>
+    <div className="mt-8">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setIsRunningKey(Math.random());
+        }}
+      >
+        <div className="grid gap-4 grid-cols-2 items-end">
+          <Input
+            type="number"
+            min={0}
+            step={1}
+            pattern="\d+"
+            onInput={(e) => setn(e.currentTarget.valueAsNumber)}
+            value={n}
+          >
             Początkowa liczba seniorów
           </Input>
-        </div>
-        <div className="col-span-1">
-          <Input type="number" onInput={(e) => setx(e.currentTarget.valueAsNumber)} value={x}>
+          <Input
+            type="number"
+            min={0}
+            step={1}
+            pattern="\d+"
+            onInput={(e) => setx(e.currentTarget.valueAsNumber)}
+            value={x}
+          >
             Początkowa liczba juniorów
           </Input>
+          <Input type="number" min={0} step={0.001} onInput={(e) => setd(e.currentTarget.valueAsNumber)} value={d}>
+            Współczynnik przeszkadzania sobie seniorów
+          </Input>
+          <Input type="number" min={0} step={0.001} onInput={(e) => setj(e.currentTarget.valueAsNumber)} value={j}>
+            Współczynnik uczenia się juniorów
+          </Input>
+          <Input type="number" min={1} step={1} onInput={(e) => setta(e.currentTarget.valueAsNumber)} value={ta}>
+            Czas do awansu
+          </Input>
+          <Input
+            type="number"
+            min={0}
+            step={0.001}
+            max={1}
+            onInput={(e) => setPa(e.currentTarget.valueAsNumber)}
+            value={Pa}
+          >
+            Prawdopodobieństwo awansu
+          </Input>
+          <Input type="number" min={1} step={1} onInput={(e) => settx(e.currentTarget.valueAsNumber)} value={tx}>
+            Czas do zatrudnienia juniora
+          </Input>
+          <Input
+            type="number"
+            min={0}
+            step={0.001}
+            max={1}
+            onInput={(e) => setPx(e.currentTarget.valueAsNumber)}
+            value={Px}
+          >
+            Prawdopodobieństwo zatrudnienia juniora
+          </Input>
+          <Input type="number" min={1} step={1} onInput={(e) => settl(e.currentTarget.valueAsNumber)} value={tl}>
+            Czas do odejścia seniora
+          </Input>
+          <Input
+            type="number"
+            min={0}
+            step={0.001}
+            max={1}
+            onInput={(e) => setPl(e.currentTarget.valueAsNumber)}
+            value={Pl}
+          >
+            Prawdopodobieństwo odejścia seniora
+          </Input>
         </div>
-        <Input type="number" onInput={(e) => setd(e.currentTarget.valueAsNumber)} value={d}>
-          Współczynnik przeszkadzania sobie seniorów
-        </Input>
-        <Input type="number" onInput={(e) => setj(e.currentTarget.valueAsNumber)} value={j}>
-          Współczynnik uczenia się juniorów
-        </Input>
-        <Input type="number" onInput={(e) => setta(e.currentTarget.valueAsNumber)} value={ta}>
-          Czas do awansu
-        </Input>
-        <Input type="number" onInput={(e) => setPa(e.currentTarget.valueAsNumber)} value={Pa}>
-          Prawdopodobieństwo awansu
-        </Input>
-        <Input type="number" onInput={(e) => settx(e.currentTarget.valueAsNumber)} value={tx}>
-          Czas do zatrudnienia juniora
-        </Input>
-        <Input type="number" onInput={(e) => setPx(e.currentTarget.valueAsNumber)} value={Px}>
-          Prawdopodobieństwo zatrudnienia juniora
-        </Input>
-        <Input type="number" onInput={(e) => settl(e.currentTarget.valueAsNumber)} value={tl}>
-          Czas do odejścia seniora
-        </Input>
-        <Input type="number" onInput={(e) => setPl(e.currentTarget.valueAsNumber)} value={Pl}>
-          Prawdopodobieństwo odejścia seniora
-        </Input>
-      </div>
-      <div className="flex flex-row gap-2 my-6">
-        <Button type="button" className="px-5" onClick={() => setIsRunningKey(Math.random())}>
-          Start
-        </Button>
-        <Button type="button" className="px-5" onClick={() => setIsRunningKey(0)}>
-          Stop
-        </Button>
-        <Button
-          type="button"
-          className="px-5"
-          onClick={() => {
-            simulationRef.current?.toggle();
-          }}
-        >
-          Pause
-        </Button>
-      </div>
+        <div className="flex flex-row gap-2 my-6">
+          <Button type="submit" className="px-5">
+            Start
+          </Button>
+          <Button type="button" className="px-5" onClick={() => setIsRunningKey(0)}>
+            Stop
+          </Button>
+          <Button
+            type="button"
+            className="px-5"
+            onClick={() => {
+              simulationRef.current?.toggle();
+            }}
+          >
+            Pause
+          </Button>
+        </div>
+      </form>
       {isRunningKey > 0 && (
         <Simulation
           ref={simulationRef}
@@ -168,10 +205,26 @@ const Simulation = forwardRef<{ toggle(): void }, { readonly initialVariables: V
         index: -1,
       }).index + 1;
 
-    const xZero = datas.reduceRight(
-      (acc, d, index) => (acc !== -1 ? acc : d.efficiency <= 0 && index > 1 ? index : -1),
-      -1,
-    );
+    const xZero =
+      datas.reduceRight(
+        (acc, d, index) => {
+          if (index < 2) {
+            return acc;
+          }
+
+          if (acc.index !== -1) {
+            return acc;
+          }
+          if (d.efficiency < 0) {
+            return { ...acc, wasNegative: true };
+          }
+          if (d.efficiency >= 0 && acc.wasNegative) {
+            return { ...acc, index };
+          }
+          return acc;
+        },
+        { wasNegative: false, index: -1 },
+      ).index + 1;
 
     return (
       <ResponsiveContainer aspect={16 / 9}>
@@ -187,12 +240,12 @@ const Simulation = forwardRef<{ toggle(): void }, { readonly initialVariables: V
           <Line dot={{ r: 0 }} name="l. seniorów" dataKey="n" stroke="blue" />
           <Line dot={{ r: 0 }} name="l. juniorów" dataKey="x" stroke="green" />
           <Line dot={{ r: 0 }} name="wydajność zespołu" strokeWidth={3} dataKey="eff" stroke="red" />
-          <XAxis dataKey="k" tickCount={3} type="number" />
-          <YAxis domain={['dataMin', 'dataMax + 10']} tickCount={3} type="number" />
+          <XAxis dataKey="k" tickCount={3} type="number" min={0} />
+          <YAxis domain={['dataMin', 'dataMax + 10']} tickCount={3} type="number" min={0} />
           <Tooltip labelFormatter={(v: number) => `Miesiąc ${v}`} />
-          <ReferenceLine y={0} label="" stroke="red" strokeDasharray="3 3" />
+          <ReferenceLine y={0} label="" stroke="gray" strokeDasharray="3 3" />
           <ReferenceLine x={xMax} label="max" stroke="green" strokeDasharray="3 3" />
-          <ReferenceLine x={xZero} label="critical" stroke="black" strokeDasharray="3 3" />
+          {xZero !== 0 && <ReferenceLine x={xZero} label="critical" stroke="red" strokeDasharray="6 3" />}
         </LineChart>
       </ResponsiveContainer>
     );
@@ -202,8 +255,6 @@ const Simulation = forwardRef<{ toggle(): void }, { readonly initialVariables: V
 function tick(time: number, variables: Variables): { readonly variables: Variables; readonly efficiency: number } {
   let { n, x } = variables;
   const { d, j, ta, Pa, tx, Px, tl, Pl } = variables;
-
-  const efficiency = n - (n - 1) ** 2 * d - x * j;
 
   if (time % ta === 0 && x > 0 && Math.random() < Pa) {
     n++;
@@ -215,6 +266,9 @@ function tick(time: number, variables: Variables): { readonly variables: Variabl
   if (time % tl === 0 && n > 0 && Math.random() < Pl) {
     n--;
   }
+
+  const efficiency = n - (n - 1) ** 2 * d - x * j;
+
   return {
     variables: { n, x, d, j, ta, Pa, tx, Px, tl, Pl },
     efficiency,

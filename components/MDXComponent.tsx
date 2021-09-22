@@ -51,7 +51,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
     // const isMedium = props.className?.includes('size-medium') ?? false;
 
     return (
-      <div className={props.className}>
+      <div className={`${props.className ?? ''} img`}>
         <Image
           {...props}
           width={width}
@@ -61,7 +61,6 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           loading="lazy"
           layout="responsive"
           loader={typeofwebImageLoader}
-          className="img"
         />
       </div>
     );
