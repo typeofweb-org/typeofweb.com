@@ -1,626 +1,635 @@
 {
-  "grupy-facebook-front-end-developer": [
-    "24-blogi-ktore-musi-sledzic-javascript-developer",
-    "weekly-javascript-challenge-reaktywacja",
-    "wprowadzenie-do-kursu-vue-js-od-podstaw"
-  ],
-  "react-hooks-a-zadania-do-api": [
-    "komunikacja-z-api-w-react-js",
-    "wady-react-hooks",
-    "projektowanie-komponentow-presentational-container-components"
-  ],
-  "bylem-na-reactiveconf-2018": [
-    "reactive-conference-2019-relacja",
-    "react-amsterdam-najgorsza-konferencja",
-    "krotka-relacja-z-reactiveconf-2017"
-  ],
-  "dowiedz-sie-ile-zarabiaja-gwiazdy-frontendu": [
-    "praca-zdalna-rekrutacja-do-toptal",
-    "praca-zdalna-narzedzia",
-    "jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiace"
-  ],
-  "weekly-javascript-challenge-3": [
-    "weekly-javascript-challenge-2",
-    "poprawne-bindowanie-funkcji-react-js",
-    "weekly-javascript-challenge-1"
-  ],
-  "react-amsterdam-najgorsza-konferencja": [
-    "bylem-na-reactiveconf-2018",
-    "poradnik-dla-organizatorow-konferencji",
-    "reactive-conference-2019-relacja"
-  ],
-  "hey-com-rewolucyjny-email-od-tworcow-basecampa": [
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie",
-    "praca-zdalna-narzedzia",
-    "praca-zdalna-rekrutacja-do-toptal"
-  ],
-  "dyrektywy-warunkowe-w-vue-js": [
-    "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind",
-    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
-    "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on"
-  ],
-  "kilka-faktow-na-temat-promise": ["asynchronicznosc-w-redux-redux-thunk", "map-i-reduce-w-js", "observable-rxjs"],
-  "typescript-czesc-1": [
-    "kurs-typescript-czesc-3",
-    "typescript-na-serwerze",
-    "conditional-types-typescript-typy-warunkowe"
-  ],
-  "podsumowanie-roku-2019": [
-    "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie",
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie",
-    "podsumowanie-roku-2018-i-plany-na-2019"
-  ],
-  "hackowanie-css": [
-    "innerhtml-furtka-do-xss",
-    "nowy-font-na-githubie-font-systemowy",
-    "lokalny-serwer-http-proste-sposoby-na-problemy-z-file"
-  ],
-  "x-team-opis-rekrutacja-opinia": [
-    "praca-zdalna-rekrutacja-do-toptal",
-    "praca-zdalna-obalamy-mity",
-    "nowa-inicjatywa-recenzje-portali-praca-zdalna"
-  ],
-  "wprowadzenie-kurs-react-js": [
-    "poznaj-react-js",
-    "tworzenie-aplikacji-react-js-dzieki-create-react-app",
-    "komunikacja-z-api-w-react-js"
-  ],
-  "map-i-reduce-w-js": ["kilka-faktow-na-temat-promise", "observable-rxjs", "weekly-javascript-challenge-2"],
-  "usuwanie-bialych-paskow-safari-iphone-x": ["hackowanie-css", "twoja-strona-powinna-byc-na-https", "angularjs-i-seo"],
-  "react-hooks-useeffect-efekty-uboczne-w-komponencie": [
-    "react-hooks-wprowadzenie-i-motywacja",
-    "wady-react-hooks",
-    "react-hooks-a-zadania-do-api"
-  ],
-  "nowa-inicjatywa-recenzje-portali-praca-zdalna": [
-    "praca-zdalna-obalamy-mity",
-    "praca-zdalna-narzedzia",
-    "praca-zdalna-rekrutacja-do-toptal"
-  ],
-  "state-react-js-2": [
-    "state-react-js",
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
-    "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse"
-  ],
-  "tworzymy-wlasne-dependency-injection-w-typescript": [
-    "wlasne-komponenty-w-angular-2",
-    "podzial-komponenty-react-js",
-    "klasy-jako-komponenty-react-js"
-  ],
-  "weekly-javascript-challenge-2": [
-    "this-js-kontekst-wywolania-funkcji",
-    "weekly-javascript-challenge-1",
-    "weekly-javascript-challenge-3"
-  ],
-  "kurs-typescript-czesc-3": [
-    "typescript-czesc-1",
-    "typescript-infer-i-typy-warunkowe",
-    "conditional-types-typescript-typy-warunkowe"
-  ],
-  "asi-czyli-automatyczne-wstawianie-srednikow": [
-    "dobry-czytelny-czysty-kod",
-    "weekly-javascript-challenge-1",
-    "weekly-javascript-challenge-2"
-  ],
-  "kiedy-uzywac-state-a-kiedy-redux": [
-    "projektowanie-komponentow-presentational-container-components",
-    "react-redux-kurs-wprowadzenie-i-podstawy",
-    "leniwe-ladowanie-komponentow-w-react-dzieki-import"
-  ],
-  "wzorce-projektowe-dependency-injection": [
-    "dependency-injection-w-angular-2",
-    "tworzymy-wlasne-dependency-injection-w-typescript",
-    "komunikacja-pomiedzy-kontrolerami"
-  ],
-  "meet-js-summit-2017-kulisami": [
-    "meet-js-summit-2017-nasze-podsumowanie",
-    "call-for-proposals-na-meet-js-summit-2018",
-    "podsumowanie-roku-2018-i-plany-na-2019"
-  ],
-  "struktura-aplikacji-angularjs-czesc-2-komponenty": [
-    "wlasne-komponenty-w-angular-2",
-    "wstep-do-angular-2",
-    "komunikacja-pomiedzy-komponentami-w-angular-2"
-  ],
-  "self-publishing-jak-napisalem-ksiazke-w-markdownie": [
-    "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie",
-    "self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie",
-    "podsumowanie-roku-2019"
-  ],
-  "self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie": [
-    "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie",
-    "self-publishing-jak-napisalem-ksiazke-w-markdownie",
-    "podsumowanie-roku-2019"
-  ],
-  "twoja-strona-powinna-byc-na-https": [
-    "lokalny-serwer-http-proste-sposoby-na-problemy-z-file",
-    "hackowanie-css",
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie"
-  ],
-  "interakcja-komponentami-react-js": [
-    "pierwszy-komponent-react-js",
-    "klasy-jako-komponenty-react-js",
-    "formularze-react-js-kontrolowane-komponenty"
-  ],
-  "odmiana-rzeczownikow-przy-liczebnikach-jezyku-polskim": [
-    "weekly-javascript-challenge-1",
-    "klasy-jako-komponenty-react-js",
-    "props-czyli-atrybuty-react-js"
-  ],
-  "observable-rxjs": [
-    "interakcja-komponentami-react-js",
-    "poprawne-bindowanie-funkcji-react-js",
-    "asynchronicznosc-w-redux-redux-thunk"
-  ],
-  "payment-request-api-platnosci-przegladarce": [
-    "komunikacja-z-api-w-react-js",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api",
-    "react-hooks-a-zadania-do-api"
-  ],
-  "praca-zdalna-obalamy-mity": [
-    "nowa-inicjatywa-recenzje-portali-praca-zdalna",
-    "praca-zdalna-narzedzia",
-    "praca-zdalna-rekrutacja-do-toptal"
-  ],
-  "pierwszy-komponent-react-js": [
-    "props-czyli-atrybuty-react-js",
-    "klasy-jako-komponenty-react-js",
-    "podzial-komponenty-react-js"
-  ],
-  "struktury-danych-kolejka-fifo-lifo-priorytetowa": [
-    "podstawowe-struktury-danych-tablica-i-lista",
+  "wzgledne-postrzeganie-czasu-model-matematyczny": [
     "funkcyjny-kod-programowanie-listy",
-    "zlozonosc-obliczeniowa-czasowa-pamieciowa-algorytmow"
-  ],
-  "youtube-moje-pierwsze-kroki": [
-    "podsumowanie-roku-2019",
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie",
-    "podsumowanie-roku-2017-plany-2018"
-  ],
-  "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami": [
-    "wady-react-hooks",
-    "poprawne-bindowanie-funkcji-react-js",
-    "react-hooks-useeffect-efekty-uboczne-w-komponencie"
-  ],
-  "symlink-zip-upload-plikow-dla-hackera": [
-    "props-czyli-atrybuty-react-js",
-    "pierwszy-komponent-react-js",
-    "podzial-komponenty-react-js"
-  ],
-  "weekly-javascript-challenge-reaktywacja": [
-    "grupy-facebook-front-end-developer",
-    "weekly-javascript-challenge-2",
-    "weekly-javascript-challenge-1"
-  ],
-  "props-czyli-atrybuty-react-js": [
-    "podzial-komponenty-react-js",
-    "pierwszy-komponent-react-js",
-    "klasy-jako-komponenty-react-js"
-  ],
-  "innerhtml-furtka-do-xss": [
-    "weekly-javascript-challenge-1",
-    "pierwszy-komponent-react-js",
-    "props-czyli-atrybuty-react-js"
-  ],
-  "weekly-javascript-challenge-1": [
-    "weekly-javascript-challenge-2",
-    "innerhtml-furtka-do-xss",
-    "dobry-czytelny-czysty-kod"
-  ],
-  "kurs-typescript-czesc-2": ["typescript-czesc-1", "kurs-typescript-czesc-3", "atrybuty-class-i-style-w-vue-js"],
-  "projektowanie-komponentow-presentational-container-components": [
-    "kiedy-uzywac-state-a-kiedy-redux",
-    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
-    "struktura-aplikacji-angularjs-czesc-2-komponenty"
-  ],
-  "problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy": [
-    "wady-react-hooks",
     "praca-zdalna-rekrutacja-do-toptal",
-    "komunikacja-pomiedzy-kontrolerami"
-  ],
-  "podsumowanie-roku-2018-i-plany-na-2019": [
-    "podsumowanie-roku-2017-plany-2018",
-    "wprowadzenie-kurs-react-js",
-    "meet-js-summit-2017-kulisami"
-  ],
-  "react-js-na-github-pages-dzieki-create-react-app": [
-    "continuous-integration-na-github-pages-w-buddy-works",
-    "tworzenie-aplikacji-react-js-dzieki-create-react-app",
-    "komunikacja-z-api-w-react-js"
-  ],
-  "odpowiadam-na-pytania-babel-ecmascript-destrukturyzacja-onclick-classname": [
-    "odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react",
-    "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami",
-    "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse"
-  ],
-  "komunikacja-pomiedzy-komponentami-w-react-js": [
-    "metody-cyklu-zycia-komponentu-react-js",
-    "komunikacja-pomiedzy-komponentami-w-angular-2",
-    "poprawne-bindowanie-funkcji-react-js"
-  ],
-  "flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych": [
-    "react-redux-kurs-wprowadzenie-i-podstawy",
-    "state-react-js-2",
-    "usereducer-przenoszenie-logiki-poza-komponent"
-  ],
-  "poradnik-dla-organizatorow-konferencji": [
-    "meet-js-summit-2017-nasze-podsumowanie",
-    "react-amsterdam-najgorsza-konferencja",
-    "reactive-conference-2019-relacja"
-  ],
-  "metody-oraz-pola-typu-computed-w-vue-js": [
-    "pierwszy-komponent-vue-js",
-    "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate",
-    "struktura-aplikacji-angularjs-czesc-2-komponenty"
-  ],
-  "react-redux-filtrowanie-listy-selektory": [
-    "react-redux-kurs-wprowadzenie-i-podstawy",
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
-    "react-js-w-przykladach-filtrowanie-statycznej-listy"
-  ],
-  "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych": [
-    "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse",
-    "usereducer-przenoszenie-logiki-poza-komponent",
     "react-hooks-wprowadzenie-i-motywacja"
   ],
-  "react-hooks-wprowadzenie-i-motywacja": [
-    "wady-react-hooks",
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
-    "react-hooks-useeffect-efekty-uboczne-w-komponencie"
-  ],
-  "petle-w-vue-js-z-uzyciem-dyrektywy-v-for": [
-    "dyrektywy-warunkowe-w-vue-js",
-    "atrybuty-class-i-style-w-vue-js",
-    "wprowadzenie-do-kursu-vue-js-od-podstaw"
-  ],
-  "wstep-do-angular-2": [
-    "wlasne-komponenty-w-angular-2",
-    "angular-2-i-redux",
-    "struktura-aplikacji-angularjs-czesc-2-komponenty"
-  ],
-  "call-for-proposals-na-meet-js-summit-2018": [
-    "meet-js-summit-2017-nasze-podsumowanie",
-    "meet-js-summit-2017-kulisami",
-    "podsumowanie-roku-2017-plany-2018"
-  ],
-  "angularjs-i-seo": [
-    "komunikacja-pomiedzy-kontrolerami",
-    "innerhtml-furtka-do-xss",
-    "czemu-porzucilem-ghost-rzecz-wordpress"
-  ],
-  "24-blogi-ktore-musi-sledzic-javascript-developer": [
-    "grupy-facebook-front-end-developer",
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie",
-    "wprowadzenie-kurs-react-js"
-  ],
-  "komunikacja-pomiedzy-kontrolerami": [
-    "struktura-aplikacji-angularjs-czesc-2-komponenty",
-    "komunikacja-pomiedzy-komponentami-w-react-js",
-    "komunikacja-pomiedzy-komponentami-w-angular-2"
-  ],
-  "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind": [
-    "dyrektywy-warunkowe-w-vue-js",
-    "wprowadzenie-do-kursu-vue-js-od-podstaw",
-    "pierwszy-komponent-vue-js"
-  ],
-  "praca-zdalna-rekrutacja-do-toptal": [
-    "praca-zdalna-obalamy-mity",
-    "praca-zdalna-narzedzia",
-    "nowa-inicjatywa-recenzje-portali-praca-zdalna"
-  ],
-  "automatyczne-uruchamianie-testow-w-buddy": [
-    "tdd-react-testing-library",
-    "continuous-integration-recenzja-buddy-works",
-    "testowanie-aplikacji-react-js-podstawy-enzyme"
-  ],
-  "conditional-types-typescript-typy-warunkowe": [
-    "typescript-infer-i-typy-warunkowe",
-    "kurs-typescript-czesc-3",
-    "typescript-czesc-1"
-  ],
-  "nowy-font-na-githubie-font-systemowy": [
-    "hackowanie-css",
-    "self-publishing-jak-napisalem-ksiazke-w-markdownie",
-    "czemu-porzucilem-ghost-rzecz-wordpress"
-  ],
-  "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie": [
-    "self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie",
-    "podsumowanie-roku-2019",
-    "self-publishing-jak-napisalem-ksiazke-w-markdownie"
-  ],
-  "testowanie-aplikacji-react-js-podstawy-enzyme": [
-    "testowanie-react-js-enzyme-props-state-interakcje",
-    "tworzenie-aplikacji-react-js-dzieki-create-react-app",
-    "pierwszy-komponent-react-js"
-  ],
-  "praca-zdalna-narzedzia": [
-    "praca-zdalna-obalamy-mity",
-    "nowa-inicjatywa-recenzje-portali-praca-zdalna",
-    "praca-zdalna-rekrutacja-do-toptal"
-  ],
-  "komunikacja-pomiedzy-komponentami-w-angular-2": [
-    "wlasne-komponenty-w-angular-2",
-    "komunikacja-pomiedzy-komponentami-w-react-js",
-    "struktura-aplikacji-angularjs-czesc-2-komponenty"
+  "higher-order-reducers-redux-i-powtarzanie-kodu": [
+    "typescript-na-serwerze",
+    "weekly-javascript-challenge-1",
+    "flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych"
   ],
   "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie": [
-    "podsumowanie-roku-2019",
-    "praca-zdalna-rekrutacja-do-toptal",
-    "jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiace"
-  ],
-  "podsumowanie-roku-2017-plany-2018": [
-    "podsumowanie-roku-2018-i-plany-na-2019",
-    "meet-js-summit-2017-nasze-podsumowanie",
-    "meet-js-summit-2017-kulisami"
-  ],
-  "reactive-conference-2019-relacja": [
-    "bylem-na-reactiveconf-2018",
-    "krotka-relacja-z-reactiveconf-2017",
-    "react-amsterdam-najgorsza-konferencja"
-  ],
-  "formularze-w-react-js-niekontrolowane-komponenty": [
-    "formularze-react-js-kontrolowane-komponenty",
-    "poznaj-react-js",
-    "komunikacja-z-api-w-react-js"
-  ],
-  "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2": [
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api",
-    "joi-walidacja-danych",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1"
-  ],
-  "odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react": [
-    "odpowiadam-na-pytania-babel-ecmascript-destrukturyzacja-onclick-classname",
-    "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami",
-    "wady-react-hooks"
-  ],
-  "krotka-relacja-z-reactiveconf-2017": [
-    "reactive-conference-2019-relacja",
-    "bylem-na-reactiveconf-2018",
-    "react-amsterdam-najgorsza-konferencja"
-  ],
-  "wprowadzenie-do-kursu-vue-js-od-podstaw": [
-    "pierwszy-komponent-vue-js",
-    "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind",
-    "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on"
-  ],
-  "dobry-czytelny-czysty-kod": ["weekly-javascript-challenge-1", "wady-react-hooks", "typescript-na-serwerze"],
-  "tworzenie-aplikacji-react-js-dzieki-create-react-app": [
-    "testowanie-aplikacji-react-js-podstawy-enzyme",
-    "wprowadzenie-kurs-react-js",
-    "poznaj-react-js"
+    "typescript-na-serwerze",
+    "grupy-facebook-front-end-developer",
+    "zatrudnianie-juniorow-i-seniorow-a-produktywnosc-model-i-symulacja"
   ],
   "struktura-aplikacji-angularjs-czesc-1": [
     "wstep-do-angular-2",
     "struktura-aplikacji-angularjs-czesc-2-komponenty",
     "komunikacja-pomiedzy-kontrolerami"
   ],
-  "w-2018-migruje-z-githuba": [
-    "continuous-integration-na-github-pages-w-buddy-works",
-    "react-js-na-github-pages-dzieki-create-react-app",
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie"
+  "tworzymy-wlasne-dependency-injection-w-typescript": [
+    "react-js-w-przykladach-filtrowanie-statycznej-listy",
+    "typescript-czesc-1",
+    "wzorce-projektowe-dependency-injection"
   ],
-  "react-redux-kurs-wprowadzenie-i-podstawy": [
+  "poradnik-dla-organizatorow-konferencji": [
+    "meet-js-summit-2017-kulisami",
+    "meet-js-summit-2017-nasze-podsumowanie",
+    "call-for-proposals-na-meet-js-summit-2018"
+  ],
+  "komunikacja-pomiedzy-kontrolerami": [
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "komunikacja-pomiedzy-komponentami-w-angular-2",
+    "dependency-injection-w-angular-2"
+  ],
+  "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on": [
+    "interakcja-komponentami-react-js",
+    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
+    "wprowadzenie-do-kursu-vue-js-od-podstaw"
+  ],
+  "podzial-komponenty-react-js": [
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "wlasne-komponenty-w-angular-2",
+    "props-czyli-atrybuty-react-js"
+  ],
+  "leniwe-ladowanie-komponentow-w-react-dzieki-import": [
+    "klasy-jako-komponenty-react-js",
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "kiedy-uzywac-state-a-kiedy-redux"
+  ],
+  "joi-walidacja-danych": [
+    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2",
+    "pierwszy-komponent-vue-js",
+    "hapi-js-wprowadzenie"
+  ],
+  "weekly-javascript-challenge-3": [
+    "weekly-javascript-challenge-2",
+    "weekly-javascript-challenge-1",
+    "typescript-czesc-1"
+  ],
+  "ktory-hosting-jest-najszybszy-9-rzeczy-ktore-maja-najwieksze-znaczenie": [
+    "lokalny-serwer-http-proste-sposoby-na-problemy-z-file",
+    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1",
+    "angularjs-i-seo"
+  ],
+  "interakcja-komponentami-react-js": [
+    "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on",
+    "pierwszy-komponent-react-js",
+    "props-czyli-atrybuty-react-js"
+  ],
+  "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1": [
+    "hapi-js-wprowadzenie",
+    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2",
+    "typescript-na-serwerze"
+  ],
+  "react-hooks-a-zadania-do-api": [
+    "react-hooks-wprowadzenie-i-motywacja",
+    "asynchronicznosc-w-redux-redux-thunk",
+    "komunikacja-z-api-w-react-js"
+  ],
+  "praca-zdalna-narzedzia": [
+    "praca-zdalna-obalamy-mity",
+    "nowa-inicjatywa-recenzje-portali-praca-zdalna",
+    "praca-zdalna-rekrutacja-do-toptal"
+  ],
+  "typescript-czesc-1": ["kurs-typescript-czesc-3", "typescript-na-serwerze", "kurs-typescript-czesc-2"],
+  "hey-com-rewolucyjny-email-od-tworcow-basecampa": [
+    "problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy",
+    "krotka-relacja-z-reactiveconf-2017",
+    "pierwszy-komponent-react-js"
+  ],
+  "klasy-jako-komponenty-react-js": [
+    "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami",
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "tdd-react-testing-library"
+  ],
+  "observable-rxjs": ["map-i-reduce-w-js", "wstep-do-angular-2", "weekly-javascript-challenge-1"],
+  "dowiedz-sie-ile-zarabiaja-gwiazdy-frontendu": [
+    "praca-zdalna-rekrutacja-do-toptal",
+    "this-js-kontekst-wywolania-funkcji",
+    ">-"
+  ],
+  "state-react-js-2": [
+    "pierwszy-komponent-react-js",
+    "testowanie-react-js-enzyme-props-state-interakcje",
+    "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse"
+  ],
+  "struktura-aplikacji-angularjs-czesc-2-komponenty": [
+    "wlasne-komponenty-w-angular-2",
+    "wstep-do-angular-2",
+    "komunikacja-pomiedzy-komponentami-w-angular-2"
+  ],
+  "meet-js-summit-2017-kulisami": [
+    "meet-js-summit-2017-nasze-podsumowanie",
+    "poradnik-dla-organizatorow-konferencji",
+    "call-for-proposals-na-meet-js-summit-2018"
+  ],
+  "struktury-danych-kolejka-fifo-lifo-priorytetowa": [
+    "podstawowe-struktury-danych-tablica-i-lista",
     "flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych",
-    "higher-order-reducers-redux-i-powtarzanie-kodu",
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych"
+    "komunikacja-pomiedzy-kontrolerami"
+  ],
+  "symlink-zip-upload-plikow-dla-hackera": [
+    "weekly-javascript-challenge-1",
+    "wstep-do-angular-2",
+    "wlasne-komponenty-w-angular-2"
+  ],
+  "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2": [
+    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1",
+    "typescript-czesc-1",
+    "joi-walidacja-danych"
+  ],
+  "state-react-js": [
+    "klasy-jako-komponenty-react-js",
+    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
+    "testowanie-aplikacji-react-js-podstawy-enzyme"
+  ],
+  "podsumowanie-roku-2019": [
+    "czemu-porzucilem-ghost-rzecz-wordpress",
+    "pierwszy-komponent-vue-js",
+    "podsumowanie-roku-2018-i-plany-na-2019"
+  ],
+  "react-js-na-github-pages-dzieki-create-react-app": [
+    "continuous-integration-na-github-pages-w-buddy-works",
+    "tworzenie-aplikacji-react-js-dzieki-create-react-app",
+    "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works"
+  ],
+  "dolar-na-poczatku-dolar-na-koncu-czyli-o-notacji-wegierskiej-w-js": [
+    "w-2018-migruje-z-githuba",
+    "asi-czyli-automatyczne-wstawianie-srednikow",
+    "weekly-javascript-challenge-3"
+  ],
+  "automatyczne-uruchamianie-testow-w-buddy": [
+    "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works",
+    "continuous-integration-na-github-pages-w-buddy-works",
+    "testowanie-react-js-enzyme-props-state-interakcje"
+  ],
+  "problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy": [
+    "komunikacja-pomiedzy-komponentami-w-react-js",
+    "komunikacja-pomiedzy-kontrolerami",
+    "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami"
   ],
   "hapi-js-wprowadzenie": [
     "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1",
     "meet-js-summit-2017-kulisami",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api"
+    "meet-js-summit-2017-nasze-podsumowanie"
   ],
-  "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api": [
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2",
-    "joi-walidacja-danych",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1"
-  ],
-  "typescript-na-serwerze": ["typescript-czesc-1", "kurs-typescript-czesc-3", "typescript-infer-i-typy-warunkowe"],
-  "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works": [
-    "continuous-integration-na-github-pages-w-buddy-works",
-    "continuous-integration-recenzja-buddy-works",
-    "automatyczne-uruchamianie-testow-w-buddy"
-  ],
-  "pierwszy-komponent-vue-js": [
-    "wprowadzenie-do-kursu-vue-js-od-podstaw",
-    "metody-oraz-pola-typu-computed-w-vue-js",
-    "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on"
-  ],
-  "poprawne-bindowanie-funkcji-react-js": [
-    "this-js-kontekst-wywolania-funkcji",
-    "klasy-jako-komponenty-react-js",
-    "komunikacja-pomiedzy-komponentami-w-react-js"
-  ],
-  "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse": [
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
-    "usereducer-przenoszenie-logiki-poza-komponent",
-    "state-react-js-2"
-  ],
-  "komunikacja-z-api-w-react-js": ["react-hooks-a-zadania-do-api", "wprowadzenie-kurs-react-js", "poznaj-react-js"],
-  "zlozonosc-obliczeniowa-czasowa-pamieciowa-algorytmow": [
-    "podstawowe-struktury-danych-tablica-i-lista",
-    "dobry-czytelny-czysty-kod",
-    "typescript-na-serwerze"
-  ],
-  "lokalny-serwer-http-proste-sposoby-na-problemy-z-file": [
-    "twoja-strona-powinna-byc-na-https",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1",
-    "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works"
-  ],
-  "wzgledne-postrzeganie-czasu-model-matematyczny": [
+  "praca-zdalna-obalamy-mity": [
+    "nowa-inicjatywa-recenzje-portali-praca-zdalna",
     "praca-zdalna-rekrutacja-do-toptal",
+    "praca-zdalna-narzedzia"
+  ],
+  "kilka-faktow-na-temat-promise": [
+    "problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy",
     "dobry-czytelny-czysty-kod",
+    "weekly-javascript-challenge-2"
+  ],
+  "grupy-facebook-front-end-developer": [
+    "24-blogi-ktore-musi-sledzic-javascript-developer",
+    "react-js-w-przykladach-filtrowanie-statycznej-listy",
     "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie"
   ],
-  "podstawowe-struktury-danych-tablica-i-lista": [
-    "funkcyjny-kod-programowanie-listy",
-    "struktury-danych-kolejka-fifo-lifo-priorytetowa",
-    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for"
-  ],
-  "this-js-kontekst-wywolania-funkcji": [
-    "poprawne-bindowanie-funkcji-react-js",
-    "weekly-javascript-challenge-2",
-    "state-react-js-2"
-  ],
-  "typescript-infer-i-typy-warunkowe": [
-    "conditional-types-typescript-typy-warunkowe",
-    "kurs-typescript-czesc-3",
-    "typescript-czesc-1"
-  ],
-  "continuous-integration-na-github-pages-w-buddy-works": [
-    "react-js-na-github-pages-dzieki-create-react-app",
-    "continuous-integration-recenzja-buddy-works",
-    "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works"
-  ],
-  "wlasne-komponenty-w-angular-2": [
-    "struktura-aplikacji-angularjs-czesc-2-komponenty",
-    "wstep-do-angular-2",
-    "klasy-jako-komponenty-react-js"
-  ],
-  "react-hooks-wlasne-hooki": [
-    "wady-react-hooks",
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
-    "react-hooks-wprowadzenie-i-motywacja"
-  ],
-  "dolar-na-poczatku-dolar-na-koncu-czyli-o-notacji-wegierskiej-w-js": [
-    "typescript-infer-i-typy-warunkowe",
-    "conditional-types-typescript-typy-warunkowe",
-    "typescript-czesc-1"
-  ],
-  "continuous-integration-recenzja-buddy-works": [
-    "continuous-integration-na-github-pages-w-buddy-works",
-    "automatyczne-uruchamianie-testow-w-buddy",
-    "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works"
-  ],
-  "react-js-w-przykladach-filtrowanie-statycznej-listy": [
-    "react-redux-filtrowanie-listy-selektory",
-    "poznaj-react-js",
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych"
-  ],
-  "podzial-komponenty-react-js": [
-    "props-czyli-atrybuty-react-js",
-    "klasy-jako-komponenty-react-js",
-    "pierwszy-komponent-react-js"
-  ],
-  "joi-walidacja-danych": [
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2",
-    "typescript-czesc-1"
-  ],
-  "leniwe-ladowanie-komponentow-w-react-dzieki-import": [
-    "projektowanie-komponentow-presentational-container-components",
-    "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate",
-    "komunikacja-z-api-w-react-js"
-  ],
-  "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate": [
-    "metody-cyklu-zycia-komponentu-react-js",
-    "react-hooks-wprowadzenie-i-motywacja",
-    "leniwe-ladowanie-komponentow-w-react-dzieki-import"
-  ],
-  "atrybuty-class-i-style-w-vue-js": [
-    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
-    "dyrektywy-warunkowe-w-vue-js",
-    "kurs-typescript-czesc-2"
-  ],
-  "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on": [
-    "pierwszy-komponent-vue-js",
-    "wprowadzenie-do-kursu-vue-js-od-podstaw",
-    "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind"
-  ],
-  "testowanie-react-js-enzyme-props-state-interakcje": [
-    "testowanie-aplikacji-react-js-podstawy-enzyme",
-    "pierwszy-komponent-react-js",
-    "props-czyli-atrybuty-react-js"
-  ],
-  "syndrom-oszusta-impostor-syndrome": [
-    "praca-zdalna-narzedzia",
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie",
-    "praca-zdalna-rekrutacja-do-toptal"
-  ],
-  "state-react-js": ["klasy-jako-komponenty-react-js", "props-czyli-atrybuty-react-js", "pierwszy-komponent-react-js"],
-  "tdd-react-testing-library": [
-    "automatyczne-uruchamianie-testow-w-buddy",
-    "testowanie-aplikacji-react-js-podstawy-enzyme",
-    "tworzenie-aplikacji-react-js-dzieki-create-react-app"
-  ],
-  "czemu-porzucilem-ghost-rzecz-wordpress": [
-    "podsumowanie-roku-2017-plany-2018",
-    "angularjs-i-seo",
-    "typescript-na-serwerze"
-  ],
-  "meet-js-summit-2017-nasze-podsumowanie": [
-    "meet-js-summit-2017-kulisami",
-    "call-for-proposals-na-meet-js-summit-2018",
-    "podsumowanie-roku-2017-plany-2018"
-  ],
-  "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1": [
-    "hapi-js-wprowadzenie",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api",
-    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2"
-  ],
-  "poznaj-react-js": [
-    "pierwszy-komponent-react-js",
-    "wprowadzenie-kurs-react-js",
-    "tworzenie-aplikacji-react-js-dzieki-create-react-app"
-  ],
-  "asynchronicznosc-w-redux-redux-thunk": [
-    "klasy-jako-komponenty-react-js",
-    "pierwszy-komponent-react-js",
-    "props-czyli-atrybuty-react-js"
-  ],
-  "funkcyjny-kod-programowanie-listy": [
-    "podstawowe-struktury-danych-tablica-i-lista",
-    "wady-react-hooks",
-    "dobry-czytelny-czysty-kod"
-  ],
-  "10-powodow-dla-ktorych-uzywam-jquery-razem-z-react": [
-    "komunikacja-z-api-w-react-js",
-    "react-hooks-a-zadania-do-api",
-    "payment-request-api-platnosci-przegladarce"
-  ],
-  "metody-cyklu-zycia-komponentu-react-js": [
-    "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate",
-    "komunikacja-pomiedzy-komponentami-w-react-js",
+  "dependency-injection-w-angular-2": [
+    "wzorce-projektowe-dependency-injection",
+    "wlasne-komponenty-w-angular-2",
     "komunikacja-pomiedzy-komponentami-w-angular-2"
   ],
-  "klasy-jako-komponenty-react-js": [
-    "podzial-komponenty-react-js",
-    "props-czyli-atrybuty-react-js",
+  "funkcyjny-kod-programowanie-listy": [
+    "react-hooks-wprowadzenie-i-motywacja",
+    "react-js-w-przykladach-filtrowanie-statycznej-listy",
+    "struktura-aplikacji-angularjs-czesc-1"
+  ],
+  "podsumowanie-roku-2018-i-plany-na-2019": [
+    "podsumowanie-roku-2017-plany-2018",
+    "poradnik-dla-organizatorow-konferencji",
+    "tworzenie-aplikacji-react-js-dzieki-create-react-app"
+  ],
+  ">-": [
+    "wprowadzenie-kurs-react-js",
+    "podsumowanie-roku-2018-i-plany-na-2019",
+    "metody-cyklu-zycia-komponentu-react-js"
+  ],
+  "self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie": [
+    "self-publishing-jak-napisalem-ksiazke-w-markdownie",
+    "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie",
+    "typescript-na-serwerze"
+  ],
+  "pierwszy-komponent-react-js": [
+    "formularze-react-js-kontrolowane-komponenty",
+    "testowanie-aplikacji-react-js-podstawy-enzyme",
+    "wprowadzenie-kurs-react-js"
+  ],
+  "kiedy-uzywac-state-a-kiedy-redux": [
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "klasy-jako-komponenty-react-js"
+  ],
+  "krotka-relacja-z-reactiveconf-2017": [
+    "reactive-conference-2019-relacja",
+    "bylem-na-reactiveconf-2018",
+    "meet-js-summit-2017-kulisami"
+  ],
+  "testowanie-react-js-enzyme-props-state-interakcje": [
+    "pierwszy-komponent-react-js",
+    "testowanie-aplikacji-react-js-podstawy-enzyme",
+    "react-redux-filtrowanie-listy-selektory"
+  ],
+  "flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych": [
+    "react-redux-kurs-wprowadzenie-i-podstawy",
+    "react-js-w-przykladach-filtrowanie-statycznej-listy",
     "pierwszy-komponent-react-js"
+  ],
+  "wlasne-komponenty-w-angular-2": [
+    "wstep-do-angular-2",
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "komunikacja-pomiedzy-komponentami-w-angular-2"
+  ],
+  "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych": [
+    "klasy-jako-komponenty-react-js",
+    "pierwszy-komponent-react-js",
+    "state-react-js"
+  ],
+  "testowanie-aplikacji-react-js-podstawy-enzyme": [
+    "pierwszy-komponent-react-js",
+    "tworzenie-aplikacji-react-js-dzieki-create-react-app",
+    "formularze-react-js-kontrolowane-komponenty"
+  ],
+  "nowy-font-na-githubie-font-systemowy": [
+    "czemu-porzucilem-ghost-rzecz-wordpress",
+    "usuwanie-bialych-paskow-safari-iphone-x",
+    "komunikacja-pomiedzy-kontrolerami"
   ],
   "angular-2-i-redux": [
     "wstep-do-angular-2",
     "wlasne-komponenty-w-angular-2",
     "struktura-aplikacji-angularjs-czesc-2-komponenty"
   ],
-  "higher-order-reducers-redux-i-powtarzanie-kodu": [
+  "podstawowe-struktury-danych-tablica-i-lista": [
+    "struktury-danych-kolejka-fifo-lifo-priorytetowa",
+    "zlozonosc-obliczeniowa-czasowa-pamieciowa-algorytmow",
+    "komunikacja-pomiedzy-kontrolerami"
+  ],
+  "react-hooks-wlasne-hooki": [
+    "pierwszy-komponent-react-js",
+    "tdd-react-testing-library",
+    "react-hooks-a-zadania-do-api"
+  ],
+  "odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react": [
+    "klasy-jako-komponenty-react-js",
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "react-hooks-useeffect-efekty-uboczne-w-komponencie"
+  ],
+  "podsumowanie-roku-2017-plany-2018": [
+    "podsumowanie-roku-2018-i-plany-na-2019",
+    "praca-zdalna-rekrutacja-do-toptal",
+    "praca-zdalna-obalamy-mity"
+  ],
+  "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind": [
+    "dyrektywy-warunkowe-w-vue-js",
+    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
+    "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on"
+  ],
+  "react-hooks-wprowadzenie-i-motywacja": [
+    "testowanie-aplikacji-react-js-podstawy-enzyme",
+    "react-hooks-a-zadania-do-api",
+    "formularze-react-js-kontrolowane-komponenty"
+  ],
+  "reactive-conference-2019-relacja": [
+    "krotka-relacja-z-reactiveconf-2017",
+    "bylem-na-reactiveconf-2018",
+    "pierwszy-komponent-vue-js"
+  ],
+  "react-hooks-useeffect-efekty-uboczne-w-komponencie": [
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "kiedy-uzywac-state-a-kiedy-redux",
+    "struktura-aplikacji-angularjs-czesc-2-komponenty"
+  ],
+  "metody-cyklu-zycia-komponentu-react-js": [
+    "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate",
+    "pierwszy-komponent-react-js",
+    "testowanie-aplikacji-react-js-podstawy-enzyme"
+  ],
+  "asynchronicznosc-w-redux-redux-thunk": [
+    "payment-request-api-platnosci-przegladarce",
+    "react-hooks-a-zadania-do-api",
+    "kiedy-uzywac-state-a-kiedy-redux"
+  ],
+  "map-i-reduce-w-js": ["observable-rxjs", "weekly-javascript-challenge-2", "typescript-na-serwerze"],
+  "pierwszy-komponent-vue-js": [
+    "wprowadzenie-do-kursu-vue-js-od-podstaw",
+    "joi-walidacja-danych",
+    "reactive-conference-2019-relacja"
+  ],
+  "asi-czyli-automatyczne-wstawianie-srednikow": [
+    "weekly-javascript-challenge-1",
+    "typescript-na-serwerze",
+    "weekly-javascript-challenge-2"
+  ],
+  "weekly-javascript-challenge-1": [
+    "weekly-javascript-challenge-2",
+    "weekly-javascript-challenge-3",
+    "symlink-zip-upload-plikow-dla-hackera"
+  ],
+  "react-redux-filtrowanie-listy-selektory": [
     "react-redux-kurs-wprowadzenie-i-podstawy",
-    "react-redux-filtrowanie-listy-selektory",
+    "testowanie-react-js-enzyme-props-state-interakcje",
     "komunikacja-z-api-w-react-js"
   ],
-  "jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiace": [
-    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie",
-    "grupy-facebook-front-end-developer",
-    "wprowadzenie-kurs-react-js"
+  "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works": [
+    "continuous-integration-na-github-pages-w-buddy-works",
+    "react-js-na-github-pages-dzieki-create-react-app",
+    "automatyczne-uruchamianie-testow-w-buddy"
   ],
-  "wady-react-hooks": [
-    "react-hooks-wprowadzenie-i-motywacja",
-    "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami",
+  "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate": [
+    "metody-cyklu-zycia-komponentu-react-js",
+    "klasy-jako-komponenty-react-js",
+    "odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react"
+  ],
+  "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse": [
+    "odpowiadam-na-pytania-babel-ecmascript-destrukturyzacja-onclick-classname",
+    "state-react-js-2",
     "react-hooks-useeffect-efekty-uboczne-w-komponencie"
+  ],
+  "continuous-integration-na-github-pages-w-buddy-works": [
+    "continuous-integration-recenzja-buddy-works",
+    "react-js-na-github-pages-dzieki-create-react-app",
+    "deploy-przez-ssh-sftp-lub-rsync-w-buddy-works"
+  ],
+  "usereducer-przenoszenie-logiki-poza-komponent": [
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "kiedy-uzywac-state-a-kiedy-redux",
+    "klasy-jako-komponenty-react-js"
+  ],
+  "innerhtml-furtka-do-xss": ["weekly-javascript-challenge-1", "typescript-na-serwerze", "typescript-czesc-1"],
+  "zatrudnianie-juniorow-i-seniorow-a-produktywnosc-model-i-symulacja": [
+    "praca-zdalna-obalamy-mity",
+    "praca-zdalna-rekrutacja-do-toptal",
+    "zasoby-z-ktorych-ja-nauczylem-sie-prawie-wszystkiego-o-front-endzie"
+  ],
+  "petle-w-vue-js-z-uzyciem-dyrektywy-v-for": [
+    "wprowadzenie-do-kursu-vue-js-od-podstaw",
+    "dyrektywy-warunkowe-w-vue-js",
+    "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind"
+  ],
+  "praca-zdalna-rekrutacja-do-toptal": [
+    "praca-zdalna-obalamy-mity",
+    "x-team-opis-rekrutacja-opinia",
+    "nowa-inicjatywa-recenzje-portali-praca-zdalna"
   ],
   "formularze-react-js-kontrolowane-komponenty": [
     "formularze-w-react-js-niekontrolowane-komponenty",
-    "interakcja-komponentami-react-js",
+    "pierwszy-komponent-react-js",
+    "komunikacja-z-api-w-react-js"
+  ],
+  "komunikacja-pomiedzy-komponentami-w-react-js": [
+    "komunikacja-pomiedzy-kontrolerami",
+    "problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy",
+    "struktura-aplikacji-angularjs-czesc-1"
+  ],
+  "metody-oraz-pola-typu-computed-w-vue-js": [
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "komunikacja-pomiedzy-komponentami-w-angular-2",
+    "atrybuty-class-i-style-w-vue-js"
+  ],
+  "wzorce-projektowe-dependency-injection": [
+    "dependency-injection-w-angular-2",
+    "komunikacja-pomiedzy-kontrolerami",
+    "weekly-javascript-challenge-2"
+  ],
+  "dobry-czytelny-czysty-kod": [
+    "weekly-javascript-challenge-1",
+    "asi-czyli-automatyczne-wstawianie-srednikow",
+    "typescript-na-serwerze"
+  ],
+  "weekly-javascript-challenge-2": [
+    "weekly-javascript-challenge-1",
+    "weekly-javascript-challenge-3",
+    "typescript-na-serwerze"
+  ],
+  "wady-react-hooks": [
+    "react-hooks-wprowadzenie-i-motywacja",
+    "react-hooks-wlasne-hooki",
+    "react-hooks-useeffect-efekty-uboczne-w-komponencie"
+  ],
+  "24-blogi-ktore-musi-sledzic-javascript-developer": [
+    "grupy-facebook-front-end-developer",
+    "react-js-w-przykladach-filtrowanie-statycznej-listy",
+    "react-redux-filtrowanie-listy-selektory"
+  ],
+  "odpowiadam-na-pytania-babel-ecmascript-destrukturyzacja-onclick-classname": [
+    "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse",
+    "odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react",
+    "grupy-facebook-front-end-developer"
+  ],
+  "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami": [
+    "klasy-jako-komponenty-react-js",
+    "react-hooks-useeffect-efekty-uboczne-w-komponencie",
+    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych"
+  ],
+  "wstep-do-angular-2": [
+    "wlasne-komponenty-w-angular-2",
+    "angular-2-i-redux",
+    "struktura-aplikacji-angularjs-czesc-2-komponenty"
+  ],
+  "usuwanie-bialych-paskow-safari-iphone-x": [
+    "angularjs-i-seo",
+    "czemu-porzucilem-ghost-rzecz-wordpress",
+    "komunikacja-pomiedzy-kontrolerami"
+  ],
+  "this-js-kontekst-wywolania-funkcji": [
+    "weekly-javascript-challenge-2",
+    "praca-zdalna-rekrutacja-do-toptal",
+    "komunikacja-pomiedzy-kontrolerami"
+  ],
+  "poznaj-react-js": [
+    "testowanie-aplikacji-react-js-podstawy-enzyme",
+    "pierwszy-komponent-react-js",
+    "tworzenie-aplikacji-react-js-dzieki-create-react-app"
+  ],
+  "formularze-w-react-js-niekontrolowane-komponenty": [
+    "formularze-react-js-kontrolowane-komponenty",
+    "pierwszy-komponent-react-js",
+    "komunikacja-z-api-w-react-js"
+  ],
+  "twoja-strona-powinna-byc-na-https": [
+    "lokalny-serwer-http-proste-sposoby-na-problemy-z-file",
+    "react-hooks-a-zadania-do-api",
+    "dependency-injection-w-angular-2"
+  ],
+  "projektowanie-komponentow-presentational-container-components": [
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "usereducer-przenoszenie-logiki-poza-komponent"
+  ],
+  "props-czyli-atrybuty-react-js": [
+    "leniwe-ladowanie-komponentow-w-react-dzieki-import",
+    "klasy-jako-komponenty-react-js",
+    "metody-cyklu-zycia-komponentu-react-js"
+  ],
+  "czemu-porzucilem-ghost-rzecz-wordpress": [
+    "angularjs-i-seo",
+    "typescript-na-serwerze",
+    "praca-zdalna-rekrutacja-do-toptal"
+  ],
+  "self-publishing-jak-napisalem-ksiazke-w-markdownie": [
+    "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie",
+    "self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie",
+    "klasy-jako-komponenty-react-js"
+  ],
+  "dyrektywy-warunkowe-w-vue-js": [
+    "atrybuty-class-i-style-w-vue-js",
+    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
+    "dynamiczne-atrybuty-w-vue-js-dyrektywa-v-bind"
+  ],
+  "wprowadzenie-kurs-react-js": [
+    "pierwszy-komponent-react-js",
+    "tworzenie-aplikacji-react-js-dzieki-create-react-app",
+    "formularze-react-js-kontrolowane-komponenty"
+  ],
+  "zlozonosc-obliczeniowa-czasowa-pamieciowa-algorytmow": [
+    "podstawowe-struktury-danych-tablica-i-lista",
+    "dolar-na-poczatku-dolar-na-koncu-czyli-o-notacji-wegierskiej-w-js",
+    "dobry-czytelny-czysty-kod"
+  ],
+  "typescript-infer-i-typy-warunkowe": [
+    "conditional-types-typescript-typy-warunkowe",
+    "kurs-typescript-czesc-3",
+    "state-react-js-2"
+  ],
+  "weekly-javascript-challenge-reaktywacja": [
+    "weekly-javascript-challenge-2",
+    "weekly-javascript-challenge-1",
+    "weekly-javascript-challenge-3"
+  ],
+  "kurs-typescript-czesc-2": ["typescript-czesc-1", "atrybuty-class-i-style-w-vue-js", "kurs-typescript-czesc-3"],
+  "licencje-oprogramowania": [
+    "w-2018-migruje-z-githuba",
+    "praca-zdalna-rekrutacja-do-toptal",
+    "typescript-na-serwerze"
+  ],
+  "tdd-react-testing-library": [
+    "klasy-jako-komponenty-react-js",
+    "pierwszy-komponent-react-js",
+    "formularze-react-js-kontrolowane-komponenty"
+  ],
+  "odmiana-rzeczownikow-przy-liczebnikach-jezyku-polskim": [
+    "typescript-na-serwerze",
+    "weekly-javascript-challenge-1",
+    "odpowiadam-na-pytania-props-nawiasy-klamrowe-funkcje-vs-klasy-import-react"
+  ],
+  "nowa-inicjatywa-recenzje-portali-praca-zdalna": [
+    "praca-zdalna-obalamy-mity",
+    "praca-zdalna-narzedzia",
+    "praca-zdalna-rekrutacja-do-toptal"
+  ],
+  "continuous-integration-recenzja-buddy-works": [
+    "continuous-integration-na-github-pages-w-buddy-works",
+    "praca-zdalna-narzedzia",
+    "praca-zdalna-obalamy-mity"
+  ],
+  "youtube-moje-pierwsze-kroki": [
+    "czemu-porzucilem-ghost-rzecz-wordpress",
+    "react-hooks-wprowadzenie-i-motywacja",
+    "poprawne-bindowanie-funkcji-react-js"
+  ],
+  "react-redux-kurs-wprowadzenie-i-podstawy": [
+    "flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych",
+    "react-redux-filtrowanie-listy-selektory",
+    "kiedy-uzywac-state-a-kiedy-redux"
+  ],
+  "komunikacja-z-api-w-react-js": [
+    "pierwszy-komponent-react-js",
+    "formularze-react-js-kontrolowane-komponenty",
+    "tdd-react-testing-library"
+  ],
+  "bylem-na-reactiveconf-2018": [
+    "krotka-relacja-z-reactiveconf-2017",
+    "reactive-conference-2019-relacja",
+    "react-amsterdam-najgorsza-konferencja"
+  ],
+  "10-powodow-dla-ktorych-uzywam-jquery-razem-z-react": [
+    "reactive-conference-2019-relacja",
+    "wprowadzenie-kurs-react-js",
+    "klasy-jako-komponenty-react-js"
+  ],
+  "payment-request-api-platnosci-przegladarce": [
+    "asynchronicznosc-w-redux-redux-thunk",
+    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2",
+    "weekly-javascript-challenge-3"
+  ],
+  "napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie": [
+    "self-publishing-jak-napisalem-ksiazke-w-markdownie",
+    "self-publishing-podsumowanie-sprzedazy-typescript-na-powaznie",
+    "call-for-proposals-na-meet-js-summit-2018"
+  ],
+  "typescript-na-serwerze": ["typescript-czesc-1", "kurs-typescript-czesc-3", "weekly-javascript-challenge-1"],
+  "poprawne-bindowanie-funkcji-react-js": [
+    "klasy-jako-komponenty-react-js",
+    "formularze-react-js-kontrolowane-komponenty",
+    "metody-cyklu-zycia-komponentu-react-js"
+  ],
+  "syndrom-oszusta-impostor-syndrome": [
+    "problem-xy-czyli-gdy-nie-wiemy-o-co-pytamy",
+    "typescript-na-serwerze",
+    "react-redux-filtrowanie-listy-selektory"
+  ],
+  "hackowanie-css": ["innerhtml-furtka-do-xss", "podzial-komponenty-react-js", "komunikacja-pomiedzy-kontrolerami"],
+  "react-js-w-przykladach-filtrowanie-statycznej-listy": [
+    "flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych",
+    "grupy-facebook-front-end-developer",
+    "24-blogi-ktore-musi-sledzic-javascript-developer"
+  ],
+  "w-2018-migruje-z-githuba": [
+    "dolar-na-poczatku-dolar-na-koncu-czyli-o-notacji-wegierskiej-w-js",
+    "licencje-oprogramowania",
+    "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate"
+  ],
+  "call-for-proposals-na-meet-js-summit-2018": [
+    "meet-js-summit-2017-nasze-podsumowanie",
+    "meet-js-summit-2017-kulisami",
+    "poradnik-dla-organizatorow-konferencji"
+  ],
+  "komunikacja-pomiedzy-komponentami-w-angular-2": [
+    "wlasne-komponenty-w-angular-2",
+    "struktura-aplikacji-angularjs-czesc-2-komponenty",
+    "wstep-do-angular-2"
+  ],
+  "angularjs-i-seo": [
+    "komunikacja-pomiedzy-kontrolerami",
+    "typescript-na-serwerze",
+    "czemu-porzucilem-ghost-rzecz-wordpress"
+  ],
+  "kurs-typescript-czesc-3": ["typescript-czesc-1", "typescript-na-serwerze", "kurs-typescript-czesc-2"],
+  "meet-js-summit-2017-nasze-podsumowanie": [
+    "meet-js-summit-2017-kulisami",
+    "poradnik-dla-organizatorow-konferencji",
+    "call-for-proposals-na-meet-js-summit-2018"
+  ],
+  "x-team-opis-rekrutacja-opinia": [
+    "praca-zdalna-rekrutacja-do-toptal",
+    "praca-zdalna-obalamy-mity",
+    "nowa-inicjatywa-recenzje-portali-praca-zdalna"
+  ],
+  "conditional-types-typescript-typy-warunkowe": [
+    "kurs-typescript-czesc-3",
+    "typescript-czesc-1",
+    "typescript-infer-i-typy-warunkowe"
+  ],
+  "tworzenie-aplikacji-react-js-dzieki-create-react-app": [
+    "testowanie-aplikacji-react-js-podstawy-enzyme",
+    "formularze-react-js-kontrolowane-komponenty",
     "wprowadzenie-kurs-react-js"
   ],
-  "usereducer-przenoszenie-logiki-poza-komponent": [
-    "react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych",
-    "react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse",
-    "react-redux-kurs-wprowadzenie-i-podstawy"
+  "lokalny-serwer-http-proste-sposoby-na-problemy-z-file": [
+    "symlink-zip-upload-plikow-dla-hackera",
+    "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1",
+    "ktory-hosting-jest-najszybszy-9-rzeczy-ktore-maja-najwieksze-znaczenie"
   ],
-  "licencje-oprogramowania": ["w-2018-migruje-z-githuba", "typescript-na-serwerze", "dobry-czytelny-czysty-kod"],
-  "dependency-injection-w-angular-2": [
-    "wlasne-komponenty-w-angular-2",
-    "wzorce-projektowe-dependency-injection",
-    "komunikacja-pomiedzy-komponentami-w-angular-2"
+  "wprowadzenie-do-kursu-vue-js-od-podstaw": [
+    "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
+    "wprowadzenie-kurs-react-js",
+    "pierwszy-komponent-react-js"
+  ],
+  "atrybuty-class-i-style-w-vue-js": [
+    "kurs-typescript-czesc-2",
+    "dyrektywy-warunkowe-w-vue-js",
+    "metody-oraz-pola-typu-computed-w-vue-js"
+  ],
+  "react-amsterdam-najgorsza-konferencja": [
+    "bylem-na-reactiveconf-2018",
+    "krotka-relacja-z-reactiveconf-2017",
+    "pierwszy-komponent-react-js"
   ]
 }

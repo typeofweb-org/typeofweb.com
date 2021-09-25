@@ -33,6 +33,7 @@ async function run() {
           seo: p.data.seo,
           excerpt: trimExcerpt(compiledExcerpt),
           content: compiledContent.replace(/<[^>]+>/g, ''),
+          img: p.data.thumbnail,
           category,
           series,
         };

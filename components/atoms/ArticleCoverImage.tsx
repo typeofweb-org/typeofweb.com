@@ -42,7 +42,7 @@ export const ArticleCoverImage = memo<{
         // @todo fix me
         sizes="1536px"
         {...layoutProps}
-        placeholder="blur"
+        placeholder={cover.blurDataURL ? 'blur' : 'empty'}
         blurDataURL={cover.blurDataURL ?? undefined}
         {...(cover.preload ? { loading: 'eager', priority: true } : { loading: 'lazy', priority: false })}
       />

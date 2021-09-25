@@ -8,6 +8,7 @@ import { InstantSearch, Configure, connectSearchBox, connectHits, PoweredBy } fr
 import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 import { getUrlForPermalink } from '../../utils/permalinks';
+import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { Input } from '../atoms/Input';
 
 import type { KeyboardEventHandler, ChangeEventHandler } from 'react';
@@ -194,6 +195,7 @@ interface TypeOfWebHit {
   };
   readonly content: string;
   readonly objectID: string;
+  readonly img?: { readonly height: number; readonly width: number; readonly url: string } | null;
   readonly _highlightResult: {
     readonly title: {
       readonly value: string;
@@ -347,6 +349,20 @@ const HitDetails = memo<{ readonly currentHit: TypeOfWebHit }>(
         <p className="mt-1 text-gray-600 text-sm">
           {currentHit.category?.name || ''} {currentHit.series ? `> ${currentHit.series.name}` : ''}
         </p>
+        {currentHit.img && (
+          <ArticleCoverImage
+            wide={false}
+            cover={{
+              blurDataURL: null,
+              img: {
+                width: currentHit.img.width,
+                height: currentHit.img.height,
+                src: currentHit.img.url,
+              },
+              preload: false,
+            }}
+          />
+        )}
         <p className="mt-3 text-gray-900">{currentHit.excerpt}</p>
         <Link href={getUrlForPermalink(currentHit.objectID)}>
           <a className="inline-block mt-5 px-4 py-2 text-gray-100 text-2xl focus:bg-green-600 bg-green-700 rounded-md outline-none cursor-pointer transition-all focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2">
