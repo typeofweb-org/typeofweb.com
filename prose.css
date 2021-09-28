@@ -252,12 +252,21 @@
   .prose img,
   .prose .img,
   .prose video {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    @apply mx-auto my-8;
   }
   .prose img,
   .prose .img {
     @apply hover:shadow-md shadow-sm transition-shadow;
+
+    &.aligncenter {
+      @apply mx-auto;
+    }
+    &.alignleft {
+      @apply float-left mr-5;
+    }
+    &.alignright {
+      @apply float-right ml-5;
+    }
   }
   .prose .newsletter-form {
     @apply -mx-6 mt-8 bg-white border sm:mx-auto;

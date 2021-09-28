@@ -288,3 +288,21 @@ progress {
     height: 1.25rem;
   }
 }
+
+.cv-embed {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .cv-embed {
+    --embed-scale: 0.8155555555;
+    display: block;
+    width: 824px;
+    height: 1220px;
+    margin-top: 1em;
+    transform: scale(var(--embed-scale));
+    transform-origin: top left;
+    transform-style: flat;
+    margin-bottom: calc(-1 * (1 - var(--embed-scale)) * 1220px);
+  }
+}
