@@ -35,7 +35,7 @@ const items: readonly Item[] = [
     links: [{ kind: 'video', value: 'https://www.youtube.com/watch?v=Tlodk6k3alU' }],
   },
   {
-    date: '2020.06.22',
+    date: '2021.06.22',
     title: 'Junior Senior #16',
     subtitle: 'Zaawansowany TypeScript',
     links: [{ kind: 'video', value: 'https://www.youtube.com/watch?v=WDCNEe4X8PE' }],
