@@ -75,6 +75,24 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "adcichowski",
+      "name": "adcichowski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71249791?v=4",
+      "profile": "https://github.com/adcichowski",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Eghizio",
+      "name": "Jakub Wąsik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32049761?v=4",
+      "profile": "https://github.com/Eghizio",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 3,

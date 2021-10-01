@@ -29,16 +29,16 @@ const items: readonly Item[] = [
     links: [{ kind: 'video', value: 'https://www.youtube.com/watch?v=TFQBb4r207c' }],
   },
   {
-    date: '2021.04.09',
-    title: 'Escola Talks',
-    subtitle: 'Funkcyjny TypeScript Node.js Live Coding. Mattermost Tempo integration',
-    links: [{ kind: 'video', value: 'https://www.youtube.com/watch?v=Tlodk6k3alU' }],
-  },
-  {
     date: '2021.06.22',
     title: 'Junior Senior #16',
     subtitle: 'Zaawansowany TypeScript',
     links: [{ kind: 'video', value: 'https://www.youtube.com/watch?v=WDCNEe4X8PE' }],
+  },
+  {
+    date: '2021.04.09',
+    title: 'Escola Talks',
+    subtitle: 'Funkcyjny TypeScript Node.js Live Coding. Mattermost Tempo integration',
+    links: [{ kind: 'video', value: 'https://www.youtube.com/watch?v=Tlodk6k3alU' }],
   },
   {
     date: '2020.12.30',
@@ -207,9 +207,9 @@ const items: readonly Item[] = [
     links: [{ kind: 'video', value: `https://www.youtube.com/watch?v=7QYy_cPY0vw` }],
   },
   {
+    date: '2017.09.18',
     title: `Wywiad dla Zbyszka Tenerowicza na meet.js Summit 2018`,
     subtitle: ``,
-    date: '2017.09.18',
     links: [{ kind: 'link', value: `https://soundcloud.com/naugtur/meetjs-summit-2017-od-zaplecza)` }],
   },
   {
@@ -222,8 +222,8 @@ const items: readonly Item[] = [
     ],
   },
   {
-    title: `TDD and TypeScript`,
     date: '2016.11.26',
+    title: `TDD and TypeScript`,
     subtitle: `Warsztat dla XFive`,
     links: [],
   },
@@ -238,8 +238,8 @@ const items: readonly Item[] = [
     ],
   },
   {
-    title: `Why code readability matters?`,
     date: '2016.10.21',
+    title: `Why code readability matters?`,
     subtitle: `Webinar dla XFive`,
     links: [],
   },
@@ -269,9 +269,9 @@ const items: readonly Item[] = [
     ],
   },
   {
+    date: '2014.09.27',
     title: `Wywiad dla meet.js Summit 2014`,
     subtitle: ``,
-    date: '2014.09.27',
     links: [{ kind: 'video', value: `https://www.youtube.com/watch?v=UvBegle7x-A` }],
   },
   {
