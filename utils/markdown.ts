@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions, functional/prefer-readonly-type -- ok */
 // import RehypeToc from '@jsdevtools/rehype-toc';
 import RehypePrism from '@mapbox/rehype-prism';
+import Bluebird from 'bluebird';
 import * as HastUtilToString from 'hast-util-to-string';
 import { serialize } from 'next-mdx-remote/serialize';
 import RehypeAutolinkHeadings from 'rehype-autolink-headings';
 import RehypeKatex from 'rehype-katex';
+import RehypeParse from 'rehype-parse';
 import RehypeRaw from 'rehype-raw';
 import RehypeSlug from 'rehype-slug';
 import RehypeStringify from 'rehype-stringify';
@@ -17,6 +19,9 @@ import RemarkRehype from 'remark-rehype';
 import * as Unified from 'unified';
 import { visit } from 'unist-util-visit';
 
+import { getOEmbed } from './oEmbedCache';
+
+import type { RootContent } from 'hast';
 import type { Root } from 'hast-util-to-string';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { Node, Parent } from 'unist';
@@ -24,7 +29,7 @@ import type { Node, Parent } from 'unist';
 interface HtmlNode extends Node {
   tagName: string;
   type: 'element';
-  children?: HtmlNode[];
+  children?: (HtmlNode | TextNode)[];
   properties?: {
     [prop: string]: string[] | string | undefined;
   };
@@ -49,6 +54,9 @@ interface PNode extends HtmlNode {
 }
 interface ImgNode extends HtmlNode {
   tagName: 'img';
+}
+interface FigureNode extends HtmlNode {
+  tagName: 'figure';
 }
 interface MdxPNode extends MdxNode {
   name: 'p';
@@ -75,6 +83,11 @@ interface PathNode extends HtmlNode {
   };
 }
 
+interface TextNode extends Node {
+  type: 'text';
+  value?: string;
+}
+
 function isPreNode(node: Node): node is PreNode {
   return node && node.type === 'element' && (node as PreNode).tagName === 'pre';
 }
@@ -98,6 +111,9 @@ function isMdxPNode(node: Node): node is MdxPNode {
 function isPathNode(node: Node): node is PathNode {
   return node && node.type === 'element' && (node as PathNode).tagName === 'path';
 }
+function isTextNode(node: Node): node is TextNode {
+  return node && node.type === 'text';
+}
 
 function isParentNode(node: Node): node is Parent {
   return node && 'children' in node;
@@ -118,6 +134,117 @@ function wrapLinksInSpans(): import('unified').Transformer {
         node.children = node.children.map((child) => {
           return preorder(child);
         });
+      }
+      return node;
+    };
+
+    return preorder(tree);
+  };
+}
+
+function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
+  return function transformer(tree) {
+    const preorder = async (node: Node): Promise<HtmlNode | Node> => {
+      if (isParentNode(node) && node.type === 'root') {
+        node.children = await Bluebird.mapSeries(node.children, (child) => preorder(child));
+      }
+      if (isPNode(node) && node.children?.length === 1 && isAnchorNode(node.children[0])) {
+        const anchorNode = node.children[0];
+        const href = anchorNode.properties?.href;
+        if (href && (anchorNode.children?.[0] as unknown as TextNode)?.value === href) {
+          const oEmbed = await getOEmbed(href, {
+            updateCache: process.env.NODE_ENV === 'development',
+            force: false,
+          });
+
+          if (!oEmbed) {
+            return node;
+          }
+
+          const rest =
+            oEmbed.type === 'video' || oEmbed.type === 'rich'
+              ? Unified.unified().use(RehypeParse).parse(oEmbed.html)
+              : null;
+          const findBody = (c: RootContent): RootContent[] =>
+            c.type === 'element' && c.tagName === 'body'
+              ? c.children
+              : isParentNode(c)
+              ? c.children.flatMap(findBody)
+              : [];
+
+          const cover: HtmlNode = {
+            type: 'element',
+            tagName: 'img',
+            properties: {
+              src: oEmbed.thumbnail_url,
+              width: String(oEmbed.thumbnail_width),
+              height: String(oEmbed.thumbnail_height),
+              title: `Otwórz ${oEmbed.title}`,
+            },
+          };
+
+          const elements = rest?.children.flatMap(findBody).map((n) => {
+            if (n.type === 'element' && n.tagName === 'iframe') {
+              const aspect = Number(n.properties?.width) / Number(n.properties?.height) || 1.69;
+              return {
+                type: 'element',
+                tagName: 'div',
+                properties: { style: `aspect-ratio: ${aspect};` },
+                children: [n],
+              };
+            }
+            return n;
+          }) as HtmlNode[] | null;
+
+          const shouldLink = oEmbed.type === 'rich' && oEmbed.html;
+
+          const replacement: FigureNode = {
+            tagName: 'figure',
+            type: 'element',
+            properties: { class: 'oembed' },
+            children: [
+              ...(oEmbed.type === 'rich' ? [cover] : []),
+              ...(elements && elements.length > 0 && oEmbed.type !== 'rich' ? elements : []),
+              {
+                type: 'element',
+                tagName: 'figcaption',
+                children: [
+                  {
+                    type: 'element',
+                    tagName: 'cite',
+                    children: [
+                      {
+                        type: 'text',
+                        value: href,
+                      },
+                    ],
+                  },
+                  {
+                    type: 'element',
+                    tagName: 'p',
+                    properties: { class: 'title' },
+                    children: [{ type: 'text', value: oEmbed.title }],
+                  },
+                  ...(elements ?? []),
+                ],
+              },
+            ],
+          };
+
+          if (shouldLink) {
+            return {
+              type: 'element',
+              tagName: 'a',
+              properties: {
+                href,
+                title: oEmbed.title,
+              },
+              children: [replacement],
+            };
+          }
+
+          return replacement;
+        }
       }
       return node;
     };
@@ -304,12 +431,13 @@ export const commonRemarkPlugins = [RemarkFrontmatter, RemarkMath, RemarkGfm, Re
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],
+  collapseParagraphs,
+  replaceFreeLinkWithOEmbed,
   wrapLinksInSpans,
   RehypeSlug,
   RehypeAutolinkHeadings,
   RehypePrism,
   addDataToCodeBlocks,
-  collapseParagraphs,
   imageAttributes,
 ];
 
@@ -345,15 +473,15 @@ export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSer
   );
 }
 
-export function toHtml(
+export async function toHtml(
   source: string,
   options: { excerpt: false },
-): ReturnType<import('unified').Processor['processSync']>;
-export function toHtml(source: string, options: { excerpt: true }): string;
-export function toHtml(
+): Promise<ReturnType<import('unified').Processor['process']>>;
+export async function toHtml(source: string, options: { excerpt: true }): Promise<string>;
+export async function toHtml(
   source: string,
   options: { excerpt: boolean } = { excerpt: false },
-): string | ReturnType<import('unified').Processor['processSync']> {
+): Promise<string | ReturnType<import('unified').Processor['process']>> {
   let processor: Unified.Processor = Unified.unified().use(RemarkParse);
   commonRemarkPlugins.forEach((plugin) => (processor = processor.use(plugin)));
   processor = processor.use(RemarkRehype, { allowDangerousHtml: true }).use(RehypeRaw);
@@ -369,12 +497,12 @@ export function toHtml(
 
   if (options.excerpt) {
     const parsed = processor.parse(source);
-    const result = processor.runSync(parsed);
+    const result = await processor.run(parsed);
     return HastUtilToString.toString(result as Root);
   }
 
   // @ts-ignore
-  return processor.use(RehypeStringify).processSync(source);
+  return processor.use(RehypeStringify).process(source);
 }
 // snake case to camel case
 function toCamelCase(str: string): any {

@@ -38,6 +38,7 @@
     "next-mdx-remote": "3.0.4",
     "next-sitemap": "1.6.168",
     "octokit": "1.5.0",
+    "oembed-parser": "1.4.8",
     "plaiceholder": "2.0.1",
     "polish-plurals": "1.1.0",
     "react": "17.0.2",

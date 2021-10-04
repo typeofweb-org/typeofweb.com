@@ -9,7 +9,7 @@ async function run() {
 
   console.log(
     JSON.stringify(
-      data.posts.map((p) => {
+      await Promise.all(data.posts.map(async (p) => {
         const category =
           'categories' in p.data
             ? categoriesToMainCategory(p.data.categories)
@@ -21,8 +21,8 @@ async function run() {
 
         const [excerpt, content] = splitContent(p.content);
 
-        const compiledContent = toHtml(content, { excerpt: false }).toString('utf-8');
-        const compiledExcerpt = toHtml(excerpt, { excerpt: true });
+        const compiledContent = (await (toHtml(content, { excerpt: false }))).toString('utf-8');
+        const compiledExcerpt = await toHtml(excerpt, { excerpt: true });
         return {
           objectID: p.data.permalink,
           title: p.data.title,
@@ -37,7 +37,7 @@ async function run() {
           category,
           series,
         };
-      }),
+      })),
     ),
   );
 }

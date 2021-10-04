@@ -153,10 +153,11 @@
     line-height: 1.5;
   }
   .prose figure figcaption {
-    color: #8a8a8a;
+    color: theme('colors.gray.600');
     font-size: 0.875em;
     line-height: 1.4285714;
     margin-top: 0.8571429em;
+    text-align: center;
   }
   .prose code {
     color: theme('colors.gray.900');
@@ -309,8 +310,8 @@
   .prose h2 + *,
   .prose h3 + *,
   .prose h4 + *,
-  .prose > :first-child,
-  .prose > div:first-child > :first-of-type {
+  .prose > :first-child {
+    /* .prose > div:first-child > :first-of-type { */
     margin-top: 0;
   }
   .prose thead th:first-child,
@@ -375,7 +376,7 @@
         @apply mb-0;
       }
       & figcaption p {
-        @apply indent-0 text-center text-gray-700 text-sm;
+        @apply indent-0 text-center text-sm;
       }
     }
   }

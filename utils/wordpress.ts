@@ -180,7 +180,7 @@ export async function getExcerptAndContent(
   //   throw new Error('????');
   // }
 
-  const excerptString = toHtml(excerpt ?? '', { excerpt: true });
+  const excerptString = await toHtml(excerpt ?? '', { excerpt: true });
   const ex = trimExcerpt(excerptString);
 
   if (options.onlyExcerpt) {
@@ -200,7 +200,7 @@ export async function getExcerptAndContent(
     console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
-      content: toHtml(content, { excerpt: false }).toString('utf-8'),
+      content: (await toHtml(content, { excerpt: false })).toString('utf-8'),
       isMdx: false as const,
     };
   }
