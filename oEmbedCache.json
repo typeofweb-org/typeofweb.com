@@ -1,78 +1,82 @@
 {
-  "https://www.youtube.com/watch?v=H7rQGLQTgXw": {
+  "https://twitter.com/dan_abramov/status/1228454264915271683": {
     "data": {
-      "title": "X-Outpost: Dominican Republic",
-      "author_name": "X-Team",
-      "author_url": "https://www.youtube.com/c/XTeam",
-      "type": "video",
-      "height": 113,
-      "width": 200,
-      "version": "1.0",
-      "provider_name": "YouTube",
-      "provider_url": "https://www.youtube.com/",
-      "thumbnail_height": 360,
-      "thumbnail_width": 480,
-      "thumbnail_url": "https://i.ytimg.com/vi/H7rQGLQTgXw/hqdefault.jpg",
-      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/H7rQGLQTgXw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
-    },
-    "updatedAt": 1633356335787
-  },
-  "https://youtu.be/QxFLOT0v6lo": {
-    "data": {
-      "title": "❌ Z Gosią Jezierską: Praca dla X-Team i zarządzanie projektem, w którym wciąż zmieniają się osoby 😬",
-      "author_name": "Type of Web",
-      "author_url": "https://www.youtube.com/c/Typeofweb",
-      "type": "video",
-      "height": 113,
-      "width": 200,
-      "version": "1.0",
-      "provider_name": "YouTube",
-      "provider_url": "https://www.youtube.com/",
-      "thumbnail_height": 360,
-      "thumbnail_width": 480,
-      "thumbnail_url": "https://i.ytimg.com/vi/QxFLOT0v6lo/hqdefault.jpg",
-      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/QxFLOT0v6lo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
-    },
-    "updatedAt": 1633358589627
-  },
-  "https://typeofweb.com/praca-zdalna-obalamy-mity/": {
-    "data": {
-      "version": "1.0",
+      "url": "https://twitter.com/dan_abramov/status/1228454264915271683",
+      "author_name": "Dan",
+      "author_url": "https://twitter.com/dan_abramov",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">🏫: Self-taught <br>⏳: 9 years<br>🏷: software engineer<br>🌎: UK (US based company)<br>💸: £100k ($130k) base <a href=\"https://t.co/zXgvvmJYZy\">https://t.co/zXgvvmJYZy</a></p>&mdash; Dan (@dan_abramov) <a href=\"https://twitter.com/dan_abramov/status/1228454264915271683?ref_src=twsrc%5Etfw\">February 14, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
       "type": "rich",
-      "title": "Praca zdalna – dla mnie rewelacja! Obalamy mity",
-      "author_name": "Michał Miszczyszyn",
-      "provider_name": "Type of Web",
-      "provider_url": "http://localhost:3000/",
-      "cache_age": "3600",
-      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/06/tumblr_oke7b6hmHq1qz4jlco1_1280-2.jpg",
-      "thumbnail_width": 1280,
-      "thumbnail_height": 745,
-      "width": 1280,
-      "height": 809,
-      "html": "<p>Od dłuższego czasu pracuję zdalnie. W poprzedniej firmie miałem biuro, do którego nie musiałem przychodzić, więc w praktyce sporo pracowałem z domu. Od ponad roku pracuję już wyłącznie zdalnie. Jakie są moje dotychczasowe doświadczenia związane z pracą zdalną? Czy praca zdalna jest rozwiązaniem wszystkich moich problemów?</p>"
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
     },
-    "updatedAt": 1633362754465
+    "updatedAt": 1633372929710
   },
-  "https://typeofweb.com/praca-zdalna-rekrutacja-do-toptal/": {
+  "https://twitter.com/MMiszy/status/1278769758377332737": {
     "data": {
-      "version": "1.0",
+      "url": "https://twitter.com/MMiszy/status/1278769758377332737",
+      "author_name": "Michał Miszczyszyn @ typeofweb.com",
+      "author_url": "https://twitter.com/MMiszy",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">.<a href=\"https://twitter.com/heyhey?ref_src=twsrc%5Etfw\">@heyhey</a> there&#39;s a visible delay between clicking on your profile and the menu showing up. Something is being fetched over the network just to display the dropdown. It&#39;s super annoying when you use the app more and even slower when not on my home wifi 😐 <a href=\"https://t.co/EI6ZdIAmFg\">pic.twitter.com/EI6ZdIAmFg</a></p>&mdash; Michał Miszczyszyn @ typeofweb.com (@MMiszy) <a href=\"https://twitter.com/MMiszy/status/1278769758377332737?ref_src=twsrc%5Etfw\">July 2, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
       "type": "rich",
-      "title": "Praca zdalna – rekrutacja do Toptal",
-      "author_name": "Michał Miszczyszyn",
-      "provider_name": "Type of Web",
-      "provider_url": "http://localhost:3000/",
-      "cache_age": "3600",
-      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/08/pexels-photo-306533.jpeg",
-      "thumbnail_width": 2861,
-      "thumbnail_height": 1455,
-      "width": 2861,
-      "height": 1519,
-      "html": "<p>Na pewno wiele osób kojarzy mnie z firmą Toptal – w szczególności ci, którzy brali udział w lokalnych meetupach w Gdańsku, na których opowiadałem o pracy zdalnej na przykładzie Toptala. W tym wpisie opisuję rekrutację do Toptala, mimo że od kilku miesięcy nie współpracuję już z Toptalem – zrezygnowałem z…</p>"
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
     },
-    "updatedAt": 1633362754921
+    "updatedAt": 1633372929715
   },
-  "https://typeofweb.com/oferty-pracy-zdalnej/": {
-    "data": null,
-    "updatedAt": 1633362755356
+  "https://twitter.com/NikkitaFTW/status/1228450760926560273": {
+    "data": {
+      "url": "https://twitter.com/NikkitaFTW/status/1228450760926560273",
+      "author_name": "Sara Vieira",
+      "author_url": "https://twitter.com/NikkitaFTW",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">🏫: Self-taught <br>⏳: 6 years<br>🏷: software engineer<br>🌎: Berlin (Amsterdam based company)<br>💸:81k Euros <a href=\"https://t.co/m3xJj9o3Yt\">https://t.co/m3xJj9o3Yt</a></p>&mdash; Sara Vieira (@NikkitaFTW) <a href=\"https://twitter.com/NikkitaFTW/status/1228450760926560273?ref_src=twsrc%5Etfw\">February 14, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633372929964
+  },
+  "https://twitter.com/kentcdodds/status/1228455789427404800": {
+    "data": {
+      "url": "https://twitter.com/kentcdodds/status/1228455789427404800",
+      "author_name": "Kent C. Dodds",
+      "author_url": "https://twitter.com/kentcdodds",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">🏫: MIS<br>⏳: 4 years<br>🏷: Software Engineer<br>🌎: Utah, USA<br>💸: $150k + ~$300k equity over 3 years <a href=\"https://t.co/w4Kt3LI83M\">https://t.co/w4Kt3LI83M</a></p>&mdash; Kent C. Dodds (@kentcdodds) <a href=\"https://twitter.com/kentcdodds/status/1228455789427404800?ref_src=twsrc%5Etfw\">February 14, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633372930221
+  },
+  "https://twitter.com/jaredpalmer/status/1229035731408113669": {
+    "data": {
+      "url": "https://twitter.com/jaredpalmer/status/1229035731408113669",
+      "author_name": "Jared Palmer",
+      "author_url": "https://twitter.com/jaredpalmer",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Prior to starting Formik Inc...<br><br>🏫: Self-taught <br>⏳: 7 years<br>🏷: software engineer (ran agency)<br>🌎: NYC<br>💸: $475-650k / year <a href=\"https://t.co/niFEkyOpEg\">https://t.co/niFEkyOpEg</a></p>&mdash; Jared Palmer (@jaredpalmer) <a href=\"https://twitter.com/jaredpalmer/status/1229035731408113669?ref_src=twsrc%5Etfw\">February 16, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633372930487
   }
 }

@@ -1,6 +1,7 @@
 import Fs from 'fs/promises';
 
-import { extract, setProviderList } from 'oembed-parser';
+import OembedParser from 'oembed-parser';
+const { extract, setProviderList } = OembedParser;
 import Providers from 'oembed-parser/src/utils/providers.json';
 
 import { host } from '../constants';
