@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
@@ -66,6 +67,20 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     identifyUser();
   }, []);
 
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      window.gtag('config', 'UA-75923815-1', {
+        page_path: url,
+      })
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call -- ok
   const urlsToPreload: readonly string[] | undefined = pageProps?.posts
     ?.map(
@@ -82,9 +97,25 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <ScriptOnce strategy="afterInteractive">
         {`let o=()=>e.className+=" fonts-loaded",e=document.documentElement,n="00 1em Merriweather",t="00 1em Fira Sans";sessionStorage.fonts?o():Promise.all(["4"+n,"7"+n,"italic 4"+n,"italic 7"+n,"4"+t,"6"+t,"400 1em Fira Mono"].map(o=>document.fonts.load(o))).then(()=>{sessionStorage.fonts=!0,o()})`}
       </ScriptOnce>
-      <ScriptOnce strategy="afterInteractive" async defer>
-        {`a=window,t=a.dataLayer=a.dataLayer||[];a.gtag=(...a)=>t.push(a),t.push({"gtm.start":Date.now(),event:"gtm.js"})`}
-      </ScriptOnce>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=UA-75923815-1`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-75923815-1', {
+              page_path: window.location.pathname
+            });
+          `.trim(),
+        }}
+      />
       <Seo />
       <RunningHeaderProvider>
         <UIStateProvider>
@@ -97,26 +128,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         async
       >{`a.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
       <ScriptAfterInteraction id="contentVisibility" src="/contentVisibility.min.js" defer async />
-      <ScriptAfterInteraction
-        id="gtag"
-        src="https://www.googletagmanager.com/gtag/js?id=G-KNFC661M43"
-        defer
-        async
-        onload={() => {
-          gtag('js', new Date());
-          gtag('config', 'G-KNFC661M43');
-        }}
-      />
-      <ScriptAfterInteraction
-        id="gtm"
-        src="https://www.googletagmanager.com/gtm.js?id=GTM-NTFGFPB"
-        defer
-        async
-        onload={() => {
-          gtag('js', new Date());
-          gtag('config', 'G-KNFC661M43');
-        }}
-      />
 
       {urlsToPreload?.map((url) => (
         <link key={url} rel="preload" href={url} as="image" />
