@@ -126,7 +126,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         id="fancyLinkUnderline"
         defer
         async
-      >{`a.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
+      >{`window?.CSS?.paintWorklet?.addModule("/fancyLinkUnderline.min.js")`}</ScriptAfterInteraction>
       <ScriptAfterInteraction id="contentVisibility" src="/contentVisibility.min.js" defer async />
 
       {urlsToPreload?.map((url) => (
