@@ -140,6 +140,14 @@ export const Seo = memo<SeoProps>(
             <meta key="og:image:height" property="og:image:height" content={cover.img.height.toString()} />
           </>
         )}
+        {type === 'article' && (
+          <link
+            rel="alternate"
+            type="application/json+oembed"
+            href={`${host}/api/oembed?format=json&url=${encodeURIComponent(canonical)}`}
+            title={fullTitle}
+          />
+        )}
 
         <meta key="fb:app_id" property="fb:app_id" content="1709793622637583" />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
