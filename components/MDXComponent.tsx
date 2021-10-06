@@ -46,7 +46,7 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
   if (width && height && src) {
-    console.log({ width, height });
+    // console.log({ width, height });
     // const isFull = props.className?.includes('size-full') ?? false;
     // const isLarge = props.className?.includes('size-large') ?? false;
     // const isMedium = props.className?.includes('size-medium') ?? false;

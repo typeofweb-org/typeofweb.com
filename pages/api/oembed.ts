@@ -24,7 +24,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const permalink = parsedUrl.pathname.replace(/^\//, '').replace(/\/$/, '');
 
-  console.log({ permalink });
   const post = await getPostByPermalink(permalink);
   if (!post) {
     res.status(404).end('Invalid url.');
