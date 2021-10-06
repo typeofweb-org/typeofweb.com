@@ -432,13 +432,13 @@ const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],
   collapseParagraphs,
-  replaceFreeLinkWithOEmbed,
-  wrapLinksInSpans,
   RehypeSlug,
   RehypeAutolinkHeadings,
   RehypePrism,
   addDataToCodeBlocks,
   imageAttributes,
+  replaceFreeLinkWithOEmbed,
+  wrapLinksInSpans,
 ];
 
 export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
