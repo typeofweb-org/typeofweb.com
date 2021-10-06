@@ -78,7 +78,7 @@ const FacebookPageWidget = () => {
     console.warn(`Not implemented: FacebookPageWidget`);
     warned['FacebookPageWidget'] = true;
   }
-  return null;
+  return <div />;
 };
 
 const CodepenWidget = Dynamic<CodepenWidgetProps>(
@@ -95,7 +95,7 @@ const Gallery = (_props: {
     console.warn(`Not implemented: Gallery`);
     warned['Gallery'] = true;
   }
-  return null;
+  return <div />;
 };
 
 const components = {

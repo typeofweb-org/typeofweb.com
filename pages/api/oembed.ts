@@ -30,7 +30,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  const contentObj = await getExcerptAndContent(post, { onlyExcerpt: true });
+  const contentObj = await getExcerptAndContent(post, { onlyExcerpt: true, parseOembed: false });
   const author = post.data.authors
     .map((authorId) => Authors.authors.find((a) => a.slug === authorId))
     .map((a) => a?.displayName)

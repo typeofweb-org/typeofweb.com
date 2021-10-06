@@ -20,12 +20,12 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default.authors;
 
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
-    (p) => ({
-      ...p,
-      content: '',
-    }),
-  );
+  const posts = (
+    await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true, parseOembed: false })))
+  ).map((p) => ({
+    ...p,
+    content: '',
+  }));
 
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
   return { props: { posts, page, postsCount, permalink: null as string | null } };

@@ -86,7 +86,7 @@ interface PathNode extends HtmlNode {
 
 interface TextNode extends Node {
   type: 'text';
-  value?: string;
+  value: string;
 }
 
 function isPreNode(node: Node): node is PreNode {
@@ -161,7 +161,7 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
       }
 
       const oEmbed = await getOEmbed(href, {
-        updateCache: process.env.NODE_ENV === 'development',
+        updateCache: !!process.env.UPDATE_OEMBED,
         force: false,
       });
 
@@ -233,7 +233,7 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
                 type: 'element',
                 tagName: 'p',
                 properties: { class: 'title' },
-                children: [{ type: 'text', value: oEmbed.title }],
+                children: oEmbed.title ? [{ type: 'text', value: oEmbed.title }] : [],
               },
               ...(elements ?? []),
             ],
@@ -444,11 +444,13 @@ const commonRehypePlugins = [
   RehypePrism,
   addDataToCodeBlocks,
   imageAttributes,
-  replaceFreeLinkWithOEmbed,
-  wrapLinksInSpans,
 ];
 
-export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
+export function toMdx(
+  source: string,
+  frontmatter: object,
+  options: { parseOembed: boolean },
+): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
   return serialize(
     source
       .replace(/style="(.*?)"/g, (match, styles: string) => {
@@ -474,7 +476,12 @@ export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSer
       scope: { data: frontmatter },
       mdxOptions: {
         remarkPlugins: [...commonRemarkPlugins],
-        rehypePlugins: [...commonRehypePlugins, fixSvgPaths as any],
+        rehypePlugins: [
+          ...commonRehypePlugins,
+          ...(options.parseOembed ? [replaceFreeLinkWithOEmbed] : []),
+          wrapLinksInSpans,
+          fixSvgPaths as any,
+        ],
       },
     },
   );
@@ -482,25 +489,30 @@ export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSer
 
 export async function toHtml(
   source: string,
-  options: { excerpt: false },
+  options: { excerpt: false; readonly parseOembed: boolean },
 ): Promise<ReturnType<import('unified').Processor['process']>>;
-export async function toHtml(source: string, options: { excerpt: true }): Promise<string>;
 export async function toHtml(
   source: string,
-  options: { excerpt: boolean } = { excerpt: false },
+  options: { excerpt: true; readonly parseOembed: boolean },
+): Promise<string>;
+export async function toHtml(
+  source: string,
+  options: { excerpt: boolean; readonly parseOembed: boolean },
 ): Promise<string | ReturnType<import('unified').Processor['process']>> {
-  let processor: Unified.Processor = Unified.unified().use(RemarkParse);
-  commonRemarkPlugins.forEach((plugin) => (processor = processor.use(plugin)));
-  processor = processor.use(RemarkRehype, { allowDangerousHtml: true }).use(RehypeRaw);
+  const plugins = [
+    RemarkParse,
+    ...commonRemarkPlugins,
+    [RemarkRehype, { allowDangerousHtml: true }],
+    RehypeRaw,
+    ...(options.excerpt ? [getOnlyFirstPara, addLeadToFirstParagraph] : []),
+    ...commonRehypePlugins,
+    ...(options.parseOembed ? [replaceFreeLinkWithOEmbed] : []),
+    wrapLinksInSpans,
+  ];
 
-  if (options.excerpt) {
-    processor = processor.use(getOnlyFirstPara).use(addLeadToFirstParagraph);
-  }
-
-  commonRehypePlugins.forEach(
-    (plugin) =>
-      (processor = Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin as any)),
-  );
+  const processor: Unified.Processor = plugins.reduce<Unified.Processor>((processor, plugin) => {
+    return Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin as any);
+  }, Unified.unified());
 
   if (options.excerpt) {
     const parsed = processor.parse(source);
