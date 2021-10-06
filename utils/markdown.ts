@@ -19,6 +19,7 @@ import RemarkRehype from 'remark-rehype';
 import * as Unified from 'unified';
 import { visit } from 'unist-util-visit';
 
+import { tryCatch } from './fns';
 import { getOEmbed } from './oEmbedCache';
 
 import type { RootContent } from 'hast';
@@ -147,106 +148,112 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
     const preorder = async (node: Node): Promise<HtmlNode | Node> => {
       if (isParentNode(node) && node.type === 'root') {
         node.children = await Bluebird.mapSeries(node.children, (child) => preorder(child));
+        return node;
       }
-      if (isPNode(node) && node.children?.length === 1 && isAnchorNode(node.children[0])) {
-        const anchorNode = node.children[0];
-        const href = anchorNode.properties?.href;
-        if (href && (anchorNode.children?.[0] as unknown as TextNode)?.value === href) {
-          const oEmbed = await getOEmbed(href, {
-            updateCache: process.env.NODE_ENV === 'development',
-            force: false,
-          });
+      if (!isPNode(node) || node.children?.length !== 1 || !isAnchorNode(node.children[0])) {
+        return node;
+      }
 
-          if (!oEmbed) {
-            return node;
-          }
+      const anchorNode = node.children[0];
+      const href = anchorNode.properties?.href;
+      if (!href || (anchorNode.children?.[0] as unknown as TextNode)?.value !== href) {
+        return node;
+      }
 
-          const rest =
-            oEmbed.type === 'video' || oEmbed.type === 'rich'
-              ? Unified.unified().use(RehypeParse).parse(oEmbed.html)
-              : null;
-          const findBody = (c: RootContent): RootContent[] =>
-            c.type === 'element' && c.tagName === 'body'
-              ? c.children
-              : isParentNode(c)
-              ? c.children.flatMap(findBody)
-              : [];
+      const oEmbed = await getOEmbed(href, {
+        updateCache: process.env.NODE_ENV === 'development',
+        force: false,
+      });
 
-          const cover: HtmlNode = {
+      if (!oEmbed) {
+        return node;
+      }
+
+      const errorOrRoot =
+        oEmbed.type === 'video' || oEmbed.type === 'rich'
+          ? tryCatch(() => Unified.unified().use(RehypeParse).parse(oEmbed.html))
+          : null;
+      const isError = errorOrRoot instanceof Error;
+      if (isError) {
+        console.error(errorOrRoot);
+      }
+      const rest = isError ? null : errorOrRoot;
+
+      const findBody = (c: RootContent): RootContent[] =>
+        c.type === 'element' && c.tagName === 'body' ? c.children : isParentNode(c) ? c.children.flatMap(findBody) : [];
+
+      const cover: HtmlNode = {
+        type: 'element',
+        tagName: 'img',
+        properties: {
+          src: oEmbed.thumbnail_url,
+          width: String(oEmbed.thumbnail_width),
+          height: String(oEmbed.thumbnail_height),
+          title: `Otwórz ${oEmbed.title}`,
+        },
+      };
+
+      const elements = rest?.children.flatMap(findBody).map((n) => {
+        if (n.type === 'element' && n.tagName === 'iframe') {
+          const aspect = Number(n.properties?.width) / Number(n.properties?.height) || 1.69;
+          return {
             type: 'element',
-            tagName: 'img',
-            properties: {
-              src: oEmbed.thumbnail_url,
-              width: String(oEmbed.thumbnail_width),
-              height: String(oEmbed.thumbnail_height),
-              title: `Otwórz ${oEmbed.title}`,
-            },
+            tagName: 'div',
+            properties: { style: `aspect-ratio: ${aspect};` },
+            children: [n],
           };
+        }
+        return n;
+      }) as HtmlNode[] | null;
 
-          const elements = rest?.children.flatMap(findBody).map((n) => {
-            if (n.type === 'element' && n.tagName === 'iframe') {
-              const aspect = Number(n.properties?.width) / Number(n.properties?.height) || 1.69;
-              return {
-                type: 'element',
-                tagName: 'div',
-                properties: { style: `aspect-ratio: ${aspect};` },
-                children: [n],
-              };
-            }
-            return n;
-          }) as HtmlNode[] | null;
+      const shouldLink = oEmbed.type === 'rich' && oEmbed.html;
 
-          const shouldLink = oEmbed.type === 'rich' && oEmbed.html;
-
-          const replacement: FigureNode = {
-            tagName: 'figure',
+      const replacement: FigureNode = {
+        tagName: 'figure',
+        type: 'element',
+        properties: { class: 'oembed' },
+        children: [
+          ...(oEmbed.type === 'rich' ? [cover] : []),
+          ...(elements && elements.length > 0 && oEmbed.type !== 'rich' ? elements : []),
+          {
             type: 'element',
-            properties: { class: 'oembed' },
+            tagName: 'figcaption',
             children: [
-              ...(oEmbed.type === 'rich' ? [cover] : []),
-              ...(elements && elements.length > 0 && oEmbed.type !== 'rich' ? elements : []),
               {
                 type: 'element',
-                tagName: 'figcaption',
+                tagName: 'cite',
                 children: [
                   {
-                    type: 'element',
-                    tagName: 'cite',
-                    children: [
-                      {
-                        type: 'text',
-                        value: href,
-                      },
-                    ],
+                    type: 'text',
+                    value: href,
                   },
-                  {
-                    type: 'element',
-                    tagName: 'p',
-                    properties: { class: 'title' },
-                    children: [{ type: 'text', value: oEmbed.title }],
-                  },
-                  ...(elements ?? []),
                 ],
               },
-            ],
-          };
-
-          if (shouldLink) {
-            return {
-              type: 'element',
-              tagName: 'a',
-              properties: {
-                href,
-                title: oEmbed.title,
+              {
+                type: 'element',
+                tagName: 'p',
+                properties: { class: 'title' },
+                children: [{ type: 'text', value: oEmbed.title }],
               },
-              children: [replacement],
-            };
-          }
+              ...(elements ?? []),
+            ],
+          },
+        ],
+      };
 
-          return replacement;
-        }
+      if (shouldLink) {
+        return {
+          type: 'element',
+          tagName: 'a',
+          properties: {
+            href,
+            title: oEmbed.title,
+          },
+          children: [replacement],
+        };
       }
-      return node;
+
+      return replacement;
     };
 
     return preorder(tree);

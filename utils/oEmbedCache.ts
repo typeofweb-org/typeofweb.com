@@ -1,10 +1,13 @@
-import Fs from 'fs/promises';
+import Fs from 'fs';
+import Fsa from 'fs/promises';
 
 import OembedParser from 'oembed-parser';
 const { extract, setProviderList } = OembedParser;
 import Providers from 'oembed-parser/src/utils/providers.json';
 
 import { host } from '../constants';
+
+import { tryCatch } from './fns';
 
 import type { LinkTypeData, PhotoTypeData, VideoTypeData, RichTypeData } from 'oembed-parser';
 
@@ -46,7 +49,7 @@ export async function getOEmbed(
 ) {
   const cache = await readJson('./oEmbedCache.json');
 
-  if (!force && url in cache && Date.now() - cache[url].updatedAt < STALE_MS) {
+  if (!force && url in cache && (!updateCache || Date.now() - cache[url].updatedAt < STALE_MS)) {
     return cache[url].data;
   }
 
@@ -66,25 +69,17 @@ export async function getOEmbed(
         updatedAt: Date.now(),
       },
     };
-    await Fs.writeFile('./oEmbedCache.json', JSON.stringify(newCache, null, 2));
+    await Fsa.writeFile('./oEmbedCache.json', JSON.stringify(newCache, null, 2));
   }
 
   return data;
 }
 
 async function readJson(path: string): Promise<CachedOEmbed> {
-  const content = await Fs.readFile(path, 'utf8');
+  const content = await Fsa.readFile(path, 'utf8');
   try {
     return JSON.parse(content);
   } catch {
     return {};
-  }
-}
-
-async function tryCatch<T>(fn: () => T | Promise<T>): Promise<T | Error> {
-  try {
-    return await fn();
-  } catch (err) {
-    return err instanceof Error ? err : new Error(String(err));
   }
 }
