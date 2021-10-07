@@ -1,4 +1,3 @@
-import Fs from 'fs';
 import Fsa from 'fs/promises';
 
 import OembedParser from 'oembed-parser';

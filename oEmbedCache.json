@@ -1,10 +1,220 @@
 {
-  "https://twitter.com/dan_abramov/status/1228454264915271683": {
+  "https://typeofweb.com/podzial-komponenty-react-js/": {
     "data": {
-      "url": "https://twitter.com/dan_abramov/status/1228454264915271683",
-      "author_name": "Dan",
-      "author_url": "https://twitter.com/dan_abramov",
-      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">🏫: Self-taught <br>⏳: 9 years<br>🏷: software engineer<br>🌎: UK (US based company)<br>💸: £100k ($130k) base <a href=\"https://t.co/zXgvvmJYZy\">https://t.co/zXgvvmJYZy</a></p>&mdash; Dan (@dan_abramov) <a href=\"https://twitter.com/dan_abramov/status/1228454264915271683?ref_src=twsrc%5Etfw\">February 14, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "version": "1.0",
+      "type": "rich",
+      "title": "Podział na komponenty w React.js",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/pexels-photo-268415.jpeg",
+      "thumbnail_width": 1280,
+      "thumbnail_height": 960,
+      "width": 1280,
+      "height": 1024,
+      "html": "<p>W tej części skupisz się na teorii i praktyce dzielenia zaprojektowanych aplikacji na poszczególne komponenty. Zaczniesz też tworzyć prostą appkę — menedżer kontaktów. W planach wyświetlanie, dodawanie i edycja kontaktów. Ale najpierw — musimy przecież zaprojektować HTML i CSS dla tej aplikacji.</p>"
+    },
+    "updatedAt": 1633536392719
+  },
+  "https://www.instagram.com/p/Bhr0-jtBuEM/": {
+    "data": {
+      "error": {
+        "message": "(#10) To use 'Oembed Read', your use of this endpoint must be reviewed and approved by Facebook. To submit this 'Oembed Read' feature for review please read our documentation on reviewable features: https://developers.facebook.com/docs/apps/review.",
+        "type": "OAuthException",
+        "code": 10,
+        "fbtrace_id": "AnGDYdQtXr_5iof3vZ46hEM"
+      },
+      "provider_name": "Instagram",
+      "provider_url": "https://instagram.com"
+    },
+    "updatedAt": 1633536391411
+  },
+  "https://typeofweb.com/metody-cyklu-zycia-komponentu-react-js/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Metody cyklu życia komponentu w React.js",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/rose-blue-flower-rose-blooms-67636.jpeg",
+      "thumbnail_width": 1280,
+      "thumbnail_height": 847,
+      "width": 1280,
+      "height": 911,
+      "html": "<p>Przy okazji omawiania komponentów będących klasami w React.js, wspomniałem też o możliwości korzystania z metod cyklu życia (lifecycle methods). Chciałbym do tego tematu teraz powrócić. Pokażę jakie metody cyklu życia definiuje React.js, do czego one służą i kiedy mogą się przydać.</p>"
+    },
+    "updatedAt": 1633536392675
+  },
+  "https://typeofweb.com/this-js-kontekst-wywolania-funkcji/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "this w JS — czyli kilka słów o kontekście wywołania funkcji",
+      "author_name": "Wojtek Urbański",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/smilies-2912641_1920.jpg",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 1276,
+      "width": 1920,
+      "height": 1340,
+      "html": "<p>Czy kiedykolwiek spotkałaś(-eś) się z błędem w aplikacji, który wynikał z tego, że \"this\" było ustawione na coś innego, niż się spodziewałaś/eś? Jeśli tak, to nie jesteś jedyna(-y). W swojej karierze programisty miałem okazję występować w roli rekrutera na ponad 160-ciu rozmowach kwalifikacyjnych na stanowiska front-endowe. Jeśli nauczyło mnie to…</p>"
+    },
+    "updatedAt": 1633536392708
+  },
+  "https://typeofweb.com/znajdz-prace-zdalna-tymi-serwisami/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Znajdź pracę zdalną z tymi serwisami",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-297755.jpeg",
+      "thumbnail_width": 1280,
+      "thumbnail_height": 835,
+      "width": 1280,
+      "height": 899,
+      "html": "<p></p>"
+    },
+    "updatedAt": 1633536395626
+  },
+  "https://typeofweb.com/praca-zdalna-obalamy-mity/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Praca zdalna – dla mnie rewelacja! Obalamy mity",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/06/tumblr_oke7b6hmHq1qz4jlco1_1280-2.jpg",
+      "thumbnail_width": 1280,
+      "thumbnail_height": 745,
+      "width": 1280,
+      "height": 809,
+      "html": "<p>Od dłuższego czasu pracuję zdalnie. W poprzedniej firmie miałem biuro, do którego nie musiałem przychodzić, więc w praktyce sporo pracowałem z domu. Od ponad roku pracuję już wyłącznie zdalnie. Jakie są moje dotychczasowe doświadczenia związane z pracą zdalną? Czy praca zdalna jest rozwiązaniem wszystkich moich problemów?</p>"
+    },
+    "updatedAt": 1633536398955
+  },
+  "https://typeofweb.com/flux-i-redux/": {
+    "data": null,
+    "updatedAt": 1633536396666
+  },
+  "https://typeofweb.com/meet-js-summit-2017-nasze-podsumowanie/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "meet.js Summit 2017: Nasze podsumowanie",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2016/04/0Y7A4865-copy-2.jpg",
+      "thumbnail_width": 1600,
+      "thumbnail_height": 1600,
+      "width": 1600,
+      "height": 1664,
+      "html": "<p>meet.js Summit 2017 dobiegł końca! Minął ponad tydzień i opadły już emocje po zakończeniu największej tego typu konferencji w Polsce i przede wszystkim największego meet.js Summit w historii meet.js! Jako organizatorzy, chcielibyśmy tutaj przedstawić naszą relację: Jak to wszystko wyglądało z drugiej strony, czy organizacja konferencji to czysta przyjemność, co…</p>"
+    },
+    "updatedAt": 1633536396617
+  },
+  "https://youtu.be/dX8J0LBMlCY": {
+    "data": {
+      "title": "Hacking przez selektory CSS",
+      "author_name": "Type of Web",
+      "author_url": "https://www.youtube.com/c/Typeofweb",
+      "type": "video",
+      "height": 150,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/dX8J0LBMlCY/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"150\" src=\"https://www.youtube.com/embed/dX8J0LBMlCY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "updatedAt": 1633536394383
+  },
+  "https://youtu.be/rlWYb_b3qi0": {
+    "data": {
+      "title": "Hacking CSS stylowanie tagu script",
+      "author_name": "Type of Web",
+      "author_url": "https://www.youtube.com/c/Typeofweb",
+      "type": "video",
+      "height": 150,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/rlWYb_b3qi0/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"150\" src=\"https://www.youtube.com/embed/rlWYb_b3qi0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "updatedAt": 1633536394613
+  },
+  "https://www.instagram.com/p/BaqtpJgAY9g/": {
+    "data": {
+      "error": {
+        "message": "(#10) To use 'Oembed Read', your use of this endpoint must be reviewed and approved by Facebook. To submit this 'Oembed Read' feature for review please read our documentation on reviewable features: https://developers.facebook.com/docs/apps/review.",
+        "type": "OAuthException",
+        "code": 10,
+        "fbtrace_id": "AtzN8Fqjsjdh05NDsd3w2FD"
+      },
+      "provider_name": "Instagram",
+      "provider_url": "https://instagram.com"
+    },
+    "updatedAt": 1633536395298
+  },
+  "https://typeofweb.com/praca-zdalna-rekrutacja-do-toptal/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Praca zdalna – rekrutacja do Toptal",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/08/pexels-photo-306533.jpeg",
+      "thumbnail_width": 2861,
+      "thumbnail_height": 1455,
+      "width": 2861,
+      "height": 1519,
+      "html": "<p>Na pewno wiele osób kojarzy mnie z firmą Toptal – w szczególności ci, którzy brali udział w lokalnych meetupach w Gdańsku, na których opowiadałem o pracy zdalnej na przykładzie Toptala. W tym wpisie opisuję rekrutację do Toptala, mimo że od kilku miesięcy nie współpracuję już z Toptalem – zrezygnowałem z…</p>"
+    },
+    "updatedAt": 1633536398969
+  },
+  "https://typeofweb.com/czemu-porzucilem-ghost-rzecz-wordpress/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Dlaczego porzuciłem Ghost na rzecz WordPress, ale Ty nie powinieneś?",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/09/wordpress-vs-ghost-typeofweb-1.png",
+      "thumbnail_width": 880,
+      "thumbnail_height": 400,
+      "width": 880,
+      "height": 464,
+      "html": "<p>Od nieco ponad tygodnia możesz podziwiać całkowicie nową wersję strony Type of Web. Do tej pory korzystałem z systemu Ghost, jednak zrezygnowałem z niego na rzecz WordPress. Prawdę mówiąc, nosiłem się z tym zamiarem już od dłuższego czasu… co było moją motywacją? Dlaczego Type of Web lepiej sprawdza się na…</p>"
+    },
+    "updatedAt": 1633536397861
+  },
+  "https://twitter.com/vojtastavik/status/907911237983449088": {
+    "data": {
+      "url": "https://twitter.com/vojtastavik/status/907911237983449088",
+      "author_name": "Vojta Stavik",
+      "author_url": "https://twitter.com/vojtastavik",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I think I’ve fixed the notch issue in landscape 🍾 <a href=\"https://twitter.com/hashtag/iphoneX?src=hash&amp;ref_src=twsrc%5Etfw\">#iphoneX</a> <a href=\"https://t.co/hGytyO3DRV\">pic.twitter.com/hGytyO3DRV</a></p>&mdash; Vojta Stavik (@vojtastavik) <a href=\"https://twitter.com/vojtastavik/status/907911237983449088?ref_src=twsrc%5Etfw\">September 13, 2017</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
       "width": 550,
       "height": null,
       "type": "rich",
@@ -13,7 +223,187 @@
       "provider_url": "http://www.twitter.com/",
       "version": "1.0"
     },
-    "updatedAt": 1633372929710
+    "updatedAt": 1633536396505
+  },
+  "https://typeofweb.com/kilka-faktow-na-temat-promise/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Promise: 9 rzeczy, których nie wiesz na temat Promise",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/promises-cover.png",
+      "thumbnail_width": 1200,
+      "thumbnail_height": 627,
+      "width": 1200,
+      "height": 691,
+      "html": "<p>Każdy programista wcześniej czy później ściera się z problemem asynchroniczności. Jest to temat bardzo złożony, nawet w języku jednowątkowym jakim jest JavaScript. Promise jest abstrakcją, która stara się asynchroniczność ukryć oraz sprawić, aby korzystanie z niej było dla nas przyjemniejsze i bardziej przewidywalne.</p>"
+    },
+    "updatedAt": 1633536396603
+  },
+  "https://typeofweb.com/oferty-pracy-zdalnej/": {
+    "data": null,
+    "updatedAt": 1633536400238
+  },
+  "https://typeofweb.com/map-i-reduce-w-js/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Map i Reduce w JS",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/05/haskell-logo.png",
+      "thumbnail_width": 871,
+      "thumbnail_height": 400,
+      "width": 871,
+      "height": 464,
+      "html": "<p>Napisałem artykuł o obserwablach, ale czegoś mi w nim zabrakło: Objaśnienia tak podstawowych pojęć i funkcji jak map i reduce. Observable na blogu pojawią się wkrótce, a ten krótki wpis ma na celu tylko lekkie wprowadzenie. Bardzo krótko i pobieżnie.</p>"
+    },
+    "updatedAt": 1633536396717
+  },
+  "https://www.instagram.com/p/BZGzyOog5-u/": {
+    "data": {
+      "error": {
+        "message": "(#10) To use 'Oembed Read', your use of this endpoint must be reviewed and approved by Facebook. To submit this 'Oembed Read' feature for review please read our documentation on reviewable features: https://developers.facebook.com/docs/apps/review.",
+        "type": "OAuthException",
+        "code": 10,
+        "fbtrace_id": "A_ykmBkw-L_ximBSZPxFKpW"
+      },
+      "provider_name": "Instagram",
+      "provider_url": "https://instagram.com"
+    },
+    "updatedAt": 1633536397075
+  },
+  "https://typeofweb.com/meet-js-summit-2017-kulisami/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "meet.js Summit 2017 za kulisami",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "width": 640,
+      "height": 544,
+      "html": "<p>Już za nieco ponad 12 godzin rozpoczyna się meet.js Summit 2017. Jest to największa konferencja JavaScript w Polsce i oczywiście największe spotkanie meet.js w historii. W tym krótkim wpisie chciałbym przedstawić kilka liczb i wniosków, a także opowiedzieć jak meet.js wygląda „od kuchni”.</p>"
+    },
+    "updatedAt": 1633536398984
+  },
+  "https://typeofweb.com/weekly-javascript-challenge-1/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "1. Weekly JavaScript Challenge",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "width": 640,
+      "height": 544,
+      "html": "<p>Jakiś czas temu zainspirowałem się dość mocno Facebookową grupą Weekly WebDev Challenge i postanowiłem utworzyć grupę siostrzaną: Weekly JavaScript Challenge. Jest to miejsce, w którym średnio raz w tygodniu będę wrzucał nowe zadanie do wykonania. Celem jest wspólna nauka JavaScriptu, code review i wzajemna pomoc.</p>"
+    },
+    "updatedAt": 1633536400170
+  },
+  "https://typeofweb.com/observable-rxjs/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Observable – rxjs 5",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/05/pexels-photo-237258.jpeg",
+      "thumbnail_width": 887,
+      "thumbnail_height": 400,
+      "width": 887,
+      "height": 464,
+      "html": "<p>To nie będzie wpis na temat teorii reaktywnego programowania funkcyjnego. Nie jest to też wyciąg z dokumentacji rxjs. Ten wpis jest krótkim praktycznym wprowadzeniem do Obserwabli na przykładzie. Zaczynajmy!</p>"
+    },
+    "updatedAt": 1633536400183
+  },
+  "https://typeofweb.com/typescript-czesc-1/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "TypeScript – część 1",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "width": 640,
+      "height": 544,
+      "html": "<p>„TypeScript – typowany nadzbiór JavaScriptu, kompilowany do czystego JavaScriptu” – głosi napis na stronie głównej typescriptlang.org. Używam go praktycznie codziennie, w różnych projektach, z różnymi technologiami. Od pewnego czasu, w dużej mierze za sprawą Angulara 2, ale nie tylko, TS zaczął zyskiwać sporą popularność i uznanie w społeczności webdeveloperów.</p>"
+    },
+    "updatedAt": 1633536403620
+  },
+  "https://youtu.be/QxFLOT0v6lo": {
+    "data": {
+      "title": "❌ Z Gosią Jezierską: Praca dla X-Team i zarządzanie projektem, w którym wciąż zmieniają się osoby 😬",
+      "author_name": "Type of Web",
+      "author_url": "https://www.youtube.com/c/Typeofweb",
+      "type": "video",
+      "height": 113,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/QxFLOT0v6lo/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/QxFLOT0v6lo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "updatedAt": 1633606090865
+  },
+  "https://www.youtube.com/watch?v=Rez5ZRoXn6U": {
+    "data": {
+      "title": "👉 Praca jako programista w wieku 16 lat – rozmowa z Adamem Siekierskim 👶",
+      "author_name": "Type of Web",
+      "author_url": "https://www.youtube.com/c/Typeofweb",
+      "type": "video",
+      "height": 113,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/Rez5ZRoXn6U/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/Rez5ZRoXn6U?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "updatedAt": 1633606092188
+  },
+  "https://typeofweb.com/napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie/": {
+    "data": null,
+    "updatedAt": 1633606093259
+  },
+  "https://typeofweb.com/praca-zdalna-narzedzia/": {
+    "data": null,
+    "updatedAt": 1633606093966
+  },
+  "https://twitter.com/MMiszy/status/1278963932380778499": {
+    "data": {
+      "url": "https://twitter.com/MMiszy/status/1278963932380778499",
+      "author_name": "Michał Miszczyszyn @ typeofweb.com",
+      "author_url": "https://twitter.com/MMiszy",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">.<a href=\"https://twitter.com/heyhey?ref_src=twsrc%5Etfw\">@heyhey</a> occasional infinite loading screen on <a href=\"https://twitter.com/hashtag/iOS?src=hash&amp;ref_src=twsrc%5Etfw\">#iOS</a>. The only way to get rid of it is to kill the app 😕 <a href=\"https://t.co/SOyT2KAPqX\">pic.twitter.com/SOyT2KAPqX</a></p>&mdash; Michał Miszczyszyn @ typeofweb.com (@MMiszy) <a href=\"https://twitter.com/MMiszy/status/1278963932380778499?ref_src=twsrc%5Etfw\">July 3, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606094504
+  },
+  "https://typeofweb.com/podsumowanie-roku-2018-i-plany-na-2019/": {
+    "data": null,
+    "updatedAt": 1633606094637
   },
   "https://twitter.com/MMiszy/status/1278769758377332737": {
     "data": {
@@ -29,7 +419,39 @@
       "provider_url": "http://www.twitter.com/",
       "version": "1.0"
     },
-    "updatedAt": 1633372929715
+    "updatedAt": 1633606094778
+  },
+  "https://twitter.com/ZacSweers/status/1228205724255154177": {
+    "data": {
+      "url": "https://twitter.com/ZacSweers/status/1228205724255154177",
+      "author_name": "Zac Sweers",
+      "author_url": "https://twitter.com/ZacSweers",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Pay inequality is a big problem in tech, especially for underrepresented groups like women and minorities. The best way you can help is by sharing yours. I’ll go first.<br><br>🏫: B.A. - C.S.<br>⏳: 5.5 years<br>🏷: Staff/G06<br>🌎: NYC<br>💸: $205k base, $500k equity over 4 yrs<a href=\"https://twitter.com/hashtag/KnowYourWorth?src=hash&amp;ref_src=twsrc%5Etfw\">#KnowYourWorth</a></p>&mdash; Zac Sweers (@ZacSweers) <a href=\"https://twitter.com/ZacSweers/status/1228205724255154177?ref_src=twsrc%5Etfw\">February 14, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606095813
+  },
+  "https://twitter.com/dan_abramov/status/1228454264915271683": {
+    "data": {
+      "url": "https://twitter.com/dan_abramov/status/1228454264915271683",
+      "author_name": "Dan",
+      "author_url": "https://twitter.com/dan_abramov",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">🏫: Self-taught <br>⏳: 9 years<br>🏷: software engineer<br>🌎: UK (US based company)<br>💸: £100k ($130k) base <a href=\"https://t.co/zXgvvmJYZy\">https://t.co/zXgvvmJYZy</a></p>&mdash; Dan (@dan_abramov) <a href=\"https://twitter.com/dan_abramov/status/1228454264915271683?ref_src=twsrc%5Etfw\">February 14, 2020</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606096083
   },
   "https://twitter.com/NikkitaFTW/status/1228450760926560273": {
     "data": {
@@ -45,7 +467,20 @@
       "provider_url": "http://www.twitter.com/",
       "version": "1.0"
     },
-    "updatedAt": 1633372929964
+    "updatedAt": 1633606096330
+  },
+  "https://www.instagram.com/p/B4PQuO7D_Z5/": {
+    "data": {
+      "error": {
+        "message": "(#10) To use 'Oembed Read', your use of this endpoint must be reviewed and approved by Facebook. To submit this 'Oembed Read' feature for review please read our documentation on reviewable features: https://developers.facebook.com/docs/apps/review.",
+        "type": "OAuthException",
+        "code": 10,
+        "fbtrace_id": "ALdgG5foMcIynFhro6YpCeO"
+      },
+      "provider_name": "Instagram",
+      "provider_url": "https://instagram.com"
+    },
+    "updatedAt": 1633606096474
   },
   "https://twitter.com/kentcdodds/status/1228455789427404800": {
     "data": {
@@ -61,7 +496,23 @@
       "provider_url": "http://www.twitter.com/",
       "version": "1.0"
     },
-    "updatedAt": 1633372930221
+    "updatedAt": 1633606096611
+  },
+  "https://twitter.com/ReactiveConf/status/1190279565513568258": {
+    "data": {
+      "url": "https://twitter.com/ReactiveConf/status/1190279565513568258",
+      "author_name": "ReactiveConf",
+      "author_url": "https://twitter.com/ReactiveConf",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Such a combination! <a href=\"https://twitter.com/hashtag/ReasonML?src=hash&amp;ref_src=twsrc%5Etfw\">#ReasonML</a> w/ <a href=\"https://twitter.com/typeofweb?ref_src=twsrc%5Etfw\">@typeofweb</a> 😎<a href=\"https://twitter.com/hashtag/workshop?src=hash&amp;ref_src=twsrc%5Etfw\">#workshop</a> by <a href=\"https://twitter.com/MMiszy?ref_src=twsrc%5Etfw\">@MMiszy</a> 👌<a href=\"https://twitter.com/hashtag/GoReactive?src=hash&amp;ref_src=twsrc%5Etfw\">#GoReactive</a> <a href=\"https://t.co/InGOHKjgu6\">pic.twitter.com/InGOHKjgu6</a></p>&mdash; ReactiveConf (@ReactiveConf) <a href=\"https://twitter.com/ReactiveConf/status/1190279565513568258?ref_src=twsrc%5Etfw\">November 1, 2019</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606096756
   },
   "https://twitter.com/jaredpalmer/status/1229035731408113669": {
     "data": {
@@ -77,6 +528,124 @@
       "provider_url": "http://www.twitter.com/",
       "version": "1.0"
     },
-    "updatedAt": 1633372930487
+    "updatedAt": 1633606096875
+  },
+  "https://typeofweb.com/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/": {
+    "data": null,
+    "updatedAt": 1633606097516
+  },
+  "https://typeofweb.com/komunikacja-z-api-w-react-js/": {
+    "data": null,
+    "updatedAt": 1633606097567
+  },
+  "https://typeofweb.com/react-js-w-przykladach-filtrowanie-statycznej-listy/": {
+    "data": null,
+    "updatedAt": 1633606098118
+  },
+  "https://typeofweb.com/podsumowanie-roku-2017-plany-2018/": {
+    "data": null,
+    "updatedAt": 1633606098260
+  },
+  "https://typeofweb.com/x-team-opis-rekrutacja-opinia/": {
+    "data": null,
+    "updatedAt": 1633606098270
+  },
+  "https://typeofweb.com/24-blogi-ktore-musi-sledzic-javascript-developer/": {
+    "data": null,
+    "updatedAt": 1633606098304
+  },
+  "https://twitter.com/prchdk/status/1056960391543062528": {
+    "data": {
+      "url": "https://twitter.com/prchdk/status/1056960391543062528",
+      "author_name": "Pavel",
+      "author_url": "https://twitter.com/prchdk",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Took <a href=\"https://twitter.com/dan_abramov?ref_src=twsrc%5Etfw\">@dan_abramov</a>&#39;s code from <a href=\"https://twitter.com/hashtag/ReactConf2018?src=hash&amp;ref_src=twsrc%5Etfw\">#ReactConf2018</a> and visualised it so you could see the benefits that React Hooks bring us. <a href=\"https://t.co/dKyOQsG0Gd\">pic.twitter.com/dKyOQsG0Gd</a></p>&mdash; Pavel (@prchdk) <a href=\"https://twitter.com/prchdk/status/1056960391543062528?ref_src=twsrc%5Etfw\">October 29, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606098470
+  },
+  "https://typeofweb.com/krotka-relacja-z-reactiveconf-2017/": {
+    "data": null,
+    "updatedAt": 1633606099191
+  },
+  "https://twitter.com/gitlab/status/1003409836170547200": {
+    "data": {
+      "url": "https://twitter.com/gitlab/status/1003409836170547200",
+      "author_name": "🦊 GitLab",
+      "author_url": "https://twitter.com/gitlab",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">We&#39;re seeing 10x the normal daily amount of repositories <a href=\"https://twitter.com/hashtag/movingtogitlab?src=hash&amp;ref_src=twsrc%5Etfw\">#movingtogitlab</a> <a href=\"https://t.co/7AWH7BmMvM\">https://t.co/7AWH7BmMvM</a> We&#39;re scaling our fleet to try to stay up. Follow the progress on <a href=\"https://t.co/hN0ce379SC\">https://t.co/hN0ce379SC</a> and <a href=\"https://twitter.com/movingtogitlab?ref_src=twsrc%5Etfw\">@movingtogitlab</a></p>&mdash; 🦊 GitLab (@gitlab) <a href=\"https://twitter.com/gitlab/status/1003409836170547200?ref_src=twsrc%5Etfw\">June 3, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606100626
+  },
+  "https://typeofweb.com/grupy-facebook-front-end-developer/": {
+    "data": null,
+    "updatedAt": 1633606100962
+  },
+  "https://twitter.com/migueldeicaza/status/1003626301977026561": {
+    "data": {
+      "url": "https://twitter.com/migueldeicaza/status/1003626301977026561",
+      "author_name": "Miguel “mask and vax” de Icaza",
+      "author_url": "https://twitter.com/migueldeicaza",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Satya looked at Microsoft’s bill from all the code we host on GitHub and figured it would be cheaper to buy the company.</p>&mdash; Miguel “mask and vax” de Icaza (@migueldeicaza) <a href=\"https://twitter.com/migueldeicaza/status/1003626301977026561?ref_src=twsrc%5Etfw\">June 4, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606100989
+  },
+  "https://twitter.com/kentcdodds/status/977018512689455106": {
+    "data": {
+      "url": "https://twitter.com/kentcdodds/status/977018512689455106",
+      "author_name": "Kent C. Dodds",
+      "author_url": "https://twitter.com/kentcdodds",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">The more your tests resemble the way your software is used, the more confidence they can give you.</p>&mdash; Kent C. Dodds (@kentcdodds) <a href=\"https://twitter.com/kentcdodds/status/977018512689455106?ref_src=twsrc%5Etfw\">March 23, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "http://www.twitter.com/",
+      "version": "1.0"
+    },
+    "updatedAt": 1633606102200
+  },
+  "https://www.youtube.com/watch?v=H7rQGLQTgXw": {
+    "data": {
+      "title": "X-Outpost: Dominican Republic",
+      "author_name": "X-Team",
+      "author_url": "https://www.youtube.com/c/XTeam",
+      "type": "video",
+      "height": 113,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/H7rQGLQTgXw/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/H7rQGLQTgXw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "updatedAt": 1633606102614
+  },
+  "https://typeofweb.com/wzorce-projektowe-dependency-injection/": {
+    "data": null,
+    "updatedAt": 1633606102656
   }
 }

@@ -162,7 +162,7 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
 
       const oEmbed = await getOEmbed(href, {
         updateCache: !!process.env.UPDATE_OEMBED,
-        force: false,
+        force: !!process.env.FORCE_OEMBED,
       });
 
       if (!oEmbed) {
@@ -206,7 +206,7 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
         return n;
       }) as HtmlNode[] | null;
 
-      const shouldLink = oEmbed.type === 'rich' && oEmbed.html;
+      const shouldLinkWholeCard = oEmbed.type === 'rich' && oEmbed.html;
 
       const replacement: FigureNode = {
         tagName: 'figure',
@@ -223,10 +223,25 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
                 type: 'element',
                 tagName: 'cite',
                 children: [
-                  {
-                    type: 'text',
-                    value: href,
-                  },
+                  shouldLinkWholeCard
+                    ? {
+                        type: 'text',
+                        value: href,
+                      }
+                    : {
+                        type: 'element',
+                        tagName: 'a',
+                        properties: {
+                          href,
+                          title: oEmbed.title,
+                        },
+                        children: [
+                          {
+                            type: 'text',
+                            value: href,
+                          },
+                        ],
+                      },
                 ],
               },
               {
@@ -235,13 +250,13 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
                 properties: { class: 'title' },
                 children: oEmbed.title ? [{ type: 'text', value: oEmbed.title }] : [],
               },
-              ...(elements ?? []),
+              ...(elements && elements.length > 0 && oEmbed.type === 'rich' ? elements : []),
             ],
           },
         ],
       };
 
-      if (shouldLink) {
+      if (shouldLinkWholeCard) {
         return {
           type: 'element',
           tagName: 'a',
