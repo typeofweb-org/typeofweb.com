@@ -21,7 +21,8 @@ html,
   background-size: 106px;
   background-position: center -15px;
 
-  @apply pt-12 lg:pt-16;
+  /* @apply pt-12 lg:pt-16; */
+  @apply pt-24;
 }
 
 .size-full {
