@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { memo } from 'react';
 
 import ClickIcon from '../../images/social/click.svg';
@@ -65,9 +66,11 @@ export const SocialWidget = memo(() => {
       </ul>
       <ul className="flex flex-row flex-wrap gap-3 justify-between">
         <li className="ml-0 mt-7 pl-0 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
-          <a href="/wspolpraca">
-            <ClickIcon className="inline-block mr-2 w-8 stroke-current" />O mnie i współpraca
-          </a>
+          <Link href="/wspolpraca">
+            <a>
+              <ClickIcon className="inline-block mr-2 w-8 stroke-current" />O mnie i współpraca
+            </a>
+          </Link>
         </li>
       </ul>
     </Widget>
