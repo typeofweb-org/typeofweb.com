@@ -151,18 +151,18 @@ export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>
 
 export async function getExcerptAndContent(
   post: PostByPermalink,
-  options: { readonly onlyExcerpt: true },
+  options: { readonly onlyExcerpt: true; readonly parseOembed: boolean },
 ): Promise<{ readonly excerpt: string; readonly isMdx: boolean }>;
 export async function getExcerptAndContent(
   post: PostByPermalink,
-  options: { readonly onlyExcerpt: false },
+  options: { readonly onlyExcerpt: false; readonly parseOembed: boolean },
 ): Promise<
   | { readonly excerpt: string; readonly isMdx: true; readonly content: MDXRemoteSerializeResult }
   | { readonly excerpt: string; readonly isMdx: false; readonly content: string }
 >;
 export async function getExcerptAndContent(
   post: PostByPermalink,
-  options: { readonly onlyExcerpt: boolean },
+  options: { readonly onlyExcerpt: boolean; readonly parseOembed: boolean },
 ): Promise<
   | { readonly excerpt: string; readonly isMdx: boolean }
   | { readonly excerpt: string; readonly isMdx: true; readonly content: MDXRemoteSerializeResult }
@@ -180,7 +180,7 @@ export async function getExcerptAndContent(
   //   throw new Error('????');
   // }
 
-  const excerptString = toHtml(excerpt ?? '', { excerpt: true });
+  const excerptString = await toHtml(excerpt ?? '', { excerpt: true, parseOembed: options.parseOembed });
   const ex = trimExcerpt(excerptString);
 
   if (options.onlyExcerpt) {
@@ -193,14 +193,14 @@ export async function getExcerptAndContent(
   try {
     return {
       excerpt: excerptString,
-      content: await toMdx(content, post.data),
+      content: await toMdx(content, post.data, { parseOembed: options.parseOembed }),
       isMdx: true as const,
     };
   } catch (err) {
-    console.log(post.data.permalink, err);
+    // console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
-      content: toHtml(content, { excerpt: false }).toString('utf-8'),
+      content: (await toHtml(content, { excerpt: false, parseOembed: options.parseOembed })).toString('utf-8'),
       isMdx: false as const,
     };
   }

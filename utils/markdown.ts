@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions, functional/prefer-readonly-type -- ok */
 // import RehypeToc from '@jsdevtools/rehype-toc';
 import RehypePrism from '@mapbox/rehype-prism';
+import Bluebird from 'bluebird';
 import * as HastUtilToString from 'hast-util-to-string';
 import { serialize } from 'next-mdx-remote/serialize';
 import RehypeAutolinkHeadings from 'rehype-autolink-headings';
 import RehypeKatex from 'rehype-katex';
+import RehypeParse from 'rehype-parse';
 import RehypeRaw from 'rehype-raw';
 import RehypeSlug from 'rehype-slug';
 import RehypeStringify from 'rehype-stringify';
@@ -17,6 +19,10 @@ import RemarkRehype from 'remark-rehype';
 import * as Unified from 'unified';
 import { visit } from 'unist-util-visit';
 
+import { tryCatch } from './fns';
+import { getOEmbed } from './oEmbedCache';
+
+import type { RootContent } from 'hast';
 import type { Root } from 'hast-util-to-string';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { Node, Parent } from 'unist';
@@ -24,7 +30,7 @@ import type { Node, Parent } from 'unist';
 interface HtmlNode extends Node {
   tagName: string;
   type: 'element';
-  children?: HtmlNode[];
+  children?: (HtmlNode | TextNode)[];
   properties?: {
     [prop: string]: string[] | string | undefined;
   };
@@ -49,6 +55,9 @@ interface PNode extends HtmlNode {
 }
 interface ImgNode extends HtmlNode {
   tagName: 'img';
+}
+interface FigureNode extends HtmlNode {
+  tagName: 'figure';
 }
 interface MdxPNode extends MdxNode {
   name: 'p';
@@ -75,6 +84,11 @@ interface PathNode extends HtmlNode {
   };
 }
 
+interface TextNode extends Node {
+  type: 'text';
+  value: string;
+}
+
 function isPreNode(node: Node): node is PreNode {
   return node && node.type === 'element' && (node as PreNode).tagName === 'pre';
 }
@@ -98,6 +112,9 @@ function isMdxPNode(node: Node): node is MdxPNode {
 function isPathNode(node: Node): node is PathNode {
   return node && node.type === 'element' && (node as PathNode).tagName === 'path';
 }
+function isTextNode(node: Node): node is TextNode {
+  return node && node.type === 'text';
+}
 
 function isParentNode(node: Node): node is Parent {
   return node && 'children' in node;
@@ -120,6 +137,138 @@ function wrapLinksInSpans(): import('unified').Transformer {
         });
       }
       return node;
+    };
+
+    return preorder(tree);
+  };
+}
+
+function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
+  return function transformer(tree) {
+    const preorder = async (node: Node): Promise<HtmlNode | Node> => {
+      if (isParentNode(node) && node.type === 'root') {
+        node.children = await Bluebird.mapSeries(node.children, (child) => preorder(child));
+        return node;
+      }
+      if (!isPNode(node) || node.children?.length !== 1 || !isAnchorNode(node.children[0])) {
+        return node;
+      }
+
+      const anchorNode = node.children[0];
+      const href = anchorNode.properties?.href;
+      if (!href || (anchorNode.children?.[0] as unknown as TextNode)?.value !== href) {
+        return node;
+      }
+
+      const oEmbed = await getOEmbed(href, {
+        updateCache: !!process.env.UPDATE_OEMBED,
+        force: !!process.env.FORCE_OEMBED,
+      });
+
+      if (!oEmbed) {
+        return node;
+      }
+
+      const errorOrRoot =
+        oEmbed.type === 'video' || oEmbed.type === 'rich'
+          ? tryCatch(() => Unified.unified().use(RehypeParse).parse(oEmbed.html))
+          : null;
+      const isError = errorOrRoot instanceof Error;
+      if (isError) {
+        console.error(errorOrRoot);
+      }
+      const rest = isError ? null : errorOrRoot;
+
+      const findBody = (c: RootContent): RootContent[] =>
+        c.type === 'element' && c.tagName === 'body' ? c.children : isParentNode(c) ? c.children.flatMap(findBody) : [];
+
+      const cover: HtmlNode = {
+        type: 'element',
+        tagName: 'img',
+        properties: {
+          src: oEmbed.thumbnail_url,
+          width: String(oEmbed.thumbnail_width),
+          height: String(oEmbed.thumbnail_height),
+          title: `Otwórz ${oEmbed.title}`,
+        },
+      };
+
+      const elements = rest?.children.flatMap(findBody).map((n) => {
+        if (n.type === 'element' && n.tagName === 'iframe') {
+          const aspect = Number(n.properties?.width) / Number(n.properties?.height) || 1.69;
+          return {
+            type: 'element',
+            tagName: 'div',
+            properties: { style: `aspect-ratio: ${aspect};` },
+            children: [n],
+          };
+        }
+        return n;
+      }) as HtmlNode[] | null;
+
+      const shouldLinkWholeCard = oEmbed.type === 'rich' && oEmbed.html;
+
+      const replacement: FigureNode = {
+        tagName: 'figure',
+        type: 'element',
+        properties: { class: 'oembed' },
+        children: [
+          ...(oEmbed.type === 'rich' ? [cover] : []),
+          ...(elements && elements.length > 0 && oEmbed.type !== 'rich' ? elements : []),
+          {
+            type: 'element',
+            tagName: 'figcaption',
+            children: [
+              {
+                type: 'element',
+                tagName: 'cite',
+                children: [
+                  shouldLinkWholeCard
+                    ? {
+                        type: 'text',
+                        value: href,
+                      }
+                    : {
+                        type: 'element',
+                        tagName: 'a',
+                        properties: {
+                          href,
+                          title: oEmbed.title,
+                        },
+                        children: [
+                          {
+                            type: 'text',
+                            value: href,
+                          },
+                        ],
+                      },
+                ],
+              },
+              {
+                type: 'element',
+                tagName: 'p',
+                properties: { class: 'title' },
+                children: oEmbed.title ? [{ type: 'text', value: oEmbed.title }] : [],
+              },
+              ...(elements && elements.length > 0 && oEmbed.type === 'rich' ? elements : []),
+            ],
+          },
+        ],
+      };
+
+      if (shouldLinkWholeCard) {
+        return {
+          type: 'element',
+          tagName: 'a',
+          properties: {
+            href,
+            title: oEmbed.title,
+          },
+          children: [replacement],
+        };
+      }
+
+      return replacement;
     };
 
     return preorder(tree);
@@ -304,16 +453,19 @@ export const commonRemarkPlugins = [RemarkFrontmatter, RemarkMath, RemarkGfm, Re
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],
-  wrapLinksInSpans,
+  collapseParagraphs,
   RehypeSlug,
   RehypeAutolinkHeadings,
   RehypePrism,
   addDataToCodeBlocks,
-  collapseParagraphs,
   imageAttributes,
 ];
 
-export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
+export function toMdx(
+  source: string,
+  frontmatter: object,
+  options: { parseOembed: boolean },
+): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> {
   return serialize(
     source
       .replace(/style="(.*?)"/g, (match, styles: string) => {
@@ -339,42 +491,52 @@ export function toMdx(source: string, frontmatter: object): Promise<MDXRemoteSer
       scope: { data: frontmatter },
       mdxOptions: {
         remarkPlugins: [...commonRemarkPlugins],
-        rehypePlugins: [...commonRehypePlugins, fixSvgPaths as any],
+        rehypePlugins: [
+          ...commonRehypePlugins,
+          ...(options.parseOembed ? [replaceFreeLinkWithOEmbed] : []),
+          wrapLinksInSpans,
+          fixSvgPaths as any,
+        ],
       },
     },
   );
 }
 
-export function toHtml(
+export async function toHtml(
   source: string,
-  options: { excerpt: false },
-): ReturnType<import('unified').Processor['processSync']>;
-export function toHtml(source: string, options: { excerpt: true }): string;
-export function toHtml(
+  options: { excerpt: false; readonly parseOembed: boolean },
+): Promise<ReturnType<import('unified').Processor['process']>>;
+export async function toHtml(
   source: string,
-  options: { excerpt: boolean } = { excerpt: false },
-): string | ReturnType<import('unified').Processor['processSync']> {
-  let processor: Unified.Processor = Unified.unified().use(RemarkParse);
-  commonRemarkPlugins.forEach((plugin) => (processor = processor.use(plugin)));
-  processor = processor.use(RemarkRehype, { allowDangerousHtml: true }).use(RehypeRaw);
+  options: { excerpt: true; readonly parseOembed: boolean },
+): Promise<string>;
+export async function toHtml(
+  source: string,
+  options: { excerpt: boolean; readonly parseOembed: boolean },
+): Promise<string | ReturnType<import('unified').Processor['process']>> {
+  const plugins = [
+    RemarkParse,
+    ...commonRemarkPlugins,
+    [RemarkRehype, { allowDangerousHtml: true }],
+    RehypeRaw,
+    ...(options.excerpt ? [getOnlyFirstPara, addLeadToFirstParagraph] : []),
+    ...commonRehypePlugins,
+    ...(options.parseOembed ? [replaceFreeLinkWithOEmbed] : []),
+    wrapLinksInSpans,
+  ];
 
-  if (options.excerpt) {
-    processor = processor.use(getOnlyFirstPara).use(addLeadToFirstParagraph);
-  }
-
-  commonRehypePlugins.forEach(
-    (plugin) =>
-      (processor = Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin as any)),
-  );
+  const processor: Unified.Processor = plugins.reduce<Unified.Processor>((processor, plugin) => {
+    return Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin as any);
+  }, Unified.unified());
 
   if (options.excerpt) {
     const parsed = processor.parse(source);
-    const result = processor.runSync(parsed);
+    const result = await processor.run(parsed);
     return HastUtilToString.toString(result as Root);
   }
 
   // @ts-ignore
-  return processor.use(RehypeStringify).processSync(source);
+  return processor.use(RehypeStringify).process(source);
 }
 // snake case to camel case
 function toCamelCase(str: string): any {

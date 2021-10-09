@@ -9,35 +9,37 @@ async function run() {
 
   console.log(
     JSON.stringify(
-      data.posts.map((p) => {
-        const category =
-          'categories' in p.data
-            ? categoriesToMainCategory(p.data.categories)
-            : 'category' in p.data
-            ? categorySlugToCategory(p.data.category)
-            : null;
+      await Promise.all(
+        data.posts.map(async (p) => {
+          const category =
+            'categories' in p.data
+              ? categoriesToMainCategory(p.data.categories)
+              : 'category' in p.data
+              ? categorySlugToCategory(p.data.category)
+              : null;
 
-        const series = typeof p.data.series === 'string' ? seriesSlugToSeries(p.data.series) : p.data.series;
+          const series = typeof p.data.series === 'string' ? seriesSlugToSeries(p.data.series) : p.data.series;
 
-        const [excerpt, content] = splitContent(p.content);
+          const [excerpt, content] = splitContent(p.content);
 
-        const compiledContent = toHtml(content, { excerpt: false }).toString('utf-8');
-        const compiledExcerpt = toHtml(excerpt, { excerpt: true });
-        return {
-          objectID: p.data.permalink,
-          title: p.data.title,
-          date: p.data.date,
-          type: p.data.type,
-          permalink: p.data.permalink,
-          authors: p.data.authors,
-          seo: p.data.seo,
-          excerpt: trimExcerpt(compiledExcerpt),
-          content: compiledContent.replace(/<[^>]+>/g, ''),
-          img: p.data.thumbnail,
-          category,
-          series,
-        };
-      }),
+          const compiledContent = (await toHtml(content, { excerpt: false, parseOembed: false })).toString('utf-8');
+          const compiledExcerpt = await toHtml(excerpt, { excerpt: true, parseOembed: false });
+          return {
+            objectID: p.data.permalink,
+            title: p.data.title,
+            date: p.data.date,
+            type: p.data.type,
+            permalink: p.data.permalink,
+            authors: p.data.authors,
+            seo: p.data.seo,
+            excerpt: trimExcerpt(compiledExcerpt),
+            content: compiledContent.replace(/<[^>]+>/g, ''),
+            img: p.data.thumbnail,
+            category,
+            series,
+          };
+        }),
+      ),
     ),
   );
 }

@@ -13,12 +13,14 @@ async function generateFeed() {
 
   const { posts: allPosts } = await readAllPosts({ includePages: false });
   const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default.authors;
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: false })))).map(
-    (p) => ({
-      ...p,
-      content: '',
-    }),
-  );
+  const posts = (
+    await Promise.all(
+      allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: false, parseOembed: false })),
+    )
+  ).map((p) => ({
+    ...p,
+    content: '',
+  }));
 
   const feed = new Feed({
     title: siteName,

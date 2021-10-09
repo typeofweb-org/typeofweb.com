@@ -48,12 +48,12 @@ async function getStaticPropsForCategory(category: string) {
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
 
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
-    (p) => ({
-      ...p,
-      content: '',
-    }),
-  );
+  const posts = (
+    await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true, parseOembed: false })))
+  ).map((p) => ({
+    ...p,
+    content: '',
+  }));
 
   return { props: { posts, page, postsCount, permalink: category, pageKind: 'index' as const } };
 }
@@ -66,7 +66,12 @@ async function getStaticPropsForSingleArticle(permalink: string) {
   }
 
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
-  return { props: { ...(await postToProps(post, authorsJson, { onlyExcerpt: false })), pageKind: post.data.type } };
+  return {
+    props: {
+      ...(await postToProps(post, authorsJson, { onlyExcerpt: false, parseOembed: true })),
+      pageKind: post.data.type,
+    },
+  };
 }
 
 const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {

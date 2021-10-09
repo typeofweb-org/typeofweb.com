@@ -3,6 +3,7 @@ import { memo } from 'react';
 
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
+import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
@@ -14,7 +15,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
 
   return (
     <>
-      <a href="#main-content" className="sr-only">
+      <a href="#main-content" className="focus:not-sr-only sr-only">
         Skocz do treści
       </a>
       <header className="ios:transcluent-white after:absolute fixed z-10 after:bottom-0 top-0 flex flex-row items-stretch justify-center pb-1 after:w-full w-full after:h-1 h-12 bg-gray-100 after:bg-gray-200 shadow overflow-hidden">
@@ -47,6 +48,15 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
+      <div className="fixed z-10 top-12 flex items-center justify-center px-6 py-1 w-full text-center bg-white">
+        <p>
+          <LinkUnderlineEffect>
+            <a href="https://tofw.pl/ibm-think-summit" className="text-blue-500">
+              Darmowa konferencja online IBM Think Summit: 13-14 października 2021!
+            </a>
+          </LinkUnderlineEffect>
+        </p>
+      </div>
     </>
   );
 });

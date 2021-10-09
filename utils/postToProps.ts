@@ -111,17 +111,19 @@ function findCurrentPostIndex(
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  { onlyExcerpt }: { readonly onlyExcerpt: true },
+  options: { readonly onlyExcerpt: true; readonly parseOembed: boolean },
 ): Promise<PostPropsOnlyExcerpt>;
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  { onlyExcerpt }: { readonly onlyExcerpt: false },
+  options: { readonly onlyExcerpt: false; readonly parseOembed: boolean },
 ): Promise<PostProps>;
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  options: { readonly onlyExcerpt: true } | { readonly onlyExcerpt: false } = { onlyExcerpt: false } as const,
+  options:
+    | { readonly onlyExcerpt: true; readonly parseOembed: boolean }
+    | { readonly onlyExcerpt: false; readonly parseOembed: boolean },
 ): Promise<PostPropsOnlyExcerpt | PostProps> {
   // @ts-expect-error seriously, TypeScript, stop doing this
   const contentObj = await getExcerptAndContent(post, options);
