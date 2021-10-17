@@ -16,7 +16,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const permalinks = await getImportantPermalinks();
 
   return {
-    paths: permalinks.map((permalink) => {
+    paths: permalinks.slice(0, 15).map((permalink) => {
       return {
         params: { permalink },
       };

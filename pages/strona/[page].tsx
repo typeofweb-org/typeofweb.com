@@ -5,7 +5,7 @@ import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   // const { postsCount } = await readAllPosts({ includePages: false });
 
   // const maxPages = Math.ceil(postsCount / pageSize);
