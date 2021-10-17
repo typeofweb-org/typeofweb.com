@@ -6,14 +6,14 @@ import { TwoColumns } from '../../components/templates/TwoColumns';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import { permalinkIsCategory } from '../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
-import { getAllPermalinks, getPostByPermalink } from '../../utils/wordpress';
+import { getImportantPermalinks, getPostByPermalink } from '../../utils/wordpress';
 import IndexPage from '../index';
 
 import type { InferGetStaticPropsType } from '../../types';
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const permalinks = await getAllPermalinks();
+  const permalinks = await getImportantPermalinks();
 
   return {
     paths: permalinks.map((permalink) => {
@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         params: { permalink },
       };
     }),
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 

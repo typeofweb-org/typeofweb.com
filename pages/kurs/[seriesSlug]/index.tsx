@@ -1,19 +1,20 @@
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
-import { getSeriesPermalinks } from '../../../utils/wordpress';
+// import { getSeriesPermalinks } from '../../../utils/wordpress';
 import IndexPage from '../../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const seriesSlugs = await getSeriesPermalinks();
+export const getStaticPaths: GetStaticPaths = () => {
+  // const seriesSlugs = await getSeriesPermalinks();
 
   return {
-    paths: seriesSlugs.map((seriesSlug) => {
-      return {
-        params: { seriesSlug },
-      };
-    }),
-    fallback: false,
+    // paths:seriesSlugs.map((seriesSlug) => {
+    //   return {
+    //     params: { seriesSlug },
+    //   };
+    // }),
+    paths: [],
+    fallback: 'blocking',
   };
 };
 

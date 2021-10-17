@@ -131,6 +131,16 @@ export async function getAllPermalinks() {
   ];
 }
 
+export async function getImportantPermalinks() {
+  const { posts } = await readAllPosts({ includePages: true, limit: 15, skip: 0 });
+
+  return [
+    ...allCategories.map((n) => n.slug),
+    ...allSeries.map((s) => s.slug),
+    ...posts.map((fm) => fm.data.permalink),
+  ];
+}
+
 export async function getSeriesPermalinks() {
   const { posts } = await readAllPosts({ includePages: false });
   const seriesSlugs = [
