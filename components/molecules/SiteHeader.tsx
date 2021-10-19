@@ -3,7 +3,6 @@ import { memo } from 'react';
 
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
-import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
