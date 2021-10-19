@@ -13,6 +13,7 @@ const run = async () => {
   const results = await Bluebird.map(
     posts.posts,
     async (post) => {
+      // @todo cache ?
       console.log(`Processing ${post.data.title}…`);
       const count = await fetchCommentsCount(post.data.title);
       const result: readonly [title: string, count: number] = [post.data.title, count];

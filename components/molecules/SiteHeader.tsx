@@ -48,7 +48,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
-      <div className="fixed z-10 top-12 flex items-center justify-center px-6 py-1 w-full text-center bg-white">
+      {/* <div className="fixed z-10 top-12 flex items-center justify-center px-6 py-1 w-full text-center bg-white">
         <p>
           🔴 Live na temat <strong>pracy zdalnej</strong> i mojego <strong>odejścia z X-Teamu</strong>:
           18.&nbsp;października&nbsp;o&nbsp;12:00! 🕛{' '}
@@ -73,7 +73,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
             </a>
           </LinkUnderlineEffect>
         </p>
-      </div>
+      </div> */}
     </>
   );
 });
