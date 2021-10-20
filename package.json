@@ -13,7 +13,7 @@
     "migrate-wordpress-comments": "yarn ts-node-esm migrateCommentsToGitHubDiscussions.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@giscus/react": "github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
     "@octokit/auth-app": "3.6.0",

@@ -111,30 +111,49 @@ function findCurrentPostIndex(
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  options: { readonly onlyExcerpt: true; readonly parseOembed: boolean },
+  options: {
+    readonly onlyExcerpt: true;
+    readonly parseOembed: boolean;
+    readonly includeCommentsCount: boolean;
+    readonly includePlaiceholder: boolean;
+  },
 ): Promise<PostPropsOnlyExcerpt>;
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  options: { readonly onlyExcerpt: false; readonly parseOembed: boolean },
+  options: {
+    readonly onlyExcerpt: false;
+    readonly parseOembed: boolean;
+    readonly includeCommentsCount: boolean;
+    readonly includePlaiceholder: boolean;
+  },
 ): Promise<PostProps>;
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
   options:
-    | { readonly onlyExcerpt: true; readonly parseOembed: boolean }
-    | { readonly onlyExcerpt: false; readonly parseOembed: boolean },
+    | {
+        readonly onlyExcerpt: true;
+        readonly parseOembed: boolean;
+        readonly includeCommentsCount: boolean;
+        readonly includePlaiceholder: boolean;
+      }
+    | {
+        readonly onlyExcerpt: false;
+        readonly parseOembed: boolean;
+        readonly includeCommentsCount: boolean;
+        readonly includePlaiceholder: boolean;
+      },
 ): Promise<PostPropsOnlyExcerpt | PostProps> {
   // @ts-expect-error seriously, TypeScript, stop doing this
   const contentObj = await getExcerptAndContent(post, options);
 
-  const allPosts = await readAllPosts({ includePages: false });
+  const allPosts = await readAllPosts({ includePages: false, includeCommentsCount: false });
 
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
-  const { base64: blurDataURL = null, img = null } = post.data.thumbnail
-    ? await getPlaiceholder(post.data.thumbnail.url)
-    : {};
+  const { base64: blurDataURL = null, img = null } =
+    options.includePlaiceholder && post.data.thumbnail ? await getPlaiceholder(post.data.thumbnail.url) : {};
 
   const mainCategory =
     'category' in post.data
@@ -145,7 +164,10 @@ export async function postToProps(
 
   const seriesLinks = post.data.series
     ? (
-        await readAllPosts({ series: typeof post.data.series === 'string' ? post.data.series : post.data.series?.slug })
+        await readAllPosts({
+          series: typeof post.data.series === 'string' ? post.data.series : post.data.series?.slug,
+          includeCommentsCount: options.includeCommentsCount,
+        })
       ).posts
         .map((p) => ({
           permalink: p.data.permalink,
@@ -257,7 +279,13 @@ export async function getMarkdownPostsFor({
   category,
   series,
 }: { readonly page?: number; readonly category?: string; readonly series?: string } = {}) {
-  const { postsCount, posts } = await readAllPosts({ category, series, skip: (page - 1) * pageSize, limit: pageSize });
+  const { postsCount, posts } = await readAllPosts({
+    category,
+    series,
+    skip: (page - 1) * pageSize,
+    limit: pageSize,
+    includeCommentsCount: true,
+  });
 
   return { postsCount, posts, page };
 }
