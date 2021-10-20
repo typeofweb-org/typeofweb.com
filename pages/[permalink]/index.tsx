@@ -49,7 +49,16 @@ async function getStaticPropsForCategory(category: string) {
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
 
   const posts = (
-    await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true, parseOembed: false })))
+    await Promise.all(
+      allPosts.map((post) =>
+        postToProps(post, authorsJson, {
+          onlyExcerpt: true,
+          parseOembed: false,
+          includeCommentsCount: true,
+          includePlaiceholder: true,
+        }),
+      ),
+    )
   ).map((p) => ({
     ...p,
     content: '',
@@ -68,7 +77,12 @@ async function getStaticPropsForSingleArticle(permalink: string) {
   const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
   return {
     props: {
-      ...(await postToProps(post, authorsJson, { onlyExcerpt: false, parseOembed: true })),
+      ...(await postToProps(post, authorsJson, {
+        onlyExcerpt: false,
+        parseOembed: true,
+        includeCommentsCount: true,
+        includePlaiceholder: true,
+      })),
       pageKind: post.data.type,
     },
   };

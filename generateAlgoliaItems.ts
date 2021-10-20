@@ -5,7 +5,7 @@ import { seriesSlugToSeries } from './utils/series';
 import { readAllPosts } from './utils/wordpress';
 
 async function run() {
-  const data = await readAllPosts({ includePages: true });
+  const data = await readAllPosts({ includePages: true, includeCommentsCount: false });
 
   console.log(
     JSON.stringify(

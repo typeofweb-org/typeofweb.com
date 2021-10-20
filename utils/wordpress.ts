@@ -1,6 +1,6 @@
 import Fs from 'fs/promises';
 import Path from 'path';
-import Url from 'url';
+import * as Process from 'process';
 
 import GrayMatter from 'gray-matter';
 
@@ -16,7 +16,7 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 export const wordpressFolderName = '_wordpress_posts';
 export const postsFolderName = '_posts';
 export const pagesFolderName = '_pages';
-const basePath = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..');
+const basePath = Path.resolve(Process.cwd(), '');
 
 export const pathToLegacyPosts = Path.resolve(basePath, wordpressFolderName);
 export const pathToPosts = Path.resolve(basePath, postsFolderName);
@@ -42,88 +42,146 @@ export async function readFilesInDir(dir: string): Promise<readonly string[]> {
     .filter((x: string | undefined): x is string => !!x);
 }
 
-export async function readAllPosts({
-  category,
-  series,
-  skip,
-  limit,
-  includePages,
-}: {
-  readonly category?: string;
-  readonly series?: string;
-  readonly skip?: number;
-  readonly limit?: number;
-  readonly includePages?: boolean;
-} = {}) {
-  const filePaths = (
-    await Promise.all([
-      readFilesInDir(pathToLegacyPosts),
-      readFilesInDir(pathToPosts),
-      includePages ? readFilesInDir(pathToPages) : null,
-    ])
-  ).flat();
+const stableKey = (obj: object): string => {
+  return JSON.stringify(Object.entries(obj).sort(([a], [b]) => a.localeCompare(b)));
+};
 
-  const postsAndPaths = await Promise.all(
-    filePaths
-      .filter((filePath): filePath is Exclude<typeof filePath, null> => !!filePath)
-      .map(async (filePath) => {
-        const post = await Fs.readFile(filePath, 'utf-8');
-        const relativePath = Path.relative(basePath, filePath);
-        return { filePath: relativePath, post };
-      }),
-  );
+export const readAllPosts = (() => {
+  const cache = new Map<string, any>();
 
-  let postsWithFm = postsAndPaths
-    .map(({ filePath, post }) => {
-      return {
-        ...readFrontMatter(post),
-        filePath,
-      };
-    })
-    .sort((a, b) => Number(b.data.date) - Number(a.data.date));
-
-  if (category) {
-    postsWithFm = postsWithFm.filter((post) =>
-      'category' in post.data
-        ? categorySlugToCategory(post.data.category)?.slug === category
-        : 'categories' in post.data
-        ? categoriesToMainCategory(post.data.categories)?.slug === category
-        : null,
-    );
-  }
-  if (series) {
-    postsWithFm = postsWithFm.filter((post) =>
-      typeof post.data.series === 'string' ? post.data.series === series : post.data.series?.slug === series,
-    );
-  }
-  const postsCount = postsWithFm.length;
-
-  if (skip != null && limit) {
-    postsWithFm = postsWithFm.slice(skip, skip + limit);
-  }
-
-  return {
-    postsCount,
-    posts: await Promise.all(
-      postsWithFm.map((fm) => {
-        return {
-          filePath: fm.filePath,
-          content: fm.content,
-          data: {
-            ...fm.data,
-            date: fm.data.date?.toISOString(),
-            permalink: fm.data.permalink,
-            authors: fm.data.authors || ['michal-miszczyszyn'],
-            commentsCount: getCommentsCount(fm.data.title),
-          },
-        };
-      }),
-    ),
+  return async ({
+    category,
+    series,
+    skip,
+    limit,
+    includePages,
+    includeCommentsCount,
+  }: {
+    readonly category?: string;
+    readonly series?: string;
+    readonly skip?: number;
+    readonly limit?: number;
+    readonly includePages?: boolean;
+    readonly includeCommentsCount?: boolean;
+  } = {}): ReturnType<typeof readAllPosts> => {
+    const key = stableKey({
+      category,
+      series,
+      skip,
+      limit,
+      includePages,
+      includeCommentsCount,
+    });
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    const result = await readAllPosts({
+      category,
+      series,
+      skip,
+      limit,
+      includePages,
+      includeCommentsCount,
+    });
+    cache.set(key, result);
+    return result;
   };
-}
+
+  async function readAllPosts({
+    category,
+    series,
+    skip,
+    limit,
+    includePages,
+    includeCommentsCount,
+  }: {
+    readonly category?: string;
+    readonly series?: string;
+    readonly skip?: number;
+    readonly limit?: number;
+    readonly includePages?: boolean;
+    readonly includeCommentsCount?: boolean;
+  } = {}) {
+    const filePaths = (
+      await Promise.all([
+        readFilesInDir(pathToLegacyPosts),
+        readFilesInDir(pathToPosts),
+        includePages ? readFilesInDir(pathToPages) : null,
+      ])
+    ).flat();
+
+    const postsAndPaths = await Promise.all(
+      filePaths
+        .filter((filePath): filePath is Exclude<typeof filePath, null> => !!filePath)
+        .map(async (filePath) => {
+          const post = await Fs.readFile(filePath, 'utf-8');
+          const relativePath = Path.relative(basePath, filePath);
+          return { filePath: relativePath, post };
+        }),
+    );
+
+    let postsWithFm = postsAndPaths
+      .map(({ filePath, post }) => {
+        return {
+          ...readFrontMatter(post),
+          filePath,
+        };
+      })
+      .sort((a, b) => Number(b.data.date) - Number(a.data.date));
+
+    if (category) {
+      postsWithFm = postsWithFm.filter((post) =>
+        'category' in post.data
+          ? categorySlugToCategory(post.data.category)?.slug === category
+          : 'categories' in post.data
+          ? categoriesToMainCategory(post.data.categories)?.slug === category
+          : null,
+      );
+    }
+    if (series) {
+      postsWithFm = postsWithFm.filter((post) =>
+        typeof post.data.series === 'string' ? post.data.series === series : post.data.series?.slug === series,
+      );
+    }
+    const postsCount = postsWithFm.length;
+
+    if (skip != null && limit) {
+      postsWithFm = postsWithFm.slice(skip, skip + limit);
+    }
+
+    return {
+      postsCount,
+      posts: await Promise.all(
+        postsWithFm.map(async (fm) => {
+          return {
+            filePath: fm.filePath,
+            content: fm.content,
+            data: {
+              ...fm.data,
+              date: fm.data.date?.toISOString(),
+              permalink: fm.data.permalink,
+              authors: fm.data.authors || ['michal-miszczyszyn'],
+              commentsCount: includeCommentsCount ? await getCommentsCount(fm.data.title) : 0,
+            },
+          };
+        }),
+      ),
+    };
+  }
+})();
 
 export async function getAllPermalinks() {
-  const { posts } = await readAllPosts({ includePages: true });
+  const { posts } = await readAllPosts({ includePages: true, includeCommentsCount: false });
+  return [
+    ...allCategories.map((n) => n.slug),
+    ...allSeries.map((s) => s.slug),
+    ...posts.map((fm) => fm.data.permalink),
+  ];
+}
+
+export async function getImportantPermalinks() {
+  const { posts } = await readAllPosts({ includePages: true, limit: 15, skip: 0, includeCommentsCount: false });
+
   return [
     ...allCategories.map((n) => n.slug),
     ...allSeries.map((s) => s.slug),
@@ -132,7 +190,7 @@ export async function getAllPermalinks() {
 }
 
 export async function getSeriesPermalinks() {
-  const { posts } = await readAllPosts({ includePages: false });
+  const { posts } = await readAllPosts({ includePages: false, includeCommentsCount: false });
   const seriesSlugs = [
     ...new Set(
       posts
@@ -144,7 +202,7 @@ export async function getSeriesPermalinks() {
 }
 
 export async function getPostByPermalink(permalink: string) {
-  const { posts } = await readAllPosts({ includePages: true });
+  const { posts } = await readAllPosts({ includePages: true, includeCommentsCount: true });
   return posts.find((fm) => fm.data.permalink === permalink);
 }
 export type PostByPermalink = PromiseValue<ReturnType<typeof getPostByPermalink>>;

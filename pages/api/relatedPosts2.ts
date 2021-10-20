@@ -51,7 +51,14 @@ export const getRelatedPosts2ForPermalink = async (permalink: string) => {
 
   const relatedSneakPeeksPosts = await Promise.all(
     relatedPosts.map((post) => {
-      return post ? postToProps(post, AuthorsJson, { onlyExcerpt: true, parseOembed: false }) : null;
+      return post
+        ? postToProps(post, AuthorsJson, {
+            onlyExcerpt: true,
+            parseOembed: false,
+            includeCommentsCount: false,
+            includePlaiceholder: true,
+          })
+        : null;
     }),
   );
 
