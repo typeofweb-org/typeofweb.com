@@ -105,7 +105,7 @@ export async function readAllPosts({
   return {
     postsCount,
     posts: await Promise.all(
-      postsWithFm.map((fm) => {
+      postsWithFm.map(async (fm) => {
         return {
           filePath: fm.filePath,
           content: fm.content,
@@ -114,7 +114,7 @@ export async function readAllPosts({
             date: fm.data.date?.toISOString(),
             permalink: fm.data.permalink,
             authors: fm.data.authors || ['michal-miszczyszyn'],
-            commentsCount: getCommentsCount(fm.data.title),
+            commentsCount: await getCommentsCount(fm.data.title),
           },
         };
       }),

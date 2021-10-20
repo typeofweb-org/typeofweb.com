@@ -10,7 +10,6 @@
     "tsc": "tsc --noEmit",
     "ts-node-esm": "node --loader ts-node/esm --experimental-specifier-resolution=node",
     "feed": "yarn ts-node-esm generateFeed.ts",
-    "comments-count": "yarn ts-node-esm generateCommentsCount.ts",
     "migrate-wordpress-comments": "yarn ts-node-esm migrateCommentsToGitHubDiscussions.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
