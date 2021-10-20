@@ -1,6 +1,6 @@
 import Fs from 'fs/promises';
 import Path from 'path';
-import Url from 'url';
+import * as Process from 'process';
 
 import GrayMatter from 'gray-matter';
 
@@ -16,7 +16,7 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 export const wordpressFolderName = '_wordpress_posts';
 export const postsFolderName = '_posts';
 export const pagesFolderName = '_pages';
-const basePath = Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), '..');
+const basePath = Path.resolve(Process.cwd(), '');
 
 export const pathToLegacyPosts = Path.resolve(basePath, wordpressFolderName);
 export const pathToPosts = Path.resolve(basePath, postsFolderName);
