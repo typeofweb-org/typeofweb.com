@@ -1,12 +1,33 @@
+import { pageSize } from '../../../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../../../utils/postToProps';
+import { permalinkIsSeries } from '../../../../utils/series';
+import { getAllPermalinks, readAllPosts } from '../../../../utils/wordpress';
 import IndexPage from '../../../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const permalinks = (await getAllPermalinks()).filter(permalinkIsSeries);
+
+  const allPostsForPermalink = await Promise.all(
+    permalinks.map(async (permalink) => {
+      return {
+        ...(await readAllPosts({ series: permalink, includePages: false })),
+        series: permalink,
+      };
+    }),
+  );
+
+  const paths = allPostsForPermalink.flatMap(({ postsCount, series }) => {
+    const maxPages = Math.ceil(postsCount / pageSize);
+    return Array.from({ length: maxPages })
+      .map((_, idx) => String(idx + 1))
+      .map((page) => ({ params: { seriesSlug: series, page } }));
+  });
+
   return {
-    paths: [],
-    fallback: 'blocking',
+    paths,
+    fallback: false,
   };
 };
 
@@ -35,7 +56,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
         postToProps(post, authorsJson, {
           onlyExcerpt: true,
           parseOembed: false,
-          includeCommentsCount: false,
+          includeCommentsCount: true,
           includePlaiceholder: true,
         }),
       ),

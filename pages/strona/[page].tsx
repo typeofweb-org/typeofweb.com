@@ -1,12 +1,20 @@
+import { pageSize } from '../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
+import { readAllPosts } from '../../utils/wordpress';
 import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { postsCount } = await readAllPosts({ includePages: false });
+
+  const maxPages = Math.ceil(postsCount / pageSize);
+
   return {
-    paths: [],
-    fallback: 'blocking',
+    paths: Array.from({ length: maxPages })
+      .map((_, idx) => String(idx + 1))
+      .map((page) => ({ params: { page } })),
+    fallback: false,
   };
 };
 
@@ -30,7 +38,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
         postToProps(post, authorsJson, {
           onlyExcerpt: true,
           parseOembed: false,
-          includeCommentsCount: false,
+          includeCommentsCount: true,
           includePlaiceholder: true,
         }),
       ),

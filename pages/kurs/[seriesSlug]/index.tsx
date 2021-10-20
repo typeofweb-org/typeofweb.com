@@ -1,12 +1,19 @@
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
+import { getSeriesPermalinks } from '../../../utils/wordpress';
 import IndexPage from '../../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const seriesSlugs = await getSeriesPermalinks();
+
   return {
-    paths: [],
-    fallback: 'blocking',
+    paths: seriesSlugs.map((seriesSlug) => {
+      return {
+        params: { seriesSlug },
+      };
+    }),
+    fallback: false,
   };
 };
 
@@ -30,7 +37,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
         postToProps(post, authorsJson, {
           onlyExcerpt: true,
           parseOembed: false,
-          includeCommentsCount: false,
+          includeCommentsCount: true,
           includePlaiceholder: true,
         }),
       ),
