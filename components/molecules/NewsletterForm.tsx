@@ -12,35 +12,36 @@ export const NewsletterForm = memo(() => {
     <Card as="section" roundAllCorners={true} moreSpace={true} className="newsletter-form mx-auto max-w-xl">
       <div className="pb-4 px-5">
         <SectionTitle level="none" size="small">
-          Podoba się? Nie przegap kolejnych artykułów!
+          Zapisz się na newsletter <br />
+          „Polski frontend i backend”
+        </SectionTitle>
+        <SectionTitle level="none" size="xs">
+          aby otrzymywać najciekawsze linki do materiałów i&nbsp;wydarzeń wybrane przeze mnie!
         </SectionTitle>
       </div>
-      {/* <!-- Begin Mailchimp Signup Form --> */}
+
       <form
-        action="https://typeofweb.us16.list-manage.com/subscribe/post?u=8073e459fa97c5444592f393a&amp;id=47bdbd08e9"
+        action="https://news.typeofweb.com/add_subscriber"
         method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
+        id="revue-form"
+        name="revue-form"
         target="_blank"
       >
         <div className="flex flex-col gap-4 px-7">
           <div className="flex flex-row gap-4">
-            <Input type="text" name="FNAME" id="mce-FNAME">
+            <Input type="text" name="member[first_name]" id="member_first_name">
               Imię
             </Input>
-            <Input type="text" name="LNAME" id="mce-LNAME">
+            <Input type="text" name="member[last_name]" id="member_last_name">
               Nazwisko
             </Input>
           </div>
           <div className="flex">
-            <Input type="email" required name="EMAIL" id="mce-EMAIL">
+            <Input type="email" required name="member[email]" id="member_email">
               Email
             </Input>
           </div>
-          {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
-          <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-            <input type="text" name="b_8073e459fa97c5444592f393a_47bdbd08e9" tabIndex={-1} readOnly value="" />
-          </div>
+          <input type="hidden" value="Subscribe" name="member[subscribe]" id="member_submit" />
           <div className="flex">
             <Checkbox label="tiny" required>
               Rozumiem i akceptuję{' '}
@@ -55,15 +56,31 @@ export const NewsletterForm = memo(() => {
                   Politykę Prywatności
                 </a>
               </Link>
-              . Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18
+              , a także{' '}
+              <a
+                target="_blank"
+                href="https://www.getrevue.co/terms"
+                rel="noreferrer"
+                className="text-blue-500 hover:underline font-normal"
+              >
+                Regulamin
+              </a>{' '}
+              i{' '}
+              <a
+                target="_blank"
+                href="https://www.getrevue.co/privacy"
+                rel="noreferrer"
+                className="text-blue-500 hover:underline font-normal"
+              >
+                Politykę Prywatności Revue
+              </a>{' '}
+              Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18
               lipca 2002 r. o świadczeniu usług drogą elektroniczną.
             </Checkbox>
           </div>
-          <input type="hidden" readOnly value="Subscribe" name="subscribe" id="mc-embedded-subscribe" />
           <Button type="submit">Zapisz się</Button>
         </div>
       </form>
-      {/* <!--End mc_embed_signup--> */}
     </Card>
   );
 });
