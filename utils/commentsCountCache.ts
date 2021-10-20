@@ -1,3 +1,6 @@
+import * as Fetch from 'node-fetch';
+const fetch = Fetch.default;
+
 interface CommentsCountCacheRow {
   readonly title: string;
   readonly updated_at: string;
