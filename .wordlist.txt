@@ -18,6 +18,8 @@ title
 type
 url
 width
+AX
+Ireland
 
 about
 abramov
