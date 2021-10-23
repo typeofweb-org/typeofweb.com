@@ -100,25 +100,7 @@ export const NewsletterForm = memo(() => {
                   Politykę Prywatności
                 </a>
               </Link>
-              , a także{' '}
-              <a
-                target="_blank"
-                href="https://www.getrevue.co/terms"
-                rel="noreferrer"
-                className="text-blue-500 hover:underline font-normal"
-              >
-                Regulamin
-              </a>{' '}
-              i{' '}
-              <a
-                target="_blank"
-                href="https://www.getrevue.co/privacy"
-                rel="noreferrer"
-                className="text-blue-500 hover:underline font-normal"
-              >
-                Politykę Prywatności Revue
-              </a>{' '}
-              Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18
+              . Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18
               lipca 2002 r. o świadczeniu usług drogą elektroniczną.
             </Checkbox>
           </div>
