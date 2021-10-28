@@ -62,6 +62,7 @@ config.images = {
   domains: ['v2.typeofweb.com', 'typeofweb.com', 'secure.gravatar.com', 'res.cloudinary.com'],
   deviceSizes: [320, 768, 1024, 1280, 1536],
   imageSizes: [640, 1280, 1536],
+  formats: ['image/avif', 'image/webp'],
 };
 
 config.excludeDefaultMomentLocales = true;
@@ -74,15 +75,15 @@ config.compress = true;
 config.productionBrowserSourceMaps = true;
 config.generateEtags = true;
 config.poweredByHeader = false;
+config.esmExternals = true;
+config.swcMinify = true;
+config.urlImports = ['https://cdn.skypack.dev'];
 
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
 config.experimental.workerThreads = true;
 config.experimental.scrollRestoration = true;
-config.experimental.esmExternals = true;
 config.experimental.gzipSize = true;
-// config.experimental.swcMinify = true;
-// config.experimental.swcLoader = true;
 // config.experimental.concurrentFeatures = true;
 
 const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com';

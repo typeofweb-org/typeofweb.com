@@ -1,3 +1,4 @@
+import AuthorsJson from '../../../authors.json';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
 import { getSeriesPermalinks } from '../../../utils/wordpress';
 import IndexPage from '../../index';
@@ -29,12 +30,10 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../../authors.json')).default.authors;
-
   const posts = (
     await Promise.all(
       allPosts.map((post) =>
-        postToProps(post, authorsJson, {
+        postToProps(post, AuthorsJson.authors, {
           onlyExcerpt: true,
           parseOembed: false,
           includeCommentsCount: true,

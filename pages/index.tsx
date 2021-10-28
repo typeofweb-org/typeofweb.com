@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 
+import AuthorsJson from '../authors.json';
 import { Pagination } from '../components/atoms/Pagination';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
@@ -18,10 +19,17 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default.authors;
-
   const posts = (
-    await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true, parseOembed: false, includeCommentsCount: true, includePlaiceholder: true, })))
+    await Promise.all(
+      allPosts.map((post) =>
+        postToProps(post, AuthorsJson.authors, {
+          onlyExcerpt: true,
+          parseOembed: false,
+          includeCommentsCount: true,
+          includePlaiceholder: true,
+        }),
+      ),
+    )
   ).map((p) => ({
     ...p,
     content: '',

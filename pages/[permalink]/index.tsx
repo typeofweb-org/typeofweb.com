@@ -1,3 +1,4 @@
+import AuthorsJson from '../../authors.json';
 import { MDXComponent } from '../../components/MDXComponent';
 import { Seo } from '../../components/Seo';
 import { NewsletterForm } from '../../components/molecules/NewsletterForm';
@@ -46,12 +47,10 @@ async function getStaticPropsForCategory(category: string) {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
-
   const posts = (
     await Promise.all(
       allPosts.map((post) =>
-        postToProps(post, authorsJson, {
+        postToProps(post, AuthorsJson.authors, {
           onlyExcerpt: true,
           parseOembed: false,
           includeCommentsCount: true,
@@ -74,10 +73,9 @@ async function getStaticPropsForSingleArticle(permalink: string) {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
   return {
     props: {
-      ...(await postToProps(post, authorsJson, {
+      ...(await postToProps(post, AuthorsJson.authors, {
         onlyExcerpt: false,
         parseOembed: true,
         includeCommentsCount: true,

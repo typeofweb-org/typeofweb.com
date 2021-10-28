@@ -105,22 +105,19 @@ export const AppFooter = memo(() => {
           </Link>
         </p>
         <p className="mt-3 font-mono not-italic">
-          <a href="/humans.txt" className="hover:text-green-700 underline transition-colors">
-            humans.txt
-          </a>{' '}
-          <a href="/lawyers.txt" className="hover:text-green-700 underline transition-colors">
-            lawyers.txt
-          </a>
+          <Link href="/humans.txt">
+            <a className="hover:text-green-700 underline transition-colors">humans.txt</a>{' '}
+          </Link>
+          <Link href="/lawyers.txt">
+            <a className="hover:text-green-700 underline transition-colors">lawyers.txt</a>
+          </Link>
         </p>
         <p className="mt-3 text-lg not-italic font-bold">
           <span className="inline-block">Znalazłeś/aś błąd na stronie?</span>{' '}
           <span className="inline-block">
-            <a
-              className="hover:text-green-700 underline transition-colors"
-              href="https://github.com/typeofweb/typeofweb.com/issues/new"
-            >
-              Otwórz issue na GitHubie
-            </a>
+            <Link href="https://github.com/typeofweb/typeofweb.com/issues/new">
+              <a className="hover:text-green-700 underline transition-colors">Otwórz issue na GitHubie</a>
+            </Link>
             !
           </span>
         </p>
