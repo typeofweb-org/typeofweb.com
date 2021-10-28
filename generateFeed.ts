@@ -8,7 +8,7 @@ import { Feed } from 'feed';
 import { siteName, defaultDescription } from './constants';
 import { postToProps } from './utils/postToProps';
 import { readAllPosts } from './utils/wordpress';
-import authorsJson from './authors.json';
+import AuthorsJson from './authors.json';
 
 async function generateFeed() {
   const publicUrl = `https://${process.env.NEXT_PUBLIC_HOST ?? process.env.NEXT_PUBLIC_VERCEL_URL}`;
