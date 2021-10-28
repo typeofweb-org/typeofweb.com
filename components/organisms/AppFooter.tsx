@@ -106,8 +106,8 @@ export const AppFooter = memo(() => {
         </p>
         <p className="mt-3 font-mono not-italic">
           <Link href="/humans.txt">
-            <a className="hover:text-green-700 underline transition-colors">humans.txt</a>{' '}
-          </Link>
+            <a className="hover:text-green-700 underline transition-colors">humans.txt</a>
+          </Link>{' '}
           <Link href="/lawyers.txt">
             <a className="hover:text-green-700 underline transition-colors">lawyers.txt</a>
           </Link>
