@@ -5,7 +5,7 @@ import { host } from '../constants';
 import type { Theme } from '@giscus/react';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- assertion required for localhost
-const theme = `${host}/custom-comments-theme.css` as Theme;
+const theme = `${host}/custom-comments-theme.css` as unknown as Theme;
 
 export const Comments = ({ postTitle }: { readonly postTitle: string }) => {
   return (

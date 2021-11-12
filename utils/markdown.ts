@@ -490,7 +490,7 @@ export function toMdx(
     {
       scope: { data: frontmatter },
       mdxOptions: {
-        remarkPlugins: [...commonRemarkPlugins],
+        remarkPlugins: [...(commonRemarkPlugins as any)],
         rehypePlugins: [
           ...commonRehypePlugins,
           ...(options.parseOembed ? [replaceFreeLinkWithOEmbed] : []),

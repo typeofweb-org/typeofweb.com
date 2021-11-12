@@ -1,3 +1,4 @@
+import AuthorsJson from '../../../authors.json';
 import { pageSize } from '../../../constants';
 import { permalinkIsCategory } from '../../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
@@ -46,12 +47,10 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../../authors.json')).default.authors;
-
   const posts = (
     await Promise.all(
       allPosts.map((post) =>
-        postToProps(post, authorsJson, {
+        postToProps(post, AuthorsJson.authors, {
           onlyExcerpt: true,
           parseOembed: false,
           includeCommentsCount: true,
@@ -64,7 +63,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, permalink: params.permalink } };
+  return { props: { posts, page, postsCount, permalink: params.permalink, pageKind: 'category' } };
 };
 
 export default IndexPage;

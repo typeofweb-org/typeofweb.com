@@ -1,8 +1,5 @@
 /* eslint-disable functional/no-loop-statement -- useful */
-import { withSentry } from '@sentry/nextjs';
-
-import A from '../../authors.json';
-const AuthorsJson = A.authors;
+import AuthorsJson from '../../authors.json';
 import Data from '../../relatedPosts2.json';
 import { postToProps } from '../../utils/postToProps';
 import { getPostByPermalink } from '../../utils/wordpress';
@@ -26,12 +23,16 @@ const getRelatedPostsHandler: NextApiHandler = async (req, res) => {
     return res.status(400).json({ message: 'permalink is required' });
   }
 
-  const { relatedSneakPeeks, randomized } = await getRelatedPosts2ForPermalink(permalink);
-
-  res.json({ related: relatedSneakPeeks, randomized });
+  try {
+    const { relatedSneakPeeks, randomized } = await getRelatedPosts2ForPermalink(permalink);
+    res.json({ related: relatedSneakPeeks, randomized });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({});
+  }
 };
 
-export default withSentry(getRelatedPostsHandler);
+export default getRelatedPostsHandler;
 
 export const getRelatedPosts2ForPermalink = async (permalink: string) => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- check is one line below
@@ -52,7 +53,7 @@ export const getRelatedPosts2ForPermalink = async (permalink: string) => {
   const relatedSneakPeeksPosts = await Promise.all(
     relatedPosts.map((post) => {
       return post
-        ? postToProps(post, AuthorsJson, {
+        ? postToProps(post, AuthorsJson.authors, {
             onlyExcerpt: true,
             parseOembed: false,
             includeCommentsCount: false,

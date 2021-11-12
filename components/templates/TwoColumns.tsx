@@ -31,7 +31,7 @@ export const TwoColumns = memo<
           itemScope
           itemType="http://schema.org/Blog"
           id="main-content"
-          className="relative flex-1 mt-4 px-2 w-full max-w-3xl lg:mt-0 lg:pb-20 lg:px-0"
+          className="max-w-[44rem] relative flex-1 mt-4 px-2 w-full lg:pb-20 lg:px-0"
         >
           <ShareWidget />
           {children}

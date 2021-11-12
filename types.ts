@@ -1,4 +1,4 @@
-export type PageKind = 'post' | 'page' | 'index';
+export type PageKind = 'post' | 'page' | 'index' | 'series' | 'category';
 
 export type PromiseValue<T> = T extends PromiseLike<infer R> ? R : T;
 

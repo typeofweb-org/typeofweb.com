@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 
+import AuthorsJson from '../authors.json';
 import { Pagination } from '../components/atoms/Pagination';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
@@ -8,7 +9,7 @@ import { host } from '../constants';
 import { getUrlForPermalink } from '../utils/permalinks';
 import { getMarkdownPostsFor, postToProps } from '../utils/postToProps';
 
-import type { InferGetStaticPropsType } from '../types';
+import type { InferGetStaticPropsType, PageKind, SeriesWithToC } from '../types';
 import type { GetStaticPropsContext } from 'next';
 
 export const getStaticProps = async ({}: GetStaticPropsContext) => {
@@ -18,23 +19,47 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../authors.json')).default.authors;
-
   const posts = (
-    await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true, parseOembed: false, includeCommentsCount: true, includePlaiceholder: true, })))
+    await Promise.all(
+      allPosts.map((post) =>
+        postToProps(post, AuthorsJson.authors, {
+          onlyExcerpt: true,
+          parseOembed: false,
+          includeCommentsCount: true,
+          includePlaiceholder: true,
+        }),
+      ),
+    )
   ).map((p) => ({
     ...p,
     content: '',
   }));
 
-  // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
-  return { props: { posts, page, postsCount, permalink: null as string | null } };
+  return {
+    props: {
+      posts,
+      page,
+      postsCount,
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
+      permalink: null as string | null,
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
+      pageKind: 'index' as PageKind,
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
+      seriesLinks: null as SeriesWithToC | null,
+    },
+  };
 };
 
-const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const IndexPage = ({
+  posts,
+  postsCount,
+  permalink,
+  pageKind,
+  seriesLinks,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const href = permalink ? getUrlForPermalink(permalink) : null;
   return (
-    <TwoColumns withSidebar={true} pageKind="index">
+    <TwoColumns withSidebar={true} pageKind={pageKind} series={pageKind === 'series' ? seriesLinks : null}>
       {posts.map((post, i) => {
         if (!post.excerpt) {
           console.warn(`Missing excerpt for post ${post.frontmatter.permalink}!`);
@@ -47,7 +72,7 @@ const IndexPage = ({ posts, postsCount, permalink }: InferGetStaticPropsType<typ
             permalink={post.frontmatter.permalink}
             authors={post.frontmatter.authors}
             cover={post.frontmatter.cover ? { ...post.frontmatter.cover, preload: i === 0 } : null}
-            index={post.frontmatter.index}
+            index={pageKind === 'index' ? post.frontmatter.index : null}
             excerpt={post.excerpt}
             series={post.frontmatter.series}
             commentsCount={post.frontmatter.commentsCount}

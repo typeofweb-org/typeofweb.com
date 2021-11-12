@@ -57,6 +57,38 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
         <div className={searchClasses}>
           <SearchWidget />
         </div>
+        <div className={widgetClasses}>
+          <SocialWidget />
+        </div>
+      </>
+    );
+  },
+  category() {
+    return (
+      <>
+        <div className={searchClasses}>
+          <SearchWidget />
+        </div>
+        <div className={widgetClasses}>
+          <SocialWidget />
+        </div>
+        <div className={widgetClasses}>
+          <LatestPostsWidget />
+        </div>
+      </>
+    );
+  },
+  series({ series }) {
+    return (
+      <>
+        <div className={searchClasses}>
+          <SearchWidget />
+        </div>
+        {series && (
+          <div className={widgetClasses}>
+            <SeriesTableOfContentsWidget series={series} />
+          </div>
+        )}
       </>
     );
   },
@@ -72,7 +104,7 @@ export const Sidebar = memo<SidebarProps>(({ pageKind, series }) => {
   return (
     <aside
       role="complementary"
-      className="flex flex-row flex-wrap gap-0 px-2 w-full lg:sticky lg:top-24 lg:flex-col lg:flex-nowrap lg:mx-4 lg:px-0 lg:max-w-xs"
+      className="flex flex-row flex-wrap gap-0 px-2 w-full max-h-screen overflow-x-hidden overflow-y-scroll lg:sticky lg:top-12 lg:flex-col lg:flex-nowrap lg:mx-4 lg:pb-8 lg:pt-4 lg:px-0 lg:max-w-xs"
     >
       <Widgets pageKind={pageKind} series={series} />
     </aside>

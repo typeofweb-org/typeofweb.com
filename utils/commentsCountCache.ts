@@ -33,7 +33,7 @@ export async function getCachedCommentsCount(title: string): Promise<number> {
     return 0;
   }
 
-  const { count }: CommentsCountCacheRow = await response.json();
+  const { count } = (await response.json()) as CommentsCountCacheRow;
 
   return count;
 }
