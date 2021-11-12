@@ -3,6 +3,7 @@ import { memo } from 'react';
 
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
+import { isIndex } from '../../utils/pageKind';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
@@ -10,7 +11,7 @@ import type { PageKind } from '../../types';
 export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
   const { text, progress } = useRunningHeader();
 
-  const HeaderEl = pageKind === 'index' ? 'h1' : 'div';
+  const HeaderEl = isIndex(pageKind) ? 'h1' : 'div';
 
   return (
     <>

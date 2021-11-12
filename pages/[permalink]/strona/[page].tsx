@@ -63,7 +63,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, permalink: params.permalink } };
+  return { props: { posts, page, postsCount, permalink: params.permalink, pageKind: 'category' } };
 };
 
 export default IndexPage;

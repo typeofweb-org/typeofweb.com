@@ -44,7 +44,7 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
                       <Image
                         loader={typeofwebImageLoader}
                         {...p.frontmatter.cover.img}
-                        className="duration-[5s] motion-safe:group-hover:scale-110 bg-gray-200 transition-transform ease-in group-hover:ease-out"
+                        className="duration-[0.5s] motion-safe:group-hover:scale-110 bg-gray-200 transition-transform group-hover:ease-out"
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center center"

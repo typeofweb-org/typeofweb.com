@@ -1,8 +1,10 @@
 import AuthorsJson from '../../../authors.json';
-import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
+import { getMarkdownPostsFor, getSeriesLinks, postToProps } from '../../../utils/postToProps';
+import { seriesSlugToSeries } from '../../../utils/series';
 import { getSeriesPermalinks } from '../../../utils/wordpress';
 import IndexPage from '../../index';
 
+import type { SeriesWithToC } from '../../../types';
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -46,7 +48,21 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, permalink: seriesSlug, pageKind: 'index' as const } };
+  const series = seriesSlugToSeries(seriesSlug);
+  const links = series ? await getSeriesLinks({ series, includeCommentsCount: false }) : null;
+
+  const seriesLinks: SeriesWithToC | null =
+    series && links
+      ? {
+          links,
+          name: series.name,
+          slug: series.slug,
+          currentIndex: -1,
+          count: links.length,
+        }
+      : null;
+
+  return { props: { posts, page, postsCount, permalink: seriesSlug, pageKind: 'series' as const, seriesLinks } };
 };
 
 export default IndexPage;

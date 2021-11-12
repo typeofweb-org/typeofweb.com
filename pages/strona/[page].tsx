@@ -47,7 +47,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount } };
+  return { props: { posts, page, postsCount, pageKind: 'index' } };
 };
 
 export default IndexPage;

@@ -108,6 +108,31 @@ function findCurrentPostIndex(
   return postsCount - index;
 }
 
+export async function getSeriesLinks({
+  includeCommentsCount,
+  series,
+}: {
+  readonly includeCommentsCount: boolean;
+  readonly series:
+    | string
+    | {
+        readonly slug: string;
+        readonly name: string;
+      };
+}) {
+  return (
+    await readAllPosts({
+      series: typeof series === 'string' ? series : series?.slug,
+      includeCommentsCount: includeCommentsCount,
+    })
+  ).posts
+    .map((p) => ({
+      permalink: p.data.permalink,
+      title: p.data.title,
+    }))
+    .reverse();
+}
+
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
@@ -163,17 +188,7 @@ export async function postToProps(
       : null;
 
   const seriesLinks = post.data.series
-    ? (
-        await readAllPosts({
-          series: typeof post.data.series === 'string' ? post.data.series : post.data.series?.slug,
-          includeCommentsCount: options.includeCommentsCount,
-        })
-      ).posts
-        .map((p) => ({
-          permalink: p.data.permalink,
-          title: p.data.title,
-        }))
-        .reverse()
+    ? await getSeriesLinks({ series: post.data.series, includeCommentsCount: options.includeCommentsCount })
     : [];
 
   if (options.onlyExcerpt) {

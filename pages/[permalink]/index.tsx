@@ -63,7 +63,7 @@ async function getStaticPropsForCategory(category: string) {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, permalink: category, pageKind: 'index' as const } };
+  return { props: { posts, page, postsCount, permalink: category, pageKind: 'category' as const } };
 }
 
 async function getStaticPropsForSingleArticle(permalink: string) {
@@ -89,8 +89,8 @@ async function getStaticPropsForSingleArticle(permalink: string) {
 const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { setRunningHeader } = useRunningHeader();
 
-  if (props.pageKind === 'index') {
-    return <IndexPage {...props} />;
+  if (props.pageKind === 'category') {
+    return <IndexPage {...props} seriesLinks={null} />;
   }
 
   const { pageKind, excerpt, frontmatter, filePath, ...contentObj } = props;

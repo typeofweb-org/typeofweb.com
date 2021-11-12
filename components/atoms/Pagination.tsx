@@ -63,7 +63,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
         className={`m-0 bg-gray-100 text-gray-900 text-lg border-transparent rounded-sm hover:shadow-md shadow-sm transition-shadow ${
           isLoading ? 'cursor-wait pointer-events-none' : ''
         }`}
-        disabled={isLoading}
+        disabled={isLoading || pages === 1}
         aria-label="Wybierz stronę"
         title="Wybierz stronę"
         value={currentPage}
