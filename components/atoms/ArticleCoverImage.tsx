@@ -33,6 +33,7 @@ export const ArticleCoverImage = memo<{
       <Image
         loader={typeofwebImageLoader}
         src={src}
+        unoptimized={src.includes('ytimg.com')}
         itemProp="image"
         itemScope
         itemType="http://schema.org/ImageObject"

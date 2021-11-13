@@ -38,7 +38,7 @@ export const ArticleMeta = memo<{
   readonly rel?: boolean;
   readonly size: 'small' | 'large';
   readonly series?: Series | null;
-  readonly commentsCount: number;
+  readonly commentsCount?: number;
   readonly permalink: string;
 }>(({ authors, mainCategory, rel, series, permalink, commentsCount, size = 'small' }) => {
   const isSmall = size === 'small';
@@ -102,34 +102,40 @@ export const ArticleMeta = memo<{
                 )}
               </Fragment>
             ))}
-            &#8203;
             {mainCategory && (
-              <span
-                className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
-                  isSmall ? 'text-base' : 'text-lg'
-                }`}
-              >
-                <LinkUnderlineEffect>
-                  <Link href={getCategoryLink(mainCategory)}>
-                    <a {...(rel && { rel: 'category tag' })}>{mainCategory.name}</a>
-                  </Link>
-                </LinkUnderlineEffect>
-              </span>
+              <Fragment>
+                &#8203;
+                <span
+                  className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
+                    isSmall ? 'text-base' : 'text-lg'
+                  }`}
+                >
+                  <LinkUnderlineEffect>
+                    <Link href={getCategoryLink(mainCategory)}>
+                      <a {...(rel && { rel: 'category tag' })}>{mainCategory.name}</a>
+                    </Link>
+                  </LinkUnderlineEffect>
+                </span>
+              </Fragment>
             )}
-            &#8203;
-            <span
-              className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
-                isSmall ? 'text-base' : 'text-lg'
-              }`}
-            >
-              <LinkUnderlineEffect>
-                <Link href={href + '#comments'}>
-                  <a>
-                    {commentsCount || 'Brak'} {komentarzy(commentsCount)}
-                  </a>
-                </Link>
-              </LinkUnderlineEffect>
-            </span>
+            {typeof commentsCount === 'number' && (
+              <Fragment>
+                &#8203;
+                <span
+                  className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
+                    isSmall ? 'text-base' : 'text-lg'
+                  }`}
+                >
+                  <LinkUnderlineEffect>
+                    <Link href={href + '#comments'}>
+                      <a>
+                        {commentsCount || 'Brak'} {komentarzy(commentsCount)}
+                      </a>
+                    </Link>
+                  </LinkUnderlineEffect>
+                </span>
+              </Fragment>
+            )}
           </div>
         </div>
       </div>
