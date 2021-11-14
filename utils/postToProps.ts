@@ -290,10 +290,14 @@ export async function postToProps(
 }
 
 export async function getMarkdownPostsFor({
-  page = 1,
+  page,
   category,
   series,
-}: { readonly page?: number; readonly category?: string; readonly series?: string } = {}) {
+}: {
+  readonly page: number;
+  readonly category?: string;
+  readonly series?: string;
+}) {
   const { postsCount, posts } = await readAllPosts({
     category,
     series,

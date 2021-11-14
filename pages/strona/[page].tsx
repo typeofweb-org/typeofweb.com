@@ -2,6 +2,7 @@ import AuthorsJson from '../../authors.json';
 import { pageSize } from '../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
 import { readAllPosts } from '../../utils/wordpress';
+import { getYouTubeVideosFor } from '../../utils/youtube';
 import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
@@ -31,6 +32,8 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
+  const videos = await getYouTubeVideosFor({ page });
+
   const posts = (
     await Promise.all(
       allPosts.map((post) =>
@@ -47,7 +50,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, pageKind: 'index' } };
+  return { props: { posts, videos, page, postsCount, pageKind: 'index' } };
 };
 
 export default IndexPage;

@@ -90,7 +90,7 @@ const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =>
   const { setRunningHeader } = useRunningHeader();
 
   if (props.pageKind === 'category') {
-    return <IndexPage {...props} seriesLinks={null} />;
+    return <IndexPage {...props} videos={null} seriesLinks={null} />;
   }
 
   const { pageKind, excerpt, frontmatter, filePath, ...contentObj } = props;

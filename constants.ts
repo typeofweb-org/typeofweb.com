@@ -2,6 +2,7 @@ export const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VE
 export const protocol = process.env.NODE_ENV === 'production' ? 'http' : 'http';
 export const host = `${protocol}://${origin}` as const;
 export const pageSize = 10 as const;
+export const videoPageSize = 3 as const;
 
 export const siteName = `Type of Web`;
 export const shortDescription = `Blog o programowaniu`;
