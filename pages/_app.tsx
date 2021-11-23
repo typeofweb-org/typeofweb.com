@@ -112,7 +112,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           `.trim(),
         }}
       />
-      <Script defer data-domain="typeofweb.com" src="https://plausible.io/js/plausible.outbound-links.js" />
+      <script defer data-domain="typeofweb.com" data-api="/api/event" src="/js/script.js" />
       <Seo />
       <RunningHeaderProvider>
         <UIStateProvider>

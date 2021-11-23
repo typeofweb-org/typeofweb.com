@@ -170,6 +170,14 @@ config.rewrites = () => {
       source: '/content/images/:slug(.+)',
       destination: 'https://res.cloudinary.com/type-of-web/content/images/:slug',
     },
+    {
+      source: '/js/script.js',
+      destination: 'https://plausible.io/js/plausible.outbound-links.js',
+    },
+    {
+      source: '/api/event',
+      destination: 'https://plausible.io/api/event',
+    },
   ]);
 };
 
