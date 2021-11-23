@@ -48,7 +48,7 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
         </div>
       </header>
       <div className="pb-2 px-7 text-gray-700 font-serif text-lg sm:px-8 lg:px-12">
-        <p className="!indent-0">
+        <p className="!indent-0 whitespace-pre-line">
           {video.description}{' '}
           <span className="ml-2">
             <Link href={video.url} passHref>
