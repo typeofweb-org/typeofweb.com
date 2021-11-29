@@ -11,12 +11,12 @@ html {
 body,
 html,
 #__next {
-  @apply w-full max-w-full min-h-full bg-gray-200;
+  @apply w-full max-w-full min-h-full bg-gray-100;
   /* scroll-behavior: smooth; */
 }
 
 #__next {
-  background-image: url('./images/bg-typeofweb.svg');
+  /* background-image: url('./images/bg-typeofweb.svg'); */
   background-repeat: repeat;
   background-size: 106px;
   background-position: center -15px;

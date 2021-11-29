@@ -15,20 +15,19 @@ const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
 
 export const ArticleCoverImage = memo<{
   readonly cover: CoverPlaiceholder;
-  readonly wide: boolean;
-}>(({ cover, wide }) => {
+}>(({ cover }) => {
   const { src, width, height } = cover.img;
   const ratio = width / height;
   const isLayoutFill = ratio < GOLDEN_RATIO;
+  console.log({ src, isLayoutFill });
   const layoutProps = isLayoutFill
     ? ({ layout: 'fill', objectFit: 'cover', objectPosition: 'center center' } as const)
     : ({ layout: 'responsive', width, height } as const);
 
   return (
     <div
-      className={`text-[length:0] relative ${isLayoutFill ? 'min-h-[50vw] md:min-h-[350px]' : ''} overflow-hidden ${
-        wide ? `-mx-1 lg:-mx-4 mb-8 rounded-xl` : `rounded-t-xl`
-      }`}
+      className={`text-[length:0] relative ${isLayoutFill ? 'min-h-[50vw] md:min-h-[350px]' : ''}
+      shadow-lg -mx-1 lg:-mx-6 mt-4 lg:mb-4 mb-2 lg:mt-8 rounded-lg overflow-hidden`}
     >
       <Image
         loader={typeofwebImageLoader}
@@ -37,7 +36,6 @@ export const ArticleCoverImage = memo<{
         itemProp="image"
         itemScope
         itemType="http://schema.org/ImageObject"
-        className="duration-[0.5s] motion-safe:hover:scale-110 bg-gray-200 transition-transform hover:ease-out"
         alt=""
         sizes="320px, (min-width: 320px) 640px, (min-width: 640px) 1280px, (min-width: 768px) 1536px"
         // @todo fix me

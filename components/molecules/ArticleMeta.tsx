@@ -61,8 +61,8 @@ export const ArticleMeta = memo<{
           .
         </p>
       )}
-      <div className="mt-2">
-        <div className="flex items-center justify-center">
+      <div className="mt-4">
+        <div className="flex items-center justify-start">
           <div className="flex flex-shrink-0 items-center mr-2">
             {authors.map((author, idx) => (
               <span

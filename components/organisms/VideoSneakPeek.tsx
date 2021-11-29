@@ -21,33 +21,32 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
       roundAllCorners={!video.cover}
       moreSpace={!video.cover}
     >
-      <header className="bg-gray-200">
-        {video.cover && (
-          <Link href={video.url}>
-            <a tabIndex={-1} aria-hidden="true" target="_blank">
-              <ArticleCoverImage
-                cover={{
-                  blurDataURL: video.cover.blurDataURL,
-                  img: video.cover.img,
-                  preload: true,
-                }}
-                wide={false}
-              />
-            </a>
-          </Link>
-        )}
-        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${video.cover ? 'pt-6' : ''}`}>
+      <header>
+        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4`}>
           <ArticleTitle title={video.title} href={video.url} level={2} />
-          <div className="flex items-center justify-center mt-3">
+          <div className="flex items-center justify-start mb-6 mt-3">
             <Link href={video.url}>
               <a target="_blank">
                 <YouTubeLogo width="100" />
               </a>
             </Link>
           </div>
+          {video.cover && (
+            <Link href={video.url}>
+              <a tabIndex={-1} aria-hidden="true" target="_blank" className="block">
+                <ArticleCoverImage
+                  cover={{
+                    blurDataURL: video.cover.blurDataURL,
+                    img: video.cover.img,
+                    preload: true,
+                  }}
+                />
+              </a>
+            </Link>
+          )}
         </div>
       </header>
-      <div className="pb-2 px-7 text-gray-700 font-serif text-lg sm:px-8 lg:px-12">
+      <div className="pb-12 px-7 text-gray-700 font-serif text-lg border-b-2 sm:px-8 lg:px-12">
         <p className="!indent-0 whitespace-pre-line">
           {video.description}{' '}
           <span className="ml-2">

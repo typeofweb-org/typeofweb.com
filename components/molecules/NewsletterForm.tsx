@@ -58,7 +58,12 @@ export const NewsletterForm = memo(() => {
   }, []);
 
   return (
-    <Card as="section" roundAllCorners={true} moreSpace={true} className="newsletter-form mx-auto max-w-xl">
+    <Card
+      as="section"
+      roundAllCorners={true}
+      moreSpace={true}
+      className="newsletter-form mb-12 mx-auto pt-4 max-w-xl border"
+    >
       <div className="pb-4 px-5">
         <SectionTitle level="none" size="small">
           Zapisz się na newsletter <br />

@@ -13,13 +13,13 @@ const SearchWidget = Dynamic<{}>(
   {
     ssr: false,
     loading() {
-      return <div className="h-12 bg-white rounded-lg shadow-md lg:mb-8" />;
+      return <div className="h-12 bg-white rounded-lg shadow-md" />;
     },
   },
 );
 
-const searchClasses = `lg:min-w-[294px] lg:w-full fixed z-50 right-2 top-0 pl-5 lg:static lg:z-auto lg:flex-1 lg:flex-shrink-0 lg:pl-0`;
-const widgetClasses = `min-w-[294px] flex-1 flex-shrink-0`;
+const searchClasses = `lg:min-w-[294px] border rounded-lg lg:w-full fixed z-50 right-3 top-0 lg:static lg:z-auto lg:flex-1 lg:flex-shrink-0`;
+const widgetClasses = `min-w-[294px] border rounded-lg flex-1 flex-shrink-0`;
 
 const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
   index() {
@@ -104,7 +104,7 @@ export const Sidebar = memo<SidebarProps>(({ pageKind, series }) => {
   return (
     <aside
       role="complementary"
-      className="flex flex-row flex-wrap gap-0 px-2 w-full max-h-screen overflow-x-hidden overflow-y-scroll lg:sticky lg:top-12 lg:flex-col lg:flex-nowrap lg:mx-4 lg:pb-8 lg:pt-4 lg:px-0 lg:max-w-xs"
+      className="flex flex-row flex-wrap gap-8 px-2 w-full max-h-screen overflow-x-hidden overflow-y-scroll lg:sticky lg:top-12 lg:flex-col lg:flex-nowrap lg:mt-0 lg:mx-4 lg:pb-24 lg:pt-4 lg:max-w-xs"
     >
       <Widgets pageKind={pageKind} series={series} />
     </aside>
