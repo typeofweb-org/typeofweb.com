@@ -24,94 +24,94 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
 
   return (
     <nav
-      className={`flex py-2 flex-row gap-2 items-stretch justify-center mb-4 ${isLoading ? 'cursor-wait' : ''}`}
+      className={`flex flex-col gap-4 items-center mb-4 ${isLoading ? 'cursor-wait' : ''}`}
       role="navigation"
       aria-label="Paginacja"
       aria-busy={isLoading}
     >
-      <span className="inline-flex items-center mr-2 text-gray-900 text-lg">
+      <p className="items-center mr-2 text-gray-900 text-lg">
         Strona {currentPage} z {pages}
-      </span>
-      {prev > 0 && (
-        <Link href={`${prefix}/strona/${prev}`}>
-          <a
-            rel="prev"
-            className={`focus:no-underline inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
-              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-700'
-            }`}
-            aria-label="Poprzednia strona"
-            title="Poprzednia strona"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 transform rotate-180"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+      </p>
+      <div className="flex flex-row gap-2 items-stretch justify-center pb-4">
+        {prev > 0 && (
+          <Link href={`${prefix}/strona/${prev}`}>
+            <a
+              rel="prev"
+              className={`focus:no-underline gap-3 inline-flex items-center px-4 py-2 bg-gray-200 border rounded-md shadow-sm hover:shadow-md transition-shadow ${
+                isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-900'
+              }`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </a>
-        </Link>
-      )}
-      <select
-        className={`m-0 bg-gray-100 text-gray-900 text-lg border-transparent rounded-sm hover:shadow-md shadow-sm transition-shadow ${
-          isLoading ? 'cursor-wait pointer-events-none' : ''
-        }`}
-        disabled={isLoading || pages === 1}
-        aria-label="Wybierz stronę"
-        title="Wybierz stronę"
-        value={currentPage}
-        onChange={goToPage}
-      >
-        {[...Array(pages)].map((_, idx) => {
-          const page = idx + 1;
-          const isCurrent = currentPage === page;
-          return (
-            <option
-              key={page}
-              value={page}
-              aria-label={isCurrent ? `Obecna strona, strona ${page}` : `Strona ${page}`}
-              aria-current={isCurrent ? 'page' : false}
-              disabled={isCurrent}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 transform rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Poprzednia strona
+            </a>
+          </Link>
+        )}
+        <select
+          className={`m-0 bg-gray-100 text-gray-900 text-lg border-transparent rounded-sm hover:shadow-md shadow-sm transition-shadow ${
+            isLoading ? 'cursor-wait pointer-events-none' : ''
+          }`}
+          disabled={isLoading || pages === 1}
+          aria-label="Wybierz stronę"
+          title="Wybierz stronę"
+          value={currentPage}
+          onChange={goToPage}
+        >
+          {[...Array(pages)].map((_, idx) => {
+            const page = idx + 1;
+            const isCurrent = currentPage === page;
+            return (
+              <option
+                key={page}
+                value={page}
+                aria-label={isCurrent ? `Obecna strona, strona ${page}` : `Strona ${page}`}
+                aria-current={isCurrent ? 'page' : false}
+                disabled={isCurrent}
+              >
+                {page}
+              </option>
+            );
+          })}
+        </select>
+        {next <= pages && (
+          <Link href={`${prefix}/strona/${next}`}>
+            <a
+              rel="next"
+              className={`focus:no-underline gap-3 inline-flex items-center px-4 py-2 bg-gray-200 border rounded-md shadow-sm hover:shadow-md transition-shadow ${
+                isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-900'
+              }`}
             >
-              {page}
-            </option>
-          );
-        })}
-      </select>
-      {next <= pages && (
-        <Link href={`${prefix}/strona/${next}`}>
-          <a
-            rel="next"
-            className={`focus:no-underline inline-flex items-center px-4 transition-color text-3xl bg-gray-100 border rounded-sm hover:shadow-md shadow-sm transition-shadow ${
-              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-700'
-            }`}
-            aria-label="Następna strona"
-            title="Następna strona"
-          >
-            <svg
-              className="w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </a>
-        </Link>
-      )}
+              Następna strona
+              <svg
+                className="w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </a>
+          </Link>
+        )}
+      </div>
     </nav>
   );
 });

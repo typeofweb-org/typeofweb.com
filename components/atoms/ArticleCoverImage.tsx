@@ -19,7 +19,6 @@ export const ArticleCoverImage = memo<{
   const { src, width, height } = cover.img;
   const ratio = width / height;
   const isLayoutFill = ratio < GOLDEN_RATIO;
-  console.log({ src, isLayoutFill });
   const layoutProps = isLayoutFill
     ? ({ layout: 'fill', objectFit: 'cover', objectPosition: 'center center' } as const)
     : ({ layout: 'responsive', width, height } as const);

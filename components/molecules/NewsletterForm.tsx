@@ -70,7 +70,7 @@ export const NewsletterForm = memo(() => {
           „Polski frontend i backend”
         </SectionTitle>
         <SectionTitle level="none" size="xs">
-          aby otrzymywać najciekawsze linki do materiałów i&nbsp;wydarzeń wybrane przeze mnie!
+          aby otrzymywać najciekawsze linki do materiałów i&nbsp;wydarzeń wybranych przeze mnie!
         </SectionTitle>
       </div>
 

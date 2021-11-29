@@ -34,7 +34,7 @@ interface CachedOEmbed {
   };
 }
 
-const STALE_MS = 1000 * 60 * 60 * 24 * 30; // 30 days
+// const STALE_MS = 1000 * 60 * 60 * 24 * 30; // 30 days
 
 export async function getOEmbed(
   url: string,
@@ -47,8 +47,9 @@ export async function getOEmbed(
   },
 ) {
   const cache = await readJson('./oEmbedCache.json');
+  console.log({ updateCache, force, url, 'url in cache': url in cache });
 
-  if (!force && url in cache && (!updateCache || Date.now() - cache[url].updatedAt < STALE_MS)) {
+  if (!force && url in cache) {
     return cache[url].data;
   }
 

@@ -351,7 +351,6 @@ const HitDetails = memo<{ readonly currentHit: TypeOfWebHit }>(
         </p>
         {currentHit.img && (
           <ArticleCoverImage
-            wide={false}
             cover={{
               blurDataURL: null,
               img: {
