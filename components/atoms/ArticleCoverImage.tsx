@@ -26,7 +26,7 @@ export const ArticleCoverImage = memo<{
   return (
     <div
       className={`text-[length:0] relative ${isLayoutFill ? 'min-h-[50vw] md:min-h-[350px]' : ''}
-      shadow-lg -mx-1 lg:-mx-6 mt-4 lg:mb-4 mb-2 lg:mt-8 rounded-lg overflow-hidden`}
+      shadow-lg -mx-6 mt-4 lg:mb-4 mb-2 lg:mt-8 rounded-lg overflow-hidden`}
     >
       <Image
         loader={typeofwebImageLoader}

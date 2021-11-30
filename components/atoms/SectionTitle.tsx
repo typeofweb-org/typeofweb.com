@@ -12,7 +12,7 @@ export const SectionTitle = memo<PropsWithChildren<SectionTitleProps>>(
   ({ children, itemProp, level, size = 'large' }) => {
     const textSize =
       size === 'large'
-        ? 'text-3xl lg:text-5xl font-semibold'
+        ? 'text-2xl lg:text-5xl font-semibold'
         : size === 'small'
         ? 'text-2xl lg:text-3xl font-semibold'
         : 'text-xl lg:text-2xl';
