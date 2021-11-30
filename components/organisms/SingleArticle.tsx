@@ -68,8 +68,6 @@ export const SingleArticle = memo(
       return (
         <Card
           as="article"
-          roundAllCorners={!cover}
-          moreSpace={!cover}
           ref={ref}
           className={`${isMdx ? '__mdx' : '__html'}`}
           itemScope

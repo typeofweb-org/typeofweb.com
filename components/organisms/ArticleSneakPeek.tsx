@@ -28,7 +28,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
   ({ cover, title, authors, mainCategory, permalink, series, excerpt, commentsCount }) => {
     const href = getUrlForPermalink(permalink);
     return (
-      <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
+      <Card as="article" itemScope itemType="http://schema.org/BlogPosting">
         <header>
           <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 py-4`}>
             <ArticleTitle title={title} href={href} level={2} />

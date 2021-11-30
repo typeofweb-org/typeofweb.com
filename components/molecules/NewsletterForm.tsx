@@ -1,18 +1,27 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { memo, useCallback, useState, useEffect } from 'react';
 
 import { Button } from '../atoms/Button';
 import { Card } from '../atoms/Card';
 import { Checkbox } from '../atoms/Checkbox';
 import { Input } from '../atoms/Input';
+import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { SectionTitle } from '../atoms/SectionTitle';
 
 type State = 'IDLE' | 'SENDING' | 'SUCCESS' | 'ERROR';
 
-export const NewsletterForm = memo(() => {
+interface NewsletterFormProps {
+  readonly utmSource?: string;
+}
+
+export const NewsletterForm = memo<NewsletterFormProps>(({ utmSource }) => {
   const [state, setState] = useState<State>('IDLE');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const r = useRouter();
+
+  const utmSourceValue = encodeURIComponent(utmSource || r.asPath.slice(1) || 'front-page');
 
   const handleSubmit = useCallback<React.FormEventHandler<HTMLFormElement>>(
     async (e) => {
@@ -58,13 +67,8 @@ export const NewsletterForm = memo(() => {
   }, []);
 
   return (
-    <Card
-      as="section"
-      roundAllCorners={true}
-      moreSpace={true}
-      className="newsletter-form mb-12 mx-auto pt-4 max-w-xl border"
-    >
-      <div className="pb-4 px-5">
+    <Card as="section" className="newsletter-form mb-12 mx-auto pt-4 max-w-xl border shadow-lg">
+      <div className="pb-4 px-5 text-center">
         <SectionTitle level="none" size="small">
           Zapisz się na newsletter <br />
           „Polski frontend i backend”
@@ -72,6 +76,18 @@ export const NewsletterForm = memo(() => {
         <SectionTitle level="none" size="xs">
           aby otrzymywać najciekawsze linki do materiałów i&nbsp;wydarzeń wybranych przeze mnie!
         </SectionTitle>
+        <p>
+          <LinkUnderlineEffect>
+            <a
+              href={`https://news.typeofweb.com/?utm_medium=Blog&utm_source=typeofweb.com&utm_campaign=${utmSourceValue}`}
+              target="_blank"
+              className="text-blue-500"
+              rel="noreferrer"
+            >
+              news.typeofweb.com
+            </a>
+          </LinkUnderlineEffect>
+        </p>
       </div>
 
       <form

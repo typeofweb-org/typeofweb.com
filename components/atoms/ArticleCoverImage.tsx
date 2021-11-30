@@ -36,9 +36,8 @@ export const ArticleCoverImage = memo<{
         itemScope
         itemType="http://schema.org/ImageObject"
         alt=""
-        sizes="320px, (min-width: 320px) 640px, (min-width: 640px) 1280px, (min-width: 768px) 1536px"
         // @todo fix me
-        // sizes="1536px"
+        sizes="1536px"
         {...layoutProps}
         placeholder={cover.blurDataURL ? 'blur' : 'empty'}
         blurDataURL={cover.blurDataURL ?? undefined}
