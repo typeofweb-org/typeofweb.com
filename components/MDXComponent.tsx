@@ -69,7 +69,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
   return <img {...props} width={width} height={height} src={src} alt={alt} loading="lazy" />;
 };
 
-const NewsletterForm = Dynamic<{}>(() =>
+const NewsletterForm = Dynamic<{ readonly utmSource?: string }>(() =>
   import(/* webpackChunkName: "NewsletterForm" */ './molecules/NewsletterForm').then((m) => m.NewsletterForm),
 );
 
