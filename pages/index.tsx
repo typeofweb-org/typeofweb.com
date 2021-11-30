@@ -73,11 +73,22 @@ const IndexPage = ({ posts, videos, postsCount, permalink, pageKind, seriesLinks
   return (
     <TwoColumns withSidebar={true} pageKind={pageKind} series={pageKind === 'series' ? seriesLinks : null}>
       {items.map((item, i) => {
-        if (item.type === 'post') {
-          return <PostIndexItem key={item.frontmatter.permalink} pageKind={pageKind} post={item} i={i} />;
-        } else if (item.type === 'video') {
-          return <VideoIndexItem key={item.url} video={item} />;
+        const sneakPeek =
+          item.type === 'post' ? (
+            <PostIndexItem key={item.frontmatter.permalink} pageKind={pageKind} post={item} i={i} />
+          ) : (
+            <VideoIndexItem key={item.url} video={item} />
+          );
+
+        if (i === 0) {
+          return (
+            <>
+              {sneakPeek}
+              <NewsletterForm />
+            </>
+          );
         }
+        return sneakPeek;
       })}
       <Pagination pages={Math.ceil(postsCount / 10)} prefix={href ? `${host}${href}` : host} />
     </TwoColumns>
@@ -102,7 +113,7 @@ const PostIndexItem = ({
   if (!post.excerpt) {
     console.warn(`Missing excerpt for post ${post.frontmatter.permalink}!`);
   }
-  const sneakPeek = (
+  return (
     <ArticleSneakPeek
       title={post.frontmatter.title}
       mainCategory={post.frontmatter.mainCategory}
@@ -115,14 +126,4 @@ const PostIndexItem = ({
       commentsCount={post.frontmatter.commentsCount}
     />
   );
-
-  if (i === 0) {
-    return (
-      <>
-        {sneakPeek}
-        <NewsletterForm />
-      </>
-    );
-  }
-  return sneakPeek;
 };

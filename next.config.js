@@ -86,6 +86,9 @@ config.experimental.scrollRestoration = true;
 config.experimental.gzipSize = true;
 // config.experimental.concurrentFeatures = true;
 
+// @todo https://github.com/getsentry/sentry-javascript/issues/4103
+config.outputFileTracing = false;
+
 const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com';
 const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
 const host = `${protocol}://${origin}`;

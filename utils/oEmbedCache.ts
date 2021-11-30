@@ -61,6 +61,10 @@ export async function getOEmbed(
   const result = (await tryCatch(() => extract(url))) as OembedData | Error;
   const data = result instanceof Error ? null : result;
 
+  if (!data) {
+    console.log(result);
+  }
+
   if (updateCache) {
     const newCache: CachedOEmbed = {
       ...(await readJson('./oEmbedCache.json')),

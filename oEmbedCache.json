@@ -102,10 +102,6 @@
     },
     "updatedAt": 1633536398955
   },
-  "https://typeofweb.com/flux-i-redux/": {
-    "data": null,
-    "updatedAt": 1633536396666
-  },
   "https://typeofweb.com/meet-js-summit-2017-nasze-podsumowanie/": {
     "data": {
       "version": "1.0",
@@ -243,10 +239,6 @@
     },
     "updatedAt": 1633536396603
   },
-  "https://typeofweb.com/oferty-pracy-zdalnej/": {
-    "data": null,
-    "updatedAt": 1633536400238
-  },
   "https://typeofweb.com/map-i-reduce-w-js/": {
     "data": {
       "version": "1.0",
@@ -377,14 +369,6 @@
     },
     "updatedAt": 1633606092188
   },
-  "https://typeofweb.com/napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie/": {
-    "data": null,
-    "updatedAt": 1633606093259
-  },
-  "https://typeofweb.com/praca-zdalna-narzedzia/": {
-    "data": null,
-    "updatedAt": 1633606093966
-  },
   "https://twitter.com/MMiszy/status/1278963932380778499": {
     "data": {
       "url": "https://twitter.com/MMiszy/status/1278963932380778499",
@@ -400,10 +384,6 @@
       "version": "1.0"
     },
     "updatedAt": 1633606094504
-  },
-  "https://typeofweb.com/podsumowanie-roku-2018-i-plany-na-2019/": {
-    "data": null,
-    "updatedAt": 1633606094637
   },
   "https://twitter.com/MMiszy/status/1278769758377332737": {
     "data": {
@@ -530,30 +510,6 @@
     },
     "updatedAt": 1633606096875
   },
-  "https://typeofweb.com/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/": {
-    "data": null,
-    "updatedAt": 1633606097516
-  },
-  "https://typeofweb.com/komunikacja-z-api-w-react-js/": {
-    "data": null,
-    "updatedAt": 1633606097567
-  },
-  "https://typeofweb.com/react-js-w-przykladach-filtrowanie-statycznej-listy/": {
-    "data": null,
-    "updatedAt": 1633606098118
-  },
-  "https://typeofweb.com/podsumowanie-roku-2017-plany-2018/": {
-    "data": null,
-    "updatedAt": 1633606098260
-  },
-  "https://typeofweb.com/x-team-opis-rekrutacja-opinia/": {
-    "data": null,
-    "updatedAt": 1633606098270
-  },
-  "https://typeofweb.com/24-blogi-ktore-musi-sledzic-javascript-developer/": {
-    "data": null,
-    "updatedAt": 1633606098304
-  },
   "https://twitter.com/prchdk/status/1056960391543062528": {
     "data": {
       "url": "https://twitter.com/prchdk/status/1056960391543062528",
@@ -570,10 +526,6 @@
     },
     "updatedAt": 1633606098470
   },
-  "https://typeofweb.com/krotka-relacja-z-reactiveconf-2017/": {
-    "data": null,
-    "updatedAt": 1633606099191
-  },
   "https://twitter.com/gitlab/status/1003409836170547200": {
     "data": {
       "url": "https://twitter.com/gitlab/status/1003409836170547200",
@@ -589,10 +541,6 @@
       "version": "1.0"
     },
     "updatedAt": 1633606100626
-  },
-  "https://typeofweb.com/grupy-facebook-front-end-developer/": {
-    "data": null,
-    "updatedAt": 1633606100962
   },
   "https://twitter.com/migueldeicaza/status/1003626301977026561": {
     "data": {
@@ -643,9 +591,5 @@
       "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/H7rQGLQTgXw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     "updatedAt": 1633606102614
-  },
-  "https://typeofweb.com/wzorce-projektowe-dependency-injection/": {
-    "data": null,
-    "updatedAt": 1633606102656
   }
 }
