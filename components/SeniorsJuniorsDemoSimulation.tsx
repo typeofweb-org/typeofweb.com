@@ -251,6 +251,7 @@ const Simulation = forwardRef<{ toggle(): void }, { readonly initialVariables: V
     );
   },
 );
+Simulation.displayName = 'Simulation';
 
 function tick(time: number, variables: Variables): { readonly variables: Variables; readonly efficiency: number } {
   let { n, x } = variables;
