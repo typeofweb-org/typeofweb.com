@@ -26,7 +26,7 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
     <footer>
       <Pattern className="mb-6 mt-8 mx-auto w-32 text-green-500" />
       <div className="flex flex-col items-start mb-4 mt-4 mx-auto px-4 max-w-lg text-left">
-        <SectionTitle level="none" size="small" pad={false}>
+        <SectionTitle level="none" size="small">
           {title}
         </SectionTitle>
         {authors.map((a) => {

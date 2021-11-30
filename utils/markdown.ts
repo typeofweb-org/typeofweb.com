@@ -171,13 +171,17 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
 
       const errorOrRoot =
         oEmbed.type === 'video' || oEmbed.type === 'rich'
-          ? tryCatch(() => Unified.unified().use(RehypeParse).parse(oEmbed.html))
+          ? tryCatch(() =>
+              Unified.unified()
+                .use(RehypeParse as any)
+                .parse(oEmbed.html),
+            )
           : null;
       const isError = errorOrRoot instanceof Error;
       if (isError) {
         console.error(errorOrRoot);
       }
-      const rest = isError ? null : errorOrRoot;
+      const rest = isError ? null : (errorOrRoot as unknown as { children: RootContent[] });
 
       const findBody = (c: RootContent): RootContent[] =>
         c.type === 'element' && c.tagName === 'body' ? c.children : isParentNode(c) ? c.children.flatMap(findBody) : [];

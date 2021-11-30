@@ -1,5 +1,4 @@
-import { useRouter } from 'next/router';
-import { useContext, createContext, useMemo, useState, useCallback, useRef, useEffect } from 'react';
+import { useContext, createContext, useMemo, useState, useCallback, useRef, useEffect, useLayoutEffect } from 'react';
 
 import { useIntersectionObserver } from './useIntersectionObserver';
 
@@ -21,7 +20,6 @@ const options = {
 export const RunningHeaderProvider = ({ children }: PropsWithChildren<{}>) => {
   const [text, setText] = useState('');
   const [progress, setProgress] = useState(0);
-  const router = useRouter();
 
   const containerElRef = useRef<HTMLElement | null>();
 
@@ -99,16 +97,11 @@ export const RunningHeaderProvider = ({ children }: PropsWithChildren<{}>) => {
 
       if (window) {
         window.addEventListener('scroll', updateProgress, { passive: true });
+        el.querySelectorAll<HTMLElement>('h1,h2,h3').forEach(observeHeader);
       }
-
-      el.querySelectorAll<HTMLElement>('h1,h2,h3').forEach(observeHeader);
     },
     [headerCleanup, observeHeader, updateProgress],
   );
-
-  useEffect(() => {
-    setRunningHeader(null);
-  }, [router.asPath, setRunningHeader]);
 
   const value = useMemo(() => {
     return { text, setRunningHeader, progress };

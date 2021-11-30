@@ -62,7 +62,7 @@ export const SearchWidget = memo(() => {
   }, [IS_MAC, closeSearch, toggleSearch, isOpen]);
 
   return (
-    <div className="block lg:mb-8">
+    <div>
       {isOpen && <SearchModal onCancel={closeSearch} />}
       <button
         aria-label="Szukaj na stronie…"
@@ -351,7 +351,6 @@ const HitDetails = memo<{ readonly currentHit: TypeOfWebHit }>(
         </p>
         {currentHit.img && (
           <ArticleCoverImage
-            wide={false}
             cover={{
               blurDataURL: null,
               img: {
