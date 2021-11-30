@@ -95,7 +95,7 @@ Jestem pewien, że w głowach wielu z Was pojawiła się myśl: Przy możliwośc
 
 Na przykład wspomniany <a href="http://x-team.com">X-Team</a>, gdzie teraz pracuję, albo <a href="https://upstack.co">Upstack</a>, z którym kiedyś rozmawiałem. Trzeba tylko umieć takie firmy znaleźć! Bardzo dużo ofert pracy zdalnej można zobaczyć na różnego rodzaju portalach. Rodzimy rynek z wysokimi stawkami można obserwować na stworzonej przeze mnie <strong>grupie na Facebooku: <a href="https://www.facebook.com/groups/280382479112568/">Praca dla Programistów - powyżej 20000zł</a>.</strong> Zachęcam do dołączenia – pojawiają się tam już pierwsze oferty zainteresowanych firm (także z Polski!). Jeszcze jedno. Może zabrzmi to banalnie, <strong>ale pamiętaj: pieniądze to nie wszystko.</strong>
 
-https://typeofweb.com/oferty-pracy-zdalnej/
+https://typeofweb.com/znajdz-prace-zdalna-tymi-serwisami/
 
 Ostatecznie <strong>moje doświadczenia Toptalem nie były złe</strong>. Jest to na pewno <strong>świetny pośrednik i szczerze go polecam osobom</strong>, które chcą pracować jako freelancerzy. Jeśli jednak potrzebujesz czegoś więcej — rozbudowanej kultury firmy, inicjatyw, integracji, czy choćby motywacji do uprawiania sportu — w Toptalu raczej ich nie znajdziesz.
 

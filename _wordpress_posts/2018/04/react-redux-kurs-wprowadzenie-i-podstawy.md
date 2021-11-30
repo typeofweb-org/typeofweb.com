@@ -41,7 +41,7 @@ Redux: Oto wpis, na który wszyscy czekali! :) Nie będzie teorii. Od razu zaczn
 
 Jeśli jednak interesuje Cię teoria stojąca za Flux i Redux znajdziesz ją w innym moim wpisie:
 
-https://typeofweb.com/flux-i-redux/
+https://typeofweb.com/flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych/
 
 Na pewno warto przeczytać o wzorcach projektowych stojących za Reduksem! Warto też zajrzeć do <a href="https://redux.js.org">dokumentacji Redux</a>.
 

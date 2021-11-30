@@ -108,7 +108,7 @@ Tutaj magia Reacta się kończy ;) No, prawie, ale na temat <code>context</code>
 
 Są też pewne ciekawe, rozbudowane i popularne rozwiązania: Architektura <strong>Flux</strong> i wywodzący się z niej słynny <strong>Redux</strong>, a także <strong>MobX</strong>. No i inne podobne biblioteki. Popełniłem już wcześniej jeden wpis na temat Fluksa i Reduksa od strony architektury. Jeśli hasła <em>CQRS</em> albo <em>Event Sourcing</em> nie są Ci obce to śmiało czytaj:
 
-https://typeofweb.com/flux-i-redux/
+https://typeofweb.com/flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych/
 
 Natomiast w kontekście Reacta — wrócę do tego, obiecuję ;) To temat pierwszy albo drugi wpis po tym! <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 

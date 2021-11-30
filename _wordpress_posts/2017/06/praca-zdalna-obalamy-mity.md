@@ -31,7 +31,7 @@ Nie chcesz, aby Twoje biuro wyglądało tak? foto: [Wojtek Zając](http://blog.w
 
 Bez przeszkód mogę dziś przyznać jedno: **Zmiana trybu pracy na zdalny była chyba najlepszą decyzją w moim życiu.** Jest to kierunek, w którym zmierza większość zawodów na świecie, a na pewno wszystkie w branży IT. Nie mogę się teraz dokopać do żadnych statystyk, ale widać to wyraźnie choćby po rosnącej liczbie ofert pracy zdalnej!
 
-https://typeofweb.com/oferty-pracy-zdalnej/
+https://typeofweb.com/znajdz-prace-zdalna-tymi-serwisami/
 
 Warto mieć na uwadze, że [praca zdalna to korzyści nie tylko dla pracownika, ale także dla pracodawcy](https://www.fastcompany.com/3033118/why-working-remotely-is-better-for-business). Jak to? Postaram się na to i parę innych pytań odpowiedzieć poniżej. Obalmy kilka mitów!
 

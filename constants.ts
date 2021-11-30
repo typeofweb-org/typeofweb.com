@@ -1,5 +1,5 @@
 export const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || ('typeofweb.com' as const);
-export const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+export const protocol = process.env.NODE_ENV === 'production' ? 'http' : 'http';
 export const host = `${protocol}://${origin}` as const;
 export const pageSize = 10 as const;
 export const videoPageSize = 3 as const;

@@ -12,13 +12,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   if (!url || Array.isArray(url)) {
-    res.status(404).end('Invalid url.');
+    res.status(404).end('Invalid url 1.');
     return;
   }
 
   const parsedUrl = new URL(decodeURIComponent(url));
   if (parsedUrl.host !== process.env.NEXT_PUBLIC_HOST && parsedUrl.host !== 'typeofweb.com') {
-    res.status(404).end('Invalid url.');
+    res.status(404).end('Invalid url 2.');
     return;
   }
 
@@ -26,7 +26,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const post = await getPostByPermalink(permalink);
   if (!post) {
-    res.status(404).end('Invalid url.');
+    console.log(permalink);
+    res.status(404).end('Invalid url 3.');
     return;
   }
 

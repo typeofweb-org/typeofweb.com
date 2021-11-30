@@ -591,5 +591,239 @@
       "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/H7rQGLQTgXw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     "updatedAt": 1633606102614
+  },
+  "https://typeofweb.com/react-hooks-usestate-czyli-stan-w-komponentach-funkcyjnych/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "React Hooks: useState, czyli stan w komponentach funkcyjnych",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/02/pexels-photo-1520145.jpeg",
+      "thumbnail_width": 1919,
+      "thumbnail_height": 1036,
+      "width": 1919,
+      "height": 1100,
+      "html": "<p>Wbudowanych Hooków w React jest kilka, a jeszcze więcej możesz tworzyć sam(a). Zaczniemy jednak od podstawowego wbudowanego Hooka useState. Dodamy stan do komponentu funkcyjnego!</p>"
+    },
+    "updatedAt": 1638314475179
+  },
+  "https://typeofweb.com/komunikacja-z-api-w-react-js/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Komunikacja z API w React.js",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/02/pexels-photo-194094.jpeg",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 979,
+      "width": 1920,
+      "height": 1043,
+      "html": "<p>Bardzo często powracającym wątkiem jest pytanie o to, w jaki sposób zaimplementować komunikację z API w React.js. Moja odpowiedź może Cię nieco zaskoczyć: React nie ma nic do tego. Możesz to robić absolutnie dowolnie.</p>"
+    },
+    "updatedAt": 1638314474918
+  },
+  "https://typeofweb.com/react-js-w-przykladach-filtrowanie-statycznej-listy/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "React.js w przykładach: filtrowanie statycznej listy",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-417122.jpeg",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 852,
+      "width": 1920,
+      "height": 916,
+      "html": "<p>W jednym z komentarzy ktoś zasugerował mi, abym pokazywał jak najwięcej praktycznych przykładów. Inna osoba pytała konkretnie o przykład filtrowania listy na podstawie tekstu wpisywanego w input. Stwierdziłem, że warto skorzystać z tych sugestii. Oto powstaje seria wpisów, które będą się przeplatały z kursem Reacta jako takim. Tutaj będę pokazywał…</p>"
+    },
+    "updatedAt": 1638314475186
+  },
+  "https://typeofweb.com/podsumowanie-roku-2017-plany-2018/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Podsumowanie roku 2017 i plany na 2018",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-285173-1.jpeg",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 1280,
+      "width": 1920,
+      "height": 1344,
+      "html": "<p>Właśnie wracam z ponad dwutygodniowego urlopu. Była to dla mnie całkowita przerwa od wszystkiego co robię na co dzień — przerwa od pracy, od bloga, bez internetu, z dala od domu. Życzyłem Wam chwili wytchnienia od projektów, dedlajnów i fakapów — i sam się do swoich zaleceń zastosowałem. W tym…</p>"
+    },
+    "updatedAt": 1638314475205
+  },
+  "https://typeofweb.com/24-blogi-ktore-musi-sledzic-javascript-developer/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "24 blogi, które musi śledzić każdy JavaScript developer",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/05/blog-dla-front-end-developerow.jpeg",
+      "thumbnail_width": 1589,
+      "thumbnail_height": 833,
+      "width": 1589,
+      "height": 897,
+      "html": "<p>Wciąż pytacie jakie blogi polecam śledzić. A ja nigdy nie pamiętam! No, ale teraz jest już cała lista! Moja lista polecanych linków dla front-end developerów! To drugi wpis z serii.</p>"
+    },
+    "updatedAt": 1638314475247
+  },
+  "https://typeofweb.com/x-team-opis-rekrutacja-opinia/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "X-Team — opis, rekrutacja, moja opinia",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/02/x-team-logo-large.png",
+      "thumbnail_width": 887,
+      "thumbnail_height": 400,
+      "width": 887,
+      "height": 464,
+      "html": "<p>Od momentu gdy zdecydowałem się na 100% pracę zdalną, kilka razy zmieniałem już „pracę” — klientów. Od pewnego czasu współpracuję z X-Team. Jak mi jest z X-Team? Dawno obiecywałem sobie, że opiszę moje doświadczenia z tą firmą i ten dzień nadszedł właśnie dzisiaj. Jeśli szukasz tylko krótkiego podsumowania to bardzo…</p>"
+    },
+    "updatedAt": 1638314475674
+  },
+  "https://typeofweb.com/krotka-relacja-z-reactiveconf-2017/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Krótka relacja z ReactiveConf 2017",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/reactive2017_2.jpg",
+      "thumbnail_width": 1200,
+      "thumbnail_height": 630,
+      "width": 1200,
+      "height": 694,
+      "html": "<p>W tym roku po raz pierwszy wybrałem się na ReactiveConf do Bratysławy (Słowacja). Strona konferencji zachęcała znanymi prelegentami i ciekawymi prezentacjami, więc bez dłuższego namysłu kupiłem bilet. ReactiveConf to 2 dni prezentacji oraz 1 dzień warsztatów poświęconych programowaniu reaktywnemu, FRP, React.js, Angular, Elm i wielu, wielu innym tematom…</p>"
+    },
+    "updatedAt": 1638314475684
+  },
+  "https://typeofweb.com/grupy-facebook-front-end-developer/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "20 grup na Facebooku, które powinien śledzić każdy front-end developer",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/03/grupy-facebook-front-end.jpeg",
+      "thumbnail_width": 999,
+      "thumbnail_height": 451,
+      "width": 999,
+      "height": 515,
+      "html": "<p>Często pytacie mnie jakie strony, blogi, newslettery, RSS-y i Twittery śledzę. Zazwyczaj nie potrafiłem na to pytanie szybko odpowiedzieć, bo nie miałem nigdzie pod ręką zebranej listy. Dotychczas. Ale oto jest. Powstaje. Moja lista polecanych linków dla front-end developerów! To pierwszy wpis z serii.</p>"
+    },
+    "updatedAt": 1638314476625
+  },
+  "https://typeofweb.com/wzorce-projektowe-dependency-injection/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Wzorce Projektowe: Dependency Injection",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2016/07/pexels-photo-262367.jpeg",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 1200,
+      "width": 1920,
+      "height": 1264,
+      "html": "<p>Wiele razy wspominałem o wstrzykiwaniu zależności, nigdy jednak nie wytłumaczyłem tego konceptu do końca. Na czym polega wzorzec Dependency Injection i jakie problemy rozwiązuje? W tym artykule chciałbym odpowiedzieć na te pytania oraz omówić teorię stojącą za wstrzykiwaniem zależności.</p>"
+    },
+    "updatedAt": 1638314477137
+  },
+  "https://typeofweb.com/flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Flux i Redux: globalny store i jednokierunkowy przepływ danych",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2016/06/pexels-photo-239886.jpeg",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 1280,
+      "width": 1920,
+      "height": 1344,
+      "html": "<p>Na co dzień korzystam z Redux razem z React. Dawniej używałem też własnej implementacji architektury Flux razem z AngularJS. Postanowiłem napisać o tym koncepcie coś więcej — bo jest to bez wątpienia bardzo ciekawe! Jednokierunkowy przepływ danych, akcje, dispatcher, action creator, reducer… to wszystko w tym wpisie :) A do…</p>"
+    },
+    "updatedAt": 1638314945019
+  },
+  "https://typeofweb.com/napisalem-ksiazke-kilka-slow-o-typescript-na-powaznie/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Napisałem książkę! Kilka słów o „TypeScript na poważnie”",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/image/upload/v1630769745/api_bmx2wq.png",
+      "thumbnail_width": 1920,
+      "thumbnail_height": 1005,
+      "width": 1920,
+      "height": 1069,
+      "html": "<p>Książka mojego autorstwa „TypeScript na poważnie” została ukończona i jest możliwość zakupu po niższej cenie w przedsprzedaży. Kilka osób prosiło mnie o opisanie tego, jak proces twórczy i wydawniczy wygląda od podszewki – wszak zdecydowałem się self-publishing! Zapraszam więc do serii wpisów :)</p>"
+    },
+    "updatedAt": 1638315011931
+  },
+  "https://typeofweb.com/praca-zdalna-narzedzia/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Praca zdalna: Lista 20 przydatnych narzędzi",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/03/praca-zdalna-narzedzia.png",
+      "thumbnail_width": 1688,
+      "thumbnail_height": 780,
+      "width": 1688,
+      "height": 844,
+      "html": "<p>Jakie narzędzia sprawiają, że praca zdalna z domu staje się prostsza? Ostatnie zagrożenie epidemiologiczne, z którym przychodzi nam się mierzyć sprawiło, że pracodawcy szukało rozwiązań pozwalających na omijanie do biura, w związku z czym pracownicy i pracowniczki wielu firm przeszli w tryb Home Office. Jednak, dla niektórych praca zdalna jest…</p>"
+    },
+    "updatedAt": 1638315012136
+  },
+  "https://typeofweb.com/podsumowanie-roku-2018-i-plany-na-2019/": {
+    "data": {
+      "version": "1.0",
+      "type": "rich",
+      "title": "Podsumowanie roku 2018 i plany na 2019",
+      "author_name": "Michał Miszczyszyn",
+      "provider_name": "Type of Web",
+      "provider_url": "http://localhost:3000/",
+      "cache_age": "3600",
+      "thumbnail_url": "https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/01/agenda-blank-checklist-3299.jpg",
+      "thumbnail_width": 1600,
+      "thumbnail_height": 940,
+      "width": 1600,
+      "height": 1004,
+      "html": "<p>Niedługo wyjeżdżam na zasłużony urlop. Zanim to jednak zrobię, chciałbym podsumować rok 2018 i przybliżyć moje plany na 2019. Zacznijmy od rozliczenia się z obietnic za 2018. Chciałbym, aby nowy rok był nieco inny niż wszystkie poprzednie.</p>"
+    },
+    "updatedAt": 1638315012280
   }
 }
