@@ -14,7 +14,7 @@ interface VideoSneakPeekProps {
 }
 export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
   return (
-    <Card as="article" itemScope itemType="http://schema.org/Video" moreSpace={!video.cover}>
+    <Card as="article" itemScope itemType="http://schema.org/Video">
       <header>
         <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4`}>
           <ArticleTitle title={video.title} href={video.url} level={2} />
