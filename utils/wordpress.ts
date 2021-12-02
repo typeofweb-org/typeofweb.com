@@ -72,7 +72,7 @@ export const readAllPosts = (() => {
       includePages,
       includeCommentsCount,
     });
-    if (cache.has(key)) {
+    if (process.env.NODE_ENV === 'production' && cache.has(key)) {
       return cache.get(key);
     }
     const result = await readAllPosts({

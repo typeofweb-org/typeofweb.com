@@ -1,0 +1,100 @@
+---
+title: 'Pierwsze starcia z IoT i smart home: zigbee, z-wave czy wifi?'
+permalink: iot-smart-home-zigbee-z-wave-wifi
+type: post
+date: 2021-12-02T21:37:28.824Z
+authors:
+  - michal-miszczyszyn
+category: opinie
+thumbnail:
+  url: https://res.cloudinary.com/type-of-web/image/upload/v1638480696/iot-smart-home-zigbee-z-wave-wifi_zuurdh.png
+  width: 1920
+  height: 1004
+---
+
+Jak pewnie niektórzy z Was wiedzą, wkrótce stanę się szczęśliwym posiadaczem domu. Dom w XXI wieku napakowany jest elektroniką i praktycznie nie da się bez niej żyć – mikroprocesory mają w sobie choćby piec i wentylacja, a także każdy z dziesięciu termostatów (!). Jak to ogarnąć? Czy da się to połączyć w jedną, spójną całość?
+
+---
+
+## Wyceny smart home
+
+Ale zacznijmy może od początku. Kilka miesięcy temu zebrałem oferty dotyczące realizacji tak zwanego **inteligentnego domu** od różnych firm w Trójmieście. Przy naszych bardzo skromnych potrzebach otrzymałem wyceny rzędu **50-70 tysięcy złotych** za realizację. I tu pojawiła się myśl: **A może by spróbować _smart home_ zbudować samemu**?
+
+## Przegląd rozwiązań smart home
+
+Rozważałem kilka opcji, które można podzielić na dwie główny grupy:
+
+- przewodowe
+- bezprzewodowe
+
+## Inteligentny dom przewodowy
+
+Na kablu znaczy pewnie i bezpiecznie – a przynajmniej tak twierdzą instalatorzy i dostawcy. Komunikacja przewodowa jest praktycznie niezawodna, nie da się jej podsłuchać ani łatwo zakłócić jej działania. Brzmi ekstra, ale…
+
+Realizacja instalacji przewodowej praktycznie w każdym systemie miała jedną zasadniczą wadę: konieczność **całkowitego przeprojektowania i przebudowania instalacji elektrycznej** tak, aby wszystkie przewody ułożone były w „gwiazdę”. Po wstępnej ocenie kosztów i komplikacji zdecydowałem się nawet nie próbować tego robić.
+
+## Smart home bezprzewodowy
+
+Wspominałem już, że nasze oczekiwania są naprawdę skromne – nic wyszukanego, ot integracja ze sobą kilku elementarnych systemów. Dlatego wydaje mi się, że wybranie technologii bezprzewodowej nie jest w tym przypadku złym pomysłem!
+
+Na pewno na korzyść przemawia **elastyczność – urządzenia możemy dokładać kiedy i gdzie chcemy**, aby łatwo rozbudować nasz inteligentny dom o nowe funkcje. Ponadto, nie muszę wszystkiego planować od razu i **nie trzeba nic kuć** w ścianach. Bueno!
+
+Do wyboru mamy kilka konkurencyjnych technologii: **433, zigbee, z-wave, wifi i bluetooth**. Od niedawna rozwijany jest też standard **Thread**, ale jest dość młody, a urządzeń w nim pracujących jest niewiele i są one drogie, dlatego go zupełnie pominę.
+
+### 433
+
+Oznacza częstotliwość komunikacji 433 MHz. Jest to prawdopodobnie najbardziej prymitywny system ze wszystkich przeze mnie opisywanych. Pracują na nim popularne szlabany i bramy garażowe. Jego zaletą jest **bardzo niska cena urządzeń**, ale wady to **kiepska przepustowość** i podobno problemy z **bezpieczeństwem** komunikacji. Ponadto, niemożliwe jest tworzenie siatki (_mesh_) urządzeń, co może być problemem przy większych powierzchniach nieruchomość – każde urządzenie musi być w bezpośrednim zasięgu aby móc wydawać im polecenia.
+
+### zigbee
+
+![](https://res.cloudinary.com/type-of-web/image/upload/v1638473919/iu_nimiqe.png '#width=368;height=104;title=')
+
+To kolejny standard bezprzewodowej komunikacji. Wykorzystane jest pasmo 2,4GHz. Połączenia są szyfrowane, a urządzenia **można łączyć w _mesh_**. Ponadto, sprzęt korzystający z zigbee jest bardzo szeroko dostępny i przez to **tani**. Wadą natomiast jest krótszy zasięg i potencjalna interferencja z innymi domowymi urządzeniami korzystającymi z tej samej częstotliwości 2,4GHz, czyli bluetooth i wifi.
+
+### wifi
+
+Wifi nikomu przedstawiać nie trzeba, więc tylko krótko o _smart home_ opartym o ten sposób komunikacji: zużywa znacznie więcej energii niż pozostałe. Urządzenia wifi są **prądożerne**, co może nie mieć znaczenia, gdy mamy jeden router, ale będzie odczuwalne, gdy urządzeń będzie np. 30. Poza tym, taka liczba klientów łączących się z moimi _access pointami_ wifi byłaby znacznym obciążeniem i mogłaby negatywnie wpływać na wydajność połączenia z Internetem.
+
+### bluetooth
+
+Prawdę mówiąc w ogóle nie brałem tego pod uwagę. Pomimo, że jest BLE (Bluetooth Low Energy), który niby idealnie pasuje do zastosowań inteligentnego domu, ale mimo to czuję jakiś niesmak na myśl o bluetoothie. Uprzedzenia? Być może.
+
+### z-wave
+
+![](https://res.cloudinary.com/type-of-web/image/upload/v1638473754/logo_oghlyc.svg '#width=181;height=80;title=')
+
+To standard komunikacji na częstotliwościach w okolicach 900MHz (w UE jest to konkretnie 868,42MHz). Zaletami są **większy zasięg** (w porównaniu do zigbee), **niski pobór energii** (w porównaniu do wifi), **szyfrowane połączenie** i możliwość łączenia urządzeń w siatkę. Wada to nieco droższe urządzenia.
+
+## Zestawienie bezprzewodowych rozwiązań smart-home
+
+|               |  433   | zigbee |        wifi         |   z-wave   |
+| ------------- | :----: | :----: | :-----------------: | :--------: |
+| Częstotliwość | 433MHz | 2,4GHz | 2,4GHz, 5GHz i 6GHz | ok. 900MHz |
+| Szyfrowanie?  |   ❌   |   ✅   |         ✅          |     ✅     |
+| Pobór energii | niski  | niski  |       wysoki        |   niski    |
+| Cena          | tanie  | tanie  |       drogie        |  średnie   |
+| Mesh          |   ❌   |   ✅   |         ❌          |     ✅     |
+|               |        |        |                     |            |
+
+## Mój wybór: z-wave i Fibaro
+
+Zdecydowałem się na zbudowanie większości elementów inteligentnego domu w oparciu o standard z-wave. Jest to technologia, w której pracują urządzenia znanej polskiej firmy Fibaro, a także masa termostatów, przełączników, ściemniaczy, zaworów i innych gadżetów.
+
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1638479159/iu_saea08.jpg"
+    alt="Przykładowe urządzenie Fibaro (z-wave) obok linijki. Urządzenie mierzy około 4cm."
+    width="600"
+    height="400"
+  />
+  <figcaption>
+    <p>Przykładowe urządzenie Fibaro (z-wave) ma tylko około 4cm.</p>
+    <p>Zdjęcie pochodzi ze strony domotica-blog.nl</p>
+  </figcaption>
+</figure>
+
+Szybko wyszukałem szkolenie Fibaro, opłaciłem, zaliczyłem, **zostałem certyfikowanym instalatorem Fibaro** i otrzymałem dostęp do strefy b2b z hurtowymi cenami. Nieźle! Jeśli więc ktoś jest zainteresowany budową _smart home_, albo doradztwem w tym temacie, to piszcie 😉 Mam uprawnienia!
+
+## Co dalej ze smart home?
+
+W tym wpisie chciałem tylko krótko opisać moje przemyślenia i wątpliwości odnośnie realizacji systemu inteligentnego domu. W kolejnym poście przyjrzę się bliżej architekturze z-wave, umiejscowieniu centrali, rodzajach urządzeń i ich konfiguracji. **Masz jakieś pytania?** Coś Cię szczególnie zaciekawiło? Daj mi znać w komentarzu!

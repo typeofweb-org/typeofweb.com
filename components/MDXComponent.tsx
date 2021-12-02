@@ -86,16 +86,17 @@ const CodepenWidget = Dynamic<CodepenWidgetProps>(
   { ssr: false },
 );
 
-const Gallery = (_props: {
+const Gallery = (props: {
   readonly columns?: '1' | '2' | '3';
   readonly link: 'file' | 'none';
   readonly size: 'medium' | 'large' | 'full';
+  readonly children: readonly React.ReactElement[];
 }) => {
   if (!warned['Gallery']) {
     console.warn(`Not implemented: Gallery`);
     warned['Gallery'] = true;
   }
-  return <div />;
+  return <div>{props.children}</div>;
 };
 
 const components = {
