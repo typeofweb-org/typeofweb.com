@@ -19,6 +19,7 @@
     "@giscus/react": "github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
     "@octokit/auth-app": "3.6.1",
     "@octokit/auth-token": "2.5.0",
+    "@octokit/rest": "18.12.0",
     "@openlab/vercel-netlify-cms-github": "github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
     "@plaiceholder/next": "2.2.0",
     "@sentry/nextjs": "6.14.3",

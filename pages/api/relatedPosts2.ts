@@ -2,7 +2,7 @@
 import AuthorsJson from '../../authors.json';
 import Data from '../../relatedPosts2.json';
 import { postToProps } from '../../utils/postToProps';
-import { getPostByPermalink } from '../../utils/wordpress';
+import { getPostByPermalink } from '../../utils/posts';
 
 import type { NextApiHandler } from 'next';
 

@@ -5,10 +5,10 @@ import Url from 'url';
 import Bluebird from 'bluebird';
 import { Feed } from 'feed';
 
+import AuthorsJson from './authors.json';
 import { siteName, defaultDescription } from './constants';
 import { postToProps } from './utils/postToProps';
-import { readAllPosts } from './utils/wordpress';
-import AuthorsJson from './authors.json';
+import { readAllPosts } from './utils/posts';
 
 async function generateFeed() {
   const publicUrl = `https://${process.env.NEXT_PUBLIC_HOST ?? process.env.NEXT_PUBLIC_VERCEL_URL}`;

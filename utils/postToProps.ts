@@ -3,11 +3,11 @@ import { getPlaiceholder } from 'plaiceholder';
 import { pageSize } from '../constants';
 
 import { categoriesToMainCategory, categorySlugToCategory } from './categories';
+import { getExcerptAndContent, readAllPosts } from './posts';
 import { allSeries, findCurrentSeriesIndex } from './series';
-import { getExcerptAndContent, readAllPosts } from './wordpress';
 
 import type { PromiseValue, Series, SeriesWithToC } from '../types';
-import type { PostByPermalink } from './wordpress';
+import type { PostByPermalink } from './posts';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 type AuthorJson = typeof import('../authors.json')['authors'][number];

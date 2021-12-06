@@ -1,8 +1,8 @@
 import AuthorsJson from '../../../../authors.json';
 import { pageSize } from '../../../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../../../utils/postToProps';
+import { getAllPermalinks, readAllPosts } from '../../../../utils/posts';
 import { permalinkIsSeries } from '../../../../utils/series';
-import { getAllPermalinks, readAllPosts } from '../../../../utils/wordpress';
 import IndexPage from '../../../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
@@ -65,7 +65,10 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, permalink: seriesSlug, pageKind: 'series' as const } };
+  return {
+    revalidate: 60 * 15,
+    props: { posts, page, postsCount, permalink: seriesSlug, pageKind: 'series' as const },
+  };
 };
 
 export default IndexPage;

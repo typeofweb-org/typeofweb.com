@@ -7,7 +7,7 @@ import { TwoColumns } from '../../components/templates/TwoColumns';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import { permalinkIsCategory } from '../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
-import { getAllPermalinks, getPostByPermalink } from '../../utils/wordpress';
+import { getAllPermalinks, getPostByPermalink } from '../../utils/posts';
 import IndexPage from '../index';
 
 import type { InferGetStaticPropsType } from '../../types';
