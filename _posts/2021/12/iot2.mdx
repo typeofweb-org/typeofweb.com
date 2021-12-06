@@ -1,0 +1,136 @@
+---
+title: 'Smart home: architektura z-wave i zastosowania'
+permalink: iot-smart-home-architektura-z-wave-i-zastosowania
+type: post
+date: 2021-12-09T21:37:28.824Z
+authors:
+  - michal-miszczyszyn
+category: opinie
+thumbnail:
+  url: https://res.cloudinary.com/type-of-web/image/upload/v1638480696/iot-smart-home-zigbee-z-wave-wifi_zuurdh.png
+  width: 1920
+  height: 1004
+---
+
+W poprzednim artykule opisałem moje przemyślenia odnośnie różnych bezprzewodowych technologii używanych do tworzenia inteligentnego domu. Dzisiaj skupiam się konkretnie na wybranym przeze mnie z-wave: architekturze rozwiązania, a także zastosowaniach.
+
+---
+
+## Architektura z-wave
+
+Z-wave daje możliwość tworzenia **częściowo rozproszonej** sieci urządzeń. Co to oznacza? W przypadku z-wave musimy mieć centralkę – to jest urządzenie, które zarządza wszystkim. To właśnie centralka odpowiada za konfigurację zachowań, automatyzacji, dodawanie i usuwanie nowych urządzeń, a także potencjalnie za dostęp zdalny do naszego inteligentnego domu.
+
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1638734057/L_packshot_HC3_3_RGB_rflno8.jpg"
+    alt="Centrala inteligentnego domu Fibaro Home Center 3"
+    width="660"
+    height="440"
+  />
+  <figcaption>
+    <p>Centrala inteligentnego domu Fibaro Home Center 3</p>
+    <p>Zdjęcie pochodzi ze strony fibaro.com</p>
+  </figcaption>
+</figure>
+
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1638734062/201007_Ezlo_Secure_Podium_1_2400x1500.png_mdmfli.webp"
+    alt="Centrala inteligentnego domu Ezlo Secure (dawniej Vera)"
+    width="600"
+    height="375"
+  />
+  <figcaption>
+    <p>Centrala inteligentnego domu Ezlo Secure (dawniej Vera)</p>
+    <p>Zdjęcie pochodzi ze strony getvera.com</p>
+  </figcaption>
+</figure>
+
+## Mesh
+
+Chwila, chwila – ale to przecież brzmi jak całkowicie scentralizowane rozwiązanie?! Nie do końca. Urządzenia z-wave musimy dodać za pomocą centralki, ale później dzięki temu, że urządzenia z-wave łączą się w siatkę, to centralka może być praktycznie gdziekolwiek – u mnie będzie w garażu. Urządzenie i tak połączy się z nią albo bezpośrednio (jeśli będzie dostatecznie blisko), albo za pośrednictwem innych urządzeń (maksymalnie czterech).
+
+[rysunek?]
+
+Przykładowo, urządzenie zamontowane na poddaszu połączy się z urządzeniem na pierwszym piętrze, które z kolei połączy się z urządzeniem w salonie, a to połączy się z centralką w garażu. Jest to jak najbardziej poprawne zachowanie – tworzy się siatka (mesh), dzięki której znacznie zwiększa się zasięg sieci z-wave.
+
+## Asocjacje
+
+Urządzenia mogą się łączyć między sobą również bezpośrednio, zupełnie niezależnie od centralki. Jest to szczególnie przydatne dla systemów krytycznych pod względem bezpieczeństwa. Wyobraźmy sobie taki scenariusz, że mamy w salonie czujnik dymu, który powinien natychmiast odciąć dopływ gazu do pieca, gdy zostanie wykryte zadymienie. Mogliśmy zaprząc do tego centralkę, ale co w sytuacji, jeśli z jakiegoś powodu centralka przestanie działać / spali się / zostanie uszkodzona? Nie chcemy przecież ryzykować! Właśnie wtedy bardzo przydają się asocjacje – czujnik dymu łączymy bezpośrednio z elektrozaworem gazu i dzięki temu zabezpieczenie zadziała bez konieczności komunikowania się przez centralę. To dopiero _smart home_!
+
+## Scenariusze inteligentnego domu
+
+Po publikacji poprzedniego artykułu kilka osób pytało mnie o to, jakie w ogóle mam pomysły na automatyzacje. Otóż do tego tematu możemy podejść na dwa sposoby:
+
+### **bottom-up**
+
+Wchodzimy na stronę internetową sklepu ze sprzętem do _smart home_, przeglądamy różnorakie urządzenia i wtedy do głowy przychodzą nam pomysły na ich zastosowanie w naszym domu.
+
+Moim zdaniem właśnie takie podejście najlepiej się sprawdza na początku, gdy jeszcze jesteśmy kompletnie zieloni w temacie i chcemy w ogóle poznać możliwości inteligentnych domów. Pytamy: „Co się da zrobić?” nie zastanawiając się, czy jest to nam potrzebne.
+
+Przykładowo, warto wiedzieć, że istnieją przełączniki (_relay_), elektrozawory, ściemniacze (do oświetlenia), urządzenia do sterowania roletami i tak dalej. Więcej o nich za moment.
+
+### **top-down**
+
+Gdy już kojarzymy mniej więcej jakie urządzenia dostępne są na rynku, możemy przejść do innego sposobu myślenia. „Co jest mi potrzebne?” – stawiamy pytanie w ten sposób i zaczynamy opisywać scenariusze automatyzacji. Myślę, że warto tutaj zaangażować całą rodzinę do kreatywnej burzy mózgów 😉 Przykładowo, scenariusze, które my rozpisaliśmy do naszego domu:
+
+**1. Wyjście z domu**: Gdy wychodzę z domu, powinienem mieć możliwość wciśnięcia jednego przycisku, który zamknie wszystkie rolety i bramę garażową, zgasi światła, i uzbroi alarm.
+
+**2. Pobudka**: Chciałbym, aby o zadanej godzinie automatycznie podnosiła się roleta w sypialni i zaczynała grać muzyka.
+
+**3. Wakacje**: Gdy wyjeżdżam na dłuższy czas, chciałbym zastosować scenariusz **Wyjście z domu**, a ponadto przełączyć piec i ogrzewanie podłogowe w tryb oszczędny i zakręcić bieżącą wodę.
+
+**4. Wcześniejszy powrót do domu**: Chciałbym mieć możliwość włączenia ogrzewania w domu zdalnie z telefonu, gdy wiem, że wrócę wcześniej niż zwykle.
+
+**5. Okna dachowe w deszczu**: Chciałbym otrzymać powiadomienie na telefonie, gdy zacznie padać deszcz, a okna dachowe będą otwarte. (Wersja bardziej luksusowa: Chciałbym, aby okna dachowe automatycznie się zamknęły, gdy zacznie padać deszcz).
+
+**6. Kurier gdy nikogo nie ma**: Chciałbym mieć możliwość uchylenia bramy garażowej dla kuriera, aby mógł tam schować przesyłkę, jeśli nikogo nie ma w domu.
+
+**7. Kominek**: Chciałbym, aby wentylacja automatycznie tworzyła podciśnienie w domu, gdy wykryte zostanie, że rozpaliliśmy w kominku.
+
+**8. Zła jakość powietrza**: Chciałbym, aby wentylacja automatycznie włączała wyższy bieg, gdy wykryta zostanie kiepska jakość powietrza lub wysoka wilgotność.
+
+## Implementacja scenariuszy
+
+Gdy mamy już rozpisane mniej więcej nasze potrzeby na automatyzację i znamy mniej-więcej możliwości techniczne, czas przystąpić do zaprojektowania konkretnych rozwiązań do konkretnych scenariuszy.
+
+Większość urządzeń z-wave montuje się bezpośrednio w puszkach elektrycznych lub w pobliżu tego, czym mają sterować.
+
+### Rolety
+
+Rolety mają silniki elektryczne i przycisk pozwalający na sterowanie nimi. Gdy wciskamy klawisz ze strzałką w górę, to roleta się otwiera, a gdy drugi przycisk, to rolet się zamyka. Pytanie, czy da się to zautomatyzować?
+
+[zdjęcie przycisku do rolet]
+
+Odpowiedź to: oczywiście, że tak. Możemy wykorzystać odpowiednio zaprogramowane przełączniki z-wave albo dedykowane urządzenia – w Fibaro pod nazwą _Roller Shutter 3_ (FGR-223). Służą one do sterowania roletami, markizami, żaluzjami, a także dowolnymi silnikami napędzanymi prądem przemiennym (jednofazowym).
+
+[zdjęcie roller shutter]
+
+Podłączamy zgodnie z instrukcją i montujemy jedno takie urządzenie w każdej puszce elektrycznej przy rolecie, a następnie parujemy z centralką i voilà! Co istotne, po zamontowaniu Roller Shuttera nie tracimy możliwości sterowania roletami ręcznie – przycisk na ścianie nadal działa, gdybyśmy go potrzebowali!
+
+Analogicznie postępujemy też z bramą garażową.
+
+### Oświetlenie
+
+Do sterowania oświetleniem również możemy zastosować urządzenie z-wave typu _relay_, np. _Double Switch 2_ (FGS-223) pozwalające na sterowanie dwoma źródłami światła.
+
+[zdjęcie]
+
+_Double Switch_ również montujemy zgodnie z instrukcją w puszce elektrycznej pod łącznikiem, który do tej pory służył nam do manualnego sterowania oświetleniem, parujemy i gotowe. Od teraz możemy gasić i zapalać światło przy pomocy telefonu bądź przeglądarki.
+
+### Sceny
+
+Teraz, skoro mamy już wszystko, to pozostaje nam tylko poszczególne elementy połączyć w jedną całość. Przy wyjściu z domu montuję przycisk i, co istotne, może być on w dowolnym miejscu jeśli zdecyduję się na taki, który zasilany jest bateryjnie. To świetna opcja!
+
+Przycisk jest „aktorem”, którego wciśnięcie ma uruchomić scenę, która wyłączy światło dzięki Double Switchom i opuści rolety przez Roller Shuttery. W przypadku Fibaro cały ten proces można „wyklikać” w blokowym edytorze scen.
+
+[obrazek]
+[z filmu https://www.youtube.com/watch?v=akHjalzUCR0]
+
+## Co dalej ze smart home?
+
+Możliwe jest też oczywiście budowanie bardziej skomplikowanych scen, a nawet programowanie ich w języku skryptowym Lua.
+
+Podobały Wam się moje scenariusze? Chcielibyście, abym bardziej szczegółowo opisał z jakich urządzeń korzystam do zaimplementowania wszystkich z nich? Dajcie mi znać w komentarzach!
+
+– planowane jest osobne biuro z małym studiem do nagrań na YouTube – zobaczymy co z tych planów wyjdzie :)
