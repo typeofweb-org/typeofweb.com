@@ -1,55 +1,20 @@
-import Fs from 'fs/promises';
-import Path from 'path';
-import * as Process from 'process';
-
 import GrayMatter from 'gray-matter';
 
 import { allCategories, categoriesToMainCategory, categorySlugToCategory } from './categories';
 import { splitContent, trimExcerpt } from './excerpt';
+import { listFilesInDir, pathToLegacyPosts, pathToPosts, pathToPages, readFile } from './fs';
 import { getCommentsCount } from './getCommentsCount';
 import { toHtml, toMdx } from './markdown';
+import { memoize } from './memoize';
 import { allSeries } from './series';
 
 import type { PromiseValue } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-export const wordpressFolderName = '_wordpress_posts';
-export const postsFolderName = '_posts';
-export const pagesFolderName = '_pages';
-const basePath = Path.resolve(Process.cwd(), '');
-
-export const pathToLegacyPosts = Path.resolve(basePath, wordpressFolderName);
-export const pathToPosts = Path.resolve(basePath, postsFolderName);
-export const pathToPages = Path.resolve(basePath, pagesFolderName);
-
-export async function readFilesInDir(dir: string): Promise<readonly string[]> {
-  const entries = await Fs.readdir(dir, { withFileTypes: true });
-  return (
-    await Promise.all(
-      entries.map(async (entry) => {
-        const fullPath = Path.join(dir, entry.name);
-        if (entry.isDirectory()) {
-          return await readFilesInDir(fullPath);
-        }
-        if (entry.isFile() && (entry.name.endsWith('.md') || entry.name.endsWith('.mdx'))) {
-          return fullPath;
-        }
-        return;
-      }),
-    )
-  )
-    .flat()
-    .filter((x: string | undefined): x is string => !!x);
-}
-
-const stableKey = (obj: object): string => {
-  return JSON.stringify(Object.entries(obj).sort(([a], [b]) => a.localeCompare(b)));
-};
-
 export const readAllPosts = (() => {
-  const cache = new Map<string, any>();
+  const memoizedReadAllPosts = memoize(readAllPosts);
 
-  return async ({
+  return ({
     category,
     series,
     skip,
@@ -64,7 +29,7 @@ export const readAllPosts = (() => {
     readonly includePages?: boolean;
     readonly includeCommentsCount?: boolean;
   } = {}): ReturnType<typeof readAllPosts> => {
-    const key = stableKey({
+    return memoizedReadAllPosts({
       category,
       series,
       skip,
@@ -72,19 +37,6 @@ export const readAllPosts = (() => {
       includePages,
       includeCommentsCount,
     });
-    if (process.env.NODE_ENV === 'production' && cache.has(key)) {
-      return cache.get(key);
-    }
-    const result = await readAllPosts({
-      category,
-      series,
-      skip,
-      limit,
-      includePages,
-      includeCommentsCount,
-    });
-    cache.set(key, result);
-    return result;
   };
 
   async function readAllPosts({
@@ -104,19 +56,18 @@ export const readAllPosts = (() => {
   } = {}) {
     const filePaths = (
       await Promise.all([
-        readFilesInDir(pathToLegacyPosts),
-        readFilesInDir(pathToPosts),
-        includePages ? readFilesInDir(pathToPages) : null,
+        listFilesInDir(pathToLegacyPosts),
+        listFilesInDir(pathToPosts),
+        includePages ? listFilesInDir(pathToPages) : null,
       ])
     ).flat();
 
     const postsAndPaths = await Promise.all(
       filePaths
         .filter((filePath): filePath is Exclude<typeof filePath, null> => !!filePath)
-        .map(async (filePath) => {
-          const post = await Fs.readFile(filePath, 'utf-8');
-          const relativePath = Path.relative(basePath, filePath);
-          return { filePath: relativePath, post };
+        .map(async (absolutePath) => {
+          const { file: post, relativePath: filePath } = await readFile(absolutePath);
+          return { filePath, post };
         }),
     );
 

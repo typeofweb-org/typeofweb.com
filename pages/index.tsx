@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import AuthorsJson from '../authors.json';
 import { Pagination } from '../components/atoms/Pagination';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
@@ -39,6 +41,7 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
   }));
 
   return {
+    revalidate: 60 * 15,
     props: {
       posts,
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
@@ -73,19 +76,20 @@ const IndexPage = ({ posts, videos, postsCount, permalink, pageKind, seriesLinks
   return (
     <TwoColumns withSidebar={true} pageKind={pageKind} series={pageKind === 'series' ? seriesLinks : null}>
       {items.map((item, i) => {
+        const key = item.type === 'post' ? item.frontmatter.title : item.title;
         const sneakPeek =
           item.type === 'post' ? (
-            <PostIndexItem key={item.frontmatter.permalink} pageKind={pageKind} post={item} i={i} />
+            <PostIndexItem key={key} pageKind={pageKind} post={item} i={i} />
           ) : (
-            <VideoIndexItem key={item.url} video={item} />
+            <VideoIndexItem key={key} video={item} />
           );
 
         if (i === 0) {
           return (
-            <>
+            <Fragment key={key}>
               {sneakPeek}
               <NewsletterForm />
-            </>
+            </Fragment>
           );
         }
         return sneakPeek;

@@ -2,7 +2,7 @@ import AuthorsJson from '../../../authors.json';
 import { pageSize } from '../../../constants';
 import { permalinkIsCategory } from '../../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';
-import { getAllPermalinks, readAllPosts } from '../../../utils/wordpress';
+import { getAllPermalinks, readAllPosts } from '../../../utils/posts';
 import IndexPage from '../../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
@@ -63,7 +63,10 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     content: '',
   }));
 
-  return { props: { posts, page, postsCount, permalink: params.permalink, pageKind: 'category' } };
+  return {
+    revalidate: 60 * 15,
+    props: { posts, page, postsCount, permalink: params.permalink, pageKind: 'category' },
+  };
 };
 
 export default IndexPage;

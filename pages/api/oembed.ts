@@ -1,5 +1,5 @@
 import Authors from '../../authors.json';
-import { getExcerptAndContent, getPostByPermalink } from '../../utils/wordpress';
+import { getExcerptAndContent, getPostByPermalink } from '../../utils/posts';
 
 import type { OembedData } from '../../utils/oEmbedCache';
 import type { NextApiRequest, NextApiResponse } from 'next';
