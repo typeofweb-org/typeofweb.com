@@ -63,7 +63,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
       : null;
 
   return {
-    revalidate: 60 * 15,
+    revalidate: 60 * 60 * 2,
     props: { posts, page, postsCount, permalink: seriesSlug, pageKind: 'series' as const, seriesLinks },
   };
 };
