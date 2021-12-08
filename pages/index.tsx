@@ -41,7 +41,7 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
   }));
 
   return {
-    revalidate: 60 * 15,
+    revalidate: 60 * 60 * 2,
     props: {
       posts,
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
