@@ -12,6 +12,7 @@ const handler: NextApiHandler = async (req, res) => {
   try {
     return await getData({ path: req.query.path, action: req.query.action }, res);
   } catch (error) {
+    console.error(error);
     res.status(500).send('Internal server error');
   }
 };
