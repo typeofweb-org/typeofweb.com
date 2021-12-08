@@ -55,7 +55,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     html: `<p>${contentObj.excerpt}</p>`,
   };
 
-  res.status(200).setHeader('Content-Type', 'application/json');
+  res
+    .status(200)
+    .setHeader('Content-Type', 'application/json')
+    .setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=3600');
   res.json(response);
 };
 
