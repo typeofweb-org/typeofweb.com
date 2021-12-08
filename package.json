@@ -10,7 +10,7 @@
     "start": "next start",
     "tsc": "tsc --noEmit",
     "ts-node-esm": "node --loader ts-node/esm --experimental-specifier-resolution=node",
-    "feed": "yarn ts-node-esm generateFeed.ts",
+    "feed": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateFeed.ts",
     "migrate-wordpress-comments": "yarn ts-node-esm migrateCommentsToGitHubDiscussions.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },

@@ -57,7 +57,7 @@ async function listFilesInDirGitHub(relativePath: string): Promise<readonly stri
 }
 
 export async function listFilesInDir(absolutePath: string): Promise<readonly string[]> {
-  const shouldReadFromGitHub = process.env.NODE_ENV === 'production' || process.env.FORCE_GITHUB_READ;
+  const shouldReadFromGitHub = process.env.ENABLE_GITHUB_READ === 'true';
   const relativePath = absolutePath.replace(basePath, '');
 
   const files = shouldReadFromGitHub
@@ -70,7 +70,7 @@ export async function listFilesInDir(absolutePath: string): Promise<readonly str
 export async function readFile(
   absolutePath: string,
 ): Promise<{ readonly file: string; readonly relativePath: string }> {
-  const shouldReadFromGitHub = process.env.NODE_ENV === 'production' || process.env.FORCE_GITHUB_READ;
+  const shouldReadFromGitHub = process.env.ENABLE_GITHUB_READ === 'true';
   const relativePath = absolutePath.replace(basePath, '');
 
   const file = shouldReadFromGitHub ? await readFileGitHub(relativePath) : await readFileFileSystem(absolutePath);
