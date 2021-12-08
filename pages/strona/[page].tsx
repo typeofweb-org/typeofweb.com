@@ -51,7 +51,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   }));
 
   return {
-    revalidate: 60 * 60 * 2,
+    revalidate: 60 * 15,
     props: { posts, videos, page, postsCount, pageKind: 'index' },
   };
 };
