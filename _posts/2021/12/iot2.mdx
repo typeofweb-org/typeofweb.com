@@ -20,37 +20,50 @@ W poprzednim artykule opisałem moje przemyślenia odnośnie różnych bezprzewo
 
 Z-wave daje możliwość tworzenia **częściowo rozproszonej** sieci urządzeń. Co to oznacza? W przypadku z-wave musimy mieć centralkę – to jest urządzenie, które zarządza wszystkim. To właśnie centralka odpowiada za konfigurację zachowań, automatyzacji, dodawanie i usuwanie nowych urządzeń, a także potencjalnie za dostęp zdalny do naszego inteligentnego domu.
 
-<figure>
-  <img
-    src="https://res.cloudinary.com/type-of-web/image/upload/v1638734057/L_packshot_HC3_3_RGB_rflno8.jpg"
-    alt="Centrala inteligentnego domu Fibaro Home Center 3"
-    width="660"
-    height="440"
-  />
-  <figcaption>
-    <p>Centrala inteligentnego domu Fibaro Home Center 3</p>
-    <p>Zdjęcie pochodzi ze strony fibaro.com</p>
-  </figcaption>
-</figure>
+<Gallery columns="2">
+  <figure>
+    <img
+      src="https://res.cloudinary.com/type-of-web/image/upload/v1638734057/L_packshot_HC3_3_RGB_rflno8.jpg"
+      alt="Centrala inteligentnego domu Fibaro Home Center 3"
+      width="660"
+      height="440"
+    />
+    <figcaption>
+      <p>Centrala inteligentnego domu Fibaro Home Center 3</p>
+      <p>Zdjęcie pochodzi ze strony fibaro.com</p>
+    </figcaption>
+  </figure>
 
-<figure>
-  <img
-    src="https://res.cloudinary.com/type-of-web/image/upload/v1638734062/201007_Ezlo_Secure_Podium_1_2400x1500.png_mdmfli.webp"
-    alt="Centrala inteligentnego domu Ezlo Secure (dawniej Vera)"
-    width="600"
-    height="375"
-  />
-  <figcaption>
-    <p>Centrala inteligentnego domu Ezlo Secure (dawniej Vera)</p>
-    <p>Zdjęcie pochodzi ze strony getvera.com</p>
-  </figcaption>
-</figure>
+  <figure>
+    <img
+      src="https://res.cloudinary.com/type-of-web/image/upload/v1638734062/201007_Ezlo_Secure_Podium_1_2400x1500.png_mdmfli.webp"
+      alt="Centrala inteligentnego domu Ezlo Secure (dawniej Vera)"
+      width="704"
+      height="440"
+    />
+    <figcaption>
+      <p>Centrala inteligentnego domu Ezlo Secure (dawniej Vera)</p>
+      <p>Zdjęcie pochodzi ze strony getvera.com</p>
+    </figcaption>
+  </figure>
+</Gallery>
 
 ## Mesh
 
 Chwila, chwila – ale to przecież brzmi jak całkowicie scentralizowane rozwiązanie?! Nie do końca. Urządzenia z-wave musimy dodać za pomocą centralki, ale później dzięki temu, że urządzenia z-wave łączą się w siatkę, to centralka może być praktycznie gdziekolwiek – u mnie będzie w garażu. Urządzenie i tak połączy się z nią albo bezpośrednio (jeśli będzie dostatecznie blisko), albo za pośrednictwem innych urządzeń (maksymalnie czterech).
 
-[rysunek?]
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1639000805/web_slika-1-1170x658_b2pbza.jpg"
+    alt="Schemat siatki (mesh) w z-wave"
+    width="585"
+    height="329"
+  />
+  <figcaption>
+    <p>Schemat siatki (mesh) w z-wave</p>
+    <p>Zdjęcie pochodzi ze strony qubino.com</p>
+  </figcaption>
+</figure>
 
 Przykładowo, urządzenie zamontowane na poddaszu połączy się z urządzeniem na pierwszym piętrze, które z kolei połączy się z urządzeniem w salonie, a to połączy się z centralką w garażu. Jest to jak najbardziej poprawne zachowanie – tworzy się siatka (mesh), dzięki której znacznie zwiększa się zasięg sieci z-wave.
 
@@ -100,11 +113,33 @@ Większość urządzeń z-wave montuje się bezpośrednio w puszkach elektryczny
 
 Rolety mają silniki elektryczne i przycisk pozwalający na sterowanie nimi. Gdy wciskamy klawisz ze strzałką w górę, to roleta się otwiera, a gdy drugi przycisk, to rolet się zamyka. Pytanie, czy da się to zautomatyzować?
 
-[zdjęcie przycisku do rolet]
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1639000885/main_r1huaw.jpg"
+    alt="Typowy łącznik roletowy"
+    width="300"
+    height="300"
+  />
+  <figcaption>
+    <p>Typowy łącznik roletowy</p>
+    <p>Zdjęcie pochodzi ze strony leroymerlin.pl</p>
+  </figcaption>
+</figure>
 
 Odpowiedź to: oczywiście, że tak. Możemy wykorzystać odpowiednio zaprogramowane przełączniki z-wave albo dedykowane urządzenia – w Fibaro pod nazwą _Roller Shutter 3_ (FGR-223). Służą one do sterowania roletami, markizami, żaluzjami, a także dowolnymi silnikami napędzanymi prądem przemiennym (jednofazowym).
 
-[zdjęcie roller shutter]
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1639001315/Screenshot_2021-12-08_at_23.07.26_rzt8iu.png"
+    alt="Zamontowany roller shutter bez problemu mieści się w puszcze w ścianie"
+    width="403"
+    height="271"
+  />
+  <figcaption>
+    <p>Zamontowany roller shutter bez problemu mieści się w puszcze w ścianie</p>
+    <p>Zdjęcie pochodzi z instrukcji Fibaro</p>
+  </figcaption>
+</figure>
 
 Podłączamy zgodnie z instrukcją i montujemy jedno takie urządzenie w każdej puszce elektrycznej przy rolecie, a następnie parujemy z centralką i voilà! Co istotne, po zamontowaniu Roller Shuttera nie tracimy możliwości sterowania roletami ręcznie – przycisk na ścianie nadal działa, gdybyśmy go potrzebowali!
 
@@ -114,8 +149,6 @@ Analogicznie postępujemy też z bramą garażową.
 
 Do sterowania oświetleniem również możemy zastosować urządzenie z-wave typu _relay_, np. _Double Switch 2_ (FGS-223) pozwalające na sterowanie dwoma źródłami światła.
 
-[zdjęcie]
-
 _Double Switch_ również montujemy zgodnie z instrukcją w puszce elektrycznej pod łącznikiem, który do tej pory służył nam do manualnego sterowania oświetleniem, parujemy i gotowe. Od teraz możemy gasić i zapalać światło przy pomocy telefonu bądź przeglądarki.
 
 ### Sceny
@@ -124,8 +157,18 @@ Teraz, skoro mamy już wszystko, to pozostaje nam tylko poszczególne elementy p
 
 Przycisk jest „aktorem”, którego wciśnięcie ma uruchomić scenę, która wyłączy światło dzięki Double Switchom i opuści rolety przez Roller Shuttery. W przypadku Fibaro cały ten proces można „wyklikać” w blokowym edytorze scen.
 
-[obrazek]
-[z filmu https://www.youtube.com/watch?v=akHjalzUCR0]
+<figure>
+  <img
+    src="https://res.cloudinary.com/type-of-web/image/upload/v1639001399/Screenshot_2021-12-05_at_20.47.36_qbjrs9.png"
+    alt="Blokowy edytor scen pozwala na tworzenie scenariuszy nawet osobom niepotrafiącym programować"
+    width="1004"
+    height="563"
+  />
+  <figcaption>
+    <p>Blokowy edytor scen pozwala na tworzenie scenariuszy nawet osobom niepotrafiącym programować</p>
+    <p>Zdjęcie pochodzi z filmu youtu.be/akHjalzUCR0</p>
+  </figcaption>
+</figure>
 
 ## Co dalej ze smart home?
 

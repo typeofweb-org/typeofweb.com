@@ -86,8 +86,16 @@ const CodepenWidget = Dynamic<CodepenWidgetProps>(
   { ssr: false },
 );
 
-const Gallery = (props: {
-  readonly columns?: '1' | '2' | '3';
+const Gallery = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- @todo
+  columns = '2',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- @todo
+  link = 'none',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- @todo
+  size = 'medium',
+  children,
+}: {
+  readonly columns: '1' | '2' | '3';
   readonly link: 'file' | 'none';
   readonly size: 'medium' | 'large' | 'full';
   readonly children: readonly React.ReactElement[];
@@ -96,7 +104,7 @@ const Gallery = (props: {
     console.warn(`Not implemented: Gallery`);
     warned['Gallery'] = true;
   }
-  return <div>{props.children}</div>;
+  return <div className="md:grid md:grid-cols-2 md:-mx-16">{children}</div>;
 };
 
 const components = {
