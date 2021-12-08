@@ -104,7 +104,15 @@ const Gallery = ({
     console.warn(`Not implemented: Gallery`);
     warned['Gallery'] = true;
   }
-  return <div className="md:grid md:grid-cols-2 md:-mx-16">{children}</div>;
+  return (
+    <div
+      className={`md:grid ${
+        columns === '1' ? 'md:grid-cols-1' : columns === '2' ? 'md:grid-cols-2' : 'md:grid-cols-3'
+      } md:-mx-16`}
+    >
+      {children}
+    </div>
+  );
 };
 
 const components = {
