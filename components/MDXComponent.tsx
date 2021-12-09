@@ -12,6 +12,7 @@ import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
 import { Timeline } from './molecules/Timeline';
 
 import type { CodepenWidgetProps } from './molecules/CodepenWidget';
+import type { PropsWithChildren } from 'react';
 
 type MDXRemoteProps = Parameters<typeof MDXRemote>[0];
 
@@ -46,7 +47,6 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
   if (width && height && src) {
-    // console.log({ width, height });
     // const isFull = props.className?.includes('size-full') ?? false;
     // const isLarge = props.className?.includes('size-large') ?? false;
     // const isMedium = props.className?.includes('size-medium') ?? false;
@@ -60,12 +60,14 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           src={src}
           alt={alt}
           loading="lazy"
+          priority={false}
           layout="responsive"
           loader={typeofwebImageLoader}
         />
       </div>
     );
   }
+  // console.warn(`[MDX] Image ${src} has no width and height.`);
   return <img {...props} width={width} height={height} src={src} alt={alt} loading="lazy" />;
 };
 
@@ -86,6 +88,43 @@ const CodepenWidget = Dynamic<CodepenWidgetProps>(
   { ssr: false },
 );
 
+type MdxChild = React.ReactElement<
+  PropsWithChildren<{ readonly originalType?: string; readonly mdxType?: string; readonly src?: string }>
+>;
+
+const groupByImagesAndDescriptions = (children: readonly MdxChild[]) => {
+  const imgStartIndexes = children.flatMap((child, index) => {
+    if (child.props.originalType === 'img' || child.props.mdxType === 'img') {
+      return [index];
+    }
+    return [];
+  });
+  const imgEndIndexes = imgStartIndexes.slice(1);
+  const groups = imgStartIndexes.map((startIndex, idx) =>
+    children.slice(startIndex, startIndex + imgEndIndexes[idx] || Infinity),
+  );
+
+  return groups;
+};
+
+const splitDescriptionIntoLines = (description: MdxChild) => {
+  if (
+    (description.props.mdxType === 'p' || description.props.originalType === 'p') &&
+    (typeof description.props.children === 'string' ||
+      (Array.isArray(description.props.children) && description.props.children.every((s) => typeof s === 'string')))
+  ) {
+    return [description.props.children]
+      .flat()
+      .join('')
+      .trim()
+      .split('\n')
+      .filter((line) => !!line.trim())
+      .map((line, idx) => <p key={String(idx) + line}>{line}</p>);
+  }
+  console.log(description.props);
+  return description;
+};
+
 const Gallery = ({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars -- @todo
   columns = '2',
@@ -98,19 +137,24 @@ const Gallery = ({
   readonly columns: '1' | '2' | '3';
   readonly link: 'file' | 'none';
   readonly size: 'medium' | 'large' | 'full';
-  readonly children: readonly React.ReactElement[];
+  readonly children: readonly MdxChild[];
 }) => {
-  if (!warned['Gallery']) {
-    console.warn(`Not implemented: Gallery`);
-    warned['Gallery'] = true;
-  }
+  const groups = groupByImagesAndDescriptions(children);
+
   return (
     <div
       className={`md:grid ${
         columns === '1' ? 'md:grid-cols-1' : columns === '2' ? 'md:grid-cols-2' : 'md:grid-cols-3'
       } md:-mx-16`}
     >
-      {children}
+      {groups.map(([img, ...descriptions], idx) => {
+        return (
+          <figure key={String(idx) + (img.props.src || '')} className="w-full">
+            {img}
+            <figcaption>{descriptions.flatMap((d) => splitDescriptionIntoLines(d))}</figcaption>
+          </figure>
+        );
+      })}
     </div>
   );
 };

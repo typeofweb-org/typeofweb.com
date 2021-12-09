@@ -21,7 +21,7 @@ export const NewsletterForm = memo<NewsletterFormProps>(({ utmSource }) => {
   const [email, setEmail] = useState('');
   const r = useRouter();
 
-  const utmSourceValue = encodeURIComponent(utmSource || r.asPath.slice(1) || 'front-page');
+  const utmSourceValue = encodeURIComponent(utmSource || r.asPath.split(/[#?]/g).shift()?.slice(1) || 'front-page');
 
   const handleSubmit = useCallback<React.FormEventHandler<HTMLFormElement>>(
     async (e) => {
