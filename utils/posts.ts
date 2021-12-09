@@ -12,7 +12,7 @@ import type { PromiseValue } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 export const readAllPosts = (() => {
-  const memoizedReadAllPosts = memoize(readAllPosts);
+  const memoizedReadAllPosts = process.env.NODE_ENV === 'production' ? memoize(readAllPosts) : readAllPosts;
 
   return ({
     category,
