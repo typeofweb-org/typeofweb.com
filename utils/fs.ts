@@ -3,9 +3,9 @@ import * as Process from 'process';
 
 import { host } from '../constants';
 
-export const wordpressFolderName = '_wordpress_posts';
-export const postsFolderName = '_posts';
-export const pagesFolderName = '_pages';
+const wordpressFolderName = '_wordpress_posts';
+const postsFolderName = '_posts';
+const pagesFolderName = '_pages';
 const basePath = Path.resolve(Process.cwd(), '');
 
 export const pathToLegacyPosts = Path.resolve(basePath, wordpressFolderName);
