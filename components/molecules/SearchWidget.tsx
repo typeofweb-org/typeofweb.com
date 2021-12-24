@@ -21,7 +21,7 @@ import { Input } from '../atoms/Input';
 
 import type { TypeOfWebHit } from '../../types';
 import type { KeyboardEventHandler, ChangeEventHandler, ComponentType } from 'react';
-import type { Hit, HitsProvided, SearchBoxProvided, WrappedInsightsClient } from 'react-instantsearch-core';
+import type { HitsProvided, SearchBoxProvided, WrappedInsightsClient } from 'react-instantsearch-core';
 
 const searchClient = Algoliasearch('QB2FWHH99M', '25fc15b3e367b7a46c1f3617b39aa749', {
   headers: {
