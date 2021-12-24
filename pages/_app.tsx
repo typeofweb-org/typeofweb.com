@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { Seo } from '../components/Seo';
 import { RunningHeaderProvider } from '../hooks/runningHeader';
 import { UIStateProvider } from '../hooks/useUiState';
-import { identifyUser } from '../utils/fingerprint';
 
 import type { AppType } from 'next/dist/shared/lib/utils';
 import type { ScriptProps as NextScriptProps } from 'next/script';
@@ -62,10 +61,6 @@ function ScriptAfterInteraction({
 }
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  useEffect(() => {
-    identifyUser();
-  }, []);
-
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -109,6 +104,20 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             gtag('config', 'UA-75923815-1', {
               page_path: window.location.pathname
             });
+          `.trim(),
+        }}
+      />
+      <Script
+        id="algolia-search-insights"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.0.3";
+
+            !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+            (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+            i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+            }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
           `.trim(),
         }}
       />

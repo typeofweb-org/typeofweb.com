@@ -11,11 +11,12 @@
     "tsc": "tsc --noEmit",
     "ts-node-esm": "node --loader ts-node/esm --experimental-specifier-resolution=node",
     "feed": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateFeed.ts",
-    "migrate-wordpress-comments": "yarn ts-node-esm migrateCommentsToGitHubDiscussions.ts",
+    "algolia": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateAlgoliaItems.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
   "type": "commonjs",
   "dependencies": {
+    "@algolia/recommend": "4.11.0",
     "@giscus/react": "github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
     "@octokit/auth-app": "3.6.1",
     "@octokit/auth-token": "2.5.0",

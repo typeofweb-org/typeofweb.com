@@ -7,12 +7,13 @@ sedi () {
 ARGS=$@
 
 if [[ ${ARGS[*]} =~ 'feed' ]]; then
-  echo "Building feed..."
+  echo "Building feed and algolia index..."
   # Fuck node.js seriously
   sedi 's/  "type": "commonjs",/  "type": "module",/' package.json
   yarn feed
+  yarn algolia
   sedi 's/  "type": "module",/  "type": "commonjs",/' package.json
-  echo "Done building feed..."
+  echo "Done building feed and algolia index..."
 fi
 
 if [[ ${ARGS[*]} =~ 'next' ]]; then
