@@ -73,7 +73,6 @@ export const ArticleMeta = memo<{
                 style={{ zIndex: authors.length - idx }}
               >
                 <Image
-                  loader={typeofwebImageLoader}
                   src={author.avatarUrl + (isSmall ? `?s=${S * 2}` : `?s=${L * 2}`)}
                   width={isSmall ? S : L}
                   height={isSmall ? S : L}

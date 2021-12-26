@@ -46,6 +46,10 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
 };
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
+  if (!src) {
+    return null;
+  }
+
   if (width && height && src) {
     // const isFull = props.className?.includes('size-full') ?? false;
     // const isLarge = props.className?.includes('size-large') ?? false;
@@ -62,7 +66,6 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           loading="lazy"
           priority={false}
           layout="responsive"
-          loader={typeofwebImageLoader}
         />
       </div>
     );

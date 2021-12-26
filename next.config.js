@@ -58,7 +58,6 @@ const config = withBundleAnalyzer(
 );
 
 config.images = {
-  loader: 'custom',
   domains: ['v2.typeofweb.com', 'typeofweb.com', 'secure.gravatar.com', 'res.cloudinary.com', 'i.ytimg.com'],
   deviceSizes: [320, 768, 1024, 1280, 1536],
   imageSizes: [640, 1280, 1536],
