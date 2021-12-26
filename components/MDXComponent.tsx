@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { memo } from 'react';
 
 import { origin, host } from '../constants';
-import { typeofwebImageLoader } from '../utils/imageLoader';
 
 import { DemoSimulation } from './SeniorsJuniorsDemoSimulationAsync';
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
@@ -49,6 +48,10 @@ const A = ({ href, ...props }: JSX.IntrinsicElements['a']) => {
 };
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
+  if (!src) {
+    return <noscript />;
+  }
+
   if (width && height && src) {
     // const isFull = props.className?.includes('size-full') ?? false;
     // const isLarge = props.className?.includes('size-large') ?? false;
@@ -65,7 +68,6 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           loading="lazy"
           priority={false}
           layout="responsive"
-          loader={typeofwebImageLoader}
         />
       </div>
     );
