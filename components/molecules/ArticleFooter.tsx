@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React, { memo } from 'react';
 
 import Pattern from '../../images/typeofweb-pattern.svg';
-import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { SectionTitle } from '../atoms/SectionTitle';
 
 import { social } from './SocialWidget';
@@ -35,7 +34,6 @@ export const ArticleFooter = memo<ArticleFooterProps>(({ authors }) => {
               <span className="flex flex-wrap items-center my-2 sm:flex-nowrap">
                 <span className={`inline-flex border-2 rounded-full border-gray-100 mr-4`}>
                   <Image
-                    loader={typeofwebImageLoader}
                     src={a.avatarUrl + `?s=${96}`}
                     width={48}
                     height={48}

@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
-import { typeofwebImageLoader } from '../../utils/imageLoader';
-
 import type { IGetPlaiceholderReturn } from 'plaiceholder';
 
 export type CoverPlaiceholder = {
@@ -29,7 +27,6 @@ export const ArticleCoverImage = memo<{
       shadow-lg -mx-6 mt-4 lg:mb-4 mb-2 lg:mt-8 rounded-lg overflow-hidden`}
     >
       <Image
-        loader={typeofwebImageLoader}
         src={src}
         unoptimized={src.includes('ytimg.com')}
         itemProp="image"

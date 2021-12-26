@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { memo } from 'react';
 
 import { origin, host } from '../constants';
-import { typeofwebImageLoader } from '../utils/imageLoader';
 
 import { DemoSimulation } from './SeniorsJuniorsDemoSimulationAsync';
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
@@ -31,7 +30,10 @@ const isLocalUrl = (href: string) => {
   }
 };
 
-const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { readonly href: string }) => {
+const A = ({ href, ...props }: JSX.IntrinsicElements['a']) => {
+  if (!href) {
+    return <a href={href} {...props} />;
+  }
   return isLocalUrl(href) ? (
     <Link href={href} passHref={true}>
       <LinkUnderlineEffect>
@@ -46,6 +48,10 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
 };
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
+  if (!src) {
+    return <noscript />;
+  }
+
   if (width && height && src) {
     // const isFull = props.className?.includes('size-full') ?? false;
     // const isLarge = props.className?.includes('size-large') ?? false;
@@ -62,7 +68,6 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           loading="lazy"
           priority={false}
           layout="responsive"
-          loader={typeofwebImageLoader}
         />
       </div>
     );
@@ -159,6 +164,7 @@ const Gallery = ({
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- have to cast
 const components = {
   a: A,
   img: Img,
@@ -169,4 +175,4 @@ const components = {
   Gallery,
   Timeline,
   DemoSimulation,
-};
+} as import('mdx/types').MDXComponents;
