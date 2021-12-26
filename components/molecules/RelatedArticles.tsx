@@ -36,7 +36,7 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
       <ol className="flex flex-col gap-4 justify-between sm:flex-row sm:gap-2">
         {value.related.map((p) => {
           return (
-            <li key={p.frontmatter.permalink} className="word-break-break-word flex-1 flex-shrink-0">
+            <li key={p.frontmatter.permalink} className="word-break-break-word shrink-0 flex-1">
               <Link href={getUrlForPermalink(p.frontmatter.permalink)}>
                 <a className="group hover:text-blue-500 text-gray-900 transition-colors">
                   <div className="relative w-full h-32 bg-gradient-to-br from-blue-100 to-gray-200">
