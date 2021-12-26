@@ -47,7 +47,7 @@ export async function getOEmbed(
   },
 ) {
   const cache = await readJson('./oEmbedCache.json');
-  console.log({ updateCache, force, url, 'url in cache': url in cache });
+  // console.log({ updateCache, force, url, 'url in cache': url in cache });
 
   if (!force && url in cache) {
     return cache[url].data;
