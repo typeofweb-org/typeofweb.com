@@ -423,14 +423,14 @@ export const CustomHit = memo<CustomHitProps>(
             <path d="M20 4v7a4 4 0 0 1-4 4H4" />
           </svg>
           <span
-            className={`block whitespace-nowrap text-lg overflow-hidden overflow-ellipsis ${
+            className={`block whitespace-nowrap text-lg overflow-hidden text-ellipsis ${
               isActive ? 'text-gray-100' : 'text-gray-900'
             }`}
           >
             {hit.title}
           </span>
           <span
-            className={`block whitespace-nowrap text-sm overflow-hidden overflow-ellipsis ${
+            className={`block whitespace-nowrap text-sm overflow-hidden text-ellipsis ${
               isActive ? 'text-gray-200' : 'text-gray-700'
             }`}
           >

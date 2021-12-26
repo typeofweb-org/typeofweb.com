@@ -43,7 +43,7 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 transform rotate-180"
+              className="w-6 rotate-180"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
