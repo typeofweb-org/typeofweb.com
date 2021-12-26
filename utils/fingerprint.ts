@@ -1,16 +1,4 @@
-export function identifyUser() {
-  const f = getFingerprint();
-  const w = window;
-  const d = w.dataLayer || (w.dataLayer = []);
-  d.push({
-    algoliaUserToken: f,
-  });
-  d.push({
-    algoliaIndexName: 'typeofweb_prod',
-  });
-}
-
-function getFingerprint() {
+export function getFingerprint() {
   const w = window;
   const f = w.localStorage.getItem('typeofweb_s') || generate();
   w.localStorage.setItem('typeofweb_s', f);

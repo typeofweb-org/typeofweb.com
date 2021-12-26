@@ -3,18 +3,31 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, memo, useState, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { InstantSearch, Configure, connectSearchBox, connectHits, PoweredBy } from 'react-instantsearch-dom';
+import {
+  connectHitInsights,
+  InstantSearch,
+  Configure,
+  connectSearchBox,
+  connectHits,
+  PoweredBy,
+} from 'react-instantsearch-dom';
 
 import { useBodyFix } from '../../hooks/useBodyFix';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
+import { getFingerprint } from '../../utils/fingerprint';
 import { getUrlForPermalink } from '../../utils/permalinks';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
 import { Input } from '../atoms/Input';
 
-import type { KeyboardEventHandler, ChangeEventHandler } from 'react';
-import type { HitsProvided, SearchBoxProvided } from 'react-instantsearch-core';
+import type { TypeOfWebHit } from '../../types';
+import type { KeyboardEventHandler, ChangeEventHandler, ComponentType } from 'react';
+import type { HitsProvided, SearchBoxProvided, WrappedInsightsClient } from 'react-instantsearch-core';
 
-const searchClient = Algoliasearch('QB2FWHH99M', '25fc15b3e367b7a46c1f3617b39aa749');
+const searchClient = Algoliasearch('QB2FWHH99M', '25fc15b3e367b7a46c1f3617b39aa749', {
+  headers: {
+    'x-algolia-usertoken': getFingerprint(),
+  },
+});
 
 export const SearchWidget = memo(() => {
   const IS_MAC = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform);
@@ -173,97 +186,6 @@ const CustomSearchBox = connectSearchBox<CustomSearchBoxProps>(
 );
 CustomSearchBox.displayName = 'CustomSearchBox';
 
-interface TypeOfWebHit {
-  readonly title: string;
-  readonly date: string;
-  readonly permalink: string;
-  readonly type: 'post' | 'page';
-  readonly excerpt: string;
-  readonly series?: {
-    readonly slug: string;
-    readonly name: string;
-  } | null;
-  readonly category?: {
-    readonly slug: string;
-    readonly name: string;
-  } | null;
-  readonly authors: readonly string[];
-  readonly seo: {
-    readonly focusKeywords?: readonly string[];
-    readonly focusKeywordSynonyms?: readonly string[];
-    readonly metadesc?: string;
-  };
-  readonly content: string;
-  readonly objectID: string;
-  readonly img?: { readonly height: number; readonly width: number; readonly url: string } | null;
-  readonly _highlightResult: {
-    readonly title: {
-      readonly value: string;
-      readonly matchLevel: string;
-      readonly matchedWords: readonly string[];
-    };
-    readonly series: {
-      readonly name: {
-        readonly value: string;
-        readonly matchLevel: string;
-        readonly matchedWords: readonly string[];
-      };
-    };
-    readonly category: {
-      readonly name: {
-        readonly value: string;
-        readonly matchLevel: string;
-        readonly matchedWords: readonly string[];
-      };
-    };
-    readonly authors: readonly [
-      {
-        readonly value: string;
-        readonly matchLevel: string;
-        readonly matchedWords: readonly string[];
-      },
-    ];
-    readonly seo: {
-      readonly focusKeywords: readonly [
-        {
-          readonly value: string;
-          readonly matchLevel: string;
-          readonly matchedWords: readonly string[];
-        },
-        {
-          readonly value: string;
-          readonly matchLevel: string;
-          readonly matchedWords: readonly string[];
-        },
-        {
-          readonly value: string;
-          readonly matchLevel: string;
-          readonly matchedWords: readonly string[];
-        },
-      ];
-      readonly focusKeywordSynonyms: readonly [
-        {
-          readonly value: string;
-          readonly matchLevel: string;
-          readonly matchedWords: readonly string[];
-        },
-      ];
-      readonly metadesc: {
-        readonly value: string;
-        readonly matchLevel: string;
-        readonly matchedWords: readonly string[];
-      };
-    };
-    readonly content: {
-      readonly value: string;
-      readonly matchLevel: string;
-      readonly matchedWords: readonly string[];
-    };
-  };
-  readonly __position: number;
-  readonly __queryID: string;
-}
-
 interface CustomHitsProps extends HitsProvided<TypeOfWebHit> {
   readonly currentObjectID: string | null;
   readonly setObjectId: (objectId: string) => void;
@@ -273,6 +195,7 @@ export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, cu
   const { push } = useRouter();
 
   const currentHitIndex = hits.findIndex((h) => h.objectID === currentObjectID);
+  const currentHit = hits.find((h) => h.objectID === currentObjectID);
 
   const selectNextHit = useCallback(() => {
     const nextHitIndex = (currentHitIndex + 1) % hits.length;
@@ -287,26 +210,32 @@ export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, cu
   }, [currentHitIndex, hits, setObjectId]);
 
   useEffect(() => {
-    const handler = (event: KeyboardEvent) => {
+    const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
         selectPrevHit();
       } else if (event.key === 'ArrowDown') {
         event.preventDefault();
         selectNextHit();
-      } else if (event.key === 'Enter' && currentObjectID) {
+      } else if (event.key === 'Enter' && currentHit?.objectID) {
         event.preventDefault();
-        void push(getUrlForPermalink(currentObjectID));
+        window.aa('clickedObjectIDsAfterSearch', {
+          index: 'typeofweb_prod',
+          eventName: 'Search result [Enter]',
+          objectIDs: [currentHit.objectID],
+          positions: [currentHit.__position],
+          queryID: currentHit.__queryID,
+        });
+
+        void push(getUrlForPermalink(currentHit.objectID));
       }
     };
 
-    document.addEventListener('keydown', handler);
+    document.addEventListener('keydown', onKeyDown);
     return () => {
-      document.removeEventListener('keydown', handler);
+      document.removeEventListener('keydown', onKeyDown);
     };
-  }, [selectNextHit, selectPrevHit, currentObjectID, push]);
-
-  const currentHit = hits.find((h) => h.objectID === currentObjectID);
+  }, [selectNextHit, selectPrevHit, push, currentHit?.objectID, currentHit?.__position, currentHit?.__queryID]);
 
   return (
     <div className="lg:h-[50vh] flex flex-row max-h-screen">
@@ -320,10 +249,10 @@ export const CustomHits = connectHits<CustomHitsProps, TypeOfWebHit>(({ hits, cu
             key={hit.objectID}
             role="option"
             aria-describedby="search-details"
-            aria-selected={currentObjectID === hit.objectID ? 'true' : 'false'}
+            aria-selected={currentHit?.objectID === hit.objectID ? 'true' : 'false'}
             id={'id' + hit.objectID}
           >
-            <CustomHit hit={hit} onItemHover={setObjectId} currentObjectID={currentObjectID} />
+            <CustomHit hit={hit} onItemHover={setObjectId} currentObjectID={currentHit?.objectID} />
           </li>
         ))}
       </ol>
@@ -381,8 +310,8 @@ interface CustomHitProps {
   readonly currentObjectID?: string | null;
 }
 
-export const CustomHit = memo<CustomHitProps>(
-  ({ hit, onItemHover, currentObjectID }) => {
+const _CustomHit = memo<CustomHitProps & { readonly insights: WrappedInsightsClient }>(
+  ({ hit, insights, onItemHover, currentObjectID }) => {
     const isActive = currentObjectID === hit.objectID;
 
     const currentElRef = useRef<HTMLAnchorElement>(null);
@@ -397,9 +326,6 @@ export const CustomHit = memo<CustomHitProps>(
       <Link href={getUrlForPermalink(hit.objectID)}>
         <a
           ref={currentElRef}
-          data-insights-object-id={hit.objectID}
-          data-insights-position={hit.__position}
-          data-insights-query-id={hit.__queryID}
           onMouseEnter={() => onItemHover(hit.objectID)}
           onFocus={() => onItemHover(hit.objectID)}
           onPointerEnter={() => onItemHover(hit.objectID)}
@@ -407,6 +333,14 @@ export const CustomHit = memo<CustomHitProps>(
             isActive ? 'bg-green-600 shadow-md' : ''
           }`}
           title={hit.title}
+          onClick={() =>
+            insights('clickedObjectIDsAfterSearch', {
+              eventName: 'Search result clicked',
+              objectIDs: [hit.objectID],
+              positions: [hit.__position],
+              queryID: hit.__queryID,
+            })
+          }
         >
           <svg
             viewBox="0 0 24 24"
@@ -442,6 +376,9 @@ export const CustomHit = memo<CustomHitProps>(
   },
   (prev, next) => prev.hit.objectID === next.hit.objectID && prev.currentObjectID === next.currentObjectID,
 );
+_CustomHit.displayName = 'AlogliaHit';
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- ok
+export const CustomHit = connectHitInsights(window.aa)(_CustomHit) as unknown as ComponentType<CustomHitProps>;
 CustomHit.displayName = 'AlogliaHit';
 
 const SearchModal = ({ onCancel }: SearchModalProps) => {
@@ -459,6 +396,16 @@ const SearchModal = ({ onCancel }: SearchModalProps) => {
 
   const handleInputChange = useCallback(() => {
     setTimeout(() => setObjectId(null), 0);
+  }, []);
+
+  useEffect(() => {
+    // @ts-ignore
+    window.aa('init', {
+      appId: 'QB2FWHH99M',
+      apiKey: '25fc15b3e367b7a46c1f3617b39aa749',
+    });
+    // @ts-ignore
+    window.aa('setUserToken', getFingerprint());
   }, []);
 
   return (
