@@ -30,7 +30,10 @@ const isLocalUrl = (href: string) => {
   }
 };
 
-const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { readonly href: string }) => {
+const A = ({ href, ...props }: JSX.IntrinsicElements['a']) => {
+  if (!href) {
+    return <a href={href} {...props} />;
+  }
   return isLocalUrl(href) ? (
     <Link href={href} passHref={true}>
       <LinkUnderlineEffect>
@@ -161,6 +164,7 @@ const Gallery = ({
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- have to cast
 const components = {
   a: A,
   img: Img,
@@ -171,4 +175,4 @@ const components = {
   Gallery,
   Timeline,
   DemoSimulation,
-};
+} as import('mdx/types').MDXComponents;

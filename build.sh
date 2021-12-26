@@ -10,14 +10,14 @@ if [[ ${ARGS[*]} =~ 'feed' ]]; then
   echo "Building feed..."
   # Fuck node.js seriously
   sedi 's/  "type": "commonjs",/  "type": "module",/' package.json
-  yarn feed
+  ENABLE_GITHUB_READ=false yarn feed
   sedi 's/  "type": "module",/  "type": "commonjs",/' package.json
   echo "Done building feed..."
 fi
 
 if [[ ${ARGS[*]} =~ 'next' ]]; then
   echo "Building Next.js..."
-  yarn next build
+  ENABLE_GITHUB_READ=false yarn next build
   echo "Done building Next.js..."
 fi
 

@@ -7,20 +7,15 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}',
-      './hooks/**/*.{js,ts,jsx,tsx}',
-      './public/**/*.{js,ts,jsx,tsx}',
-      './images/**/*.{js,ts,jsx,tsx}',
-      './utils/**/*.{js,ts,jsx,tsx}',
-      './*.{js,ts,jsx,tsx}',
-    ],
-    options: { keyframes: true, fontFace: true, variables: true },
-  },
-  mode: 'jit',
-  darkMode: 'media',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './hooks/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.{js,ts,jsx,tsx}',
+    './images/**/*.{js,ts,jsx,tsx}',
+    './utils/**/*.{js,ts,jsx,tsx}',
+    './*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontFamily: {
       sans: ['Fira Sans', 'typeofweb-fallback-sans', 'Arial', 'Helvetica', 'sans-serif'],
