@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
-import { typeofwebImageLoader } from '../../utils/imageLoader';
-
 import type { IGetPlaiceholderReturn } from 'plaiceholder';
 
 export type CoverPlaiceholder = {

@@ -4,7 +4,6 @@ import { polishPlurals } from 'polish-plurals';
 import { Fragment, memo } from 'react';
 
 import { getCategoryLink } from '../../utils/categories';
-import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { getSeriesLink } from '../../utils/series';
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 

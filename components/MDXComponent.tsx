@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { memo } from 'react';
 
 import { origin, host } from '../constants';
-import { typeofwebImageLoader } from '../utils/imageLoader';
 
 import { DemoSimulation } from './SeniorsJuniorsDemoSimulationAsync';
 import { LinkUnderlineEffect } from './atoms/LinkUnderlineEffect';
@@ -47,7 +46,7 @@ const A = ({ href, ...props }: Omit<JSX.IntrinsicElements['a'], 'href'> & { read
 
 const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props }: JSX.IntrinsicElements['img']) => {
   if (!src) {
-    return null;
+    return <noscript />;
   }
 
   if (width && height && src) {

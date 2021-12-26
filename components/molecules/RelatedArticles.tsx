@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useCallback, memo } from 'react';
 
 import { fetcher, useFetch } from '../../hooks/useFetch';
-import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { getUrlForPermalink } from '../../utils/permalinks';
 
 import type { CoverPlaiceholder } from '../atoms/ArticleCoverImage';
