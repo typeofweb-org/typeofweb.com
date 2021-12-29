@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/05/haskell-logo.png
+  url: /assets/wp-content/uploads/2017/05/haskell-logo.png
   width: 871
   height: 400
 categories:

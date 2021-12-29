@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2016/04/business-2717066_1280.jpg
+  url: /assets/wp-content/uploads/2016/04/business-2717066_1280.jpg
   width: 1280
   height: 847
 categories:

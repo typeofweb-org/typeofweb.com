@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/07/audio-audio-mixer-close-up-744321.jpg
+    /assets/wp-content/uploads/2018/07/audio-audio-mixer-close-up-744321.jpg
   width: 4288
   height: 2848
 categories:

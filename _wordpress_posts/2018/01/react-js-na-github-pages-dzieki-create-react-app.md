@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-405031.jpeg
+  url: /assets/wp-content/uploads/2018/01/pexels-photo-405031.jpeg
   width: 1280
   height: 853
 categories:
@@ -29,7 +29,7 @@ Bardzo często początkujący pytają mnie gdzie mogą łatwo wrzucić nieco bar
 
 GitHub Pages to specyficzny rodzaj hostingu. Pozwala Ci hostować i udostępnić innym to, <strong>co wrzucisz do repozytorium na GitHubie</strong>. Wystarczy tylko włączyć jedną opcję w ustawieniach repo i już:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18.png"><img class="aligncenter size-large wp-image-1023" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18-1024x803.png" alt="GitHub Pages i create-react-app" width="1024" height="803" /></a>
+<a href="/assets/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18.png"><img class="aligncenter size-large wp-image-1023" src="/assets/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18-1024x803.png" alt="GitHub Pages i create-react-app" width="1024" height="803" /></a>
 
 A więc jeśli stworzysz sobie repozytorium <code>github.com/imię/nazwa</code> to Twój GitHub Pages będzie dostępne pod adresem <code>imię.github.io/nazwa</code>. <strong>Można też ustawić własną domenę.</strong>
 
@@ -74,7 +74,7 @@ Tak, to naprawdę już ;) Prawie gotowe. Wywołaj tylko <code>npm run deploy</co
 
 Ustaw, aby GitHub Pages korzystało ze stworzonego właśnie brancha <code>gh-pages</code>. U mnie wygląda to tak jak na pierwszym obrazku:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18.png"><img class="aligncenter size-medium wp-image-1023" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18-300x235.png" alt="GitHub Pages i create-react-app" width="300" height="235" /></a>
+<a href="/assets/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18.png"><img class="aligncenter size-medium wp-image-1023" src="/assets/wp-content/uploads/2018/01/Screenshot-2018-01-29-20.11.18-300x235.png" alt="GitHub Pages i create-react-app" width="300" height="235" /></a>
 
 <h2>Rezultat?</h2>
 

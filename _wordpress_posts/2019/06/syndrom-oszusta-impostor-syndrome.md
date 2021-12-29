@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/impostor_syndrome_syndrom_oszusta.png
+    /assets/wp-content/uploads/2019/06/impostor_syndrome_syndrom_oszusta.png
   width: 1688
   height: 780
 categories:

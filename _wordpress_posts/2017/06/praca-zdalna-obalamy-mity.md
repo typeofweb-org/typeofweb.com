@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/06/tumblr_oke7b6hmHq1qz4jlco1_1280-2.jpg
+    /assets/wp-content/uploads/2017/06/tumblr_oke7b6hmHq1qz4jlco1_1280-2.jpg
   width: 1280
   height: 745
 categories:

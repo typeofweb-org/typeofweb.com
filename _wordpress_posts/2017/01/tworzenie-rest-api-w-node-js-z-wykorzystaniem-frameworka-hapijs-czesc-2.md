@@ -145,7 +145,7 @@ HapiJS obsługuje i automatycznie zamienia na obiekt również <em>query string<
 </code></pre>
 Po wywołaniu <code>GET /search?text=node.js&amp;page=2&amp;lang=pl</code> wyświetli nam się w przeglądarce taki obiekt:
 
-<img src="https://res.cloudinary.com/type-of-web/content/images/2017/01/Screenshot-2017-01-27-21.07.41.png" alt="" />
+<img src="/assets/content/images/2017/01/Screenshot-2017-01-27-21.07.41.png" alt="" />
 <h1 id="walidacjada">Walidacja żądań</h1>
 Widzimy, że Hapi daje nam <em>pewne</em> możliwości parametryzacji ścieżek i zapytań. Czy jednak możemy jakoś <strong>konkretnie sprecyzować, że oczekujemy aby parametr <code>{id}</code> był liczbą, a parametr <code>{name}</code> literami</strong>? Albo, czy możliwe jest, żeby tylko wybrane pola z <em>query string</em> były akceptowane, a inne nie? Tak! Z pomocą przychodzi nam paczka Joi.
 <h2 id="joi">Joi</h2>
@@ -312,7 +312,7 @@ I już! Utworzyliśmy pierwszy w pełni funkcjonalny backend do aplikacji. Jak g
 
 Otwieramy adres <a href="http://localhost:3000/contacts">http://localhost:3000/contacts</a> – powinniśmy zobaczyć odpowiedź z serwera. Na razie jest to obiekt z pustą tablicą:
 
-<img src="https://res.cloudinary.com/type-of-web/content/images/2017/01/Screenshot-2017-01-27-22.10.04.png" alt="" />
+<img src="/assets/content/images/2017/01/Screenshot-2017-01-27-22.10.04.png" alt="" />
 
 W konsoli przeglądarki wykonujemy proste żądanie <code>POST</code> aby dodać nowy kontakt:
 
@@ -326,11 +326,11 @@ W konsoli przeglądarki wykonujemy proste żądanie <code>POST</code> aby dodać
 
 Teraz po odświeżeniu strony zobaczymy dodane kontakty!
 
-<img src="https://res.cloudinary.com/type-of-web/content/images/2017/01/Screenshot-2017-01-27-22.11.19.png" alt="" />
+<img src="/assets/content/images/2017/01/Screenshot-2017-01-27-22.11.19.png" alt="" />
 
 Przy okazji podpowiedź: Warto zainstalować do swojej przeglądarki rozszerzenie formatujące JSON. Wszystko staje się wtedy znacznie bardziej czytelne:
 
-<img src="https://res.cloudinary.com/type-of-web/content/images/2017/01/Screenshot-2017-01-27-22.13.39.png" alt="" />
+<img src="/assets/content/images/2017/01/Screenshot-2017-01-27-22.13.39.png" alt="" />
 <h1 id="podsumowanie">Podsumowanie</h1>
 Uff, dzisiaj spora dawka wiedzy za nami. <strong>Nauczyliśmy się obsługiwać parametry w ścieżkach oraz <em>query string</em>. Poznaliśmy bibliotekę Joi i nauczyliśmy się ją wykorzystywać do walidowania zapytań do naszego API.</strong> Zwieńczeniem lekcji było stworzenie backendu do prostej aplikacji w node.js.
 

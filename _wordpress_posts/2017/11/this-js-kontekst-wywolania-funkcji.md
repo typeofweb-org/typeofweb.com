@@ -8,7 +8,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/smilies-2912641_1920.jpg
+  url: /assets/wp-content/uploads/2017/11/smilies-2912641_1920.jpg
   width: 1920
   height: 1276
 categories:
@@ -40,7 +40,7 @@ Z drugiej strony mamy programistów, nie JavaScriptu ogólnie, a konkretnej bibl
 
 Szybko okazuje się jednak, że aplikacja są niewydajne, występują w niej dziwne, nieprzewidziane błędy, a kod jest całkowicie niezrozumiały. <strong>Poznanie fundamentów języka, którego używasz nie tylko pozwoli Ci lepiej zrozumieć co pod spodem robi Twoja aplikacja, ale także zapobiec błędom zanim wystąpią</strong> — jeszcze na etapie pisania kodu. Dzięki temu pisane przez Ciebie aplikacje będą bardziej wydajne i usiane mniejszą ilością błędów, oraz łatwiejsze w dalszym rozwoju, niezależnie od tego czy ostatecznie korzystasz z Reacta, Vue czy <a href="https://typeofweb.com/kurs/angular-2/">Angulara</a>.
 
-<img class="aligncenter wp-image-816 size-large" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/Fullscreen_14_11_2017__16_57-1024x478.png" alt="Błąd JavaScript związany z błędnie ustawionym this" width="1024" height="478" />
+<img class="aligncenter wp-image-816 size-large" src="/assets/wp-content/uploads/2017/11/Fullscreen_14_11_2017__16_57-1024x478.png" alt="Błąd JavaScript związany z błędnie ustawionym this" width="1024" height="478" />
 
 Jest to jeden z wielu powodów, dla których warto poznać JavaScript jak najlepiej, na wylot. Po przeczytaniu tego wpisu, mam nadzieję, this w JS będzie jednym z tematów, w których staniesz się ekspertem!
 

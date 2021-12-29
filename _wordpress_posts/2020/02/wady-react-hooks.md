@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/02/cover_facebook.png
+  url: /assets/wp-content/uploads/2020/02/cover_facebook.png
   width: 1688
   height: 780
 categories:
@@ -121,7 +121,7 @@ React.useEffect(() => {
 
 Efekt to aplikacja, która pozornie działa, ale nadal ma najważniejszy bug: **odczytuje nieaktualne już propsy.** Oczekiwanym efektem jest to, że oba komponenty renderują tę samą listę.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/02/react-hooks-use-effect-before.gif"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/02/react-hooks-use-effect-before.gif" alt="" width="320" height="279" class="aligncenter size-full wp-image-2387" /></a>
+<a href="/assets/wp-content/uploads/2020/02/react-hooks-use-effect-before.gif"><img src="/assets/wp-content/uploads/2020/02/react-hooks-use-effect-before.gif" alt="" width="320" height="279" class="aligncenter size-full wp-image-2387" /></a>
 
 Ale, ale, chwila, moment, eslint daje mi jakieś ostrzeżenie!
 
@@ -137,7 +137,7 @@ React.useEffect(() => {
 }, [subscribe, value]);
 ```
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/02/react-hooks-use-effect-after.gif"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/02/react-hooks-use-effect-after.gif" alt="" width="320" height="279" class="aligncenter size-full wp-image-2386" /></a>
+<a href="/assets/wp-content/uploads/2020/02/react-hooks-use-effect-after.gif"><img src="/assets/wp-content/uploads/2020/02/react-hooks-use-effect-after.gif" alt="" width="320" height="279" class="aligncenter size-full wp-image-2386" /></a>
 
 Co się dzieje? Jest tylko gorzej! Nie ma ostrzeżeń. Kod źle działa. Eslincie, miałeś byś taki mądry 🤔 Kod dostępny live tutaj: [https://codesandbox.io/s/divine-violet-z0uyq](https://codesandbox.io/s/divine-violet-z0uyq)
 

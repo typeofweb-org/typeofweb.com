@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/promises-cover.png
+  url: /assets/wp-content/uploads/2017/10/promises-cover.png
   width: 1200
   height: 627
 categories:

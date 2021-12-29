@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/08/pexels-photo-306533.jpeg
+  url: /assets/wp-content/uploads/2017/08/pexels-photo-306533.jpeg
   width: 2861
   height: 1455
 categories:
@@ -32,7 +32,7 @@ https://typeofweb.com/praca-zdalna-obalamy-mity/
 <h1 id="otoptalu">O Toptalu</h1>
 Tym, którzy nie znają – Toptal to firma z USA, prawdopodobnie największa tego typu, jest <strong>pośrednikiem pomiędzy programistami a klientami</strong> z różnych krajów (głównie USA). Toptal, jak sam chwali się na swojej stronie, zrzesza tylko top 3% najlepszych programistów na świecie, co bez wnikania w szczegóły można zrozumieć dość opacznie – ale o tym więcej za moment.
 
-<img class="aligncenter" src="https://res.cloudinary.com/type-of-web/content/images/2017/08/logo-ef4e3458c482141a5c668b5b0ef49a21.png" alt="Toptal logo" width="300" />
+<img class="aligncenter" src="/assets/content/images/2017/08/logo-ef4e3458c482141a5c668b5b0ef49a21.png" alt="Toptal logo" width="300" />
 <h1 id="rekrutacjadotoptala">Rekrutacja do Toptala</h1>
 Współpraca z Toptalem zaczyna się oczywiście od rekrutacji. I poświęcam temu obszerny akapit dlatego, że <strong>rekrutacja do Toptala jest długa, skomplikowana i męcząca</strong>.
 

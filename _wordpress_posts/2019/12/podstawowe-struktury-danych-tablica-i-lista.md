@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/10/piece-of-cake-struktury-danych-tablica-i-lista.png
+    /assets/wp-content/uploads/2019/10/piece-of-cake-struktury-danych-tablica-i-lista.png
   width: 1688
   height: 780
 categories:
@@ -53,7 +53,7 @@ Tablica jest prawdopodobnie najprostszą strukturą danych. Jest to reprezentacj
 
 Tradycyjnie tablicę implementuje się w taki sposób, że zajmuje ona z góry określony fragment pamięci. Innymi słowy, **kolejne elementy tablicy są położone w pamięci obok siebie** — dzięki temu dostęp do dowolnego elementu jest szybki. Zazwyczaj pierwszy indeks tablicy to 0.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-18.58.43.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-18.58.43-1024x225.png" alt="Schematyczny rysunek tablicy o rozmiarze 13 i 10 elementach: a b c d e f g h i j" width="1024" height="225" class="aligncenter size-large wp-image-2330" /></a>
+<a href="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-18.58.43.png"><img src="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-18.58.43-1024x225.png" alt="Schematyczny rysunek tablicy o rozmiarze 13 i 10 elementach: a b c d e f g h i j" width="1024" height="225" class="aligncenter size-large wp-image-2330" /></a>
 
 W tym przypadku stworzona tablica ma wielkość 13, ale w tym momencie znajduje się w niej tylko 10 elementów.
 
@@ -104,7 +104,7 @@ Lista to struktura danych zawierająca tak zwane **węzły** (node). Węzeł prz
 
 Istnieją również **listy dwukierunkowe**, w których węzły dodatkowo dają możliwość pobrania poprzedniego elementu, a nie tylko następnego.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.02.35.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.02.35-1024x205.png" alt="Schematyczny rysunek listy dwukierunkowej zawierającej ciąg 4 elementów: a b c d" width="1024" height="205" class="aligncenter size-large wp-image-2332" /></a>
+<a href="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.02.35.png"><img src="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.02.35-1024x205.png" alt="Schematyczny rysunek listy dwukierunkowej zawierającej ciąg 4 elementów: a b c d" width="1024" height="205" class="aligncenter size-large wp-image-2332" /></a>
 
 ### Złożoności list
 
@@ -123,9 +123,9 @@ Zakładając, że mamy zapisany nie tylko początek listy, ale również jej kon
 Dodanie danych w dowolnym miejscu listy wymaga dojścia do tego elementu (czyli przemierzenia wszystkich poprzednich elementów). Jeśli jednak jesteśmy już w konkretnym miejscu, to dodanie tutaj czegoś wymaga tylko dwóch operacji: Informujemy aktualny element K, że za nim będzie nowy nowy element, a następnie informujemy nowy element, że za nim jest element K+1. W przypadku listy dwukierunkowej dodatkowo informujemy element K o tym, co jest przed nim, a element przed nim o K. Złożoność &Omicron;(1).
 
 <Gallery size="full" columns="1" link="none">
-  <img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.08.15.png" loading="lazy" alt="undefined" title="1) Chcemy dodać nowy element" width="1478" height="530" />
-<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.08.23.png" loading="lazy" alt="undefined" title="2) Informujemy go o elemencie przed nim i po nim" width="1502" height="578" />
-<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.08.28.png" loading="lazy" alt="undefined" title="3) Informujemy element b o nowym elemencie po nim i element c o nowym elemencie przed nim" width="1694" height="386" />
+  <img src="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.08.15.png" loading="lazy" alt="undefined" title="1) Chcemy dodać nowy element" width="1478" height="530" />
+<img src="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.08.23.png" loading="lazy" alt="undefined" title="2) Informujemy go o elemencie przed nim i po nim" width="1502" height="578" />
+<img src="/assets/wp-content/uploads/2019/12/Screenshot-2019-12-10-at-19.08.28.png" loading="lazy" alt="undefined" title="3) Informujemy element b o nowym elemencie po nim i element c o nowym elemencie przed nim" width="1694" height="386" />
 </Gallery>
 
 #### Usuwanie elementu z listy

@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/11/bokeh-blur-blue-white-158658.jpeg
+    /assets/wp-content/uploads/2017/11/bokeh-blur-blue-white-158658.jpeg
   width: 1920
   height: 1080
 categories:

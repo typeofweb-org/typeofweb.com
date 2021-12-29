@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/08/zlozonosc_obliczeniowa_algorytmow.png
+    /assets/wp-content/uploads/2019/08/zlozonosc_obliczeniowa_algorytmow.png
   width: 1688
   height: 780
 categories:
@@ -98,7 +98,7 @@ for (let i = 0; i < 40; ++i) {
 
 Test powtórzyłem 5 razy i narysowałem wykres ze średnich wyników wraz z linią trendu (dla n²).
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-14-at-7.22.02-PM.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-14-at-7.22.02-PM-1024x629.png" alt="złożoność obliczeniowa i pamięciowa" width="1024" height="629" class="aligncenter size-large wp-image-2108" /></a>
+<a href="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-14-at-7.22.02-PM.png"><img src="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-14-at-7.22.02-PM-1024x629.png" alt="złożoność obliczeniowa i pamięciowa" width="1024" height="629" class="aligncenter size-large wp-image-2108" /></a>
 
 Okazuje się, że rezultaty niemal pokrywają się z przewidywaniami (0.99 to rewelacyjny wynik)!
 
@@ -217,7 +217,7 @@ $$ f(n) \in \Omicron(g(n)) \iff \exists*{c>0}\ \exists_m\ \forall*{n>m}\ :\ f(n)
 
 Z polskiego na nasz mówi to, że f(n) ma złożoność &Omicron;(g(n)) wtedy i tylko wtedy, gdy od pewnego momentu f(n) jest mniejsze bądź równe od cg(n). Wizualnie można to przedstawić tak:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-2.04.33-PM.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-2.04.33-PM-1024x634.png" alt="" width="1024" height="634" class="aligncenter size-large wp-image-2109" /></a>
+<a href="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-2.04.33-PM.png"><img src="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-2.04.33-PM-1024x634.png" alt="" width="1024" height="634" class="aligncenter size-large wp-image-2109" /></a>
 
 Jest pewien przedział od 0 do m (od 0 do 6) gdy nasza funkcja f(n) zdecydowanie nie zachowuje się, jakby miała złożoność &Omicron;(g(n)), jednak później, aż do nieskończoności, jest mniejsza bądź równa od g(n). Co ważne, bardzo często kod tak zachowuje się w rzeczywistości — **początkowy narzut niektórych implementacji lub algorytmów jest ogromny i dopiero dla dużych danych wejściowych zaczyna się zachowywać, jakby to przewidywała teoretyczna notacja &Omicron;**. Będę o tym pisał w kolejnych artykułach.
 
@@ -316,14 +316,14 @@ Warto zapamiętać ogólny koncept oraz to, jak układają się najpopularniejsz
 - …
 
 <figure id="attachment_2110" align="aligncenter" width="1024">
-  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.38-AM.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.38-AM-1024x620.png" alt="Porównanie Ο(1), Ο(logn), Ο(n), Ο(nlogn), Ο(n²) i Ο(2^n) dla pierwszych pięciu elementów." width="1024" height="620" class="size-large wp-image-2110" /></a>
+  <a href="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.38-AM.png"><img src="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.38-AM-1024x620.png" alt="Porównanie Ο(1), Ο(logn), Ο(n), Ο(nlogn), Ο(n²) i Ο(2^n) dla pierwszych pięciu elementów." width="1024" height="620" class="size-large wp-image-2110" /></a>
   <figcaption>
     Porównanie Ο(1), Ο(logn), Ο(n), Ο(nlogn), Ο(n²) i Ο(2^n) dla pierwszych pięciu elementów.
   </figcaption>
 </figure>
 
 <figure id="attachment_2111" align="aligncenter" width="1024">
-  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.19-AM.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.19-AM-1024x615.png" alt="Porównanie Ο(1), Ο(logn), Ο(n), Ο(nlogn), Ο(n²) i Ο(2^n) dla pierwszych dwudziestu elementów. Praktycznie niewidoczne są żadne linie poza wykładniczą 2^n." width="1024" height="615" class="size-large wp-image-2111" /></a>
+  <a href="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.19-AM.png"><img src="/assets/wp-content/uploads/2019/06/Screenshot-2019-06-19-at-11.21.19-AM-1024x615.png" alt="Porównanie Ο(1), Ο(logn), Ο(n), Ο(nlogn), Ο(n²) i Ο(2^n) dla pierwszych dwudziestu elementów. Praktycznie niewidoczne są żadne linie poza wykładniczą 2^n." width="1024" height="615" class="size-large wp-image-2111" /></a>
   <figcaption>
     Porównanie Ο(1), Ο(logn), Ο(n), Ο(nlogn), Ο(n²) i Ο(2^n) dla pierwszych dwudziestu elementów. Praktycznie niewidoczne są żadne linie poza wykładniczą 2^n.
   </figcaption>
