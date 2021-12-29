@@ -8,7 +8,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2018/07/pexels-photo-581669.jpeg
+  url: /public/assets/wp-content/uploads/2018/07/pexels-photo-581669.jpeg
   width: 1280
   height: 860
 categories:

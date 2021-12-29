@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/api_bmx2wq.png
+  url: /public/assets/api_bmx2wq.png
   width: 1920
   height: 1005
 categories:

@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2016/06/pexels-photo-239886.jpeg
+  url: /public/assets/wp-content/uploads/2016/06/pexels-photo-239886.jpeg
   width: 1920
   height: 1280
 categories:
@@ -58,7 +58,7 @@ Architektura Flux przewiduje istnienie trzech głównych części<sup id="fnref-
 
 Dodatkowym założeniem obowiązującym we Fluksie jest to, że <strong>informacje przepływają tylko w jednym, zawsze tym samym kierunku</strong>. Flux rezygnuje z MVC na rzecz jednokierunkowego przepływu danych (<strong>unidirectional data flow</strong>). Istotna jest tutaj całkowita enkapsulacja Store’ów – z zewnątrz można przy pomocy odpowiedniej metody jedynie odczytać zawartość Store’a, niemożliwa jest jednak jego modyfikacja. <strong>Wszelkie zmiany jego zawartości zachodzą poprzez przesłanie odpowiedniej akcji przez Dispatcher</strong>. I w ten sposób jasny staje się przepływ informacji<sup id="fnref-2"><a href="#fn-2" rel="footnote">2</a></sup>:
 
-<img src="/assets/content/images/2016/06/flux-simple-f8-diagram-with-client-action-1300w.png" alt="Architektura Flux" />
+<img src="/public/assets/content/images/2016/06/flux-simple-f8-diagram-with-client-action-1300w.png" alt="Architektura Flux" />
 
 Tak to wygląda koncepcyjnie. Więcej na ten temat można poczytać na <a href="https://facebook.github.io/flux/docs/overview.html#content">stronie Fluksa</a>. <strong>Jest to tylko architektura, a więc implementacja tego pomysłu może być w zasadzie dowolna</strong> (np. Redux czy MobX). Facebook udostępnia co prawda swoją bibliotekę <a href="https://facebook.github.io/flux/docs/dispatcher.html">Dispatcher.js</a>, ale nie trzeba z niej wcale korzystać. Implementacji Fluksa jest sporo, ostatni raz gdy sprawdzałem było ich chyba tuzin, niekompletną listę można znaleźć <a href="https://github.com/voronianski/flux-comparison#ready">tutaj</a>. O Fluksie szerzej <a href="http://www.slideshare.net/wookieb/flux-prezentacja">opowiadał na Gdańskim meet.js</a> Łukasz Kużyński. Dalej chciałbym powiedzieć o całkowicie alternatywnej implementacji Fluksa – Redux.
 
@@ -67,7 +67,7 @@ Tak to wygląda koncepcyjnie. Więcej na ten temat można poczytać na <a href="
 <strong>Redux jest implementacją architektury Flux</strong>, do której dodano nieco <strong>programowania funkcyjnego</strong> i skorzystano ze wzorca <storng><a href="http://martinfowler.com/eaaDev/EventSourcing.html">Event Sourcing</a></strong>. Na stronie Reduksa podane są trzy główne zasady, o której opiera się cała filozofia tej biblioteki:
 
 <figure id="attachment_1308" align="alignright" width="1024">
-  <a href="/assets/wp-content/uploads/2016/06/redux-logo-e1522339859612.png"><img src="/assets/wp-content/uploads/2016/06/redux-logo-e1522339859612-1024x380.png" alt="Kurs Flux i Redux" width="1024" height="380" class="size-large wp-image-1308" /></a>
+  <a href="/public/assets/wp-content/uploads/2016/06/redux-logo-e1522339859612.png"><img src="/public/assets/wp-content/uploads/2016/06/redux-logo-e1522339859612-1024x380.png" alt="Kurs Flux i Redux" width="1024" height="380" class="size-large wp-image-1308" /></a>
   <figcaption>
     Logo Redux
   </figcaption>

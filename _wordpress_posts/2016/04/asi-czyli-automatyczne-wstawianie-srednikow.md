@@ -9,7 +9,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2016/04/business-2717066_1280.jpg
+  url: /public/assets/wp-content/uploads/2016/04/business-2717066_1280.jpg
   width: 1280
   height: 847
 categories:

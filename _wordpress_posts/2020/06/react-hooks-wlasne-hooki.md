@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2020/06/react-hooks-wlasne-hooki.png
+    /public/assets/wp-content/uploads/2020/06/react-hooks-wlasne-hooki.png
   width: 1688
   height: 780
 categories:

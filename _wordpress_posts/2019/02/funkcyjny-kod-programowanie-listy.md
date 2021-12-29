@@ -10,7 +10,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2019/02/image.jpg
+  url: /public/assets/wp-content/uploads/2019/02/image.jpg
   width: 1400
   height: 875
 categories:

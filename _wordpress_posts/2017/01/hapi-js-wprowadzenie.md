@@ -38,7 +38,7 @@ seo: {}
 
 <p>Jednym z założeń hapi jest jego testowalność. Framework udostępnia pomocniczną metodę (<code>server.inject(…)</code>) służącą do testowania pluginów i endpointów. Warto zauważyć, że <a href="https://travis-ci.org/hapijs/hapi/jobs/189943204">pokrycie kodu hapi.js testami wynosi 100%</a> – jest to jeden z celów twórców hapi.</p>
 
-<p><img src="/assets/content/images/2017/01/Screenshot-2017-01-29-23.48.11.png" alt="" /></p>
+<p><img src="/public/assets/content/images/2017/01/Screenshot-2017-01-29-23.48.11.png" alt="" /></p>
 
 <h2 id="modularnaarchitektura">Modularna architektura</h2>
 

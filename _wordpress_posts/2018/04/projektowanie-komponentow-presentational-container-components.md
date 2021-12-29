@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2018/04/presentational-container-components2.jpg
+    /public/assets/wp-content/uploads/2018/04/presentational-container-components2.jpg
   width: 1280
   height: 853
 categories:

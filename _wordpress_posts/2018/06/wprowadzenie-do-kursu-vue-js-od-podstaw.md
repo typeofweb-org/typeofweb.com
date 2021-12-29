@@ -8,7 +8,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2018/04/Vue_js-wprowadzenie.png
+  url: /public/assets/wp-content/uploads/2018/04/Vue_js-wprowadzenie.png
   width: 930
   height: 392
 categories:
@@ -36,7 +36,7 @@ Witaj w kursie **Vue.js od podstaw**. Bardzo się cieszę, że chcesz się naucz
 **Vue.js**, to obecnie trzeci (po React.js i Angular) pod względem popularności framework JavaScript. Wiele jednak wskazuje na to, że jeszcze w tym roku się to zmieni. Jako ogromnego fana Vue.js zupełnie mnie to nie dziwi. Mam nadzieję, że po zapoznaniu się z **kursem Vue**, którego pierwszy odcinek właśnie czytasz, również podzielisz moją pasję do tego frameworka. Jeśli czytanie kilku…dziesięciu artykułów nie jest dla Ciebie, to może wolisz szkolenie? <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z Vue.js</a>.
 
 <figure id="attachment_1336" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2018/04/Google-trends-Vue.png"><img src="/assets/wp-content/uploads/2018/04/Google-trends-Vue-1024x342.png" alt="Google Trends Vue.js" width="1024" height="342" class="size-large wp-image-1336" /></a>
+  <a href="/public/assets/wp-content/uploads/2018/04/Google-trends-Vue.png"><img src="/public/assets/wp-content/uploads/2018/04/Google-trends-Vue-1024x342.png" alt="Google Trends Vue.js" width="1024" height="342" class="size-large wp-image-1336" /></a>
   <figcaption>
     Vue.js w Google Trends
   </figcaption>

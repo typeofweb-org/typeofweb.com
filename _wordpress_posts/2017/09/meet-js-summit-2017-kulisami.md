@@ -30,7 +30,7 @@ Spotkania nieco się różnią w zależności do miasta, stawiamy na sporą niez
 Obecnie meet.js dotarło aż do 11 miast i odbywają się w <strong>Poznaniu, Warszawie, Krakowie, Wrocławiu, Gdańsku, Katowicach, Łodzi, Szczecinie, Białymstoku, Lublinie i Bydgoszczy.</strong> Naszym hasłem jest <strong>„Zero komercji, czysta wiedza.”</strong>
 
 <h2>meet.js Summit</h2>
-<img class="aligncenter size-large wp-image-447" src="/assets/wp-content/uploads/2017/09/18673083_1523519177721936_431703915305921304_o-1024x536.jpg" alt="meet.js Summit 2017" width="1024" height="536" />
+<img class="aligncenter size-large wp-image-447" src="/public/assets/wp-content/uploads/2017/09/18673083_1523519177721936_431703915305921304_o-1024x536.jpg" alt="meet.js Summit 2017" width="1024" height="536" />
 
 meet.js Summit to pełnoprawna konferencja. Jest to niejako podsumowanie działalności meet.js, ale nie tylko. Po raz pierwszy Summit odbył się w 14. stycznia 2012 w Poznaniu. <strong>Jest to całodniowa konferencja poświęcona JS</strong>. Co do zasady, prezentacje na meet.js Summit wygłaszane są w j. angielskim, a całe spotkanie nagrywane – co ma pomóc naszym prelegentom w późniejszym aplikowaniu na inne, międzynarodowe konferencje. Linki do wszystkich edycji meet.js Summit można znaleźć w stopce aktualnej strony: <a href="http://summit.meetjs.pl/2017/">http://summit.meetjs.pl/2017/</a>. W tym roku spotykamy się po raz 5 :)
 

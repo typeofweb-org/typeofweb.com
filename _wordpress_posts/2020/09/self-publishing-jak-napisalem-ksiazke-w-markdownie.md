@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/api_ovqzbd.png
+  url: /public/assets/api_ovqzbd.png
   width: 1920
   height: 1005
 categories:
@@ -41,7 +41,7 @@ Wciąż dopytujecie się o proces _self-publishing_ [mojej książki „TypeScr
 Zdecydowałem się napisać „TypeScript na poważnie” w markdownie. Jest to prosty język, w którym używa się symboli do formatowania tekstu. Wygląda to tak, jak widać na poniższym screenshocie; zresztą w markdownie piszę też teraz niniejszy artykuł :)
 
 <figure id="attachment_2598" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.10.35.png"><img src="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.10.35-1024x528.png" alt="" width="1024" height="528" class="size-large wp-image-2598" /></a>
+  <a href="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.10.35.png"><img src="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.10.35-1024x528.png" alt="" width="1024" height="528" class="size-large wp-image-2598" /></a>
   <figcaption>
     Fragment tego artykułu w Markdownie.
   </figcaption>
@@ -74,7 +74,7 @@ Ogromną zaletą Pandoc jest mnogość opcji konfiguracyjnych, wtyczek do markdo
 Do budowania książki użyłem też **Dockera**. Po co? Znowu dwa powody: nie chciałem zaśmiecać sobie komputera i planowałem **e-booki generować automatycznie na serwerze CI**. Ah, no tak, bo o tym nie wspomniałem: całą książkę trzymam oczywiście **na GitHubie!**
 
 <figure id="attachment_2604" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.19.33.png"><img src="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.19.33-1024x500.png" alt="" width="1024" height="500" class="size-large wp-image-2604" /></a>
+  <a href="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.19.33.png"><img src="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-16.19.33-1024x500.png" alt="" width="1024" height="500" class="size-large wp-image-2604" /></a>
   <figcaption>
     Widok repozytorium na GitHubie.
   </figcaption>
@@ -122,7 +122,7 @@ Wszystkie te problemy rozwiązałem poprzez stworzenie skryptu napisanego w (no 
 53 znaki fontem o stałej szerokości to była maksymalna liczba, jaką mogła pomieścić jedna linijka w książce drukowanej i PDF.
 
 <figure id="attachment_2599" align="aligncenter" width="936">
-  <a href="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.21.42.png"><img src="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.21.42-936x1024.png" alt="" width="936" height="1024" class="size-large wp-image-2599" /></a>
+  <a href="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.21.42.png"><img src="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.21.42-936x1024.png" alt="" width="936" height="1024" class="size-large wp-image-2599" /></a>
   <figcaption>
     Fragment skryptu do formatowania kodu w książce.
   </figcaption>
@@ -141,8 +141,8 @@ Napisałem więc kolejny skrypt, który polskie znaki w odnośnikach zamieniał 
 Jakie są efekty tego mojego _self-publishing_? Każdy, kto kupił e-booka widzi :)
 
 <Gallery columns="2" link="file" size="large">
-  <img src="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.22.54.png" loading="lazy" alt="undefined" title="Książka widoczna w edytorze vscode." width="708" height="1236" />
-<img src="/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.33.55.png" loading="lazy" alt="undefined" title="PDF z widocznymi ramkami do składu." width="1372" height="1926" />
+  <img src="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.22.54.png" loading="lazy" alt="undefined" title="Książka widoczna w edytorze vscode." width="708" height="1236" />
+<img src="/public/assets/wp-content/uploads/2020/09/Screenshot-2020-09-30-at-15.33.55.png" loading="lazy" alt="undefined" title="PDF z widocznymi ramkami do składu." width="1372" height="1926" />
 </Gallery>
 
 Jeśli masz jakieś pytania odnośnie _self-publishing_, procesu powstawania książki, technikaliów – to **zostaw komentarz, albo napisz do mnie**! Odpowiadam każdemu.

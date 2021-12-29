@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2018/10/fb-og-2018-1.png
+  url: /public/assets/wp-content/uploads/2018/10/fb-og-2018-1.png
   width: 1200
   height: 579
 categories:

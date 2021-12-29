@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2016/07/red-hands-woman-creative2.jpg
+    /public/assets/wp-content/uploads/2016/07/red-hands-woman-creative2.jpg
   width: 1920
   height: 1280
 categories:

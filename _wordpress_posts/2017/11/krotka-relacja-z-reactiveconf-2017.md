@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2017/11/reactive2017_2.jpg
+  url: /public/assets/wp-content/uploads/2017/11/reactive2017_2.jpg
   width: 1200
   height: 630
 categories:
@@ -57,7 +57,7 @@ Tak, to by było na tyle 😂 <strong>No ale na konferencje nie jeździ się dla
 
 Właściwie przez cały czas serwowane były napoje, kanapki, ciasto… do tego 1. i 2. dnia był zapewniony lunch, który składał się głównie z dań lokalnej kuchni słowackiej. Dla Polaka pewnie nie było tam nic zaskakującego; wszystko smakowało bardzo „swojsko” i było naprawdę dobre :)
 
-<a href="/assets/wp-content/uploads/2017/11/22791853_535573713463290_3684832133207816136_o.jpg"><img class="aligncenter wp-image-778 size-large" src="/assets/wp-content/uploads/2017/11/22791853_535573713463290_3684832133207816136_o-768x1024.jpg" alt="Identyfikator Reactive Conf 2017" width="768" height="1024" /></a>
+<a href="/public/assets/wp-content/uploads/2017/11/22791853_535573713463290_3684832133207816136_o.jpg"><img class="aligncenter wp-image-778 size-large" src="/public/assets/wp-content/uploads/2017/11/22791853_535573713463290_3684832133207816136_o-768x1024.jpg" alt="Identyfikator Reactive Conf 2017" width="768" height="1024" /></a>
 
 <h2>Warsztaty</h2>
 

@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2017/11/rose-blue-flower-rose-blooms-67636.jpeg
+    /public/assets/wp-content/uploads/2017/11/rose-blue-flower-rose-blooms-67636.jpeg
   width: 1280
   height: 847
 categories:

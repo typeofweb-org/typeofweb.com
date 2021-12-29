@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2019/04/12008389615_d62a9dbc0b_b.jpg
+    /public/assets/wp-content/uploads/2019/04/12008389615_d62a9dbc0b_b.jpg
   width: 936
   height: 414
 categories:

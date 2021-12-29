@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2017/09/wordpress-vs-ghost-typeofweb-1.png
+    /public/assets/wp-content/uploads/2017/09/wordpress-vs-ghost-typeofweb-1.png
   width: 880
   height: 400
 categories:
@@ -27,14 +27,14 @@ seo:
 Od nieco ponad tygodnia możesz podziwiać całkowicie nową wersję strony Type of Web. Do tej pory korzystałem z systemu Ghost, jednak zrezygnowałem z niego na rzecz WordPress. Prawdę mówiąc, nosiłem się z tym zamiarem już od dłuższego czasu… co było moją motywacją? <strong>Dlaczego Type of Web lepiej sprawdza się na WordPressie?</strong> I, co ważne, dlaczego nadal uważam Ghost za świetną platformę<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> do blogowania? O tym wszystkim poniżej!
 
 <figure id="attachment_348" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-20.26.50.png"><img class="wp-image-348 size-large" src="/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-20.26.50-1024x725.png" alt="Nowy wygląd Type of Web" width="1024" height="725" /></a>
+  <a href="/public/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-20.26.50.png"><img class="wp-image-348 size-large" src="/public/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-20.26.50-1024x725.png" alt="Nowy wygląd Type of Web" width="1024" height="725" /></a>
   <figcaption>
     Nowy wygląd Type of Web
   </figcaption>
 </figure>
 
 <figure id="attachment_358" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-16.31.28.png"><img class="size-large wp-image-358" src="/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-16.31.28-1024x675.png" alt="Stary wygląd Type of Web" width="1024" height="675" /></a>
+  <a href="/public/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-16.31.28.png"><img class="size-large wp-image-358" src="/public/assets/wp-content/uploads/2017/09/Screenshot-2017-09-11-16.31.28-1024x675.png" alt="Stary wygląd Type of Web" width="1024" height="675" /></a>
   <figcaption>
     Stary wygląd Type of Web
   </figcaption>
@@ -53,7 +53,7 @@ Albo raczej: Nie posiadał. W momencie gdy się z niego przesiadałem na WordPre
 Napisałem, że edytor jest sercem Ghosta – to prawda, ale nie cała prawda ;) Bo edytor jest nie tylko sercem, ale też płucami, nerkami, wątrobą… może dość tej metafory! <strong>Edytor to po prostu wszystko co Ghost ma do zaoferowania.</strong> Spójrz zresztą na poniższy zrzut ekranu przedstawiający panel administracyjny Ghosta.
 
 <figure id="attachment_330" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2017/09/ghost-desktop-2000x.png"><img class="wp-image-330 size-large" src="/assets/wp-content/uploads/2017/09/ghost-desktop-2000x-1024x646.png" alt="ghost admin panel screenshot" width="1024" height="646" /></a>
+  <a href="/public/assets/wp-content/uploads/2017/09/ghost-desktop-2000x.png"><img class="wp-image-330 size-large" src="/public/assets/wp-content/uploads/2017/09/ghost-desktop-2000x-1024x646.png" alt="ghost admin panel screenshot" width="1024" height="646" /></a>
   <figcaption>
     Panel administracyjny Ghost. Zdjęcie z https://ghost.org/features/
   </figcaption>
@@ -74,7 +74,7 @@ Samo hostowanie Ghosta również stało się dla mnie upierdliwe, a <strong>aktu
 WordPress to system i platforma blogowa, innymi słowy: CMS. Podobnie jak Ghost, silnik jest Open Source, a płatny jest <abbr title="Platform as a Service">PaaS</abbr>. WordPress jest rozwijany od ponad 14 lat, a ja sam stawiałem na jego podstawie kilka mniejszych i większych serwisów – szczególnie na początku mojej kariery programisty. <strong>WordPress</strong><strong> jest odpowiedzialny aż za 28% wszystkich stron internetowych.</strong> To całkiem niezła liczba!
 
 <figure id="attachment_336" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2017/09/screen-themes.png"><img class="wp-image-336 size-large" src="/assets/wp-content/uploads/2017/09/screen-themes-1024x684.png" alt="Panel administracyjny WordPress" width="1024" height="684" /></a>
+  <a href="/public/assets/wp-content/uploads/2017/09/screen-themes.png"><img class="wp-image-336 size-large" src="/public/assets/wp-content/uploads/2017/09/screen-themes-1024x684.png" alt="Panel administracyjny WordPress" width="1024" height="684" /></a>
   <figcaption>
     Panel administracyjny WordPress. Zdjęcie z https://wordpress.org/
   </figcaption>

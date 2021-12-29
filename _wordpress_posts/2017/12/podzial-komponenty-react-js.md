@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2017/11/pexels-photo-268415.jpeg
+  url: /public/assets/wp-content/uploads/2017/11/pexels-photo-268415.jpeg
   width: 1280
   height: 960
 categories:
@@ -30,7 +30,7 @@ W tej części skupisz się na teorii i praktyce dzielenia zaprojektowanych apli
 
 Przyjrzyj się temu co będziesz budował(a). Będzie to lista kontaktów, ale na początku spójrz tylko na pierwszy widok:
 
-<a href="/assets/wp-content/uploads/2017/11/Screen-Shot-2017-11-03-at-3.42.25-PM.png"><img class="aligncenter wp-image-735 size-large" src="/assets/wp-content/uploads/2017/11/Screen-Shot-2017-11-03-at-3.42.25-PM-e1509722763475-1024x528.png" alt="Komponenty w React.js i JSX" width="1024" height="528" /></a>
+<a href="/public/assets/wp-content/uploads/2017/11/Screen-Shot-2017-11-03-at-3.42.25-PM.png"><img class="aligncenter wp-image-735 size-large" src="/public/assets/wp-content/uploads/2017/11/Screen-Shot-2017-11-03-at-3.42.25-PM-e1509722763475-1024x528.png" alt="Komponenty w React.js i JSX" width="1024" height="528" /></a>
 
 <strong>To dzisiaj „potniemy” i podzielimy na komponenty React.js w JSX.</strong>
 
@@ -41,7 +41,7 @@ Zacznij od napisania kodu HTML i CSS. W przykładzie wykorzystuję framework CSS
 <pre class="language-html"><code>&lt;header class="ui fixed menu"&gt;
   &lt;nav class="ui container"&gt;
     &lt;a href="#" class="header item"&gt;
-      &lt;img class="logo" src="/assets/wp-content/uploads/2017/08/cropped-typeofweb_logo-04-white-smaller-1-e1504359870362.png" /&gt;
+      &lt;img class="logo" src="/public/assets/wp-content/uploads/2017/08/cropped-typeofweb_logo-04-white-smaller-1-e1504359870362.png" /&gt;
       Lista kontaktów
     &lt;/a&gt;
     &lt;div class="header item"&gt;

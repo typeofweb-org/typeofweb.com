@@ -8,7 +8,7 @@ authors:
   - wojtek-urbanski
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2018/09/computed.jpg
+  url: /public/assets/wp-content/uploads/2018/09/computed.jpg
   width: 887
   height: 400
 categories:

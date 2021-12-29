@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2018/05/blog-dla-front-end-developerow.jpeg
+    /public/assets/wp-content/uploads/2018/05/blog-dla-front-end-developerow.jpeg
   width: 1589
   height: 833
 categories:

@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2018/03/pexels-photo-97558.jpeg
+  url: /public/assets/wp-content/uploads/2018/03/pexels-photo-97558.jpeg
   width: 1920
   height: 1243
 categories:

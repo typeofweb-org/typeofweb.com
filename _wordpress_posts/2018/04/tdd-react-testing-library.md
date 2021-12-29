@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2018/04/testing-react-testing-library2.jpg
+    /public/assets/wp-content/uploads/2018/04/testing-react-testing-library2.jpg
   width: 1200
   height: 800
 categories:

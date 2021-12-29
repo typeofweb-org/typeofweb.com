@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2019/06/impostor_syndrome_syndrom_oszusta.png
+    /public/assets/wp-content/uploads/2019/06/impostor_syndrome_syndrom_oszusta.png
   width: 1688
   height: 780
 categories:

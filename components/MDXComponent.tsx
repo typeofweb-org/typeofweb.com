@@ -51,8 +51,9 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
   if (!src) {
     return <noscript />;
   }
+  const srcWithoutPublic = src.replace(/^\/public\//, '/')
 
-  if (width && height && src) {
+  if (width && height && srcWithoutPublic) {
     // const isFull = props.className?.includes('size-full') ?? false;
     // const isLarge = props.className?.includes('size-large') ?? false;
     // const isMedium = props.className?.includes('size-medium') ?? false;
@@ -63,7 +64,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
           {...props}
           width={width}
           height={height}
-          src={src}
+          src={srcWithoutPublic}
           alt={alt}
           loading="lazy"
           priority={false}
@@ -73,7 +74,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
     );
   }
   // console.warn(`[MDX] Image ${src} has no width and height.`);
-  return <img {...props} width={width} height={height} src={src} alt={alt} loading="lazy" />;
+  return <img {...props} width={width} height={height} src={srcWithoutPublic} alt={alt} loading="lazy" />;
 };
 
 const NewsletterForm = Dynamic<{ readonly utmSource?: string }>(() =>
@@ -102,6 +103,9 @@ const groupByImagesAndDescriptions = (children: readonly MdxChild[]) => {
     if (child.props.originalType === 'img' || child.props.mdxType === 'img') {
       return [index];
     }
+    if ((typeof child.type === 'function' && child.type.name === 'Image')) {
+      return [index];
+    }
     return [];
   });
   const imgEndIndexes = imgStartIndexes.slice(1);
@@ -126,7 +130,6 @@ const splitDescriptionIntoLines = (description: MdxChild) => {
       .filter((line) => !!line.trim())
       .map((line, idx) => <p key={String(idx) + line}>{line}</p>);
   }
-  console.log(description.props);
   return description;
 };
 
@@ -169,6 +172,7 @@ const components = {
   a: A,
   img: Img,
   Img,
+  Image,
   NewsletterForm,
   FacebookPageWidget,
   CodepenWidget,

@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2020/01/ssh_rsync_sftp_buddy_mydevil.png
+    /public/assets/wp-content/uploads/2020/01/ssh_rsync_sftp_buddy_mydevil.png
   width: 1688
   height: 780
 categories:
@@ -39,7 +39,7 @@ Po poprzednich wpisach wiele osób pytało mnie, w jaki sposób automatycznie wr
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 
-<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs2&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="/assets/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
+<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs2&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="/public/assets/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
 
 ## Deploy przez SSH
 
@@ -58,8 +58,8 @@ Podobnie wygląda praca z `rsync` i `sftp`.
 Co istotne, <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs2&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy</a> udostępnia predefiniowane akcje dla SSH, rsync i SFTP. Ciekawą możliwością jest też automatyczny transfer plików z repozytorium na GitHubie bezpośrednio na serwer w opcjach SFTP:
 
 <Gallery columns="2" link="file" size="medium">
-  <img src="/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.16.31.png" loading="lazy" alt="Predefiniowane akcje: FTP, FTPS, SFTP, RSync i SSH" title="Predefiniowane akcje: FTP, FTPS, SFTP, RSync i SSH" width="1222" height="920" />
-<img src="/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.17.44.png" loading="lazy" alt="Automatyczny transfer plików z GitHuba przez SFTP na serwer" title="Automatyczny transfer plików z GitHuba przez SFTP na serwer" width="1624" height="934" />
+  <img src="/public/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.16.31.png" loading="lazy" alt="Predefiniowane akcje: FTP, FTPS, SFTP, RSync i SSH" title="Predefiniowane akcje: FTP, FTPS, SFTP, RSync i SSH" width="1222" height="920" />
+<img src="/public/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.17.44.png" loading="lazy" alt="Automatyczny transfer plików z GitHuba przez SFTP na serwer" title="Automatyczny transfer plików z GitHuba przez SFTP na serwer" width="1624" height="934" />
 </Gallery>
 
 Postanowiłem więc skonfigurować w <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs2&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy.works</a> automatyczny deploy mojego bota na Discordzie na serwer w MyDevil używając **SFTP i GitHuba**. Do dzieła!
@@ -68,17 +68,17 @@ Postanowiłem więc skonfigurować w <a href="https://buddy.works/?utm_source=bl
 
 Dodaję nowy pipeline w wybranym repozytorium. Konfiguruję go tak, aby uruchamiał się automatycznie po każdym pushu do brancha `master`, podobnie, jak to opisywałem w [poprzednim wpisie](https://typeofweb.com/automatyczne-uruchamianie-testow-w-buddy/).
 
-<a href="/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.19.54.png"><img src="/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.19.54-1024x658.png" alt="Nowy pipeline" width="1024" height="658" class="aligncenter size-large wp-image-2346" /></a>
+<a href="/public/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.19.54.png"><img src="/public/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-15.19.54-1024x658.png" alt="Nowy pipeline" width="1024" height="658" class="aligncenter size-large wp-image-2346" /></a>
 
 Dodaję akcję SFTP i w ustawieniach zaznaczam "GitHub repository", ścieżkę pozostawiam bez zmian, a następnie uzupełniam dane dostępowe do serwera. Do wyboru jest **kilka metod uwierzytelniania**. Można podać tam login i hasło, ale ja osobiście zalecałbym udostępniać swoje hasła jak najmniejszemu gronu odbiorców (a najlepiej nikomu). Pozostałe opcje opierają się o klucze SSH i moim zdaniem są bezpieczniejsze. Ja wybieram "Buddy's SSH key", czyli klucz Buddy, który będę musiał dodać do swojego serwera. Po wybraniu tej opcji, wyświetlą się polecenia, które należy wykonać na serwerze: dodanie klucza do pliku `~/.ssh/authorized_keys`. Ostatnim krokiem jest podanie dokąd mają zostać wrzucone pliki. W moim przypadku jest to `/home/login/domains/domena.com/public_nodejs`
 
-<a href="/assets/wp-content/uploads/2020/01/app.buddy_.works_mmiszy-1.png"><img src="/assets/wp-content/uploads/2020/01/app.buddy_.works_mmiszy-1-1024x600.png" alt="Konfiguracja SFTP z GitHuba" width="1024" height="600" class="aligncenter size-large wp-image-2347" /></a>
+<a href="/public/assets/wp-content/uploads/2020/01/app.buddy_.works_mmiszy-1.png"><img src="/public/assets/wp-content/uploads/2020/01/app.buddy_.works_mmiszy-1-1024x600.png" alt="Konfiguracja SFTP z GitHuba" width="1024" height="600" class="aligncenter size-large wp-image-2347" /></a>
 
 ## Buddy sugeruje brakującą akcję SSH
 
 Po powrocie do widoku akcji zauważyłem, że Buddy podpowiada mi, aby dodał jeszcze jakieś komendy uruchamianie przez SSH.
 
-<a href="/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-16.09.33.png"><img src="/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-16.09.33-1024x314.png" alt="Buddy sugeruje brakujący element, czyli polecenia SSH" width="1024" height="314" class="aligncenter size-large wp-image-2348" /></a>
+<a href="/public/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-16.09.33.png"><img src="/public/assets/wp-content/uploads/2020/01/Screenshot-2020-01-03-at-16.09.33-1024x314.png" alt="Buddy sugeruje brakujący element, czyli polecenia SSH" width="1024" height="314" class="aligncenter size-large wp-image-2348" /></a>
 
 Racja! Kompletnie zapomniałem uruchomić `npm install` i zrestartować aplikację :)
 

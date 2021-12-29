@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2019/11/cover_facebook3.png
+  url: /public/assets/wp-content/uploads/2019/11/cover_facebook3.png
   width: 1688
   height: 780
 categories:
@@ -30,7 +30,7 @@ Ustawienie narzędzi do Continuous Integration i Continuous Delivery nierzadko o
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 
-<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_tutorial&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="/assets/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
+<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_tutorial&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="/public/assets/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
 
 ## Continuous Integration i GitHub Pages
 
@@ -82,7 +82,7 @@ yarn
 yarn deploy --user='Michal Miszczyszyn <michal@mmiszy.pl>' --repo=https://$GITHUB_TOKEN@github.com/$BUDDY_REPO_SLUG.git
 ```
 
-<a href="/assets/wp-content/uploads/2019/11/app.buddy_.works_configure_action.png"><img src="/assets/wp-content/uploads/2019/11/app.buddy_.works_configure_action-1024x704.png" alt="Dodawanie akcji w Buddy" width="1024" height="704" class="aligncenter size-large wp-image-2285" /></a>
+<a href="/public/assets/wp-content/uploads/2019/11/app.buddy_.works_configure_action.png"><img src="/public/assets/wp-content/uploads/2019/11/app.buddy_.works_configure_action-1024x704.png" alt="Dodawanie akcji w Buddy" width="1024" height="704" class="aligncenter size-large wp-image-2285" /></a>
 
 ## Prawa do zapisu do GitHub Pages na CI
 
@@ -98,7 +98,7 @@ Wracamy do Buddy, nadal edytujemy pipeline. W zakładce "variables" klikamy "Add
 
 Buddy ma także wiele predefiniowanych zmiennych. Jeśli wrócimy na chwilę do edycji akcji i wpiszemy tam `$`, to powinniśmy zobaczyć listę wszystkich dostępnych zmiennych.
 
-<a href="/assets/wp-content/uploads/2019/11/app.buddy_.works_env_variables.png"><img src="/assets/wp-content/uploads/2019/11/app.buddy_.works_env_variables-300x190.png" alt="Zmienne środowiskowe dostępne w akcjach. Lista zawiera także zmienną dodaną przez nas." width="300" height="190" class="aligncenter size-medium wp-image-2286" /></a>
+<a href="/public/assets/wp-content/uploads/2019/11/app.buddy_.works_env_variables.png"><img src="/public/assets/wp-content/uploads/2019/11/app.buddy_.works_env_variables-300x190.png" alt="Zmienne środowiskowe dostępne w akcjach. Lista zawiera także zmienną dodaną przez nas." width="300" height="190" class="aligncenter size-medium wp-image-2286" /></a>
 
 ## Testowanie CI
 
@@ -106,7 +106,7 @@ Fajnie by było sprawdzić, czy nasze Continuous Integration działa bez koniecz
 
 ## Efekty
 
-Jeśli prawidłowo skonfigurowaliśmy repozytorium, to po wejściu na adres naszego GitHub Page powinniśmy zobaczyć już naszą stronę. Moją stroną możecie podejrzeć pod adresem [mmiszy.github.io/typeofweb-buddy](https://mmiszy.github.io/typeofweb-buddy/) i wygląda ona tak, <a href="/assets/wp-content/uploads/2019/11/mmiszy.github.io_example.png" data-featherlight="image">jak na screenshocie</a>.
+Jeśli prawidłowo skonfigurowaliśmy repozytorium, to po wejściu na adres naszego GitHub Page powinniśmy zobaczyć już naszą stronę. Moją stroną możecie podejrzeć pod adresem [mmiszy.github.io/typeofweb-buddy](https://mmiszy.github.io/typeofweb-buddy/) i wygląda ona tak, <a href="/public/assets/wp-content/uploads/2019/11/mmiszy.github.io_example.png" data-featherlight="image">jak na screenshocie</a>.
 
 Sprawdźmy, czy strona się zaktualizuje automatycznie po wykonaniu `git push`. Od razu po wysłaniu zmian do repo w Buddy uruchamia się skonfigurowany przez nas pipeline i po **16 sekundach** zmiany są już na GitHub Pages. Przy takiej prędkości, to naprawdę _Continuous Delivery_!
 

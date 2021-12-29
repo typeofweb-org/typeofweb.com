@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2019/02/blue-sky-construction-crane-533227.jpg
+    /public/assets/wp-content/uploads/2019/02/blue-sky-construction-crane-533227.jpg
   width: 6000
   height: 4000
 categories:
@@ -125,15 +125,15 @@ function MyComponent(props) {
 Rzuć też okiem na inne porównania. Kilka subskrypcji w jednym komponencie:
 
 <Gallery columns="2" link="file" size="medium">
-  <img src="/assets/wp-content/uploads/2019/02/DqegNolWwAAnY8o.jpg-large.jpeg" loading="lazy" alt="undefined" title="Wiele subskrypcji z klasami" width="1168" height="1344" />
-<img src="/assets/wp-content/uploads/2019/02/DqegO3aXgAAoy0v.jpg-large.jpeg" loading="lazy" alt="undefined" title="Wiele subskrypcji z React Hooks" width="826" height="624" />
+  <img src="/public/assets/wp-content/uploads/2019/02/DqegNolWwAAnY8o.jpg-large.jpeg" loading="lazy" alt="undefined" title="Wiele subskrypcji z klasami" width="1168" height="1344" />
+<img src="/public/assets/wp-content/uploads/2019/02/DqegO3aXgAAoy0v.jpg-large.jpeg" loading="lazy" alt="undefined" title="Wiele subskrypcji z React Hooks" width="826" height="624" />
 </Gallery>
 
 Minifikacja:
 
 <Gallery columns="2" link="file" size="medium">
-  <img src="/assets/wp-content/uploads/2019/02/Dqe4XRFX0AADrNS.jpg-large.jpeg" loading="lazy" alt="undefined" title="Minifikacja klasy" width="2047" height="814" />
-<img src="/assets/wp-content/uploads/2019/02/Dqe4YnOW4AA0pj_.jpg-large.jpeg" loading="lazy" alt="undefined" title="Minifikacja React Hooks" width="1626" height="486" />
+  <img src="/public/assets/wp-content/uploads/2019/02/Dqe4XRFX0AADrNS.jpg-large.jpeg" loading="lazy" alt="undefined" title="Minifikacja klasy" width="2047" height="814" />
+<img src="/public/assets/wp-content/uploads/2019/02/Dqe4YnOW4AA0pj_.jpg-large.jpeg" loading="lazy" alt="undefined" title="Minifikacja React Hooks" width="1626" height="486" />
 </Gallery>
 
 (źródło: [twitter.com/jamiebuilds/status/1055988893303037952](https://twitter.com/jamiebuilds/status/1055988893303037952))

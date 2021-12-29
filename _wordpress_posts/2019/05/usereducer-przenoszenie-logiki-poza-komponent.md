@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2019/05/blue-blue-sky-bright-1323732.jpg
+    /public/assets/wp-content/uploads/2019/05/blue-blue-sky-bright-1323732.jpg
   width: 1280
   height: 853
 categories:

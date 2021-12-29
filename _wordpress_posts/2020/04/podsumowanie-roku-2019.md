@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2020/04/cover_facebook.png
+  url: /public/assets/wp-content/uploads/2020/04/cover_facebook.png
   width: 1688
   height: 780
 categories:
@@ -26,7 +26,7 @@ Nieco spóźnione, ale oto i ono: Podsumowanie mojego roku 2019. Długo zwlekał
 2019 był dla mnie definitywnie rokiem podróży. Służbowo w delegacjach byłem między innymi w RPA, Tajlandii, Hiszpanii i Czechach. To były naprawdę fantastyczne chwile, poznałem niesamowitych ludzi z X-Teamu, a w przerwach od pracy i dyskusji sporo zwiedziliśmy. Oprócz tego odwiedziłem też Austrię, Zjednoczone Emiraty Arabskie, Egipt, Maltę i Szkocję.
 
 <figure id="attachment_2499" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2020/04/IMG_3272-scaled.jpg"><img src="/assets/wp-content/uploads/2020/04/IMG_3272-1024x768.jpg" alt="Michał Miszczyszyn w RPA" width="1024" height="768" class="size-large wp-image-2499" /></a>
+  <a href="/public/assets/wp-content/uploads/2020/04/IMG_3272-scaled.jpg"><img src="/public/assets/wp-content/uploads/2020/04/IMG_3272-1024x768.jpg" alt="Michał Miszczyszyn w RPA" width="1024" height="768" class="size-large wp-image-2499" /></a>
   <figcaption>
     Praca w trudnych warunkach :)
   </figcaption>
@@ -64,7 +64,7 @@ Moim największym projektem 2020 jest… książka o TypeScripcie!
 Tak, dobrze czytasz. W ubiegłym roku zacząłem po cichu **pracować nad książką o TypeScripcie**. Zebrałem sporo feedbacku odnośnie samego pomysłu, a później na temat gotowych rozdziałów i Wasza reakcja absolutnie mnie zaskoczyła, a zainteresowaniem tematem przerosło! **Nie ma dnia, żeby ktoś nie pytał o datę premiery albo nie deklarował chęci zakupu** książki pomimo tego, że jeszcze nie zacząłem żadnej promocji w social media. Informacje po prostu w mig rozeszły się od znajomych do ich znajomych, a od nich do kolejnych osób…
 
 <figure id="attachment_2501" align="aligncenter" width="1024">
-  <a href="/assets/wp-content/uploads/2020/04/Book-Cover-Mockup-2.jpg"><img src="/assets/wp-content/uploads/2020/04/Book-Cover-Mockup-2-1024x774.jpg" alt="Okładki książki „TypeScript na poważnie” w wersjach drukowanej, Kindle i iPad" width="1024" height="774" class="size-large wp-image-2501" /></a>
+  <a href="/public/assets/wp-content/uploads/2020/04/Book-Cover-Mockup-2.jpg"><img src="/public/assets/wp-content/uploads/2020/04/Book-Cover-Mockup-2-1024x774.jpg" alt="Okładki książki „TypeScript na poważnie” w wersjach drukowanej, Kindle i iPad" width="1024" height="774" class="size-large wp-image-2501" /></a>
   <figcaption>
     Szykują się 3 wersje książki „TypeScript na poważnie”: Kindle, iPad (epub) i druk, o ile pandemia pozwoli.
   </figcaption>

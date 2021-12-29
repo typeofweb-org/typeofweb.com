@@ -178,7 +178,7 @@ export async function postToProps(
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
   const { base64: blurDataURL = null, img = null } =
-    options.includePlaiceholder && post.data.thumbnail ? await getPlaiceholder(post.data.thumbnail.url) : {};
+    options.includePlaiceholder && post.data.thumbnail ? await getPlaiceholder(post.data.thumbnail.url.replace(/^\/public\//, '/')) : {};
 
   const mainCategory =
     'category' in post.data

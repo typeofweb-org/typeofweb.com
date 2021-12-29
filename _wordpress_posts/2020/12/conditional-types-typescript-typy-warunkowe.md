@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/api_m4odp0.png
+  url: /public/assets/api_m4odp0.png
   width: 1920
   height: 1005
 categories:

@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2017/11/bokeh-blur-blue-white-158658.jpeg
+    /public/assets/wp-content/uploads/2017/11/bokeh-blur-blue-white-158658.jpeg
   width: 1920
   height: 1080
 categories:

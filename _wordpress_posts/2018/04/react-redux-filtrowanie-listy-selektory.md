@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2018/04/redux-filtrowanie-listy-selektory2.jpeg
+    /public/assets/wp-content/uploads/2018/04/redux-filtrowanie-listy-selektory2.jpeg
   width: 1280
   height: 854
 categories:

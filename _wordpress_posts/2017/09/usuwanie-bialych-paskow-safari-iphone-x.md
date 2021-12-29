@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2017/09/Screenshot-2017-09-25-19.18.55.png
+    /public/assets/wp-content/uploads/2017/09/Screenshot-2017-09-25-19.18.55.png
   width: 1500
   height: 690
 categories:
@@ -33,7 +33,7 @@ https://twitter.com/vojtastavik/status/907911237983449088
 
 Ale nie o tym ten wpis ;) Wpis jest o tym, że mój blog domyślnie wygląda w ten sposób na nowym iPhonie:
 
-<img class="aligncenter size-large wp-image-458" style="box-shadow: none;" src="/assets/wp-content/uploads/2017/09/iPhone-X-before-1024x579.png" alt="iPhone X horizontal before" width="1024" height="579" />
+<img class="aligncenter size-large wp-image-458" style="box-shadow: none;" src="/public/assets/wp-content/uploads/2017/09/iPhone-X-before-1024x579.png" alt="iPhone X horizontal before" width="1024" height="579" />
 
 Widoczne są wyraźne paski z prawej i lewej strony. Są szare, gdyż <strong>domyślnie przyjmują one background-color z body lub html</strong>. Nie można jednak normalnie ustawić tam background-image, czyli żadnych obrazków ani gradientów… Jest to tzw. <em>safe area</em>, za którą użytkownik będzie trzymał telefon palcami i nie będzie sobie niczego zasłaniał. Ma to sens, ale czy mogłoby lepiej wyglądać? I, co ważniejsze, <strong>czy mamy na to wpływ? Tak!</strong> Poniżej podsumowanie ciekawostek z <a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/" target="_blank" rel="noopener">bloga WebKit</a>.
 
@@ -42,7 +42,7 @@ Szkic specyfikacji nieznanego mi dotąd <a href="https://drafts.csswg.org/css-ro
 <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, viewport-fit=cover"&gt;</code></pre>
 (specyfikacja mówi o wykorzystaniu <code>@viewport</code> w CSS, ale nie próbowałem tego jeszcze z iPhone X i nie wiem czy zadziała – raczej nie, gdyż jest to kontrpropozycja dla przeforsowanego przez Apple tagu meta…). Efekt tagu meta jest następujący:
 
-<img class="aligncenter size-large wp-image-457" style="box-shadow: none;" src="/assets/wp-content/uploads/2017/09/iPhone-X-almost-1024x579.png" alt="iPhone X Safari 11 viewport-fit cover" width="1024" height="579" />
+<img class="aligncenter size-large wp-image-457" style="box-shadow: none;" src="/public/assets/wp-content/uploads/2017/09/iPhone-X-almost-1024x579.png" alt="iPhone X Safari 11 viewport-fit cover" width="1024" height="579" />
 
 Wygląda to już lepiej, aczkolwiek teraz możemy mieć inny problem: <strong>część treści jest zbyt blisko rogów ekranu, albo może być zupełnie schowana za czarnym paskiem</strong> (kamera, czujniki…) z prawej strony! Czy i na to można coś poradzić bez karkołomnych zmian w CSS celujących tylko w iPhone X? Okazuje się, że tak!
 
@@ -53,7 +53,7 @@ Gdy mamy <code>viewport-fit=cover</code>, możemy skorzystać z kilku wartości 
 }</code></pre>
 Oznacza to, że padding będzie wynosił odpowiednio tyle, ile przeglądarka ustali pod nazwami stałych <code>safe-area-inset-top</code>, <code>safe-area-inset-right</code>, <code>safe-area-inset-bottom</code> i <code>safe-area-inset-left</code>. Efekt jest taki:
 
-<img class="aligncenter size-large wp-image-456" style="box-shadow: none;" src="/assets/wp-content/uploads/2017/09/iPhone-X-there-1024x579.png" alt="iPhone X Safari 11 safe-area-inset-left" width="1024" height="579" />
+<img class="aligncenter size-large wp-image-456" style="box-shadow: none;" src="/public/assets/wp-content/uploads/2017/09/iPhone-X-there-1024x579.png" alt="iPhone X Safari 11 safe-area-inset-left" width="1024" height="579" />
 
 Po dalszych poprawkach kod ostatecznie wygląda tak:
 
@@ -74,7 +74,7 @@ Po dalszych poprawkach kod ostatecznie wygląda tak:
 
 Dzięki czemu <strong>zdjęcia oraz menu są rozciągnięte na całą szerokość strony, ale treść nigdy nie zostanie przykryta</strong> przez pasek po prawej:
 
-<img class="aligncenter size-large wp-image-463" style="box-shadow: none;" src="/assets/wp-content/uploads/2017/09/iPhone-X-final-1024x579.png" alt="iPhone X Safari 11 safe-area-inset-left viewport-fit cover" width="1024" height="579" />
+<img class="aligncenter size-large wp-image-463" style="box-shadow: none;" src="/public/assets/wp-content/uploads/2017/09/iPhone-X-final-1024x579.png" alt="iPhone X Safari 11 safe-area-inset-left viewport-fit cover" width="1024" height="579" />
 
 Zauważ też, że <code>constant</code> można łączyć z <code>calc</code>!
 
@@ -92,4 +92,4 @@ Co racja to racja. Jednak z drugiej strony, lepiej przecież w taki sposób, ni�
 
 Warto też przetestować stronę na telefonie w pozycji wertykalnej, a także <strong>na desktopowym Safari, które również rozumie constant, ale tam wartości stałych wynoszą 0</strong>. U mnie na iPhonie X wygląda to tak:
 
-<img class="aligncenter size-large wp-image-472" style="box-shadow: none;" src="/assets/wp-content/uploads/2017/09/Screenshot-2017-09-25-18.21.18-579x1024.png" alt="" width="579" height="1024" />
+<img class="aligncenter size-large wp-image-472" style="box-shadow: none;" src="/public/assets/wp-content/uploads/2017/09/Screenshot-2017-09-25-18.21.18-579x1024.png" alt="" width="579" height="1024" />

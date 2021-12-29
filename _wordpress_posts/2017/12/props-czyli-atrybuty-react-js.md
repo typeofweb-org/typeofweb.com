@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2017/10/pexels-photo-340901.jpeg
+  url: /public/assets/wp-content/uploads/2017/10/pexels-photo-340901.jpeg
   width: 1280
   height: 427
 categories:
@@ -57,7 +57,7 @@ Nic skomplikowanego. <code>dialog</code> to element wbudowany w HTML5. Następn
 
 Tym sposobem Twoim oczom powinien się ukazać taki oto piękny efekt:
 
-<a href="/assets/wp-content/uploads/2017/10/Screen-Shot-2017-10-24-at-8.58.40-PM.png"><img class="aligncenter size-full wp-image-722" src="/assets/wp-content/uploads/2017/10/Screen-Shot-2017-10-24-at-8.58.40-PM.png" alt="Kurs React.js – komponent bez props" width="318" height="414" /></a>
+<a href="/public/assets/wp-content/uploads/2017/10/Screen-Shot-2017-10-24-at-8.58.40-PM.png"><img class="aligncenter size-full wp-image-722" src="/public/assets/wp-content/uploads/2017/10/Screen-Shot-2017-10-24-at-8.58.40-PM.png" alt="Kurs React.js – komponent bez props" width="318" height="414" /></a>
 
 <h2>Props w React.js</h2>
 

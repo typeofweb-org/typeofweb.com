@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    /assets/wp-content/uploads/2018/12/black-and-white-blur-book-164821.jpg
+    /public/assets/wp-content/uploads/2018/12/black-and-white-blur-book-164821.jpg
   width: 3887
   height: 2186
 categories:

@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: /assets/wp-content/uploads/2018/03/redux-kurs-typeofweb.png
+  url: /public/assets/wp-content/uploads/2018/03/redux-kurs-typeofweb.png
   width: 887
   height: 400
 categories:
