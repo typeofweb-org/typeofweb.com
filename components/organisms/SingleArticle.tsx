@@ -101,10 +101,7 @@ export const SingleArticle = memo(
           <GitHubEditLink filePath={filePath} />
           <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
             <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-              <meta
-                itemProp="url"
-                content="/public/assets/wp-content/uploads/2020/04/logo_kwadrat11.png"
-              />
+              <meta itemProp="url" content="/public/assets/wp-content/uploads/2020/04/logo_kwadrat11.png" />
             </span>
             <meta itemProp="name" content="Type of Web" />
           </span>

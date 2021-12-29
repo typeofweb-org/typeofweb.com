@@ -454,7 +454,14 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
   };
 }
 
-export const commonRemarkPlugins = [RemarkFrontmatter, RemarkMath, RemarkGfm, RemarkFootnotes, imageToJsx, remarkImgToJsx];
+export const commonRemarkPlugins = [
+  RemarkFrontmatter,
+  RemarkMath,
+  RemarkGfm,
+  RemarkFootnotes,
+  imageToJsx,
+  remarkImgToJsx,
+];
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],
@@ -531,7 +538,7 @@ export async function toHtml(
   ];
 
   const processor: Unified.Processor = plugins.reduce<Unified.Processor>((processor, plugin) => {
-    return Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin );
+    return Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin);
   }, Unified.unified());
 
   if (options.excerpt) {

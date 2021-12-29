@@ -51,7 +51,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
   if (!src) {
     return <noscript />;
   }
-  const srcWithoutPublic = src.replace(/^\/public\//, '/')
+  const srcWithoutPublic = src.replace(/^\/public\//, '/');
 
   if (width && height && srcWithoutPublic) {
     // const isFull = props.className?.includes('size-full') ?? false;
@@ -103,7 +103,7 @@ const groupByImagesAndDescriptions = (children: readonly MdxChild[]) => {
     if (child.props.originalType === 'img' || child.props.mdxType === 'img') {
       return [index];
     }
-    if ((typeof child.type === 'function' && child.type.name === 'Image')) {
+    if (typeof child.type === 'function' && child.type.name === 'Image') {
       return [index];
     }
     return [];
