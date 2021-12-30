@@ -28,13 +28,10 @@ export const ArticleCoverImage = memo<{
     >
       <Image
         src={src}
-        unoptimized={src.includes('ytimg.com')}
         itemProp="image"
         itemScope
         itemType="http://schema.org/ImageObject"
         alt=""
-        // @todo fix me
-        sizes="1536px"
         {...layoutProps}
         placeholder={cover.blurDataURL ? 'blur' : 'empty'}
         blurDataURL={cover.blurDataURL ?? undefined}

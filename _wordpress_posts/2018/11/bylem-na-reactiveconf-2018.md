@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/11/typeofweb-na-reactiveconf.jpg
+    /public/assets/wp-content/uploads/2018/11/typeofweb-na-reactiveconf.jpg
   width: 1747
   height: 916
 categories:
@@ -36,7 +36,7 @@ ReactiveConf to już marka. Bardzo dobra. Ale po kolei…
 
 Do Pragi przyjechałem w weekend przed konferencją. W planach? Standardowo, **zwiedzanie, trochę spotkań branżowych i przygotowanie na konferencję**. Akurat trafiłem na czechosłowacki dzień niepodległości. Praga jest piękna, ale z tego powodu przez weekend była niezwykle zatłoczona. Zaliczyłem czeskie jedzenie, Most Karola, lokalne _Trdelník_ i na koniec, oczywiście, serię piw. Wszystko pysznie, mimo przeciętnej pogody.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/11/IMG_2699.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/11/IMG_2699-981x1024.jpg" alt="Praga" width="981" height="1024" class="aligncenter size-large wp-image-1722" /></a>
+<a href="/public/assets/wp-content/uploads/2018/11/IMG_2699.jpg"><img src="/public/assets/wp-content/uploads/2018/11/IMG_2699-981x1024.jpg" alt="Praga" width="981" height="1024" class="aligncenter size-large wp-image-1722" /></a>
 
 ## Venue
 
@@ -77,7 +77,7 @@ Druga z firm stworzyła konkurs polegający na napisaniu algorytmu, który stero
 
 Nieskromnie napiszę, że, razem z kolegą Bartoszem, oba te konkursy wygraliśmy.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/11/IMG_2692.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/11/IMG_2692-1024x768.jpg" alt="" width="1024" height="768" class="aligncenter size-large wp-image-1713" /></a>
+<a href="/public/assets/wp-content/uploads/2018/11/IMG_2692.jpg"><img src="/public/assets/wp-content/uploads/2018/11/IMG_2692-1024x768.jpg" alt="" width="1024" height="768" class="aligncenter size-large wp-image-1713" /></a>
 
 Warto dodać, że ten sponsor przywiózł ze sobą **śliwowicę** i częstował nią zainteresowanych. To było… _mocne_ zaskoczenie.
 

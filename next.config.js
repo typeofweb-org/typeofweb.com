@@ -166,11 +166,11 @@ config.rewrites = () => {
     { source: '/config.yml', destination: '/api/admin-config.yml' },
     {
       source: '/wp-content/uploads/:slug(.+)',
-      destination: 'https://res.cloudinary.com/type-of-web/wp-content/uploads/:slug',
+      destination: '/assets/wp-content/uploads/:slug',
     },
     {
       source: '/content/images/:slug(.+)',
-      destination: 'https://res.cloudinary.com/type-of-web/content/images/:slug',
+      destination: '/assets/content/images/:slug',
     },
     {
       source: '/js/script.js',

@@ -1,8 +1,6 @@
-import { getOEmbed } from "./utils/oEmbedCache";
+import { getOEmbed } from './utils/oEmbedCache';
 
-async function run () {
-  
-}
+async function run() {}
 
 run().catch((err) => {
   console.error(err);

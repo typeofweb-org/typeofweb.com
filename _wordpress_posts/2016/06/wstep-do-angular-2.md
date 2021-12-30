@@ -56,7 +56,7 @@ https://typeofweb.com/typescript-czesc-1/
 
 <p>Aby uruchomić serwer wystarczy wydać polecenie <code>ng serve</code>. Domyślnie aplikacja dostępna jest pod adresem <a href="http://localhost:4200/">http://localhost:4200/</a> Po jego otwarciu naszym oczom powinien ukazać się napis:</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/06/angular-2-todo-list-hello-world.png" alt="Angular 2 Todo List Hello World" /></p>
+<p><img src="/public/assets/content/images/2016/06/angular-2-todo-list-hello-world.png" alt="Angular 2 Todo List Hello World" /></p>
 
 <h1 id="aplikacjawangular2">Aplikacja w Angular 2</h1>
 
@@ -104,7 +104,7 @@ export class TodoListAppComponent {
 
 <p>Angular 2 wkłada trochę wysiłku w to, aby style działały wyłącznie per-komponent. Jak to się dzieje? Jeśli teraz przyjrzymy się wygenerowanemu HTML-owi to zauważymy, że Angular 2 automatycznie dodaje dziwnie wyglądające atrybuty do elementów w aplikacji i te same atrybuty dopisywane są również do treści stylów. Sposób generowania nazw tych atrybutów nie jest w tym momencie istotny, liczy się efekt: <strong>style stają się niejako lokalne dla komponentu</strong>.</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/06/Angular-2-scope-styles.png" alt="Angular 2 lokalne style" /></p>
+<p><img src="/public/assets/content/images/2016/06/Angular-2-scope-styles.png" alt="Angular 2 lokalne style" /></p>
 
 <h1 id="listazada">Lista zadań</h1>
 
@@ -288,7 +288,7 @@ export class TodoListAppComponent {
 
 <p>Aplikacja już prawie gotowa. Jest piękna:</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/06/Angular-2-todo-list.png" alt="Angular 2 todo list" /></p>
+<p><img src="/public/assets/content/images/2016/06/Angular-2-todo-list.png" alt="Angular 2 todo list" /></p>
 
 <iframe style="width: 100%; height: 250px" src="//embed.plnkr.co/P9Xj5rX4quhOsghzj4BX/" frameborder="0" allowfullscren="allowfullscren"></iframe>
 

@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/07/poradnik-konferencje-organizacja.jpg
+    /public/assets/wp-content/uploads/2018/07/poradnik-konferencje-organizacja.jpg
   width: 1200
   height: 567
 categories:

@@ -23,7 +23,7 @@ seo:
 
 <p>Aby problem był mniej abstrakcyjny, postaram się nakreślić bardziej konkretny przykład. Weźmy koncept aplikacji:</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/Screenshot-2016-05-05-15-19-30.png" alt="mockup aplikacji" /></p>
+<p><img src="/public/assets/content/images/2016/05/Screenshot-2016-05-05-15-19-30.png" alt="mockup aplikacji" /></p>
 
 <p>Układ nie ma znaczenia, te same problemy występują niezależnie od położenia elementów na stronie. Aplikacja posiada dwa główne komponenty: Ustawienia oraz wykres. Zmieniając ustawienia użytkownik powoduje zmiany w wyglądzie wykresu. Najprostszym rozwiązaniem jest tutaj wrzucenie wszystkiego do jednego komponentu i cały problem komunikacji znika. Jednak w trakcie dalszego rozwoju aplikacji okazuje się, oba elementy stały się niezwykle skomplikowane, a sam wykres ma się dodatkowo wyświetlać na innej podstronie, ale tym razem już bez konfiguracji. Z tych powodów decydujemy o wyodrębnieniu ustawień oraz samego wykresu do osobnych komponentów, modułów, plików… Według mnie brzmi to jak całkiem typowy scenariusz rozwoju aplikacji. Tylko jak sprawić, aby te dwa elementy komunikowały się pomiędzy sobą bez żadnego problemu?</p>
 

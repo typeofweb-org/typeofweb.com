@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/02/x-team-logo-large.png
+  url: /public/assets/wp-content/uploads/2018/02/x-team-logo-large.png
   width: 887
   height: 400
 categories:
@@ -33,7 +33,7 @@ Od momentu gdy zdecydowałem się na 100% pracę zdalną, kilka razy zmieniał
 X-Team to australijska agencja z benefitami. Działa na zasadzie pośrednictwa pomiędzy programistami a klientami. Ale jeśli szukasz projektów krótkoterminowych albo „na boku” — to tu ich raczej nie znajdziesz. X-Team współpracuje z programistami praktycznie wyłącznie w pełnym wymiarze godzin. I prawie zawsze przy projektach długoterminowych. Na pewno znajdą się jakieś wyjątki, ale jak to z wyjątkami bywa — „potwierdzają regułę”.
 
 <figure id="attachment_1111" align="aligncenter" width="1024">
-  <img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/02/x-team-logo-e1519724229412-1024x375.png" alt="Logo X-Team" width="1024" height="375" class="size-large wp-image-1111" />
+  <img src="/public/assets/wp-content/uploads/2018/02/x-team-logo-e1519724229412-1024x375.png" alt="Logo X-Team" width="1024" height="375" class="size-large wp-image-1111" />
   <figcaption>
     Rekrutacja do X-Team należała do jednych z najprzyjemniejszych w moim życiu.
   </figcaption>

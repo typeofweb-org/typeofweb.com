@@ -17,9 +17,9 @@ function defaultLoader({ src, width, quality }: ImageLoaderProps): string {
   return `${root}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
 }
 
-const CLOUDINARY_BASE_UPLOAD = 'https://res.cloudinary.com/type-of-web/image/upload/';
-const CLOUDINARY_BASE_FETCH = 'https://res.cloudinary.com/type-of-web/image/fetch/';
-const CLOUDINARY_BASE_FALLBACK = 'https://res.cloudinary.com/type-of-web/';
+const CLOUDINARY_BASE_UPLOAD = '/public/assets/image/upload/';
+const CLOUDINARY_BASE_FETCH = '/public/assets/image/fetch/';
+const CLOUDINARY_BASE_FALLBACK = '/public/assets/';
 const cloudinaryLoader =
   (base: string): ImageLoader =>
   ({ src, width, quality }) => {

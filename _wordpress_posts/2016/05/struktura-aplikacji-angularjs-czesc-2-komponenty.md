@@ -165,11 +165,11 @@ seo: {}
 
 <p>Stwórzmy aplikację w AngularJS, który zawiera w sobie listę kontaktów. Każdy kontakt będzie miał imię, wiek oraz email, dodatkowo wyświetlony będzie również jego Gravatar. Efekt końcowy wygląda w ten sposób:</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/komponenty-angularjs-lista-kontaktow.png" alt="AngularJS lista kontaktów" /></p>
+<p><img src="/public/assets/content/images/2016/05/komponenty-angularjs-lista-kontaktow.png" alt="AngularJS lista kontaktów" /></p>
 
 <p>Tworzenie jakiejkolwiek aplikacji warto zacząć od koncepcyjnego podziału na komponenty. Daje to lepszy pogląd na całokształt tworzonego projektu oraz pomaga wstępnie zidentyfikować potrzeby. W tym celu biorę powyższy obrazek i oznaczam na nim granice poszczególnych komponentów. Dokładnie w ten sposób zostanie zaimplementowana ta aplikacja:</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/komponenty-angularjs-projekt-aplikacji-2.png" alt="AngularJS projekt aplikacji" /></p>
+<p><img src="/public/assets/content/images/2016/05/komponenty-angularjs-projekt-aplikacji-2.png" alt="AngularJS projekt aplikacji" /></p>
 
 <p>Pisanie kodu z użyciem Angulara zaczyna się zazwyczaj od zdefiniowania modułu aplikacji, w tym przypadku będzie to jedyny moduł: <code>const app = angular.module('myApp', []);</code>. Dla skrócenia i poprawy czytelności zakładam, że zmienna <code>app</code> istnieje wszędzie. Dodatkowo pomijam tutaj implementację serwisów, ale pełny kod zamieszczam na CodePen oraz na GitHubie na końcu wpisu. Cały HTML aplikacji wygląda w ten sposób:</p>
 

@@ -206,7 +206,7 @@ export async function getExcerptAndContent(
       isMdx: true as const,
     };
   } catch (err) {
-    // console.log(post.data.permalink, err);
+    console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
       content: (await toHtml(content, { excerpt: false, parseOembed: options.parseOembed })).toString('utf-8'),

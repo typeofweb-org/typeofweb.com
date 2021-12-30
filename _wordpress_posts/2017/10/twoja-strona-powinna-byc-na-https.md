@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-20.56.24.png
+    /public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-20.56.24.png
   width: 1252
   height: 576
 categories:
@@ -48,9 +48,9 @@ Dodatkowym problemem jest fakt, że <strong>to co otwierasz przez HTTP nie może
 
 Gdy jednak korzystasz z HTTPS, możesz mieć zdecydowanie większą pewność, że strona banku naprawdę nią jest. W przeglądarkach zazwyczaj informuje o tym zielona kłódka obok adresu:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.57.39.png"><img class="aligncenter wp-image-528 size-full" title="Certyfikat EV SSL PayPal" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.57.39.png" alt="Certyfikat EV PayPal" width="940" height="152" /></a>
+<a href="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.57.39.png"><img class="aligncenter wp-image-528 size-full" title="Certyfikat EV SSL PayPal" src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.57.39.png" alt="Certyfikat EV PayPal" width="940" height="152" /></a>
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.59.07.png"><img class="aligncenter wp-image-529 size-full" title="Certyfikat DV SSL Type of Web" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.59.07.png" alt="Certyfikat DV Type of Web" width="702" height="148" /></a>Czym się różnią od siebie te dwa zrzuty ekranu? O tym nieco dalej.
+<a href="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.59.07.png"><img class="aligncenter wp-image-529 size-full" title="Certyfikat DV SSL Type of Web" src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-17.59.07.png" alt="Certyfikat DV Type of Web" width="702" height="148" /></a>Czym się różnią od siebie te dwa zrzuty ekranu? O tym nieco dalej.
 
 <h2>3. HTTP/2 jest znacznie szybsze od HTTP/1</h2>
 
@@ -58,7 +58,7 @@ Bardzo często powtarzanym mitem jest, że HTTPS jest wolniejsze od HTTP. Jest t
 
 Jeśli chcesz sam/a sprawdzić <strong>o ile HTTP/2 przez HTTPS jest szybsze od zwykłego HTTP zerknij na tę stronę</strong>. Mój wynik poniżej: <a href="http://www.httpvshttps.com/" target="_blank" rel="noopener noreferrer">http://www.httpvshttps.com/</a>
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.02.51.png"><img class="aligncenter wp-image-530 size-full" title="HTTPS jest nawet o 96% od HTTP" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.02.51.png" alt="HTTPS jest nawet o 96% od HTTP" width="472" height="346" /></a>Jeśli przypadkiem jesteś devopsem i martwisz się tym, że szyfrowanie TLS obciąży Twój serwer to zajrzyj tutaj: <a href="https://istlsfastyet.com/" target="_blank" rel="noopener noreferrer">https://istlsfastyet.com/</a>
+<a href="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.02.51.png"><img class="aligncenter wp-image-530 size-full" title="HTTPS jest nawet o 96% od HTTP" src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.02.51.png" alt="HTTPS jest nawet o 96% od HTTP" width="472" height="346" /></a>Jeśli przypadkiem jesteś devopsem i martwisz się tym, że szyfrowanie TLS obciąży Twój serwer to zajrzyj tutaj: <a href="https://istlsfastyet.com/" target="_blank" rel="noopener noreferrer">https://istlsfastyet.com/</a>
 
 <h2>4. HTTPS pozwala na korzystanie z nowoczesnych technologii</h2>
 
@@ -74,23 +74,23 @@ Dodatkowo warto wiedzieć, że <strong>przy HTTP przeglądarki domyślnie nie us
 
 Dodatkowo od niedawna <strong>przeglądarki zaczęły ostrzegać</strong> przed stronami, które zawierają formularze, ale nie używają HTTPS:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.38.50.png"><img class="aligncenter wp-image-531 size-full" title="Niebezpieczna strona bez HTTPS" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.38.50.png" alt="Niebezpieczna strona bez HTTPS" width="238" height="68" /></a>
+<a href="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.38.50.png"><img class="aligncenter wp-image-531 size-full" title="Niebezpieczna strona bez HTTPS" src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.38.50.png" alt="Niebezpieczna strona bez HTTPS" width="238" height="68" /></a>
 
 Wkrótce wszystkie strony używające HTTP mogą być oznaczone w ten sposób, a <strong>standardem stanie się korzystanie z HTTPS wszędzie</strong>. Taki jest szczytny cel :)
 
 Ponadto, informacja o tym czy strona używa HTTPS czy nie znajduje się również w wynikach wyszukiwania w Google. Strona na górze nie korzysta z HTTPS, a strona na dole tak:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.44.43.png"><img class="aligncenter wp-image-532 size-full" title="Wyniki wyszukiwania z HTTPS i bez HTTPS" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.44.43.png" alt="Wyniki wyszukiwania z HTTPS i bez HTTPS" width="252" height="322" /></a>
+<a href="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.44.43.png"><img class="aligncenter wp-image-532 size-full" title="Wyniki wyszukiwania z HTTPS i bez HTTPS" src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-18.44.43.png" alt="Wyniki wyszukiwania z HTTPS i bez HTTPS" width="252" height="322" /></a>
 
 <h2>7. HTTPS jest całkowicie darmowe</h2>
 
 Od pewnego czasu certyfikat potrzebny do HTTPS można mieć całkowicie za darmo dzięki inicjatywie <strong>Let's Encrypt</strong>. Let's Encrypt jest urzędem certyfikacji (CA) dostępnym od 2016 roku. W ramach projektu możesz <strong>w łatwy i zautomatyzowany sposób otrzymać darmowe certyfikaty TLS do potrzebne do HTTPS! </strong>Otrzymujesz nie tylko sam certyfikat, ale również zestaw narzędzi, który sprawia, że wdrożenie takiego certyfikatu jest prostsze niż kiedykolwiek. Celem Let's Encrypt jest sprawienie, aby cały ruch w Internecie odbywał się w sposób zaszyfrowany.
 
-<img class="aligncenter wp-image-533 size-large" title="Logo Let's Encrypt" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/le-logo-wide-1024x301.png" alt="Logo Let's Encrypt HTTPS SSL" width="1024" height="301" />
+<img class="aligncenter wp-image-533 size-large" title="Logo Let's Encrypt" src="/public/assets/wp-content/uploads/2017/10/le-logo-wide-1024x301.png" alt="Logo Let's Encrypt HTTPS SSL" width="1024" height="301" />
 
 Wiele hostingów natychmiast nawiązało współpracę i ułatwiło użytkownikom korzystanie z Let's Encrypt bez konieczności ręcznej instalacji czegokolwiek! Przykładowo, polski hosting <a href="http://www.mydevil.net/pp/9UVOSJRZIV" target="_blank" rel="noopener nofollow noreferrer">MyDevil.net</a>, z którego aktualnie korzystam, zintegrował Let's Encrypt ze swoim panelem administracyjnym i <strong>włączenie HTTPS dla całej strony to jedno kliknięcie!</strong>
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-10-13.25.37.png"><img class="aligncenter size-large wp-image-560" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-10-13.25.37-1024x302.png" alt="" width="1024" height="302" /></a>
+<a href="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-10-13.25.37.png"><img class="aligncenter size-large wp-image-560" src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-10-13.25.37-1024x302.png" alt="" width="1024" height="302" /></a>
 
 Certyfikaty Let's Encrypt są wydawane na 90 dni. Warto poczytać <a href="https://letsencrypt.org/2015/11/09/why-90-days.html" target="_blank" rel="noopener noreferrer">dlaczego krótko = dobrze</a> – w skrócie zmniejsza to konsekwencje ewentualnej kradzieży klucza prywatnego i wymusza automatyzację odnowień certyfikatów. Poleca się odnawianie certyfikatu od Let's Encrypt co 60 dni.
 
@@ -105,8 +105,8 @@ Oczywiście niektóre firmy nadal sprzedają certyfikaty DV – i nie ma w tym n
 Na pewno niejednokrotnie zauważyłaś/eś, że „kłódki” przy adresie strony mogą się między sobą różnić. Przykładowo inaczej wygląda na stronie banku, a inaczej u mnie na blogu, prawda?
 
 <Gallery columns="2" link="file" size="medium">
-  <img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-19.42.42.png" loading="lazy" alt="Certyfikat DV" title="Certyfikat DV" width="488" height="70" />
-<img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/10/Screenshot-2017-10-09-19.47.01.png" loading="lazy" alt="Certyfikat EV" title="Certyfikat EV" width="642" height="70" />
+  <img src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-19.42.42.png" loading="lazy" alt="Certyfikat DV" title="Certyfikat DV" width="488" height="70" />
+<img src="/public/assets/wp-content/uploads/2017/10/Screenshot-2017-10-09-19.47.01.png" loading="lazy" alt="Certyfikat EV" title="Certyfikat EV" width="642" height="70" />
 </Gallery>
 
 Wyróżnia się 3 rodzaje certyfikatów:

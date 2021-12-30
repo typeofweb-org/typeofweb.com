@@ -29,11 +29,7 @@
     "react-hooks-a-zadania-do-api",
     "kiedy-uzywac-state-a-kiedy-redux"
   ],
-  "atrybuty-class-i-style-w-vue-js": [
-    "kurs-typescript-czesc-2",
-    "dyrektywy-warunkowe-w-vue-js",
-    "typescript-czesc-1"
-  ],
+  "atrybuty-class-i-style-w-vue-js": ["kurs-typescript-czesc-2", "dyrektywy-warunkowe-w-vue-js", "typescript-czesc-1"],
   "automatyczne-uruchamianie-testow-w-buddy": [
     "testowanie-react-js-enzyme-props-state-interakcje",
     "tworzenie-aplikacji-react-js-dzieki-create-react-app",
@@ -129,11 +125,7 @@
     "odpowiadam-na-pytania-babel-ecmascript-destrukturyzacja-onclick-classname",
     "react-js-w-przykladach-filtrowanie-statycznej-listy"
   ],
-  "hackowanie-css": [
-    "innerhtml-furtka-do-xss",
-    "komunikacja-pomiedzy-kontrolerami",
-    "podzial-komponenty-react-js"
-  ],
+  "hackowanie-css": ["innerhtml-furtka-do-xss", "komunikacja-pomiedzy-kontrolerami", "podzial-komponenty-react-js"],
   "hapi-js-wprowadzenie": [
     "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1",
     "meet-js-summit-2017-kulisami",
@@ -149,11 +141,7 @@
     "poprawne-bindowanie-funkcji-react-js",
     "tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api"
   ],
-  "innerhtml-furtka-do-xss": [
-    "weekly-javascript-challenge-1",
-    "typescript-na-serwerze",
-    "typescript-czesc-1"
-  ],
+  "innerhtml-furtka-do-xss": ["weekly-javascript-challenge-1", "typescript-na-serwerze", "typescript-czesc-1"],
   "interakcja-komponentami-react-js": [
     "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on",
     "pierwszy-komponent-react-js",
@@ -224,16 +212,8 @@
     "dyrektywy-warunkowe-w-vue-js",
     "atrybuty-class-i-style-w-vue-js"
   ],
-  "kurs-typescript-czesc-2": [
-    "atrybuty-class-i-style-w-vue-js",
-    "typescript-czesc-1",
-    "kurs-typescript-czesc-3"
-  ],
-  "kurs-typescript-czesc-3": [
-    "typescript-czesc-1",
-    "typescript-na-serwerze",
-    "kurs-typescript-czesc-2"
-  ],
+  "kurs-typescript-czesc-2": ["atrybuty-class-i-style-w-vue-js", "typescript-czesc-1", "kurs-typescript-czesc-3"],
+  "kurs-typescript-czesc-3": ["typescript-czesc-1", "typescript-na-serwerze", "kurs-typescript-czesc-2"],
   "leniwe-ladowanie-komponentow-w-react-dzieki-import": [
     "react-hooks-useeffect-efekty-uboczne-w-komponencie",
     "struktura-aplikacji-angularjs-czesc-2-komponenty",
@@ -249,11 +229,7 @@
     "symlink-zip-upload-plikow-dla-hackera",
     "ktory-hosting-jest-najszybszy-9-rzeczy-ktore-maja-najwieksze-znaczenie"
   ],
-  "map-i-reduce-w-js": [
-    "observable-rxjs",
-    "weekly-javascript-challenge-2",
-    "weekly-javascript-challenge-1"
-  ],
+  "map-i-reduce-w-js": ["observable-rxjs", "weekly-javascript-challenge-2", "weekly-javascript-challenge-1"],
   "meet-js-summit-2017-kulisami": [
     "meet-js-summit-2017-nasze-podsumowanie",
     "poradnik-dla-organizatorow-konferencji",
@@ -294,11 +270,7 @@
     "symlink-zip-upload-plikow-dla-hackera",
     "usuwanie-bialych-paskow-safari-iphone-x"
   ],
-  "observable-rxjs": [
-    "map-i-reduce-w-js",
-    "weekly-javascript-challenge-1",
-    "weekly-javascript-challenge-2"
-  ],
+  "observable-rxjs": ["map-i-reduce-w-js", "weekly-javascript-challenge-1", "weekly-javascript-challenge-2"],
   "obsluga-zdarzen-w-vue-js-za-pomoca-dyrektywy-v-on": [
     "interakcja-komponentami-react-js",
     "petle-w-vue-js-z-uzyciem-dyrektywy-v-for",
@@ -564,21 +536,13 @@
     "typescript-czesc-1",
     "wzorce-projektowe-dependency-injection"
   ],
-  "typescript-czesc-1": [
-    "kurs-typescript-czesc-3",
-    "typescript-na-serwerze",
-    "kurs-typescript-czesc-2"
-  ],
+  "typescript-czesc-1": ["kurs-typescript-czesc-3", "typescript-na-serwerze", "kurs-typescript-czesc-2"],
   "typescript-infer-i-typy-warunkowe": [
     "conditional-types-typescript-typy-warunkowe",
     "kurs-typescript-czesc-3",
     "state-react-js-2"
   ],
-  "typescript-na-serwerze": [
-    "typescript-czesc-1",
-    "kurs-typescript-czesc-3",
-    "weekly-javascript-challenge-2"
-  ],
+  "typescript-na-serwerze": ["typescript-czesc-1", "kurs-typescript-czesc-3", "weekly-javascript-challenge-2"],
   "usememo-usecallback-czyli-rozwiazanie-problemow-ze-zmieniajacymi-sie-propsami": [
     "klasy-jako-komponenty-react-js",
     "react-hooks-useeffect-efekty-uboczne-w-komponencie",
@@ -599,11 +563,7 @@
     "licencje-oprogramowania",
     "nowe-metody-cyklu-zycia-getderivedstatefromprops-i-getsnapshotbeforeupdate"
   ],
-  "wady-react-hooks": [
-    "react-hooks-wprowadzenie-i-motywacja",
-    "dobry-czytelny-czysty-kod",
-    "react-hooks-wlasne-hooki"
-  ],
+  "wady-react-hooks": ["react-hooks-wprowadzenie-i-motywacja", "dobry-czytelny-czysty-kod", "react-hooks-wlasne-hooki"],
   "weekly-javascript-challenge-1": [
     "weekly-javascript-challenge-2",
     "weekly-javascript-challenge-3",

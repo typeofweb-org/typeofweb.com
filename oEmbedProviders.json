@@ -884,7 +884,7 @@
           "https://faithlifetv.com/items/*",
           "https://faithlifetv.com/items/resource/*/*",
           "https://faithlifetv.com/media/*",
-          "https://faithlifetv.com/media/assets/*",
+          "https://faithlifetv.com/media/public/assets/*",
           "https://faithlifetv.com/media/resource/*/*"
         ],
         "url": "https://faithlifetv.com/api/oembed",

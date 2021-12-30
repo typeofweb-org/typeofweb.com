@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-1.jpg
+  url: /public/assets/wp-content/uploads/2018/01/pexels-photo-1.jpg
   width: 1187
   height: 853
 categories:
@@ -39,7 +39,7 @@ Jak wybrnąć?
 <h2>Nie odmieniać</h2>
 No pierwsza myśl, która przychodzi do głowy: <strong>nie odmieniać</strong>. Mogę napisać „komentarze: 10” albo „komentarze: 1” albo „komentarze: 3” i brzmi to całkiem zgrabnie. <strong>Tak zresztą musiałem zrobić w Disqusie</strong> (systemie komentarzy na tym blogu), gdyż autorzy <strong>nie przewidzieli w ogóle możliwości odmiany</strong> liczby mnogiej w więcej niż dwóch formach. Jest miejsce na przetłumaczenie słowa „comment” dla 0, 1 lub więcej komentarzy:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screenshot-2018-01-22-18.34.50.png"><img class="aligncenter size-large wp-image-978" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screenshot-2018-01-22-18.34.50-1024x263.png" alt="Odmiana liczby mnogiej przy liczebnikach" width="1024" height="263" /></a>
+<a href="/public/assets/wp-content/uploads/2018/01/Screenshot-2018-01-22-18.34.50.png"><img class="aligncenter size-large wp-image-978" src="/public/assets/wp-content/uploads/2018/01/Screenshot-2018-01-22-18.34.50-1024x263.png" alt="Odmiana liczby mnogiej przy liczebnikach" width="1024" height="263" /></a>
 
 Działa! Ale mnie nie satysfakcjonuje. W Disqusie wyboru nie mam, ale <strong>we własnej aplikacji mogę zrobić to… dobrze</strong> :)
 

@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/03/pensje_frontend_programisci.png
+    /public/assets/wp-content/uploads/2020/03/pensje_frontend_programisci.png
   width: 1688
   height: 780
 categories:
