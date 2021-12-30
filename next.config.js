@@ -166,11 +166,11 @@ config.rewrites = () => {
     { source: '/config.yml', destination: '/api/admin-config.yml' },
     {
       source: '/wp-content/uploads/:slug(.+)',
-      destination: '/public/assets/wp-content/uploads/:slug',
+      destination: '/assets/wp-content/uploads/:slug',
     },
     {
       source: '/content/images/:slug(.+)',
-      destination: '/public/assets/content/images/:slug',
+      destination: '/assets/content/images/:slug',
     },
     {
       source: '/js/script.js',

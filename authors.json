@@ -19,7 +19,7 @@
     {
       "slug": "paulina-piatek",
       "displayName": "Paulina Piątek",
-      "avatarUrl": "/public/assets/wp-content/uploads/2020/06/92280665_10223145319368360_5560124641172783104_o1.jpg",
+      "avatarUrl": "/assets/wp-content/uploads/2020/06/92280665_10223145319368360_5560124641172783104_o1.jpg",
       "meta": {
         "gender": "f",
         "youtube": "https://www.youtube.com/c/paulinapiatek",
@@ -82,7 +82,7 @@
     {
       "slug": "mateusz-mazurek",
       "displayName": "Mateusz Mazurek",
-      "avatarUrl": "/public/assets/avatars/Mateusz-Mazurek_zrgwjt.jpg",
+      "avatarUrl": "/assets/avatars/Mateusz-Mazurek_zrgwjt.jpg",
       "meta": {
         "gender": "m",
         "first_name": "Mateusz",
