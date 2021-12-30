@@ -538,7 +538,7 @@ export async function toHtml(
   ];
 
   const processor: Unified.Processor = plugins.reduce<Unified.Processor>((processor, plugin) => {
-    return Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin);
+    return Array.isArray(plugin) ? processor.use(...(plugin as [any, any])) : processor.use(plugin as any);
   }, Unified.unified());
 
   if (options.excerpt) {
