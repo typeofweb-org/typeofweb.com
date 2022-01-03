@@ -3,6 +3,7 @@ import { memo } from 'react';
 
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
+import { isIndex } from '../../utils/pageKind';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
@@ -10,11 +11,11 @@ import type { PageKind } from '../../types';
 export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) => {
   const { text, progress } = useRunningHeader();
 
-  const HeaderEl = pageKind === 'index' ? 'h1' : 'div';
+  const HeaderEl = isIndex(pageKind) ? 'h1' : 'div';
 
   return (
     <>
-      <a href="#main-content" className="sr-only">
+      <a href="#main-content" className="focus:not-sr-only sr-only">
         Skocz do treści
       </a>
       <header className="ios:transcluent-white after:absolute fixed z-10 after:bottom-0 top-0 flex flex-row items-stretch justify-center pb-1 after:w-full w-full after:h-1 h-12 bg-gray-100 after:bg-gray-200 shadow overflow-hidden">
@@ -47,6 +48,32 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
+      {/* <div className="fixed z-10 top-12 flex items-center justify-center px-6 py-1 w-full text-center bg-white">
+        <p>
+          🔴 Live na temat <strong>pracy zdalnej</strong> i mojego <strong>odejścia z X-Teamu</strong>:
+          18.&nbsp;października&nbsp;o&nbsp;12:00! 🕛{' '}
+          <LinkUnderlineEffect>
+            <a href="https://www.youtube.com/watch?v=RkbWh4p69Rw" className="ml-2 text-blue-500">
+              YouTube
+            </a>
+          </LinkUnderlineEffect>
+          &nbsp;|&nbsp;
+          <LinkUnderlineEffect>
+            <a href="https://www.facebook.com/typeofweb/posts/1582489468771704" className="text-blue-500">
+              Facebook
+            </a>
+          </LinkUnderlineEffect>
+          &nbsp;|&nbsp;
+          <LinkUnderlineEffect>
+            <a
+              href="https://www.linkedin.com/feed/update/urn:li:ugcPost:6854343436955385856/"
+              className="text-blue-500"
+            >
+              LinkedIn
+            </a>
+          </LinkUnderlineEffect>
+        </p>
+      </div> */}
     </>
   );
 });

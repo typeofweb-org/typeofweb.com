@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
-import { typeofwebImageLoader } from '../../utils/imageLoader';
-
 import type { IGetPlaiceholderReturn } from 'plaiceholder';
 
 export type CoverPlaiceholder = {
@@ -15,8 +13,7 @@ const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
 
 export const ArticleCoverImage = memo<{
   readonly cover: CoverPlaiceholder;
-  readonly wide: boolean;
-}>(({ cover, wide }) => {
+}>(({ cover }) => {
   const { src, width, height } = cover.img;
   const ratio = width / height;
   const isLayoutFill = ratio < GOLDEN_RATIO;
@@ -26,21 +23,15 @@ export const ArticleCoverImage = memo<{
 
   return (
     <div
-      className={`text-[length:0] relative ${isLayoutFill ? 'min-h-[55vw] md:min-h-[450px]' : ''} overflow-hidden ${
-        wide ? `-mx-1 lg:-mx-4 mb-8 rounded-xl` : `rounded-t-xl`
-      }`}
+      className={`text-[length:0] relative ${isLayoutFill ? 'min-h-[50vw] md:min-h-[350px]' : ''}
+      shadow-lg -mx-6 mt-4 lg:mb-4 mb-2 lg:mt-8 rounded-lg overflow-hidden`}
     >
       <Image
-        loader={typeofwebImageLoader}
         src={src}
         itemProp="image"
         itemScope
         itemType="http://schema.org/ImageObject"
-        className="duration-[10s] motion-safe:hover:scale-110 bg-gray-200 transition-transform ease-in hover:ease-out"
         alt=""
-        // sizes="320px, (min-width: 320px) 640px, (min-width: 640px) 1280px, (min-width: 768px) 1536px"
-        // @todo fix me
-        sizes="1536px"
         {...layoutProps}
         placeholder={cover.blurDataURL ? 'blur' : 'empty'}
         blurDataURL={cover.blurDataURL ?? undefined}

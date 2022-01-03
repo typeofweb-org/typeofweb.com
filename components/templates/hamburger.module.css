@@ -1,0 +1,39 @@
+.ham {
+  @apply no-touch-highlight select-none transition-transform;
+  transition-duration: 400ms;
+}
+
+.ham .top {
+  stroke-dasharray: 40 130;
+}
+.ham .middle {
+  stroke-dasharray: 40 140;
+}
+.ham .bottom {
+  stroke-dasharray: 40 205;
+}
+
+.ham.active .top {
+  stroke-dasharray: 75 130;
+  stroke-dashoffset: -63px;
+}
+
+.ham.active .middle {
+  stroke-dashoffset: -102px;
+}
+
+.ham.active .bottom {
+  stroke-dasharray: 110 205;
+  stroke-dashoffset: -86px;
+}
+
+.line {
+  @apply fill-[none] stroke-gray-900;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.ham.active .line {
+  stroke-width: 5;
+}

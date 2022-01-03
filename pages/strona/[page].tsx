@@ -1,6 +1,8 @@
+import AuthorsJson from '../../authors.json';
 import { pageSize } from '../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
-import { readAllPosts } from '../../utils/wordpress';
+import { readAllPosts } from '../../utils/posts';
+import { getYouTubeVideosFor } from '../../utils/youtube';
 import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
@@ -30,16 +32,28 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
+  const videos = await getYouTubeVideosFor({ page });
 
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
-    (p) => ({
-      ...p,
-      content: '',
-    }),
-  );
+  const posts = (
+    await Promise.all(
+      allPosts.map((post) =>
+        postToProps(post, AuthorsJson.authors, {
+          onlyExcerpt: true,
+          parseOembed: false,
+          includeCommentsCount: true,
+          includePlaiceholder: true,
+        }),
+      ),
+    )
+  ).map((p) => ({
+    ...p,
+    content: '',
+  }));
 
-  return { props: { posts, page, postsCount } };
+  return {
+    revalidate: 60 * 15,
+    props: { posts, videos, page, postsCount, pageKind: 'index' },
+  };
 };
 
 export default IndexPage;

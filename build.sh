@@ -7,18 +7,23 @@ sedi () {
 ARGS=$@
 
 if [[ ${ARGS[*]} =~ 'feed' ]]; then
+  echo "Building feed and algolia index..."
   # Fuck node.js seriously
   sedi 's/  "type": "commonjs",/  "type": "module",/' package.json
-  yarn feed
-  yarn comments-count
+  ENABLE_GITHUB_READ=false yarn feed
+  ENABLE_GITHUB_READ=false yarn algolia
   sedi 's/  "type": "module",/  "type": "commonjs",/' package.json
+  echo "Done building feed and algolia index..."
 fi
 
 if [[ ${ARGS[*]} =~ 'next' ]]; then
-  yarn next build
+  echo "Building Next.js..."
+  ENABLE_GITHUB_READ=false yarn next build
+  echo "Done building Next.js..."
 fi
 
 if [[ ${ARGS[*]} =~ 'public' ]]; then
+  echo "Building public..."
   # compress public JS files
   shopt -s nullglob
   FILES="./public/*.js"
@@ -29,4 +34,5 @@ if [[ ${ARGS[*]} =~ 'public' ]]; then
       yarn terser --config-file terser.config.json -o $NAME $f
     fi
   done
+  echo "Done building public..."
 fi

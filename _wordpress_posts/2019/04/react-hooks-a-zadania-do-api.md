@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/04/aquarium-aquatic-blue-137612.jpg
+    /public/assets/wp-content/uploads/2019/04/aquarium-aquatic-blue-137612.jpg
   width: 1920
   height: 888
 categories:

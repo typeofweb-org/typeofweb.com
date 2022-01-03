@@ -62,7 +62,7 @@ dS = dO \sqrt{\frac{K^2}{2KO}} \\\\
 dS = \sqrt{\frac{K}{2O}}\ dO \\\\
 $$
 
-Przyjmijmy teraz ten sam okres czasu $dO$ postrzegany w dwóch różnych momentach życia $O_1$ i $O_2$ i znajdźmy proporcję pomiędzy relatywnym postrzeganiem :
+Przyjmijmy teraz ten sam okres czasu $dO$ postrzegany w dwóch różnych momentach życia $O_1$ i $O_2$ i znajdźmy proporcję pomiędzy relatywnym postrzeganiem:
 
 $$
 dS = \sqrt{\frac{K}{2O}} dO \\\\

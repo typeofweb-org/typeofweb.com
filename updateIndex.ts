@@ -1,9 +1,10 @@
 import Fs from 'fs/promises';
 
-import { pathToLegacyPosts, pathToPosts, readFilesInDir, readFrontMatter } from './utils/wordpress';
+import { pathToLegacyPosts, pathToPosts, listFilesInDir } from './utils/fs';
+import { readFrontMatter } from './utils/posts';
 
 async function run() {
-  const paths = [...(await readFilesInDir(pathToPosts)), ...(await readFilesInDir(pathToLegacyPosts))];
+  const paths = [...(await listFilesInDir(pathToPosts)), ...(await listFilesInDir(pathToLegacyPosts))];
   const files = await Promise.all(paths.map(async (path) => ({ file: await Fs.readFile(path, 'utf-8'), path })));
 
   const posts = files

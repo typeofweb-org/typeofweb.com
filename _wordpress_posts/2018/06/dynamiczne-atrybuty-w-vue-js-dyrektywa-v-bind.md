@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/blur-book-business-273016.jpg
+    /public/assets/wp-content/uploads/2018/04/blur-book-business-273016.jpg
   width: 4928
   height: 3264
 categories:

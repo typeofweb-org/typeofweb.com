@@ -33,7 +33,7 @@ export const CodepenWidget = memo<CodepenWidgetProps>(
         (window as unknown as { readonly __CPEmbed: (selector: string) => void }).__CPEmbed(`#${uniqueId.current}`);
       } else {
         const script = document.createElement('script');
-        script.src = `https://static.codepen.io/assets/embed/ei.js`;
+        script.src = `https://static.codepen.io/public/assets/embed/ei.js`;
         script.async = true;
         script.defer = true;
         script.onload = () => onMount(el);

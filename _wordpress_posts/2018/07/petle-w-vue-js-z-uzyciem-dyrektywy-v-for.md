@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/audience-auditorium-bleachers-391535.jpg
+    /public/assets/wp-content/uploads/2018/04/audience-auditorium-bleachers-391535.jpg
   width: 5472
   height: 3648
 categories:

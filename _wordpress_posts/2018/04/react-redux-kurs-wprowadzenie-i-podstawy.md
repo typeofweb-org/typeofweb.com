@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/03/redux-kurs-typeofweb.png
+  url: /public/assets/wp-content/uploads/2018/03/redux-kurs-typeofweb.png
   width: 887
   height: 400
 categories:
@@ -41,7 +41,7 @@ Redux: Oto wpis, na który wszyscy czekali! :) Nie będzie teorii. Od razu zaczn
 
 Jeśli jednak interesuje Cię teoria stojąca za Flux i Redux znajdziesz ją w innym moim wpisie:
 
-https://typeofweb.com/flux-i-redux/
+https://typeofweb.com/flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych/
 
 Na pewno warto przeczytać o wzorcach projektowych stojących za Reduksem! Warto też zajrzeć do <a href="https://redux.js.org">dokumentacji Redux</a>.
 

@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/og2018.jpg
+  url: /public/assets/wp-content/uploads/2018/04/og2018.jpg
   width: 1020
   height: 668
 categories:
@@ -36,7 +36,7 @@ Do Amsterdamu przyleciałem dzień wcześniej, z nadzieją na jakieś zwiedzanie
 
 Następnego dnia rano poszliśmy w kierunku dworca w Amsterdamie — tam **czekał na nas statek** (!), który zabrał nas do północnej części Amsterdamu gdzie odbywała się konferencja. Własny statek? Z flagą React.Amsterdam? NICE.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/IMG_0186.jpg"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/04/IMG_0186-768x1024.jpg" alt="Flaga React.Amsterdam" width="768" height="1024" class="aligncenter size-large wp-image-1441" /></a>
+<a href="/public/assets/wp-content/uploads/2018/04/IMG_0186.jpg"><img src="/public/assets/wp-content/uploads/2018/04/IMG_0186-768x1024.jpg" alt="Flaga React.Amsterdam" width="768" height="1024" class="aligncenter size-large wp-image-1441" /></a>
 
 **Statek: 10/10**
 

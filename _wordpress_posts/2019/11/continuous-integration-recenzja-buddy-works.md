@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/10/continuous-integration-recenzja-buddy-works.png
+    /public/assets/wp-content/uploads/2019/10/continuous-integration-recenzja-buddy-works.png
   width: 1688
   height: 780
 categories:
@@ -39,7 +39,7 @@ Przez ostatnie kilka lat pracy w branży poznałem wiele różnych narzędzi do 
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 
-<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_review&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
+<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_review&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="/public/assets/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
 
 ## Co to jest Buddy?
 
@@ -77,7 +77,7 @@ Dodatkowo, w moich projektach często uruchamiam testy e2e albo integracyjne kor
 Co istotne, Buddy zawiera w sobie całe mnóstwo **predefiniowanych akcji**, z których możesz skorzystać. Node? Gatsby? Ruby? .NET? Golang? Elixir? Cypress? Nie ma sprawy. Mamy na to predefiniowane ustawienia. Potrzebujesz zrobić _deploy_ po SSH albo na zwykły FTP? Gotowe. Automatyczne [generowanie aplikacji React na GitHub Pages](https://typeofweb.com/react-js-na-github-pages-dzieki-create-react-app/) po commicie? Jedno kliknięcie. Deploy na produkcję, jak w prawdziwym Continuous Delivery? Jasne. Chcesz wysłać maila albo SMSa po zakończeniu builda? To też jest. Powiadomienia na Slacku i Discordzie również. W najprostszym wypadku stworzenie całego procesu to tylko kilka kliknięć.
 
 <figure id="attachment_2256" align="aligncenter" width="300">
-  <a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/app.buddy_.works_mmiszy_typeofweb-discord-bot_pipelines_pipeline_220473_action_addiPad-Pro.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/Screenshot-2019-11-04-at-14.38.18-300x286.png" alt="Wybrane akcje Continuous Integration w Buddy.works" width="300" height="286" class="size-medium wp-image-2256" /></a>
+  <a href="/public/assets/wp-content/uploads/2019/11/app.buddy_.works_mmiszy_typeofweb-discord-bot_pipelines_pipeline_220473_action_addiPad-Pro.png"><img src="/public/assets/wp-content/uploads/2019/11/Screenshot-2019-11-04-at-14.38.18-300x286.png" alt="Wybrane akcje Continuous Integration w Buddy.works" width="300" height="286" class="size-medium wp-image-2256" /></a>
   <figcaption>
     Lista akcji w Buddy.works jest dłuuuuga (kliknij aby zobaczyć pełną listę)
   </figcaption>
@@ -91,7 +91,7 @@ Gdyby to wszystko było za mało, to Buddy pozwala na użycie całkowicie dowoln
 
 Przykładowo, pracuję teraz nad małym ebookiem i stworzyłem sobie _workflow_ oparty o Dockera, który po każdym commicie ze zmianami w książce buduje mój obraz dockerowy, generuje PDF, epub i mobi oraz publikuje te pliki jako release na GitHubie. W konfiguracji tego procesu najbardziej skomplikowane paradoksalnie było publikowanie release'ów na GitHubie (ale pomoc techniczna Buddy twierdzi, że pracują nad dodaniem gotowej akcji do tego, więc nie trzeba będzie już walczyć z API GitHuba). Pozostałe kroki to pestka!
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/Screenshot-2019-11-05-at-15.59.52.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/Screenshot-2019-11-05-at-15.59.52-1024x706.png" alt="Przykładowy proces w Buddy. Automatyczna budowa PDF po wykonaniu push do repozytorium. Budowany jest obraz dockera, następnie tworzona nowa wersja, generowany PDF i wynik wrzucany jest na GitHuba jako nowy release." width="1024" height="706" class="aligncenter size-large wp-image-2260" /></a>
+<a href="/public/assets/wp-content/uploads/2019/11/Screenshot-2019-11-05-at-15.59.52.png"><img src="/public/assets/wp-content/uploads/2019/11/Screenshot-2019-11-05-at-15.59.52-1024x706.png" alt="Przykładowy proces w Buddy. Automatyczna budowa PDF po wykonaniu push do repozytorium. Budowany jest obraz dockera, następnie tworzona nowa wersja, generowany PDF i wynik wrzucany jest na GitHuba jako nowy release." width="1024" height="706" class="aligncenter size-large wp-image-2260" /></a>
 
 ## Buddy jest darmowym Continuous Integration nie tylko dla Open Source
 

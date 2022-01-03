@@ -64,6 +64,7 @@ export default class MyDocument extends Document {
           />
 
           <meta name="format-detection" content="telephone=no" />
+          <meta property="fb:pages" content="247171125636885" />
         </Head>
         <body itemScope itemType="http://schema.org/WebPage">
           <Main />

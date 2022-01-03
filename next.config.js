@@ -58,10 +58,10 @@ const config = withBundleAnalyzer(
 );
 
 config.images = {
-  loader: 'custom',
-  domains: ['v2.typeofweb.com', 'typeofweb.com', 'secure.gravatar.com', 'res.cloudinary.com'],
+  domains: ['v2.typeofweb.com', 'typeofweb.com', 'secure.gravatar.com', 'res.cloudinary.com', 'i.ytimg.com'],
   deviceSizes: [320, 768, 1024, 1280, 1536],
   imageSizes: [640, 1280, 1536],
+  formats: ['image/avif', 'image/webp'],
 };
 
 config.excludeDefaultMomentLocales = true;
@@ -74,16 +74,19 @@ config.compress = true;
 config.productionBrowserSourceMaps = true;
 config.generateEtags = true;
 config.poweredByHeader = false;
+config.esmExternals = true;
+config.swcMinify = true;
+config.urlImports = ['https://cdn.skypack.dev'];
 
 // config.experimental.optimizeCss = true;
 config.experimental.optimizeImages = true;
 config.experimental.workerThreads = true;
 config.experimental.scrollRestoration = true;
-config.experimental.esmExternals = true;
 config.experimental.gzipSize = true;
-// config.experimental.swcMinify = true;
-// config.experimental.swcLoader = true;
 // config.experimental.concurrentFeatures = true;
+
+// @todo https://github.com/getsentry/sentry-javascript/issues/4103
+config.outputFileTracing = false;
 
 const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com';
 const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
@@ -163,11 +166,19 @@ config.rewrites = () => {
     { source: '/config.yml', destination: '/api/admin-config.yml' },
     {
       source: '/wp-content/uploads/:slug(.+)',
-      destination: 'https://res.cloudinary.com/type-of-web/wp-content/uploads/:slug',
+      destination: '/assets/wp-content/uploads/:slug',
     },
     {
       source: '/content/images/:slug(.+)',
-      destination: 'https://res.cloudinary.com/type-of-web/content/images/:slug',
+      destination: '/assets/content/images/:slug',
+    },
+    {
+      source: '/js/script.js',
+      destination: 'https://plausible.io/js/plausible.outbound-links.js',
+    },
+    {
+      source: '/api/event',
+      destination: 'https://plausible.io/api/event',
     },
   ]);
 };

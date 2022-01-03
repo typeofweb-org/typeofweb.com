@@ -7,20 +7,15 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}',
-      './hooks/**/*.{js,ts,jsx,tsx}',
-      './public/**/*.{js,ts,jsx,tsx}',
-      './images/**/*.{js,ts,jsx,tsx}',
-      './utils/**/*.{js,ts,jsx,tsx}',
-      './*.{js,ts,jsx,tsx}',
-    ],
-    options: { keyframes: true, fontFace: true, variables: true },
-  },
-  mode: 'jit',
-  darkMode: 'media',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './hooks/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.{js,ts,jsx,tsx}',
+    './images/**/*.{js,ts,jsx,tsx}',
+    './utils/**/*.{js,ts,jsx,tsx}',
+    './*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontFamily: {
       sans: ['Fira Sans', 'typeofweb-fallback-sans', 'Arial', 'Helvetica', 'sans-serif'],
@@ -38,9 +33,26 @@ module.exports = {
         'monospace',
       ],
     },
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      // '5xl': '3rem',
+      '5xl': '2.625rem',
+      '6xl': '3.75rem',
+      '7xl': '4.5rem',
+      '8xl': '6rem',
+      '9xl': '8rem',
+    },
     colors: {
       white: '#FFFFFF',
       transparent: 'transparent',
+      current: 'currentColor',
       green: {
         100: '#CCFFE2',
         200: '#9DF0C1',
@@ -78,7 +90,8 @@ module.exports = {
       },
 
       gray: {
-        100: '#FAFAFA',
+        100: '#FEFEFE',
+        // 100: '#FAFAFA',
         200: '#F0F0F0',
         300: '#BABABA',
         400: '#A1A1A1',

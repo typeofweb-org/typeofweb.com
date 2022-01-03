@@ -2,7 +2,7 @@
 import { imageConfigDefault } from 'next/dist/server/image-config';
 
 import type { ImageConfig } from 'next/dist/server/image-config';
-import type { ImageLoader } from 'next/image';
+import type { ImageLoader, ImageLoaderProps } from 'next/image';
 
 const { path: root, domains: configDomains } =
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- hack
@@ -11,15 +11,15 @@ const { path: root, domains: configDomains } =
 const normalizeSrc = (src: string) => (src[0] === '/' ? src.slice(1) : src);
 
 /**
- * @see https://github.com/vercel/next.js/blob/12eb812243cfc8e1fc261f794c2b37fa036520b9/packages/next/client/image.tsx#L697-L750
+ * @see https://github.com/vercel/next.js/blob/ae1cee59d600b23b6827bffefdcabd9c6605ccf7/packages/next/client/image.tsx#L778-L831
  */
-const defaultLoader: ImageLoader = ({ src, width, quality }) => {
+function defaultLoader({ src, width, quality }: ImageLoaderProps): string {
   return `${root}?url=${encodeURIComponent(src)}&w=${width}&q=${quality || 75}`;
-};
+}
 
-const CLOUDINARY_BASE_UPLOAD = 'https://res.cloudinary.com/type-of-web/image/upload/';
-const CLOUDINARY_BASE_FETCH = 'https://res.cloudinary.com/type-of-web/image/fetch/';
-const CLOUDINARY_BASE_FALLBACK = 'https://res.cloudinary.com/type-of-web/';
+const CLOUDINARY_BASE_UPLOAD = '/public/assets/image/upload/';
+const CLOUDINARY_BASE_FETCH = '/public/assets/image/fetch/';
+const CLOUDINARY_BASE_FALLBACK = '/public/assets/';
 const cloudinaryLoader =
   (base: string): ImageLoader =>
   ({ src, width, quality }) => {
@@ -135,5 +135,7 @@ export const typeofwebImageLoader: ImageLoader = ({ src, width, quality }) => {
     });
   }
 
-  return defaultLoader({ src, width, quality });
+  // @todo
+  // return defaultLoader({ src, width, quality });
+  return src;
 };

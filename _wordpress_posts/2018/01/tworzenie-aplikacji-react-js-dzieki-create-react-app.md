@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/pexels-photo-281260.jpeg
+  url: /public/assets/wp-content/uploads/2018/01/pexels-photo-281260.jpeg
   width: 1920
   height: 1271
 categories:
@@ -61,7 +61,7 @@ Hej, to nie było takie straszne, prawda? Wydaje się nawet całkiem… proste? 
 
 Wpisz więc <code>npm start</code>. Uruchamia się serwer i automatycznie otwiera się http://localhost:3000 w przeglądarce. Powinnaś/powinieneś widzieć taki ekran:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.16.50-PM.png"><img class="aligncenter size-full wp-image-942" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.16.50-PM.png" alt="create-react-app starter" width="974" height="664" /></a>
+<a href="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.16.50-PM.png"><img class="aligncenter size-full wp-image-942" src="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.16.50-PM.png" alt="create-react-app starter" width="974" height="664" /></a>
 
 Jeśli to widzisz — wszystko poszło zgodnie z planem :)
 
@@ -71,11 +71,11 @@ Spójrz na widoczny komunikat — możesz już zacząć edytować plik <code>src
 
 Spróbuj edytować <code>App.js</code> i zrób jakiś błąd. Nie wiem, jakikolwiek, np. zamiast <code>&lt;div</code> napisz <code>&lt;&lt;div</code> i zapisz plik. Spójrz do przeglądarki:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.45.10-PM.png"><img class="aligncenter size-full wp-image-954" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.45.10-PM.png" alt="create-react-app error" width="910" height="546" /></a>
+<a href="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.45.10-PM.png"><img class="aligncenter size-full wp-image-954" src="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.45.10-PM.png" alt="create-react-app error" width="910" height="546" /></a>
 
 A teraz spójrz do konsoli:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.46.07-PM.png"><img class="aligncenter size-large wp-image-955" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.46.07-PM-1024x445.png" alt="create-react-app error" width="1024" height="445" /></a>
+<a href="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.46.07-PM.png"><img class="aligncenter size-large wp-image-955" src="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-5.46.07-PM-1024x445.png" alt="create-react-app error" width="1024" height="445" /></a>
 
 <code>create-react-app</code> automatycznie informuje Cię o wszystkich błędach składniowych — zarówno w przeglądarce, jak i w konsoli. <strong>Błędy są bardzo czytelnie oznaczone i konkretnie widać co jest do poprawy.</strong>
 
@@ -83,7 +83,7 @@ A teraz spójrz do konsoli:
 
 Uruchom <code>npm test</code>. Zobaczysz taki rezultat:
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.39.13-PM.png"><img class="aligncenter size-full wp-image-944" src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.39.13-PM.png" alt="create-react-app test" width="830" height="340" /></a>
+<a href="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.39.13-PM.png"><img class="aligncenter size-full wp-image-944" src="/public/assets/wp-content/uploads/2018/01/Screen-Shot-2018-01-10-at-4.39.13-PM.png" alt="create-react-app test" width="830" height="340" /></a>
 
 W folderze z aplikacją jest plik <code>App.test.js</code>. Zawiera jeden test. Ten test sprawdza czy komponent renderuje się prawidłowo — i jak widzisz, działa :) <strong>W jednym z kolejnych wpisów przyjrzę się bliżej testowaniu komponentów Reactowych</strong> z użyciem <code>enzyme</code>, którego na razie tutaj brakuje.
 

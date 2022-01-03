@@ -153,10 +153,11 @@
     line-height: 1.5;
   }
   .prose figure figcaption {
-    color: #8a8a8a;
+    color: theme('colors.gray.600');
     font-size: 0.875em;
     line-height: 1.4285714;
     margin-top: 0.8571429em;
+    text-align: center;
   }
   .prose code {
     color: theme('colors.gray.900');
@@ -252,12 +253,21 @@
   .prose img,
   .prose .img,
   .prose video {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    @apply mx-auto my-8;
   }
   .prose img,
   .prose .img {
     @apply hover:shadow-md shadow-sm transition-shadow;
+
+    &.aligncenter {
+      @apply mx-auto;
+    }
+    &.alignleft {
+      @apply float-left mr-5;
+    }
+    &.alignright {
+      @apply float-right ml-5;
+    }
   }
   .prose .newsletter-form {
     @apply -mx-6 mt-8 bg-white border sm:mx-auto;
@@ -300,8 +310,8 @@
   .prose h2 + *,
   .prose h3 + *,
   .prose h4 + *,
-  .prose > :first-child,
-  .prose > div:first-child > :first-of-type {
+  .prose > :first-child {
+    /* .prose > div:first-child > :first-of-type { */
     margin-top: 0;
   }
   .prose thead th:first-child,
@@ -366,7 +376,7 @@
         @apply mb-0;
       }
       & figcaption p {
-        @apply indent-0 text-center text-gray-700 text-sm;
+        @apply indent-0 text-center text-sm;
       }
     }
   }

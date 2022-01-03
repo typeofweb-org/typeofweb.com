@@ -2,23 +2,18 @@ import Fs from 'fs/promises';
 import Path from 'path';
 import Url from 'url';
 
+import Bluebird from 'bluebird';
 import { Feed } from 'feed';
 
+import AuthorsJson from './authors.json';
 import { siteName, defaultDescription } from './constants';
 import { postToProps } from './utils/postToProps';
-import { readAllPosts } from './utils/wordpress';
+import { readAllPosts } from './utils/posts';
 
 async function generateFeed() {
   const publicUrl = `https://${process.env.NEXT_PUBLIC_HOST ?? process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
-  const { posts: allPosts } = await readAllPosts({ includePages: false });
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ './authors.json')).default.authors;
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: false })))).map(
-    (p) => ({
-      ...p,
-      content: '',
-    }),
-  );
+  const { posts: allPosts } = await readAllPosts({ includePages: false, includeCommentsCount: false });
 
   const feed = new Feed({
     title: siteName,
@@ -29,7 +24,7 @@ async function generateFeed() {
     image: `${publicUrl}/apple-touch-icon.png`,
     favicon: `${publicUrl}/favicon.ico`,
     copyright: 'Type of Web',
-    updated: new Date(posts[0]?.frontmatter.date ?? 0),
+    updated: new Date(),
     generator: siteName,
     feedLinks: {
       rss: `${publicUrl}/feed`,
@@ -40,17 +35,28 @@ async function generateFeed() {
     },
   });
 
-  posts.forEach((post) => {
+  await Bluebird.map(
+    allPosts,
+    async (post) => {
+      return postToProps(post, AuthorsJson.authors, {
+        onlyExcerpt: true,
+        parseOembed: false,
+        includeCommentsCount: false,
+        includePlaiceholder: false,
+      });
+    },
+    { concurrency: 10 },
+  ).mapSeries((result) => {
     feed.addItem({
-      title: post.frontmatter.title,
-      description: post.excerpt || undefined,
-      author: post.frontmatter.authors.map((a) => ({
+      title: result.frontmatter.title,
+      description: result.excerpt || undefined,
+      author: result.frontmatter.authors.map((a) => ({
         name: a.displayName,
-        link: a.website || a.facebook || a.linkedin || a.twitter || a.github || a.youtube || a.instagram || undefined,
+        // link: a.website || a.facebook || a.linkedin || a.twitter || a.github || a.youtube || a.instagram || undefined,
       })),
-      link: `${publicUrl}/${post.frontmatter.permalink}`,
-      date: new Date(post.frontmatter.date ?? 0),
-      id: post.frontmatter.permalink,
+      link: `${publicUrl}/${result.frontmatter.permalink}`,
+      date: new Date(result.frontmatter.date ?? 0),
+      id: result.frontmatter.permalink,
     });
   });
 
@@ -58,7 +64,9 @@ async function generateFeed() {
 }
 
 async function run() {
+  console.log('generateFeed');
   const feed = await generateFeed();
+
   await Fs.writeFile(
     Path.resolve(Path.dirname(Url.fileURLToPath(import.meta.url)), 'public', 'feed.xml'),
     feed.rss2(),

@@ -24,7 +24,7 @@ seo: {}
 
 <p>Powróćmy do projektu aplikacji z tamtego wpisu. Jest to lista kontaktów podzielona na komponenty:</p>
 
-<p><img src="https://res.cloudinary.com/type-of-web/content/images/2016/05/komponenty-angularjs-projekt-aplikacji-2.png" alt="Koncept aplikacji" /></p>
+<p><img src="/public/assets/content/images/2016/05/komponenty-angularjs-projekt-aplikacji-2.png" alt="Koncept aplikacji" /></p>
 
 <p>Zacznijmy budowanie aplikacji od stworzenia potrzebnych komponentów przy pomocy Angular CLI. Główny komponent aplikacji już istnieje (domyślnie stworzony przez <code>ng new {NAZWA PROJEKTU}</code>), wystarczy więc dodać <code>contacts-list</code>, <code>contact-item</code> i <code>gravatar</code>. Do tego również można wykorzystać Angular CLI:</p>
 
@@ -213,4 +213,4 @@ export class AppComponent {
 
 <h1 id="podsumowanie">Podsumowanie</h1>
 
-<p>W tym artykule opisałem kilka istotnych elementów tworzenia aplikacji w Angular 2. Po pierwsze nowe komendy Angular CLI: <code>ng generate …</code>. Ponadto omówiłem sposoby implementacji wejścia i wyjścia do komponentów, wstrzykiwanie zależności oraz tworzenie pośredniczących serwisów. W kolejnej części dokończę projekt listy zadań w Angular 2 i omówię komunikację pomiędzy komponentami z wykorzystaniem Reduksa. Aby oswoić się z samymi konceptami Reduksa, polecam mój wpis <a href="https://typeofweb.com/flux-i-redux/">Flux i Redux</a>. Zachęcam do komentowania!</p>
+<p>W tym artykule opisałem kilka istotnych elementów tworzenia aplikacji w Angular 2. Po pierwsze nowe komendy Angular CLI: <code>ng generate …</code>. Ponadto omówiłem sposoby implementacji wejścia i wyjścia do komponentów, wstrzykiwanie zależności oraz tworzenie pośredniczących serwisów. W kolejnej części dokończę projekt listy zadań w Angular 2 i omówię komunikację pomiędzy komponentami z wykorzystaniem Reduksa. Aby oswoić się z samymi konceptami Reduksa, polecam mój wpis <a href="https://typeofweb.com/flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych/">Flux i Redux</a>. Zachęcam do komentowania!</p>

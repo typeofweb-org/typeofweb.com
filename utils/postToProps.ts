@@ -3,11 +3,11 @@ import { getPlaiceholder } from 'plaiceholder';
 import { pageSize } from '../constants';
 
 import { categoriesToMainCategory, categorySlugToCategory } from './categories';
+import { getExcerptAndContent, readAllPosts } from './posts';
 import { allSeries, findCurrentSeriesIndex } from './series';
-import { getExcerptAndContent, readAllPosts } from './wordpress';
 
 import type { PromiseValue, Series, SeriesWithToC } from '../types';
-import type { PostByPermalink } from './wordpress';
+import type { PostByPermalink } from './posts';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 type AuthorJson = typeof import('../authors.json')['authors'][number];
@@ -108,31 +108,79 @@ function findCurrentPostIndex(
   return postsCount - index;
 }
 
+export async function getSeriesLinks({
+  includeCommentsCount,
+  series,
+}: {
+  readonly includeCommentsCount: boolean;
+  readonly series:
+    | string
+    | {
+        readonly slug: string;
+        readonly name: string;
+      };
+}) {
+  return (
+    await readAllPosts({
+      series: typeof series === 'string' ? series : series?.slug,
+      includeCommentsCount: includeCommentsCount,
+    })
+  ).posts
+    .map((p) => ({
+      permalink: p.data.permalink,
+      title: p.data.title,
+    }))
+    .reverse();
+}
+
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  { onlyExcerpt }: { readonly onlyExcerpt: true },
+  options: {
+    readonly onlyExcerpt: true;
+    readonly parseOembed: boolean;
+    readonly includeCommentsCount: boolean;
+    readonly includePlaiceholder: boolean;
+  },
 ): Promise<PostPropsOnlyExcerpt>;
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  { onlyExcerpt }: { readonly onlyExcerpt: false },
+  options: {
+    readonly onlyExcerpt: false;
+    readonly parseOembed: boolean;
+    readonly includeCommentsCount: boolean;
+    readonly includePlaiceholder: boolean;
+  },
 ): Promise<PostProps>;
 export async function postToProps(
   post: Exclude<PostByPermalink, undefined>,
   authorsJson: readonly AuthorJson[],
-  options: { readonly onlyExcerpt: true } | { readonly onlyExcerpt: false } = { onlyExcerpt: false } as const,
+  options:
+    | {
+        readonly onlyExcerpt: true;
+        readonly parseOembed: boolean;
+        readonly includeCommentsCount: boolean;
+        readonly includePlaiceholder: boolean;
+      }
+    | {
+        readonly onlyExcerpt: false;
+        readonly parseOembed: boolean;
+        readonly includeCommentsCount: boolean;
+        readonly includePlaiceholder: boolean;
+      },
 ): Promise<PostPropsOnlyExcerpt | PostProps> {
   // @ts-expect-error seriously, TypeScript, stop doing this
   const contentObj = await getExcerptAndContent(post, options);
 
-  const allPosts = await readAllPosts({ includePages: false });
+  const allPosts = await readAllPosts({ includePages: false, includeCommentsCount: false });
 
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
-  const { base64: blurDataURL = null, img = null } = post.data.thumbnail
-    ? await getPlaiceholder(post.data.thumbnail.url)
-    : {};
+  const { base64: blurDataURL = null, img = null } =
+    options.includePlaiceholder && post.data.thumbnail
+      ? await getPlaiceholder(post.data.thumbnail.url.replace(/^\/public\//, '/'))
+      : {};
 
   const mainCategory =
     'category' in post.data
@@ -142,14 +190,7 @@ export async function postToProps(
       : null;
 
   const seriesLinks = post.data.series
-    ? (
-        await readAllPosts({ series: typeof post.data.series === 'string' ? post.data.series : post.data.series?.slug })
-      ).posts
-        .map((p) => ({
-          permalink: p.data.permalink,
-          title: p.data.title,
-        }))
-        .reverse()
+    ? await getSeriesLinks({ series: post.data.series, includeCommentsCount: options.includeCommentsCount })
     : [];
 
   if (options.onlyExcerpt) {
@@ -251,11 +292,21 @@ export async function postToProps(
 }
 
 export async function getMarkdownPostsFor({
-  page = 1,
+  page,
   category,
   series,
-}: { readonly page?: number; readonly category?: string; readonly series?: string } = {}) {
-  const { postsCount, posts } = await readAllPosts({ category, series, skip: (page - 1) * pageSize, limit: pageSize });
+}: {
+  readonly page: number;
+  readonly category?: string;
+  readonly series?: string;
+}) {
+  const { postsCount, posts } = await readAllPosts({
+    category,
+    series,
+    skip: (page - 1) * pageSize,
+    limit: pageSize,
+    includeCommentsCount: true,
+  });
 
   return { postsCount, posts, page };
 }

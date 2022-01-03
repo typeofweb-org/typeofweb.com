@@ -18,11 +18,8 @@ interface SeriesTableOfContentsWidgetProps {
 
 export const SeriesTableOfContentsWidget = memo<SeriesTableOfContentsWidgetProps>(({ series }) => {
   const permalink = usePermalink();
-  if (!permalink) {
-    return null;
-  }
 
-  const currentIndex = findCurrentSeriesIndex(permalink, series.links);
+  const currentIndex = permalink ? findCurrentSeriesIndex(permalink, series.links) : -1;
   return (
     <Widget title={`Wpisy z serii ${series.name}:`}>
       <ol className="counter-reset pl-10">

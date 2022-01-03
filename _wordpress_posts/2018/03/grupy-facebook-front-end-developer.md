@@ -9,7 +9,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/03/grupy-facebook-front-end.jpeg
+    /public/assets/wp-content/uploads/2018/03/grupy-facebook-front-end.jpeg
   width: 999
   height: 451
 categories:

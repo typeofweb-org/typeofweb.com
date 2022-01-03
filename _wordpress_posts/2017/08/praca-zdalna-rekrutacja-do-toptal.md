@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2017/08/pexels-photo-306533.jpeg
+  url: /public/assets/wp-content/uploads/2017/08/pexels-photo-306533.jpeg
   width: 2861
   height: 1455
 categories:
@@ -32,7 +32,7 @@ https://typeofweb.com/praca-zdalna-obalamy-mity/
 <h1 id="otoptalu">O Toptalu</h1>
 Tym, którzy nie znają – Toptal to firma z USA, prawdopodobnie największa tego typu, jest <strong>pośrednikiem pomiędzy programistami a klientami</strong> z różnych krajów (głównie USA). Toptal, jak sam chwali się na swojej stronie, zrzesza tylko top 3% najlepszych programistów na świecie, co bez wnikania w szczegóły można zrozumieć dość opacznie – ale o tym więcej za moment.
 
-<img class="aligncenter" src="https://res.cloudinary.com/type-of-web/content/images/2017/08/logo-ef4e3458c482141a5c668b5b0ef49a21.png" alt="Toptal logo" width="300" />
+<img class="aligncenter" src="/public/assets/content/images/2017/08/logo-ef4e3458c482141a5c668b5b0ef49a21.png" alt="Toptal logo" width="300" />
 <h1 id="rekrutacjadotoptala">Rekrutacja do Toptala</h1>
 Współpraca z Toptalem zaczyna się oczywiście od rekrutacji. I poświęcam temu obszerny akapit dlatego, że <strong>rekrutacja do Toptala jest długa, skomplikowana i męcząca</strong>.
 
@@ -95,7 +95,7 @@ Jestem pewien, że w głowach wielu z Was pojawiła się myśl: Przy możliwośc
 
 Na przykład wspomniany <a href="http://x-team.com">X-Team</a>, gdzie teraz pracuję, albo <a href="https://upstack.co">Upstack</a>, z którym kiedyś rozmawiałem. Trzeba tylko umieć takie firmy znaleźć! Bardzo dużo ofert pracy zdalnej można zobaczyć na różnego rodzaju portalach. Rodzimy rynek z wysokimi stawkami można obserwować na stworzonej przeze mnie <strong>grupie na Facebooku: <a href="https://www.facebook.com/groups/280382479112568/">Praca dla Programistów - powyżej 20000zł</a>.</strong> Zachęcam do dołączenia – pojawiają się tam już pierwsze oferty zainteresowanych firm (także z Polski!). Jeszcze jedno. Może zabrzmi to banalnie, <strong>ale pamiętaj: pieniądze to nie wszystko.</strong>
 
-https://typeofweb.com/oferty-pracy-zdalnej/
+https://typeofweb.com/znajdz-prace-zdalna-tymi-serwisami/
 
 Ostatecznie <strong>moje doświadczenia Toptalem nie były złe</strong>. Jest to na pewno <strong>świetny pośrednik i szczerze go polecam osobom</strong>, które chcą pracować jako freelancerzy. Jeśli jednak potrzebujesz czegoś więcej — rozbudowanej kultury firmy, inicjatyw, integracji, czy choćby motywacji do uprawiania sportu — w Toptalu raczej ich nie znajdziesz.
 

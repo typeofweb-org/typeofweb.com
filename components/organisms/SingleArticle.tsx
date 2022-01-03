@@ -68,19 +68,17 @@ export const SingleArticle = memo(
       return (
         <Card
           as="article"
-          roundAllCorners={true}
-          moreSpace={true}
           ref={ref}
           className={`${isMdx ? '__mdx' : '__html'}`}
           itemScope
           itemProp="mainEntity"
           itemType="http://schema.org/Article"
         >
-          <header className="bg-gray-200">
-            <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-6 ${cover ? 'pt-0' : 'mb-6'}`}>
-              <ArticleTitle title={title} index={index} href={href} level={1} />
+          <header>
+            <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 pt-8`}>
+              <ArticleTitle title={title} href={href} level={1} />
               {excerpt && (
-                <div className="prose mt-4 pb-2">
+                <div className="prose mt-8 pb-2">
                   <p className="lead">{excerpt}</p>
                 </div>
               )}
@@ -93,9 +91,8 @@ export const SingleArticle = memo(
                 permalink={permalink}
                 size="small"
               />
+              {cover && <ArticleCoverImage cover={cover} />}
             </div>
-
-            {cover && <ArticleCoverImage cover={cover} wide={true} />}
           </header>
           <div itemProp="articleBody" className="prose lg:prose-xl mx-auto pb-2 px-7 sm:px-8 lg:px-12">
             {content}
@@ -104,10 +101,7 @@ export const SingleArticle = memo(
           <GitHubEditLink filePath={filePath} />
           <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
             <span itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-              <meta
-                itemProp="url"
-                content="https://res.cloudinary.com/type-of-web/wp-content/uploads/2020/04/logo_kwadrat11.png"
-              />
+              <meta itemProp="url" content="/public/assets/wp-content/uploads/2020/04/logo_kwadrat11.png" />
             </span>
             <meta itemProp="name" content="Type of Web" />
           </span>

@@ -25,20 +25,13 @@ interface ArticleSneakPeekProps {
 }
 
 export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
-  ({ cover, index, title, authors, mainCategory, permalink, series, excerpt, commentsCount }) => {
+  ({ cover, title, authors, mainCategory, permalink, series, excerpt, commentsCount }) => {
     const href = getUrlForPermalink(permalink);
     return (
-      <Card as="article" itemScope itemType="http://schema.org/BlogPosting" roundAllCorners={!cover} moreSpace={!cover}>
-        <header className="bg-gray-200">
-          {cover && (
-            <Link href={href}>
-              <a tabIndex={-1} aria-hidden="true">
-                <ArticleCoverImage cover={cover} wide={false} />
-              </a>
-            </Link>
-          )}
-          <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 ${cover ? 'pt-6' : ''}`}>
-            <ArticleTitle title={title} index={index} href={href} level={2} />
+      <Card as="article" itemScope itemType="http://schema.org/BlogPosting">
+        <header>
+          <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 py-4`}>
+            <ArticleTitle title={title} href={href} level={2} />
             <ArticleMeta
               series={series}
               authors={authors}
@@ -47,9 +40,16 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
               permalink={permalink}
               size="small"
             />
+            {cover && (
+              <Link href={href}>
+                <a tabIndex={-1} aria-hidden="true" className="block">
+                  <ArticleCoverImage cover={cover} />
+                </a>
+              </Link>
+            )}
           </div>
         </header>
-        <div className="pb-2 px-7 text-gray-700 font-serif text-lg sm:px-8 lg:px-12">
+        <div className="pb-12 px-7 text-gray-700 font-serif text-lg border-b-2 sm:px-8 lg:px-12">
           <p className="!indent-0">
             {excerpt}{' '}
             <span className="ml-2">

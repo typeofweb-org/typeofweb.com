@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2018/02/pexels-photo-332835.jpeg
+  url: /public/assets/wp-content/uploads/2018/02/pexels-photo-332835.jpeg
   width: 1920
   height: 1040
 categories:

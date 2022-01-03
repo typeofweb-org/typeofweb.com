@@ -11,7 +11,7 @@ authors:
 type: post
 thumbnail:
   url: >-
-    https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/05/blue-blur-bright-1323594.jpg
+    /public/assets/wp-content/uploads/2019/05/blue-blur-bright-1323594.jpg
   width: 1920
   height: 1279
 categories:

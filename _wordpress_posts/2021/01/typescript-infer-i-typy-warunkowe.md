@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/image/upload/v1630769313/api_rwusft.png
+  url: /public/assets/api_rwusft.png
   width: 1920
   height: 1005
 categories:
@@ -40,7 +40,7 @@ function getEntityData<U>(x: U) {
 }
 ```
 
-Typ `id` nie może być w tym miejscu jednoznacznie ustalony, gdyż zależy on od `x`, a więc od parametru generycznego `U` i dlatego kompilator jeszce nie wie, czy będzie to `string`, czy `number`. Czy to oznacza, że nasz `result` ma nieznany typ? Ależ skąd! Jest nim `U extends User ? string : number`. Pojawia się pytanie, co z nim możemy zrobić.
+Typ `id` nie może być w tym miejscu jednoznacznie ustalony, gdyż zależy on od `x`, a więc od parametru generycznego `U` i dlatego kompilator jeszcze nie wie, czy będzie to `string`, czy `number`. Czy to oznacza, że nasz `result` ma nieznany typ? Ależ skąd! Jest nim `U extends User ? string : number`. Pojawia się pytanie, co z nim możemy zrobić.
 
 ## Kompatybilność typów warunkowych
 

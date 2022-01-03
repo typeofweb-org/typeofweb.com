@@ -1,7 +1,9 @@
 # typeofweb.com (beta)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCR4qSQa8JFh6zeR5Idvnewg?label=YouTube&style=social)](https://youtube.com/c/typeofweb)
@@ -56,6 +58,7 @@ Ogromne podziękowania dla ([emoji key](https://allcontributors.org/docs/en/emoj
   <tr>
     <td align="center"><a href="https://github.com/wisnie"><img src="https://avatars.githubusercontent.com/u/47081011?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Bartłomiej Wiśniewski</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3Awisnie" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/adcichowski"><img src="https://avatars.githubusercontent.com/u/71249791?v=4?s=60" width="60px;" alt=""/><br /><sub><b>adcichowski</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3Aadcichowski" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/Eghizio"><img src="https://avatars.githubusercontent.com/u/32049761?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jakub Wąsik</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3AEghizio" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

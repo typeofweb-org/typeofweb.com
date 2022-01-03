@@ -8,7 +8,7 @@ authors:
   - michal-miszczyszyn
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/cover_facebook3-1.png
+  url: /public/assets/wp-content/uploads/2019/11/cover_facebook3-1.png
   width: 1688
   height: 780
 categories:
@@ -36,7 +36,7 @@ Jednym z najbardziej potrzebnych elementów tworzenia niezawodnych aplikacji jes
 
 Poniższy artykuł powstał we współpracy z Buddy.works.
 
-<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs1&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
+<a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs1&utm_content=logo" target="_blank" rel="noopener noreferrer"><img src="/public/assets/wp-content/uploads/2019/10/logo-blue-300x133.png" alt="Logo Buddy.works" width="300" height="133" class="aligncenter size-medium wp-image-2245" /></a>
 
 ## Testy jednostkowe, testy integracyjne
 
@@ -54,7 +54,7 @@ Dodaję pierwszą akcję typu Node.js i wszystkie pozostałe opcje zostawiam dom
 
 GitHub daje też możliwość wymuszenia tego, aby testy jednostkowe i testy integracyjne przeszły, zanim będzie można zaakceptować pull requesta. Na GitHubie wchodzimy w Settings -> Branches -> Add Rule. Wpisujemy `master`, zaznaczamy „Require status checks to pass before merging” i następnie „buddy/pipeline/Test PRs”. Zapisujemy. Od teraz niemożliwe będzie kliknięcie "merge" pod PR-em, który nie przeszedł testów.
 
-<a href="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/github.com_mmiszy_react-with-observable_settings_branch_protection_rules_1993862-scaled.png"><img src="https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/github.com_mmiszy_react-with-observable_settings_branch_protection_rules_1993862-1024x632.png" alt="Konfiguracja branch protection na GitHubie" width="1024" height="632" class="aligncenter size-large wp-image-2319" /></a>
+<a href="/public/assets/wp-content/uploads/2019/11/github.com_mmiszy_react-with-observable_settings_branch_protection_rules_1993862-scaled.png"><img src="/public/assets/wp-content/uploads/2019/11/github.com_mmiszy_react-with-observable_settings_branch_protection_rules_1993862-1024x632.png" alt="Konfiguracja branch protection na GitHubie" width="1024" height="632" class="aligncenter size-large wp-image-2319" /></a>
 
 ## Cypress na Buddy.works
 

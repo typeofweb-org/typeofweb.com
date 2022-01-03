@@ -1,3 +1,4 @@
+import AuthorsJson from '../../authors.json';
 import { MDXComponent } from '../../components/MDXComponent';
 import { Seo } from '../../components/Seo';
 import { NewsletterForm } from '../../components/molecules/NewsletterForm';
@@ -6,7 +7,7 @@ import { TwoColumns } from '../../components/templates/TwoColumns';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import { permalinkIsCategory } from '../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
-import { getAllPermalinks, getPostByPermalink } from '../../utils/wordpress';
+import { getAllPermalinks, getPostByPermalink } from '../../utils/posts';
 import IndexPage from '../index';
 
 import type { InferGetStaticPropsType } from '../../types';
@@ -46,16 +47,23 @@ async function getStaticPropsForCategory(category: string) {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
+  const posts = (
+    await Promise.all(
+      allPosts.map((post) =>
+        postToProps(post, AuthorsJson.authors, {
+          onlyExcerpt: true,
+          parseOembed: false,
+          includeCommentsCount: true,
+          includePlaiceholder: true,
+        }),
+      ),
+    )
+  ).map((p) => ({
+    ...p,
+    content: '',
+  }));
 
-  const posts = (await Promise.all(allPosts.map((post) => postToProps(post, authorsJson, { onlyExcerpt: true })))).map(
-    (p) => ({
-      ...p,
-      content: '',
-    }),
-  );
-
-  return { props: { posts, page, postsCount, permalink: category, pageKind: 'index' as const } };
+  return { props: { posts, page, postsCount, permalink: category, pageKind: 'category' as const } };
 }
 
 async function getStaticPropsForSingleArticle(permalink: string) {
@@ -65,15 +73,24 @@ async function getStaticPropsForSingleArticle(permalink: string) {
     return { notFound: true };
   }
 
-  const authorsJson = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
-  return { props: { ...(await postToProps(post, authorsJson, { onlyExcerpt: false })), pageKind: post.data.type } };
+  return {
+    props: {
+      ...(await postToProps(post, AuthorsJson.authors, {
+        onlyExcerpt: false,
+        parseOembed: true,
+        includeCommentsCount: true,
+        includePlaiceholder: true,
+      })),
+      pageKind: post.data.type,
+    },
+  };
 }
 
 const PermalinkPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { setRunningHeader } = useRunningHeader();
 
-  if (props.pageKind === 'index') {
-    return <IndexPage {...props} />;
+  if (props.pageKind === 'category') {
+    return <IndexPage {...props} videos={null} seriesLinks={null} />;
   }
 
   const { pageKind, excerpt, frontmatter, filePath, ...contentObj } = props;

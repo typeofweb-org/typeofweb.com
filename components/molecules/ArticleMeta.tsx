@@ -4,7 +4,6 @@ import { polishPlurals } from 'polish-plurals';
 import { Fragment, memo } from 'react';
 
 import { getCategoryLink } from '../../utils/categories';
-import { typeofwebImageLoader } from '../../utils/imageLoader';
 import { getSeriesLink } from '../../utils/series';
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 
@@ -38,7 +37,7 @@ export const ArticleMeta = memo<{
   readonly rel?: boolean;
   readonly size: 'small' | 'large';
   readonly series?: Series | null;
-  readonly commentsCount: number;
+  readonly commentsCount?: number;
   readonly permalink: string;
 }>(({ authors, mainCategory, rel, series, permalink, commentsCount, size = 'small' }) => {
   const isSmall = size === 'small';
@@ -61,8 +60,8 @@ export const ArticleMeta = memo<{
           .
         </p>
       )}
-      <div className="mt-2">
-        <div className="flex items-center justify-center">
+      <div className="mt-4">
+        <div className="flex items-center justify-start">
           <div className="flex flex-shrink-0 items-center mr-2">
             {authors.map((author, idx) => (
               <span
@@ -73,7 +72,6 @@ export const ArticleMeta = memo<{
                 style={{ zIndex: authors.length - idx }}
               >
                 <Image
-                  loader={typeofwebImageLoader}
                   src={author.avatarUrl + (isSmall ? `?s=${S * 2}` : `?s=${L * 2}`)}
                   width={isSmall ? S : L}
                   height={isSmall ? S : L}
@@ -102,10 +100,9 @@ export const ArticleMeta = memo<{
                 )}
               </Fragment>
             ))}
-            &#8203;
             {mainCategory && (
               <span
-                className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
+                className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap block sm:inline ${
                   isSmall ? 'text-base' : 'text-lg'
                 }`}
               >
@@ -116,20 +113,21 @@ export const ArticleMeta = memo<{
                 </LinkUnderlineEffect>
               </span>
             )}
-            &#8203;
-            <span
-              className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap ${
-                isSmall ? 'text-base' : 'text-lg'
-              }`}
-            >
-              <LinkUnderlineEffect>
-                <Link href={href + '#comments'}>
-                  <a>
-                    {commentsCount || 'Brak'} {komentarzy(commentsCount)}
-                  </a>
-                </Link>
-              </LinkUnderlineEffect>
-            </span>
+            {typeof commentsCount === 'number' && (
+              <span
+                className={`before:content-['·'] before:mx-2 text-blue-500 before:text-gray-900 whitespace-nowrap block sm:inline ${
+                  isSmall ? 'text-base' : 'text-lg'
+                }`}
+              >
+                <LinkUnderlineEffect>
+                  <Link href={href + '#comments'}>
+                    <a>
+                      {commentsCount || 'Brak'} {komentarzy(commentsCount)}
+                    </a>
+                  </Link>
+                </LinkUnderlineEffect>
+              </span>
+            )}
           </div>
         </div>
       </div>
