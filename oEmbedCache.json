@@ -825,5 +825,23 @@
       "html": "<p>Niedługo wyjeżdżam na zasłużony urlop. Zanim to jednak zrobię, chciałbym podsumować rok 2018 i przybliżyć moje plany na 2019. Zacznijmy od rozliczenia się z obietnic za 2018. Chciałbym, aby nowy rok był nieco inny niż wszystkie poprzednie.</p>"
     },
     "updatedAt": 1638315012280
+  },
+  "https://www.youtube.com/watch?v=LG7-Q3uCYUI": {
+    "data": {
+      "title": "Programistyczny Rozhowor vol. 3 · Programowanie funkcyjne",
+      "author_name": "Type of Web",
+      "author_url": "https://www.youtube.com/c/Typeofweb",
+      "type": "video",
+      "height": 113,
+      "width": 200,
+      "version": "1.0",
+      "provider_name": "YouTube",
+      "provider_url": "https://www.youtube.com/",
+      "thumbnail_height": 360,
+      "thumbnail_width": 480,
+      "thumbnail_url": "https://i.ytimg.com/vi/LG7-Q3uCYUI/hqdefault.jpg",
+      "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/LG7-Q3uCYUI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    "updatedAt": 1641226257616
   }
 }
