@@ -313,6 +313,10 @@ progress {
   height: 100%;
 }
 
+.figure {
+  @apply text-center;
+}
+
 figure.oembed {
   @apply mx-2 pb-8 pt-6 px-6 bg-white rounded-xl hover:shadow-2xl shadow-xl transition-shadow lg:mx-12;
 }

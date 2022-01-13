@@ -3,6 +3,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import { pageSize } from '../constants';
 
 import { categoriesToMainCategory, categorySlugToCategory } from './categories';
+import { getPlaiceholder2 } from './plaiceholder';
 import { getExcerptAndContent, readAllPosts } from './posts';
 import { allSeries, findCurrentSeriesIndex } from './series';
 
@@ -178,9 +179,7 @@ export async function postToProps(
   const authors = post.data.authors.map((slug) => authorsJson.find((author) => author.slug === slug));
 
   const { base64: blurDataURL = null, img = null } =
-    options.includePlaiceholder && post.data.thumbnail
-      ? await getPlaiceholder(post.data.thumbnail.url.replace(/^\/public\//, '/'))
-      : {};
+    options.includePlaiceholder && post.data.thumbnail ? await getPlaiceholder2(post.data.thumbnail) : {};
 
   const mainCategory =
     'category' in post.data

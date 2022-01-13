@@ -8,7 +8,7 @@ authors:
   - paulina-piatek
 type: post
 thumbnail:
-  url: https://res.cloudinary.com/type-of-web/image/fetch/https%3A%2F%2Fog.typeofweb.com%2Fapi%3FoverlayColor%3D291B4A%26overlayOpacity%3D0.60%26text%3D**Wybieramy%2Blicencj%25C4%2599%250Aoprogramowania%2521**%2B%25F0%259F%2591%25A9%25E2%2580%258D%25F0%259F%2592%25BC%26fontSize%3D125%26gap%3D125
+  url: https://og.typeofweb.com/api?overlayColor=291B4A&overlayOpacity=0.60&text=**Wybieramy+licencj%C4%99%0Aoprogramowania%21**+%F0%9F%91%A9%E2%80%8D%F0%9F%92%BC&fontSize=125&gap=125
   width: 1920
   height: 1005
 categories:

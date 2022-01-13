@@ -2,6 +2,8 @@ import { getPlaiceholder } from 'plaiceholder';
 
 import { videoPageSize } from '../constants';
 
+import { getPlaiceholder2 } from './plaiceholder';
+
 export async function getAllYouTubeVideos(): Promise<readonly YouTubePostResponse[]> {
   const playlist = await fetchPlaylist();
 
@@ -28,9 +30,7 @@ export async function getYouTubeVideosFor({ page }: { readonly page: number }): 
   const endIndex = startIndex + videoPageSize;
   return Promise.all(
     videos.slice(startIndex, endIndex).map(async (video) => {
-      const { base64: blurDataURL = null, img = null } = video.thumbnail
-        ? await getPlaiceholder(video.thumbnail.url)
-        : {};
+      const { base64: blurDataURL = null, img = null } = video.thumbnail ? await getPlaiceholder2(video.thumbnail) : {};
 
       return {
         ...video,
