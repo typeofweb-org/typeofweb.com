@@ -12,10 +12,7 @@ export const getPlaiceholder2 = async (
     | undefined,
 ): Promise<{
   readonly base64?: null | undefined | string;
-  readonly img?:
-    | null
-    | undefined
-    | { readonly src: string; readonly width?: number | null | undefined; readonly height?: number | null | undefined };
+  readonly img?: null | undefined | { readonly src: string; readonly width: number; readonly height: number };
 }> => {
   if (!data) {
     return {};
@@ -26,8 +23,8 @@ export const getPlaiceholder2 = async (
     return {
       base64: null,
       img: {
-        height: data.height,
-        width: data.width,
+        height: data.height ?? 320,
+        width: data.width ?? 320,
         src: path,
       },
     };

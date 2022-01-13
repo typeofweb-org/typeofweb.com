@@ -313,7 +313,7 @@ progress {
   height: 100%;
 }
 
-.figure {
+figure {
   @apply text-center;
 }
 
