@@ -28,12 +28,12 @@ export const TwoColumns = memo<
   return (
     <>
       <SiteHeader pageKind={pageKind} />
-      <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-center">
+      <div className="mt-8 flex flex-col items-center lg:flex-row lg:items-start lg:justify-center">
         <main
           itemScope
           itemType="http://schema.org/Blog"
           id="main-content"
-          className="relative flex-1 mt-4 px-2 w-full max-w-3xl lg:pb-20 lg:px-0"
+          className="relative flex-1 px-2 w-full max-w-3xl lg:pb-20 lg:px-0"
         >
           <ShareWidget />
           {children}

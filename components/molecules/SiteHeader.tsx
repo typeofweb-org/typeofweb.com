@@ -4,6 +4,7 @@ import { memo } from 'react';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
 import { isIndex } from '../../utils/pageKind';
+import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
@@ -48,32 +49,19 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
-      {/* <div className="fixed z-10 top-12 flex items-center justify-center px-6 py-1 w-full text-center bg-white">
+      <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2">
         <p>
-          🔴 Live na temat <strong>pracy zdalnej</strong> i mojego <strong>odejścia z X-Teamu</strong>:
-          18.&nbsp;października&nbsp;o&nbsp;12:00! 🕛{' '}
           <LinkUnderlineEffect>
-            <a href="https://www.youtube.com/watch?v=RkbWh4p69Rw" className="ml-2 text-blue-500">
-              YouTube
+            <a href="https://tofw.pl/typeville-blog" className="ml-2  text-blue-500">
+              Konferencja TypeVille
             </a>
-          </LinkUnderlineEffect>
-          &nbsp;|&nbsp;
-          <LinkUnderlineEffect>
-            <a href="https://www.facebook.com/typeofweb/posts/1582489468771704" className="text-blue-500">
-              Facebook
-            </a>
-          </LinkUnderlineEffect>
-          &nbsp;|&nbsp;
-          <LinkUnderlineEffect>
-            <a
-              href="https://www.linkedin.com/feed/update/urn:li:ugcPost:6854343436955385856/"
-              className="text-blue-500"
-            >
-              LinkedIn
-            </a>
-          </LinkUnderlineEffect>
+          </LinkUnderlineEffect>{' '}
+          20-22 kwietnia! Z kodem{' '}
+          <strong>
+            <mark>typeofweb10</mark> 10% rabatu!
+          </strong>
         </p>
-      </div> */}
+      </div>
     </>
   );
 });
