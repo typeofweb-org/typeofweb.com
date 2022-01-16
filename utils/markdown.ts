@@ -21,7 +21,7 @@ import { visit } from 'unist-util-visit';
 
 import { tryCatch } from './fns';
 import { getOEmbed } from './oEmbedCache';
-import { imageToJsx, remarkImgToJsx } from './remark-img-to-jsx';
+import { imageToJsx, remarkHtmlImgToJsx, remarkImgToJsx } from './remark-img-to-jsx';
 
 import type { RootContent } from 'hast';
 import type { Root } from 'hast-util-to-string';
@@ -459,6 +459,7 @@ export const commonRemarkPlugins = [
   RemarkMath,
   RemarkGfm,
   RemarkFootnotes,
+  remarkHtmlImgToJsx,
   imageToJsx,
   remarkImgToJsx,
 ];

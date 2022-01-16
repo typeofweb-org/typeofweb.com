@@ -55,7 +55,9 @@ export function remarkImgToJsx(): import('unified').Transformer {
   return (tree) => {
     visit(
       tree,
-      (node) => node && node.type === 'paragraph' && node.children.some((n) => n.type === 'image'),
+      (node) => {
+        return node && node.type === 'paragraph' && node.children.some((n) => n.type === 'image');
+      },
       (node) => {
         const imageNode = node.children.find((n) => n.type === 'image');
 
@@ -81,6 +83,50 @@ export function remarkImgToJsx(): import('unified').Transformer {
           node.type = 'div';
           node.children = [imageNode];
         }
+      },
+    );
+  };
+}
+
+export function remarkHtmlImgToJsx(): import('unified').Transformer {
+  return (tree) => {
+    visit(
+      tree,
+      (node) => {
+        return node && node.type === 'paragraph' && node.children.flat().some((n) => n.type === 'html');
+      },
+      (node) => {
+        const htmlChildren = node.children.flat().filter((node) => node.type === 'html');
+
+        // fix images
+        htmlChildren.forEach((node) => {
+          const srcMatch = (node.value as string).match(/src="([^"]*)"/);
+          if (!srcMatch) {
+            return;
+          }
+          const src = srcMatch[1];
+
+          // only local files
+          if (Fs.existsSync(`${process.cwd()}${src}`)) {
+            const newSrc = src.replace(/^\/public\//, '/');
+            node.value = node.value.replace(srcMatch[0], `src="${newSrc}"`);
+          }
+        });
+
+        // fix links
+        htmlChildren.forEach((node) => {
+          const hrefMatch = (node.value as string).match(/href="([^"]*)"/);
+          if (!hrefMatch) {
+            return;
+          }
+          const src = hrefMatch[1];
+
+          // only local files
+          if (Fs.existsSync(`${process.cwd()}${src}`)) {
+            const newSrc = src.replace(/^\/public\//, '/');
+            node.value = node.value.replace(hrefMatch[0], `href="${newSrc}"`);
+          }
+        });
       },
     );
   };
