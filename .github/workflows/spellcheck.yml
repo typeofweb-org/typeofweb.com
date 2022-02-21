@@ -7,6 +7,10 @@ on:
 jobs:
   spellcheck:
     runs-on: ubuntu-latest
+    
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
 
     steps:
       - uses: actions/checkout@v2
