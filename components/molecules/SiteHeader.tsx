@@ -49,7 +49,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
-      <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2">
+      {/* <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2">
         <p>
           <LinkUnderlineEffect>
             <a href="https://tofw.pl/typeville-blog" className="ml-2  text-blue-500">
@@ -61,7 +61,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
             <mark>typeofweb10</mark> 10% rabatu!
           </strong>
         </p>
-      </div>
+      </div> */}
     </>
   );
 });

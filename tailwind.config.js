@@ -19,7 +19,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Fira Sans', 'typeofweb-fallback-sans', 'Arial', 'Helvetica', 'sans-serif'],
-      serif: ['Merriweather', 'typeofweb-fallback-serif', 'Times New Roman', 'Times', 'serif'],
+      serif: ['Merriweather', 'typeofweb-fallback-serif', 'Georgia', 'Times New Roman', 'Times', 'serif'],
       mono: [
         'Fira Mono',
         'typeofweb-fallback-mono',
