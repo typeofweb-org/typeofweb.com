@@ -28,7 +28,7 @@ export const TwoColumns = memo<
   return (
     <>
       <SiteHeader pageKind={pageKind} />
-      <div className="mt-8 flex flex-col items-center lg:flex-row lg:items-start lg:justify-center">
+      <div className="mt-16 md:mt-12 flex flex-col items-center lg:flex-row lg:items-start lg:justify-center">
         <main
           itemScope
           itemType="http://schema.org/Blog"

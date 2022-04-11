@@ -4,6 +4,7 @@ import { memo } from 'react';
 import { LatestPostsWidget } from '../molecules/LatestPostsWidget';
 import { SeriesTableOfContentsWidget } from '../molecules/SeriesTableOfContentsWidget';
 import { SocialWidget } from '../molecules/SocialWidget';
+import { PromoWidget } from '../molecules/PromoWidget';
 
 import type { PageKind, SeriesWithToC } from '../../types';
 import type { ComponentType } from 'react';
@@ -27,6 +28,9 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
       <>
         <div className={searchClasses}>
           <SearchWidget />
+        </div>
+        <div className={widgetClasses}>
+          <PromoWidget />
         </div>
         <div className={widgetClasses}>
           <SocialWidget />
@@ -58,6 +62,9 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
           <SearchWidget />
         </div>
         <div className={widgetClasses}>
+          <PromoWidget />
+        </div>
+        <div className={widgetClasses}>
           <SocialWidget />
         </div>
       </>
@@ -68,6 +75,9 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
       <>
         <div className={searchClasses}>
           <SearchWidget />
+        </div>
+        <div className={widgetClasses}>
+          <PromoWidget />
         </div>
         <div className={widgetClasses}>
           <SocialWidget />

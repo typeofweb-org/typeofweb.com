@@ -49,19 +49,16 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
-      {/* <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2">
+      <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2">
         <p>
+          Druga edycja{' '}
           <LinkUnderlineEffect>
-            <a href="https://tofw.pl/typeville-blog" className="ml-2  text-blue-500">
-              Konferencja TypeVille
+            <a href="https://hyperfunctor.com/nextjs-react-graphql-typescript" className="text-blue-500">
+              Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
             </a>
-          </LinkUnderlineEffect>{' '}
-          20-22 kwietnia! Z kodem{' '}
-          <strong>
-            <mark>typeofweb10</mark> 10% rabatu!
-          </strong>
+          </LinkUnderlineEffect>
         </p>
-      </div> */}
+      </div>
     </>
   );
 });
