@@ -47,10 +47,19 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
         <div className={searchClasses}>
           <SearchWidget />
         </div>
-        {series && (
+        {series ? (
           <div className={widgetClasses}>
             <SeriesTableOfContentsWidget series={series} />
           </div>
+        ) : (
+          <>
+            <div className={widgetClasses}>
+              <PromoWidget />
+            </div>
+            <div className={widgetClasses}>
+              <SocialWidget />
+            </div>
+          </>
         )}
       </>
     );
@@ -94,10 +103,19 @@ const widgetsPerPage: Record<PageKind, ComponentType<SidebarProps>> = {
         <div className={searchClasses}>
           <SearchWidget />
         </div>
-        {series && (
+        {series ? (
           <div className={widgetClasses}>
             <SeriesTableOfContentsWidget series={series} />
           </div>
+        ) : (
+          <>
+            <div className={widgetClasses}>
+              <PromoWidget />
+            </div>
+            <div className={widgetClasses}>
+              <SocialWidget />
+            </div>
+          </>
         )}
       </>
     );
