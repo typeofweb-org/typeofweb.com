@@ -53,7 +53,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
         <p>
           Druga edycja{' '}
           <LinkUnderlineEffect>
-            <a href="https://hyperfunctor.com/nextjs-react-graphql-typescript" className="text-blue-500">
+            <a href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=banner" className="text-blue-500">
               Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
             </a>
           </LinkUnderlineEffect>

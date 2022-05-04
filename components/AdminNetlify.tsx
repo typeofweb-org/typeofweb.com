@@ -45,9 +45,9 @@ export function AdminNetlify() {
       name: 'preSave',
       handler: ({ entry }) => {
         const collectionsWithPermalink = ['posts', 'pages', 'legacy_posts'];
-        const collection = entry.get('collection');
+        const collection: string = entry.get('collection');
         if (collectionsWithPermalink.includes(collection)) {
-          const title = entry.getIn(['data', 'title']);
+          const title: string = entry.getIn(['data', 'title']);
           return entry
             .setIn(['data', 'permalink'], Slugify.default(title, { lower: true, trim: true, locale: 'pl' }))
             .get('data');
@@ -135,11 +135,9 @@ function PreviewComponent({ collection, fields, widgetFor }: PreviewTemplateComp
   return (
     <div style={{ paddingTop: '2rem' }}>
       {fields.filter(isVisible).map((field) => {
+        const name: string = field?.get('name');
         return (
-          <div
-            key={field?.get('name')}
-            className={['body', 'title'].includes(field?.get('name')) ? 'prose prose-xl' : ''}
-          >
+          <div key={field?.get('name')} className={['body', 'title'].includes(name) ? 'prose prose-xl' : ''}>
             {widgetFor(field?.get('name'))}
           </div>
         );

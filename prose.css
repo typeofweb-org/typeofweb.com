@@ -79,16 +79,19 @@
     margin-top: 3em;
     margin-bottom: 3em;
   } */
-  .prose blockquote {
+
+  .prose blockquote,
+  .prose p.important {
     margin-top: 1.6em;
     margin-bottom: 1.6em;
 
     quotes: auto;
-    @apply relative text-transparent bg-no-repeat bg-clip-text;
+    @apply indent-0 relative text-transparent bg-no-repeat bg-clip-text;
     @apply -ml-7 -mr-7 pl-8 pr-8 py-4 border-b border-l-0 border-r-0 border-t border-b-blue-500 border-t-pink-500 sm:-ml-6 sm:-mr-32 sm:pr-32 md:-mr-32 lg:-mr-12 lg:pr-20;
 
     &,
-    &::before {
+    &::before,
+    &::after {
       @apply bg-gradient-to-t from-blue-500 to-pink-500;
     }
 
@@ -97,11 +100,31 @@
       @apply absolute left-0 top-0 block w-2 h-full;
     }
 
+    &::after {
+      @apply absolute right-0 top-0 leading-tight text-7xl font-serif font-black text-transparent bg-no-repeat bg-clip-text;
+    }
+
     & br {
       content: '';
       @apply my-[1ex] block;
     }
   }
+
+  .prose blockquote {
+    &::after {
+      content: '”';
+    }
+  }
+
+  .prose p.important {
+    @apply indent-0;
+
+    &::after {
+      content: '!';
+      @apply font-sans text-6xl -top-2 right-4;
+    }
+  }
+
   .prose blockquote p:first-of-type:before {
     content: open-quote;
   }

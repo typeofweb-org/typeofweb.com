@@ -1,0 +1,177 @@
+---
+title: 'Next.js: Server Side Rendering, Static Site Generation'
+permalink: nextjs-server-side-rendering-static-site-generation
+type: post
+date: 2022-05-04T09:45:28.824Z
+authors:
+  - michal-miszczyszyn
+category: javascript
+thumbnail:
+  url: /public/assets/uploads/2022/05/nextjs-server-side-rendering-static-site-generation.png
+  width: 1920
+  height: 1004
+---
+
+Od dłuższego czasu głośno jest o Next.js, a także o podobnych do niego konkurentach, czyli Remix oraz Nuxt. Czym się wyróżnia to narzędzie? O co tyle szumu? I czy statyczne generowanie stron nadaje się do każdej aplikacji?
+
+---
+
+## Next.js
+
+Next.js używam produkcyjnie od kwietnia 2018 – dzisiaj mijają 4 lata. Była to wersja 5, wyłącznie **Server Side Rendering** i ledwie zalążek tego, co Next oferuje obecnie. Mimo to już wtedy zdecydowałem się na jego zastosowanie, głównie ze względu na wyszukiwarki oraz SEO. **Dziś Next.js to znacznie, znacznie więcej.**
+
+!> Wszystkie te informacje i znacznie więcej znajdziesz w moim [Kursie Nowoczesnego Frontendu](https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=blogpost-next-1).
+
+## Server Side Rendering (SSR)
+
+Dawno, dawno temu, za siedmiona serwerami… renderowaliśmy wszystko po stronie serwera. Każdy formularz, niemal każda interakcja… wszystko musiało trafić do naszego szczęśliwego PHP postawionego na Apache lub czegoś podobnego. Do dziś w ten sposób działa wiele aplikacji, a technika ta nazywa się _Server Side Rendering_. Każde wejście na stronę, każda interakcja, każde wysłanie formularza powoduje wysłanie żądania do serwera i całkowite odświeżenie strony.
+
+Czy to ma sens? Nie do końca, gdyż **po pierwszym załadowaniu aplikacji tak naprawdę bardzo rzadko potrzebujemy pobierać na nowo całość z serwera**. Szukano alternatyw…
+
+## Trochę historii
+
+Nieco później, bo około 2004-2005 roku deweloperzy zaczęli mocno interesować się genialnym konceptem. Brzmiał on mniej więcej tak: a co gdybyśmy zamiast przeładowywać całą stronę, spróbowali tylko _jakoś_ pobrać dane z serwera, a następnie zaaplikowali je na już wyrenderowanym widoku? Boom, tak powstał ~~chocapic~~ Ajax. Technik było wiele, ale udało się to w miarę ustandaryzować pod nazwą `XMLHttpRequest`.
+
+To zachłyśnięcie się Ajaksem, a później _Single Page Applications_, spowodowało, że przez pewien okres wszyscy chcieli budować aplikacje oraz strony internetowe tylko w taki sposób!
+
+## Problem z Single Page Applications (SPA)
+
+A cóż to takiego te _Single Page Applications_? Jest to taki rodzaj aplikacji internetowych, które renderują się **po stronie serwera wyłącznie raz**, a późniejsze interakcje oraz nawigacja pomiędzy podstronami nie wymaga już odświeżania strony. Brzmi świetnie, prawda? No i jest naprawdę niezłe.
+
+Dla spójności z pozostałymi akronimami, do określania SPA będę też używał nazwy CSR, czyli _Client-Side Rendering_.
+
+Jakie są zalety tego rozwiązania? Aplikacja stworzona w taki sposób sprawia wrażenie bardziej nowoczesnej. Działa szybciej, albo przynajmniej **wydaje się działać szybciej**, gdyż przejścia pomiędzy widokami nie wymagają przeładowania strony, treść nie znika etc. etc. Ponadto (w teorii), SPA mniej obciążają serwer, bo nie zajmuje się on renderowaniem treści do HTML, a zwraca tylko np. JSON. Odpowiedzialność za wyświetlenie treści jest przerzucona na klienta.
+
+Wcale się nie dziwię, że wiele osób i firm poszło w to _all in_. Niestety, [SPA mają też liczne wady](https://typeofweb.com/angularjs-i-seo), gdzie problemy ze SEO są tak naprawdę dopiero początkiem listy.
+
+## Next.js i początki Server-Side Rendering (SSR)
+
+Next.js oprócz umożliwiania CSR (w końcu to pod spodem React.js!), od początku implementował również koncept Server Side Rendering, ale robił to w sposób, który był **znacznie ulepszony w stosunku do oryginału**.
+
+Pomysł był taki: pierwsze renderowanie strony następowało po stronie serwera i to serwer zwracał cały gotowy HTML wraz z treścią. To rozwiązywało problemy z SEO, a przy odpowiednim ustawieniu keszowania po stronie serwera także przyśpieszało pierwsze załadowanie strony.
+
+Od tego miejsca strona (aplikacja) jednak zmieniała się – następowała tak zwana **hydracja**. Kolejne interakcje i nawigacja pomiędzy podstronami wyglądała jak w typowym SPA – odpowiadał za nie klient. Serwer zwracał tylko dane w formacie JSON, a klient je renderował.
+
+Było to połączenie tego co najlepsze z dwóch światów. Sprawę ułatwiał również fakt, że zarówno frontend jak i backend w tym przypadku napisane były w JavaScripcie. Powstało pojęcia **izomorficznego** lub po prostu **uniwersalnego JavaScriptu**, czyli takiego, który mógł być uruchamiany bez zmian zarówno w przeglądarce jak i Node.js. W Next.js służyła do tego specjalna funkcja `getInitialProps`.
+
+Czy osiągnęliśmy ideał? Jak za pewne zgadujesz – nie.
+
+## Statyczna treść
+
+Szybko okazało się bowiem, że tak naprawdę większość treści, które wyświetlamy jest statyczna. Co to oznacza? Na potrzeby tego artykułu załóżmy, że **treść statyczna to taka, która w krótkim odstępie czasu jest taka sama niezależnie od tego, jaki użytkownik ją przegląda**.
+
+Czy strona-wizytówka jest statyczna? Absolutnie tak. Treść zmienia się rzadko, a każda odwiedzająca osoba widzi dokładnie to samo.
+
+Czy strona z wiadomościami jest statyczna? Również tak. Treść zmienia się bardzo często, ale w krótkim odstępie czasu wszyscy odwiedzający widzą to samo.
+
+Czy sklep internetowy jest statyczny? To już jest nieco dyskusyjne, ale w większości również tak!
+
+Ważne jest również to, że co do zasady serwowanie statycznych treści może być proste, lekkie i przez to niesamowicie szybkie. Pojawiło się więc pytanie: Jak przyśpieszyć to co zwracamy z `getInitialProps`? Jak przestać wykonywać po wielokroć zapytania do API po te same dane? **Czy renderowanie w kółko tego samego na serwerze ma sens?**
+
+Potrzebowaliśmy czegoś więcej. Kroku w przód. Może na przykład rozgraniczenia na podstrony zmieniające się często i rzadko? Albo czegoś jeszcze innego…
+
+## Static Site Generation (SSG)
+
+**Static Site Generation to technika pozwalająca na wygenerowanie… statycznych stron z naszej aplikacji**. 25. listopada 2019 roku na GitHubie Next.js pojawił się niezwykle ciekawy proposal dodania trzech nowych funkcji: `getStaticProps`, `getStaticPaths` i `getServerSideProps`. Mam nieco hopla na punkcie Next.js, więc tę propozycję i dyskusje dookoła niej śledziłem niemal od początku. 9 marca 2020 ukazał się Next.js 9.3, która te zmiany wprowadzał do stabilnej wersji.
+
+No dobra, ale o co właściwie chodzi? Funkcja `getInitialProps` była wywołana w dwóch różnych kontekstach: najpierw na serwerze (w czasie pierwszego renderowania), a następnie już na kliencie (np. przy przechodzeniu między podstronami). W teorii brzmiało to super, jednak w praktyce sprawiało liczne problemy. Poza tym mocno utrudniało keszowanie i statyczne generowanie treści…
+
+Odpowiedzą na to jest `getStaticProps`. **Wywoływane wyłącznie po stronie serwera** i tylko jeden raz w czasie budowania aplikacji. Wynik wywołania tej funkcji służy do stworzenia dwóch plików: **JSON i HTML**. W pierwszym z nich jest dokładnie to, co `getStaticProps` zwróci – czyli dane. Natomiast drugi plik zawiera HTML powstały w wyniku wyrenderowania całej aplikacji (strony) z użyciem tych danych.
+
+<figure>
+  <img src="/public/assets/uploads/2022/05/next-static-site-generation.png" alt="" width="431" height="381" />
+  <figcaption>
+    <p>Zbudowana aplikacja w Next.js to tylko zbiór statycznych plików.</p>
+  </figcaption>
+</figure>
+
+W ten sposób otrzymujemy całkowicie statyczną treść, statyczną stronę, która w zasadzie mogłaby być serwowana przez dowolny serwer i nie wymagała zbyt dużej mocy obliczeniowej. Tu jednak pojawia się pewien trik: po pierwszym pobraniu aplikacji (pliku HTML) z serwera, znowu do gry wkracza JavaScript, znowu **następuje hydracja**, a przejścia pomiędzy podstronami następują jak w SPA, wyłącznie na kliencie.
+
+Przewada `getStaticProps` w stosunku do `getInitialProps` polega jednak na tym, że nie trzeba nic więcej pobierać z bazy danych ani zewnętrznych API! Dane są już przecież gotowe – w postaci zapisanych w czasie budowania **statycznych plików JSON**. Genialne, prawda? A jakie proste.
+
+No, to teraz pewnie myślisz, że mamy już ideał… otóż nie.
+
+## Problemy ze Static Site Generation
+
+Napisałem, że statyczna treść „w krótkim odstępie czasu jest taka sama”. Co to znaczy „krótki odstęp czasu”? I **co zrobić gdy w końcu trzeba stronę zaktualizować?**
+
+**W podejściu SSG należy całą aplikację przebudować** i podmienić wygenerowane statyczne pliki. Brzmi źle, ale w praktyce wcale nie jest takie straszne. Jeśli przytaczaną już stronę z wiadomościami odwiedza sto tysięcy osób na minutę, to w podejściu SSR mielibyśmy sto tysięcy renderów na minutę! Minus cache. W przypadku Static Site Generation możemy ustawić, aby całość renderowała się raz na 60 sekund i będziemy mieli **jeden render co minutę zamiast stu tysięcy**. To już nieco poprawia sytuację.
+
+## Mądrzejsze Static Site Generation
+
+Problem tkwi jednak w tym, że do tej pory renderowaliśmy **całą aplikację** od początku do końca za każdym razem. Co jeśli podstron jest tysiąc? A dziesięć tysięcy? **A sto tysięcy?** Czy to się w ogóle opłaci?! **Bez sensu, prawda?**
+
+A co gdybym Ci powiedział, że możemy to zrobić mądrzej? Next.js posiada fantastyczną opcję, która nie tylko **pozwala na ponowne renderowanie tylko wybranych podstron**, ale w dodatku może to robić wyłącznie na żądanie!
+
+Nazywamy to ISR, czyli **Inkrementalną Statyczną Regeneracją**. Brzmi strasznie, działa świetnie, programiści kochają skrótowce.
+
+Wróćmy do przykładu z tysiącem podstron. Czy naprawdę ma sens renderowanie ich wszystkich przy każdym budowaniu aplikacji? A może zbudujmy tylko kilka tych najczęściej odwiedzanych? Albo te, które są najnowsze? **A może nie budujmy żadnej z nich od razu tylko poczekajmy na to co zrobią nasi użytkownicy?** Next.js umożliwia to wszystko!
+
+## `getStaticPaths`
+
+Pisałem o trzech nowych funkcjach, a omówiłem dopiero jedną. Drugą z nich jest `getStaticPaths`, czyli funkcja odpowiedzialna za zdefiniowanie _co_ chcemy statycznie wyrenderować w trakcie budowania aplikacji. Nieodzowna, gdy ścieżki prowadzące do naszych podstron zawierają dynamiczne parametry np. `/users/1`, `/users/2`, `/users/3` i tak dalej. Jednak **równie przydatne jak zwrócenie z tej funkcji listy ścieżek może się okazać możliwość zwrócenia… braku ścieżek**. Co?
+
+### `getStaticPaths` i `fallback`
+
+Oprócz parametrów (`paths` -> `params`) z `getStaticPaths` możemy zwrócić też dodatkową opcję `fallback`:
+
+`fallback = false` oznacza, że podstrony, których nie zwrócimy po prostu nie istnieją. Nie ma nic więcej poza tym co precyzyjnie określiliśmy.
+
+`fallback = true` całkowicie zmienia sposób działania Next.js. Ścieżki do stron, które zwrócimy z `getStaticPaths` będą zachowywać się tak samo jak przy `fallback = false`. Co się wydarzy jednak gdy odwiedzimy adres, którego nie zwróciliśmy, a który pasuje do „schematu”? Next spróbuje go dynamicznie wyrenderować! Załóżmy, że mówimy o stronie zawartej w pliku `/pages/[id].tsx`. Spójrzmy na fragment kodu:
+
+```ts
+export const getStaticPaths = () => {
+	return {
+	  paths: [
+	    { params: { id: '1' } },
+	    { params: { id: '2' } }
+	  ],
+	  fallback: true
+	}
+```
+
+W trakcie budowania aplikacji wyrenderowane zostaną dokładnie dwie strony: `/1` oraz `/2`. Gdy wejdziemy **po raz pierwszy** na inny adres np. `/42`, to **Next.js zwróci nam wersję strony w trybie „fallback”, czyli bez treści**, ale z dodatkowym parametrem (propsem), który powinniśmy obsłużyć i wyświetlić np. spinner. W tym samym czasie **Next.js w tle rozpocznie renderowanie** tej podstrony do statycznych HTML i JSON! Wywołana zostanie funkcja `getStaticProps` i wszystko zadziała tak, jakbyśmy właśnie budowali aplikację, ale tylko dla tej jednej podstrony.
+
+Gdy proces się zakończy, nasz „fallback” otrzyma dane potrzebne do wyrenderowania treści, a użytkownik powinien zobaczyć jak spinner znika i pojawia się właściwa strona. To teraz najważniejsze: każde następne wejście na tę podstronę da nam wrażenie, jakby zawsze była ona statyczna! Kolejni użytkownicy, albo kolejne odświeżenia nie zdradzą w żaden sposób, że kiedyś tej strony nie było, ani, że komuś pojawił się jakiś „fallback”.
+
+**Raz statycznie wygenerowana strona jest dostępna od teraz dla wszystkich**. To rewelacyjne rozwiązanie w sytuacji gdy podstron jest sporo, a _build_ trwa długo.
+
+Istnieje również trzecia wartość parametru `fallback`: `fallback = "blocking"`. Przy takim ustawieniu cały proces wygląda bardzo podobnie, ale użytkownik nigdy nie ujrzy specjalnego widoku „fallback”, tylko będzie po prostu czekał… tak, jakby miał wolny internet, a strona się długo ładowała :) Ale tylko przy pierwszym razie!
+
+## Incremental Static Regeneration (ISR)
+
+Dobra, trochę skłamałem. To, co opisałem w poprzednich akapitach to jeszcze nie było ISR (_Incremental Static Regeneration_). To był tylko rozbudowany SSG!
+
+Więc znowu pytamy: czy można jeszcze lepiej? Owszem. Teraz, gdy dane się zmienią, musimy wywołać od nowa _build_ **całej aplikacji**. Nawet jeśli jest to bardzo szybkie dzięki `fallback`, to trochę nie ma sensu. Niektóre podstrony przecież się nie zmieniają, inne zmieniają się często, a jeszcze inne tylko czasem. Czy nie byłoby superancko, **gdyby Next.js o tym wiedział i potrafił sam przebudowywać strony gdy zajdzie taka potrzeba**?
+
+### `getStaticProps` i `revalidate`
+
+Cóż, niestety, o tym dopiero za kilka kolejnych akapitów. Na razie spróbujmy sprawić, aby Next.js po prostu przebudowywał nasze strony w odpowiednich odstępach czasu. Służy temu kolejna opcja o nazwie `revalidate`, którą zwracamy obok danych z `getStaticProps`.
+
+`revalidate` to czas w sekundach po jakim dana podstrona zostanie uznana za „starą”. Nie oznacza to jeszcze, że będzie od razu przebudowana! **Next tylko zapamięta sobie, że treść tej podstrony _może_ wymagać aktualizacji**, ale jeśli nikt jej nie odwiedzi to w sumie nie ma sensu niczego renderować i się przemęczać. Natomiast, gdy taka „stara” strona zostanie odwiedzona, to Next rozpocznie jej odświeżanie i będzie próbował wyrenderować statyczne HTML i JSON.
+
+Co w tym czasie zobaczy użytkownik? Poprzednią wersję strony! Jest to strategia o nazwie _Stale While Revalidate_, czyli założenie, że **lepiej dać użytkownikom starą treść niż nic nie dawać**. Oczywiście, gdy tylko proces renderowania nowej podstrony się zakończy, to Next automatycznie podmieni treść na nową.
+
+## Renderowanie na żądanie…
+
+Pytanie: czy mamy już ideał? Pewnie domyślasz się, że nie :) Został nam jeszcze jeden bardzo ważny element układanki oraz garść informacji, które musimy omówić.
+
+Zacznijmy może od tego, że o tym, czy aplikacja korzysta z SSR, SSG, ISR czy CSR decydujemy **per strona**. Oznacza to, że **część aplikacji może być całkowicie statyczna** (np. regulamin, polityka prywatności), **część może się regenerować co godzinę** (np. blog), część może regenerować się co godzinę (np. strona produktu w sklepie internetowym), a z kolei **treść dostępna dopiero po zalogowaniu może być całkowicie renderowana po stronie serwera (SSR)** jeśli zajdzie taka potrzeba. A i jeszcze nawiązując do przykładu e-commerce – co z koszykiem? Koszyk będzie CSR. I to wszystko w obrębie jednej appki.
+
+## `unstable_revalidate`
+
+Ostatnią już poprawką do naszego niemal-ideału jest specjalna funkcja `unstable_revalidate`, która pozwala na **dokładne wskazanie, która podstrona i kiedy ma zostać przegenerowana**. Lubię przykład sklepu internetowego, więc o nim porozmawiajmy: nie chcemy niepotrzebnie męczyć serwera i ustawiać `revalidate` na ekstremalnie krótki czas np. 1 sekundę, ale chcemy mieć w miarę aktualne dane na stronie.
+
+Na szczęście w przypadku sklepu wiemy dokładnie kiedy coś się zmienia: gdy produkt zostanie usunięty lub wykupiony. W zależności od systemu e-commerce, który zasila nasz sklep, możemy na to zareagować np. webhookiem i **wywołać w Next.js specjalną funkcję `unstable_revalidate`**. Spowoduje ona, że Next natychmiast rozpocznie statyczne generowanie wskazanej podstrony.
+
+## SSG, ISR, SSR, CSR…
+
+**Czy mamy ideał? Nie wiem, ale według mnie jest bardzo blisko.** Możliwości, które obecnie daje nam Next.js, a także (choć w mniejszym stopniu) Remix czy Nuxt sprawdzą się idealnie w przypadku większości prawdziwych aplikacji. Możliwość połączenia ze sobą różnych podejść do renderowania i wykorzystanie SSG do większości treści, a np. CSR tylko do niektórych podstron daje nam **ogromne możliwości optymalizacji bez utraty jakichkolwiek funkcji aplikacji i bez kompromisów**.
+
+Wszystkie te pojęcia dokładnie omawiam w czasie [kursu online Nowoczesnego Frontendu: Next.js, GraphQL i TypeScripta](https://hyperfunctor.com/nextjs-react-graphql-typescript), który prowadzę. W trakcie kursu wspólnie krok po kroku budujemy appkę, która wykorzystuje SSG i ISR w celu zaspokojenia prawdziwych potrzeb biznesowych, którymi podzielili się z nami nasi kontrahenci. Zachęcam do zajrzenia na stronę!
+
+<a href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=blogpost-next-2">
+  <img width="853" height="480" src="/public/assets/uploads/2022/05/kurs-nextjs-typescript.png" />
+</a>
+
+Słowo na koniec: skąd nazwa `unstable_revalidate`? Funkcja ta została dodana bardzo niedawno i jest jeszcze uważana za niestabilną w rozumieniu, że jej sposób wywoływania oraz działanie mogą ulec zmianie.

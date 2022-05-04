@@ -20,7 +20,7 @@ export const PromoWidget = memo(() => {
           </Link>
         </li>
         <li className="ml-0 pl-0 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
-          <Link href="/wspolpraca">
+          <Link href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=sidebar">
             <a>Druga edycja kursu Next.js, React, GraphQL, TypeScript</a>
           </Link>
         </li>

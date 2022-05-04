@@ -2,9 +2,9 @@ import Dynamic from 'next/dynamic';
 import { memo } from 'react';
 
 import { LatestPostsWidget } from '../molecules/LatestPostsWidget';
+import { PromoWidget } from '../molecules/PromoWidget';
 import { SeriesTableOfContentsWidget } from '../molecules/SeriesTableOfContentsWidget';
 import { SocialWidget } from '../molecules/SocialWidget';
-import { PromoWidget } from '../molecules/PromoWidget';
 
 import type { PageKind, SeriesWithToC } from '../../types';
 import type { ComponentType } from 'react';

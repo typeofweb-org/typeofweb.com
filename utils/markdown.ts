@@ -403,6 +403,17 @@ export function collapseParagraphs(): import('unified').Transformer {
     return run(tree);
   };
 }
+function importantParagraphs(): import('unified').Transformer {
+  return function transformer(tree) {
+    visit(tree, isPNode, (node: PNode) => {
+      if (node.children?.[0] && isTextNode(node.children[0]) && node.children[0].value.startsWith('!>')) {
+        node.properties = node.properties || {};
+        node.properties.className = 'important';
+        node.children[0].value = node.children[0].value.slice(2).trimStart();
+      }
+    });
+  };
+}
 
 export function normalizeHeaders(): import('unified').Transformer {
   return function transformer(tree) {
@@ -472,6 +483,7 @@ const commonRehypePlugins = [
   RehypePrism,
   addDataToCodeBlocks,
   imageAttributes,
+  importantParagraphs,
 ];
 
 export function toMdx(
