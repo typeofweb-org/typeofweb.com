@@ -46,7 +46,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     provider_url: 'https://typeofweb.com',
     cache_age: '3600',
     ...(post.data.thumbnail && {
-      thumbnail_url: post.data.thumbnail.url,
+      thumbnail_url: post.data.thumbnail.url.replace(/^\/public\//, '/'),
       thumbnail_width: post.data.thumbnail.width,
       thumbnail_height: post.data.thumbnail.height,
     }),
