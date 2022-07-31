@@ -165,7 +165,7 @@ function groupRecords(groupBy:GroupBy) {
 <pre><code class="language-typescript">const liczba:number = fn(true); // dziala!  
 </code></pre>
 
-<p>Możemy pójść nawet o krok dalej. Skoro fakt, że <code>fn</code> zwraca lizbę jest oczywisty, to czy w ogóle konieczne jest deklarowanie <code>liczba:number</code>? Nie!</p>
+<p>Możemy pójść nawet o krok dalej. Skoro fakt, że <code>fn</code> zwraca liczbę jest oczywisty, to czy w ogóle konieczne jest deklarowanie <code>liczba:number</code>? Nie!</p>
 
 <pre><code class="language-typescript">const liczba = fn(true); // dziala!  
 </code></pre>
