@@ -1,14 +1,14 @@
 /* eslint-disable functional/no-this-expression, @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-unsafe-member-access -- ErrorBoundary */
 import { Component } from 'react';
 
-import type { ErrorInfo } from 'react';
+import type { ErrorInfo, ReactNode } from 'react';
 
 interface State {
   readonly error?: Error;
   readonly data?: string;
 }
 
-export class ErrorBoundary extends Component<{}, State> {
+export class ErrorBoundary extends Component<{ readonly children?: ReactNode }, State> {
   readonly state: State = {};
 
   componentDidMount() {

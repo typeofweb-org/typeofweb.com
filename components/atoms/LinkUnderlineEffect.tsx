@@ -21,7 +21,7 @@ export const LinkUnderlineEffect = memo(
     }
   >(({ children, href }, fref) => {
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary to cast
-    const link = Children.only(children) as ReactComponentElement<'a'>;
+    const link = Children.only(children) as unknown as ReactComponentElement<'a'>;
 
     const className = link.props.className ?? '';
 

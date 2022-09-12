@@ -134,14 +134,17 @@ function PreviewComponent({ collection, fields, widgetFor }: PreviewTemplateComp
 
   return (
     <div style={{ paddingTop: '2rem' }}>
-      {fields.filter(isVisible).map((field) => {
-        const name: string = field?.get('name');
-        return (
-          <div key={field?.get('name')} className={['body', 'title'].includes(name) ? 'prose prose-xl' : ''}>
-            {widgetFor(field?.get('name'))}
-          </div>
-        );
-      })}
+      {fields
+        .filter(isVisible)
+        .map((field) => {
+          const name: string = field?.get('name');
+          return (
+            <div key={field?.get('name')} className={['body', 'title'].includes(name) ? 'prose prose-xl' : ''}>
+              {widgetFor(field?.get('name'))}
+            </div>
+          );
+        })
+        .toArray()}
     </div>
   );
 }

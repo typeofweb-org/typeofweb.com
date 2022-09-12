@@ -1,6 +1,6 @@
 import { useCallback, useRef, memo } from 'react';
 
-import type { RefCallback } from 'react';
+import type { RefCallback, ReactNode } from 'react';
 
 export interface CodepenWidgetProps {
   readonly slugHash: string;
@@ -10,6 +10,7 @@ export interface CodepenWidgetProps {
   readonly themeId?: string;
   readonly defaultTab?: string;
   readonly penTitle?: string;
+  readonly children: ReactNode;
 
   /**
    * @deprecated

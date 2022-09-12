@@ -75,13 +75,19 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     };
   }, [router.events]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call -- ok
-  const urlsToPreload: readonly string[] | undefined = pageProps?.posts
-    ?.map(
-      (p: undefined | { readonly frontmatter?: { readonly cover?: { readonly blurDataURL?: string } } }) =>
-        p?.frontmatter?.cover?.blurDataURL,
-    )
-    .filter(Boolean);
+  // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- trust me, I'm an engineer
+  const typedPageProps = pageProps as
+    | undefined
+    | {
+        readonly posts?: readonly (
+          | undefined
+          | { readonly frontmatter?: { readonly cover?: { readonly blurDataURL?: string } } }
+        )[];
+      };
+
+  const urlsToPreload: readonly string[] | undefined = typedPageProps?.posts
+    ?.map((p) => p?.frontmatter?.cover?.blurDataURL)
+    .filter((x): x is Exclude<typeof x, undefined> => Boolean(x));
 
   return (
     <>

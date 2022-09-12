@@ -38,7 +38,7 @@
     "netlify-cms-media-library-cloudinary": "1.3.10",
     "next": "12.3.0",
     "next-mdx-remote": "4.1.0",
-    "next-sitemap": "1.9.12",
+    "next-sitemap": "3.1.22",
     "node-fetch": "3.2.10",
     "octokit": "1.7.1",
     "oembed-parser": "2.0.2",
@@ -47,7 +47,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-instantsearch-dom": "6.32.1",
-    "recharts": "2.1.14",
+    "recharts": "2.1.8",
     "remark-footnotes": "4.0.1",
     "sharp": "0.31.0",
     "slugify": "1.6.5"
@@ -118,7 +118,11 @@
     "**/@mdx-js/mdx": "2.0.0-rc.2",
     "**/@mdx-js/react": "2.0.0-rc.2",
     "**/katex": "0.15.1",
-    "**/eslint-plugin-import": "^2.25.2"
+    "**/eslint-plugin-import": "^2.25.2",
+    "**/@types/react": "18.0.19",
+    "**/@types/react-dom": "18.0.6",
+    "**/react": "18.2.0",
+    "**/react-dom": "18.2.0"
   },
   "browserslist": [
     "> 2% in my stats"
