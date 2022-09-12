@@ -3,7 +3,6 @@ import Invariant from 'invariant';
 
 import { categoriesToMainCategory, categorySlugToCategory } from './utils/categories';
 import { splitContent, trimExcerpt } from './utils/excerpt';
-import { getFingerprint } from './utils/fingerprint';
 import { toHtml } from './utils/markdown';
 import { readAllPosts } from './utils/posts';
 import { seriesSlugToSeries } from './utils/series';
