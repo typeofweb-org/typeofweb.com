@@ -1,5 +1,3 @@
-import { getPlaiceholder } from 'plaiceholder';
-
 import { videoPageSize } from '../constants';
 
 import { getPlaiceholder2 } from './plaiceholder';

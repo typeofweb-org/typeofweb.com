@@ -31,7 +31,10 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
                 <ArticleCoverImage
                   cover={{
                     blurDataURL: video.cover.blurDataURL,
-                    img: video.cover.img,
+                    img: {
+                      ...video.cover.img,
+                      src: video.cover.img.src.replace(/\/(\w+)default\.jpg/, '/maxresdefault.jpg'),
+                    },
                     preload: true,
                   }}
                 />
