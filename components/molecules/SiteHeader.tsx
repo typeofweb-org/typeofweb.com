@@ -51,12 +51,12 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
       </header>
       <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2">
         <p>
-          Już jesienią rusza trzecia edycja{' '}
           <LinkUnderlineEffect>
             <a href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=banner" className="text-blue-500">
-              Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
+              Trzecia edycja Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
             </a>
-          </LinkUnderlineEffect>
+          </LinkUnderlineEffect>{' '}
+          już w sprzedaży!
         </p>
       </div>
     </>
