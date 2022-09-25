@@ -21,7 +21,7 @@ export const SectionTitle = memo<PropsWithChildren<SectionTitleProps>>(
 
     return (
       <El
-        className={`block text-gray-900 font-sans hover:text-gray-700 transition-colors ${textSize} leading-tight`}
+        className={`block text-gray-900 font-sans hover:text-gray-700 transition-colors ${textSize} leading-none`}
         itemProp={itemProp}
       >
         {children}

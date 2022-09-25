@@ -1,5 +1,3 @@
-import { getPlaiceholder } from 'plaiceholder';
-
 import { videoPageSize } from '../constants';
 
 import { getPlaiceholder2 } from './plaiceholder';
@@ -34,7 +32,7 @@ export async function getYouTubeVideosFor({ page }: { readonly page: number }): 
 
       return {
         ...video,
-        description: video.description.split(/Linki|00:00|---/i)[0].trim(),
+        description: video.description.split(/\r?\n\r?\n|Linki|00:00|---/i)[0].trim(),
         cover: img ? { img: { ...img, src: img.src }, blurDataURL } : null,
       };
     }),

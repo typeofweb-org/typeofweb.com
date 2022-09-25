@@ -16,27 +16,31 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
   return (
     <Card as="article" itemScope itemType="http://schema.org/Video">
       <header>
-        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4`}>
-          <ArticleTitle title={video.title} href={video.url} level={2} />
-          <div className="flex items-center justify-start mb-6 mt-3">
-            <Link href={video.url}>
-              <a target="_blank">
-                <YouTubeLogo width="100" />
-              </a>
-            </Link>
+        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 flex flex-row`}>
+          <div className="order-2">
+            <ArticleTitle title={video.title} href={video.url} level={2} />
           </div>
           {video.cover && (
-            <Link href={video.url}>
-              <a tabIndex={-1} aria-hidden="true" target="_blank" className="block">
-                <ArticleCoverImage
-                  cover={{
-                    blurDataURL: video.cover.blurDataURL,
-                    img: video.cover.img,
-                    preload: true,
-                  }}
-                />
-              </a>
-            </Link>
+            <div className="order-1 w-full max-w-[9rem] ml-6 mr-10 -mt-2 lg:-mt-6">
+              <Link href={video.url}>
+                <a tabIndex={-1} aria-hidden="true" target="_blank" className="block">
+                  <ArticleCoverImage
+                    cover={{
+                      blurDataURL: video.cover.blurDataURL,
+                      img: video.cover.img,
+                      preload: true,
+                    }}
+                  />
+                </a>
+              </Link>
+              <div className="flex -ml-6">
+                <Link href={video.url}>
+                  <a target="_blank">
+                    <YouTubeLogo width="100" />
+                  </a>
+                </Link>
+              </div>
+            </div>
           )}
         </div>
       </header>
