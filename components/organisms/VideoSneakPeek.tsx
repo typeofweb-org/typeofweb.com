@@ -3,9 +3,10 @@ import React, { memo } from 'react';
 
 import YouTubeLogo from '../../images/youtube-logo.svg';
 import { ArticleCoverImage } from '../atoms/ArticleCoverImage';
-import { ArticleTitle } from '../atoms/ArticleTitle';
+import { wisząceSpójniki } from '../atoms/ArticleTitle';
 import { Card } from '../atoms/Card';
 import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
+import { SectionTitle } from '../atoms/SectionTitle';
 
 import type { YouTubePost } from '../../utils/youtube';
 
@@ -17,8 +18,14 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
     <Card as="article" itemScope itemType="http://schema.org/Video">
       <header>
         <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 flex flex-row`}>
-          <div className="order-2">
-            <ArticleTitle title={video.title} href={video.url} level={2} />
+          <div className="order-2 flex items-center -mt-7">
+            <Link href={video.url}>
+              <a className="inline-block" itemProp="mainEntityOfPage" rel="bookmark">
+                <SectionTitle size="medium" level={2} itemProp="headline">
+                  {wisząceSpójniki(video.title)}
+                </SectionTitle>
+              </a>
+            </Link>
           </div>
           {video.cover && (
             <div className="order-1 w-full max-w-[9rem] ml-6 mr-10 -mt-2 lg:-mt-6">
@@ -44,7 +51,7 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
           )}
         </div>
       </header>
-      <div className="pb-12 px-7 text-gray-700 font-serif text-lg border-b-2 sm:px-8 lg:px-12">
+      <div className="pb-12 px-7 text-gray-900 font-serif text-lg border-b-2 sm:px-8 lg:px-12">
         <p className="!indent-0 whitespace-pre-line">
           {video.description}{' '}
           <span className="ml-2">

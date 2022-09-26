@@ -1,7 +1,7 @@
 @layer utilities {
   .prose {
     max-width: 75ch;
-    color: theme('colors.gray.700');
+    color: theme('colors.gray.900');
   }
   .prose > div:first-child > hr:first-child {
     display: none;
@@ -11,7 +11,6 @@
     margin-bottom: 1.2em;
 
     @apply text-justify text-gray-800 font-serif text-base font-bold tracking-wide lg:text-lg;
-    word-spacing: theme('spacing[0.5]');
     text-indent: 0;
   }
   .prose a {
@@ -264,7 +263,7 @@
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
-    @apply my-0 text-justify font-serif oldstyle-nums font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
+    @apply my-0 text-justify font-serif oldstyle-nums font-normal leading-normal lg:text-lg lg:leading-normal;
   }
   .prose p h1,
   .prose p h2,
@@ -374,21 +373,19 @@
     @apply counter-reset;
   }
   .prose-xl h2 {
-    font-size: 1.8em;
-    margin-top: 1.5555556em;
-    margin-bottom: 0.8888889em;
-    line-height: 1.1111111;
+    font-size: 2.441rem;
+    margin: 3rem 0 1.38rem;
+    line-height: 1.3;
   }
   .prose-xl h3 {
-    font-size: 1.5em;
-    margin-top: 1.6em;
-    margin-bottom: 0.6666667em;
-    line-height: 1.3333333;
+    font-size: 1.953rem;
+    margin: 3rem 0 1.38rem;
+    line-height: 1.3;
   }
   .prose-xl h4 {
-    margin-top: 1.8em;
-    margin-bottom: 0.6em;
-    line-height: 1.6;
+    font-size: 1.563rem;
+    margin: 3rem 0 1.38rem;
+    line-height: 1.3;
   }
 
   .prose,

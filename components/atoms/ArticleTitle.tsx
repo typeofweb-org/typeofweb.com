@@ -5,7 +5,7 @@ import { SectionTitle } from './SectionTitle';
 
 const NBSP = '\u00A0';
 
-const wisząceSpójniki = (title: string) => title.replace(/((\s(\p{L})|(\b[0-9]{1,3}))\s)/gu, `$2${NBSP}`);
+export const wisząceSpójniki = (title: string) => title.replace(/((\s(\p{L})|(\b[0-9]{1,3}))\s)/gu, `$2${NBSP}`);
 
 export const ArticleTitle = memo<{
   readonly title: string;

@@ -49,7 +49,7 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
             )}
           </div>
         </header>
-        <div className="pb-12 px-7 text-gray-700 font-serif text-lg border-b-2 sm:px-8 lg:px-12">
+        <div className="pb-12 px-7 text-gray-900 font-serif text-lg border-b-2 sm:px-8 lg:px-12">
           <p className="!indent-0">
             {excerpt}{' '}
             <span className="ml-2">
