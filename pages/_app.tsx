@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
@@ -128,6 +129,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </UIStateProvider>
       </RunningHeaderProvider>
+      <Analytics />
       <ScriptAfterInteraction
         id="fancyLinkUnderline"
         defer

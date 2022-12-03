@@ -23,6 +23,7 @@
     "@octokit/rest": "18.12.0",
     "@openlab/vercel-netlify-cms-github": "github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
     "@plaiceholder/next": "2.2.0",
+    "@vercel/analytics": "0.1.5",
     "algoliasearch": "4.12.0",
     "bluebird": "3.7.2",
     "concurrently": "7.0.0",
