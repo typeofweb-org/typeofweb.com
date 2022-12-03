@@ -1,6 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote';
 import Dynamic from 'next/dynamic';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { memo } from 'react';
 
@@ -30,16 +30,14 @@ const isLocalUrl = (href: string) => {
   }
 };
 
-const A = ({ href, ...props }: JSX.IntrinsicElements['a']) => {
+const A = ({ href, ref, ...props }: JSX.IntrinsicElements['a']) => {
   if (!href) {
     return <a href={href} {...props} />;
   }
   return isLocalUrl(href) ? (
-    <Link href={href} passHref={true}>
-      <LinkUnderlineEffect>
-        <a {...props} />
-      </LinkUnderlineEffect>
-    </Link>
+    <LinkUnderlineEffect>
+      <Link href={href} {...props}></Link>
+    </LinkUnderlineEffect>
   ) : (
     <LinkUnderlineEffect>
       <a href={href} {...props} />

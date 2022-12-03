@@ -41,10 +41,8 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
               size="small"
             />
             {cover && (
-              <Link href={href}>
-                <a tabIndex={-1} aria-hidden="true" className="block">
-                  <ArticleCoverImage cover={cover} />
-                </a>
+              <Link href={href} tabIndex={-1} aria-hidden="true" className="block">
+                <ArticleCoverImage cover={cover} />
               </Link>
             )}
           </div>
@@ -53,13 +51,11 @@ export const ArticleSneakPeek = memo<ArticleSneakPeekProps>(
           <p className="!indent-0">
             {excerpt}{' '}
             <span className="ml-2">
-              <Link href={href} passHref>
-                <LinkUnderlineEffect>
-                  <a className="text-blue-500 font-bold tracking-wider">
-                    Czytaj dalej… <span className="sr-only">artykuł {title}</span>
-                  </a>
-                </LinkUnderlineEffect>
-              </Link>
+              <LinkUnderlineEffect>
+                <Link href={href} className="text-blue-500 font-bold tracking-wider">
+                  Czytaj dalej… <span className="sr-only">artykuł {title}</span>
+                </Link>
+              </LinkUnderlineEffect>
             </span>
           </p>
         </div>

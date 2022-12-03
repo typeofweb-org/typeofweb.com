@@ -1,4 +1,3 @@
-import { withSentry } from '@sentry/nextjs';
 import Yaml from 'js-yaml';
 
 import { DELIMITER, host } from '../../constants';
@@ -14,7 +13,7 @@ const adminConfigYmlHandler: NextApiHandler = async (req, res) => {
   res.send(Yaml.dump(result));
 };
 
-export default withSentry(adminConfigYmlHandler);
+export default adminConfigYmlHandler;
 
 const urlPattern = ['https?://.*', 'Podaj pełny adres'];
 

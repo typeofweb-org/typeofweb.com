@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useCallback, memo } from 'react';
 
@@ -36,26 +36,27 @@ export const RelatedArticles = memo<{ readonly permalink: string }>(({ permalink
         {value.related.map((p) => {
           return (
             <li key={p.frontmatter.permalink} className="word-break-break-word shrink-0 flex-1">
-              <Link href={getUrlForPermalink(p.frontmatter.permalink)}>
-                <a className="group hover:text-blue-500 text-gray-900 transition-colors">
-                  <div className="relative w-full h-32 bg-gradient-to-br from-blue-100 to-gray-200">
-                    {p.frontmatter.cover && (
-                      <Image
-                        {...p.frontmatter.cover.img}
-                        className="duration-[0.5s] motion-safe:group-hover:scale-110 bg-gray-200 transition-transform group-hover:ease-out"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center center"
-                        sizes="160px"
-                        alt=""
-                      />
-                    )}
-                  </div>
-                  {p.frontmatter.title}
-                  <span className="block group-hover:text-blue-500 text-gray-600 transition-colors">
-                    ({p.frontmatter.mainCategory.name})
-                  </span>
-                </a>
+              <Link
+                href={getUrlForPermalink(p.frontmatter.permalink)}
+                className="group hover:text-blue-500 text-gray-900 transition-colors"
+              >
+                <div className="relative w-full h-32 bg-gradient-to-br from-blue-100 to-gray-200">
+                  {p.frontmatter.cover && (
+                    <Image
+                      {...p.frontmatter.cover.img}
+                      className="duration-[0.5s] motion-safe:group-hover:scale-110 bg-gray-200 transition-transform group-hover:ease-out"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center center"
+                      sizes="160px"
+                      alt=""
+                    />
+                  )}
+                </div>
+                {p.frontmatter.title}
+                <span className="block group-hover:text-blue-500 text-gray-600 transition-colors">
+                  ({p.frontmatter.mainCategory.name})
+                </span>
               </Link>
             </li>
           );

@@ -7,7 +7,6 @@ const withTM = require('next-transpile-modules')([
   'trough',
   'd3-shape',
 ]);
-const { withSentryConfig } = require('@sentry/nextjs');
 const { withPlaiceholder } = require('@plaiceholder/next');
 
 const withBundleAnalyzer = (
@@ -71,29 +70,24 @@ config.images = {
   formats: ['image/avif', 'image/webp'],
 };
 
-config.excludeDefaultMomentLocales = true;
 config.experimental = config.experimental || {};
+
+config.excludeDefaultMomentLocales = true;
 config.optimizeFonts = true;
-config.webpack5 = true;
 config.httpAgentOptions = { keepAlive: true };
 config.reactStrictMode = true;
 config.compress = true;
 config.productionBrowserSourceMaps = true;
 config.generateEtags = true;
 config.poweredByHeader = false;
-config.esmExternals = true;
 config.swcMinify = true;
-config.urlImports = ['https://cdn.skypack.dev'];
 
 // config.experimental.optimizeCss = true;
-config.experimental.optimizeImages = true;
-config.experimental.workerThreads = true;
+config.experimental.esmExternals = true;
+config.experimental.urlImports = ['https://cdn.skypack.dev'];
 config.experimental.scrollRestoration = true;
 config.experimental.gzipSize = true;
 // config.experimental.concurrentFeatures = true;
-
-// @todo https://github.com/getsentry/sentry-javascript/issues/4103
-config.outputFileTracing = false;
 
 const origin = process.env.NEXT_PUBLIC_HOST || process.env.NEXT_PUBLIC_VERCEL_URL || 'typeofweb.com';
 const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
@@ -194,16 +188,4 @@ config.redirects = () => {
   return Promise.resolve(require('./redirects.js').map((r) => ({ ...r, permanent: false })));
 };
 
-const SentryWebpackPluginOptions = {
-  // Additional config options for the Sentry Webpack plugin. Keep in mind that
-  // the following options are set automatically, and overriding them is not
-  // recommended:
-  //   release, url, org, project, authToken, configFile, stripPrefix,
-  //   urlPrefix, include, ignore
-
-  silent: true, // Suppresses all logs
-  // For all available options, see:
-  // https://github.com/getsentry/sentry-webpack-plugin#options.
-};
-
-module.exports = withSentryConfig(config, SentryWebpackPluginOptions);
+module.exports = config;

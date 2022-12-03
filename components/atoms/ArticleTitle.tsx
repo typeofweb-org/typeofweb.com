@@ -13,12 +13,10 @@ export const ArticleTitle = memo<{
   readonly level: 1 | 2;
 }>(({ title, href, level }) => {
   return (
-    <Link href={href}>
-      <a className="inline-block" itemProp="mainEntityOfPage" rel="bookmark">
-        <SectionTitle size="large" level={level} itemProp="headline">
-          {wisząceSpójniki(title)}
-        </SectionTitle>
-      </a>
+    <Link href={href} className="inline-block" itemProp="mainEntityOfPage" rel="bookmark">
+      <SectionTitle size="large" level={level} itemProp="headline">
+        {wisząceSpójniki(title)}
+      </SectionTitle>
     </Link>
   );
 });

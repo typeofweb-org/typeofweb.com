@@ -11,10 +11,11 @@ export default function Custom404() {
         <h1 className="glitch" data-text="404 - Page Not Found">
           404 - Page Not Found
         </h1>
-        <Link href="/">
-          <a className="glitch-link motion-safe:hover:tracking-tighter block text-transparent font-light tracking-widest bg-gradient-to-r from-blue-500 to-pink-500 uppercase motion-safe:transition-all">
-            Idź do strony głównej
-          </a>
+        <Link
+          href="/"
+          className="glitch-link motion-safe:hover:tracking-tighter block text-transparent font-light tracking-widest bg-gradient-to-r from-blue-500 to-pink-500 uppercase motion-safe:transition-all"
+        >
+          Idź do strony głównej
         </Link>
       </div>
       <AppFooter />

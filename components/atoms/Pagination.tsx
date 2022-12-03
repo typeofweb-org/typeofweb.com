@@ -33,30 +33,29 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
         Strona {currentPage} z {pages}
       </p>
       <div className="flex flex-row gap-2 items-stretch justify-center pb-4">
-        <Link href={`${prefix}/strona/${prev}`}>
-          <a
-            rel="prev"
-            className={`focus:no-underline gap-3 inline-flex items-center px-4 py-2 bg-gray-200 border rounded-md shadow-sm hover:shadow-md transition-shadow ${
-              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-900'
-            }
+        <Link
+          href={`${prefix}/strona/${prev}`}
+          rel="prev"
+          className={`focus:no-underline gap-3 inline-flex items-center px-4 py-2 bg-gray-200 border rounded-md shadow-sm hover:shadow-md transition-shadow ${
+            isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-900'
+          }
             ${prev > 0 ? '' : 'invisible'}`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 rotate-180"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            Poprzednia strona
-          </a>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          Poprzednia strona
         </Link>
         <select
           className={`m-0 bg-gray-100 text-gray-900 text-lg border-transparent rounded-sm hover:shadow-md shadow-sm transition-shadow ${
@@ -84,30 +83,23 @@ export const Pagination = memo<{ readonly pages: number; readonly prefix: string
             );
           })}
         </select>
-        <Link href={`${prefix}/strona/${next}`}>
-          <a
-            rel="next"
-            className={`focus:no-underline gap-3 inline-flex items-center px-4 py-2 bg-gray-200 border rounded-md shadow-sm hover:shadow-md transition-shadow ${
-              isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-900'
-            }
+        <Link
+          href={`${prefix}/strona/${next}`}
+          rel="next"
+          className={`focus:no-underline gap-3 inline-flex items-center px-4 py-2 bg-gray-200 border rounded-md shadow-sm hover:shadow-md transition-shadow ${
+            isLoading ? 'cursor-wait pointer-events-none text-gray-500' : 'text-gray-900'
+          }
               ${next <= pages ? '' : 'invisible'}`}
-          >
-            Następna strona
-            <svg
-              className="w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </a>
+        >
+          Następna strona
+          <svg className="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
         </Link>
       </div>
     </nav>

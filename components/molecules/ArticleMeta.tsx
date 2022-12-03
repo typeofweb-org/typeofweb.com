@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { polishPlurals } from 'polish-plurals';
 import { Fragment, memo } from 'react';
@@ -52,11 +52,11 @@ export const ArticleMeta = memo<{
             {series.currentIndex + 1} z {series.count}
           </strong>{' '}
           w serii{' '}
-          <Link href={getSeriesLink(series)} passHref={true}>
-            <LinkUnderlineEffect>
-              <a className="text-blue-500">{series.name}</a>
-            </LinkUnderlineEffect>
-          </Link>
+          <LinkUnderlineEffect>
+            <Link href={getSeriesLink(series)} className="text-blue-500">
+              {series.name}
+            </Link>
+          </LinkUnderlineEffect>
           .
         </p>
       )}
@@ -106,8 +106,8 @@ export const ArticleMeta = memo<{
                   isSmall ? 'text-base' : 'text-lg'
                 }`}
               >
-                <Link href={getCategoryLink(mainCategory)}>
-                  <a {...(rel && { rel: 'category tag' })}>{mainCategory.name}</a>
+                <Link href={getCategoryLink(mainCategory)} {...(rel && { rel: 'category tag' })}>
+                  {mainCategory.name}
                 </Link>
               </span>
             )}
@@ -118,9 +118,7 @@ export const ArticleMeta = memo<{
                 }`}
               >
                 <Link href={href + '#comments'}>
-                  <a>
-                    {commentsCount || 'Brak'} {komentarzy(commentsCount)}
-                  </a>
+                  {commentsCount || 'Brak'} {komentarzy(commentsCount)}
                 </Link>
               </span>
             )}

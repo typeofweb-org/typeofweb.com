@@ -43,10 +43,8 @@ export const SocialWidget = memo(() => {
               key={label}
               className={`${className ? className : 'text-gray-700'} hover:text-green-700 transition-colors`}
             >
-              <Link href={myUrls[slug]}>
-                <a aria-label={label} title={label} className="block">
-                  <Icon className="w-8 fill-current" />
-                </a>
+              <Link href={myUrls[slug]} aria-label={label} title={label} className="block">
+                <Icon className="w-8 fill-current" />
               </Link>
             </li>
           );
@@ -54,28 +52,22 @@ export const SocialWidget = memo(() => {
       </ul>
       <ul className="flex flex-row flex-wrap gap-3 justify-between">
         <li className="mt-7 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
-          <Link href="/feed.json">
-            <a aria-label="JSON Feed" title="JSON Feed" className="block">
-              <JsonFeedIcon className="inline-block mr-2 w-8 fill-current" />
-              JSON Feed
-            </a>
+          <Link href="/feed.json" aria-label="JSON Feed" title="JSON Feed" className="block">
+            <JsonFeedIcon className="inline-block mr-2 w-8 fill-current" />
+            JSON Feed
           </Link>
         </li>
         <li className="mt-7 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
-          <Link href="/feed.xml">
-            <a aria-label="RSS" title="RSS" className="block">
-              <RssIcon className="inline-block mr-2 w-8 fill-current" />
-              RSS
-            </a>
+          <Link href="/feed.xml" aria-label="RSS" title="RSS" className="block">
+            <RssIcon className="inline-block mr-2 w-8 fill-current" />
+            RSS
           </Link>
         </li>
       </ul>
       <ul className="flex flex-row flex-wrap gap-3 justify-between">
         <li className="ml-0 mt-7 pl-0 text-gray-700 hover:text-green-700 text-lg font-semibold transition-colors">
           <Link href="/wspolpraca">
-            <a>
-              <ClickIcon className="inline-block mr-2 w-8 stroke-current" />O mnie i współpraca
-            </a>
+            <ClickIcon className="inline-block mr-2 w-8 stroke-current" />O mnie i współpraca
           </Link>
         </li>
       </ul>

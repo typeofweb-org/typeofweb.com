@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import A from 'next/link';
 import React, { memo } from 'react';
 
 import YouTubeLogo from '../../images/youtube-logo.svg';
@@ -19,33 +19,41 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
       <header>
         <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 flex flex-row`}>
           <div className="order-2 flex items-center -mt-7">
-            <Link href={video.url}>
-              <a className="inline-block" itemProp="mainEntityOfPage" rel="bookmark">
-                <SectionTitle size="medium" level={2} itemProp="headline">
-                  {wisząceSpójniki(video.title)}
-                </SectionTitle>
-              </a>
-            </Link>
+            <a
+              href={video.url}
+              target="_blank"
+              className="inline-block"
+              itemProp="mainEntityOfPage"
+              rel="bookmark noreferrer"
+            >
+              <SectionTitle size="medium" level={2} itemProp="headline">
+                {wisząceSpójniki(video.title)}
+              </SectionTitle>
+            </a>
           </div>
           {video.cover && (
             <div className="order-1 w-full max-w-[9rem] ml-6 mr-10 -mt-2 lg:-mt-6">
-              <Link href={video.url}>
-                <a tabIndex={-1} aria-hidden="true" target="_blank" className="block">
-                  <ArticleCoverImage
-                    cover={{
-                      blurDataURL: video.cover.blurDataURL,
-                      img: video.cover.img,
-                      preload: true,
-                    }}
-                  />
-                </a>
-              </Link>
+              <a
+                href={video.url}
+                target="_blank"
+                tabIndex={-1}
+                aria-hidden="true"
+                target="_blank"
+                className="block"
+                rel="noreferrer"
+              >
+                <ArticleCoverImage
+                  cover={{
+                    blurDataURL: video.cover.blurDataURL,
+                    img: video.cover.img,
+                    preload: true,
+                  }}
+                />
+              </a>
               <div className="flex -ml-6">
-                <Link href={video.url}>
-                  <a target="_blank">
-                    <YouTubeLogo width="100" />
-                  </a>
-                </Link>
+                <a href={video.url} target="_blank" target="_blank" rel="noreferrer">
+                  <YouTubeLogo width="100" />
+                </a>
               </div>
             </div>
           )}
@@ -55,13 +63,11 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
         <p className="!indent-0 whitespace-pre-line">
           {video.description}{' '}
           <span className="ml-2">
-            <Link href={video.url} passHref>
-              <LinkUnderlineEffect>
-                <a className="text-blue-500 font-bold tracking-wider" target="_blank">
-                  Obejrzyj na YouTube <span className="sr-only">filmik {video.title}</span>…
-                </a>
-              </LinkUnderlineEffect>
-            </Link>
+            <LinkUnderlineEffect>
+              <a href={video.url} target="_blank" className="text-blue-500 font-bold tracking-wider" rel="noreferrer">
+                Obejrzyj na YouTube <span className="sr-only">filmik {video.title}</span>…
+              </a>
+            </LinkUnderlineEffect>
           </span>
         </p>
       </div>

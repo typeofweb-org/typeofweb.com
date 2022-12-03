@@ -292,10 +292,11 @@ const HitDetails = memo<{ readonly currentHit: TypeOfWebHit }>(
           />
         )}
         <p className="mt-3 text-gray-900">{currentHit.excerpt}</p>
-        <Link href={getUrlForPermalink(currentHit.objectID)}>
-          <a className="inline-block mt-5 px-4 py-2 text-gray-100 text-2xl focus:bg-green-600 bg-green-700 rounded-md outline-none cursor-pointer transition-all focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2">
-            Idź do artykułu
-          </a>
+        <Link
+          href={getUrlForPermalink(currentHit.objectID)}
+          className="inline-block mt-5 px-4 py-2 text-gray-100 text-2xl focus:bg-green-600 bg-green-700 rounded-md outline-none cursor-pointer transition-all focus:ring focus:ring-blue-100 focus:ring-opacity-50 focus:ring-offset-2"
+        >
+          Idź do artykułu
         </Link>
       </>
     );
@@ -323,7 +324,7 @@ const _CustomHit = memo<CustomHitProps & { readonly insights: WrappedInsightsCli
     }, [isActive]);
 
     return (
-      <Link href={getUrlForPermalink(hit.objectID)}>
+      <Link href={getUrlForPermalink(hit.objectID)} legacyBehavior>
         <a
           ref={currentElRef}
           onMouseEnter={() => onItemHover(hit.objectID)}

@@ -22,12 +22,10 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
       <header className="ios:transcluent-white after:absolute fixed z-10 after:bottom-0 top-0 flex flex-row items-stretch justify-center pb-1 after:w-full w-full after:h-1 h-12 bg-gray-100 after:bg-gray-200 shadow overflow-hidden">
         <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row px-4 max-w-3xl xl:px-0">
           <Link href="/">
-            <a>
-              <HeaderEl itemProp="headline" className="-ml-2 p-2">
-                <span className="sr-only">Type of Web</span>
-                <TypeOfWebLogo className="mt-0.5 w-36 max-w-full" />
-              </HeaderEl>
-            </a>
+            <HeaderEl itemProp="headline" className="-ml-2 p-2">
+              <span className="sr-only">Type of Web</span>
+              <TypeOfWebLogo className="mt-0.5 w-36 max-w-full" />
+            </HeaderEl>
           </Link>
           <MainNav />
         </div>

@@ -110,16 +110,12 @@ export const NewsletterForm = memo<NewsletterFormProps>(({ utmSource }) => {
           <div className="flex">
             <Checkbox label="tiny" required>
               Rozumiem i akceptuję{' '}
-              <Link href="/regulamin">
-                <a target="_blank" className="text-blue-500 hover:underline font-normal">
-                  Regulamin Newslettera
-                </a>
+              <Link href="/regulamin" target="_blank" className="text-blue-500 hover:underline font-normal">
+                Regulamin Newslettera
               </Link>{' '}
               oraz{' '}
-              <Link href="/polityka-prywatnosci">
-                <a target="_blank" className="text-blue-500 hover:underline font-normal">
-                  Politykę Prywatności
-                </a>
+              <Link href="/polityka-prywatnosci" target="_blank" className="text-blue-500 hover:underline font-normal">
+                Politykę Prywatności
               </Link>
               . Wyrażam zgodę na otrzymywanie na podany adres e-mail informacji handlowych w rozumieniu ustawy z dnia 18
               lipca 2002 r. o świadczeniu usług drogą elektroniczną.

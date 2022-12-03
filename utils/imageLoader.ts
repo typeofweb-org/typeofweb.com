@@ -2,7 +2,7 @@
 import { imageConfigDefault } from 'next/dist/server/image-config';
 
 import type { ImageConfig } from 'next/dist/server/image-config';
-import type { ImageLoader, ImageLoaderProps } from 'next/image';
+import type { ImageLoader, ImageLoaderProps } from 'next/legacy/image';
 
 const { path: root, domains: configDomains } =
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- hack

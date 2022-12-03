@@ -1,7 +1,6 @@
 import { getCallback } from '@openlab/vercel-netlify-cms-github';
-import { withSentry } from '@sentry/nextjs';
 
-export default withSentry(
+export default (
   getCallback({
     // scopes: ['public_repo'],
     scopes: ['repo', 'user'],

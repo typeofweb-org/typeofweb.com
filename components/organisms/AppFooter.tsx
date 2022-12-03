@@ -80,11 +80,12 @@ export const AppFooter = memo(() => {
               {s.items.map(({ icon: Icon, label, slug, url, fill }) => {
                 return (
                   <li className="inline-flex items-center h-11" key={slug}>
-                    <Link href={url}>
-                      <a className="inline-flex flex-row items-center hover:text-green-700 transition-colors">
-                        {Icon && <Icon className={`mr-4 w-8 ${fill ? 'fill-current' : 'stroke-current'} `} />}
-                        {label}
-                      </a>
+                    <Link
+                      href={url}
+                      className="inline-flex flex-row items-center hover:text-green-700 transition-colors"
+                    >
+                      {Icon && <Icon className={`mr-4 w-8 ${fill ? 'fill-current' : 'stroke-current'} `} />}
+                      {label}
                     </Link>
                   </li>
                 );
@@ -96,27 +97,30 @@ export const AppFooter = memo(() => {
       <address className="text-center leading-7">
         Type of Web - Michał Miszczyszyn
         <p className="not-italic">
-          <Link href="/polityka-prywatnosci">
-            <a className="hover:text-green-700 underline transition-colors">Polityka prywatności</a>
+          <Link href="/polityka-prywatnosci" className="hover:text-green-700 underline transition-colors">
+            Polityka prywatności
           </Link>
           {' | '}
-          <Link href="/regulamin">
-            <a className="hover:text-green-700 underline transition-colors">Regulamin</a>
+          <Link href="/regulamin" className="hover:text-green-700 underline transition-colors">
+            Regulamin
           </Link>
         </p>
         <p className="mt-3 font-mono not-italic">
-          <Link href="/humans.txt">
-            <a className="hover:text-green-700 underline transition-colors">humans.txt</a>
+          <Link href="/humans.txt" className="hover:text-green-700 underline transition-colors">
+            humans.txt
           </Link>{' '}
-          <Link href="/lawyers.txt">
-            <a className="hover:text-green-700 underline transition-colors">lawyers.txt</a>
+          <Link href="/lawyers.txt" className="hover:text-green-700 underline transition-colors">
+            lawyers.txt
           </Link>
         </p>
         <p className="mt-3 text-lg not-italic font-bold">
           <span className="inline-block">Znalazłeś/aś błąd na stronie?</span>{' '}
           <span className="inline-block">
-            <Link href="https://github.com/typeofweb/typeofweb.com/issues/new">
-              <a className="hover:text-green-700 underline transition-colors">Otwórz issue na GitHubie</a>
+            <Link
+              href="https://github.com/typeofweb/typeofweb.com/issues/new"
+              className="hover:text-green-700 underline transition-colors"
+            >
+              Otwórz issue na GitHubie
             </Link>
             !
           </span>
@@ -131,10 +135,13 @@ export const AppFooter = memo(() => {
             ))}
         </p>
         <p className="mt-3 text-lg not-italic font-bold">
-          <Link href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss">
-            <a target="_blank" rel="noopener noreferrer" className="inline-block mt-10">
-              <VercelIcon className="mx-auto" width={209} height={40} />
-            </a>
+          <Link
+            href="https://vercel.com?utm_source=typeofweb&utm_campaign=oss"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-10"
+          >
+            <VercelIcon className="mx-auto" width={209} height={40} />
           </Link>
         </p>
       </address>
