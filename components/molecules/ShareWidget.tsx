@@ -4,7 +4,7 @@ import TwitterIcon from '../../images/social/twitter.svg';
 
 export const ShareWidget = () => {
   return (
-    <div className="animate-delay-1000 z-30 left-0 top-28 hidden py-3 w-8 bg-gray-100 rounded-2xl rounded-bl-none rounded-tl-none shadow-md animate-appear sm:fixed lg:py-4 lg:w-11 xl:left-auto xl:py-4 xl:w-12 xl:rounded-3xl xl:-translate-x-full">
+    <div className="animate-delay-1000 z-30 left-0 top-28 hidden lg:block py-3 w-8 bg-gray-100 rounded-2xl rounded-bl-none rounded-tl-none shadow-md animate-appear sm:fixed lg:py-4 lg:w-11 xl:left-auto xl:py-4 xl:w-12 xl:rounded-3xl xl:-translate-x-full">
       <small
         lang="en_GB"
         className="block text-center text-gray-600 text-xs tracking-tighter -translate-y-1/4 uppercase lg:text-sm"

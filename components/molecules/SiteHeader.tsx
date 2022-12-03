@@ -56,10 +56,10 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
               href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=banner"
               className="text-blue-500 font-bold"
             >
-              Trzecia edycja Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
+              Czwarta edycja Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
             </a>
           </LinkUnderlineEffect>{' '}
-          już w sprzedaży!
+          wkrótce dostępna!
         </p>
       </div>
     </>
