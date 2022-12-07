@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign -- ok */
-import { imageConfigDefault } from 'next/dist/server/image-config';
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 
-import type { ImageConfig } from 'next/dist/server/image-config';
+import type { ImageConfig } from 'next/dist/shared/lib/image-config';
 import type { ImageLoader, ImageLoaderProps } from 'next/legacy/image';
 
 const { path: root, domains: configDomains } =

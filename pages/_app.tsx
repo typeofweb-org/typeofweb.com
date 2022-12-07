@@ -61,7 +61,11 @@ function ScriptAfterInteraction({
   return null;
 }
 
-const MyApp: AppType = ({ Component, pageProps }) => {
+const MyApp: AppType<{
+  readonly posts?: ReadonlyArray<
+    undefined | { readonly frontmatter?: { readonly cover?: { readonly blurDataURL?: string } } }
+  >;
+}> = ({ Component, pageProps }) => {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -76,13 +80,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     };
   }, [router.events]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call -- ok
-  const urlsToPreload: readonly string[] | undefined = pageProps?.posts
-    ?.map(
-      (p: undefined | { readonly frontmatter?: { readonly cover?: { readonly blurDataURL?: string } } }) =>
-        p?.frontmatter?.cover?.blurDataURL,
-    )
-    .filter(Boolean);
+  const urlsToPreload = pageProps?.posts?.map((p) => p?.frontmatter?.cover?.blurDataURL).filter(Boolean);
 
   return (
     <>
