@@ -60,8 +60,8 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
       <div className={`${props.className ?? ''} img`} style={{ maxWidth: Number(width), maxHeight: Number(height) }}>
         <Image
           {...props}
-          width={width}
-          height={height}
+          width={Number(width)}
+          height={Number(height)}
           src={srcWithoutPublic}
           alt={alt}
           loading="lazy"
