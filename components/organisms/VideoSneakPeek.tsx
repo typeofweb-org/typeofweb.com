@@ -1,4 +1,3 @@
-import A from 'next/link';
 import React, { memo } from 'react';
 
 import YouTubeLogo from '../../images/youtube-logo.svg';
