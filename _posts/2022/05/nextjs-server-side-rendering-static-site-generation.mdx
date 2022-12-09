@@ -158,11 +158,11 @@ Pytanie: czy mamy już ideał? Pewnie domyślasz się, że nie :) Został nam je
 
 Zacznijmy może od tego, że o tym, czy aplikacja korzysta z SSR, SSG, ISR czy CSR decydujemy **per strona**. Oznacza to, że **część aplikacji może być całkowicie statyczna** (np. regulamin, polityka prywatności), **część może się regenerować co godzinę** (np. blog), część może regenerować się co minutę (np. strona produktu w sklepie internetowym), a z kolei **treść dostępna dopiero po zalogowaniu może być całkowicie renderowana po stronie serwera (SSR)** jeśli zajdzie taka potrzeba. A i jeszcze nawiązując do przykładu e-commerce – co z koszykiem? Koszyk będzie CSR. I to wszystko w obrębie jednej appki.
 
-## `unstable_revalidate`
+## `revalidate()`
 
-Ostatnią już poprawką do naszego niemal-ideału jest specjalna funkcja `unstable_revalidate`, która pozwala na **dokładne wskazanie, która podstrona i kiedy ma zostać przegenerowana**. Lubię przykład sklepu internetowego, więc o nim porozmawiajmy: nie chcemy niepotrzebnie męczyć serwera i ustawiać `revalidate` na ekstremalnie krótki czas np. 1 sekundę, ale chcemy mieć w miarę aktualne dane na stronie.
+Ostatnią już poprawką do naszego niemal-ideału jest specjalna funkcja `revalidate()`, która pozwala na **dokładne wskazanie, która podstrona i kiedy ma zostać przegenerowana**. Lubię przykład sklepu internetowego, więc o nim porozmawiajmy: nie chcemy niepotrzebnie męczyć serwera i ustawiać `revalidate` na ekstremalnie krótki czas np. 1 sekundę, ale chcemy mieć w miarę aktualne dane na stronie.
 
-Na szczęście w przypadku sklepu wiemy dokładnie kiedy coś się zmienia: gdy produkt zostanie usunięty lub wykupiony. W zależności od systemu e-commerce, który zasila nasz sklep, możemy na to zareagować np. webhookiem i **wywołać w Next.js specjalną funkcję `unstable_revalidate`**. Spowoduje ona, że Next natychmiast rozpocznie statyczne generowanie wskazanej podstrony.
+Na szczęście w przypadku sklepu wiemy dokładnie kiedy coś się zmienia: gdy produkt zostanie usunięty lub wykupiony. W zależności od systemu e-commerce, który zasila nasz sklep, możemy na to zareagować np. webhookiem i **wywołać w Next.js specjalną funkcję `revalidate()`**. Spowoduje ona, że Next natychmiast rozpocznie statyczne generowanie wskazanej podstrony.
 
 ## SSG, ISR, SSR, CSR…
 
@@ -173,5 +173,3 @@ Wszystkie te pojęcia dokładnie omawiam w czasie [kursu online Nowoczesnego Fro
 <a href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=blogpost-next-2">
   <img width="853" height="480" src="/public/assets/uploads/2022/05/kurs-nextjs-typescript.png" />
 </a>
-
-Słowo na koniec: skąd nazwa `unstable_revalidate`? Funkcja ta została dodana bardzo niedawno i jest jeszcze uważana za niestabilną w rozumieniu, że jej sposób wywoływania oraz działanie mogą ulec zmianie.
