@@ -55,7 +55,7 @@ export const MainNav = memo(() => {
       role="navigation"
       className={`${
         uiState.isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-      } left-0 top-0 z-40 lg:transform-none lg:flex lg:bg-transparent lg:static lg:w-auto lg:h-auto fixed w-full h-screen transition-transform bg-gray-100 flex lg:flex-1 lg:items-stretch`}
+      } left-0 top-0 z-40 lg:transform-none lg:flex lg:bg-transparent lg:static lg:w-auto lg:h-auto fixed w-full min-h-full transition-transform bg-gray-100 flex lg:flex-1 items-center lg:items-stretch`}
     >
       <div className="overflow-scrolling-touch pb-24 pt-16 w-full h-full max-h-screen overflow-y-scroll overscroll-y-none lg:pb-0 lg:pt-0 lg:overflow-y-auto">
         <ul className="flex flex-1 flex-col gap-8 items-center justify-center h-full text-3xl lg:flex-row lg:gap-0 lg:items-stretch lg:justify-around lg:text-base">
