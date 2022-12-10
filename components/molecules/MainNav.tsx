@@ -37,7 +37,7 @@ const navItems: readonly { readonly slug: string; readonly label: ReactNode; rea
   {
     slug: 'wspolpraca',
     label: 'O mnie i współpraca',
-    className: 'md:hidden',
+    className: 'lg:hidden',
   },
 ];
 
