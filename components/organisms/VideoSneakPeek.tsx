@@ -43,7 +43,7 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
               </a>
               <div className="flex -ml-6 absolute left-0">
                 <a href={video.url} target="_blank" rel="noreferrer">
-                  <YouTubeLogo width="100" />
+                  <YouTubeLogo className="h-5" />
                 </a>
               </div>
             </div>
