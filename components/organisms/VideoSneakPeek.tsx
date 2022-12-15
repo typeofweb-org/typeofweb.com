@@ -17,7 +17,7 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
     <Card as="article" className="pt-4" itemScope itemType="http://schema.org/Video">
       <header>
         <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-9 flex flex-row items-start sm:items-center`}>
-          <div className="order-2 flex items-center">
+          <div className="order-2 flex items-center mt-1.5 sm:mt-0 relative">
             <a
               href={video.url}
               target="_blank"
