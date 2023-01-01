@@ -16,8 +16,8 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
   return (
     <Card as="article" className="pt-4" itemScope itemType="http://schema.org/Video">
       <header>
-        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-4 flex flex-row`}>
-          <div className="order-2 flex items-center -mt-7">
+        <div className={`px-7 sm:px-8 lg:px-12 bg-gray-100 pb-9 flex flex-row items-start sm:items-center`}>
+          <div className="order-2 flex items-center mt-1.5 sm:mt-0 relative">
             <a
               href={video.url}
               target="_blank"
@@ -31,7 +31,7 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
             </a>
           </div>
           {video.cover && (
-            <div className="order-1 w-full max-w-[9rem] ml-6 mr-10 -mt-2 lg:-mt-6">
+            <div className="order-1 w-full max-w-[9rem] min-w-[4rem] ml-6 mr-10 -mt-2 lg:-mt-6 relative">
               <a href={video.url} target="_blank" tabIndex={-1} aria-hidden="true" className="block" rel="noreferrer">
                 <ArticleCoverImage
                   cover={{
@@ -41,9 +41,9 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
                   }}
                 />
               </a>
-              <div className="flex -ml-6">
+              <div className="flex -ml-6 absolute left-0">
                 <a href={video.url} target="_blank" rel="noreferrer">
-                  <YouTubeLogo width="100" />
+                  <YouTubeLogo className="h-5" />
                 </a>
               </div>
             </div>
