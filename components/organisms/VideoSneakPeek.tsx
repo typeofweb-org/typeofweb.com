@@ -31,7 +31,7 @@ export const VideoSneakPeek = memo<VideoSneakPeekProps>(({ video }) => {
             </a>
           </div>
           {video.cover && (
-            <div className="order-1 w-full max-w-[9rem] min-w-[4rem] ml-6 mr-10 -mt-2 lg:-mt-6 relative">
+            <div className="order-1 w-full ml-6 mr-10 -mt-2 lg:-mt-6 relative basis-16 sm:basis-36 shrink-0">
               <a href={video.url} target="_blank" tabIndex={-1} aria-hidden="true" className="block" rel="noreferrer">
                 <ArticleCoverImage
                   cover={{
