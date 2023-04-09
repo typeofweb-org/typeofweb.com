@@ -10,7 +10,7 @@ series:
   slug: react-js
   name: React.js
 thumbnail:
-  url: https://og.typeofweb.com/api?text=**Czy+warto+zatrudnia%C4%87+junior%C3%B3w%3F**%0A%F0%9F%A4%93+Model+i+symulacja+produktywno%C5%9Bci+zespo%C5%82%C3%B3w+%F0%9F%93%88&overlayColor=4b271b&overlayOpacity=0.60
+  url: /public/assets/uploads/2023/04/uzywanie-usecallback-zawsze-czy-to-dobry-pomysl.png
   width: 1920
   height: 1005
 ---
