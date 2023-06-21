@@ -32,9 +32,9 @@ export const PromoWidget = memo(() => {
         <li className="ml-0 pl-0 text-gray-700 text-lg font-semibold transition-colors">
           <Link
             className="hover:text-green-700"
-            href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=sidebar"
+            href="https://www.next13masters.pl/webinar/?utm_source=typeofweb&utm_medium=sidebar"
           >
-            Czwarta edycja kursu Next.js, React, GraphQL, TypeScript wkrótce dostępna!
+            Darmowy webinar: Next.js 13 wywraca wszystko do góry nogami. Zapisz się!
           </Link>
         </li>
       </ul>

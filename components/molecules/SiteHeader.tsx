@@ -51,10 +51,10 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
         <p>
           <LinkUnderlineEffect>
             <a
-              href="https://next.hyperfunctor.com/?utm_source=typeofweb&utm_medium=banner"
               className="text-blue-500 font-bold"
+              href="https://www.next13masters.pl/webinar/?utm_source=typeofweb&utm_medium=sidebar"
             >
-              Czwarta edycja Kursu Nowoczesnego Frontendu: Next.js, React, TypeScript, GraphQL
+              Darmowy webinar: Next.js 13 wywraca wszystko do góry nogami. Zapisz się!
             </a>
           </LinkUnderlineEffect>{' '}
           wkrótce dostępna!
