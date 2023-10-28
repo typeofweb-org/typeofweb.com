@@ -1,6 +1,6 @@
 /* eslint-disable functional/no-loop-statement -- useful */
-import AuthorsJson from '../../authors.json';
-import Data from '../../relatedPosts2.json';
+import AuthorsJson from '../../authors.json' assert { type: 'json' };
+import Data from '../../relatedPosts2.json' assert { type: 'json' };
 import { postToProps } from '../../utils/postToProps';
 import { getPostByPermalink } from '../../utils/posts';
 

@@ -5,7 +5,7 @@ import Url from 'url';
 import Bluebird from 'bluebird';
 import { Feed } from 'feed';
 
-import AuthorsJson from './authors.json';
+import AuthorsJson from './authors.json' assert { type: 'json' };
 import { siteName, defaultDescription } from './constants';
 import { postToProps } from './utils/postToProps';
 import { readAllPosts } from './utils/posts';

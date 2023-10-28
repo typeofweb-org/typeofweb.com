@@ -14,7 +14,7 @@
     text-indent: 0;
   }
   .prose a {
-    @apply text-blue-500 no-underline font-bold tracking-tight;
+    @apply text-blue-500 no-underline font-bold tracking-tight word-break-break-word;
   }
   .prose strong {
     color: theme('colors.gray.900');

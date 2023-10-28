@@ -2,7 +2,7 @@ import Fsa from 'fs/promises';
 
 import OembedParser from 'oembed-parser';
 const { extract, setProviderList } = OembedParser;
-import Providers from 'oembed-parser/src/utils/providers.json';
+import Providers from 'oembed-parser/src/utils/providers.json' assert { type: 'json' };
 
 import { host } from '../constants';
 

@@ -1,0 +1,102 @@
+---
+title: 'Odpowiedź na artykuł „Why I won’t use Next.js” autorstwa Kent C. Dodds'
+permalink: 'why-i-wont-use-next.js-kent-c-dodds'
+type: post
+date: 2023-10-28T18:00:42.569Z
+authors:
+  - michal-miszczyszyn
+category: javascript
+series:
+  slug: react-js
+  name: React.js
+thumbnail:
+  url: /public/assets/uploads/2023/10/why-i-wont-use-next.js-kent-c-dodds.png
+  width: 1920
+  height: 1005
+---
+
+Kilka dni temu świat obiegł artykuł Kent C. Dodds o krzykliwym tytule „Why I won't use Next.js”. Kent krytykuje w nim Next.js, a jako przykład frameworka rozwiązującego wszystkie problemy podaje Remix. Cóż, to nie do końca tak… Poniżej znajdziecie moją odpowiedź na każdy z podpunktów.
+
+---
+
+## Independence
+
+> OpenNext exists because Next.js is difficult to deploy anywhere but Vercel.
+
+To zdanie mogłoby być prawdziwe, gdyby brzmiało „OpenNext istnieje ponieważ deployowanie Next.js na AWS z użyciem serverless jest trudne”. I to absolutnie prawda, jest to dość skomplikowane. Skomplikowane do tego stopnia, że **Remix również nie udostępnia gotowego template'u na AWS z serverless** wbrew temu co zdaje się sugerować Kent w swoim artykule.
+
+OpenNext korzysta z SST – projektu, który powstał po to, aby ułatwić deployment aplikacji na AWS. Nie jest to specyficzne ani celowane tylko w Next.js, a wręcz przeciwnie: na stronie SST wymieniono Next.js, Astro, SvelteKit, SolidSite i… Remix.
+
+Teraz, czy Vercel ma interes w tym, aby ułatwiać korzystanie z Next.js na innych hostingach mimo, że sam oferuje swoje płatne usługi? Oczywiście nie. Mimo to, w repozytorium Next.js znajdziemy przykłady tego, jak to robić [1](https://github.com/vercel/next.js/tree/canary/examples/with-docker-compose) [2](https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env) [3](https://github.com/vercel/next.js/tree/canary/examples/with-docker), a dokumentacja opisuje nawet jak zaimplementować [własny Data Cache](https://nextjs.org/docs/app/api-reference/next-config-js/incrementalCacheHandlerPath).
+
+## Next.js is eating React
+
+> Ever since then, the React team has felt much less collaborative.
+
+Brakuje tu jakichś konkretnych argumentów albo przykładów, a trudno się zgadzać lub nie zgadzać z czyimiś odczuciami. Z mojej perspektywy nie zmieniło się nic oprócz _velocity_ – rozwój i wdrażanie nowych rzeczy do Reacta mocno przyśpieszyło przez ostatni rok. Ale nadal dzieje się to **publicznie, jest proces RFC**, wdrożenie do wersji `canary` i dopiero dużo, dużo później w stabilnej wersji.
+
+Problemem dla zespołu Remixa może być to, że **to nie oni, a team Next.js wykorzystał nowe feature'y Reacta jako pierwszy**. Mówimy tu o React Server Components i Server Actions – rzeczach, które nie są częścią samego Nexta, a właśnie Reacta i w zasadzie każdy metaframework może z nich korzystać. Remix świadomie i [celowo tego nie robi](https://remix.run/blog/react-server-components#remix-can-take-full-advantage-of-rsc), więc tym bardziej trudno zrozumieć ten punkt krytyki.
+
+## Experimenting on my users
+
+> Features that Next.js is shipping as stable are in the canary release of React.
+
+Tak jest, dokładnie! Tylko, że określenie `canary` w React ma nieco [inne znaczenie niż w innych projektach](https://react.dev/blog/2023/05/03/react-canaries). Twórcy Reacta mówią, że przez `canary` rozumieją taką wersję React.js, która jest gotowa do adopcji w metaframeworkach. Wersja niestabilna Reacta oznaczona jest tagiem `experimental`. To chyba wyjaśnia wątpliwości podane w tym akapicie, prawda
+
+## Too much magic
+
+Wbrew temu co pisze Kent, Next.js w pełni zaadoptował Web API. Formularze są, cóż, zwykłymi `form`, API Route'y korzystają z `Request` i `Response`, jest ogromny nacisk na `fetch` i tak dalej… **Zdecydowanie mniej magii niż w poprzednich wersjach.**
+
+Dla odmiany, Remix idzie w [zupełnie przeciwnym kierunku](https://twitter.com/ryanflorence/status/1686757173202997249):
+
+- zamiast standardowego `async/server components` mają `loader`
+- zamiast standardowego `server actions`, `"use server"` mają `action`
+- zamiast standardowego `"use client"` mają `code splitting`
+- zamiast standardowego `async components` mają SSR `ErrorBoundary`
+- zamiast standardowego `async components` mają `defer`
+- zamiast standardowego `<form action>` mają `Form`
+- zamiast standardowego `useFormStatus`, `useOptimistic` mają `useNavigation`/`useFetcher`
+
+I na razie nie planują tego zmieniać.
+
+Bulwersujący dla wielu osób jest fakt, że Next.js nadpisuje funkcję `fetch` i dodaje do niej obsługę swojego cache. Kent porównuje to do nadpisywania prototypów wbudowanych obiektów przez MooTools, co jest albo zwykłą demagogią albo **całkowitym niezrozumieniem problemu.**
+
+Dodawanie lub nadpisywanie własności w prototypach = problem z kompatybilnością i działaniem kodu pochodzącego z różnych źródeł.
+Natomiast owinięcie globalnej funkcji w swój kod i wywołanie oryginału pod spodem nie stwarza problemów dla użytkowników końcowych. Co ciekawe, Next.js **nie ustanawia tu precedensu**. Choćby Angular nadpisuje praktycznie [wszystkie globalne funkcje](https://github.com/angular/angular/blob/HEAD/packages/zone.js/STANDARD-APIS.md#browser). Z ciekawszych przykładów warto wymienić też Cloudflare – jedną z firm zasiadających w grupie rozwijającej Web API – który w workerach nadpisuje `fetch` w sposób podobny do Nexta i również dodaje własną obsługę cache.
+
+## Complexity
+
+Autor pisze tutaj, że Next.js staje się zbyt skomplikowany, a jako przykłady tego podaje API dodane do React.js, z którego korzysta również Remix. Kurtyna.
+
+[Ładnie skomentował to Dan Abramov](https://twitter.com/dan_abramov/status/1649214795571134465), więc chyba więcej dodawać nie trzeba.
+
+## Stability
+
+Jeśli dobrze rozumiem zamysł Kent C. Dodds, to teza tego akapitu jest następująca: „Remix miał tylko 2 wersje, więc jest bardziej stabilny niż Next.js, który miał 14 wersji”. **Jest to nie tylko absurdalne, ale też całkowicie nieprawdziwe.** Przyjrzyjmy się.
+
+Next.js jest rozwijany od listopada 2016, a więc obchodzi 7 urodziny. Pierwszym wydaniem Next.js była wersja… `1.0.1`. Chcąc podążać za SemVer, od tego momentu każda modyfikacja publicznego API Next.js musiała wiązać się z podbiciem wersji `major`, czyli 1 na 2, 2 na 3 i tak dalej… Zwróćmy też uwagę, że wersja 13 została podbita do 14 tylko z uwagi na podniesienie wymaganej wersji Node.js – nie było innych _breaking changes_.
+
+Remix przyjął odmienną strategię wersjonowania. Pierwsze publiczne wydanie oznaczone `0.8.0` ukazało się w 2021 roku. Wersje zaczynające się od `0.` zgodnie z SemVer mogą wprowadzać _breaking changes_ bez konieczności podbijania wersji `major`, a więc `0.8.0` zamienia się w `0.9.0`, a nie `1.0.0`. Poświęciłem więc czas na przejrzenie całego _changelogu_ Remixa i znalazłem tam **12 _breaking changes_**. Gdyby więc zespół Remixa przyjął ten sam model wersjonowania, byliby **po dwóch latach na tym samym numerze wersji 13 co Next.js po siedmiu**. Daje do myślenia, prawda?
+
+Dodatkowo Kent zdaje się sugerować, że Next.js nie daje ścieżki migracji ze starych wersji do nowych – ale może to tylko moje złe wrażenie? Anyway, Next.js 12 na 13 migrujemy w 3 minuty – zmiany są malutkie, a nowy router całkowicie opcjonalny. Poprzedni sposób routingu będzie wspierany jeszcze długo, przez wiele lat. Z kolei migracja z 13 na 14 zajęła nam [w produkcyjnym projekcie dosłownie 30 sekund](https://twitter.com/zaiste/status/1717595898312642786).
+
+## Podsumowanie
+
+Rok temu [nagraliśmy z Zaiste film pod hasłem „Marketing Remixa obnażony”](https://www.youtube.com/live/XKeN9WsUAzM), w którym rozłożyliśmy na czynniki pierwsze porównanie Next.js i Remixa opublikowane przez zespół Remixa. Wykazaliśmy tam, że treści tam zawarte są **nie tylko nieobiektywnym stuntem marketingowym, ale po prostu zwykłymi kłamstwami i manipulacjami** bez grama wstydu.
+
+Artykuł Kent C. Dodds jest na pewno bardziej wyważony, a ostateczną ocenę intencji pozostawię Wam.
+
+Ironiczne jest to, że Kent sprzedaje kurs Remixa na stronie napisanej w Next.js.
+
+## Linki
+
+1.  [github.com/vercel/next.js/tree/canary/examples/with-docker-compose](https://github.com/vercel/next.js/tree/canary/examples/with-docker-compose)
+2.  [github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env](https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env)
+3.  [github.com/vercel/next.js/tree/canary/examples/with-docker](https://github.com/vercel/next.js/tree/canary/examples/with-docker)
+4.  [nextjs.org/docs/app/api-reference/next-config-js/incrementalCacheHandlerPath](https://nextjs.org/docs/app/api-reference/next-config-js/incrementalCacheHandlerPath)
+5.  [remix.run/blog/react-server-components#remix-can-take-full-advantage-of-rsc](https://remix.run/blog/react-server-components#remix-can-take-full-advantage-of-rsc)
+6.  [twitter.com/ryanflorence/status/1686757173202997249](https://twitter.com/ryanflorence/status/1686757173202997249)
+7.  [github.com/angular/angular/blob/HEAD/packages/zone.js/STANDARD-APIS.md#browser](https://github.com/angular/angular/blob/HEAD/packages/zone.js/STANDARD-APIS.md#browser)
+8.  [twitter.com/zaiste/status/1717595898312642786](https://twitter.com/zaiste/status/1717595898312642786)
+9.  [react.dev/blog/2023/05/03/react-canaries](https://react.dev/blog/2023/05/03/react-canaries)
+10. [youtube.com/live/XKeN9WsUAzM](https://www.youtube.com/live/XKeN9WsUAzM)

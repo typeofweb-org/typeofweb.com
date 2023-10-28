@@ -843,5 +843,21 @@
       "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/LG7-Q3uCYUI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     "updatedAt": 1641226257616
+  },
+  "https://twitter.com/dan_abramov/status/1649214795571134465": {
+    "data": {
+      "url": "https://twitter.com/dan_abramov/status/1649214795571134465",
+      "author_name": "danabra.mov",
+      "author_url": "https://twitter.com/dan_abramov",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">it’s the other way around. Next has rewritten their entire framework under the technical direction and vision from the React team. including changing some APIs to something less Next-specific. we care a lot about this kind of stuff and getting it right.</p>&mdash; danabra.mov (@dan_abramov) <a href=\"https://twitter.com/dan_abramov/status/1649214795571134465?ref_src=twsrc%5Etfw\">April 21, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "https://twitter.com",
+      "version": "1.0"
+    },
+    "updatedAt": 1698507153245
   }
 }

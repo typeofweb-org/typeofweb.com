@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import AuthorsJson from '../authors.json';
+import AuthorsJson from '../authors.json' assert { type: 'json' };
 import { Pagination } from '../components/atoms/Pagination';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';

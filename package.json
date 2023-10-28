@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "./build.sh public && concurrently 'next dev' 'netlify-cms-proxy-server' --kill-others-on-fail",
+    "dev": "./build.sh public && next dev",
     "dev2": "next-remote-watch ./_posts/**/*.mdx ./_pages/**/*.mdx ./_wordpress_posts/**/*.mdx ",
     "build": "./build.sh feed public next",
     "postbuild": "next-sitemap",
@@ -14,7 +14,7 @@
     "algolia": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateAlgoliaItems.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@algolia/recommend": "4.13.0",
     "@giscus/react": "github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
@@ -108,7 +108,7 @@
     "svgo": "2.8.0",
     "tailwindcss": "3.0.23",
     "terser": "5.12.1",
-    "ts-node": "10.7.0",
+    "ts-node": "10.9.1",
     "typescript": "4.6.3",
     "unified": "10.1.2",
     "unist-util-map": "3.0.1",
@@ -122,5 +122,9 @@
   },
   "browserslist": [
     "> 2% in my stats"
-  ]
+  ],
+  "engines": {
+    "node": "^18.0.0",
+    "yarn": "^1.22.0"
+  }
 }

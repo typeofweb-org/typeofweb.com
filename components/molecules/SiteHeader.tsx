@@ -52,12 +52,11 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           <LinkUnderlineEffect>
             <a
               className="text-blue-500 font-bold"
-              href="https://www.next13masters.pl/webinar/?utm_source=typeofweb&utm_medium=sidebar"
+              href="https://www.next13masters.pl/?utm_source=typeofweb&utm_medium=sidebar"
             >
-              Darmowy webinar: Next.js 13 wywraca wszystko do góry nogami. Zapisz się!
+              Już wkrótce odpalamy zapisy na drugą edycję next13masters.pl. Zapisz się na listę oczekujących!
             </a>
-          </LinkUnderlineEffect>{' '}
-          wkrótce dostępna!
+          </LinkUnderlineEffect>
         </p>
       </div>
     </>

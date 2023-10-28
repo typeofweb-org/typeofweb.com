@@ -281,7 +281,13 @@ function legacyWordpressCollection() {
 }
 
 async function posts() {
-  const authors = (await import(/* webpackChunkName: "authors" */ '../../authors.json')).default.authors;
+  const authors = (
+    await import(/* webpackChunkName: "authors" */ '../../authors.json', {
+      assert: {
+        type: 'json',
+      },
+    })
+  ).default.authors;
   return {
     name: 'posts',
     label: 'Artykuły',

@@ -1,4 +1,4 @@
-import AuthorsJson from '../../../authors.json';
+import AuthorsJson from '../../../authors.json' assert { type: 'json' };
 import { getMarkdownPostsFor, getSeriesLinks, postToProps } from '../../../utils/postToProps';
 import { getSeriesPermalinks } from '../../../utils/posts';
 import { seriesSlugToSeries } from '../../../utils/series';

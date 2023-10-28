@@ -1,4 +1,4 @@
-import AuthorsJson from '../../../authors.json';
+import AuthorsJson from '../../../authors.json' assert { type: 'json' };
 import { pageSize } from '../../../constants';
 import { permalinkIsCategory } from '../../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../../utils/postToProps';

@@ -1,4 +1,4 @@
-import AuthorsJson from '../../authors.json';
+import AuthorsJson from '../../authors.json' assert { type: 'json' };
 import { MDXComponent } from '../../components/MDXComponent';
 import { Seo } from '../../components/Seo';
 import { NewsletterForm } from '../../components/molecules/NewsletterForm';

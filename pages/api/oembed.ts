@@ -1,4 +1,4 @@
-import Authors from '../../authors.json';
+import Authors from '../../authors.json' assert { type: 'json' };
 import { getExcerptAndContent, getPostByPermalink } from '../../utils/posts';
 
 import type { OembedData } from '../../utils/oEmbedCache';
