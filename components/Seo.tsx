@@ -36,7 +36,7 @@ const jsonLd = {
         'https://www.instagram.com/michal_typeofweb/',
         'https://linkedin.com/in/mmiszczyszyn',
         'https://www.youtube.com/typeofweb',
-        'https://twitter.com/mmiszy',
+        'https://twitter.com/typeofweb',
       ],
       logo: {
         '@type': 'ImageObject',
@@ -151,7 +151,7 @@ export const Seo = memo<SeoProps>(
 
         <meta key="fb:app_id" property="fb:app_id" content="1709793622637583" />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        <meta key="twitter:site" name="twitter:site" content="@mmiszy" />
+        <meta key="twitter:site" name="twitter:site" content="@typeofweb" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
