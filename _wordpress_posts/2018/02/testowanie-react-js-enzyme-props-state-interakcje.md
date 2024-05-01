@@ -98,7 +98,7 @@ Podobnie można testować inne zdarzenia, np. <code>click</code> czy nawet <co
 
 <h2>Podsumowanie</h2>
 
-Tym sposobem masz już pełen zestaw narzędzi potrzebny do testowania nawet najbardziej rozbudowanych komponentów. Enzyme jest świetną biblioteką i warto zapoznać się z jego pełną dokumentacją! Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-3">https://github.com/mmiszy/typeofweb-kurs-react/tree/part-3</a>
+Tym sposobem masz już pełen zestaw narzędzi potrzebny do testowania nawet najbardziej rozbudowanych komponentów. Enzyme jest świetną biblioteką i warto zapoznać się z jego pełną dokumentacją! Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/part-3">https://github.com/typeofweb/typeofweb-kurs-react/tree/part-3</a>
 
 Jeśli chcesz poznać Enzyme i inne metody testowania React dogłębnie, to <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 

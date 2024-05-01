@@ -62,8 +62,8 @@ Stała `counter` zawiera aktualny stan. Na początku jest to stan początkowy, c
 
 Sprawdźmy jak to działa w praktyce:
 
-<CodepenWidget height="265" themeId="0" slugHash="zedadL" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy">
-<a href="http://codepen.io/mmiszy/pen/zedadL/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.
+<CodepenWidget height="265" themeId="0" slugHash="zedadL" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy">
+<a href="http://codepen.io/typeofweb/pen/zedadL/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.
 </CodepenWidget>
 
 ## Ale co to w ogóle jest Hook?
@@ -101,8 +101,8 @@ function App() {
 
 W momencie wpisania czegoś w input, wywoływana jest funkcja `filterUsers`, która filtruje listę i wywołuje `setUsers` pochodzące z Hooka. Ot, cała filozofia. Stan jest _gdzieś_ przechowywany i nie bardzo obchodzi nas gdzie. To po prostu działa.
 
-<CodepenWidget height="265" themeId="0" slugHash="ErvLzo" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy">
-<a href="http://codepen.io/mmiszy/pen/ErvLzo/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.
+<CodepenWidget height="265" themeId="0" slugHash="ErvLzo" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy">
+<a href="http://codepen.io/typeofweb/pen/ErvLzo/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.
 </CodepenWidget>
 
 ## Pytania?

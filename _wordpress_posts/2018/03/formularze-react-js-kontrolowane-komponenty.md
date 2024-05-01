@@ -120,8 +120,8 @@ Te inputy mają, podobnie jak w HTML, specjalny atrybut `checked` do którego na
 
 Przyszedł czas na demo — przykład kontrolowanego formularza w React.js:
 
-<CodepenWidget height="465" themeId="0" slugHash="mXZLwp" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com">
-<a href="http://codepen.io/mmiszy/pen/mXZLwp/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.
+<CodepenWidget height="465" themeId="0" slugHash="mXZLwp" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com">
+<a href="http://codepen.io/typeofweb/pen/mXZLwp/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.
 </CodepenWidget>
 
 ## Podsumowanie

@@ -77,8 +77,8 @@ Zacznij od napisania kodu HTML i CSS. W przykładzie wykorzystuję framework CSS
 
 Jest tutaj nagłówek z logo i przyciskiem dodawania kontaktów oraz lista z trzema kontaktami. Wygląda dokładnie jak na screenshocie powyżej. Ale chcesz mieć to w React, prawda? Do dzieła!
 
-<CodepenWidget height="300" themeId="0" slugHash="bYEaNQ" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
-<a href="http://codepen.io/mmiszy/pen/bYEaNQ/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
+<CodepenWidget height="300" themeId="0" slugHash="bYEaNQ" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
+<a href="http://codepen.io/typeofweb/pen/bYEaNQ/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
 </CodepenWidget>
 
 <h2>Co dalej?</h2>

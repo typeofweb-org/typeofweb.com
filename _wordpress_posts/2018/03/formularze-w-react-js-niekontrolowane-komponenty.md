@@ -103,8 +103,8 @@ Ale **nie słuchaj mnie**. Sam(a) wyrób sobie opinię :) Poczytaj, potestuj, i
 
 ## Demo
 
-<CodepenWidget height="265" themeId="0" slugHash="YaWmXN" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com">
-<a href="http://codepen.io/mmiszy/pen/YaWmXN/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.
+<CodepenWidget height="265" themeId="0" slugHash="YaWmXN" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Kurs React.js — niekontrolowany formularz — typeofweb.com">
+<a href="http://codepen.io/typeofweb/pen/YaWmXN/">Zobacz Codepen Kurs React.js — niekontrolowany formularz — typeofweb.com</a>.
 </CodepenWidget>
 
 ## Podsumowanie
@@ -118,4 +118,4 @@ Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.
 ## Ćwiczenie
 
 Przerób cały formularz z poprzedniego odcinka na niekontrolowane elementy:
-[codepen.io/mmiszy/pen/mXZLwp](https://codepen.io/mmiszy/pen/mXZLwp)
+[codepen.io/typeofweb/pen/mXZLwp](https://codepen.io/typeofweb/pen/mXZLwp)

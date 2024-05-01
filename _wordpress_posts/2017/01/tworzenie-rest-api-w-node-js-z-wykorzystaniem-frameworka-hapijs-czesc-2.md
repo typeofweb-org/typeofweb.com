@@ -334,6 +334,6 @@ Przy okazji podpowiedź: Warto zainstalować do swojej przeglądarki rozszerzeni
 <h1 id="podsumowanie">Podsumowanie</h1>
 Uff, dzisiaj spora dawka wiedzy za nami. <strong>Nauczyliśmy się obsługiwać parametry w ścieżkach oraz <em>query string</em>. Poznaliśmy bibliotekę Joi i nauczyliśmy się ją wykorzystywać do walidowania zapytań do naszego API.</strong> Zwieńczeniem lekcji było stworzenie backendu do prostej aplikacji w node.js.
 
-Cały kod dostępny jest na moim GitHubie: <a href="https://github.com/mmiszy/hapijs-tutorial/tree/czesc-2">https://github.com/mmiszy/hapijs-tutorial/tree/czesc-2</a>
+Cały kod dostępny jest na moim GitHubie: <a href="https://github.com/typeofweb/hapijs-tutorial/tree/czesc-2">https://github.com/typeofweb/hapijs-tutorial/tree/czesc-2</a>
 
 W kolejnym wpisie wykorzystamy Joi do zmieniania kształtu danych, które są zwracane przez nasze API. Ponadto, zmienimy trochę strukturę naszej aplikacji i podzielimy plik <code>index.js</code> na logiczne fragmenty.

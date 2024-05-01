@@ -58,11 +58,11 @@ No ale jak? Poprzez proste i łatwe do zapamiętania atrybuty wprost na elementa
 
 Jak widzisz, dodaję na elemencie prosty atrybut <code>onClick</code>, który reaguje na kliknięcia. Zobacz sam(a):
 
-<CodepenWidget height="265" themeId="0" slugHash="ZaOdgq" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
-<a href="http://codepen.io/mmiszy/pen/ZaOdgq/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
+<CodepenWidget height="265" themeId="0" slugHash="ZaOdgq" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
+<a href="http://codepen.io/typeofweb/pen/ZaOdgq/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
 </CodepenWidget>
 
-<h2 data-height="265" data-theme-id="0" data-slug-hash="ZaOdgq" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Props czyli atrybuty w React.js">Inne zdarzenia React</h2>
+<h2 data-height="265" data-theme-id="0" data-slug-hash="ZaOdgq" data-default-tab="js,result" data-user="typeofweb" data-embed-version="2" data-pen-title="Props czyli atrybuty w React.js">Inne zdarzenia React</h2>
 
 Podobnych zdarzeń w React jest bardzo wiele. Najpopularniejsze to:
 

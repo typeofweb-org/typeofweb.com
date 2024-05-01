@@ -31,8 +31,8 @@ W jednym z komentarzy ktoś zasugerował mi, abym pokazywał jak najwięcej pra
 
 Chcesz stworzyć listę (np. kontaktów) i wyrenderować ją. Łatwizna. Do tego potrzebujemy input, który będzie wyszukiwarką. Wpisanie czegoś w input ma powodować filtrowanie listy. Dodatkowo jeśli nic nie znaleziono — ma wyświetlić się komunikat. Jeśli nie wiesz, jak to ugryźć to <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 
-<CodepenWidget height="265" themeId="0" slugHash="govXpM" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy">
-<a href="http://codepen.io/mmiszy/pen/govXpM/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.
+<CodepenWidget height="265" themeId="0" slugHash="govXpM" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="React.js w przykładach: Filtrowanie listy">
+<a href="http://codepen.io/typeofweb/pen/govXpM/">Zobacz Codepen React.js w przykładach: Filtrowanie listy</a>.
 </CodepenWidget>
 
 <h2>Pytania?</h2>

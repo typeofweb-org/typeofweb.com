@@ -61,13 +61,13 @@ Na szczęście <code>setState</code> jest mądrzejsze i automatycznie <strong>�
 
 A tutaj w pełni działające rozwiązanie:
 
-<CodepenWidget height="265" themeId="0" slugHash="eevevJ" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
-<a href="http://codepen.io/mmiszy/pen/eevevJ/">Zobacz Codepen Stan komponentów React.js</a>.
+<CodepenWidget height="265" themeId="0" slugHash="eevevJ" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/typeofweb/pen/eevevJ/">Zobacz Codepen Stan komponentów React.js</a>.
 </CodepenWidget>
 
 Jeśli to nie jest dla Ciebie jasne, nie ma w tym nic złego :) Możesz zadać nam pytanie w komentarzu! <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
 
-<h2 data-height="265" data-theme-id="0" data-slug-hash="eevevJ" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Stan komponentów React.js">Funkcja przekazana do <code>setState</code></h2>
+<h2 data-height="265" data-theme-id="0" data-slug-hash="eevevJ" data-default-tab="js,result" data-user="typeofweb" data-embed-version="2" data-pen-title="Stan komponentów React.js">Funkcja przekazana do <code>setState</code></h2>
 
 Widzisz, że do <code>setState</code> możemy po prostu przekazać obiekt, który zostanie połączony z obecnym stanem i nadpisze podane własności. I to, do niedawna, była jedyna opcja. Od Reacta 16 polecanym sposobem aktualizowania stanu jest przekazanie do <code>setState</code> <strong>funkcji, a nie obiektu.</strong> Taka funkcja to tzw. <strong>updater. </strong>Jak to działa? Updater to taka funkcja, która jako argument przyjmuje obecny stan i jako wynik zwraca obiekt, który zostanie połączony z istniejącym stanem. Przykładowo dla nas:
 
@@ -86,14 +86,14 @@ Jakie są zalety tego rozwiązania względem po prostu przekazania obiektu do <c
 
 Dokładnie tak jak w nagłówku. Co to oznacza? Najprościej mówiąc, że <strong>wywołanie <code>setState</code> nie zmienia stanu <em>od razu</em>, tylko dopiero <em>po jakimś czasie</em></strong>. Czyli, przykładowo, próba odczytania stanu od razu po jego zmianie przez <code>setState</code> pokaże nam nadal stary, nieaktualny stan. Otwórz konsolę i kliknij w przycisk w tym przykładzie:
 
-<CodepenWidget height="200" themeId="0" slugHash="KyWZby" defaultTab="result,js" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
-<a href="http://codepen.io/mmiszy/pen/KyWZby/">Zobacz Codepen Stan komponentów React.js</a>.
+<CodepenWidget height="200" themeId="0" slugHash="KyWZby" defaultTab="result,js" user="typeofweb" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/typeofweb/pen/KyWZby/">Zobacz Codepen Stan komponentów React.js</a>.
 </CodepenWidget>
 
 Jak naprawić ten problem? Otóż <strong><code>setState</code> przyjmuje też drugi argument: callback</strong>. Jeśli jako drugi argument przekażesz funkcję to zostanie ona wywołana w momencie, gdy stan będzie już zaktualizowany. Spójrz po prostu na przykład (z widoczną konsolą):
 
-<CodepenWidget height="200" themeId="0" slugHash="ZaerWq" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Stan komponentów React.js">
-<a href="http://codepen.io/mmiszy/pen/ZaerWq/">Zobacz Codepen Stan komponentów React.js</a>.
+<CodepenWidget height="200" themeId="0" slugHash="ZaerWq" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Stan komponentów React.js">
+<a href="http://codepen.io/typeofweb/pen/ZaerWq/">Zobacz Codepen Stan komponentów React.js</a>.
 </CodepenWidget>
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>

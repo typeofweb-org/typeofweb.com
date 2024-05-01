@@ -207,7 +207,7 @@ export class AppComponent {
 &lt;typeofweb-gravatar [email]="contact.email" size="64"&gt;&lt;/typeofweb-gravatar&gt;  
 </code></pre>
 
-<p><em>Voilà</em>! Gotowe. Źródła komponentu <code>typeofweb-gravatar</code> tutaj pominę, ale całość dostępna jest na moim GitHubie: <a href="https://github.com/mmiszy/angular2-contacts-list">github.com/mmiszy/angular2-contacts-list</a>. Efekt prezentuje się poniżej:</p>
+<p><em>Voilà</em>! Gotowe. Źródła komponentu <code>typeofweb-gravatar</code> tutaj pominę, ale całość dostępna jest na moim GitHubie: <a href="https://github.com/typeofweb/angular2-contacts-list">github.com/typeofweb/angular2-contacts-list</a>. Efekt prezentuje się poniżej:</p>
 
 <iframe class=large style="height: 350px" src="//embed.plnkr.co/wPYeiHJ53qVytGA3MQ4I/" frameborder="0" allowfullscren="allowfullscren"></iframe>
 

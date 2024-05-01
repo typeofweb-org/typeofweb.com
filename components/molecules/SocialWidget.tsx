@@ -26,7 +26,7 @@ export const social = [
 export const myUrls = {
   twitter: 'https://twitter.com/typeofweb',
   facebook: 'https://facebook.com/typeofweb',
-  github: 'https://github.com/typeofweb',
+  github: 'https://github.com/typeofweb-org',
   youtube: 'https://www.youtube.com/c/typeofweb',
   instagram: 'https://instagram.com/michal_typeofweb',
   linkedin: 'https://linkedin.com/in/mmiszczyszyn',

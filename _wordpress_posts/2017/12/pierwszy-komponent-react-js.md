@@ -109,16 +109,16 @@ To naprawdę tak proste :) Tworzysz funkcję i w środku niej zwracasz JSX. Nast
   document.getElementById('app')
 );</code></pre>
 
-<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
-<a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
+<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/typeofweb/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
 </CodepenWidget>
 
-<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
-<a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
+<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/typeofweb/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
 </CodepenWidget>
 
-<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Wstęp do React">
-<a href="http://codepen.io/mmiszy/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
+<CodepenWidget height="265" themeId="0" slugHash="aLrLaK" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Wstęp do React">
+<a href="http://codepen.io/typeofweb/pen/aLrLaK/">Zobacz Codepen Wstęp do React</a>.
 </CodepenWidget>
 
 <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>.
@@ -129,6 +129,6 @@ Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to konieczn
 
 <FacebookPageWidget />
 
-<h2 data-height="265" data-theme-id="0" data-slug-hash="aLrLaK" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Wstęp do React">Ćwiczenie</h2>
+<h2 data-height="265" data-theme-id="0" data-slug-hash="aLrLaK" data-default-tab="js,result" data-user="typeofweb" data-embed-version="2" data-pen-title="Wstęp do React">Ćwiczenie</h2>
 
 <strong>Ćwiczenie:</strong> Weź przykład powyżej i stwórz kolejne komponenty i spróbuj je wyświetlić obok siebie. Opisz w komentarzach jeśli jest z tym jakiś problem!

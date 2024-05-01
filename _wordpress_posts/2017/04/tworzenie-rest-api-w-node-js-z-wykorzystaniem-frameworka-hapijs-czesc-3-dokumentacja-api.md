@@ -233,7 +233,7 @@ Teraz nowo dodaną funkcję możemy sprawdzić w Swagger UI:
 <h1 id="podsumowanie">Podsumowanie</h1>
 Dzisiaj <strong>nauczyliśmy się dodawać dokumentację do REST API</strong>. Brzmi banalnie, ale możliwości, które dają nam Hapi, Joi i Swagger UI są ogromne.
 
-Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/hapijs-tutorial/tree/czesc-3">https://github.com/mmiszy/hapijs-tutorial/tree/czesc-3</a>
+Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/typeofweb/hapijs-tutorial/tree/czesc-3">https://github.com/typeofweb/hapijs-tutorial/tree/czesc-3</a>
 
 <strong>Joi i hapi-swagger posiadają niezliczone różne opcje i nie sposób tutaj wszystkich wymienić</strong>. Dlatego zachęcam do poczytania oficjalnych dokumentacji:
 

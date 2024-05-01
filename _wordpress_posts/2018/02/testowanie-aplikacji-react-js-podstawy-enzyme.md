@@ -161,7 +161,7 @@ Wszystkie napisane wyżej testy powinny bez problemu przechodzić :)
 
 <h2>Podsumowanie</h2>
 
-W tej części zrobiłem tylko lekkie wprowadzenie do podstaw <code>enzyme</code>. Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-2">https://github.com/mmiszy/typeofweb-kurs-react/tree/part-2</a> <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>. <strong>W kolejnym wpisie omówię jak testować zmiany propsów i stanu, a także jak przetestować interakcje z komponentami!</strong>
+W tej części zrobiłem tylko lekkie wprowadzenie do podstaw <code>enzyme</code>. Cały kod jest dostępny na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/part-2">https://github.com/typeofweb/typeofweb-kurs-react/tree/part-2</a> <a href="https://szkolenia.typeofweb.com/" target="_blank">zapisz się na szkolenie z React</a>. <strong>W kolejnym wpisie omówię jak testować zmiany propsów i stanu, a także jak przetestować interakcje z komponentami!</strong>
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 
