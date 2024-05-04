@@ -11,7 +11,7 @@ export const Comments = ({ postTitle }: { readonly postTitle: string }) => {
   return (
     <div className="mt-5 px-3 bg-gray-100 sm:mt-10 sm:px-8 lg:px-12" id="comments">
       <Giscus
-        repo="typeofweb/typeofweb.com"
+        repo="typeofweb-org/typeofweb.com"
         repoId="MDEwOlJlcG9zaXRvcnkzODkwOTc4NjI="
         category="Komentarze"
         categoryId="DIC_kwDOFzEphs4B-pdu"
