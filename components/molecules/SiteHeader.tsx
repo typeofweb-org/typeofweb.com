@@ -4,7 +4,6 @@ import { memo } from 'react';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
 import { isIndex } from '../../utils/pageKind';
-import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';

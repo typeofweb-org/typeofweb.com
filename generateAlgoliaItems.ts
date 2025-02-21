@@ -9,7 +9,11 @@ import { readAllPosts } from './utils/posts';
 import { seriesSlugToSeries } from './utils/series';
 
 async function run() {
-  Invariant(!!process.env.ALGOLIA_UPDATE_API_KEY, 'ALGOLIA_UPDATE_API_KEY is not set');
+  // Invariant(!!process.env.ALGOLIA_UPDATE_API_KEY, 'ALGOLIA_UPDATE_API_KEY is not set');
+  if (!process.env.ALGOLIA_UPDATE_API_KEY) {
+    console.log('ALGOLIA_UPDATE_API_KEY is not set');
+    return;
+  }
 
   const data = await readAllPosts({ includePages: true, includeCommentsCount: false });
 
@@ -22,8 +26,8 @@ async function run() {
         'categories' in p.data
           ? categoriesToMainCategory(p.data.categories)
           : 'category' in p.data
-          ? categorySlugToCategory(p.data.category)
-          : null;
+            ? categorySlugToCategory(p.data.category)
+            : null;
 
       const series = typeof p.data.series === 'string' ? seriesSlugToSeries(p.data.series) : p.data.series;
 
