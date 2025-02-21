@@ -29,14 +29,6 @@ export const PromoWidget = memo(() => {
             Newsletter
           </Link>
         </li>
-        <li className="ml-0 pl-0 text-gray-700 text-lg font-semibold transition-colors">
-          <Link
-            className="hover:text-green-700"
-            href="https://www.next13masters.pl/?utm_source=typeofweb&utm_medium=sidebar"
-          >
-            Już wkrótce odpalamy zapisy na drugą edycję next13masters.pl. Zapisz się na listę oczekujących!
-          </Link>
-        </li>
       </ul>
     </Widget>
   );

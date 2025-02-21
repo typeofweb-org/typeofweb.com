@@ -47,18 +47,6 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
-      <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2 font-serif">
-        <p>
-          <LinkUnderlineEffect>
-            <a
-              className="text-blue-500 font-bold"
-              href="https://www.next13masters.pl/?utm_source=typeofweb&utm_medium=sidebar"
-            >
-              Już wkrótce odpalamy zapisy na drugą edycję next13masters.pl. Zapisz się na listę oczekujących!
-            </a>
-          </LinkUnderlineEffect>
-        </p>
-      </div>
     </>
   );
 });

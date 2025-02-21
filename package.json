@@ -14,7 +14,7 @@
     "algolia": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateAlgoliaItems.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@algolia/recommend": "4.13.0",
     "@giscus/react": "github:typeofweb-org/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
