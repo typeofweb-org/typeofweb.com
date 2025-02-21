@@ -9,20 +9,20 @@ import { TwoColumns } from '../components/templates/TwoColumns';
 import { host } from '../constants';
 import { getUrlForPermalink } from '../utils/permalinks';
 import { getMarkdownPostsFor, postToProps } from '../utils/postToProps';
-import { getYouTubeVideosFor } from '../utils/youtube';
+// import { getYouTubeVideosFor } from '../utils/youtube';
 
 import type { InferGetStaticPropsType, PageKind, SeriesWithToC } from '../types';
 import type { YouTubePost } from '../utils/youtube';
 import type { GetStaticPropsContext } from 'next';
 
-export const getStaticProps = async ({}: GetStaticPropsContext) => {
+export const getStaticProps = async ({ }: GetStaticPropsContext) => {
   const { posts: allPosts, page, postsCount } = await getMarkdownPostsFor({ page: 1 });
 
   if (allPosts.length === 0) {
     return { notFound: true };
   }
 
-  const videos = await getYouTubeVideosFor({ page: 1 });
+  // const videos = await getYouTubeVideosFor({ page: 1 });
 
   const posts = (
     await Promise.all(
@@ -44,8 +44,10 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
     revalidate: 60 * 15,
     props: {
       posts,
+      // // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
+      // videos: videos as readonly YouTubePost[] | null,
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
-      videos: videos as readonly YouTubePost[] | null,
+      videos: [] as readonly YouTubePost[] | null,
       page,
       postsCount,
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary
