@@ -35,7 +35,7 @@ const getData = async ({ path, action }: { readonly path: string; readonly actio
 
 export default handler;
 
-const getListDirFromGithubMemoized = memoize(async ({ relativePath }: { readonly relativePath: string }) => {
+const getListDirFromGithubMemoized = (memoize(async ({ relativePath }: { readonly relativePath: string }) => {
   console.count('github request');
 
   const octokit = new Octokit({
@@ -43,7 +43,7 @@ const getListDirFromGithubMemoized = memoize(async ({ relativePath }: { readonly
   });
 
   const response = await octokit.rest.repos.getContent({
-    owner: 'typeofweb',
+    owner: 'typeofweb-org',
     repo: 'typeofweb.com',
     path: relativePath,
   });
@@ -53,7 +53,7 @@ const getListDirFromGithubMemoized = memoize(async ({ relativePath }: { readonly
   }
 
   return response.data;
-});
+}));
 
 const getFileFromGithubMemoized = memoize(async ({ relativePath }: { readonly relativePath: string }) => {
   console.count('github request');
@@ -62,7 +62,7 @@ const getFileFromGithubMemoized = memoize(async ({ relativePath }: { readonly re
   });
 
   const response = await octokit.rest.repos.getContent({
-    owner: 'typeofweb',
+    owner: 'typeofweb-org',
     repo: 'typeofweb.com',
     path: relativePath,
   });
