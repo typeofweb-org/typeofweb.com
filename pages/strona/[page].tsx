@@ -1,22 +1,26 @@
 import AuthorsJson from '../../authors.json' assert { type: 'json' };
-import { pageSize } from '../../constants';
+// import { pageSize } from '../../constants';
+// import { readAllPosts } from '../../utils/posts';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
-import { readAllPosts } from '../../utils/posts';
 // import { getYouTubeVideosFor } from '../../utils/youtube';
 import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const { postsCount } = await readAllPosts({ includePages: false });
+export const getStaticPaths: GetStaticPaths = () => {
+  // const { postsCount } = await readAllPosts({ includePages: false });
 
-  const maxPages = Math.ceil(postsCount / pageSize);
+  // const maxPages = Math.ceil(postsCount / pageSize);
 
+  // return {
+  //   paths: Array.from({ length: maxPages })
+  //     .map((_, idx) => String(idx + 1))
+  //     .map((page) => ({ params: { page } })),
+  //   fallback: false,
+  // };
   return {
-    paths: Array.from({ length: maxPages })
-      .map((_, idx) => String(idx + 1))
-      .map((page) => ({ params: { page } })),
-    fallback: false,
+    paths: [{ params: { page: "1" } }],
+    fallback: "blocking",
   };
 };
 

@@ -20,22 +20,28 @@ export async function getCachedCommentsCount(title: string): Promise<number> {
   });
   const url = `${SUPABASE_URL}/rest/v1/comments_count_cache?${params.toString()}`;
 
-  const response = await fetch(url, {
-    headers: {
-      apikey: SUPABASE_KEY,
-      Authorization: `Bearer ${SUPABASE_KEY}`,
-      Accept: 'application/vnd.pgrst.object+json',
-      Range: '0',
-    },
-  });
+  try {
+    const response = await fetch(url, {
+      headers: {
+        apikey: SUPABASE_KEY,
+        // Authorization: `Bearer ${SUPABASE_KEY}`,
+        // apikey: SUPABASE_KEY,
+        Accept: 'application/vnd.pgrst.object+json',
+        Range: '0',
+      },
+    });
 
-  if (!response.ok) {
+    if (!response.ok) {
+      return 0;
+    }
+
+    const { count } = (await response.json()) as CommentsCountCacheRow;
+
+    return count;
+  } catch (err) {
+    console.log(err);
     return 0;
   }
-
-  const { count } = (await response.json()) as CommentsCountCacheRow;
-
-  return count;
 }
 
 export async function setCachedCommentsCount(title: string, count: number) {

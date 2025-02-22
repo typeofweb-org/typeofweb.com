@@ -200,6 +200,14 @@ export async function getExcerptAndContent(
     };
   }
 
+  if (postsThatWeKnowAreHtml.includes(post.data.permalink)) {
+    return {
+      excerpt: excerptString,
+      content: (await toHtml(content, { excerpt: false, parseOembed: options.parseOembed })).toString('utf-8'),
+      isMdx: false as const,
+    };
+  }
+
   try {
     return {
       excerpt: excerptString,
@@ -207,7 +215,8 @@ export async function getExcerptAndContent(
       isMdx: true as const,
     };
   } catch (err) {
-    console.log(post.data.permalink, err);
+    console.log(`\n\nERR --> ${post.data.permalink}\n\n`);
+    // console.log(post.data.permalink, err);
     return {
       excerpt: excerptString,
       content: (await toHtml(content, { excerpt: false, parseOembed: options.parseOembed })).toString('utf-8'),
@@ -215,6 +224,60 @@ export async function getExcerptAndContent(
     };
   }
 }
+
+const postsThatWeKnowAreHtml = [
+  'asynchronicznosc-w-redux-redux-thunk',
+  'flux-i-redux-globalny-store-jednokierunkowy-przeplyw-danych',
+  'tworzymy-wlasne-dependency-injection-w-typescript',
+  'jak-kurs-programowania-ani-bootcamp-nie-zrobi-z-ciebie-programisty-w-dwa-miesiące',
+  'komunikacja-pomiedzy-komponentami-w-react-js',
+  'poprawne-bindowanie-funkcji-react-js',
+  'testowanie-react-js-enzyme-props-state-interakcje',
+  'testowanie-aplikacji-react-js-podstawy-enzyme',
+  'react-js-na-github-pages-dzieki-create-react-app',
+  'tworzenie-aplikacji-react-js-dzieki-create-react-app',
+  'react-js-w-przykladach-filtrowanie-statycznej-listy',
+  'odmiana-rzeczownikow-przy-liczebnikach-jezyku-polskim',
+  'metody-cyklu-zycia-komponentu-react-js',
+  'state-react-js-2',
+  'state-react-js',
+  'joi-walidacja-danych',
+  'pierwszy-komponent-react-js',
+  'this-js-kontekst-wywolania-funkcji',
+  'kilka-faktow-na-temat-promise',
+  'symlink-zip-upload-plikow-dla-hackera',
+  'usuwanie-bialych-paskow-safari-iphone-x',
+  'payment-request-api-platnosci-przegladarce',
+  'praca-zdalna-rekrutacja-do-toptal',
+  'observable-rxjs',
+  'tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-3-dokumentacja-api',
+  'tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-2',
+  'tworzenie-rest-api-w-node-js-z-wykorzystaniem-frameworka-hapijs-czesc-1',
+  'dobry-czytelny-czysty-kod',
+  'innerhtml-furtka-do-xss',
+  'kurs-typescript-czesc-3',
+  'weekly-javascript-challenge-3',
+  'kurs-typescript-czesc-2',
+  'weekly-javascript-challenge-1',
+  'weekly-javascript-challenge-2',
+  'dependency-injection-w-angular-2',
+  'nowy-font-na-githubie-font-systemowy',
+  'typescript-czesc-1',
+  'wzorce-projektowe-dependency-injection',
+  'komunikacja-pomiedzy-komponentami-w-angular-2',
+  'angular-2-i-redux',
+  'wlasne-komponenty-w-angular-2',
+  'wstep-do-angular-2',
+  'struktura-aplikacji-angularjs-czesc-2-komponenty',
+  'struktura-aplikacji-angularjs-czesc-1',
+  'asi-czyli-automatyczne-wstawianie-srednikow',
+  'komunikacja-pomiedzy-kontrolerami',
+  'typescript-na-serwerze',
+  'interakcja-komponentami-react-js',
+  'klasy-jako-komponenty-react-js',
+  'props-czyli-atrybuty-react-js',
+  'hackowanie-css',
+]
 
 interface LegacyPostFrontmatter {
   readonly title: string;
