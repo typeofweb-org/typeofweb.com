@@ -7,14 +7,14 @@ import { TwoColumns } from '../../components/templates/TwoColumns';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import { permalinkIsCategory } from '../../utils/categories';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
-import { getImportantPermalinks, getPostByPermalink } from '../../utils/posts';
+import { getAllPermalinks, getPostByPermalink } from '../../utils/posts';
 import IndexPage from '../index';
 
 import type { InferGetStaticPropsType } from '../../types';
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const permalinks = await getImportantPermalinks();
+  const permalinks = await getAllPermalinks();
 
   return {
     paths: permalinks.map((permalink) => {
@@ -22,17 +22,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
         params: { permalink },
       };
     }),
-    fallback: "blocking",
+    fallback: false,
   };
-
-  // return {
-  //   paths: permalinks.map((permalink) => {
-  //     return {
-  //       params: { permalink },
-  //     };
-  //   }),
-  //   fallback: false,
-  // };
 };
 
 export const getStaticProps = ({ params }: GetStaticPropsContext) => {
