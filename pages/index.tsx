@@ -4,7 +4,7 @@ import AuthorsJson from '../authors.json' assert { type: 'json' };
 import { Pagination } from '../components/atoms/Pagination';
 import { NewsletterForm } from '../components/molecules/NewsletterForm';
 import { ArticleSneakPeek } from '../components/organisms/ArticleSneakPeek';
-import { VideoSneakPeek } from '../components/organisms/VideoSneakPeek';
+// import { VideoSneakPeek } from '../components/organisms/VideoSneakPeek';
 import { TwoColumns } from '../components/templates/TwoColumns';
 import { host } from '../constants';
 import { getUrlForPermalink } from '../utils/permalinks';
@@ -63,28 +63,31 @@ export const getStaticProps = async ({ }: GetStaticPropsContext) => {
 type IndexPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 type Post = IndexPageProps['posts'][number];
 
-const IndexPage = ({ posts, videos, postsCount, permalink, pageKind, seriesLinks }: IndexPageProps) => {
+const IndexPage = ({ posts, postsCount, permalink, pageKind, seriesLinks }: IndexPageProps) => {
   const href = permalink ? getUrlForPermalink(permalink) : null;
 
   const items = [
     ...posts.map((post) => ({ ...post, type: 'post' as const })),
-    ...(videos ?? []).map((video) => ({ ...video, type: 'video' as const })),
-  ].sort((a, b) => {
-    const dateA = a.type === 'post' ? a.frontmatter.date : a.date;
-    const dateB = b.type === 'post' ? b.frontmatter.date : b.date;
-    return dateB.localeCompare(dateA);
-  });
+    // ...(videos ?? []).map((video) => ({ ...video, type: 'video' as const })),
+  ]
+  // .sort((a, b) => {
+  //   const dateA = a.type === 'post' ? a.frontmatter.date : a.date;
+  //   const dateB = b.type === 'post' ? b.frontmatter.date : b.date;
+  //   return dateB.localeCompare(dateA);
+  // });
 
   return (
     <TwoColumns withSidebar={true} pageKind={pageKind} series={pageKind === 'series' ? seriesLinks : null}>
       {items.map((item, i) => {
-        const key = item.type === 'post' ? item.frontmatter.title : item.title;
-        const sneakPeek =
-          item.type === 'post' ? (
-            <PostIndexItem key={key} pageKind={pageKind} post={item} i={i} />
-          ) : (
-            <VideoIndexItem key={key} video={item} />
-          );
+        // const key = item.type === 'post' ? item.frontmatter.title : item.title;
+        const key = item.frontmatter.title;
+        // const sneakPeek =
+        //   item.type === 'post' ? (
+        //     <PostIndexItem key={key} pageKind={pageKind} post={item} i={i} />
+        //   ) : (
+        //     <VideoIndexItem key={key} video={item} />
+        //   );
+        const sneakPeek = <PostIndexItem key={key} pageKind={pageKind} post={item} i={i} />
 
         if (i === 0) {
           return (
@@ -103,9 +106,9 @@ const IndexPage = ({ posts, videos, postsCount, permalink, pageKind, seriesLinks
 
 export default IndexPage;
 
-const VideoIndexItem = ({ video }: { readonly video: YouTubePost }) => {
-  return <VideoSneakPeek video={video} />;
-};
+// const VideoIndexItem = ({ video }: { readonly video: YouTubePost }) => {
+//   return <VideoSneakPeek video={video} />;
+// };
 
 const PostIndexItem = ({
   post,

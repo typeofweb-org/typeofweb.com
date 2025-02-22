@@ -2,7 +2,7 @@ import AuthorsJson from '../../authors.json' assert { type: 'json' };
 import { pageSize } from '../../constants';
 import { getMarkdownPostsFor, postToProps } from '../../utils/postToProps';
 import { readAllPosts } from '../../utils/posts';
-import { getYouTubeVideosFor } from '../../utils/youtube';
+// import { getYouTubeVideosFor } from '../../utils/youtube';
 import IndexPage from '../index';
 
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
@@ -32,7 +32,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     return { notFound: true };
   }
 
-  const videos = await getYouTubeVideosFor({ page });
+  // const videos = await getYouTubeVideosFor({ page });
 
   const posts = (
     await Promise.all(
@@ -52,7 +52,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 
   return {
     revalidate: 60 * 15,
-    props: { posts, videos, page, postsCount, pageKind: 'index' },
+    props: { posts, page, postsCount, pageKind: 'index' },
   };
 };
 

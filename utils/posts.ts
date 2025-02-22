@@ -12,7 +12,8 @@ import type { PromiseValue } from '../types';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 export const readAllPosts = (() => {
-  const memoizedReadAllPosts = process.env.NODE_ENV === 'production' ? memoize(readAllPosts) : readAllPosts;
+  // const memoizedReadAllPosts = process.env.NODE_ENV === 'production' ? memoize(readAllPosts) : readAllPosts;
+  const memoizedReadAllPosts = readAllPosts;
 
   return ({
     category,
@@ -85,8 +86,8 @@ export const readAllPosts = (() => {
         'category' in post.data
           ? categorySlugToCategory(post.data.category)?.slug === category
           : 'categories' in post.data
-          ? categoriesToMainCategory(post.data.categories)?.slug === category
-          : null,
+            ? categoriesToMainCategory(post.data.categories)?.slug === category
+            : null,
       );
     }
     if (series) {
