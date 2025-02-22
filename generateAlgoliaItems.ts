@@ -1,3 +1,4 @@
+import { default as NextEnv } from "@next/env"
 import Algoliasearch from 'algoliasearch';
 import Invariant from 'invariant';
 
@@ -7,6 +8,8 @@ import { getFingerprint } from './utils/fingerprint';
 import { toHtml } from './utils/markdown';
 import { readAllPosts } from './utils/posts';
 import { seriesSlugToSeries } from './utils/series';
+
+NextEnv.loadEnvConfig(".")
 
 async function run() {
   // Invariant(!!process.env.ALGOLIA_UPDATE_API_KEY, 'ALGOLIA_UPDATE_API_KEY is not set');
