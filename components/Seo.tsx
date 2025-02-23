@@ -33,7 +33,7 @@ const jsonLd = {
       url: 'https://typeofweb.com/',
       sameAs: [
         'https://www.facebook.com/typeofweb',
-        'https://www.instagram.com/michal_typeofweb/',
+        'https://www.instagram.com/typeofweb/',
         'https://linkedin.com/in/mmiszczyszyn',
         'https://www.youtube.com/typeofweb',
         'https://twitter.com/typeofweb',

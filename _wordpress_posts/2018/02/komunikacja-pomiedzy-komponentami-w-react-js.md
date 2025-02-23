@@ -31,7 +31,7 @@ Przyszedł ten moment, gdy Twoja aplikacja zaczyna się rozrastać i zmagasz si�
 
 <h2>Komunikacja w React.js</h2>
 
-React to prosta biblioteka. Zasadniczo nie obchodzi jej w jaki sposób projektujesz architekturę swojej aplikacji. Ale zawarto w niej mechanizm na przekazywanie informacji z jednego komponentu do drugiego — z rodzica do dziecka — przy pomocy propsów. Tak jak robiliśmy to do tej pory. <strong>Ale przekazywać można nie tylko dane, ale też funkcje ;)</strong> W tym wpisie fragmenty kodu, a całość razem z testami znajdziesz na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/part-4">mmiszy/typeofweb-kurs-react/tree/part-4</a>.
+React to prosta biblioteka. Zasadniczo nie obchodzi jej w jaki sposób projektujesz architekturę swojej aplikacji. Ale zawarto w niej mechanizm na przekazywanie informacji z jednego komponentu do drugiego — z rodzica do dziecka — przy pomocy propsów. Tak jak robiliśmy to do tej pory. <strong>Ale przekazywać można nie tylko dane, ale też funkcje ;)</strong> W tym wpisie fragmenty kodu, a całość razem z testami znajdziesz na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/part-4">typeofweb/typeofweb-kurs-react/tree/part-4</a>.
 
 <h2>Rodzic ➜ Dziecko: Propsy</h2>
 

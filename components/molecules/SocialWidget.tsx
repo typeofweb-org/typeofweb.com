@@ -28,7 +28,7 @@ export const myUrls = {
   facebook: 'https://facebook.com/typeofweb',
   github: 'https://github.com/typeofweb-org',
   youtube: 'https://www.youtube.com/c/typeofweb',
-  instagram: 'https://instagram.com/michal_typeofweb',
+  instagram: 'https://instagram.com/typeofweb',
   linkedin: 'https://linkedin.com/in/mmiszczyszyn',
   website: 'https://typeofweb.com',
 };
