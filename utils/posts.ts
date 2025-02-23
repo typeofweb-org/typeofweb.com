@@ -86,8 +86,8 @@ export const readAllPosts = (() => {
         'category' in post.data
           ? categorySlugToCategory(post.data.category)?.slug === category
           : 'categories' in post.data
-            ? categoriesToMainCategory(post.data.categories)?.slug === category
-            : null,
+          ? categoriesToMainCategory(post.data.categories)?.slug === category
+          : null,
       );
     }
     if (series) {
@@ -277,7 +277,7 @@ const postsThatWeKnowAreHtml = [
   'klasy-jako-komponenty-react-js',
   'props-czyli-atrybuty-react-js',
   'hackowanie-css',
-]
+];
 
 interface LegacyPostFrontmatter {
   readonly title: string;

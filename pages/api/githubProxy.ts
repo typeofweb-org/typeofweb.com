@@ -35,7 +35,7 @@ const getData = async ({ path, action }: { readonly path: string; readonly actio
 
 export default handler;
 
-const getListDirFromGithubMemoized = (memoize(async ({ relativePath }: { readonly relativePath: string }) => {
+const getListDirFromGithubMemoized = memoize(async ({ relativePath }: { readonly relativePath: string }) => {
   console.count('github request');
 
   const octokit = new Octokit({
@@ -53,7 +53,7 @@ const getListDirFromGithubMemoized = (memoize(async ({ relativePath }: { readonl
   }
 
   return response.data;
-}));
+});
 
 const getFileFromGithubMemoized = memoize(async ({ relativePath }: { readonly relativePath: string }) => {
   console.count('github request');

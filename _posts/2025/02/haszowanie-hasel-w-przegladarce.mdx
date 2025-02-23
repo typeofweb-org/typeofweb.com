@@ -24,7 +24,15 @@ Zacznijmy może od początku. Jak wygląda proces logowania do aplikacji interne
 
 Najprostsza rejestracja użytkownika/użytkowniczki przebiega tak, że osoba wpisuje swój login i hasło w formularzu. Czasem strony wymagają wpisania hasła dwukrotnie, ale nie ma to związku z bezpieczeństwem – tylko z dobrym UX. Ludzie czasem robią literówki, a wymuszenie powtórzenia hasła minimalizuje to ryzyko. Następnie te informacje są przesyłane z przeglądarki do serwera.
 
-<p class="important">Kluczowe jest szyfrowanie tych danych w czasie transportu, gdyż niezabezpieczone mogłyby zostać łatwo przechwycone przez osoby niepowołane. Na szczęście szyfrowanie zachodzi automatycznie dzięki wsparciu TLS/HTTPS w serwerach i przeglądarkach. <strong>Niezwykle istotne jest, abyśmy nigdy nie wpisywali swoich haseł na stronach korzystających z protokołu HTTP</strong> (bez „S”).</p>
+<p class="important">
+  Kluczowe jest szyfrowanie tych danych w czasie transportu, gdyż niezabezpieczone mogłyby zostać łatwo przechwycone
+  przez osoby niepowołane. Na szczęście szyfrowanie zachodzi automatycznie dzięki wsparciu TLS/HTTPS w serwerach
+  i przeglądarkach.{' '}
+  <strong>
+    Niezwykle istotne jest, abyśmy nigdy nie wpisywali swoich haseł na stronach korzystających z protokołu HTTP
+  </strong>{' '}
+  (bez „S”).
+</p>
 
 Serwer, po otrzymaniu naszego loginu i hasła, powinien zweryfikować, czy ktoś o takim loginie przypadkiem już nie założył konta. Zignorujmy jednak na razie przypadki brzegowe i skupmy się na bezpieczeństwie.
 
@@ -47,7 +55,9 @@ Haszowanie (w idealnym przypadku) to proces polegający na zamianie jednej warto
 
 Napisałem, że jest to idealny przypadek – doskonała funkcja haszująca jest iniekcją. Co do zasady jednak, taka funkcja haszująca hasła nie istnieje. Oznacza to, że **zdarza się, że dwa zupełnie różne hasła po zahaszowaniu dadzą ten sam ciąg znaków**. Nazywamy to kolizją, ale dla współczesnych funkcji jest to na szczęście ekstremalnie rzadkie.
 
-<p class="important">Jeśli interesuje Cię temat kolizji haszy, zachęcam do poczytania na temat „Paradoksu dni urodzin”.</p>
+<p class="important">
+  Jeśli interesuje Cię temat kolizji haszy, zachęcam do poczytania na temat „Paradoksu dni urodzin”.
+</p>
 
 ## Haszowanie kryptograficznie bezpieczne
 
@@ -121,9 +131,6 @@ Częścią tego procesu jest haszowanie, ale zupełnie w innym kontekście – 
 ## Podsumowanie
 
 Mam nadzieję, że nieco przybliżyłem Ci idee stojące za bezpieczeństwem haseł. Co to jest haszowanie? Po co się to robi? Czemu trzeba haszować na serwerze? Dlaczego hasło należy posolić i popierzyć? Napisz mi w komentarzu, o czym jeszcze chciałabyś/chciałbyś przeczytać.
-
-
-
 
 [^1]: Zmiana jednego bitu hasła powoduje zmianę każdego bitu hasza z prawdopodobieństwem 50%.
 [^2]: Adobe w ogóle nie haszowało wtedy haseł, tylko szyfrowało je w odwracalny sposób 3DES w trybie ECB. Ma to ciekawe konsekwencje, [warto poczytać](https://filippo.io/analyzing-the-adobe-leaked-passwords/).

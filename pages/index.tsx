@@ -15,7 +15,7 @@ import type { InferGetStaticPropsType, PageKind, SeriesWithToC } from '../types'
 import type { YouTubePost } from '../utils/youtube';
 import type { GetStaticPropsContext } from 'next';
 
-export const getStaticProps = async ({ }: GetStaticPropsContext) => {
+export const getStaticProps = async ({}: GetStaticPropsContext) => {
   const { posts: allPosts, page, postsCount } = await getMarkdownPostsFor({ page: 1 });
 
   if (allPosts.length === 0) {
@@ -69,7 +69,7 @@ const IndexPage = ({ posts, postsCount, permalink, pageKind, seriesLinks }: Inde
   const items = [
     ...posts.map((post) => ({ ...post, type: 'post' as const })),
     // ...(videos ?? []).map((video) => ({ ...video, type: 'video' as const })),
-  ]
+  ];
   // .sort((a, b) => {
   //   const dateA = a.type === 'post' ? a.frontmatter.date : a.date;
   //   const dateB = b.type === 'post' ? b.frontmatter.date : b.date;
@@ -87,7 +87,7 @@ const IndexPage = ({ posts, postsCount, permalink, pageKind, seriesLinks }: Inde
         //   ) : (
         //     <VideoIndexItem key={key} video={item} />
         //   );
-        const sneakPeek = <PostIndexItem key={key} pageKind={pageKind} post={item} i={i} />
+        const sneakPeek = <PostIndexItem key={key} pageKind={pageKind} post={item} i={i} />;
 
         if (i === 0) {
           return (

@@ -150,8 +150,9 @@ const Gallery = ({
 
   return (
     <div
-      className={`md:grid ${columns === '1' ? 'md:grid-cols-1' : columns === '2' ? 'md:grid-cols-2' : 'md:grid-cols-3'
-        } md:-mx-16`}
+      className={`md:grid ${
+        columns === '1' ? 'md:grid-cols-1' : columns === '2' ? 'md:grid-cols-2' : 'md:grid-cols-3'
+      } md:-mx-16`}
     >
       {groups.map(([img, ...descriptions], idx) => {
         return (

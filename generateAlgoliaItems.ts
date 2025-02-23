@@ -1,4 +1,4 @@
-import { default as NextEnv } from "@next/env"
+import { default as NextEnv } from '@next/env';
 import Algoliasearch from 'algoliasearch';
 import Invariant from 'invariant';
 
@@ -9,7 +9,7 @@ import { toHtml } from './utils/markdown';
 import { readAllPosts } from './utils/posts';
 import { seriesSlugToSeries } from './utils/series';
 
-NextEnv.loadEnvConfig(".")
+NextEnv.loadEnvConfig('.');
 
 async function run() {
   // Invariant(!!process.env.ALGOLIA_UPDATE_API_KEY, 'ALGOLIA_UPDATE_API_KEY is not set');
@@ -29,8 +29,8 @@ async function run() {
         'categories' in p.data
           ? categoriesToMainCategory(p.data.categories)
           : 'category' in p.data
-            ? categorySlugToCategory(p.data.category)
-            : null;
+          ? categorySlugToCategory(p.data.category)
+          : null;
 
       const series = typeof p.data.series === 'string' ? seriesSlugToSeries(p.data.series) : p.data.series;
 

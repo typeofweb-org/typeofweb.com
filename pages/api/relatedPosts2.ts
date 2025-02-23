@@ -55,11 +55,11 @@ export const getRelatedPosts2ForPermalink = async (permalink: string) => {
     relatedPosts.map((post) => {
       return post
         ? postToProps(post, AuthorsJson.authors, {
-          onlyExcerpt: true,
-          parseOembed: false,
-          includeCommentsCount: false,
-          includePlaiceholder: true,
-        })
+            onlyExcerpt: true,
+            parseOembed: false,
+            includeCommentsCount: false,
+            includePlaiceholder: true,
+          })
         : null;
     }),
   );

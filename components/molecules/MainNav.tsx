@@ -53,8 +53,9 @@ export const MainNav = memo(() => {
     <nav
       id="main-menu"
       role="navigation"
-      className={`${uiState.isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } left-0 top-0 bottom-0 h-[100dvh] z-40 lg:transform-none lg:flex lg:bg-transparent lg:static lg:w-auto lg:h-auto fixed w-full min-h-full transition-transform bg-gray-100 flex lg:flex-1 items-center lg:items-stretch`}
+      className={`${
+        uiState.isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      } left-0 top-0 bottom-0 h-[100dvh] z-40 lg:transform-none lg:flex lg:bg-transparent lg:static lg:w-auto lg:h-auto fixed w-full min-h-full transition-transform bg-gray-100 flex lg:flex-1 items-center lg:items-stretch`}
     >
       <div className="overflow-y-auto w-full h-full max-h-screen lg:pb-0 lg:pt-0">
         <ul className="flex lg:flex-1 flex-col gap-8 items-center justify-center lg:h-full text-3xl lg:flex-row lg:gap-0 lg:items-stretch lg:justify-around lg:text-base pt-16 pb-24 lg:py-0">
@@ -65,10 +66,11 @@ export const MainNav = memo(() => {
                 <Link href={getUrlForPermalink(item.slug)} scroll={true} legacyBehavior>
                   <a
                     onClick={closeMenu}
-                    className={`group inline-flex items-center border-b-2 transition-colors text-3xl lg:text-base whitespace-nowrap ${isActive
+                    className={`group inline-flex items-center border-b-2 transition-colors text-3xl lg:text-base whitespace-nowrap ${
+                      isActive
                         ? 'text-green-500 font-semibold  border-green-500 hover:border-green-700 hover:text-green-700'
                         : 'text-gray-800 hover:text-green-500 border-transparent hover:border-green-500'
-                      }`}
+                    }`}
                     aria-current={isActive}
                   >
                     {iconForItem[item.slug]?.()}
