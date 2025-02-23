@@ -97,7 +97,7 @@ Dodaję do `useEffect` drugi argument. Jest to tablica wartości, na podstawie 
 
 <p class="important">Jeśli podajesz tablicę jako argument do <code>useEffect</code>, to koniecznie zwróć uwagę, aby zawierała ona listę <strong>wszystkich</strong> wartości z komponentu, które są używane w samym hooku.</p>
 
-Demo: <a href="https://codepen.io/mmiszy/pen/dLdpdx" target="_blank" rel="noopener noreferrer">React Hooks w przykładach: useEffect</a>.
+Demo: <a href="https://codepen.io/typeofweb/pen/dLdpdx" target="_blank" rel="noopener noreferrer">React Hooks w przykładach: useEffect</a>.
 
 ## Sprzątanie po sobie
 

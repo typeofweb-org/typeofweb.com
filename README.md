@@ -33,7 +33,7 @@ Jeśli chcesz napisać artykuł na bloga, również możesz to zrobić poprzez G
 
 ## O mnie
 
-![](https://github-readme-stats.vercel.app/api?username=mmiszy&show_icons=true&count_private=true&title_color=5CB784&text_color=222222&icon_color=341BDB&border_color=5CB784&bg_color=FAFAFA&locale=pl&border_radius=8)
+![](https://github-readme-stats.vercel.app/api?username=typeofweb&show_icons=true&count_private=true&title_color=5CB784&text_color=222222&icon_color=341BDB&border_color=5CB784&bg_color=FAFAFA&locale=pl&border_radius=8)
 
 ![](https://suchary-romana.vercel.app/api)
 
@@ -46,19 +46,19 @@ Ogromne podziękowania dla ([emoji key](https://allcontributors.org/docs/en/emoj
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://typeofweb.com/"><img src="https://avatars.githubusercontent.com/u/1338731?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michał Miszczyszyn</b></sub></a><br /><a href="#blog-mmiszy" title="Blogposts">📝</a> <a href="#business-mmiszy" title="Business development">💼</a> <a href="#design-mmiszy" title="Design">🎨</a> <a href="#maintenance-mmiszy" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://typeofweb.com/"><img src="https://avatars.githubusercontent.com/u/1338731?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michał Miszczyszyn</b></sub></a><br /><a href="#blog-typeofweb" title="Blogposts">📝</a> <a href="#business-typeofweb" title="Business development">💼</a> <a href="#design-typeofweb" title="Design">🎨</a> <a href="#maintenance-typeofweb" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/stefanova"><img src="https://avatars.githubusercontent.com/u/15745134?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Karolina Kreft</b></sub></a><br /><a href="#blog-stefanova" title="Blogposts">📝</a></td>
     <td align="center"><a href="https://twitter.com/baranovskim"><img src="https://avatars.githubusercontent.com/u/29602306?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michal Baranowski</b></sub></a><br /><a href="#blog-mbaranovski" title="Blogposts">📝</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/wojtiku"><img src="https://avatars.githubusercontent.com/u/650828?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Wojciech Urbański</b></sub></a><br /><a href="#blog-wojtiku" title="Blogposts">📝</a></td>
     <td align="center"><a href="https://github.com/matt08"><img src="https://avatars.githubusercontent.com/u/19648926?v=4?s=60" width="60px;" alt=""/><br /><sub><b>matt08</b></sub></a><br /><a href="#blog-matt08" title="Blogposts">📝</a></td>
-    <td align="center"><a href="http://codewars.com/users/mstosio"><img src="https://avatars.githubusercontent.com/u/10117225?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michal</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3Amstosio" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://codewars.com/users/mstosio"><img src="https://avatars.githubusercontent.com/u/10117225?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michal</b></sub></a><br /><a href="https://github.com/typeofweb-org/typeofweb.com/issues?q=author%3Amstosio" title="Bug reports">🐛</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/wisnie"><img src="https://avatars.githubusercontent.com/u/47081011?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Bartłomiej Wiśniewski</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3Awisnie" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/adcichowski"><img src="https://avatars.githubusercontent.com/u/71249791?v=4?s=60" width="60px;" alt=""/><br /><sub><b>adcichowski</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3Aadcichowski" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/Eghizio"><img src="https://avatars.githubusercontent.com/u/32049761?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jakub Wąsik</b></sub></a><br /><a href="https://github.com/typeofweb/typeofweb.com/issues?q=author%3AEghizio" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/wisnie"><img src="https://avatars.githubusercontent.com/u/47081011?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Bartłomiej Wiśniewski</b></sub></a><br /><a href="https://github.com/typeofweb-org/typeofweb.com/issues?q=author%3Awisnie" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/adcichowski"><img src="https://avatars.githubusercontent.com/u/71249791?v=4?s=60" width="60px;" alt=""/><br /><sub><b>adcichowski</b></sub></a><br /><a href="https://github.com/typeofweb-org/typeofweb.com/issues?q=author%3Aadcichowski" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/Eghizio"><img src="https://avatars.githubusercontent.com/u/32049761?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jakub Wąsik</b></sub></a><br /><a href="https://github.com/typeofweb-org/typeofweb.com/issues?q=author%3AEghizio" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

@@ -92,7 +92,7 @@ Imbox działa świetnie w przeglądarce, i to zarówno na komputerach, jak i tab
 
 Aplikacja mobilna działa zaskakująco dobrze, przynajmniej przez większość jej używania, bo czasem zdarzy się jednak nieprzyjemna zwiecha wymagająca restartu.
 
-https://twitter.com/MMiszy/status/1278963932380778499
+https://twitter.com/typeofweb/status/1278963932380778499
 
 ## Prywatność
 
@@ -108,7 +108,7 @@ Co więcej, jeśli przewiniemy w dół do jakiegoś maila, otworzymy go, a nast�
 
 No i jeszcze taka mała rzecz, która wkurza: Każde rozwinięcie menu dzieje się z zauważalnym opóźnieniem, które wynika z pobierania _czegoś_ z sieci.
 
-https://twitter.com/MMiszy/status/1278769758377332737
+https://twitter.com/typeofweb/status/1278769758377332737
 
 Rozumiem, że to są problemy pierwszego świata, ale, hej (no pun intended), czy wymyślanie nowego maila nie jest również próbą rozwiązania problemu pierwszego świata? A jeśli tak, to czemu nie zrobić tego idealnie?
 

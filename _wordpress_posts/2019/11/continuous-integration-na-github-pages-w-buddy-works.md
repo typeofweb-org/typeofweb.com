@@ -44,7 +44,7 @@ Jak pisałem w poprzednim artykule, [Buddy to narzędzie do CI/CD](https://typeo
 
 Potrzebne nam będą:
 
-1. Konto na GitHubie i repozytorium z kodem. Zmiany w kodzie będą automatycznie wrzucane także na GitHub Pages. Ja użyję przykładowego repo [github.com/mmiszy/typeofweb-buddy](https://github.com/mmiszy/typeofweb-buddy)
+1. Konto na GitHubie i repozytorium z kodem. Zmiany w kodzie będą automatycznie wrzucane także na GitHub Pages. Ja użyję przykładowego repo [github.com/typeofweb/typeofweb-buddy](https://github.com/typeofweb/typeofweb-buddy)
 2. Konto na <a href="https://app.buddy.works/sign-up?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_tutorial&utm_content=create_free_account" target="_blank" rel="noopener noreferrer">Buddy.works</a> (można zarejestrować się swoim kontem na GitHubie).
 
 Na potrzeby 1. użyję aplikacji w React.js. Przed wrzuceniem jej na GitHub Pages będę musiał ją skompilować i zminifikować.
@@ -106,7 +106,7 @@ Fajnie by było sprawdzić, czy nasze Continuous Integration działa bez koniecz
 
 ## Efekty
 
-Jeśli prawidłowo skonfigurowaliśmy repozytorium, to po wejściu na adres naszego GitHub Page powinniśmy zobaczyć już naszą stronę. Moją stroną możecie podejrzeć pod adresem [mmiszy.github.io/typeofweb-buddy](https://mmiszy.github.io/typeofweb-buddy/) i wygląda ona tak, <a href="/public/assets/wp-content/uploads/2019/11/mmiszy.github.io_example.png" data-featherlight="image">jak na screenshocie</a>.
+Jeśli prawidłowo skonfigurowaliśmy repozytorium, to po wejściu na adres naszego GitHub Page powinniśmy zobaczyć już naszą stronę. Moją stroną możecie podejrzeć pod adresem [typeofweb.github.io/typeofweb-buddy](https://typeofweb.github.io/typeofweb-buddy/) i wygląda ona tak, <a href="/public/assets/wp-content/uploads/2019/11/typeofweb.github.io_example.png" data-featherlight="image">jak na screenshocie</a>.
 
 Sprawdźmy, czy strona się zaktualizuje automatycznie po wykonaniu `git push`. Od razu po wysłaniu zmian do repo w Buddy uruchamia się skonfigurowany przez nas pipeline i po **16 sekundach** zmiany są już na GitHub Pages. Przy takiej prędkości, to naprawdę _Continuous Delivery_!
 

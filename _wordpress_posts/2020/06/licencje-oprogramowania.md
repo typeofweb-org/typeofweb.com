@@ -59,7 +59,7 @@ Licencja **LGPL 3.0**, czyli Lesser General Public License, powstała jako kompr
 
 Z kolei **AGPL 3.0**, czyli Affero General Public License, powstała z myślą o oprogramowaniu webowym, uruchamianym po stronie serwera, gdy nie dochodzi do jego rzeczywistej dystrybucji. Licencja uwzględnia te same prawa i obowiązki, co GPL 3.0 i dodatkowo nakazuje, aby wraz z usługą świadczoną przez sieć, udostępniać pełny kod źródłowy.
 
-AGPL jest licencją, na której Type of Web udostępniło [kod źrodłowy aplikacji DevFAQ.pl](https://github.com/typeofweb/devfaq)!
+AGPL jest licencją, na której Type of Web udostępniło [kod źrodłowy aplikacji DevFAQ.pl](https://github.com/typeofweb-org/devfaq)!
 
 Wszystkie licencje z tej grupy wymagają zachowania informacji o autorze wraz z treścią licencji oraz wyłączają odpowiedzialność autora za jakość i działanie programu.
 
@@ -85,4 +85,4 @@ Więcej o poszczególnych licencjach przeczytasz tu:
 
 ## Podsumowanie
 
-Wiedza na temat różnych licencji jest przydatna dla każdej osoby, która Open Source tworzy lub wykorzystuje. Od strony użytkownika należy pamiętać o obowiązkach, jakie niesie ze sobą używanie np. bibliotek licencjonowanych GPL i warto skonsultować ten aspekt, gdy tworzy się projekt o zamkniętym źródle. Natomiast jako twórcy Open Source, musimy dokładnie przeanalizować wszystkie za i przeciw każdej licencji, aby wybrać taką, która będzie odpowiednia dla naszego projektu. Przykładowo, Michał swoje biblioteki wypuszcza zawsze na MIT/ISC, ale [kod źródłowy DevFAQ.pl](https://github.com/typeofweb/devfaq) otworzył na licencji AGPL.
+Wiedza na temat różnych licencji jest przydatna dla każdej osoby, która Open Source tworzy lub wykorzystuje. Od strony użytkownika należy pamiętać o obowiązkach, jakie niesie ze sobą używanie np. bibliotek licencjonowanych GPL i warto skonsultować ten aspekt, gdy tworzy się projekt o zamkniętym źródle. Natomiast jako twórcy Open Source, musimy dokładnie przeanalizować wszystkie za i przeciw każdej licencji, aby wybrać taką, która będzie odpowiednia dla naszego projektu. Przykładowo, Michał swoje biblioteki wypuszcza zawsze na MIT/ISC, ale [kod źródłowy DevFAQ.pl](https://github.com/typeofweb-org/devfaq) otworzył na licencji AGPL.

@@ -179,4 +179,4 @@ Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.
 
 ## Ćwiczenie
 
-**Ćwiczenie:** Zrefaktoruj kod z naszą listą kontaktów tak, aby skorzystać z napisanych w tym wpisie funkcji. Kod znajdziesz tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-4-redux](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-4-redux)
+**Ćwiczenie:** Zrefaktoruj kod z naszą listą kontaktów tak, aby skorzystać z napisanych w tym wpisie funkcji. Kod znajdziesz tutaj: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-4-redux](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-4-redux)

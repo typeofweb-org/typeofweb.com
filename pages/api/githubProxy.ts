@@ -43,7 +43,7 @@ const getListDirFromGithubMemoized = memoize(async ({ relativePath }: { readonly
   });
 
   const response = await octokit.rest.repos.getContent({
-    owner: 'typeofweb',
+    owner: 'typeofweb-org',
     repo: 'typeofweb.com',
     path: relativePath,
   });
@@ -62,7 +62,7 @@ const getFileFromGithubMemoized = memoize(async ({ relativePath }: { readonly re
   });
 
   const response = await octokit.rest.repos.getContent({
-    owner: 'typeofweb',
+    owner: 'typeofweb-org',
     repo: 'typeofweb.com',
     path: relativePath,
   });

@@ -126,8 +126,8 @@ Ostatecznie podpinam pod zdarzenia <code>click</code> obu przycisków akcje <cod
 
 Od teraz po kliknięciu przycisków licznik się zmienia. Zobacz to na własne oczy:
 
-<CodepenWidget height="250" themeId="light" slugHash="xOZWYy" defaultTab="js,result" user="mmiszy" embedVersion="2">
-<a href="http://codepen.io/mmiszy/pen/xOZWYy/">Zobacz Codepen</a>.
+<CodepenWidget height="250" themeId="light" slugHash="xOZWYy" defaultTab="js,result" user="typeofweb" embedVersion="2">
+<a href="http://codepen.io/typeofweb/pen/xOZWYy/">Zobacz Codepen</a>.
 </CodepenWidget>
 
 <h2 id="niemutowalnystan">Niemutowalny stan w Redux</h2>
@@ -149,8 +149,8 @@ Weź jednak bardziej skomplikowany przykład. Przyjmijmy, że stan nie jest licz
 
 <code>Object.assign({}, state)</code> oznacza tyle co „skopiuj pola z obiektu <code>state</code> do nowego pustego obiektu”. Kolejne argumenty przekazywane do tej funkcji powodują dodanie lub nadpisanie odpowiednich pól w obiekcie. Więcej na ten temat można doczytać w artykule <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign na MDN</a>. Jest to niezwykle przydatna funkcja, gdy zależy nam na szybkim <strong>płytkim</strong> skopiowaniu jakiejś struktury danych. Analogiczne rozwiązania dostępne są też w popularnych bibliotekach takich jak <code>lodash</code> albo <code>underscore</code>.
 
-<CodepenWidget height="450" themeId="light" slugHash="dXGmax" defaultTab="js,result" user="mmiszy" embedVersion="2">
-<a href="http://codepen.io/mmiszy/pen/dXGmax/">Zobacz Codepen</a>.
+<CodepenWidget height="450" themeId="light" slugHash="dXGmax" defaultTab="js,result" user="typeofweb" embedVersion="2">
+<a href="http://codepen.io/typeofweb/pen/dXGmax/">Zobacz Codepen</a>.
 </CodepenWidget>
 
 <h2 id="podsumowanie">Podsumowanie Flux i Redux</h2>

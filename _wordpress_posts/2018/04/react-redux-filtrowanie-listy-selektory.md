@@ -166,7 +166,7 @@ Zobacz sam(a):
 
 <p style="text-align: center;"><iframe src="https://www.youtube.com/embed/ZA5QAJElskI?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=ZA5QAJElskI" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 
-Kod znajdziesz jak zwykle na moim GitHubie: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-3-redux](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-3-redux)
+Kod znajdziesz jak zwykle na moim GitHubie: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-3-redux](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-3-redux)
 
 ## Podsumowanie
 

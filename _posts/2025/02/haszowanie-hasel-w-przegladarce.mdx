@@ -1,0 +1,136 @@
+---
+title: 'Haszowanie haseł w przeglądarce'
+permalink: 'haszowanie-hasel-w-przegladarce'
+type: post
+date: 2025-02-22T21:51:42.569Z
+authors:
+  - michal-miszczyszyn
+category: dobry-kod
+thumbnail:
+  url: /public/assets/uploads/2025/02/haszowanie-hasel-w-przegladarce.png
+  width: 1920
+  height: 1005
+---
+
+Niedawno na X (Twitterze) wiralowy stał się post na temat haszowania haseł. Sugerował, że hasła należy haszować po stronie klienta, np. w przeglądarce, przed wysłaniem ich do serwera. Oto artykuł o tym, dlaczego zazwyczaj nie ma to sensu, kiedy ma, oraz dlaczego może być błędnie zrozumiane – a przez to bardzo szkodliwe.
+
+---
+
+<p class="important">Witam z powrotem. Czasem miło jest coś napisać, a już w ogóle, jeśli nie przy pomocy AI.</p>
+
+## Po co w ogóle haszujemy hasła?
+
+Zacznijmy może od początku. Jak wygląda proces logowania do aplikacji internetowych? Co dzieje się w czasie tworzenia konta? **W jaki sposób system wie, że my to my, a nie ktoś inny?**
+
+Najprostsza rejestracja użytkownika/użytkowniczki przebiega tak, że osoba wpisuje swój login i hasło w formularzu. Czasem strony wymagają wpisania hasła dwukrotnie, ale nie ma to związku z bezpieczeństwem – tylko z dobrym UX. Ludzie czasem robią literówki, a wymuszenie powtórzenia hasła minimalizuje to ryzyko. Następnie te informacje są przesyłane z przeglądarki do serwera.
+
+<p class="important">
+  Kluczowe jest szyfrowanie tych danych w czasie transportu, gdyż niezabezpieczone mogłyby zostać łatwo przechwycone
+  przez osoby niepowołane. Na szczęście szyfrowanie zachodzi automatycznie dzięki wsparciu TLS/HTTPS w serwerach
+  i przeglądarkach.{' '}
+  <strong>
+    Niezwykle istotne jest, abyśmy nigdy nie wpisywali swoich haseł na stronach korzystających z protokołu HTTP
+  </strong>{' '}
+  (bez „S”).
+</p>
+
+Serwer, po otrzymaniu naszego loginu i hasła, powinien zweryfikować, czy ktoś o takim loginie przypadkiem już nie założył konta. Zignorujmy jednak na razie przypadki brzegowe i skupmy się na bezpieczeństwie.
+
+Kolejnym krokiem będzie stworzenie konta, czyli zapisanie naszych danych logowania w jakiejś bazie danych. **Gdyby jednak hasło było zapisywane tak po prostu, mielibyśmy niemały problem.**
+
+## Wycieki baz
+
+Po pierwsze, ktokolwiek z dostępem do bazy danych **mógłby/mogłaby podejrzeć hasła wszystkich użytkowników i użytkowniczek**. Mógłby/mogłaby to być nawet pracownik lub pracowniczka firmy, w której się logujemy. Samo w sobie nie jest to zbyt komfortowe, a co, jeśli ta osoba miałaby złe intencje?
+
+Po drugie, **bazy danych czasem „wyciekają” do internetu**. Błędy konfiguracji albo ataki hakerskie mogą sprawić, że właściwie dowolna osoba pozna nasze hasło. Wiemy o takich wyciekach w największych firmach na świecie – Adobe, LinkedIn, Canva, czy nawet LastPass (sic!). Prawdopodobnie nie wiemy natomiast o masie innych podobnych zdarzeń.
+
+Co gorsza, **wiele osób nadal używa tego samego hasła w wielu serwisach**, a niektórzy – o zgrozo – korzystają z jednego hasła wszędzie. Gdyby więc hasła były zapisywane w bazach danych _en clair_, stwarzałoby to ogromne zagrożenie.
+
+## Co to jest haszowanie?
+
+Haszowanie (w idealnym przypadku) to proces polegający na zamianie jednej wartości na inną w sposób, który jest jednoznaczny i nieodwracalny. Co to oznacza w kontekście haseł?
+
+1. **Dla konkretnego hasła istnieje jeden hasz**, który najczęściej przypomina losowy ciąg znaków. Przykładowo, dla hasła „hasło1” pewnym haszem będzie „bc94…”, a dla hasła „hasło2” – „bdd4…”. Unikalne i jednoznaczne, **hasz nigdy nie powtarza się dla różnych haseł**.
+2. **Z hasza nie da się wydedukować oryginalnego hasła**. Mając sam ciąg znaków „bc94…” nigdy nie powinno być możliwe domyślenie się, że hasłem było „hasło1”.
+
+Napisałem, że jest to idealny przypadek – doskonała funkcja haszująca jest iniekcją. Co do zasady jednak, taka funkcja haszująca hasła nie istnieje. Oznacza to, że **zdarza się, że dwa zupełnie różne hasła po zahaszowaniu dadzą ten sam ciąg znaków**. Nazywamy to kolizją, ale dla współczesnych funkcji jest to na szczęście ekstremalnie rzadkie.
+
+<p class="important">
+  Jeśli interesuje Cię temat kolizji haszy, zachęcam do poczytania na temat „Paradoksu dni urodzin”.
+</p>
+
+## Haszowanie kryptograficznie bezpieczne
+
+Muszę zwrócić uwagę na jeszcze jeden niezwykle ważny szczegół: **nie każda funkcja haszująca nadaje się do haszowania haseł**. Do haseł niezbędna jest nam kryptograficznie bezpieczna funkcja haszująca, czyli taka, która:
+
+- Jest **w praktyce odporna na kolizje** – nie uda nam się znaleźć dwóch wartości, dla których hasz byłby ten sam (w rozsądnym czasie).
+- Znając jakiś hasz, nie uda nam się łatwo znaleźć wartości (hasła), z którego powstał.
+- Nawet jeśli poznamy hasz oraz wartość, z której powstał, nadal nie ułatwi nam to odgadnięcia **haseł z innych haszy**.
+- Powinna spełniać SAC (_strict avalanche criterion_[^1]). Zmiana jednego znaku hasła musi powodować **znaczące zmiany w haszu**. Innymi słowy, hasze dla „hasło1” i „hasło2” powinny być od siebie bardzo różne.
+
+Funkcje haszujące to na przykład CRC (różne wersje), MD (różne wersje), SHA (różne wersje), bcrypt, scrypt, argon2, pbkdf2 i inne. Na pewno słyszałeś/słyszałaś o niektórych z nich. Natomiast na dzień dzisiejszy za kryptograficznie bezpieczne uznawane są tylko niektóre, np. bcrypt, scrypt, argon2 i pbkdf2.
+
+## Haszowanie haseł
+
+Skoro wiemy już nieco o haszowaniu i wiemy, że hasła należy haszować przed zapisem, wróćmy do procesu rejestracji i logowania.
+
+W czasie rejestracji użytkownik bądź użytkowniczka wpisuje swój login i hasło, przesyła je na serwer, następnie serwer haszuje hasło i zapisuje je w bazie.
+
+Przy logowaniu działa to podobnie – login i hasło docierają do serwera, hasło jest haszowane i porównywane z tym zapisanym w bazie.
+
+Wyciek lub kradzież bazy danych staje się teraz mniejszym zmartwieniem.
+
+## Dygresja o pieprzeniu i soleniu
+
+Napisałem „mniejszym”, a nie „żadnym”.
+
+Po pierwsze, **użytkownicy i użytkowniczki używający tego samego hasła będą mieli w bazie danych te same hasze**. Baza użytkowników i użytkowniczek Adobe z 2013 roku pokazała, że aż 1 911 938 osób używało hasła „123456”[^2]. Wystarczyło więc zgadnąć je raz (np. korzystając z podpowiedzi do hasła albo kontaktując się z daną osobą), by poznać dane dostępowe blisko dwóch milionów ludzi.
+
+Po drugie, istnieje pewien mało subtelny sposób przeprowadzania ataku w celu odzyskania haseł z listy haszy wykradzionych z bazy. Przygotowuje się (lub raczej kupuje gotową) wygenerowaną listę haseł wraz z ich haszami – zazwyczaj waży kilka terabajtów i zawiera miliardy haseł.
+
+Dla algorytmu MD5 taką listę można pobrać ze [strony internetowej](https://freerainbowtables.com/). Następnie niezwykle łatwo i szybko sprawdza się, czy dany hasz jest na naszej liście. Jeśli jest – gratulacje, mamy hasło!
+
+### Sól
+
+Co można na to poradzić? Rozwiązaniem tego problemu jest „sól”; mówi się, że hasła „solimy”. **Sól, [wg OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#salting), jest unikalną losową wartością dodawaną do hasła przed jego haszowaniem.** Dzięki temu te same hasła mają różne hasze – gdyż do każdego doklejana jest inna sól.
+
+Implementacja tego rozwiązania wiąże się z lekką zmianą w procesie rejestracji i logowania użytkowników i użytkowniczek. Przy rejestracji **generujemy losowy ciąg znaków, doklejamy go do hasła i dopiero całość haszujemy**. W bazie danych zapisujemy login, ten hasz oraz wygenerowaną sól. Logowanie przebiega w taki sposób, że serwer znajduje w bazie danych hasz oraz sól użytkownika/użytkowniczki na podstawie samego loginu, **łączy sól z przesłanym z przeglądarki hasłem**, haszuje i porównuje z haszem z bazy.
+
+Brzmi to nieco skomplikowanie. Szczęśliwie, algorytmy takie jak Argon2, bcrypt, scrypt i PBKDF2 automatycznie „solą” hasła za nas. Przykładowo, w przypadku bcrypta jeden z możliwych haszy dla „hasło1” to:
+
+`$2y$10$gb1dpMsmjssz2808V.uWWehpc.renenNbWjgTUmqzleRvAOa1VMl2`
+
+W tym ciągu znaków zaszyte jest kilka informacji, między innymi sól i hasz. Ale zupełnie nie musimy się tym martwić, gdyż biblioteki bcrypta posiadają też funkcję do weryfikowania hasła i automatycznie doklejają do niego sól przed haszowaniem.
+
+### Pieprz
+
+Dla rzetelności dodam, że stosuje się również technikę nazwaną „pieprzeniem haseł”. Generujemy jedną losową wartość (pieprz) i doklejamy ją do haseł (dodatkowo do soli!). Co istotne, **pieprz jest jeden i ten sam dla każdego hasła.**
+
+Kluczowe jest jednak, aby nie był przechowywany w tej samej bazie danych, co hasze haseł, a raczej w bezpiecznym miejscu – np. specjalnym _secret vault_. Tym sposobem dostęp do samej bazy danych jest jeszcze mniej użyteczny dla atakującego bądź atakującej. Nawet trafnie zgadując jakieś hasło i pobierając z bazy sole, nie uda się uzyskać pasujących haszy bez dostępu do pieprzu.
+
+Niemożliwe jest więc zweryfikowanie, czy zgadnięte hasło jest prawidłowe dla jakiegokolwiek użytkownika/użytkowniczki.
+
+## Haszowanie w przeglądarce
+
+Za nami długa podróż, ale wracamy już do _clou_. **Po co w ogóle wysyłać do serwera hasło, skoro sami moglibyśmy je zahaszować w przeglądarce** i przesłać właśnie taki hasz? Na chłopski rozum są tu same zalety: nikt nie pozna naszego hasła – ani aplikacja, ani potencjalny ktoś podsłuchujący po drodze.
+
+Zróbmy tu mały eksperyment myślowy. Ja wysyłam do serwera moje hasło, a Ty wysyłasz hasz swojego. Co mógłby lub mogłaby przechwycić atakujący/atakująca? Co otrzyma serwer? W obu przypadkach odpowiedź to **„jakiś ciąg znaków, który pozwala na zalogowanie się”**. Nie ma żadnej różnicy, czy haszowalibyśmy hasło przed jego wysłaniem, czy nie. To, co ostatecznie wyślemy do serwera, jest symbolicznym kluczem, który otwiera drzwi. Nie ma znaczenia, czy ten ciąg znaków to „hasło1…” czy „gb1dpM…”. Hasz staje się _de facto_ hasłem.
+
+Serwer taki ciąg znaków i tak musi zahaszować. Nie może po prostu go zapisać, nawet jeśli jest to hasz przygotowany przez nas. Nie może, gdyż z powodów opisanych w poprzednim akapicie wrócilibyśmy do niebezpiecznej sytuacji z sekcji „Wycieki baz”: ktokolwiek z dostępem do bazy danych mógłby użyć tych przeglądarkowych haszy jak haseł, by logować się w imieniu innych osób. A jeśli serwer i tak haszuje, to nasze haszowanie w przeglądarce **jest nie tyle szkodliwe, co po prostu niepotrzebne.**
+
+Podnoszonym przez niektóre osoby argumentem jest to, że stworzony w przeglądarce i wykradziony po drodze hasz hasła nie będzie mógł posłużyć do zalogowania się w innych serwisach. To prawda, ale martwi Cię to tylko wtedy, gdy powtarzasz to samo hasło w wielu miejscach. **Odpowiednią profilaktyką tutaj jest po prostu generowanie długich losowych haseł unikalnych dla każdego portalu.** Pomagają w tym aplikacje takie jak Apple Passwords czy 1Password (❤️).
+
+## Przypadek 1Password
+
+Kilka osób nieśmiało wspomniało, że 1Password haszuje hasło w przeglądarce. Tak. Jednak cel tej operacji w przypadku menedżera haseł jest zupełnie inny, a cały proces znacznie bardziej skomplikowany niż proste logowanie hasłem.
+
+W przypadku 1Password hasło, hasz ani wygenerowany klucz nie opuszczają przeglądarki. Zamiast tego 1Password najpierw stosuje technikę _Secure Remote Password_ w celu uwierzytelnienia bez potrzeby przesyłania hasła (_zero-knowledge proof_). Następnie przesyła użytkownikowi/użytkowniczce jego dane zaszyfrowane kluczem publicznym, a użytkownik/użytkowniczka je odszyfrowuje kluczem prywatnym.
+
+Częścią tego procesu jest haszowanie, ale zupełnie w innym kontekście – hasło użytkownika/użytkowniczki ani jego hasz nigdy nie są przesyłane przez Internet.
+
+## Podsumowanie
+
+Mam nadzieję, że nieco przybliżyłem Ci idee stojące za bezpieczeństwem haseł. Co to jest haszowanie? Po co się to robi? Czemu trzeba haszować na serwerze? Dlaczego hasło należy posolić i popierzyć? Napisz mi w komentarzu, o czym jeszcze chciałabyś/chciałbyś przeczytać.
+
+[^1]: Zmiana jednego bitu hasła powoduje zmianę każdego bitu hasza z prawdopodobieństwem 50%.
+[^2]: Adobe w ogóle nie haszowało wtedy haseł, tylko szyfrowało je w odwracalny sposób 3DES w trybie ECB. Ma to ciekawe konsekwencje, [warto poczytać](https://filippo.io/analyzing-the-adobe-leaked-passwords/).

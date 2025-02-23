@@ -78,7 +78,7 @@ commentsLabel(0); // komentarzy
 commentsLabel(3); // komentarze</code></pre>
 
 <h2>Stworzyłem moduł na <code>npm</code>!</h2>
-Kod jest dostępny na GitHubie: <a href="https://github.com/mmiszy/polish-plurals">mmiszy/polish-plurals</a>
+Kod jest dostępny na GitHubie: <a href="https://github.com/typeofweb/polish-plurals">typeofweb/polish-plurals</a>
 
 Paczkę npm zaś można pobrać stąd: <a href="https://www.npmjs.com/package/polish-plurals">polish-plurals</a>. Paczka npm eksportuje zarówno plik <code>.js</code> (CommonJS) jak i <code>.mjs</code> (moduły ECMAScript).
 

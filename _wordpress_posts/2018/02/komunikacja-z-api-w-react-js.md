@@ -39,7 +39,7 @@ Wracam do kodu stąd:
 
 https://typeofweb.com/podzial-komponenty-react-js/
 
-Gotowa implementacja z tej części kursu dostępna jest tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)
+Gotowa implementacja z tej części kursu dostępna jest tutaj: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-1)
 
 ## Przygotowanie
 
@@ -195,7 +195,7 @@ Możemy Cię nauczyć tego wszystkiego szybciej: <a href="https://szkolenia.type
 
 ## Podsumowanie
 
-Poznałaś/eś właśnie podstawowy sposób pobierania i wyświetlania danych z REST API w React.js. To nie było takie trudne, prawda? Cały kod: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)
+Poznałaś/eś właśnie podstawowy sposób pobierania i wyświetlania danych z REST API w React.js. To nie było takie trudne, prawda? Cały kod: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-1)
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 <NewsletterForm />

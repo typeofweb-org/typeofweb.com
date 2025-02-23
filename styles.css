@@ -29,20 +29,25 @@ html,
   width: 100%;
   max-width: 100%;
 }
+
 .size-large {
   width: 768px;
   max-width: 100%;
 }
+
 .size-medium {
   width: 300px;
   max-width: 100%;
 }
+
 .aligncenter {
   @apply mx-auto;
 }
+
 .alignleft {
   @apply float-left mr-5;
 }
+
 .alignright {
   @apply float-right ml-5;
 }
@@ -131,6 +136,7 @@ dl {
       initial-value: theme('colors.blue.500');
       inherits: false;
     }
+
     @property --fancy-animation-progress {
       syntax: '<number>';
       initial-value: 0;
@@ -181,6 +187,7 @@ progress {
   &::-webkit-progress-bar {
     @apply bg-gray-200;
   }
+
   &::-moz-progress-bar {
     @apply bg-gray-200;
   }
@@ -333,4 +340,35 @@ figure.oembed p {
 
 figure.oembed cite {
   @apply block -mt-3 mb-2 text-left text-gray-400 text-xs font-normal;
+}
+
+.nice-scrollbar {
+  @supports selector(*::-webkit-scrollbar) {
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0.5rem;
+      background-color: #fafafa;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: #eee;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+  }
+
+  @supports not selector(*::-webkit-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: #eee #fafafa;
+  }
+}
+
+.footnotes {
+  margin-top: 4rem;
 }

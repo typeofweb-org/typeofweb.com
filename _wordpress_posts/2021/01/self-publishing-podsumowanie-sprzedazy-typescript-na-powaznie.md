@@ -28,7 +28,7 @@ seo:
     self-publishing.
 ---
 
-Jakiś czas temu na moim [instagramie](https://www.instagram.com/michal_typeofweb/) zadałem pytanie, czy chcielibyście zobaczyć podsumowanie sprzedaży książki „TypeScript na poważnie” w self-publishing. Blisko 100% odpowiedzi było na TAK, więc oto i ono :)
+Jakiś czas temu na moim [instagramie](https://www.instagram.com/typeofweb/) zadałem pytanie, czy chcielibyście zobaczyć podsumowanie sprzedaży książki „TypeScript na poważnie” w self-publishing. Blisko 100% odpowiedzi było na TAK, więc oto i ono :)
 
 ---
 

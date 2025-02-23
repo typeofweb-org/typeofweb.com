@@ -273,7 +273,7 @@ https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/cover_facebook
 https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/cover_facebook3.png
 https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/github.com_mmiszy_react-with-observable_settings_branch_protection_rules_1993862-1024x632.png
 https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/github.com_mmiszy_react-with-observable_settings_branch_protection_rules_1993862-scaled.png
-https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/mmiszy.github.io_example.png
+https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/typeofweb.github.io_example.png
 https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/MZET3111-20191101-1024x683.jpg
 https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/MZET3111-20191101.jpg
 https://res.cloudinary.com/type-of-web/wp-content/uploads/2019/11/Screenshot-2019-11-04-at-14.38.18-300x286.png

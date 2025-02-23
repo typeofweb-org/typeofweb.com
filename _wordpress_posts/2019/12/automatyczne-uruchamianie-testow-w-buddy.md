@@ -40,7 +40,7 @@ Poniższy artykuł powstał we współpracy z Buddy.works.
 
 ## Testy jednostkowe, testy integracyjne
 
-Jako przykładowy projekt wezmę moją paczkę `@mmiszy/react-with-observable`, która pozwala na używanie observabli w React w przyjazny i deklaratywny sposób. Zawiera ona zarówno [testy jednostkowe](https://github.com/mmiszy/react-with-observable/blob/b424212b9e9bf03ddd36cf89571b6c6f12f96d1d/src/index.spec.tsx), jak i [testy integracyjne](https://github.com/mmiszy/react-with-observable/blob/b424212b9e9bf03ddd36cf89571b6c6f12f96d1d/cypress/integration/examples/ts.spec.ts) napisane przy użyciu biblioteki Cypress. Zacznijmy od testów jednostkowych.
+Jako przykładowy projekt wezmę moją paczkę `@mmiszy/react-with-observable`, która pozwala na używanie observabli w React w przyjazny i deklaratywny sposób. Zawiera ona zarówno [testy jednostkowe](https://github.com/typeofweb/react-with-observable/blob/b424212b9e9bf03ddd36cf89571b6c6f12f96d1d/src/index.spec.tsx), jak i [testy integracyjne](https://github.com/typeofweb/react-with-observable/blob/b424212b9e9bf03ddd36cf89571b6c6f12f96d1d/cypress/integration/examples/ts.spec.ts) napisane przy użyciu biblioteki Cypress. Zacznijmy od testów jednostkowych.
 
 ## Buddy.works i testy jednostkowe w React.js
 
@@ -58,7 +58,7 @@ GitHub daje też możliwość wymuszenia tego, aby testy jednostkowe i testy int
 
 ## Cypress na Buddy.works
 
-W moim projekcie napisane są też testy integracyjne przy użyciu biblioteki Cypress. <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs1&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy</a> również daje możliwość uruchomienia Cypressa i ma do tego gotową akcję! Dodajemy akcję Cypress i, w przypadku mojego projektu, używam komendy `npm run test:e2e` (którą można [podejrzeć tutaj](https://github.com/mmiszy/react-with-observable/blob/d941bf6f5f9801cbf980ee3f7b9ebb642dc45562/package.json#L25)). Zrobiłem to przy pomocy jednego pipeline'a, ale nic nie stoi na przeszkodzie, abyście Wy rozbili to na dwa osobne!
+W moim projekcie napisane są też testy integracyjne przy użyciu biblioteki Cypress. <a href="https://buddy.works/?utm_source=blogpost&utm_medium=cpc&utm_campaign=typeofweb_11/19_kurs1&utm_content=main" target="_blank" rel="noopener noreferrer">Buddy</a> również daje możliwość uruchomienia Cypressa i ma do tego gotową akcję! Dodajemy akcję Cypress i, w przypadku mojego projektu, używam komendy `npm run test:e2e` (którą można [podejrzeć tutaj](https://github.com/typeofweb/react-with-observable/blob/d941bf6f5f9801cbf980ee3f7b9ebb642dc45562/package.json#L25)). Zrobiłem to przy pomocy jednego pipeline'a, ale nic nie stoi na przeszkodzie, abyście Wy rozbili to na dwa osobne!
 
 ## Podsumowanie
 

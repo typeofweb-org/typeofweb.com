@@ -48,8 +48,8 @@ Tutaj od razu wysyłam pierwszą akcję (1) — to mniej więcej to samo co robi
 
 Skupmy się jednak na thunku! Następnie do <code>dispatch</code> przekazuję funkcję — to nie działałoby bez <code>redux-thunk</code>! W tej funkcji (2) natychmiast wywołuję kolejny <code>INCREMENT</code>, a następnie, asynchronicznie, jeszcze dwa kolejne (3). Zobacz to na żywo:
 
-<CodepenWidget height="265" themeId="0" slugHash="MGjJda" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="React Redux Thunk Type of Web">
-<a href="http://codepen.io/mmiszy/pen/MGjJda/">Zobacz Codepen React Redux Thunk Type of Web</a>.
+<CodepenWidget height="265" themeId="0" slugHash="MGjJda" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="React Redux Thunk Type of Web">
+<a href="http://codepen.io/typeofweb/pen/MGjJda/">Zobacz Codepen React Redux Thunk Type of Web</a>.
 </CodepenWidget>
 
 Jeśli w demie powyżej widzisz od razu "Licznik: 5" to otwórz je w nowej karcie. Licznik zacznie się od 2 (po dwóch synchronicznych akcjach), a następnie po sekundzie wskoczy 3, po kolejnej 4 i potem 5.
@@ -96,7 +96,7 @@ Założenia są takie:
 <li>filtrowanie nadal działa niezależnie od seeda</li>
 </ul>
 
-Wszystko jasne? Zaczynam od kodu z poprzedniego wpisu: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-3-redux">github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-3-redux</a>
+Wszystko jasne? Zaczynam od kodu z poprzedniego wpisu: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-3-redux">github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-3-redux</a>
 
 <h2>redux-thunk i fetch</h2>
 
@@ -225,7 +225,7 @@ Zobacz tutaj:
 
 <p style="text-align: center;"><iframe src="https://www.youtube.com/embed/jlcRfRs1IRU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=jlcRfRs1IRU" width="560" height="476" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 
-Kod znajdziesz jak zwykle na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-4-redux">github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-4-redux</a>
+Kod znajdziesz jak zwykle na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-4-redux">github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-4-redux</a>
 
 <h2>Podsumowanie</h2>
 

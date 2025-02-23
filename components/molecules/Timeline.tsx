@@ -190,7 +190,7 @@ const items: readonly Item[] = [
     subtitle: `Prezentacja na UnleashConf`,
     links: [
       { kind: 'video', value: `https://youtu.be/VStxR3KCAKM` },
-      { kind: 'presentation', value: `https://github.com/mmiszy/unleashconf-css-hacking-2017` },
+      { kind: 'presentation', value: `https://github.com/typeofweb/unleashconf-css-hacking-2017` },
       { kind: 'event', value: `https://x-team.com/unleashconf/` },
     ],
   },
@@ -217,7 +217,7 @@ const items: readonly Item[] = [
     title: `I Ty możesz być cyfrowym nomadą!`,
     subtitle: `Prezentacja na PyGDA #20`,
     links: [
-      { kind: 'presentation', value: `https://mmiszy.github.io/2016-11-28.PyGda/` },
+      { kind: 'presentation', value: `https://typeofweb.github.io/2016-11-28.PyGda/` },
       { kind: 'event', value: `https://www.meetup.com/PyGda-pl/events/235402519/` },
     ],
   },
@@ -234,7 +234,7 @@ const items: readonly Item[] = [
     links: [
       { kind: 'video', value: `https://vimeo.com/192910605` },
       { kind: 'event', value: `https://evenea.pl/event/tech3camp151116/` },
-      { kind: 'presentation', value: `https://mmiszy.github.io/3camp-angular-2-slides/#/1)` },
+      { kind: 'presentation', value: `https://typeofweb.github.io/3camp-angular-2-slides/#/1)` },
     ],
   },
   {
@@ -250,7 +250,7 @@ const items: readonly Item[] = [
     links: [
       {
         kind: 'presentation',
-        value: `https://speakerdeck.com/mmiszy/everything-you-always-wanted-to-know-about-angularjs-but-were-afraid-to-ask`,
+        value: `https://speakerdeck.com/typeofweb/everything-you-always-wanted-to-know-about-angularjs-but-were-afraid-to-ask`,
       },
     ],
   },
@@ -261,10 +261,10 @@ const items: readonly Item[] = [
     links: [
       {
         kind: 'presentation',
-        value: `https://speakerdeck.com/mmiszy/angularjs-1-dot-3-0-lets-talk-about-changes-ngpoznan`,
+        value: `https://speakerdeck.com/typeofweb/angularjs-1-dot-3-0-lets-talk-about-changes-ngpoznan`,
       },
-      { kind: 'presentation', value: `http://mmiszy.github.io/angular-comparison/` },
-      { kind: 'code', value: `https://github.com/mmiszy/angular-comparison/` },
+      { kind: 'presentation', value: `http://typeofweb.github.io/angular-comparison/` },
+      { kind: 'code', value: `https://github.com/typeofweb/angular-comparison/` },
       { kind: 'event', value: `https://www.meetup.com/ng-poznan-meetup/events/211926672/` },
     ],
   },
@@ -282,9 +282,9 @@ const items: readonly Item[] = [
       { kind: 'video', value: `https://www.youtube.com/watch?v=OVWomXA-a2s` },
       {
         kind: 'presentation',
-        value: `https://speakerdeck.com/mmiszy/case-study-aplikacji-mobilnej-w-angularjs-w-8-godzin-od-pomyslu-do-implementacji`,
+        value: `https://speakerdeck.com/typeofweb/case-study-aplikacji-mobilnej-w-angularjs-w-8-godzin-od-pomyslu-do-implementacji`,
       },
-      { kind: 'code', value: `https://github.com/mmiszy/lunch-button/tree/meet_js` },
+      { kind: 'code', value: `https://github.com/typeofweb/lunch-button/tree/meet_js` },
     ],
   },
   {

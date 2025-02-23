@@ -47,7 +47,7 @@ Na pewno warto przeczytać o wzorcach projektowych stojących za Reduksem! Warto
 
 ## Redux w praktyce
 
-Do aplikacji z listą kontaktów (źródło tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-1)) dodasz Reduksa. Kontakty będą <strong>zapisywane w storze</strong>. Jeśli chcesz sobie odświeżyć wątek to zajrzyj do wpisu na temat <a href="https://typeofweb.com/komunikacja-z-api-w-react-js/">łączenia Reacta z API</a>.
+Do aplikacji z listą kontaktów (źródło tutaj: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-1](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-1)) dodasz Reduksa. Kontakty będą <strong>zapisywane w storze</strong>. Jeśli chcesz sobie odświeżyć wątek to zajrzyj do wpisu na temat <a href="https://typeofweb.com/komunikacja-z-api-w-react-js/">łączenia Reacta z API</a>.
 
 Zacznij od zainstalowania paczek `redux` i `react-redux`:
 
@@ -198,7 +198,7 @@ class App extends React.Component {
 ```
 
 Jak widzisz, zamiast `setState` używam `this.props.contactsFetched` (1). A do komponentu `ContactsList` przekazuję `this.props.contacts` (2).
-Cały kod źródłowy tutaj: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-2-redux](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-2-redux)
+Cały kod źródłowy tutaj: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-2-redux](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-2-redux)
 
 <p class="important">Przedstawiony tutaj sposób na pracę z asynchronicznymi funkcjami i Reduksem jest najprostszym z możliwych. W kolejnych wpisach przedstawię inne metody obsługi *asynchroniczności w Redux*.</p>
 

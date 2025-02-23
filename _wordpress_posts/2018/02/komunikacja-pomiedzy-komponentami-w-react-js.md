@@ -31,7 +31,7 @@ Przyszedł ten moment, gdy Twoja aplikacja zaczyna się rozrastać i zmagasz si�
 
 <h2>Komunikacja w React.js</h2>
 
-React to prosta biblioteka. Zasadniczo nie obchodzi jej w jaki sposób projektujesz architekturę swojej aplikacji. Ale zawarto w niej mechanizm na przekazywanie informacji z jednego komponentu do drugiego — z rodzica do dziecka — przy pomocy propsów. Tak jak robiliśmy to do tej pory. <strong>Ale przekazywać można nie tylko dane, ale też funkcje ;)</strong> W tym wpisie fragmenty kodu, a całość razem z testami znajdziesz na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-4">mmiszy/typeofweb-kurs-react/tree/part-4</a>.
+React to prosta biblioteka. Zasadniczo nie obchodzi jej w jaki sposób projektujesz architekturę swojej aplikacji. Ale zawarto w niej mechanizm na przekazywanie informacji z jednego komponentu do drugiego — z rodzica do dziecka — przy pomocy propsów. Tak jak robiliśmy to do tej pory. <strong>Ale przekazywać można nie tylko dane, ale też funkcje ;)</strong> W tym wpisie fragmenty kodu, a całość razem z testami znajdziesz na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/part-4">typeofweb/typeofweb-kurs-react/tree/part-4</a>.
 
 <h2>Rodzic ➜ Dziecko: Propsy</h2>
 
@@ -100,7 +100,7 @@ Tutaj magia Reacta się kończy ;) No, prawie, ale na temat <code>context</code>
 <ul>
     <li>stwórz funkcję / klasę / obiekt — tzw. serwis, który posłuży Ci do komunikacji. Zaimportuj i użyj go w obu komponentach.</li>
     <li>Przechowuj w nim dane lub wywołuj funkcje — podobnie jak w przypadku komunikacji rodzic ⟺ dziecko</li>
-    <li>Przyda Ci się znajomość wzorców projektowych, np. wzorca obserwatora. Więcej na temat samej koncepcji pod koniec <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami/#staredobrewzorceprojektowe">mojego innego wpisu (link)</a>. Może <a href="https://gist.github.com/mmiszy/cea958c4c644b3fffe8537e21a419d4d">ten gist (link)</a> się nada?</li>
+    <li>Przyda Ci się znajomość wzorców projektowych, np. wzorca obserwatora. Więcej na temat samej koncepcji pod koniec <a href="https://typeofweb.com/komunikacja-pomiedzy-kontrolerami/#staredobrewzorceprojektowe">mojego innego wpisu (link)</a>. Może <a href="https://gist.github.com/typeofweb/cea958c4c644b3fffe8537e21a419d4d">ten gist (link)</a> się nada?</li>
     <li>Możesz użyć gotowych paczek, typu <a href="https://www.npmjs.com/package/eventemitter3">EventEmitter3 (link)</a> lub podobnych.</li>
 </ul>
 
@@ -114,7 +114,7 @@ Natomiast w kontekście Reacta — wrócę do tego, obiecuję ;) To temat pierws
 
 <h2>Podsumowanie</h2>
 
-Teraz już wiesz jak komponenty rozmawiają ze sobą. <strong>Wiedza na temat architektury aplikacji i wzorców projektowych przydaje się zawsze, niezależnie od frameworka, z którego korzystasz.</strong> Także tutaj. Ponownie — cały kod <strong>wraz z testami</strong> jest dostępny na moim GitHubie: <a href="https://github.com/mmiszy/typeofweb-kurs-react/tree/part-3">https://github.com/mmiszy/typeofweb-kurs-react/tree/part-4</a>
+Teraz już wiesz jak komponenty rozmawiają ze sobą. <strong>Wiedza na temat architektury aplikacji i wzorców projektowych przydaje się zawsze, niezależnie od frameworka, z którego korzystasz.</strong> Także tutaj. Ponownie — cały kod <strong>wraz z testami</strong> jest dostępny na moim GitHubie: <a href="https://github.com/typeofweb/typeofweb-kurs-react/tree/part-3">https://github.com/typeofweb/typeofweb-kurs-react/tree/part-4</a>
 
 Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 

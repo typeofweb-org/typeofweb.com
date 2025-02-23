@@ -1512,9 +1512,9 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@giscus/react@github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c":
+"@giscus/react@github:typeofweb-org/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c":
   version "1.0.0"
-  resolved "https://codeload.github.com/typeofweb/giscus-component/tar.gz/913a81c09ec80905c7ca5c166962ad547ddcc51c"
+  resolved "https://codeload.github.com/typeofweb-org/giscus-component/tar.gz/913a81c09ec80905c7ca5c166962ad547ddcc51c"
   dependencies:
     iframe-resizer-react "^1.1.0"
 
@@ -2076,9 +2076,9 @@
     "@octokit/webhooks-types" "5.2.0"
     aggregate-error "^3.1.0"
 
-"@openlab/vercel-netlify-cms-github@github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb":
+"@openlab/vercel-netlify-cms-github@github:typeofweb-org/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb":
   version "1.1.1"
-  resolved "https://codeload.github.com/typeofweb/vercel-netlify-cms-github/tar.gz/e1bfcef55c47105805181e4a9256424ba838fcbb"
+  resolved "https://codeload.github.com/typeofweb-org/vercel-netlify-cms-github/tar.gz/e1bfcef55c47105805181e4a9256424ba838fcbb"
   dependencies:
     dotenv "^8.2.0"
     simple-oauth2 "^4.2.0"

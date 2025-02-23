@@ -205,7 +205,7 @@ https://youtu.be/rlWYb_b3qi0
 
 <h2>Podsumowanie</h2>
 
-Cały kod oraz moje slajdy znajdziecie w repozytorium: <a href="https://github.com/mmiszy/unleashconf-css-hacking-2017">https://github.com/mmiszy/unleashconf-css-hacking-2017</a>
+Cały kod oraz moje slajdy znajdziecie w repozytorium: <a href="https://github.com/typeofweb/unleashconf-css-hacking-2017">https://github.com/typeofweb/unleashconf-css-hacking-2017</a>
 
 Z tego wpisu warto zapamiętać kilka rzeczy:
 

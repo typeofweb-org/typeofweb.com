@@ -4,7 +4,6 @@ import { memo } from 'react';
 import { useRunningHeader } from '../../hooks/runningHeader';
 import TypeOfWebLogo from '../../images/logo-typeofweb-black.svg';
 import { isIndex } from '../../utils/pageKind';
-import { LinkUnderlineEffect } from '../atoms/LinkUnderlineEffect';
 import { MainNav } from '../molecules/MainNav';
 
 import type { PageKind } from '../../types';
@@ -19,7 +18,7 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
       <a href="#main-content" className="focus:not-sr-only sr-only">
         Skocz do treści
       </a>
-      <header className="ios:transcluent-white after:absolute fixed z-50 after:bottom-0 top-0 flex flex-row items-stretch justify-center pb-1 after:w-full w-full after:h-1 h-12 bg-gray-100 after:bg-gray-200 shadow overflow-hidden">
+      <header className="ios:transcluent-white after:absolute fixed z-50 after:bottom-0 top-0 flex flex-row items-stretch justify-center pb-1 after:w-full w-full after:h-1 h-12 bg-gray-100 after:bg-gray-200 shadow">
         <div itemScope itemType="http://schema.org/WPHeader" className="flex flex-1 flex-row px-4 max-w-3xl xl:px-0">
           <Link href="/">
             <HeaderEl itemProp="headline" className="-ml-2 p-2">
@@ -47,18 +46,6 @@ export const SiteHeader = memo<{ readonly pageKind: PageKind }>(({ pageKind }) =
           />
         )}
       </header>
-      <div className="fixed z-10 top-12 text-lg flex items-center justify-center px-6 py-1 w-full text-center bg-white shadow-md border-2 font-serif">
-        <p>
-          <LinkUnderlineEffect>
-            <a
-              className="text-blue-500 font-bold"
-              href="https://www.next13masters.pl/?utm_source=typeofweb&utm_medium=sidebar"
-            >
-              Już wkrótce odpalamy zapisy na drugą edycję next13masters.pl. Zapisz się na listę oczekujących!
-            </a>
-          </LinkUnderlineEffect>
-        </p>
-      </div>
     </>
   );
 });

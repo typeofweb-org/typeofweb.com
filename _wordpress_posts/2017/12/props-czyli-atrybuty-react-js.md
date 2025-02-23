@@ -71,7 +71,7 @@ Propsy do komponentów przekazywane są po prostu jako argumenty. A konkretnie: 
 
 <pre><code>function MojKomponent({ title, content }) { … }</code></pre>
 
-<h3 data-height="365" data-theme-id="0" data-slug-hash="BweVZB" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Wstęp do React">Wyświetlanie</h3>
+<h3 data-height="365" data-theme-id="0" data-slug-hash="BweVZB" data-default-tab="js,result" data-user="typeofweb" data-embed-version="2" data-pen-title="Wstęp do React">Wyświetlanie</h3>
 
 Jak teraz <strong>wyświetlić zawartość takiej zmiennej w JSX</strong>? Jest to również bardzo proste. Wystarczy skorzystać ze składni <code>{nazwa}</code> — i to wszystko!
 
@@ -88,7 +88,7 @@ Ostatecznie otrzymujemy taki kod:
   );
 }</code></pre>
 
-<h3 data-height="365" data-theme-id="0" data-slug-hash="BweVZB" data-default-tab="js,result" data-user="mmiszy" data-embed-version="2" data-pen-title="Wstęp do React">Ostateczny efekt</h3>
+<h3 data-height="365" data-theme-id="0" data-slug-hash="BweVZB" data-default-tab="js,result" data-user="typeofweb" data-embed-version="2" data-pen-title="Wstęp do React">Ostateczny efekt</h3>
 
 Teraz już nie pozostaje nic innego jak wyrenderować ten komponent. Podobnie jak dotychczas:
 
@@ -121,8 +121,8 @@ Teraz przy próbie wyrenderowania <code>&lt;MojKomponent /&gt;</code> zamiast ty
 
 <h2>Demo</h2>
 
-<CodepenWidget height="365" themeId="0" slugHash="BweVZB" defaultTab="js,result" user="mmiszy" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
-<a href="http://codepen.io/mmiszy/pen/BweVZB/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
+<CodepenWidget height="365" themeId="0" slugHash="BweVZB" defaultTab="js,result" user="typeofweb" embedVersion="2" penTitle="Props czyli atrybuty w React.js">
+<a href="http://codepen.io/typeofweb/pen/BweVZB/">Zobacz Codepen Props czyli atrybuty w React.js</a>.
 </CodepenWidget>
 
 <h2>Co dalej?</h2>

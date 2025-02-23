@@ -72,6 +72,7 @@ const Img = ({ src, width, height, alt = '', placeholder: _placeholder, ...props
     );
   }
   // console.warn(`[MDX] Image ${src} has no width and height.`);
+  // eslint-disable-next-line @next/next/no-img-element -- ok
   return <img {...props} width={width} height={height} src={srcWithoutPublic} alt={alt} loading="lazy" />;
 };
 

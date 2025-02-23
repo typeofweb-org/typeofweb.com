@@ -117,7 +117,7 @@ export const AppFooter = memo(() => {
           <span className="inline-block">Znalazłeś/aś błąd na stronie?</span>{' '}
           <span className="inline-block">
             <Link
-              href="https://github.com/typeofweb/typeofweb.com/issues/new"
+              href="https://github.com/typeofweb-org/typeofweb.com/issues/new"
               className="hover:text-green-700 underline transition-colors"
             >
               Otwórz issue na GitHubie

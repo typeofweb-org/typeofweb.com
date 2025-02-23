@@ -115,6 +115,6 @@ Funkcja <code>handler</code> zostanie wywołana przez Hapi gdy użytkownik odwie
 <h1 id="podsumowanie">Podsumowanie</h1>
 Udało nam się stworzyć <strong>prosty back-end w node.js przy pomocy frameworka HapiJS</strong>. Utworzyliśmy serwer i połączenie oraz zadeklarowaliśmy pierwszy endpoint, którego zadaniem było wyświetlenie komunikatu.
 
-Cały kod dostępny jest na moim GitHubie: <a href="https://github.com/mmiszy/hapijs-tutorial/tree/czesc-1">https://github.com/mmiszy/hapijs-tutorial/tree/czesc-1</a>
+Cały kod dostępny jest na moim GitHubie: <a href="https://github.com/typeofweb/hapijs-tutorial/tree/czesc-1">https://github.com/typeofweb/hapijs-tutorial/tree/czesc-1</a>
 
 W kolejnej części opowiem trochę o obsługiwaniu parametrów i zapytań (<em>query string</em>). Powiem też o bardzo fajnej możliwości, jaką daje nam Hapi: automatycznej walidacji żądań.

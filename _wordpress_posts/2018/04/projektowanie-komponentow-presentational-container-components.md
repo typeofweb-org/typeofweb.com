@@ -168,4 +168,4 @@ Jeśli chcesz na bieżąco dowiadywać się o kolejnych częściach kursu React.
 
 ## Ćwiczenie
 
-**Ćwiczenie:** Zrefaktoruj plik [App.jsx](https://github.com/mmiszy/typeofweb-kurs-react/blob/contacts-list-3-redux/src/App.jsx) z poprzedniego odcinka. Zmień go tak, aby podział na komponenty _smart_ i _dumb_ był zachowany również tutaj. Podziel się kodem w komentarzu!
+**Ćwiczenie:** Zrefaktoruj plik [App.jsx](https://github.com/typeofweb/typeofweb-kurs-react/blob/contacts-list-3-redux/src/App.jsx) z poprzedniego odcinka. Zmień go tak, aby podział na komponenty _smart_ i _dumb_ był zachowany również tutaj. Podziel się kodem w komentarzu!

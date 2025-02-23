@@ -44,8 +44,9 @@ export const getRelatedPosts2ForPermalink = async (permalink: string) => {
 
   const keys = Object.keys(Data);
   for (let i = 0; related.length < NUM_RELATED; ++i) {
+    console.log(key + `${i}${i}${i}`);
     // quite random but also predictable
-    related.push(keys[simpleHash(key + `${i}${i}${i}`, keys.length)]);
+    related.push(keys[simpleHash(key + `${i}`, keys.length)]);
   }
 
   const relatedPosts = await Promise.all(related.map((path) => path.replace(/\//g, '')).map(getPostByPermalink));

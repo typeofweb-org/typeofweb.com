@@ -1,3 +1,4 @@
+import { default as NextEnv } from '@next/env';
 import Algoliasearch from 'algoliasearch';
 import Invariant from 'invariant';
 
@@ -8,8 +9,14 @@ import { toHtml } from './utils/markdown';
 import { readAllPosts } from './utils/posts';
 import { seriesSlugToSeries } from './utils/series';
 
+NextEnv.loadEnvConfig('.');
+
 async function run() {
-  Invariant(!!process.env.ALGOLIA_UPDATE_API_KEY, 'ALGOLIA_UPDATE_API_KEY is not set');
+  // Invariant(!!process.env.ALGOLIA_UPDATE_API_KEY, 'ALGOLIA_UPDATE_API_KEY is not set');
+  if (!process.env.ALGOLIA_UPDATE_API_KEY) {
+    console.log('ALGOLIA_UPDATE_API_KEY is not set');
+    return;
+  }
 
   const data = await readAllPosts({ includePages: true, includeCommentsCount: false });
 

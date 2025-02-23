@@ -35,8 +35,8 @@ Z tego względu <strong>nie należy nigdy przeprowadzać obliczeń finansowych n
 
 <h2 id="zdarzeniachangeiinput">Zdarzenia <code>change</code> i <code>input</code></h2>
 Nasłuchiwanie na zdarzenie <code>change</code> na elemencie <code>&lt;input&gt;</code> albo <code>&lt;textarea&gt;</code> nie działa dokładnie tak, jak wiele osób by oczekiwało. Zdarzenie to jest wysyłane dopiero w momencie, gdy zmiany zostały zakończone – czyli np. po opuszczeniu inputa. Aby być informowanym o zmianie każdej literki lepiej podpiąć się pod zdarzenie <code>input</code>:
-<CodepenWidget height="250" themeId="light" slugHash="zBadLo" defaultTab="result" user="mmiszy" embedVersion="2">
-<a href="http://codepen.io/mmiszy/pen/zBadLo/">Zobacz Codepen</a>.
+<CodepenWidget height="250" themeId="light" slugHash="zBadLo" defaultTab="result" user="typeofweb" embedVersion="2">
+<a href="http://codepen.io/typeofweb/pen/zBadLo/">Zobacz Codepen</a>.
 </CodepenWidget>
 
 <h2 id="wzorceiantywzorce">Wzorce i antywzorce</h2>

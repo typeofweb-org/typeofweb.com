@@ -78,7 +78,7 @@ Ustaw, aby GitHub Pages korzystało ze stworzonego właśnie brancha <code>gh-pa
 
 <h2>Rezultat?</h2>
 
-Gotowe! Efekt możesz zobaczyć u mnie: <a href="https://mmiszy.github.io/typeofweb-kurs-react">mmiszy.github.io/typeofweb-kurs-react</a>
+Gotowe! Efekt możesz zobaczyć u mnie: <a href="https://typeofweb.github.io/typeofweb-kurs-react">typeofweb.github.io/typeofweb-kurs-react</a>
 
 Jeśli chcesz na bieżąco śledzić kolejne części kursu React.js to koniecznie <strong>śledź mnie na Facebooku i zapisz się na newsletter.</strong>
 

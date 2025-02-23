@@ -39,7 +39,7 @@ export class ErrorBoundary extends Component<{}, State> {
 }
 
 function errorToGitHubIssue(error: any, filename?: string) {
-  const url = `https://github.com/typeofweb/typeofweb.com/issues/new?`;
+  const url = `https://github.com/typeofweb-org/typeofweb.com/issues/new?`;
   const params = new URLSearchParams({
     labels: 'bug',
     title: error?.message,

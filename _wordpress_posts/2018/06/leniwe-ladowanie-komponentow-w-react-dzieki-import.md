@@ -130,7 +130,7 @@ Jeśli teraz zajrzysz do zakładki Network to zobaczysz tam dodatkowe żądanie 
 
 <a href="/public/assets/wp-content/uploads/2018/04/Screen-Shot-2018-04-23-at-8.46.42-PM.png"><img src="/public/assets/wp-content/uploads/2018/04/Screen-Shot-2018-04-23-at-8.46.42-PM.png" alt="Lazy load komponentów React" title="Leniwe ładowanie komponentu w React" width="832" height="118" class="aligncenter size-full wp-image-1465" /></a>
 
-Cały kod znajdziesz na GitHubie: [github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-5-async](https://github.com/mmiszy/typeofweb-kurs-react/tree/contacts-list-5-async)
+Cały kod znajdziesz na GitHubie: [github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-5-async](https://github.com/typeofweb/typeofweb-kurs-react/tree/contacts-list-5-async)
 
 ## Podsumowanie
 

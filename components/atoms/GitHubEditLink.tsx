@@ -1,6 +1,6 @@
 import { LinkUnderlineEffect } from './LinkUnderlineEffect';
 
-const repo = `https://github.com/typeofweb/typeofweb.com/edit/main/`;
+const repo = `https://github.com/typeofweb-org/typeofweb.com/edit/main/`;
 
 const NBSP = '\u00A0';
 

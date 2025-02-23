@@ -14,14 +14,14 @@
     "algolia": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateAlgoliaItems.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@algolia/recommend": "4.13.0",
-    "@giscus/react": "github:typeofweb/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
+    "@giscus/react": "github:typeofweb-org/giscus-component#913a81c09ec80905c7ca5c166962ad547ddcc51c",
     "@octokit/auth-app": "3.6.1",
     "@octokit/auth-token": "2.5.0",
     "@octokit/rest": "18.12.0",
-    "@openlab/vercel-netlify-cms-github": "github:typeofweb/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
+    "@openlab/vercel-netlify-cms-github": "github:typeofweb-org/vercel-netlify-cms-github#e1bfcef55c47105805181e4a9256424ba838fcbb",
     "@plaiceholder/next": "2.2.0",
     "@vercel/analytics": "0.1.5",
     "algoliasearch": "4.12.0",
@@ -124,7 +124,7 @@
     "> 2% in my stats"
   ],
   "engines": {
-    "node": "^18.0.0",
+    "node": "^18.0.0 || ^20.0.0",
     "yarn": "^1.22.0"
   }
 }
