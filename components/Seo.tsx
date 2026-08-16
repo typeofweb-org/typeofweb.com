@@ -27,16 +27,31 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'Person',
+      '@id': 'https://typeofweb.com/#michal-miszczyszyn',
+      name: 'Michał Miszczyszyn',
+      url: 'https://typeofweb.com/',
+      sameAs: [
+        'https://pierwszedemo.com',
+        'https://www.facebook.com/typeofweb',
+        'https://www.instagram.com/typeofweb/',
+        'https://linkedin.com/in/mmiszczyszyn',
+        'https://www.youtube.com/typeofweb',
+        'https://x.com/typeofweb',
+      ],
+    },
+    {
       '@type': 'Organization',
       '@id': 'https://typeofweb.com/#organization',
       name: 'Type of Web',
       url: 'https://typeofweb.com/',
       sameAs: [
+        'https://pierwszedemo.com',
         'https://www.facebook.com/typeofweb',
         'https://www.instagram.com/typeofweb/',
         'https://linkedin.com/in/mmiszczyszyn',
         'https://www.youtube.com/typeofweb',
-        'https://twitter.com/typeofweb',
+        'https://x.com/typeofweb',
       ],
       logo: {
         '@type': 'ImageObject',
