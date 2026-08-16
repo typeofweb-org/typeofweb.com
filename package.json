@@ -49,6 +49,7 @@
     "react-instantsearch-dom": "6.20.0",
     "recharts": "2.1.8",
     "remark-footnotes": "4.0.1",
+    "remark-gfm-v3": "npm:remark-gfm@3.0.1",
     "sharp": "0.31.2",
     "slugify": "1.6.5"
   },

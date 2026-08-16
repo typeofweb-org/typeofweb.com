@@ -13,6 +13,7 @@ import RehypeStringify from 'rehype-stringify';
 import RemarkFootnotes from 'remark-footnotes';
 import RemarkFrontmatter from 'remark-frontmatter';
 import RemarkGfm from 'remark-gfm';
+import RemarkGfmV3 from 'remark-gfm-v3';
 import RemarkMath from 'remark-math';
 import RemarkParse from 'remark-parse';
 import RemarkRehype from 'remark-rehype';
@@ -465,15 +466,16 @@ export function addDataToCodeBlocks(): import('unified').Transformer {
   };
 }
 
-export const commonRemarkPlugins = [
+const remarkPluginsWithoutGfm = [
   RemarkFrontmatter,
   RemarkMath,
-  RemarkGfm,
   RemarkFootnotes,
   remarkHtmlImgToJsx,
   imageToJsx,
   remarkImgToJsx,
 ];
+export const commonRemarkPlugins = [RemarkGfm, ...remarkPluginsWithoutGfm];
+const htmlRemarkPlugins = [RemarkGfmV3, ...remarkPluginsWithoutGfm];
 const commonRehypePlugins = [
   normalizeHeaders,
   [RehypeKatex, { strict: 'ignore' }],
@@ -542,7 +544,7 @@ export async function toHtml(
 ): Promise<string | ReturnType<import('unified').Processor['process']>> {
   const plugins = [
     RemarkParse,
-    ...commonRemarkPlugins,
+    ...htmlRemarkPlugins,
     [RemarkRehype, { allowDangerousHtml: true }],
     RehypeRaw,
     ...(options.excerpt ? [getOnlyFirstPara, addLeadToFirstParagraph] : []),
