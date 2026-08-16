@@ -20,7 +20,6 @@ import * as Unified from 'unified';
 import { visit } from 'unist-util-visit';
 
 import { tryCatch } from './fns';
-import { getOEmbed } from './oEmbedCache';
 import { imageToJsx, remarkHtmlImgToJsx, remarkImgToJsx } from './remark-img-to-jsx';
 
 import type { RootContent } from 'hast';
@@ -161,6 +160,7 @@ function replaceFreeLinkWithOEmbed(): import('unified').Transformer {
         return node;
       }
 
+      const { getOEmbed } = await import('./oEmbedCache');
       const oEmbed = await getOEmbed(href, {
         updateCache: !!process.env.UPDATE_OEMBED,
         force: !!process.env.FORCE_OEMBED,

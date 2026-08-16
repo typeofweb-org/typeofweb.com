@@ -10,8 +10,8 @@
     "start": "next start",
     "tsc": "tsc --noEmit",
     "ts-node-esm": "node --loader ts-node/esm --experimental-specifier-resolution=node",
-    "feed": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateFeed.ts",
-    "algolia": "ENABLE_GITHUB_READ=false yarn ts-node-esm generateAlgoliaItems.ts",
+    "feed": "ENABLE_GITHUB_READ=false bun generateFeed.ts",
+    "algolia": "ENABLE_GITHUB_READ=false bun generateAlgoliaItems.ts",
     "svg": "svgo --precision 1 -r -f {images,public}"
   },
   "type": "commonjs",
@@ -124,7 +124,6 @@
     "> 2% in my stats"
   ],
   "engines": {
-    "node": "^18.0.0 || ^20.0.0",
-    "yarn": "^1.22.0"
+    "node": "^24.0.0"
   }
 }
