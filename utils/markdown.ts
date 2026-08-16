@@ -514,6 +514,7 @@ export function toMdx(
       .replace(/class="(.*?)"/g, 'className="$1"'),
     {
       scope: { data: frontmatter },
+      blockJS: false,
       mdxOptions: {
         remarkPlugins: [...(commonRemarkPlugins as any)],
         rehypePlugins: [
